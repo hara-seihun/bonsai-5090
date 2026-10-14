@@ -1,0 +1,221 @@
+--- a/05b-single-token-update.cu
++++ b/05b-single-token-update.cu
+@@ -1,66 +1,162 @@
+-template <typename ST> struct GdnPacked { using Pair = float2; };
+-template <> struct GdnPacked<__half> {
+-  using Pair = __half2;
+-  __device__ static Pair pack(float x, float y) { return __floats2half2_rn(x, y); }
+-  __device__ static float2 unpack(Pair x) { return __half22float2(x); }
+-  __device__ static Pair mul(Pair x, Pair y) { return __hmul2(x, y); }
+-  __device__ static Pair fma(Pair x, Pair y, Pair z) { return __hfma2(x, y, z); }
++template <int CG> struct alignas(16) GdnSingleShared {
++  float q[128], k[128], v[256 / CG], gates[2], red[8];
+ };
+-template <> struct GdnPacked<__nv_bfloat16> {
+-  using Pair = __nv_bfloat162;
+-  __device__ static Pair pack(float x, float y) { return __floats2bfloat162_rn(x, y); }
+-  __device__ static float2 unpack(Pair x) { return __bfloat1622float2(x); }
+-  __device__ static Pair mul(Pair x, Pair y) { return __hmul2(x, y); }
+-  __device__ static Pair fma(Pair x, Pair y, Pair z) { return __hfma2(x, y, z); }
+-};
+-constexpr int GDN_PACKED_SMEM = GDN_T * 2 * 128 * 2;
+-static unsigned gdn_host_variant = 0;
+-template <typename ST, int CG = 4, bool FUSED = false, bool PDL = false, bool SCALED = false, bool PACKED = false, bool Q8 = false>
+-__device__ __forceinline__ void gdn_body(const GdnArgs& a, const Seg sg, int bx, uint8_t* smraw, ConvArgs ca = {}, const ST* Mload = nullptr, const GdnPrefetch pf = {}) {
+-  float (*sk)[128] = (float (*)[128])smraw;
+-  float (*sq)[128] = (float (*)[128])(smraw + GDN_T * 128 * 4);
+-  float (*sv)[64] = (float (*)[64])(smraw + GDN_T * 256 * 4);
+-  float* sg_ = (float*)(smraw + GDN_T * 320 * 4);
+-  float* sb_ = sg_ + GDN_T;
+-  constexpr int JR = 256 / CG, MC = 128 / CG, CH = 64 + JR / 4;
+-  const int h = bx / (CG / 2), half = bx % (CG / 2), kh = h % HK;
+-  const int tid = threadIdx.x, lane = tid & 31;
+-  const int jl = tid / CG, j = JR * half + jl, cg = lane & (CG - 1);
++
++template <int CG>
++__device__ __forceinline__ void single_conv_stage(const ConvArgs& c, Seg sg, int h, int part,
++    GdnSingleShared<CG>& sm, CgCarry carry) {
++  constexpr int JR = 256 / CG;
++  const int t = threadIdx.x, d = t & 127, kh = h % HK;
++  const int channel = (t < 128 ? 0 : KDIM) + kh * 128 + d;
++  const size_t layer = (size_t)sg.slot * NGDN + c.gl;
++  float* dst = c.state + (2 * layer + (sg.conv_par ^ 1)) * 3 * CONV_CH;
++  const float x = c.proj[(size_t)sg.start * GDN_IN + channel];
++  const float4 w = carry.wk;
++  float v = silu(w.x * carry.s0 + w.y * carry.s1 + w.z * carry.s2 + w.w * x);
++  float ss = v * v;
++#pragma unroll
++  for (int o = 16; o; o >>= 1) ss += __shfl_xor_sync(0xffffffff, ss, o);
++  if ((t & 31) == 0) sm.red[t >> 5] = ss;
++  if (h < HK && part == 0) {
++    dst[channel] = carry.s1; dst[CONV_CH + channel] = carry.s2; dst[2 * CONV_CH + channel] = x;
++  }
++  if (t < JR) {
++    const int vc = 2 * KDIM + h * 128 + JR * part + t;
++    const float vx = c.proj[(size_t)sg.start * GDN_IN + vc];
++    const float4 vw = carry.vw;
++    sm.v[t] = silu(vw.x * carry.v0 + vw.y * carry.v1 + vw.z * carry.v2 + vw.w * vx);
++    dst[vc] = carry.v1; dst[CONV_CH + vc] = carry.v2; dst[2 * CONV_CH + vc] = vx;
++  }
++  if (t == 0) {
++    const float g = c.ab[(size_t)sg.start * 96 + h] + c.dt_bias[h];
++    const float sp = g > 20.f ? g : log1pf(__expf(g));
++    sm.gates[0] = __expf(c.ssm_a[h] * sp);
++    sm.gates[1] = sigm(c.ab[(size_t)sg.start * 96 + HV + h]);
++  }
++  __syncthreads();
++  const int b = t < 128 ? 0 : 4;
++  ss = sm.red[b] + sm.red[b + 1] + sm.red[b + 2] + sm.red[b + 3];
++  (t < 128 ? sm.q : sm.k)[d] = v * (1.f / fmaxf(sqrtf(ss), NORM_EPS));
++}
++
++template <typename ST, int CG, bool FUSED, bool Q8 = false>
++__global__ void __launch_bounds__(256, 2) k_gdn_single(GdnArgs a, ConvArgs c) { H5_LIT_SITE(GdnSingle, 0);
++  constexpr int JR = 256 / CG, MC = 128 / CG;
++  __shared__ GdnSingleShared<CG> sm;
++#ifndef H5_PDL_GDN_STATE_OVERLAP
++  pdl_enter_e(a.early);
++#endif
++  const Seg sg = a.segs[blockIdx.y];
++  if (sg.len != 1 || sg.commit || sg.keep) { asm volatile("trap;"); return; }
++  const int h = blockIdx.x / (CG / 2), part = blockIdx.x % (CG / 2), kh = h % HK;
++  const int t = threadIdx.x, cg = t & (CG - 1), jl = t / CG, j = part * JR + jl;
++  static_assert(!Q8 || !FUSED);
+   ST* M = Q8 ? nullptr : (ST*)a.state + (((size_t)sg.slot * NGDN + a.gl) * HV + h) * 128 * 128 + j * 128 + 4 * cg;
+   GdnQ8Layer* q8 = Q8 ? (GdnQ8Layer*)a.state + (size_t)sg.slot * NGDN + a.gl : nullptr;
+-  static_assert(!Q8 || (!PACKED && !SCALED && sizeof(ST) == 2));
+-  ST* pbase = (ST*)a.pend + ((size_t)sg.slot * NGDN + a.gl) * 2 * a.pending_rows * PEND_GDN;
+-  const ST* prd = pbase + (size_t)(sg.par ^ 1) * a.pending_rows * PEND_GDN;
+-  ST* pwr = pbase + (size_t)sg.par * a.pending_rows * PEND_GDN;
+-  static_assert(!PACKED || (sizeof(ST) == 2 && !SCALED));
+-  using Ops = GdnPacked<ST>;
+-  using Pair = typename Ops::Pair;
+-  Pair mp[MC / 2];
+-  Pair (*pk)[64] = (Pair (*)[64])(smraw + GDN_SMEM);
+-  Pair (*pq)[64] = pk + GDN_T;
+   float m[MC];
+-  // Mload / pf (k_gdn_pipe): this CTA's state rows were bulk-copied into shared memory ahead of time.
+-  const ST* const ML = Mload ? Mload + jl * 128 + 4 * cg : M;
+-  if constexpr (PACKED) {
++  if constexpr (Q8) gdn_load_q8_row<CG>(q8, h, j, cg, m);
++  else {
+ #pragma unroll
+-    for (int i = 0; i < MC / 2; i++) {
+-#ifdef EXP_GDN_NOMEM
+-      mp[i] = Ops::pack(0.f, 0.f);
+-#else
+-      mp[i] = *(const Pair*)(ML + (i / 2) * CG * 4 + (i % 2) * 2);
++    for (int i = 0; i < MC / 4; ++i) {
++      const float4 v = ld4(M + CG * 4 * i);
++      m[4*i] = v.x; m[4*i+1] = v.y; m[4*i+2] = v.z; m[4*i+3] = v.w;
++    }
++  }
++  CgCarry carry;
++  if constexpr (FUSED) {
++    const int channel = (t < 128 ? 0 : KDIM) + kh * 128 + (t & 127);
++    const float* src = c.state + (2 * ((size_t)sg.slot * NGDN + c.gl) + sg.conv_par) * 3 * CONV_CH;
++    carry.s0 = src[channel]; carry.s1 = src[CONV_CH + channel]; carry.s2 = src[2 * CONV_CH + channel];
++    carry.wk = *(const float4*)(c.w + channel * 4);
++    if (t < JR) {
++      const int vc = 2 * KDIM + h * 128 + part * JR + t;
++      carry.v0 = src[vc]; carry.v1 = src[CONV_CH + vc]; carry.v2 = src[2 * CONV_CH + vc];
++      carry.vw = *(const float4*)(c.w + vc * 4);
++    }
++  }
++#ifdef H5_PDL_GDN_STATE_OVERLAP
++  pdl_enter_e(a.early);
+ #endif
++  H5_LIT_MARKX(0);
++  if constexpr (FUSED) {
++    if (c.pf_placement == h5::PfChainPlacement::Prologue) chain_l2pf(c.pf, c.pf_bytes, c.pf_granularity);
++    single_conv_stage<CG>(c, sg, h, part, sm, carry);
++  } else {
++    const float* co = a.conv_out + (size_t)sg.start * CONV_CH;
++    if (t < 32) {
++      *(float4*)(sm.q + t * 4) = *(const float4*)(co + kh * 128 + t * 4);
++      *(float4*)(sm.k + t * 4) = *(const float4*)(co + KDIM + kh * 128 + t * 4);
+     }
+-  } else {
+-#ifdef EXP_GDN_NOMEM
++    if (t < JR / 4) *(float4*)(sm.v + t * 4) = *(const float4*)(co + 2 * KDIM + h * 128 + part * JR + t * 4);
++    if (t == 0) {
++      sm.gates[0] = a.gates[(size_t)sg.start * 96 + h];
++      sm.gates[1] = a.gates[(size_t)sg.start * 96 + HV + h];
++    }
++  }
++  __syncthreads();
++  H5_LIT_MARKX(1);
++  float kr[MC], dot[4] = {0.f, 0.f, 0.f, 0.f};
+ #pragma unroll
+-    for (int i = 0; i < MC; i++) m[i] = 0.f;
+-#else
+-    if constexpr (Q8) gdn_load_q8_row<CG>(q8, h, j, cg, m);
+-    else {
++  for (int i = 0; i < MC / 4; ++i) {
++    const float4 k = *(const float4*)(sm.k + CG * 4 * i + 4 * cg);
++    kr[4*i] = k.x; kr[4*i+1] = k.y; kr[4*i+2] = k.z; kr[4*i+3] = k.w;
++  }
+ #pragma unroll
+-      for (int i = 0; i < MC / 4; i++) {
+-        const float4 v = ld4(ML + CG * 4 * i);
+-        m[4*i] = v.x; m[4*i+1] = v.y; m[4*i+2] = v.z; m[4*i+3] = v.w;
+-      }
++  for (int i = 0; i < MC; ++i) dot[i & 3] = fmaf(m[i], kr[i], dot[i & 3]);
++  float s = (dot[0] + dot[1]) + (dot[2] + dot[3]);
++#pragma unroll
++  for (int sh = 1; sh < CG; sh <<= 1) s += __shfl_xor_sync(0xffffffff, s, sh);
++  const float g = sm.gates[0], delta = sm.gates[1] * (sm.v[jl] - g * s);
++#pragma unroll
++  for (int i = 0; i < MC; ++i) m[i] = fmaf(g, m[i], delta * kr[i]);
++  float out[4] = {0.f, 0.f, 0.f, 0.f};
++#pragma unroll
++  for (int i = 0; i < MC / 4; ++i) {
++    const float4 q = *(const float4*)(sm.q + CG * 4 * i + 4 * cg);
++    out[0] = fmaf(m[4*i], q.x, out[0]); out[1] = fmaf(m[4*i+1], q.y, out[1]);
++    out[2] = fmaf(m[4*i+2], q.z, out[2]); out[3] = fmaf(m[4*i+3], q.w, out[3]);
++  }
++  float o = (out[0] + out[1]) + (out[2] + out[3]);
++#pragma unroll
++  for (int sh = 1; sh < CG; sh <<= 1) o += __shfl_xor_sync(0xffffffff, o, sh);
++  if (cg == 0) a.y[(size_t)sg.start * VDIM + h * 128 + j] = o * 0.08838834764831845f;
++  if (a.sig) prep_signal(a.sig);
++  H5_LIT_MARKX(2);
++  if constexpr (Q8) gdn_store_row<ST, CG, true>(M, q8, h, j, cg, m, a.q8_scale);
++  else {
++#pragma unroll
++    for (int i = 0; i < MC / 4; ++i) {
++      if constexpr (sizeof(ST) == 2) {
++        uint2 v;
++#pragma unroll
++        for (int k = 0; k < 4; ++k) st_st((ST*)&v + k, m[4*i+k]);
++        *(uint2*)(M + CG * 4 * i) = v;
++      } else *(float4*)(M + CG * 4 * i) = make_float4(m[4*i], m[4*i+1], m[4*i+2], m[4*i+3]);
+     }
+-#endif
++  }
++  if constexpr (FUSED) {
++    H5_LIT_MARKX(3);
++    if (c.pf_placement == h5::PfChainPlacement::Tail) chain_l2pf(c.pf, c.pf_bytes, c.pf_granularity);
++  }
++}
++
++
++
++#include "kernels.cuh"
++#include <stdexcept>
++extern "C" void gdn_bits_launch(const h5::GdnArgs&,int,int,bool,cudaStream_t);
++extern "C" void original_gdn(const h5::GdnArgs&,int,h5::StateFormat,cudaStream_t) asm("__real__ZN2h510launch_gdnERKNS_7GdnArgsEiNS_11StateFormatEP11CUstream_st");
++extern "C" void original_single(const h5::GdnArgs&,int,h5::StateFormat,cudaStream_t) asm("__real__ZN2h517launch_gdn_singleERKNS_7GdnArgsEiNS_11StateFormatEP11CUstream_st");
++static bool q6_enabled(){const char*v=getenv("H5_GDN_BITS");if(!v||!strcmp(v,"8"))return false;if(strcmp(v,"6"))throw std::runtime_error("H5_GDN_BITS requires6 or8");return true;}
++static void policy(const char*key,const char*value){const char*v=getenv(key);if(v&&strcmp(v,value))throw std::runtime_error(std::string("Q6 requires ")+key+"="+value);}
++static void guard(h5::StateFormat f,const h5::GdnArgs&a){
++ if(f!=h5::StateFormat::Q8||a.q8_scale!=h5::Q8ScaleMode::LeastSquares)throw std::runtime_error("Q6 requires Q8 allocation and explicit least-squares scales");
++ policy("H5_GDN_CG","8");policy("H5_GDN_CG_SEGS","0");policy("H5_GDN_ARITH","fp32");policy("H5_GDN_PIPE","0");policy("H5_GDN_SCALED","0");policy("H5_GDN_OCC","2");policy("H5_GDN_SINGLE_PAD_KIB","0");policy("H5_STATE_FUSION","0");policy("H5_MEGA","0");policy("H5_TAIL_PREP","0");policy("H5_AB_VARIANT","0");policy("H5_GDN_VERIFY","off");policy("H5_GDN_SINGLE_DIAG","0");
++ const char*ns=getenv("H5_NO_SPEC");if(!ns||strcmp(ns,"1"))throw std::runtime_error("Q6 experiment requires H5_NO_SPEC=1");
++ const char*cg=getenv("H5_GDN_CG");if(!cg||strcmp(cg,"8"))throw std::runtime_error("Q6 requires explicit CG8");
++ static bool once=false;if(!once){once=true;fprintf(stderr,"p12 Q6-LS direct state carrier:96 payload bytes/row, existing128-byte allocation stride, no shadow or conversion launch\n");}
++}
++extern "C" void wrap_gdn(const h5::GdnArgs&a,int n,h5::StateFormat f,cudaStream_t stream) asm("__wrap__ZN2h510launch_gdnERKNS_7GdnArgsEiNS_11StateFormatEP11CUstream_st");
++extern "C" void wrap_gdn(const h5::GdnArgs&a,int n,h5::StateFormat f,cudaStream_t stream){if(!q6_enabled())return original_gdn(a,n,f,stream);guard(f,a);gdn_bits_launch(a,n,1,false,stream);}
++extern "C" void wrap_single(const h5::GdnArgs&a,int n,h5::StateFormat f,cudaStream_t stream) asm("__wrap__ZN2h517launch_gdn_singleERKNS_7GdnArgsEiNS_11StateFormatEP11CUstream_st");
++extern "C" void wrap_single(const h5::GdnArgs&a,int n,h5::StateFormat f,cudaStream_t stream){if(!q6_enabled())return original_single(a,n,f,stream);guard(f,a);gdn_bits_launch(a,n,1,true,stream);}

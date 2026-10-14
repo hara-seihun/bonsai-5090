@@ -1,0 +1,326 @@
+--- a/01a-sampling.cu
++++ b/01a-sampling.cu
+@@ -21,6 +21,43 @@
+     res->t_sampled_probs.resize(n_rows, nullptr);
+     res->t_sampled_logits.resize(n_rows, nullptr);
+     res->t_candidates.resize(n_rows, nullptr);
++
++
++    // The fast path is deliberately limited to exactly the stateless greedy
++    // chain used by the benchmark. Mixed/stochastic/custom chains stay native.
++    const char * p12_batch = getenv("P12_BATCH_GREEDY");
++    bool p12_all_greedy = p12_batch && strcmp(p12_batch, "1") == 0 &&
++        n_rows > 0 && n_rows <= 256 && res->t_dspark_greedy.empty() &&
++        res->t_logits->type == GGML_TYPE_F32 && ggml_is_contiguous(res->t_logits) &&
++        res->t_logits->ne[1] == n_rows && ggml_is_matrix(res->t_logits);
++    for (const auto & entry : samplers) {
++        auto * chain = entry.second;
++        p12_all_greedy &= chain && llama_sampler_chain_get(chain, -1) == chain && llama_sampler_chain_n(chain) == 1;
++        if (!p12_all_greedy) break;
++        auto * inner = llama_sampler_chain_get(chain, 0);
++        const char * name = inner ? llama_sampler_name(inner) : "";
++        p12_all_greedy &= strcmp(name, "greedy") == 0 || strcmp(name, "+greedy") == 0;
++    }
++    for (const auto & entry : sampling_rows) {
++        p12_all_greedy &= samplers.count(entry.first) != 0;
++    }
++    if (p12_all_greedy) {
++        auto * tokens = ggml_argmax(ctx0, res->t_logits);
++        ggml_set_name(tokens, "p12_batched_greedy");
++        ggml_build_forward_expand(gf, tokens);
++        const char * p12_tokens = getenv("P12_SAMPLE_TOKENS_ONLY");
++        const bool tokens_only = p12_tokens && strcmp(p12_tokens, "1") == 0;
++        for (uint32_t row = 0; row < n_rows; ++row) {
++            res->t_sampled[row] = ggml_view_1d(ctx0, tokens, 1, row * sizeof(int32_t));
++            ggml_build_forward_expand(gf, res->t_sampled[row]);
++            if (!tokens_only) {
++                res->t_sampled_logits[row] = ggml_view_1d(ctx0, res->t_logits,
++                    res->t_logits->ne[0], row * res->t_logits->nb[1]);
++                ggml_build_forward_expand(gf, res->t_sampled_logits[row]);
++            }
++        }
++        return;
++    }
+ 
+     // res->t_logits will contain logits for all tokens that want the logits calculated (logits=1 or output=1)
+     GGML_ASSERT(res->t_logits != nullptr && "missing t_logits tensor");
+@@ -135,9 +172,46 @@
+         return;
+     }
+ 
++
++    // Consecutive views of one contiguous tensor can use one asynchronous copy.
++    // Verify the actual layout, backend, byte offsets and output capacity. This
++    // works for tokens as well as vocabulary rows and preserves row_offset.
++    const char * p12_coalesce = getenv("P12_SAMPLE_COALESCE");
++    if (p12_coalesce && strcmp(p12_coalesce, "1") == 0 && !tensors.empty()) {
++        const auto * first = tensors[0];
++        auto * root = first ? (first->view_src ? first->view_src : tensors[0]) : nullptr;
++        bool contiguous = root && ggml_is_contiguous(root);
++        const size_t offset = first && first->view_src ? first->view_offs : 0;
++        const size_t row_bytes = stride * sizeof(T);
++        ggml_backend_t backend = root ? ggml_backend_sched_get_tensor_backend(sched, tensors[0]) : nullptr;
++        for (size_t i = 0; contiguous && i < tensors.size(); ++i) {
++            const auto * t = tensors[i];
++            const auto * base = t ? (t->view_src ? t->view_src : t) : nullptr;
++            contiguous = t && base == root && ggml_is_contiguous(t) &&
++                ggml_nelements(t) == (int64_t) stride && ggml_nbytes(t) == row_bytes &&
++                (t->view_src ? t->view_offs : 0) == offset + i * row_bytes &&
++                ggml_backend_sched_get_tensor_backend(sched, tensors[i]) == backend;
++        }
++        const size_t count = tensors.size() * stride;
++        if (contiguous && backend && offset + count * sizeof(T) <= ggml_nbytes(root)) {
++            GGML_ASSERT((size_t) row_offset * stride + count <= dst.size);
++            ggml_backend_tensor_get_async(backend, root, dst.data + (size_t) row_offset * stride,
++                offset, count * sizeof(T));
++            if (counts) for (size_t i = 0; i < tensors.size(); ++i) {
++                GGML_ASSERT(row_offset + i < counts->size());
++                (*counts)[row_offset + i] = stride;
++            }
++            return;
++        }
++    }
++
+     for (size_t i = 0; i < tensors.size(); ++i) {
+         auto * tensor = tensors[i];
+         if (tensor == nullptr) {
++            if (counts) {
++                GGML_ASSERT(row_offset + i < counts->size());
++                (*counts)[row_offset + i] = 0;
++            }
+             continue;
+         }
+ 
+@@ -210,16 +284,22 @@
+             assert(sampling.probs_count.size() > 0);
+             assert(sampling.candidates_count.size() > 0);
+ 
+-            for (uint64_t k = 0; k < n_vocab; ++k) {
+-                std::swap(sampling.logits.data[i0*n_vocab + k], sampling.logits.data[i1*n_vocab + k]);
+-            }
+-
+-            for (uint64_t k = 0; k < n_vocab; ++k) {
+-                std::swap(sampling.probs.data[i0*n_vocab + k], sampling.probs.data[i1*n_vocab + k]);
+-            }
+-
+-            for (uint64_t k = 0; k < n_vocab; ++k) {
+-                std::swap(sampling.candidates.data[i0*n_vocab + k], sampling.candidates.data[i1*n_vocab + k]);
++            if (sampling.logits_count[i0] || sampling.logits_count[i1]) {
++                for (uint64_t k = 0; k < n_vocab; ++k) {
++                    std::swap(sampling.logits.data[i0*n_vocab + k], sampling.logits.data[i1*n_vocab + k]);
++                }
++            }
++
++            if (sampling.probs_count[i0] || sampling.probs_count[i1]) {
++                for (uint64_t k = 0; k < n_vocab; ++k) {
++                    std::swap(sampling.probs.data[i0*n_vocab + k], sampling.probs.data[i1*n_vocab + k]);
++                }
++            }
++
++            if (sampling.candidates_count[i0] || sampling.candidates_count[i1]) {
++                for (uint64_t k = 0; k < n_vocab; ++k) {
++                    std::swap(sampling.candidates.data[i0*n_vocab + k], sampling.candidates.data[i1*n_vocab + k]);
++                }
+             }
+ 
+             std::swap(sampling.sampled.data[i0],     sampling.sampled.data[i1]);
+@@ -232,67 +312,72 @@
+     output_swaps.clear();
+ }
+ 
+-static __global__ void argmax_f32(const float * __restrict__ x, int32_t * __restrict__ dst, const int64_t ncols) {
+-    const int64_t row = blockIdx.x;
+-
+-    float maxval = -FLT_MAX;
+-    int   argmax = -1;
+-    const float * rowx = x + row * ncols;
+-
+-    for (int32_t col = threadIdx.x; col < ncols; col += blockDim.x) {
+-        const float val = rowx[col];
+-        if (val > maxval) {
+-            maxval = val;
+-            argmax = col;
+-        }
+-    }
+-
+-#pragma unroll
+-    for (int offset = WARP_SIZE/2; offset > 0; offset >>= 1) {
+-        const float val = __shfl_xor_sync(0xFFFFFFFF, maxval, offset, WARP_SIZE);
+-        const int   col = __shfl_xor_sync(0xFFFFFFFF, argmax, offset, WARP_SIZE);
+-        if (val > maxval) {
+-            maxval = val;
+-            argmax = col;
+-        }
+-    }
+-
+-    const int n_warps = blockDim.x / WARP_SIZE;
+-    const int lane_id = threadIdx.x % WARP_SIZE;
+-    const int warp_id = threadIdx.x / WARP_SIZE;
+-    if (n_warps > 1) {
+-        constexpr int    max_warps = 1024 / WARP_SIZE;
+-        __shared__ float shared_maxval[max_warps];
+-        __shared__ int   shared_argmax[max_warps];
+-        if (lane_id == 0) {
+-            shared_maxval[warp_id] = maxval;
+-            shared_argmax[warp_id] = argmax;
+-        }
+-
+-        __syncthreads();
+-
+-        if (warp_id == 0) {
+-            if (lane_id < n_warps) {
+-                maxval = shared_maxval[lane_id];
+-                argmax = shared_argmax[lane_id];
+-            }
+-#pragma unroll
+-            for (int offset = WARP_SIZE/2; offset > 0; offset >>= 1) {
+-                const float val = __shfl_xor_sync(0xFFFFFFFF, maxval, offset, WARP_SIZE);
+-                const int   col = __shfl_xor_sync(0xFFFFFFFF, argmax, offset, WARP_SIZE);
+-                if (val > maxval) {
+-                    maxval = val;
+-                    argmax = col;
+-                }
+-            }
+-        }
+-    }
+-
+-    if (warp_id == 0 && lane_id == 0) {
+-        dst[row] = argmax;
+-    }
+-}
+-
++extern "C" __attribute__((visibility("default")))
++int p12_llama_get_sampled_tokens_ith(llama_context * ctx, int n, const int * indices, int * output) {
++    if (!ctx || n < 0 || (n && (!indices || !output))) return 1;
++    ctx->synchronize();
++    for (int i = 0; i < n; ++i) output[i] = ctx->get_sampled_token_ith(indices[i]);
++    return 0;
++}
++
++int h5_step(void*ptr,int n,const int*slots,const int*tokens,const int*pos,int*out) {
++ auto*p=(Prism*)ptr;auto&b=p->batch;b.n_tokens=n;
++ if(p->p12_position_limit)for(int i=0;i<n;++i)
++  if(pos[i]<0 || pos[i]>=p->p12_position_limit)
++   throw std::runtime_error("position exceeds configured per-sequence attention bound");
++ std::vector<int> last(p->samplers.size(),-1);
++ for(int i=0;i<n;i++)last[slots[i]]=i;
++ for(int i=0;i<n;i++) { b.token[i]=tokens[i];b.pos[i]=pos[i];b.n_seq_id[i]=1;b.seq_id[i][0]=slots[i];b.logits[i]=(last[slots[i]]==i);out[i]=-1; }
++ struct SlotScope {
++  void(*end)()=nullptr;
++  SlotScope(int n,const int*s,const int*p){static const bool enabled=getenv("P12_SLOT_CACHE")&&!strcmp(getenv("P12_SLOT_CACHE"),"1");if(!enabled)return;static void*lib=dlopen("libggml-cuda.so",RTLD_NOW|RTLD_NOLOAD);static auto begin=lib?(void(*)(int,const int*,const int*))dlsym(lib,"p12_slot_scope_begin"):nullptr;static auto finish=lib?(void(*)())dlsym(lib,"p12_slot_scope_end"):nullptr;if(!begin||!finish)throw std::runtime_error("slot scope hooks missing");end=finish;begin(n,s,p);}
++  ~SlotScope(){if(end)end();}
++ } slot_scope(n,slots,pos);
++
++ struct InputScope {
++  void(*end)()=nullptr;
++  InputScope(){
++   static const int mode=[](){const char*v=getenv("P12_INPUT_OWNER");return v?std::stoi(v):0;}();if(!mode)return;
++   static void *lib=dlopen("libggml-cuda.so",RTLD_NOW|RTLD_NOLOAD);
++   static auto begin=lib?(void(*)(int))dlsym(lib,"p12_input_begin"):nullptr;
++   static auto finish=lib?(void(*)())dlsym(lib,"p12_input_end"):nullptr;end=finish;
++   if(!begin||!end)throw std::runtime_error("owned-input hooks missing");
++   begin(mode);
++  }
++  ~InputScope(){if(end)end();}
++ };
++ int p12_decode_status;
++ {InputScope scope;p12_decode_status=llama_decode(p->ctx,b);}
++ if(p12_decode_status)return 1;
++
++ const char * bulk = getenv("P12_GET_TOKENS_ONCE");
++ if (bulk && std::string(bulk)=="1") {
++  using Fn = int(*)(llama_context*,int,const int*,int*);
++  static Fn fn=(Fn)dlsym(RTLD_DEFAULT,"p12_llama_get_sampled_tokens_ith");
++  if(!fn)throw std::runtime_error("P12_GET_TOKENS_ONCE requires host-memory libllama");
++  std::vector<int> indices, result;
++  for(int i=0;i<n;++i)if(b.logits[i])indices.push_back(i);
++  result.resize(indices.size());
++  if(fn(p->ctx,(int)indices.size(),indices.data(),result.data()))return 1;
++  for(size_t j=0;j<indices.size();++j){
++   int i=indices[j];auto t=result[j];
++   if(t==LLAMA_TOKEN_NULL){p->fallback_tokens++;t=llama_sampler_sample(p->samplers[slots[i]],p->ctx,i);}
++   else p->backend_tokens++;
++   out[i]=t;
++  }
++  return 0;
++ }
++
++ for(int i=0;i<n;i++)if(b.logits[i]) {
++  auto t=llama_get_sampled_token_ith(p->ctx,i);
++  if(t==LLAMA_TOKEN_NULL){p->fallback_tokens++;t=llama_sampler_sample(p->samplers[slots[i]],p->ctx,i);}
++  else p->backend_tokens++;
++  out[i]=t;
++ }
++ return 0;
++}
++
++extern "C" bool p12_argmax(const ggml_tensor*,ggml_tensor*,cudaStream_t);
+ void ggml_cuda_argmax(ggml_backend_cuda_context & ctx, ggml_tensor * dst) {
+     const ggml_tensor * src0 = dst->src[0];
+ 
+@@ -308,6 +393,7 @@
+     int32_t     * dst_d  = (int32_t     *) dst->data;
+ 
+     cudaStream_t stream = ctx.stream();
++    if(p12_argmax(src0,dst,stream))return;
+ 
+     const int64_t num_blocks = nrows;
+     const int64_t num_threads = std::min<int64_t>(1024, (ne00 + WARP_SIZE - 1) / WARP_SIZE * WARP_SIZE);
+@@ -316,3 +402,57 @@
+ 
+     argmax_f32<<<blocks_num, blocks_dim, 0, stream>>>(src0_d, dst_d, ne00);
+ }
++
++extern "C" bool p12_argmax(const ggml_tensor*x,ggml_tensor*y,cudaStream_t stream){
++ const auto mode=setting("P12_ARGMAX");if(mode.empty())return false;
++ if(x->type!=GGML_TYPE_F32||y->type!=GGML_TYPE_I32||!ggml_is_contiguous(x)||x->ne[0]!=VOCAB||ggml_nrows(x)>256)throw std::runtime_error("unsupported H5 argmax shape");
++ if(mode=="vector")launch_argmax((const float*)x->data,x->ne[0],(int*)y->data,ggml_nrows(x),stream);
++ else if(mode=="split"){
++  auto it=arg_scratch.find(stream);if(it==arg_scratch.end()){
++   if(arg_scratch.size()>=arg_preallocated.size())throw std::runtime_error("argmax scratch not initialized");
++   it=arg_scratch.emplace(stream,arg_preallocated[arg_scratch.size()]).first;
++  }
++  launch_argmax_split((const float*)x->data,x->ne[0],(int*)y->data,ggml_nrows(x),it->second.keys,it->second.counts,stream);
++ }else throw std::runtime_error("unknown argmax mode");
++ return true;
++}
++
++__global__ void __launch_bounds__(256) k_argmax_split(const float* __restrict__ logits, int ld, int* __restrict__ out,
++                                                      unsigned long long* keys, unsigned* cnt) { H5_LIT(0);
++  pdl_enter();
++  constexpr int N4 = VOCAB / 4, PER = (N4 + ARGMAX_SLICES - 1) / ARGMAX_SLICES;
++  const int row = blockIdx.x, sl = blockIdx.y, b = sl * PER, e = min(N4, b + PER);
++  const float4* l = reinterpret_cast<const float4*>(logits + (size_t)row * ld);
++  float best = -INFINITY; int idx = 0x7fffffff;
++  for (int i = b + threadIdx.x; i < e; i += 256) {
++    const float4 v = __ldcg(l + i);
++    if (v.x > best) { best = v.x; idx = 4 * i; }
++    if (v.y > best) { best = v.y; idx = 4 * i + 1; }
++    if (v.z > best) { best = v.z; idx = 4 * i + 2; }
++    if (v.w > best) { best = v.w; idx = 4 * i + 3; }
++  }
++  unsigned long long k = idx == 0x7fffffff ? 0ull : argmax_key(best, idx);
++  for (int o = 16; o; o >>= 1) { const unsigned long long ok = __shfl_xor_sync(0xffffffff, k, o); k = ok > k ? ok : k; }
++  __shared__ unsigned long long wk[8];
++  __shared__ bool last;
++  if ((threadIdx.x & 31) == 0) wk[threadIdx.x >> 5] = k;
++  __syncthreads();
++  if (threadIdx.x == 0) {
++    for (int w = 1; w < 8; w++) k = wk[w] > k ? wk[w] : k;
++    k = k > wk[0] ? k : wk[0];
++    atomicMax(keys + row, k);
++    __threadfence();
++    last = atomicAdd(cnt + row, 1u) == ARGMAX_SLICES - 1;
++    if (last) {
++      __threadfence();
++      const unsigned long long fk = atomicExch(keys + row, 0ull);
++      cnt[row] = 0;
++      out[row] = fk ? (int)(~(unsigned)(fk & 0xffffffffu)) : 0;   // all -inf/NaN rows: index 0, as k_argmax
++    }
++  }
++}
++
++void launch_argmax_split(const float* logits, int ld, int* out, int rows, unsigned long long* keys, unsigned* cnt, cudaStream_t st) {
++  if (rows < 1 || ld % 4 || uintptr_t(logits) % 16 || !keys || !cnt || !out) throw std::runtime_error("split argmax requires aligned rows and scratch");
++  pdl(k_argmax_split, dim3(rows, ARGMAX_SLICES), dim3(256), 0, st, logits, ld, out, keys, cnt);
++}

@@ -1,0 +1,238 @@
+--- a/04f-projection-layout.cu
++++ b/04f-projection-layout.cu
+@@ -1,124 +1,117 @@
+-ggml_tensor * llm_graph_context::build_ffn(
+-         ggml_tensor * cur,
+-         ggml_tensor * up,
+-         ggml_tensor * up_b,
+-         ggml_tensor * up_s,
+-         ggml_tensor * gate,
+-         ggml_tensor * gate_b,
+-         ggml_tensor * gate_s,
+-         ggml_tensor * down,
+-         ggml_tensor * down_b,
+-         ggml_tensor * down_s,
+-         ggml_tensor * act_scales,
+-     llm_ffn_op_type   type_op,
+-   llm_ffn_gate_type   type_gate,
+-                 int   il) const {
+-    // NVFP4 support is currently restricted to
+-    // 1) LORA absence (*_s would be applied after LORA residual, which is incorrect)
+-    // 2) bias absense (*_s would be applied after bias addition, which is incorrect)
+-    // TODO: disambiguate LLM-architectural scales (which use *_s) from NVFP4 scale_2 (which also uses *_s currently)
+-    auto has_lora = [this](ggml_tensor * w) {
+-        if (!w) {
+-            return false;
++  }
++  TMat tmat(const std::vector<const GTensor*>& ts, int K, TargetProjection role, bool interleave = false) {
++    int N = 0; for (auto* t : ts) N += (int)t->ne[1];
++    const bool wf0 = carrier_wf0 && role == TargetProjection::Block;
++    const bool compact_weights = compact && !wf0;
++    TMat m; m.N = N; m.K = K;
++    if (scale_carrier && (N <= 0 || N % 32 || K <= 0 || K % 128))
++      throw std::runtime_error("scale carrier requires N multiple of 32 and K multiple of 128");
++    for (auto* tp : ts) {
++      auto& t = *tp;
++      if ((int)t.ne[0] != K || t.type != 143) throw std::runtime_error("tmat " + t.name);
++      if (scale_carrier && (t.ne[1] <= 0 || t.ne[1] % 32 || (interleave && t.ne[1] != ts.front()->ne[1])))
++        throw std::runtime_error("scale carrier requires complete, equally interleaved FP4 row groups: " + t.name);
++    }
++    if (use_int8) {
++      std::vector<uint8_t> W((size_t)N * K / 4); std::vector<float> S((size_t)N * (K / 128));
++      int row0 = 0;
++      for (auto* tp : ts) { auto& t = *tp; repack_rows(t, K, (int)t.ne[1], row0, W, S, N, nthreads); row0 += (int)t.ne[1]; }
++      m.w = upload<uint4>(W.data(), W.size() / 16); m.s = upload<float>(S.data(), S.size());
++    }
++    if (use_fp4) {
++      std::vector<uint8_t> W((size_t)(N / 32) * (K / 128) * (compact_weights ? 832 : 1024)); std::vector<uint16_t> S((size_t)N * (K / 128));
++      int row0 = 0;
++      int idx = 0;
++      for (auto* tp : ts) {
++        auto& t = *tp;
++        if (interleave) repack_rows_fp4(t, K, (int)t.ne[1], row0, W, S, N / 32, nthreads, (int)ts.size(), idx, compact_weights);
++        else repack_rows_fp4(t, K, (int)t.ne[1], row0, W, S, N / 32, nthreads, 1, -1, compact_weights);
++        row0 += (int)t.ne[1]; idx++;
++      }
++      m.il = interleave;
++      if (wscale_e4m3) {   // S chunk [kb][g][gid][4] halves -> bytes [kb][g][gid][4] (64 B stride kept) + row scale
++        const int nkb = K / 128, NG = N / 32;
++        std::vector<float> rsv(N, 0.f);
++        for (size_t c = 0; c < (size_t)nkb * NG; c++) {
++          const int g = c % NG;
++          for (int i = 0; i < 32; i++) { __half_raw hr; hr.x = S[c * 32 + i]; const int gid = i / 4, q = i % 4, row = 32 * g + 16 * (q >> 1) + 8 * (q & 1) + gid; rsv[row] = std::max(rsv[row], __half2float(__half(hr))); }
+         }
+-        for (const auto & lora : *loras) {
+-            if (lora.first->get_weight(w) != nullptr) {
+-                return true;
++        for (auto& v : rsv) v = std::max(v / 448.f, 1e-30f);
++        std::vector<uint8_t> SB(S.size() * 2, 0);
++        for (size_t c = 0; c < (size_t)nkb * NG; c++) {
++          const int g = c % NG;
++          for (int i = 0; i < 32; i++) { __half_raw hr; hr.x = S[c * 32 + i]; const int gid = i / 4, q = i % 4, row = 32 * g + 16 * (q >> 1) + 8 * (q & 1) + gid;
++            SB[c * 64 + gid * 4 + q] = __nv_cvt_float_to_fp8(__half2float(__half(hr)) / rsv[row], __NV_SATFINITE, __NV_E4M3); }
++        }
++        if (ternary_operands != TernaryOperands::Packed) {
++          const bool expanded = ternary_operands == TernaryOperands::Expanded;
++          const size_t chunks = (size_t)nkb * NG;
++          std::vector<uint8_t> EW(expanded ? chunks * TERNARY_EXPANDED_CW : 0), ES(chunks * TERNARY_EXPANDED_CS);
++          std::atomic<size_t> next{0};
++          auto worker = [&] {
++            for (;;) {
++              const size_t c = next.fetch_add(1);
++              if (c >= chunks) break;
++              if (expanded) expand_ternary_chunk(W.data() + c * 1024, EW.data() + c * TERNARY_EXPANDED_CW);
++              expand_ternary_scales(SB.data() + c * 64, ES.data() + c * TERNARY_EXPANDED_CS);
+             }
++          };
++          std::vector<std::thread> th;
++          for (int i = 0; i < nthreads; i++) th.emplace_back(worker);
++          for (auto& t : th) t.join();
++          m.w4 = expanded ? upload<uint4>(EW.data(), EW.size() / 16) : upload<uint4>(W.data(), W.size() / 16);
++          m.s4 = (__half*)upload<uint8_t>(ES.data(), ES.size());
++          m.wf = expanded ? TERNARY_EXPANDED_WF : TERNARY_SCALE_WORDS_WF;
++        } else {
++          m.w4 = upload<uint4>(W.data(), W.size() / 16);
++          m.s4 = (__half*)upload<uint8_t>(SB.data(), SB.size());
++          m.wf = compact_weights ? 8 : 2;
+         }
+-        return false;
+-    };
++        m.rs = upload<float>(rsv.data(), rsv.size());
++      } else { m.w4 = upload<uint4>(W.data(), W.size() / 16); m.s4 = upload<__half>(S.data(), S.size()); m.wf = compact_weights ? 3 : 0; }
++    }
++#ifdef H5_PROFILE_SCALE_CARRIER
++    if (scale_carrier) {
++      if (!m.w4 || !m.s4 || m.rs || m.wf != (wf0 ? 0 : 3))
++        throw std::runtime_error("scale carrier payload does not match selected WF0/dense5 FP16-scale projection");
++      m.mean_scale = dalloc<float>(m.N);
++      // upload() uses cudaMemcpy from pageable memory, which may return before its DMA lands, and
++      // st is a non-blocking stream that does not order after the legacy stream: without this
++      // barrier the carrier means are computed from partially copied scales in some processes.
++      CK(cudaDeviceSynchronize());
++      CK(scale_carrier_prepare(m.s4, m.mean_scale, nullptr, m.N, m.K, st));
++      std::vector<float> prepared(m.N);
++      CK(cudaMemcpyAsync(prepared.data(), m.mean_scale, (size_t)m.N * sizeof(float), cudaMemcpyDeviceToHost, st));
+ 
+-    GGML_ASSERT(!up_s   || !up_b   || !up   || up->type   != GGML_TYPE_NVFP4);
+-    GGML_ASSERT(!gate_s || !gate_b || !gate || gate->type != GGML_TYPE_NVFP4);
+-    GGML_ASSERT(!down_s || !down_b || !down || down->type != GGML_TYPE_NVFP4);
+-    GGML_ASSERT(!up_s   || !up   || up->type   != GGML_TYPE_NVFP4 || !has_lora(up));
+-    GGML_ASSERT(!gate_s || !gate || gate->type != GGML_TYPE_NVFP4 || !has_lora(gate));
+-    GGML_ASSERT(!down_s || !down || down->type != GGML_TYPE_NVFP4 || !has_lora(down));
+-
+-    ggml_tensor * tmp = up ? build_lora_mm(up, cur) : cur;
+-    cb(tmp, "ffn_up", il);
+-
+-    if (up_b) {
+-        tmp = ggml_add(ctx0, tmp, up_b);
+-        cb(tmp, "ffn_up_b", il);
++  void launch_projection(const TMat& m, int ci, int ks, const uint8_t* A, const uint8_t* AS, const float* AG,
++                         int R, float* out, int ldo, bool add, bool precleared = false) {
++    if (deterministic_gemm) {
++      const size_t required = ks > 1 ? size_t(ks) * R * m.N : 0;
++      float* partials = deterministic_partials(required);
++      CK(launch_gemm_fp4_deterministic(ci, ks, A, AS, AG, R, m.K, m.w4, m.s4,
++          m.N, out, ldo, add, st, m.mean_scale ? m.mean_scale : m.rs,
++          m.wf, m.mean_scale != nullptr, partials, required));
++      return;
+     }
+-
+-    if (up_s) {
+-        tmp = ggml_mul(ctx0, tmp, up_s);
+-        cb(tmp, "ffn_up_s", il);
++    if (SkSel sel; sk_select(m, R, sel)) { launch_sk(m, sel, add || precleared ? SK_ATOMIC : SK_STORE, A, AS, AG, R, out, ldo); return; }
++#ifdef H5_PROFILE_SCALE_CARRIER
++    if (m.mean_scale) {
++      if (ks > 1 && !add && !precleared) CK(cudaMemsetAsync(out, 0, (size_t)R * ldo * sizeof(float), st));
++      const int mode = ks > 1 ? 2 : add ? 1 : 0;
++      launch_carrier_projection(m, ci, ks, mode, A, AS, AG, R, out, ldo);
++    } else
++#endif
++    {
++      const auto launch = precleared ? launch_gemm_fp4_precleared_cfg : launch_gemm_fp4_cfg;
++      launch(ci, ks, A, AS, AG, R, m.K, m.w4, m.s4, m.N, out, ldo, add, st, m.rs, m.wf);
+     }
+-
+-    if (gate) {
+-        switch (type_gate) {
+-            case LLM_FFN_SEQ:
+-                {
+-                    cur = build_lora_mm(gate, tmp);
+-                    cb(cur, "ffn_gate", il);
+-                } break;
+-            case LLM_FFN_PAR:
+-                {
+-                    cur = build_lora_mm(gate, cur);
+-                    cb(cur, "ffn_gate", il);
+-                } break;
+-        }
+-
+-        if (gate_b) {
+-            cur = ggml_add(ctx0, cur, gate_b);
+-            cb(cur, "ffn_gate_b", il);
+-        }
+-
+-        if (gate_s) {
+-            cur = ggml_mul(ctx0, cur, gate_s);
+-            cb(cur, "ffn_gate_s", il);
+-        }
+-
+-    } else {
+-        cur = tmp;
+-    }
+-
+-    switch (type_op) {
+-        case LLM_FFN_SILU:
+-            if (gate && type_gate == LLM_FFN_PAR) {
+-                if (il >= 0) {
+-                    const float limit = hparams.swiglu_clamp_shexp[il];
+-                    constexpr float eps = 1e-6f;
+-                    if (limit > eps) {
+-                        tmp = ggml_clamp(ctx0, tmp, -limit, limit);
+-                        cb(tmp, "ffn_up_clamped", il);
+-
+-                        if (arch == LLM_ARCH_DEEPSEEK4 || (arch == LLM_ARCH_DFLASH && hparams.dsv4_hc_mult > 0)) {
+-                            cur = ggml_clamp(ctx0, cur, -INFINITY, limit);
+-                            cb(cur, "ffn_gate_clamped", il);
+-                            cur = ggml_swiglu_split(ctx0, cur, tmp);
+-                        } else {
+-                            ggml_tensor * gate_act = ggml_silu(ctx0, cur);
+-                            cb(gate_act, "ffn_silu", il);
+-                            gate_act = ggml_clamp(ctx0, gate_act, -INFINITY, limit);
+-                            cb(gate_act, "ffn_silu_clamped", il);
+-                            cur = ggml_mul(ctx0, gate_act, tmp);
+-                        }
+-                        cb(cur, "ffn_swiglu_limited", il);
+-                        type_gate = LLM_FFN_SEQ;
+-                        break;
+-                    }
+-                }
+-
+-                cur = ggml_swiglu_split(ctx0, cur, tmp);
+-                cb(cur, "ffn_swiglu", il);
+-
+-std::pair<ggml_tensor *, ggml_tensor *> llama_model_qwen35::graph::build_qkvz(
+-                ggml_tensor * input,
+-                        int   il) {
+-    const int64_t n_seqs       = ubatch.n_seqs;
+-    const int64_t n_seq_tokens = ubatch.n_seq_tokens;
+-
+-    ggml_tensor * qkv_mixed = build_lora_mm(model.layers[il].wqkv, input, model.layers[il].wqkv_s);
+-    qkv_mixed = ggml_reshape_3d(ctx0, qkv_mixed, qkv_mixed->ne[0], n_seq_tokens, n_seqs);
+-    cb(qkv_mixed, "linear_attn_qkv_mixed", il);
+-
+-    ggml_tensor * z = build_lora_mm(model.layers[il].wqkv_gate, input, model.layers[il].wqkv_gate_s);
+-    cb(z, "z", il);
+-
+-    return { qkv_mixed, z };
+-}
++  }
++  void launch_projection_silu(const TMat& m, int ci, const uint8_t* A, const uint8_t* AS, const float* AG,
++                              int R, float* out, int ldo) {
++    if (SkSel sel; !deterministic_gemm && m.wf == 3 && sk_select(m, R, sel)) { launch_sk(m, sel, SK_SILU, A, AS, AG, R, out, ldo); return; }
++#ifdef H5_PROFILE_SCALE_CARRIER
++    if (m.mean_scale) launch_carrier_projection(m, ci, 1, 3, A, AS, AG, R, out, ldo);
++    else
++#endif
++    launch_gemm_fp4_silu(ci, A, AS, AG, R, m.K, m.w4, m.s4, m.N, out, ldo, st, m.rs, m.wf);
++  }

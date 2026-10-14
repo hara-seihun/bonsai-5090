@@ -1,0 +1,65 @@
+--- a/06a-kv-writer.cu
++++ b/06a-kv-writer.cu
+@@ -1,3 +1,23 @@
++#pragma once
++#include "kernels.cuh"
++#include "attention_fp4_kernels.cuh"
++namespace p12kv4h5 {
++using namespace h5;
++__device__ __forceinline__ float warp_sum(float v) { for (int o = 16; o; o >>= 1) v += __shfl_xor_sync(0xffffffff, v, o); return v; }
++__device__ __forceinline__ float warp_max(float v) { for (int o = 16; o; o >>= 1) v = fmaxf(v, __shfl_xor_sync(0xffffffff, v, o)); return v; }
++__device__ __forceinline__ float silu(float x) { return x / (1.f + __expf(-x)); }
++__device__ __forceinline__ float sigm(float x) { return 1.f / (1.f + __expf(-x)); }
++__device__ __forceinline__ float block_sum_256(float v, float* red) {
++  v = warp_sum(v);
++  __syncthreads();
++  if ((threadIdx.x & 31) == 0) red[threadIdx.x >> 5] = v;
++  __syncthreads();
++  float t = 0.f;
++#pragma unroll
++  for (int i = 0; i < 8; i++) t += red[i];
++  return t;
++}
++
+ __device__ __forceinline__ void attn_pre_body(const AttnArgs& a, int bx, int row) {
+   __shared__ float s[HD];
+   __shared__ float red[8];
+@@ -29,34 +49,9 @@
+   if (is_q) { a.qrot[(size_t)row * NH * HD + hq * HD + d] = outv * 0.0625f; return; }
+   const size_t pidx = (((size_t)slot * NATTN + a.al) * NKV + hk) * a.ctx + pos;
+   const float vv = pr[Q_OUT + KV_OUT + hk * HD + d];
+-  if (!a.ksc) {
+-    ((__half*)a.kc)[pidx * HD + d] = __float2half(outv);
+-    ((__half*)a.vc)[pidx * HD + d] = __float2half(vv);
+-    return;
+-  }
+-  __syncthreads();
+-  float km = fabsf(outv), vm = fabsf(vv);
+-  for (int o = 16; o; o >>= 1) { km = fmaxf(km, __shfl_xor_sync(0xffffffff, km, o)); vm = fmaxf(vm, __shfl_xor_sync(0xffffffff, vm, o)); }
+-  __shared__ float rk[8], rv[8];
+-  if ((d & 31) == 0) { rk[d >> 5] = km; rv[d >> 5] = vm; }
+-  __syncthreads();
+-  km = 0.f; vm = 0.f;
+-  for (int i = 0; i < 8; i++) { km = fmaxf(km, rk[i]); vm = fmaxf(vm, rv[i]); }
+-  const float ks = fmaxf(km, 1e-20f) / 448.f, vs = fmaxf(vm, 1e-20f) / 448.f;
+-  ((uint8_t*)a.kc)[pidx * HD + d] = __nv_cvt_float_to_fp8(outv / ks, __NV_SATFINITE, __NV_E4M3);
+-  if (a.vt) {   // V transposed per 32-key block: [pos/32][dim][pos%32]
+-    const size_t hbase = (pidx - pos) * HD;   // start of this (slot, layer, head) region
+-    ((uint8_t*)a.vc)[hbase + (size_t)(pos >> 5) * HD * 32 + d * 32 + (pos & 31)] = __nv_cvt_float_to_fp8(vv / vs, __NV_SATFINITE, __NV_E4M3);
+-  } else ((uint8_t*)a.vc)[pidx * HD + d] = __nv_cvt_float_to_fp8(vv / vs, __NV_SATFINITE, __NV_E4M3);
+-  if (d == 0) { a.ksc[pidx] = ks; a.vsc[pidx] = vs; }
++  p12kv4::store(outv,d,pidx,(uint8_t*)a.kc,(uint8_t*)a.ksc);
++  p12kv4::store(vv,d,pidx,(uint8_t*)a.vc,(uint8_t*)a.vsc);
+ }
+-__global__ void __launch_bounds__(256) k_attn_pre(AttnArgs a) { H5_LIT(0);
+-  pdl_enter_e(a.early);
+-  if (a.pf_placement == h5::PfChainPlacement::Prologue) chain_l2pf(a.pf, a.pf_bytes, a.pf_granularity);
+-  H5_LIT_MARKX(0);
+-  attn_pre_body(a, blockIdx.x, blockIdx.y);
+-  H5_LIT_MARKX(1);
+-  if (a.pf_placement == h5::PfChainPlacement::Tail) chain_l2pf(a.pf, a.pf_bytes, a.pf_granularity);
+-  H5_LIT_MARKX(2);
++
++__global__ void prepare(AttnArgs a){h5::pdl_enter_e(a.early);attn_pre_body(a,blockIdx.x,blockIdx.y);}
+ }
+-void launch_attn_pre(const AttnArgs& a, int rows, cudaStream_t st) { pdl(k_attn_pre, dim3(dim3(NH + NKV, rows)), dim3(256), 0, st, a); }

@@ -1,0 +1,102 @@
+--- a/02a-direct-state.cu
++++ b/02a-direct-state.cu
+@@ -1,6 +1,8 @@
+ static bool ggml_cuda_try_gdn_gather_skip(ggml_backend_cuda_context & ctx, const ggml_cgraph * cgraph, int node_idx) {
++    if(p12_recurrent::selected_codec()>=0)return 0;
+     static const bool disabled = getenv("GGML_CUDA_GDN_GATHER_FUSION") != nullptr &&
+                                  atoi(getenv("GGML_CUDA_GDN_GATHER_FUSION")) == 0;
++    static const bool batch=getenv("P12_GDN_DIRECT") && atoi(getenv("P12_GDN_DIRECT"))==1;
+     if (disabled) {
+         return false;
+     }
+@@ -11,10 +13,11 @@
+     }
+     const ggml_tensor * cache = gr->src[0];
+     const ggml_tensor * ids   = gr->src[1];
+-    if (cache->type != GGML_TYPE_F32 || ids->type != GGML_TYPE_I32 || cache->data == nullptr || ids->data == nullptr ||
+-        cache->nb[0] != sizeof(float) || cache->nb[1] % sizeof(float) != 0 || !ggml_is_contiguous(ids) ||
+-        ids->ne[0] != 1 || ids->ne[1] != 1 || ids->ne[2] != 1 || ids->ne[3] != 1 ||
+-        gr->ne[1] != 1 || gr->ne[2] != 1 || gr->ne[3] != 1 || gr->ne[0] != cache->ne[0]) {
++    if(cache->type==GGML_TYPE_F16 && !batch)return false;
++    if ((cache->type != GGML_TYPE_F32 && cache->type != GGML_TYPE_F16) || ids->type != GGML_TYPE_I32 || cache->data == nullptr || ids->data == nullptr ||
++        cache->nb[0] != ggml_type_size(cache->type) || cache->nb[1] % ggml_type_size(cache->type) != 0 || !ggml_is_contiguous(ids) ||
++        (ids->ne[0] != 1 && !batch) || ids->ne[1] != 1 || ids->ne[2] != 1 || ids->ne[3] != 1 ||
++        gr->ne[1] != ids->ne[0] || gr->ne[2] != 1 || gr->ne[3] != 1 || gr->ne[0] != cache->ne[0]) {
+         return false;
+     }
+     if (ggml_node_get_use_count(cgraph, node_idx) != 1) {
+@@ -26,7 +29,7 @@
+         if (n->op == GGML_OP_GATED_DELTA_NET && n->src[5] == cur) {
+             const ggml_tensor * v = n->src[2];
+             const int64_t       D = v->ne[0] * v->ne[0] * v->ne[1];
+-            if (gr->ne[0] != D || v->ne[3] != 1 || ggml_nelements(cur) != D) {
++            if (gr->ne[0] != D || (v->ne[3] != 1 && !batch) || gr->ne[1] != v->ne[3] || ggml_nelements(cur) != D*v->ne[3]) {
+                 return false;
+             }
+             // ggml-alloc sees the GET_ROWS as the last reader of ids, so a later node can reuse ids memory before the GDN kernel reads it
+@@ -44,6 +47,20 @@
+                 if (event.stream_mapping.find(n) != event.stream_mapping.end()) {
+                     return false;
+                 }
++            }
++            if((batch && v->ne[3]>1) || cache->type==GGML_TYPE_F16) {
++                ggml_cuda_gated_delta_net_fused_cache out;
++                if(!ggml_cuda_try_gdn_cache_fusion(cgraph,j,out))return false;
++                const uintptr_t base=(uintptr_t)cache->data,target=(uintptr_t)out.data;
++                if(target<base || target-base>=ggml_nbytes(cache) || (target-base)%cache->nb[1])return false;
++                for(int k=node_idx+1;k<j;k++){
++                    const auto*t=cgraph->nodes[k];if(ggml_cuda_is_view_or_noop(t))continue;
++                    const uintptr_t begin=(uintptr_t)t->data;
++                    if(begin && begin<base+ggml_nbytes(cache) && base<begin+ggml_nbytes(t))return false;
++                }
++                p12_register_gather(n,(const float*)cache->data,(const int*)ids->data,cache->nb[1]/ggml_type_size(cache->type),
++                                    (float*)gr->data,D,v->ne[3],(target-base)/cache->nb[1],ctx.stream(),cache->type==GGML_TYPE_F16);
++                return true;
+             }
+             ggml_cuda_gated_delta_net_gather gather;
+             gather.base       = (const float *) cache->data;
+@@ -70,6 +87,7 @@
+ 
+ static int ggml_cuda_try_gdn_cache_fusion(
+         const ggml_cgraph * cgraph, int node_idx, ggml_cuda_gated_delta_net_fused_cache & fused_state_cpy) {
++    if(p12_recurrent::selected_codec()>=0)return 0;
+     const ggml_tensor * gdn = cgraph->nodes[node_idx];
+     // the kernel skips the snapshot tail, so the gdn output must not be a graph output
+     if (gdn->op != GGML_OP_GATED_DELTA_NET || gdn->type != GGML_TYPE_F32 ||
+@@ -119,13 +137,33 @@
+     // dst is the [D, n_seqs, n_written] cache view; require nb[1] == D (the per-seq stride the kernel
+     // assumes). ggml_cpy pins src to the same element count.
+     const std::array<int64_t, GGML_MAX_DIMS> expected_ne = { D, n_seqs, n_written, 1 };
+-    if (dst->op != GGML_OP_VIEW || dst->type != GGML_TYPE_F32 || dst->data == nullptr ||
++    if (dst->op != GGML_OP_VIEW || (dst->type != GGML_TYPE_F32 && dst->type != GGML_TYPE_F16) || dst->data == nullptr ||
+         !std::equal(expected_ne.begin(), expected_ne.end(), dst->ne) ||
+-        dst->nb[0] != ggml_type_size(GGML_TYPE_F32) || dst->nb[1] != (size_t) ggml_row_size(GGML_TYPE_F32, D)) {
++        dst->nb[0] != ggml_type_size(dst->type) || dst->nb[1] != (size_t) ggml_row_size(dst->type, D)) {
+         return 0;
+     }
+ 
++    p12_register_state_output(gdn,dst->type==GGML_TYPE_F16);
+     fused_state_cpy.data        = (float *) dst->data; // rollback group 0 (newest)
+-    fused_state_cpy.slot_stride = K > 1 ? (int64_t) (dst->nb[2] / sizeof(float)) : 0;
++    fused_state_cpy.slot_stride = K > 1 ? (int64_t) (dst->nb[2] / ggml_type_size(dst->type)) : 0;
+     return skip;
+ }
++
++__global__ void p12_check_identity(const int*ids,int n,int first,int*safe){if(threadIdx.x==0){int ok=1;for(int i=0;i<n;i++)ok&=ids[i]==first+i;*safe=ok;}}
++
++__global__ void p12_gather_if_needed(const float*base,const int*ids,int64_t stride,float*out,int64_t width,int n,const int*safe,bool half_storage){
++ if(*safe)return;int64_t count=width*n;
++ for(int64_t i=(int64_t)blockIdx.x*blockDim.x+threadIdx.x;i<count;i+=(int64_t)gridDim.x*blockDim.x){int64_t j=(int64_t)ids[i/width]*stride+i%width;out[i]=half_storage?__half2float(((const half*)base)[j]):base[j];}
++}
++
++extern "C" void p12_register_gather(const ggml_tensor*node,const float*base,const int*ids,int64_t stride,float*tmp,int64_t width,int n,int first,cudaStream_t stream,bool half_storage){
++ if(!gather_safe)throw std::runtime_error("direct gather flags not initialized");
++ p12_check_identity<<<1,32,0,stream>>>(ids,n,first,gather_safe);
++ p12_gather_if_needed<<<1024,256,0,stream>>>(base,ids,stride,tmp,width,n,gather_safe,half_storage);
++ gathers[node]={base,ids,gather_safe,stride,half_storage};
++}
++
++extern "C" void p12_get_gather(const ggml_tensor*node,const float**base,const int**ids,const int**safe,int64_t*stride,bool*half_storage){
++ auto it=gathers.find(node);if(it==gathers.end()){*base=nullptr;*ids=nullptr;*safe=nullptr;*stride=0;*half_storage=false;return;}
++ *base=it->second.base;*ids=it->second.ids;*safe=it->second.safe;*stride=it->second.stride;*half_storage=it->second.half;
++}

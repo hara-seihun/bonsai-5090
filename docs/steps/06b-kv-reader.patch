@@ -1,0 +1,153 @@
+--- a/06b-kv-reader.cu
++++ b/06b-kv-reader.cu
+@@ -1,20 +1,20 @@
+-
+-
+-// ---------------------------------------------------------------------------------------------
+-// FP8-KV target attention (HD 256, GQA 6): MMA fragments built straight from FP8 shared memory.
+-// K tile [32 keys][272 B]; V tile transposed [256 dims][48 B] (keys 0..31); 3-stage cp.async ring.
+-// S = (Q . K8) * kscale[key]; P is written as P * vscale[key] (row sums use the unscaled P).
+-// ---------------------------------------------------------------------------------------------
+-constexpr int A8_KLD = 272, A8_VLD = 48, A8_STAGES = 3;
+-constexpr int A8_STG = AT_KT * A8_KLD + HD * A8_VLD + 2 * AT_KT * 4;   // 8704 + 12288 + 256
+-constexpr int A8_QM = 48, A8_QLD = HD + 8;
+-constexpr int A8_SMEM = A8_STAGES * A8_STG + (A8_QM * A8_QLD + A8_QM * AT_PLD) * 2 + 2 * 4 * A8_QM * 4;
+-__device__ __forceinline__ unsigned f8x2_to_h2(unsigned short v) {
+-  __half2_raw r = __nv_cvt_fp8x2_to_halfraw2((__nv_fp8x2_storage_t)v, __NV_E4M3);
+-  return (unsigned)r.x | ((unsigned)r.y << 16);
++constexpr int A8_KLD=144,A8_VLD=144,A8_STAGES=3,A8_QLD=HD+8;
++constexpr int A8_STG=AT_KT*(A8_KLD+A8_VLD)+2*AT_KT*16;
++template<int MT> constexpr int a4_smem(){return A8_STAGES*A8_STG+(MT*16*A8_QLD+MT*16*AT_PLD)*2+2*4*MT*16*4;}
++__device__ __forceinline__ unsigned f4_scaled(uint8_t q,uint8_t scale){
++ __half2 a=__half2(__nv_cvt_fp4x2_to_halfraw2(q,__NV_E2M1));
++ __half b=__half(__nv_cvt_fp8_to_halfraw(scale,__NV_E4M3));
++ __half2 c=__hmul2(a,__half2half2(b));__half2_raw r=c;return (unsigned)r.x|((unsigned)r.y<<16);
++}
++__device__ __forceinline__ unsigned f4_v(const uint8_t*v,const uint8_t*sc,int d,int key){
++ unsigned lo=(v[key*A8_VLD+d/2]>>((d&1)*4))&15,hi=(v[(key+1)*A8_VLD+d/2]>>((d&1)*4))&15;
++ unsigned scales=sc[key*16+d/16]|(unsigned(sc[(key+1)*16+d/16])<<8);
++ __half2 a=__half2(__nv_cvt_fp4x2_to_halfraw2(lo|(hi<<4),__NV_E2M1));
++ __half2 b=__half2(__nv_cvt_fp8x2_to_halfraw2(scales,__NV_E4M3));__half2_raw r=__hmul2(a,b);return (unsigned)r.x|((unsigned)r.y<<16);
+ }
+ template <int MT>
+ __device__ __forceinline__ void attn8_body(const AttnTcArgs& a, int bx, int hk, int sp, int nsp, uint8_t* smem) {
++  constexpr int A8_QM=MT*16;
+   uint8_t* stg = smem;
+   __half* Qs = (__half*)(smem + A8_STAGES * A8_STG);
+   __half* Ps = Qs + A8_QM * A8_QLD;
+@@ -30,8 +30,8 @@
+   const int ntile = (kend + AT_KT - 1) / AT_KT;
+   const int t0 = sp * a.tps, t1 = min(ntile, t0 + a.tps);
+   const size_t hreg = (((size_t)qb.slot * a.nlayer + a.al) * NKV + hk) * (size_t)a.ctx;
+-  const uint8_t* K8 = (const uint8_t*)a.kc + hreg * HD;
+-  const uint8_t* V8 = (const uint8_t*)a.vc + hreg * HD;
++  const uint8_t* K8 = (const uint8_t*)a.kc + hreg * (HD / 2);
++  const uint8_t* V8 = (const uint8_t*)a.vc + hreg * (HD / 2);
+   for (int i = tid; i < MT * 16 * (HD / 8); i += 256) {
+     const int qi = i / (HD / 8), c = i % (HD / 8);
+     __half2 h[4];
+@@ -52,20 +52,12 @@
+ 
+   auto load_tile = [&](int t, int sidx) {
+     uint8_t* b = stg + sidx * A8_STG;
+-    for (int i = tid; i < AT_KT * 16; i += 256) {
+-      const int k = i >> 4, c = i & 15, key = t * AT_KT + k;
+-      const bool p = key < kend;
+-      a_cp16(b + k * A8_KLD + c * 16, K8 + (size_t)(p ? key : 0) * HD + c * 16, p);
++    if(tid<AT_KT*8){int k=tid/8,c=tid%8,key=t*AT_KT+k;bool valid=key<kend;size_t off=(size_t)(valid?key:0)*128+c*16;
++      a_cp16(b+k*A8_KLD+c*16,K8+off,valid);
++      a_cp16(b+AT_KT*A8_KLD+k*A8_VLD+c*16,V8+off,valid);
+     }
+-    const uint8_t* vb = V8 + (size_t)t * HD * 32;
+-    for (int i = tid; i < HD * 2; i += 256) {
+-      const int d = i >> 1, c = i & 1;
+-      a_cp16(b + AT_KT * A8_KLD + d * A8_VLD + c * 16, vb + d * 32 + c * 16, true);
+-    }
+-    if (tid < 16) {
+-      const int which = tid >> 3, c = tid & 7, key = t * AT_KT + c * 4;
+-      const bool p = key < kend;
+-      a_cp16(b + AT_KT * A8_KLD + HD * A8_VLD + which * AT_KT * 4 + c * 16, (which ? a.vsc : a.ksc) + hreg + (p ? key : 0), p);
++    if(tid<2*AT_KT){int which=tid/AT_KT,k=tid%AT_KT,key=t*AT_KT+k;bool valid=key<kend;
++      a_cp16(b+AT_KT*(A8_KLD+A8_VLD)+tid*16,(const uint8_t*)(which?a.vsc:a.ksc)+(hreg+(valid?key:0))*16,valid);
+     }
+     asm volatile("cp.async.commit_group;\n");
+   };
+@@ -91,20 +83,21 @@
+     else asm volatile("cp.async.commit_group;\n");
+     const uint8_t* Kt = stg + si * A8_STG;
+     const uint8_t* Vt = Kt + AT_KT * A8_KLD;
+-    const float* ksc = (const float*)(Vt + HD * A8_VLD);
+-    const float* vsc = ksc + AT_KT;
++    const uint8_t* ksc=Vt+AT_KT*A8_VLD;
++    const uint8_t* vsc=ksc+AT_KT*16;
+     float s[MT][4];
+ #pragma unroll
+     for (int mt = 0; mt < MT; mt++) s[mt][0] = s[mt][1] = s[mt][2] = s[mt][3] = 0.f;
+-    const uint8_t* kr = Kt + (nt * 8 + gid) * A8_KLD + 2 * tq;
++    const uint8_t* kr=Kt+(nt*8+gid)*A8_KLD+tq;
++    const uint8_t* krsc=ksc+(nt*8+gid)*16;
+     if (mlo < mhi) {
+ #pragma unroll
+       for (int kk = 0; kk < HD / 32; kk++) {
+         unsigned b[4];
+-        b[0] = f8x2_to_h2(*(const unsigned short*)(kr + kk * 32));
+-        b[1] = f8x2_to_h2(*(const unsigned short*)(kr + kk * 32 + 8));
+-        b[2] = f8x2_to_h2(*(const unsigned short*)(kr + kk * 32 + 16));
+-        b[3] = f8x2_to_h2(*(const unsigned short*)(kr + kk * 32 + 24));
++        b[0]=f4_scaled(kr[kk*16+0],krsc[kk*2+0]);
++        b[1]=f4_scaled(kr[kk*16+4],krsc[kk*2+0]);
++        b[2]=f4_scaled(kr[kk*16+8],krsc[kk*2+1]);
++        b[3]=f4_scaled(kr[kk*16+12],krsc[kk*2+1]);
+ #pragma unroll
+         for (int mt = 0; mt < MT; mt++) {
+           if (mt < mlo || mt >= mhi) continue;
+@@ -117,13 +110,13 @@
+       }
+     }
+     const int kl0 = nt * 8 + 2 * tq, key0 = t * AT_KT + kl0;
+-    const float ks0 = ksc[kl0], ks1 = ksc[kl0 + 1];
++
+ #pragma unroll
+     for (int mt = 0; mt < MT; mt++) {
+       if (mt < mlo || mt >= mhi) continue;
+ #pragma unroll
+       for (int h = 0; h < 2; h++) {
+-        s[mt][2 * h] *= ks0; s[mt][2 * h + 1] *= ks1;
++
+         if (key0 > qpos[mt][h]) s[mt][2 * h] = -INFINITY;
+         if (key0 + 1 > qpos[mt][h]) s[mt][2 * h + 1] = -INFINITY;
+         float mx = fmaxf(s[mt][2 * h], s[mt][2 * h + 1]);
+@@ -133,7 +126,7 @@
+       }
+     }
+     __syncthreads();
+-    const float vs0 = vsc[kl0], vs1 = vsc[kl0 + 1];
++
+     float corr[MT][2];
+ #pragma unroll
+     for (int mt = 0; mt < MT; mt++)
+@@ -147,7 +140,7 @@
+         if (mt >= mlo && mt < mhi) {
+           const float p0 = mnew == -INFINITY ? 0.f : __expf(s[mt][2 * h] - mnew);
+           const float p1 = mnew == -INFINITY ? 0.f : __expf(s[mt][2 * h + 1] - mnew);
+-          *(__half2*)(Ps + qi * AT_PLD + kl0) = __floats2half2_rn(p0 * vs0, p1 * vs1);
++          *(__half2*)(Ps + qi * AT_PLD + kl0) = __floats2half2_rn(p0,p1);
+           float sm = p0 + p1;
+           sm += __shfl_xor_sync(0xffffffff, sm, 1);
+           sm += __shfl_xor_sync(0xffffffff, sm, 2);
+@@ -171,8 +164,8 @@
+       for (int mt = 0; mt < MT; mt++) a_ldsm4(pf[mt], Ps + (mt * 16 + (lane & 15)) * AT_PLD + ks * 16 + (lane >> 4) * 8);
+ #pragma unroll
+       for (int n = 0; n < 4; n++) {
+-        const uint8_t* vr = Vt + (warp * 32 + n * 8 + gid) * A8_VLD + ks * 16 + 2 * tq;
+-        const unsigned b0 = f8x2_to_h2(*(const unsigned short*)vr), b1 = f8x2_to_h2(*(const unsigned short*)(vr + 8));
++        const int d=warp*32+n*8+gid,key=ks*16+2*tq;
++        const unsigned b0=f4_v(Vt,vsc,d,key),b1=f4_v(Vt,vsc,d,key+8);
+ #pragma unroll
+         for (int mt = 0; mt < MT; mt++) mma16816(o[mt][n], pf[mt], b0, b1);
+       }
+@@ -202,3 +195,4 @@
+   attn8_body<MT>(a, blockIdx.x, blockIdx.y, blockIdx.z, gridDim.z, smem);
+ }
+ template <int MT> static void attn8_launch(const AttnTcArgs& a, dim3 grid, cudaStream_t st) {
++  static bool init = false;

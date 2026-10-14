@@ -1,0 +1,69 @@
+--- a/05a-state-codec.cu
++++ b/05a-state-codec.cu
+@@ -1,22 +1,46 @@
+-__device__ __forceinline__ float st_ld(const __half* p) { return __half2float(*p); }
+-__device__ __forceinline__ void st_st(__half* p, float v) { *p = __float2half_rn(v); }
+-__device__ __forceinline__ float4 ld4(const __half* p) {
+-  const uint2 u = *(const uint2*)p; const __half2* b = (const __half2*)&u;
+-  const float2 f0 = __half22float2(b[0]), f1 = __half22float2(b[1]);
+-  return make_float4(f0.x, f0.y, f1.x, f1.y);
++template<int CG>
++__device__ __forceinline__ void gdn_load_q8_row(const GdnQ8Layer*layer,int h,int j,int cg,float*m){
++ static_assert(CG==8,"Q6 planes require CG8");const float scale=layer->scales[h][j];
++ const unsigned*p=(const unsigned*)layer->data[h][j];const unsigned words[3]={p[cg],p[8+cg],p[16+cg]};
++#pragma unroll
++ for(int i=0;i<16;i++){
++  constexpr unsigned mask=63u;const int bit=6*i,w=bit/32,shift=bit%32;
++  const unsigned v=shift>26?__funnelshift_r(words[w],words[w+1],shift):words[w]>>shift;
++  m[i]=float(int((v&mask)<<26)>>26)*scale;
++ }
++}
++template<typename ST,int CG,bool Q8>
++__device__ __forceinline__ void gdn_store_row(ST*,GdnQ8Layer*layer,int h,int j,int cg,const float*m,Q8ScaleMode mode){
++ static_assert(Q8&&CG==8,"Q6 save currently requires Q8 container and CG8");
++ float amax=0;
++#pragma unroll
++ for(int i=0;i<128/CG;i++)amax=fmaxf(amax,fabsf(m[i]));
++#pragma unroll
++ for(int sh=1;sh<CG;sh<<=1)amax=fmaxf(amax,__shfl_xor_sync(0xffffffff,amax,sh));
++ const float scale=amax*(1.f/31.f),inv=scale>0?1.f/scale:0;float xq[4]={0,0,0,0};int qq=0;unsigned packs[4];
++#pragma unroll
++ for(int i=0;i<128/CG/4;i++){
++  unsigned packed=0,bytes=0;
++#pragma unroll
++  for(int k=0;k<4;k++){
++   const int q=max(-31,min(31,__float2int_rn(m[4*i+k]*inv)));
++   packed|=(unsigned(q)&63u)<<(6*k);bytes|=unsigned(uint8_t(int8_t(q)))<<(8*k);
++   xq[k]=fmaf(m[4*i+k],float(q),xq[k]);
++  }
++  qq=__dp4a(int(bytes),int(bytes),qq);
++  packs[i]=packed;
++ }
++ unsigned*p=(unsigned*)layer->data[h][j];
++ p[cg]=packs[0]|(packs[1]<<24);
++ p[8+cg]=(packs[1]>>8)|(packs[2]<<16);
++ p[16+cg]=(packs[2]>>16)|(packs[3]<<8);
++ float dot=(xq[0]+xq[1])+(xq[2]+xq[3]);
++#pragma unroll
++ for(int sh=1;sh<CG;sh<<=1){dot+=__shfl_xor_sync(0xffffffff,dot,sh);qq+=__shfl_xor_sync(0xffffffff,qq,sh);}
++ if(cg==0)layer->scales[h][j]=mode==Q8ScaleMode::LeastSquares?(qq==0?0.f:dot/float(qq)):scale;
+ }
+ 
+-    if constexpr (Q8) gdn_load_q8_row<CG>(q8, h, j, cg, m);
+-    else {
+-#pragma unroll
+-      for (int i = 0; i < MC / 4; i++) {
+-        const float4 v = ld4(ML + CG * 4 * i);
+-        m[4*i] = v.x; m[4*i+1] = v.y; m[4*i+2] = v.z; m[4*i+3] = v.w;
+-      }
+-    }
+-
+-  } else if constexpr (CG == 4) st_store32(M, m);
+-  else {
+-#pragma unroll
+-    for (int i = 0; i < MC; i++) st_st(M + (i / 4) * CG * 4 + i % 4, m[i]);
+-  }
++constexpr int GDN_T = 2 * PMAX;   // max tokens per segment visit (replay + new); longer segments loop in chunks
++// Two CTAs per head (64 state rows each, 256 threads). Output is the raw o / sqrt(128); the gated
++// RMSNorm runs in the ssm_out prep (P_GDN_NORM).
++constexpr int GDN_SMEM = GDN_T * (128 + 128 + 64 + 2) * 4;

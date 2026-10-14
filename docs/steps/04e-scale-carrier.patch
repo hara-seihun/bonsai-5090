@@ -1,0 +1,56 @@
+--- /dev/null
++++ b/04e-scale-carrier.cu
+@@ -0,0 +1,53 @@
++__global__ void k_row_scale_mean(const __half* scales, float* mean, float4* stats, int N, int nkb) { H5_LIT(0);
++  pdl_wait(); pdl_launch();
++  const int row = blockIdx.x * blockDim.x + threadIdx.x;
++  if (row >= N) return;
++  const int scrow = (row / 32) * 32 + (row & 7) * 4 + ((row >> 3) & 3);
++  float sum = 0.f, sum2 = 0.f, lo = INFINITY, hi = 0.f;
++  for (int kb = 0; kb < nkb; kb++) {
++    const float s = __half2float(scales[(size_t)kb * N + scrow]);
++    if (!isfinite(s) || s < 0.f) { mean[row] = NAN; if (stats) stats[row] = make_float4(NAN, NAN, NAN, NAN); return; }
++    sum += s;
++    if (stats) { sum2 = fmaf(s, s, sum2); lo = fminf(lo, s); hi = fmaxf(hi, s); }
++  }
++  const float mu = sum / nkb;
++  mean[row] = mu;
++  if (stats) stats[row] = make_float4(mu, lo, hi, fmaxf(0.f, sum2 / nkb - mu * mu));
++}
++cudaError_t scale_carrier_prepare(const void* S, float* mean, float4* stats, int N, int K, cudaStream_t st) {
++  if (!S || !mean || N <= 0 || N % 32 || K <= 0 || K % 128) return cudaErrorInvalidValue;
++  pdl(k_row_scale_mean, dim3((N + 255) / 256), dim3(256), 0, st, (const __half*)S, mean, stats, N, K / 128);
++  return cudaGetLastError();
++}
++
++        if (CARRIER || (WF != 0 && WF != 3)) {
++          mma_fp4(acc[m][n], a[m][0], b0, b1, bs.x, acc[m][n], CARRIER ? 0x38383838u : sca[m][0]);
++          mma_fp4(acc[m][n], a[m][1], b2, b3, bs.y, acc[m][n], CARRIER ? 0x38383838u : sca[m][1]);
++          continue;
++        }
++        float d[4];
++        mma_fp4(d, a[m][0], b0, b1, bs.x, zero);
++        mma_fp4(d, a[m][1], b2, b3, bs.y, d);
++        acc[m][n][0] = fmaf(d[0], wsc[m][0], acc[m][n][0]);
++        acc[m][n][1] = fmaf(d[1], wsc[m][0], acc[m][n][1]);
++        acc[m][n][2] = fmaf(d[2], wsc[m][1], acc[m][n][2]);
++        acc[m][n][3] = fmaf(d[3], wsc[m][1], acc[m][n][3]);
++      }
++    }
++    if constexpr (MICRO) {
++#pragma unroll
++      for (int m = 0; m < MT; m++)
++#pragma unroll
++        for (int n = 0; n < NT; n++)
++#pragma unroll
++          for (int i = 0; i < 4; i++) trace.consume(acc[m][n][i]);
++
++        for (int r = 0; r < 2; r++) {
++          if (g0 + gw + (m >> 1) >= NGall) continue;   // second group of a WG=2 warp past N
++          float v = acc[m][n][r * 2 + j] * gt;
++          if (CARRIER || (WF != 0 && WF != 3)) v *= RS[(g0 + gw) * 32 + gid + m * 16 + r * 8];
++          if (MODE == 2) atomicAdd(o + m * 16 + r * 8, v);
++          else { if (MODE == 1) v += o[m * 16 + r * 8]; o[m * 16 + r * 8] = v; }
++        }
++    }
++  }

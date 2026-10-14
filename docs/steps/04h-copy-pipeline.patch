@@ -1,0 +1,151 @@
+--- /dev/null
++++ b/04h-copy-pipeline.cu
+@@ -0,0 +1,148 @@
++  const int nkb_all = K / 128;
++  const int kb0 = (int)((long)nkb_all * blockIdx.z / gridDim.z), kb1 = (int)((long)nkb_all * (blockIdx.z + 1) / gridDim.z);
++  const int nkb = kb1 - kb0;
++  const int NGall = N / 32;
++  const int g0 = blockIdx.y * G::NG;
++  const int t0 = blockIdx.x * TOKW;
++  if (tid == 0) {
++    for (int s = 0; s < STAGES; s++) { mbar_init(&full[s], 1); mbar_init(&empty[s], empty_arrivals); }
++    asm volatile("fence.mbarrier_init.release.cluster;" ::: "memory");
++  }
++  uint32_t* book = nullptr;
++  if constexpr (WF == 3 || WF == 8) {
++    book = (uint32_t*)(smem + G::SMEM - 1024);
++    for(int code=tid;code<256;code+=blockDim.x) {
++      unsigned q=code, value=0;
++#pragma unroll
++      for(int j=0;j<5;j++,q/=3) value|=(q%3==0?10u:q%3==2?2u:0u)<<(4*j);
++      book[code]=value;
++    }
++  }
++  __syncthreads();
++  trace.end(micro::Setup);
++
++  if (warp == FW) {   // producer
++#ifdef EXP_NOWAIT
++    return;
++#endif
++    if (lane == 0) {
++      const uint64_t weight_policy = weight_tma_policy();
++      const int ng = min(G::NG, NGall - g0);
++      const int tile = t0 / 64, toff = t0 % 64;
++      const unsigned tx = ng * CW + (CARRIER ? 0 : ng * CS) + (FUSE ? 0 : TOKW * 64 + TOKW * 8);
++      // weights do not depend on the previous kernel: start streaming this CTA's whole weight slice
++      // into L2 and issue the first ring of it into shared memory, then wait for the producer kernel
++      trace.begin(micro::WeightPrefetch);
++      if (l2pf_enabled()) for (int kb = STAGES; kb < nkb; kb++) {
++        const size_t kk = kb0 + kb;
++        asm volatile("cp.async.bulk.prefetch.L2.global [%0], %1;" :: "l"(W + (kk * NGall + g0) * CW), "r"(ng * CW) : "memory");
++      }
++      const int npre = min(min(nkb, STAGES), g_prewait_cap);
++      for (int kb = npre, kend = min(nkb, npre + g_l2pf_stages); kb < kend; kb++) {
++        const size_t kk = kb0 + kb;
++        asm volatile("cp.async.bulk.prefetch.L2.global [%0], %1;" :: "l"(W + (kk * NGall + g0) * CW), "r"(ng * CW) : "memory");
++      }
++      for (int kb = 0; kb < npre; kb++) {
++        uint8_t* st = smem + kb * G::STAGE;
++        mbar_expect(&full[kb], tx);
++        const size_t kk = kb0 + kb;
++        bulk_weight_g2s(st, W + (kk * NGall + g0) * CW, ng * CW, &full[kb], weight_policy);
++        if constexpr (!CARRIER) bulk_g2s(st + G::SW, S + (kk * NGall + g0) * CS, ng * CS, &full[kb]);
++      }
++      trace.end(micro::WeightPrefetch);
++      if constexpr (matched_release) H5_LIT_MARKX(0);
++      trace.begin(micro::Predecessor);
++      if constexpr (!matched_release) pdl_early_trigger(4u);
++      if (TAIL != TAIL_NONE && ta.wait_sig) tail_flag_wait(ta.wait_sig, ta.wait_expect);
++      else pdl_wait();
++      trace.end(micro::Predecessor);
++      if constexpr (matched_release) H5_LIT_MARKX(1);
++#ifdef H5_PDL_EARLY_GEMM_RELEASE
++      if constexpr (!matched_release) pdl_launch();
++#endif
++      for (int kb = 0; kb < nkb; kb++) {
++        const int s = kb % STAGES;
++        uint8_t* st = smem + s * G::STAGE;
++        const size_t kk = kb0 + kb;
++        if (kb >= npre) {
++          trace.begin(micro::EmptyWait, kb);
++          mbar_wait(&empty[s], ((kb / STAGES) & 1) ^ 1);
++          trace.end(micro::EmptyWait, kb);
++          trace.begin(micro::WeightIssue, kb);
++          mbar_expect(&full[s], tx);
++          bulk_weight_g2s(st, W + (kk * NGall + g0) * CW, ng * CW, &full[s], weight_policy);
++          if constexpr (!CARRIER) bulk_g2s(st + G::SW, S + (kk * NGall + g0) * CS, ng * CS, &full[s]);
++          trace.end(micro::WeightIssue, kb);
++        }
++        trace.begin(micro::ActivationIssue, kb);
++        constexpr int SUB = TOKW < 64 ? TOKW : 64;
++        if constexpr (!FUSE)
++#pragma unroll
++        for (int u = 0; u < TOKW / SUB; u++) {
++          const size_t rb = ((size_t)(tile + u) * nkb_all + kk) * 64 + toff;
++          bulk_g2s(st + G::SW + G::SWS + u * SUB * 64, A + rb * 64, SUB * 64, &full[s]);
++          bulk_g2s(st + G::SW + G::SWS + G::SA + u * SUB * 8, AS + rb * 8, SUB * 8, &full[s]);
++        }
++        trace.end(micro::ActivationIssue, kb);
++      }
++      if constexpr (matched_release) {
++        pdl_wait();
++        H5_LIT_MARKX(2);
++        pdl_launch();
++        H5_LIT_MARKX(3);
++      } else if (TAIL != TAIL_NONE && ta.wait_sig) pdl_wait();   // complete only after the predecessor grid
++    }
++    trace.finish();
++    return;
++  }
++
++  const int gid = lane >> 2, tq = lane & 3;
++
++__device__ __forceinline__ void mbar_arrive(uint64_t* b) { asm volatile("mbarrier.arrive.shared::cta.b64 _, [%0];" :: "r"(smem_u32(b)) : "memory"); }
++// Consumer release of a ring stage that the producer refills with bulk (async-proxy) copies. The
++// stage was read through the generic proxy (LDS/LDSM), so the release needs the proxy fence: without
++// it ptxas issues the arrive while the warp's last shared loads of the stage are still in flight, and
++// the refill can land under them. Every lane fences; one arrives per warp (arrival count FW).
++__device__ __forceinline__ void ring_release(uint64_t* empty, bool arrive) {
++  asm volatile("fence.proxy.async.shared::cta;" ::: "memory");
++  __syncwarp();
++  if (arrive) mbar_arrive(empty);
++}
++__device__ __forceinline__ void mbar_wait(uint64_t* b, unsigned parity) {
++  asm volatile("{\n .reg .pred p;\n W: mbarrier.try_wait.parity.shared::cta.b64 p, [%0], %1;\n @!p bra W;\n}" :: "r"(smem_u32(b)), "r"(parity) : "memory");
++}
++__device__ __forceinline__ void bulk_g2s(void* dst, const void* src, unsigned bytes, uint64_t* bar) {
++  asm volatile("cp.async.bulk.shared::cluster.global.mbarrier::complete_tx::bytes [%0], [%1], %2, [%3];"
++               :: "r"(smem_u32(dst)), "l"(src), "r"(bytes), "r"(smem_u32(bar)) : "memory");
++}
++
++// 0: unchanged instruction, 1: explicit normal hint, 2: evict-first weight hint.
++#ifndef H5_WEIGHT_TMA_CACHE_POLICY
++#define H5_WEIGHT_TMA_CACHE_POLICY 0
++#endif
++#if H5_WEIGHT_TMA_CACHE_POLICY < 0 || H5_WEIGHT_TMA_CACHE_POLICY > 2
++#error "H5_WEIGHT_TMA_CACHE_POLICY must be 0 (none), 1 (normal), or 2 (evict_first)"
++#endif
++__device__ __forceinline__ uint64_t weight_tma_policy() {
++#if H5_WEIGHT_TMA_CACHE_POLICY == 0
++  return 0;
++#else
++  uint64_t policy;
++#if H5_WEIGHT_TMA_CACHE_POLICY == 1
++  asm volatile("createpolicy.fractional.L2::evict_normal.L2::evict_unchanged.b64 %0, 1.0;" : "=l"(policy));
++#else
++  asm volatile("createpolicy.fractional.L2::evict_first.L2::evict_unchanged.b64 %0, 1.0;" : "=l"(policy));
++#endif
++  return policy;
++#endif
++}
++__device__ __forceinline__ void bulk_weight_g2s(void* dst, const void* src, unsigned bytes, uint64_t* bar, uint64_t policy) {
++#if H5_WEIGHT_TMA_CACHE_POLICY == 0
++  bulk_g2s(dst, src, bytes, bar);
++#else
++  asm volatile("cp.async.bulk.shared::cluster.global.mbarrier::complete_tx::bytes.L2::cache_hint [%0], [%1], %2, [%3], %4;"
++               :: "r"(smem_u32(dst)), "l"(src), "r"(bytes), "r"(smem_u32(bar)), "l"(policy) : "memory");
++#endif
++}
++
++}

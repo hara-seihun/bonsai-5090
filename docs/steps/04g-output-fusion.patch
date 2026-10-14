@@ -1,0 +1,144 @@
+--- a/04g-output-fusion.cu
++++ b/04g-output-fusion.cu
+@@ -1,90 +1,56 @@
+-                type_gate = LLM_FFN_SEQ;
++  if constexpr (MODE == 3) {   // gate group gw and up group gw+1 of the same 32 features: write silu(gate) * up
++    if constexpr (WG == 2) {
++      const int fg = (g0 + gw) >> 1;   // feature group in the hidden (FF) coordinate
++#pragma unroll
++      for (int n = 0; n < NT; n++)
++#pragma unroll
++        for (int j = 0; j < 2; j++) {
++          const int t = t0 + n * 8 + tq * 2 + j;
++          if (t >= R) continue;
++          const float gt = FUSE ? fgsm[0] : activation_scale(AG + t);
++          float* o = out + (size_t)t * ldo + fg * 32 + gid;
++#pragma unroll
++          for (int mm = 0; mm < 2; mm++) {
++            if constexpr (DEGREE8) {
++              const float2 h = f07_degree8_product(acc[mm][n][j] * gt, acc[mm][n][2 + j] * gt,
++                                                   acc[2 + mm][n][j] * gt, acc[2 + mm][n][2 + j] * gt);
++              o[mm * 16] = h.x; o[mm * 16 + 8] = h.y;
+             } else {
+-                cur = ggml_silu(ctx0, cur);
+-                cb(cur, "ffn_silu", il);
+-            } break;
+-        case LLM_FFN_GELU:
+-            if (gate && type_gate == LLM_FFN_PAR) {
+-                cur = ggml_geglu_split(ctx0, cur, tmp);
+-                cb(cur, "ffn_geglu", il);
+-                type_gate = LLM_FFN_SEQ;
+-            } else {
+-                cur = ggml_gelu(ctx0, cur);
+-                cb(cur, "ffn_gelu", il);
+-                if (act_scales != NULL) {
+-                    cur = ggml_div(ctx0, cur, act_scales);
+-                    cb(cur, "ffn_act", il);
++#pragma unroll
++              for (int r = 0; r < 2; r++) {
++                float gv = acc[mm][n][r * 2 + j] * gt, uv = acc[2 + mm][n][r * 2 + j] * gt;
++                if (CARRIER || (WF != 0 && WF != 3)) {   // row scales of the interleaved gate (group gw) and up (group gw + 1) features
++                  gv *= RS[(g0 + gw) * 32 + mm * 16 + r * 8 + gid];
++                  uv *= RS[(g0 + gw + 1) * 32 + mm * 16 + r * 8 + gid];
+                 }
+-            } break;
+-        case LLM_FFN_RELU:
+-            if (gate && type_gate == LLM_FFN_PAR) {
+-                cur = ggml_reglu_split(ctx0, cur, tmp);
+-                cb(cur, "ffn_reglu", il);
+-                type_gate = LLM_FFN_SEQ;
+-            } else {
+-                cur = ggml_relu(ctx0, cur);
+-                cb(cur, "ffn_relu", il);
+-            } break;
+-        case LLM_FFN_RELU_SQR:
+-            {
+-                cur = ggml_relu(ctx0, cur);
+-                cb(cur, "ffn_relu", il);
+-
+-                cur = ggml_sqr(ctx0, cur);
+-                cb(cur, "ffn_sqr(relu)", il);
+-            } break;
+-        case LLM_FFN_SWIGLU:
+-            {
+-                cur = ggml_swiglu(ctx0, cur);
+-                cb(cur, "ffn_swiglu", il);
+-            } break;
+-        case LLM_FFN_SWIGLU_OAI_MOE:
+-            if (gate && type_gate == LLM_FFN_PAR) {
+-                // same alpha/limit constants as gpt-oss
+-                const float alpha = 1.702f;
+-                const float limit = 7.0f;
+-                cur = ggml_swiglu_oai(ctx0, cur, tmp, alpha, limit);
+-                cb(cur, "ffn_swiglu_oai", il);
+-                type_gate = LLM_FFN_SEQ;
+-            } else {
+-                GGML_ABORT("LLM_FFN_SWIGLU_OAI_MOE requires a parallel gate");
+-            } break;
+-        case LLM_FFN_GEGLU:
+-            {
+-                cur = ggml_geglu(ctx0, cur);
+-                cb(cur, "ffn_geglu", il);
+-            } break;
+-        case LLM_FFN_REGLU:
+-            {
+-                cur = ggml_reglu(ctx0, cur);
+-                cb(cur, "ffn_reglu", il);
+-            } break;
+-        case LLM_FFN_SITU:
+-            GGML_ABORT("not yet supported");
+-        default:
+-            GGML_ABORT("fatal error");
+-    }
+-
+-    if (gate && type_gate == LLM_FFN_PAR) {
+-        cur = ggml_mul(ctx0, cur, tmp);
+-        cb(cur, "ffn_gate_par", il);
+-    }
+-
+-    if (down) {
+-        cur = build_lora_mm(down, cur);
+-        if (arch == LLM_ARCH_GLM4 || arch == LLM_ARCH_GLM4_MOE || arch == LLM_ARCH_JAIS2) {
+-            // GLM4, GLM4_MOE, and JAIS2 seem to have numerical issues with half-precision accumulators
+-            ggml_mul_mat_set_prec(cur, GGML_PREC_F32);
++                o[mm * 16 + r * 8] = gv / (1.f + __expf(-gv)) * uv;
++              }
++            }
++          }
+         }
+     }
+-
+-    if (down_b) {
+-        cb(cur, "ffn_down", il);
++  } else {
++#pragma unroll
++  for (int n = 0; n < NT; n++) {
++#pragma unroll
++    for (int j = 0; j < 2; j++) {
++      const int t = t0 + n * 8 + tq * 2 + j;
++      if (t >= R) continue;
++      const float gt = activation_scale(AG + t);
++      float* o = out + (size_t)t * ldo + (g0 + gw) * 32 + gid;
++#pragma unroll
++      for (int m = 0; m < MT; m++)
++#pragma unroll
++        for (int r = 0; r < 2; r++) {
++          if (g0 + gw + (m >> 1) >= NGall) continue;   // second group of a WG=2 warp past N
++          float v = acc[m][n][r * 2 + j] * gt;
++          if (CARRIER || (WF != 0 && WF != 3)) v *= RS[(g0 + gw) * 32 + gid + m * 16 + r * 8];
++          if (MODE == 2) atomicAdd(o + m * 16 + r * 8, v);
++          else { if (MODE == 1) v += o[m * 16 + r * 8]; o[m * 16 + r * 8] = v; }
++        }
+     }
+-
+-    if (down_b) {
+-        cur = ggml_add(ctx0, cur, down_b);
+-    }
+-
+-    if (down_s) {
+-        cur = ggml_mul(ctx0, cur, down_s);
++  }
++  }
++  }
++  trace.end(micro::Epilogue);
++  if (!matched_release && TAIL == TAIL_SIDE && ta.wait_sig) pdl_wait();

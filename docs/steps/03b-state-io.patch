@@ -1,0 +1,104 @@
+--- a/03b-state-io.cu
++++ b/03b-state-io.cu
+@@ -28,7 +28,7 @@
+                                      int64_t       state_slot_stride,
+                                      int           K,
+                                      const int32_t * s_ids,
+-                                     int64_t s_row_stride,const float*p12_base,const int*p12_ids,const int*p12_safe,int64_t p12_stride) {
++                                     int64_t s_row_stride,const float*p12_base,const int*p12_ids,const int*p12_safe,int64_t p12_stride,bool p12_input_half,bool p12_output_half) {
+     const uint32_t h_idx    = blockIdx.x;
+     const uint32_t sequence = blockIdx.y;
+     // Each warp owns one or more columns, using warp-level primitives to reduce across rows.
+@@ -48,6 +48,7 @@
+     // Wait before any s_ids / state load. inp_s_copy is a host upload today, so this is a no-op
+     // on that path; ggml_cuda_try_gdn_gather_skip accepts any I32 ids tensor.
+     ggml_cuda_pdl_sync();
++    bool input_half=p12_safe && *p12_safe && p12_input_half;
+     if(p12_safe && *p12_safe){curr_state=p12_base;s_ids=p12_ids;s_row_stride=p12_stride;}
+ 
+     // input state holds s0 only: [S_v, S_v, H, n_seqs] — seq stride is D = H * S_v * S_v.
+@@ -56,8 +57,8 @@
+     const int64_t state_in_offset      = (s_ids ? (int64_t) s_ids[sequence] * s_row_stride : sequence * H * S_v * S_v)
+                                          + h_idx * S_v * S_v;
+     const int64_t state_out_offset     = (sequence * H + h_idx) * S_v * S_v;
+-    state += state_out_offset;
+-    curr_state += state_in_offset;
++    state=(float*)((char*)state+state_out_offset*(p12_output_half?2:4));
++    curr_state=(const float*)((const char*)curr_state+state_in_offset*(input_half?2:4));
+     attn_data += (sequence * n_tokens * H + h_idx) * S_v;
+ 
+     constexpr int warp_size = ggml_cuda_get_physical_warp_size() < S_v ? ggml_cuda_get_physical_warp_size() : S_v;
+@@ -71,7 +72,7 @@
+ #pragma unroll
+         for (int r = 0; r < rows_per_lane; r++) {
+             const int i = r * warp_size + lane;
+-            s_shard[c][r] = curr_state[(col + c) * S_v + i];
++            s_shard[c][r] = input_half?__half2float(((const half*)curr_state)[(col+c)*S_v+i]):curr_state[(col+c)*S_v+i];
+         }
+     }
+ 
+@@ -171,13 +172,13 @@
+             // When n_tokens < K only slots 0..n_tokens-1 are written; older slots are caller-owned.
+             const int target_slot = (int) n_tokens - 1 - t;
+             if (target_slot >= 0 && target_slot < K) {
+-                float * curr_state = state + target_slot * state_slot_stride;
++                float * curr_state=(float*)((char*)state+target_slot*state_slot_stride*(p12_output_half?2:4));
+ #pragma unroll
+                 for (int c = 0; c < cols_per_warp; ++c) {
+ #pragma unroll
+                     for (int r = 0; r < rows_per_lane; r++) {
+                         const int i = r * warp_size + lane;
+-                        curr_state[(col + c) * S_v + i] = s_shard[c][r];
++                        if(p12_output_half)((half*)curr_state)[(col+c)*S_v+i]=__float2half_rn(s_shard[c][r]);else curr_state[(col+c)*S_v+i]=s_shard[c][r];
+                     }
+                 }
+             }
+@@ -191,7 +192,7 @@
+ #pragma unroll
+             for (int r = 0; r < rows_per_lane; r++) {
+                 const int i = r * warp_size + lane;
+-                state[(col + c) * S_v + i] = s_shard[c][r];
++                if(p12_output_half)((half*)state)[(col+c)*S_v+i]=__float2half_rn(s_shard[c][r]);else state[(col+c)*S_v+i]=s_shard[c][r];
+             }
+         }
+     }
+@@ -203,8 +204,9 @@
+  const float*rb,const float*ra,const float*input,float*dst,float*state,
+  int H,int64_t sq1,int64_t sq3,int64_t sv1,int64_t sv3,int64_t sb1,int64_t sb3,
+  uint3 hmagic,uint3 seqmagic,float scale,const int32_t*ids,int64_t row_stride,
+- const float*direct=nullptr,const int*direct_ids=nullptr,const int*safe=nullptr,int64_t direct_stride=0) {
++ const float*direct=nullptr,const int*direct_ids=nullptr,const int*safe=nullptr,int64_t direct_stride=0,bool input_half=false,bool output_half=false) {
+  ggml_cuda_pdl_sync();
++ input_half=input_half && safe && *safe;
+  if(safe&&*safe){input=direct;ids=direct_ids;row_stride=direct_stride;}
+  const int h=blockIdx.x,seq=blockIdx.y,lane=threadIdx.x%CG,col=blockIdx.z*(128/CG)+threadIdx.x/CG;
+  const int qh=fastmodulo(h,hmagic),qs=fastdiv(seq,seqmagic);
+@@ -215,7 +217,7 @@
+  float dot=0.f;
+  #pragma unroll
+  for(int j=0;j<32/CG;j++) {
+-  int i=j*CG+lane;st[j]=sp[i];kr[j]=((const float4*)kp)[i];qr[j]=((const float4*)qp)[i];
++  int i=j*CG+lane;if(input_half){const half2*p=(const half2*)((const half*)input+offset);float2 a=__half22float2(p[2*i]),b=__half22float2(p[2*i+1]);st[j]=make_float4(a.x,a.y,b.x,b.y);}else st[j]=sp[i];kr[j]=((const float4*)kp)[i];qr[j]=((const float4*)qp)[i];
+   dot=fmaf(st[j].x,kr[j].x,dot);dot=fmaf(st[j].y,kr[j].y,dot);dot=fmaf(st[j].z,kr[j].z,dot);dot=fmaf(st[j].w,kr[j].w,dot);
+  }
+  #pragma unroll
+@@ -230,9 +232,18 @@
+   float4 s=st[j],kk=kr[j],qq=qr[j];
+   s.x=gv*s.x+kk.x*delta;s.y=gv*s.y+kk.y*delta;s.z=gv*s.z+kk.z*delta;s.w=gv*s.w+kk.w*delta;
+   val=fmaf(s.x,qq.x,val);val=fmaf(s.y,qq.y,val);val=fmaf(s.z,qq.z,val);val=fmaf(s.w,qq.w,val);
+-  out[j*CG+lane]=s;
++  if(output_half){half2*p=(half2*)((half*)state+((int64_t)seq*H+h)*128*128+col*128);int i=j*CG+lane;p[2*i]=__floats2half2_rn(s.x,s.y);p[2*i+1]=__floats2half2_rn(s.z,s.w);}else out[j*CG+lane]=s;
+  }
+  #pragma unroll
+  for(int off=CG/2;off;off/=2)val+=__shfl_xor_sync(0xffffffff,val,off,CG);
+  if(lane==0)dst[((int64_t)seq*H+h)*128+col]=val*scale;
+ }
++
++__global__ void p12_gather_if_needed(const float*base,const int*ids,int64_t stride,float*out,int64_t width,int n,const int*safe,bool half_storage){
++ if(*safe)return;int64_t count=width*n;
++ for(int64_t i=(int64_t)blockIdx.x*blockDim.x+threadIdx.x;i<count;i+=(int64_t)gridDim.x*blockDim.x){int64_t j=(int64_t)ids[i/width]*stride+i%width;out[i]=half_storage?__half2float(((const half*)base)[j]):base[j];}
++}
++
++extern "C" void p12_register_state_output(const ggml_tensor*node,bool half_storage){state_half[node]=half_storage;}
++
++extern "C" bool p12_state_output_half(const ggml_tensor*node){auto it=state_half.find(node);return it!=state_half.end()&&it->second;}

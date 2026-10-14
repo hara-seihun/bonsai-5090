@@ -1,0 +1,31 @@
+--- /dev/null
++++ b/06c-kv-wiring.cu
+@@ -0,0 +1,28 @@
++// Cache-only whole-model diagnostic. The frozen engine's original FP8 allocation
++// is retained; compact data and scale planes occupy its first 144/256 bytes.
++// No engine/state/weight/plan objects change. Ordinary chunk and single-token
++// calls are supported. Fork/copy-slot/speculation are outside this probe.
++#include "attention_fp4_h5_producer.cuh"
++#include "attention_fp4_direct_reader.cuh"
++#include <stdexcept>
++extern "C" void __real__ZN2h515launch_attn_preERKNS_8AttnArgsEiP11CUstream_st(const h5::AttnArgs&,int,cudaStream_t);
++extern "C" void __real__ZN2h514launch_attn_tcERKNS_10AttnTcArgsEiiiiP11CUstream_st(const h5::AttnTcArgs&,int,int,int,int,cudaStream_t);
++namespace {
++bool enabled(){static bool yes=getenv("P12_FP4_CACHE")&&atoi(getenv("P12_FP4_CACHE"));return yes;}
++int slots(){static int n=[](){const char*p=getenv("P12_FP4_SLOTS");if(!p)throw std::runtime_error("P12_FP4_SLOTS must equal h5_create slot count");char*end=nullptr;long v=strtol(p,&end,10);if(*end||v<1||v>64)throw std::runtime_error("invalid P12_FP4_SLOTS");return (int)v;}();return n;}
++float* scales(void*data,int ctx){return (float*)((uint8_t*)data+(size_t)slots()*h5::NATTN*h5::NKV*ctx*128);}
++}
++extern "C" void __wrap__ZN2h515launch_attn_preERKNS_8AttnArgsEiP11CUstream_st(const h5::AttnArgs&a,int rows,cudaStream_t st){
++ if(!enabled()){__real__ZN2h515launch_attn_preERKNS_8AttnArgsEiP11CUstream_st(a,rows,st);return;}
++ if(!a.ksc||!a.vsc||a.pf||a.pf_bytes)throw std::runtime_error("FP4 probe requires original FP8 allocation and no prefetch-chain feature");
++ h5::AttnArgs b=a;b.ksc=scales(a.kc,a.ctx);b.vsc=scales(a.vc,a.ctx);b.vt=0;
++ h5::pdl(p12kv4h5::prepare,dim3(28,rows),dim3(256),0,st,b);
++ static bool printed=false;if(!printed){printed=true;fprintf(stderr,"FP4 direct-fragment cache probe: E2M1 + E4M3/group16; slots=%d ctx=%d; active KV144B/head, original FP8 allocation retained; frozen engine/state/weights\n",slots(),a.ctx);}
++}
++extern "C" void __wrap__ZN2h514launch_attn_tcERKNS_10AttnTcArgsEiiiiP11CUstream_st(const h5::AttnTcArgs&a,int nqb,int nsp,int rows,int max_mt,cudaStream_t st){
++ if(!enabled()||a.hd!=256){__real__ZN2h514launch_attn_tcERKNS_10AttnTcArgsEiiiiP11CUstream_st(a,nqb,nsp,rows,max_mt,st);return;}
++ if(!a.ksc||a.nkv!=4||a.nlayer!=h5::NATTN||a.ring||a.window||a.noncausal||a.draft_block_rows||a.draft_nest)throw std::runtime_error("FP4 whole-model probe requires ordinary target attention");
++ h5::AttnTcArgs b=a;b.ksc=scales((void*)a.kc,a.ctx);b.vsc=scales((void*)a.vc,a.ctx);dim3 grid(nqb,4,nsp);
++ if(max_mt<=1)p12kv4direct::attn8_launch<1>(b,grid,st);else if(max_mt==2)p12kv4direct::attn8_launch<2>(b,grid,st);else if(max_mt==3)p12kv4direct::attn8_launch<3>(b,grid,st);else throw std::runtime_error("FP4 unsupported MT");
++ if(rows>0&&!a.direct)h5::pdl(p12kv4direct::k_attn_combine,dim3(rows,24),dim3(256),0,st,b,nsp,256);
++}

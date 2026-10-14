@@ -1,0 +1,11 @@
+--- /dev/null
++++ b/01b-embedding-placement.cu
+@@ -0,0 +1,8 @@
++ llama_model_tensor_buft_override p12_embed_override[2]{};
++ if(const char*embedding=std::getenv("P12_EMBEDDING")){
++  if(std::string(embedding)!="device-native"&&std::string(embedding)!="device-h5")throw std::runtime_error("P12_EMBEDDING requires device-native or device-h5");
++  auto *dev=ggml_backend_dev_by_type(GGML_BACKEND_DEVICE_TYPE_GPU);
++  if(!dev)throw std::runtime_error("GPU embedding requires a CUDA device");
++  p12_embed_override[0]={"^token_embd\\.weight$",ggml_backend_dev_buffer_type(dev)};
++  mp.tensor_buft_overrides=p12_embed_override;
++ }

@@ -1,0 +1,386 @@
+--- a/04k-execution.cu
++++ b/04k-execution.cu
+@@ -1,96 +1,291 @@
+-static enum ggml_status ggml_backend_cuda_graph_compute(ggml_backend_t backend, ggml_cgraph * cgraph) {
+-    p12_prepare_native_weights(cgraph);
+-    p12_begin_graph();
+-    p12_recurrent::begin();
+-    p12_ab4_norm_skips.clear();
+-    ggml_backend_cuda_context * cuda_ctx = (ggml_backend_cuda_context *) backend->context;
++  void launch_graph(const GraphEntry& entry) {
++    if (graph_timing == H5_GRAPH_TIMING_OFF) { CK(cudaGraphLaunch(entry.exec, st)); return; }
++    graph_sample.nodes = entry.nodes; graph_sample.roots = entry.roots;
++    graph_sample.rewrite_ns = entry.rewrite_ns;
++    graph_sample.memory_copies = entry.memory.copies; graph_sample.memory_clears = entry.memory.clears;
++    graph_sample.copy_bytes = entry.memory.copy_bytes; graph_sample.clear_bytes = entry.memory.clear_bytes;
++    graph_sample.host_read_bytes = entry.memory.host_read_bytes; graph_sample.host_write_bytes = entry.memory.host_write_bytes;
++    const auto cpu = thread_ns();
++    const auto begin = ProbeClock::now();
++    CK(cudaGraphLaunch(entry.exec, st));
++    const auto end = ProbeClock::now();
++    graph_sample.launch_thread_ns = thread_ns() - cpu;
++    graph_sample.launch_wall_ns = probe_ns(begin, end);
++  }
++  template <class F> void run_graph(const GKey& k, F&& body) {
++    graph_probe_used = true;
++    if (graph_timing != H5_GRAPH_TIMING_OFF) {
++      const int shape[] = {k.kind, k.a, k.b, k.c, k.d, k.e, k.f, k.g};
++      std::copy(shape, shape + 8, graph_sample.shape);
++    }
++    auto it = graphs.find(k);
++    if (it != graphs.end()) { graph_sample.route = H5_GRAPH_ROUTE_CACHED; graph_hits++; launch_graph(it->second); return; }
++    // capture only shapes that recur (third sighting) and only for small steps, where launch overhead is a
++    // real fraction of the step; large batched steps vary in shape and are dominated by kernel time
++    if (k.a > graph_max_rows || gseen[k]++ < 2) { body(); return; }
++    if (graphs.size() >= 1024) { for (auto& g : graphs) CK(cudaGraphExecDestroy(g.second.exec)); graphs.clear(); }
++    cudaGraph_t gr;
++    CK(cudaStreamBeginCapture(st, cudaStreamCaptureModeThreadLocal));
++    pf_begin_step();
++    body();
++    pf_end_step();
++    CK(cudaStreamEndCapture(st, &gr));
++    GraphMemoryResult memory{GraphMemoryError::None, cudaSuccess, 0, 0, 0, 0, 0, 0};
++    uint64_t rewrite_ns = 0;
++    if (graph_nodes == H5_GRAPH_NODES_KERNEL_MEMORY) {
++      const auto begin = ProbeClock::now();
++      memory = graph_memory_rewrite(gr);
++      rewrite_ns = probe_ns(begin, ProbeClock::now());
++      if (memory.error != GraphMemoryError::None) { graph_memory_failed = memory.error; CK(cudaGraphDestroy(gr)); throw GraphMemoryFailure(memory); }
++    }
++    cudaGraphExec_t ex;
++    CK(cudaGraphInstantiate(&ex, gr, nullptr, nullptr, 0));
++    size_t nodes = 0, roots = 0;
++    if (graph_timing != H5_GRAPH_TIMING_OFF) {
++      CK(cudaGraphGetNodes(gr, nullptr, &nodes));
++      CK(cudaGraphGetRootNodes(gr, nullptr, &roots));
++    }
++    CK(cudaGraphDestroy(gr));
++    graphs[k] = GraphEntry{ex, nodes, roots, memory, rewrite_ns}; graph_caps++;
++    graph_sample.route = H5_GRAPH_ROUTE_CAPTURED;
++    if (graph_upload == H5_GRAPH_UPLOAD_AT_CAPTURE) {
++      const auto begin = graph_timing != H5_GRAPH_TIMING_OFF ? ProbeClock::now() : ProbeClock::time_point{};
++      CK(cudaGraphUpload(ex, st));
++      CK(cudaStreamSynchronize(st));
++      if (graph_timing != H5_GRAPH_TIMING_OFF) graph_sample.upload_wall_ns = probe_ns(begin, ProbeClock::now());
++    }
++    launch_graph(graphs.at(k));
++  }
+ 
+-    ggml_cuda_set_device(cuda_ctx->device);
+-    p12_input::owner.flush(cuda_ctx->stream(),cuda_ctx->device);
+-    p12_attention_owner_begin(cgraph,cuda_ctx->stream());
+-    p12_attention_begin(cgraph,cuda_ctx->stream());
++        if (gemm_flag_on && !in_prepped) prep_done_sig_next = flag_sig + 8 * l + 4;
++        prep_early_next = !in_prepped && (early_mask & 1);
++        if (!in_prepped)
++        prep(x, nullptr, D, Ly.attn_norm, signs5120, D, P_NORM | P_SIGN | P_HADAMARD | P_QUANT | (need_xn ? P_OUT_NORM : 0u), R, nullptr, need_xn ? xn : nullptr, need_xn ? D : 0, nullptr,
++             pc ? proj : nullptr, pc ? GDN_IN : 0, pc && clear_ab ? ab : nullptr, pc && clear_ab ? 96 : 0);
++        // H5_AB_FIRST=1 (read at capture): issue the small alpha/beta projection before the in-projection,
++        // so its latency overlaps the in-projection's pre-wait weight ring instead of standing alone
++        // between the in-projection and the conv. Both read the same prepared rows; conv needs both.
++        auto ab_proj = [&]() {
++          ph("ab");
++          if (conv_ab) {}
++          else if (ab_bf16 || !act_fp4) launch_ab(Ly.ab, xn, ab, R, st);
++          else gemm(Ly.ab4, R, ab, 96, false, 0, prep_clear);
++        };
++        // H5_SK_AB=1 (read at capture, with H5_SK): the alpha/beta projection rides inside the stream-K
++        // in-projection launch as its NVFP4 second segment; both outputs are precleared by the prep.
++        const char* sk_ab_mode = getenv("H5_SK_AB");
++        if (sk_ab_mode && strcmp(sk_ab_mode, "0") && strcmp(sk_ab_mode, "1")) throw std::runtime_error("H5_SK_AB must be 0 or 1");
++        SkSel in_sel;
++        const bool merge_ab = !deterministic_gemm && sk_ab_mode && sk_ab_mode[0] == '1' && clear_ab && !ab_first && sk_select(Ly.in, R, in_sel);
++        // H5_AB_PARALLEL=1 (read at capture): the alpha/beta projection depends only on the prepared rows, so it
++        // runs on a forked branch beside the in-projection and joins before the conv, off the critical path.
++        const char* ab_par_mode = getenv("H5_AB_PARALLEL");
++        if (ab_par_mode && strcmp(ab_par_mode, "0") && strcmp(ab_par_mode, "1")) throw std::runtime_error("H5_AB_PARALLEL must be 0 or 1");
++        const bool ab_par = ab_par_mode && ab_par_mode[0] == '1' && !conv_ab && !ab_first && !merge_ab;
++        if (ab_par) {
++          CK(cudaEventRecord(ab_fork, st)); CK(cudaStreamWaitEvent(ab_st, ab_fork, 0));
++          std::swap(st, ab_st); ab_proj(); std::swap(st, ab_st);
++          CK(cudaEventRecord(ab_join, ab_st));
++          ph("gemm_in+ab_join");
++          gemm(Ly.in, R, proj, GDN_IN, false, 0, prep_clear);
++          prefetch_after_in(Ly);
++          CK(cudaStreamWaitEvent(st, ab_join, 0));
++        } else if (merge_ab) {
++          ph("gemm_in");
++          launch_sk_in_ab(Ly.in, Ly.ab4, in_sel, R, proj, GDN_IN, ab, 96);
++        } else {
++        if (ab_first) ab_proj();
++        ph("gemm_in");
++        if (gemm_flag_on && prep_clear) gemm_side(Ly.in, R, proj, GDN_IN, false, flag_ta(l, 4, R));
++        else gemm(Ly.in, R, proj, GDN_IN, false, 0, prep_clear);
++        prefetch_after_in(Ly);
++        if (!ab_first) ab_proj();
++        }
++        ph("conv");
++        ConvArgs c{proj, Ly.conv_w, conv_state, Ly.gl, conv_out, d_segs, pend_conv, ab, Ly.ssm_a, Ly.ssm_dt, gates};
++        c.pending_rows = pending_rows; c.early = early_k & 1;
++        if (pf_chain > 0) {
++          const TMat& pf = pf_far_gu ? L[(l + NLAYER / 2) % NLAYER].gu : pf_gu ? Ly.gu : Ly.out;
++          c.pf = (const uint8_t*)pf.w4; c.pf_bytes = (unsigned)std::min(pf_chain, mat_bytes(pf)) & ~15u;
++          c.pf_granularity = pf_granularity; c.pf_placement = pf_placement;
++          record_pf(c.pf, c.pf_bytes, state_fusion ? gdn_grid_ctas(nseg) : (CONV_CH / 128) * nseg);
++        }
++        if (conv_ab) { c.ab_w = Ly.ab; c.xn = xn; c.ab_out = ab; }
++        if (!state_fusion) launch_conv(c, nseg, state_format, st);
++        GdnArgs ga{conv_out, proj, ab, Ly.ssm_a, Ly.ssm_dt, Ly.ssm_norm, gdn_state, Ly.gl, y, d_segs, pend_gdn, gates};
++        static const bool replay_delta = getenv("H5_GDN_DELTA") && atoi(getenv("H5_GDN_DELTA"));
++        ga.replay_delta = replay_delta; ga.pending_rows = pending_rows; ga.early = early_k & 2;
++        ga.q8_scale = q8_scale;
++        if (flag_wait && !state_fusion) ga.sig = flag_sig + 8 * l;
++        ph("gdn");
++        if (diagnostic_state) {
++          GdnArgs shadow = ga;
++          shadow.state = diagnostic_state; shadow.y = diagnostic_y;
++          shadow.sig = nullptr; shadow.early = false;
++          launch_gdn(shadow, nseg, diagnostic_format, st);
+ 
+-    bool use_cuda_graph             = false;
+-    bool cuda_graph_update_required = false;
+-    const void * graph_key = nullptr;
++  void gemm_silu(const TMat& m, int R, float* out, int ldo, bool allow_f07 = true) {
++    const uint8_t* A = q4; const uint8_t* AS = s4; const float* AG = g4;
++    const auto f07_route = select_f07_route(allow_f07 ? f07_mode : F07Mode::Ordinary, R, m.wf, m.il, m.mean_scale != nullptr);
++    if (f07_route == F07Route::Incompatible) throw std::runtime_error("incompatible F07 GU payload");
++    if (f07_route == F07Route::Degree8) {
++      CK(launch_f07_degree8(A, AS, AG, R, m.K, m.w4, m.s4, m.N, out, ldo, st));
++      return;
++    }
++    auto key = std::make_tuple(m.N, m.K, rbucket(R), false, m.wf == 6 || m.wf == 7 ? 100 + m.wf : m.mean_scale && m.wf == 0 ? 101 : 100);
++    auto it = tuned.find(key);
++    int ci;
++    if (it != tuned.end()) ci = it->second.first;
++    else if (getenv("H5_PLAN_READ") && !plan_fill()) throw std::runtime_error("frozen launch plan missing fused GEMM shape");
++    else if (getenv("H5_FORCE_CFG") && fp4_cfg_wg2(atoi(getenv("H5_FORCE_CFG")))) { ci = atoi(getenv("H5_FORCE_CFG")); tuned[key] = {ci, 1}; }
++    else {
++      TuningEvents events("GU GEMM N=" + std::to_string(m.N) + " K=" + std::to_string(m.K) + " R=" + std::to_string(R) + " wf=" + std::to_string(m.wf));
++      float best = 1e9; ci = -1;
++      for (int c = 0; c < fp4_ncfg(); c++) {
++        if (!fp4_cfg_wg2(c)) continue;
++        float tot = 0; bool launched = true;
++        for (int rep = 0; rep < 4 && launched; rep++) {
++          events.begin(st);
++          launch_projection_silu(m, c, A, AS, AG, std::min(rbucket(R), max_rows), scratch, ldo);
++          if (!events.accepted(c, 1)) { launched = false; break; }
++          const float ms = events.finish(st); if (rep) tot += ms;
++        }
++        if (launched && tot < best) { best = tot; ci = c; }
++      }
++      CK(cudaGetLastError());
++      events.require_candidate(ci >= 0);
++      if (tune_verbose) fprintf(stderr, "tune silu N=%d K=%d R=%d: %s %.1f us\n", m.N, m.K, R, fp4_cfg_name(ci, 1), best / 3 * 1e3);
++      tuned[key] = {ci, 1};
++    }
++    launch_projection_silu(m, ci, A, AS, AG, R, out, ldo);
++  }
++  // Tune every projection shape at every row bucket up to max_rows (server startup).
++  void pretune() {
++    if (const char* path = getenv("H5_PLAN_READ")) {
++      FILE* f=fopen(path,"r"); if(!f) throw std::runtime_error("cannot read frozen launch plan");
++      int n,k,r,a,w,c,s,fields;
++      while ((fields=fscanf(f,"%d %d %d %d %d %d %d",&n,&k,&r,&a,&w,&c,&s))==7) {
++        if((w==F02_PLAN_FORMAT && (n!=GU || k!=D || r!=F02_ROWS || a!=0 || c!=F02_PRODUCER_CONFIG || s!=1)) || n<=0 || k<=0 || r<8 || (a!=0 && a!=1) || c<0 || c>=fp4_ncfg() || s<1 || k/128/s<1 || ((w==100 || w==101 || w==106 || w==107) && (!fp4_cfg_wg2(c) || s!=1)) || !tuned.emplace(std::make_tuple(n,k,r,a!=0,w),std::make_pair(c,s)).second) {
++          fclose(f); throw std::runtime_error("invalid or duplicate frozen launch plan row");
++        }
++      }
++      fclose(f); if(fields!=EOF || tuned.empty()) throw std::runtime_error("truncated or empty frozen launch plan");
++      if (df.vhead.w4) for (int b = 8; b <= 128; b <<= 1) {
++        const auto it = tuned.find(std::make_tuple(head.N, head.K, b, false, head.wf));
++        if (it != tuned.end()) tuned.emplace(std::make_tuple(df.vhead.N, df.vhead.K, b, false, df.vhead.wf), std::make_pair(it->second.first, 1));
++      }
++    }
++    const double t0 = now_s();
++    std::vector<std::pair<const TMat*, bool>> mats;
++    for (auto& y : L) { mats.push_back({&y.in, false}); mats.push_back({&y.out, true}); mats.push_back({&y.gu, false}); mats.push_back({&y.down, true}); if (!y.attn) mats.push_back({&y.ab4, false}); }
++    mats.push_back({&head, false});
++    if (df.vhead.w4) mats.push_back({&df.vhead, false});
++    if (df.loaded) {
++      for (int j = 0; j < NCAP; j++) mats.push_back({&df.fc[j], j > 0});
++      mats.push_back({&df.hproj, false});
++      for (auto& y : df.L) for (const TMat* m : {&y.qkv, &y.kv, &y.o, &y.gu, &y.down, &y.akp, &y.mkp}) mats.push_back({m, false});
++    }
++    int n = 0;
++    for (int b = 8; b <= max_rows; b <<= 1)
++      for (auto& [m, add] : mats) {
++        if (!m->w4) continue;
++        const bool hd = m == &head || m == &df.vhead;
++        if (hd && b > 128) continue;
++        if (m->il) {
++          gemm_silu_tune_only(*m, b);
++          if (select_f02_route(f02_mode, b, m->wf, m->il, m->mean_scale != nullptr) == F02Route::H32) f02_launch(*m, b, scratch);
++          n++; continue;
++        }
++        tune(*m, b, q4, s4, g4, add); n++;
++      }
++    CK(cudaStreamSynchronize(st));
++    fprintf(stderr, "pretune: %zu shapes x buckets <= %d rows in %.1f s\n", tuned.size(), max_rows, now_s() - t0);
++    if (const char* path=getenv("H5_PLAN_WRITE")) {
++      FILE*f=fopen(path,"w"); if(!f) throw std::runtime_error("cannot write frozen launch plan");
++      for(auto&[key,value]:tuned) { auto[n,k,r,a,w]=key; if(fprintf(f,"%d %d %d %d %d %d %d\n",n,k,r,(int)a,w,value.first,value.second)<0) { fclose(f); throw std::runtime_error("launch plan write failed"); } }
++      if(fclose(f)!=0) throw std::runtime_error("launch plan close failed");
++    }
+ 
+-#ifdef USE_CUDA_GRAPH
+-    graph_key = ggml_cuda_graph_get_key(cgraph);
+-
+-    ggml_cuda_graph_set_enabled(cuda_ctx, graph_key);
+-
+-    ggml_cuda_graph * graph = cuda_ctx->cuda_graph(graph_key);
+-    if (graph->is_enabled()) {
+-        const bool graph_compatible = ggml_cuda_graph_check_compability(cgraph);
+-        if (graph_compatible) {
+-            const bool properties_changed = ggml_cuda_graph_update_required(cuda_ctx, cgraph);
+-
+-            if (!graph->warmup_complete) {
+-                // Warmup: need at least 2 calls with no property change on the 2nd call
+-                if (!properties_changed) {
+-                    graph->warmup_complete = true;
+-                    GGML_LOG_DEBUG("%s: CUDA graph warmup complete\n", __func__);
+-                    use_cuda_graph = true;
+-                    cuda_graph_update_required = true;
+-                }
+-                // else: properties changed or first call - execute directly (use_cuda_graph stays false)
+-            } else {
+-                // Post-warmup: normal CUDA graph operation
+-                if (properties_changed) {
+-                    // Properties changed - reset warmup, execute directly until stable again
+-                    graph->warmup_complete = false;
+-                    GGML_LOG_DEBUG("%s: CUDA graph warmup reset\n", __func__);
+-                } else {
+-                    use_cuda_graph = true;
+-                    cuda_graph_update_required = graph->instance == nullptr;
+-                }
+-            }
+-        }
+-    }
+-#endif // USE_CUDA_GRAPH
+-
+-    if (use_cuda_graph && cuda_graph_update_required) {
+-        // Start CUDA graph capture
+-        {
+-            std::lock_guard<std::mutex> lock(ggml_cuda_lock);
+-            ggml_cuda_lock_counter.fetch_add(1, std::memory_order_relaxed);
+-        }
+-
+-        CUDA_CHECK(cudaStreamBeginCapture(cuda_ctx->stream(), cudaStreamCaptureModeRelaxed));
+-    }
+-
+-    ggml_cuda_graph_evaluate_and_capture(cuda_ctx, cgraph, use_cuda_graph, cuda_graph_update_required, graph_key);
+-
+-    return GGML_STATUS_SUCCESS;
+-}
+-
+-        if (use_cuda_graph && cuda_graph_update_required) { // End CUDA graph capture
+-            if (graph->graph != nullptr) {
+-                CUDA_CHECK(cudaGraphDestroy(graph->graph));
+-                graph->graph = nullptr;
+-            }
+-
+-            CUDA_CHECK(cudaStreamEndCapture(cuda_ctx->stream(), &graph->graph));
+-            graph_evaluated_or_captured = true; // CUDA graph has been captured
+-
+-            std::lock_guard<std::mutex> lock(ggml_cuda_lock);
+-            if (ggml_cuda_lock_counter.fetch_sub(1, std::memory_order_relaxed) == 1) {
+-                ggml_cuda_lock_cv.notify_all();
+-            }
+-        } else {
+-            graph_evaluated_or_captured = true; // ggml graph has been directly evaluated
+-        }
+-    }
+-
+-    if (use_cuda_graph) {
+-        ggml_cuda_graph * graph = cuda_ctx->cuda_graph(graph_key);
+-        if (graph->instance == nullptr) { // Create executable graph from captured graph.
+-            CUDA_CHECK(cudaGraphInstantiate(&graph->instance, graph->graph, NULL, NULL, 0));
+-        }
+-        if (cuda_graph_update_required) { // Update graph executable
+-            ggml_cuda_graph_update_executable(cuda_ctx, graph_key);
+-        }
+-        // Launch graph
+-        CUDA_CHECK(cudaGraphLaunch(graph->instance, cuda_ctx->stream()));
++#pragma once
++#include <cstddef>
++#include <cstdint>
++#include <cstdlib>
++#include <stdexcept>
++#include <string>
++#ifdef _WIN32
++#ifndef NOMINMAX
++#define NOMINMAX
++#endif
++#ifndef WIN32_LEAN_AND_MEAN
++#define WIN32_LEAN_AND_MEAN
++#endif
++#include <windows.h>
++#include <intrin.h>
++inline int h5_ctz(unsigned int bits) {
++  unsigned long index;
++  return _BitScanForward(&index, bits) ? static_cast<int>(index) : 32;
++}
++inline int h5_ctzll(unsigned long long bits) {
++  unsigned long index;
++  return _BitScanForward64(&index, bits) ? static_cast<int>(index) : 64;
++}
++#define __builtin_ctz h5_ctz
++#define __builtin_ctzll h5_ctzll
++#define __builtin_popcount __popcnt
++#define __builtin_popcountll __popcnt64
++inline int setenv(const char* key, const char* value, int overwrite) {
++  return !overwrite && std::getenv(key) ? 0 : _putenv_s(key, value);
++}
++inline int unsetenv(const char* key) { return _putenv_s(key, ""); }
++inline void* h5_map_file(const std::string& path, size_t& size) {
++  HANDLE file = CreateFileA(path.c_str(), GENERIC_READ, FILE_SHARE_READ | FILE_SHARE_DELETE,
++                           nullptr, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, nullptr);
++  if (file == INVALID_HANDLE_VALUE) throw std::runtime_error("open " + path);
++  LARGE_INTEGER length;
++  if (!GetFileSizeEx(file, &length) || length.QuadPart <= 0) {
++    CloseHandle(file); throw std::runtime_error("file size " + path);
++  }
++  size = static_cast<size_t>(length.QuadPart);
++  HANDLE mapping = CreateFileMappingA(file, nullptr, PAGE_READONLY, 0, 0, nullptr);
++  CloseHandle(file);
++  if (!mapping) throw std::runtime_error("file mapping " + path);
++  void* base = MapViewOfFile(mapping, FILE_MAP_READ, 0, 0, 0);
++  CloseHandle(mapping);
++  if (!base) throw std::runtime_error("map view " + path);
++  return base;
++}
++inline void h5_unmap_file(void* base, size_t) { UnmapViewOfFile(base); }
++inline uint64_t h5_thread_ns() {
++  FILETIME created, exited, kernel, user;
++  if (!GetThreadTimes(GetCurrentThread(), &created, &exited, &kernel, &user))
++    throw std::runtime_error("graph probe: thread clock failed");
++  ULARGE_INTEGER k, u;
++  k.LowPart=kernel.dwLowDateTime; k.HighPart=kernel.dwHighDateTime;
++  u.LowPart=user.dwLowDateTime; u.HighPart=user.dwHighDateTime;
++  return (k.QuadPart + u.QuadPart) * 100;
++}
+ #else
+-        GGML_UNUSED(graph_key);
++#include <fcntl.h>
++#include <sys/mman.h>
++#include <sys/stat.h>
++#include <unistd.h>
++#include <time.h>
++inline void* h5_map_file(const std::string& path, size_t& size) {
++  int fd = ::open(path.c_str(), O_RDONLY);
++  if (fd < 0) throw std::runtime_error("open " + path);
++  struct stat st;
++  if (fstat(fd, &st) || st.st_size <= 0) { close(fd); throw std::runtime_error("file size " + path); }
++  size = st.st_size;
++  void* base = mmap(nullptr, size, PROT_READ, MAP_PRIVATE, fd, 0);
++  close(fd);
++  if (base == MAP_FAILED) throw std::runtime_error("mmap " + path);
++  return base;
++}
++inline void h5_unmap_file(void* base, size_t size) { munmap(base, size); }
++inline uint64_t h5_thread_ns() {
++  timespec t;
++  if (clock_gettime(CLOCK_THREAD_CPUTIME_ID, &t))
++    throw std::runtime_error("graph probe: thread clock failed");
++  return uint64_t(t.tv_sec) * 1000000000ULL + t.tv_nsec;
++}
++#endif

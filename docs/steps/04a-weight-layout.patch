@@ -1,0 +1,64 @@
+--- a/04a-weight-layout.cu
++++ b/04a-weight-layout.cu
+@@ -1,8 +1,54 @@
+-static __device__ __forceinline__ void dequantize_ptq1_0(const void * vx, const int64_t ib, const int iqs, float2 & v){
+-    const block_ptq1_0 * x = (const block_ptq1_0 *) vx;
+-
+-    const float d = x[ib].d;
+-
+-    v.x = ptq1_0_trit(&x[ib], iqs + 0) * d;
+-    v.y = ptq1_0_trit(&x[ib], iqs + 1) * d;
++// One 32-row x 128-K chunk of trits with FP16 row scales into the WF0 (1024 B, two-bit) or dense5 (832 B)
++// lane-fragment layout (see fp4.cu) and its [gid][4] FP16 scale block.
++static void pack_trit_chunk(const int8_t (&trit)[32][128], const float (&sc)[32], uint8_t* chunk, uint16_t* sh, bool compact) {
++        for (int l = 0; l < 32; l++) {
++          const int gid = l >> 2, tq = l & 3;
++          if (compact) {
++            int8_t stream[128];
++            for (int w = 0; w < 8; w++) {
++              const int m = w >> 2, h = (w >> 1) & 1, r = w & 1, row = 16 * m + 8 * r + gid;
++              for (int j = 0; j < 8; j++) {
++                stream[w * 16 + j] = trit[row][64 * h + 8 * tq + j];
++                stream[w * 16 + 8 + j] = trit[row][64 * h + 32 + 8 * tq + j];
++              }
++            }
++            dense5::pack_lane(chunk, l, stream);
++          } else {
++          for (int w = 0; w < 8; w++) {
++            const int m = w >> 2, h = (w >> 1) & 1, r = w & 1, row = 16 * m + 8 * r + gid;
++            uint32_t word = 0;
++            for (int j = 0; j < 8; j++) {
++              const int t0 = trit[row][64 * h + 8 * tq + j], t1 = trit[row][64 * h + 32 + 8 * tq + j];
++              word |= (uint32_t)((t0 != 0) << 1 | (t0 < 0) << 3) << (4 * j);
++              word |= (uint32_t)((t1 != 0) << 0 | (t1 < 0) << 2) << (4 * j);
++            }
++            memcpy(chunk + (w >> 2) * 512 + l * 16 + (w & 3) * 4, &word, 4);
++          }
++          }
++        }
++        for (int gid = 0; gid < 8; gid++)
++          for (int q = 0; q < 4; q++) {
++            const int m = q >> 1, r = q & 1, row = 16 * m + 8 * r + gid;
++            __half hv = __float2half(sc[row]); uint16_t u; memcpy(&u, &hv, 2); sh[gid * 4 + q] = u;
++          }
+ }
++// fp4 layout (see fp4.cu): chunk (g, kb) 1024 B, lane l bytes [32l, 32l+32) = words w = m*4 + h*2 + r.
++static void repack_rows_fp4(const GTensor& t, int K, int Nt, int row0, std::vector<uint8_t>& W, std::vector<uint16_t>& S, int NGall, int nthreads, int gmul = 1, int goff = -1, bool compact = false) {
++  const int nkb = K / 128;
++  std::atomic<int> next{0};
++  auto worker = [&]() {
++    int8_t trit[32][128]; float sc[32];
++    for (;;) {
++      int gl = next.fetch_add(1);
++      if (gl >= Nt / 32) break;
++      int g = goff >= 0 ? goff + gl * gmul : (row0 / 32) + gl;
++      for (int kb = 0; kb < nkb; kb++) {
++        for (int r = 0; r < 32; r++) decode_ptq1(t.data + ((size_t)(gl * 32 + r) * nkb + kb) * 28, trit[r], &sc[r]);
++        pack_trit_chunk(trit, sc, W.data() + ((size_t)kb * NGall + g) * (compact ? 832 : 1024), S.data() + ((size_t)kb * NGall + g) * 32, compact);
++      }
++    }
++  };
++  std::vector<std::thread> th;
++  for (int i = 0; i < nthreads; i++) th.emplace_back(worker);
++  for (auto& x : th) x.join();
++}

@@ -1,0 +1,29 @@
+Ternary Bonsai 2 27B on one RTX 5090
+Copyright 2026 Hara Renia Seihun
+
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This repository builds on, uses or measures the following third-party work.
+
+Ternary-Bonsai-2-27B model weights
+  PrismML, https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf (Apache-2.0).
+  Not redistributed here; scripts/fetch_model.py downloads them from PrismML at a pinned revision.
+  The base model is Qwen/Qwen3.8-27B. The PTQ1_0 format, the PrismML llama.cpp fork and the
+  baseline measured in docs/ladder.md are PrismML's work.
+
+PrismML llama.cpp fork
+  https://github.com/PrismML-Eng/llama.cpp, commit 6067dbea986ed1359db98c42ab06eb49426bbf16 (MIT),
+  derived from ggml-org/llama.cpp (MIT, Copyright (c) 2023-2026 The ggml authors).
+  Fetched at build time and linked for tokenization and the chat template; its vendored
+  nlohmann/json (MIT) header is used by the engine. The code views in docs/steps/ are excerpts of
+  this fork and of modifications to it.
+  The beam-selection drafter option in engine/src/draft.cu follows PrismML llama.cpp #284
+  (opt-in; disabled in the measured profiles).
+
+GSM8K
+  Cobbe et al., "Training Verifiers to Solve Math Word Problems" (2021),
+  https://huggingface.co/datasets/openai/gsm8k (MIT, Copyright (c) 2021 OpenAI).
+  data/video-gsm-prompts256.bin contains GSM8K test questions with an appended answer-format
+  instruction. receipts/gsm8k/ contains model outputs on the GSM8K test set.
+
+Math-Verify (Hugging Face, Apache-2.0) is used for GSM8K answer scoring.

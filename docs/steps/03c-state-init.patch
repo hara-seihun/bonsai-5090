@@ -1,0 +1,17 @@
+--- a/03c-state-init.cu
++++ b/03c-state-init.cu
+@@ -1,9 +1,14 @@
++static __global__ void p12_scale_f16(const half*x,half*y,float scale,float bias,int64_t n){
++ int64_t i=(int64_t)blockIdx.x*blockDim.x+threadIdx.x;for(;i<n;i+=(int64_t)gridDim.x*blockDim.x)y[i]=__float2half_rn(__half2float(x[i])*scale+bias);
++}
++
+ void ggml_cuda_op_scale(ggml_backend_cuda_context & ctx, ggml_tensor * dst) {
+     const ggml_tensor * src0 = dst->src[0];
+     const float * src0_d = (const float *)src0->data;
+     float * dst_d = (float *)dst->data;
+     cudaStream_t stream = ctx.stream();
+ 
++    if(src0->type==GGML_TYPE_F16 && dst->type==GGML_TYPE_F16){float scale,bias;memcpy(&scale,dst->op_params,4);memcpy(&bias,(char*)dst->op_params+4,4);int64_t n=ggml_nelements(src0);if(n)p12_scale_f16<<<std::min<int64_t>((n+255)/256,4096),256,0,stream>>>((const half*)src0->data,(half*)dst->data,scale,bias,n);return;}
+     GGML_ASSERT(src0->type == GGML_TYPE_F32);
+     GGML_ASSERT( dst->type == GGML_TYPE_F32);
+ 

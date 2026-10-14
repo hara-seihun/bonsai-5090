@@ -1,0 +1,20 @@
+--- a/03a-state-allocation.cu
++++ b/03a-state-allocation.cu
+@@ -2,7 +2,7 @@
+                             /* attn_n_ubatch     */ cparams.n_ubatch,
+                             /* attn_n_pad        */ 1,
+                             /* recurrent_type_r  */ GGML_TYPE_F32,
+-                            /* recurrent_type_s  */ GGML_TYPE_F32,
++                            /* recurrent_type_s  */ (getenv("P12_STATE") && !strcmp(getenv("P12_STATE"),"f16") ? GGML_TYPE_F16 : GGML_TYPE_F32),
+                             /* recurrent_rs_size */ std::max((uint32_t) 1, cparams.n_seq_max),
+                             /* n_seq_max         */ cparams.n_seq_max,
+                             /* n_rs_seq          */ cparams.n_rs_seq,
+@@ -11,7 +11,7 @@
+                             /* attn_n_swa        */ hparams.n_swa,
+                             /* attn_swa_type     */ hparams.swa_type,
+                             /* recurrent_type_k  */ GGML_TYPE_F32,
+-                            /* recurrent_type_v  */ GGML_TYPE_F32,
++                            /* recurrent_type_v  */ (getenv("P12_STATE") && !strcmp(getenv("P12_STATE"),"f16") ? GGML_TYPE_F16 : GGML_TYPE_F32),
+                             /* recurrent_kv_size */ std::max((uint32_t) 1, cparams.n_seq_max),
+                             /* n_seq_max         */ cparams.n_seq_max,
+                             /* n_rs_seq          */ cparams.n_rs_seq,
