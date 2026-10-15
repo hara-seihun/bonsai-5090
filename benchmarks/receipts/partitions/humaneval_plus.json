@@ -5,7 +5,7 @@
   "source_pin": {
     "repo_id": "evalplus/humanevalplus",
     "revision": "d32357cf319e50e9c8d8dab5ea876c72b0fd321b",
-    "snapshot_path": "baseline://quality-campaign/assets/datasets/humaneval_plus/d32357cf319e50e9c8d8dab5ea876c72b0fd321b",
+    "snapshot_path": "~/bonsai/quality-campaign/assets/datasets/humaneval_plus/d32357cf319e50e9c8d8dab5ea876c72b0fd321b",
     "files_sha256": {
       "test.jsonl": "908377f1daf28dcb36846db73a5662b2e05a9907407c2696c89ad9d3b0b04492",
       ".gitattributes": "3465ffdf32874f23a8c9c79c2841e94a6b59f6505e693ba5d66deab38cd88b34",

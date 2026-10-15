@@ -28,6 +28,16 @@
       "state": "full",
       "metric": "prompt_level_strict",
       "receipt": "halo-ifeval-coverage.json"
+    },
+    {
+      "benchmark": "humaneval_plus",
+      "correct": 154,
+      "count": 164,
+      "percent": 93.90243902439025,
+      "state": "full",
+      "metric": "pass_at_1",
+      "receipt": "humaneval-plus-full.json",
+      "source_commit": "eb6cd0356ca6176f27741b8948e2f08c4f582de7"
     }
   ],
   "diagnostics": [
@@ -45,11 +55,6 @@
     {
       "benchmark": "tau2_bench",
       "receipt": "tau2-partial.json",
-      "full_score": null
-    },
-    {
-      "benchmark": "humaneval_plus",
-      "receipt": "humaneval-plus-partial.json",
       "full_score": null
     }
   ]

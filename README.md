@@ -78,6 +78,7 @@ screens are documented in the [benchmark report](benchmarks/README.md).
 | GSM8K | 96.06% | **96.74% — 1,276/1,319** | [Native-trigger grading and receipts](benchmarks/README.md#gsm8k) |
 | MATH500 | 99.20% | **98.8% — 494/500** | [Full quality report](benchmarks/README.md) |
 | IFEval, prompt-strict | 85.03% | **92.4% — 500/541** | [Full quality report](benchmarks/README.md) |
+| HumanEval+ (EvalPlus), pass@1 | 93.90% | **93.90% — 154/164** | [Full aggregate](benchmarks/receipts/humaneval-plus-full.json), [source binding](benchmarks/receipts/humaneval-plus-source.json) |
 
 Canonical GSM8K uses rule-first grading with judge fallback **only on parse failure**. The retained
 outputs contain 1,276 parsed correct answers, 34 parsed wrong answers and nine empty parse failures;
@@ -93,12 +94,18 @@ xhigh reasoning and fixed generation/dataset seeds. Empty capped finals stay wro
 exact historical extractor, prompts, shots, harness/dataset revisions and instruction-check seed are
 unknown. Judge-replay and programmatic scores have different reproduction requirements.
 
-**Partial snapshots — excluded from the full-result table:**
+HumanEval+ is complete across six disjoint windows: **31/32, 28/32, 29/32, 32/32, 30/32, 4/4**.
+All **164** tasks remain in the denominator, including **159 EOS/reasoning-closed** and **five capped/unclosed**
+responses. The result is bound to programme-12 commit
+`eb6cd0356ca6176f27741b8948e2f08c4f582de7` and its
+[retained result bindings](benchmarks/receipts/retained-result-bindings.json). Rounded agreement with
+PrismML's original-model score does not establish same-checkpoint engine equivalence.
+
+**Tau2 partial snapshot — excluded from the full-result table:**
 
 | Benchmark | Retained completed portion | Full benchmark state |
 |---|---|---|
 | Tau2 telecom | **66 correct / 82 scored**, out of 114 intended occurrences | [Partial receipt](benchmarks/receipts/tau2-partial.json): two errors, one untouched, 29 missing; full score unset |
-| HumanEval+ | **120 correct / 128 scored**, out of 164 intended tasks | [Partial receipt](benchmarks/receipts/humaneval-plus-partial.json): completed disjoint windows only; full score unset |
 
 These are frozen export observations of unfinished campaigns. No partial is presented as a completed
 suite score, and prepared adapters for other benchmarks establish no quality result.

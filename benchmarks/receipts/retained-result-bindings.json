@@ -1,0 +1,1601 @@
+{
+  "schema": "prism.original15.retained-publication.v1",
+  "evidence_kind": "retained_real_inference",
+  "published_checkpoint": "Bonsai1/Qwen3.6",
+  "measured_checkpoint": "Bonsai2/Qwen3.8",
+  "model_sha256": "53107f530aa52eb00912263ab1ee29bd199261c87cd7b4ad4ca1318c1fe33ee3",
+  "checkpoint_caveat": "Nominal published deltas do not isolate engine effects; publisher harness/dataset/scorer revisions remain unknown.",
+  "humaneval_plus": {
+    "state": "full",
+    "expected": 164,
+    "covered": 164,
+    "correct": 154,
+    "accuracy": 0.9390243902439024,
+    "percent": 93.90243902439023,
+    "metric": "pass@1 over exact disjoint source task occurrences",
+    "shard_correct": [
+      31,
+      28,
+      29,
+      32,
+      30,
+      4
+    ],
+    "adopted_original_tasks": 32,
+    "new_continuation_tasks": 132,
+    "reasoning_closed_EOS": 159,
+    "capped_unclosed_in_denominator": 5,
+    "published_original_percent": 93.9,
+    "full_same_weight_native_control": null,
+    "bindings": {
+      "aggregate": {
+        "path": "campaign://activation-successor3/humaneval-continuation-result.json",
+        "resolved_path": "campaign://activation-successor3/humaneval-continuation-result.json",
+        "sha256": "2ee178fdbebf1aa077cd72dee2eb2d4d2f9c4b927bdc26e150e46b9a335d9484"
+      },
+      "partition": {
+        "path": "campaign://humaneval_plus-shards/partition.json",
+        "resolved_path": "campaign://humaneval_plus-shards/partition.json",
+        "sha256": "63dc9fe51ebd7ca0c948b2d70fb0663f66c0146a26779ca5d271adaa6ce6aea3"
+      },
+      "repair_source": {
+        "path": "campaign://activation-successor3/repair-seal.json",
+        "resolved_path": "campaign://activation-successor3/repair-seal.json",
+        "sha256": "23365427417c9e208839aa0a1e584268feeeadb75413fa578e8f6c66ca99ea65"
+      },
+      "adoption": {
+        "path": "campaign://activation-successor3/source-adoption.json",
+        "resolved_path": "campaign://activation-successor3/source-adoption.json",
+        "sha256": "41e4b62d32af2756abd664bd4ec258643a80eb0065a66386cdc524fde8493606"
+      },
+      "source_manifest": {
+        "path": "campaign://activation-successor3/halo-ctx92160-s2-manifest.json",
+        "resolved_path": "campaign://activation-successor3/halo-ctx92160-s2-manifest.json",
+        "sha256": "f9f85568d55fe1ba576fca2855adede71e2e8158f6aacbe5b20341110b55126a"
+      },
+      "shards": [
+        {
+          "shard": 0,
+          "count": 32,
+          "correct": 31,
+          "status": {
+            "path": "campaign://activation-successor3/quality-campaign/status/original15-successor2-halo-humaneval_plus-shard000--humaneval_plus.json",
+            "resolved_path": "campaign://activation-successor/quality-campaign/status/original15-successor2-halo-humaneval_plus-shard000--humaneval_plus.json",
+            "sha256": "8ce4965bed9782843656af8a84f487cbf70042295b450f752d08dc70dea5395e"
+          },
+          "raw_receipts": [
+            {
+              "path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/03d1cdabd4bda0a1e3e53a67728196f6d222686e19c0814b2fd4d633fdf5d0dc.json",
+              "resolved_path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/03d1cdabd4bda0a1e3e53a67728196f6d222686e19c0814b2fd4d633fdf5d0dc.json",
+              "sha256": "420b2719d6cbcd1e8befb944a639aa1986118bf4e55de60e45783822596b48c8"
+            },
+            {
+              "path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/125a0d84969c7206dce511e6740472ef00cd4cf768bae9975990a801d8879061.json",
+              "resolved_path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/125a0d84969c7206dce511e6740472ef00cd4cf768bae9975990a801d8879061.json",
+              "sha256": "c0a6c26a06f52ef53768a024db7ca15e8177d6f2fe42e374c88ef2283e4c2fe2"
+            },
+            {
+              "path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/146b81c58e22d3a1203225f3eae38af64ebc2f5447883bace832714ac8664e71.json",
+              "resolved_path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/146b81c58e22d3a1203225f3eae38af64ebc2f5447883bace832714ac8664e71.json",
+              "sha256": "9bde07eb16701f5ed048a01e6957e412adfad26fe3256fc886fae8aff64d3f91"
+            },
+            {
+              "path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/2a17a95f6792519e38df7c63a881e2ad2d370fbb07766d9b14a252de9197aa1b.json",
+              "resolved_path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/2a17a95f6792519e38df7c63a881e2ad2d370fbb07766d9b14a252de9197aa1b.json",
+              "sha256": "b443e6a1bda4326fe9e3009993a94400c7351dc815bf9757bc525570e883a571"
+            },
+            {
+              "path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/3df63ea5e1e9a03fc05ea5e2280ac331302c4a0ab3eb6feffad91c4febdddaa3.json",
+              "resolved_path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/3df63ea5e1e9a03fc05ea5e2280ac331302c4a0ab3eb6feffad91c4febdddaa3.json",
+              "sha256": "df87e37992345d49514144b6764993b08c22c95c5cd7c16ea211b68ccf4be4c7"
+            },
+            {
+              "path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/48fbe259d4c95b686a2aaa4bcd2f186dc927c3fbf4a359642a2aa369c853c5c7.json",
+              "resolved_path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/48fbe259d4c95b686a2aaa4bcd2f186dc927c3fbf4a359642a2aa369c853c5c7.json",
+              "sha256": "d7831d872bcd4df24a5ae8cd28e1a5a04e30d5b84bcd13e09bceb6ce0dbfc5ac"
+            },
+            {
+              "path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/555492aa61af70a2942d49e3940449cdd58f0614dbc5b32af21d633122a791b4.json",
+              "resolved_path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/555492aa61af70a2942d49e3940449cdd58f0614dbc5b32af21d633122a791b4.json",
+              "sha256": "d9878f434ca81706fa190d7da132d9b633092f1048769e0337e620e3dc6be7df"
+            },
+            {
+              "path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/57acba4fbd148c991794289effd5e2dacc44c73f2c79abf4bdb447774838a4a3.json",
+              "resolved_path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/57acba4fbd148c991794289effd5e2dacc44c73f2c79abf4bdb447774838a4a3.json",
+              "sha256": "2752d1b1bd3b860142ac26215d4f67fd988f7cbcc8f5560c8866c6283d306df7"
+            },
+            {
+              "path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/59446c5d08800a7e0b449b2bc9ce617c82d715de3b4df7331eec064cfedc6cd1.json",
+              "resolved_path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/59446c5d08800a7e0b449b2bc9ce617c82d715de3b4df7331eec064cfedc6cd1.json",
+              "sha256": "4ef04acf5c303e8aa03127cc0404ab3169d3ab3fd9efca4565075bdbb3b7dba2"
+            },
+            {
+              "path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/65416ca6d747fe0dbb887937750332437a6f5bf088ca2147f42ccc3f2c72422e.json",
+              "resolved_path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/65416ca6d747fe0dbb887937750332437a6f5bf088ca2147f42ccc3f2c72422e.json",
+              "sha256": "215c44061bbe02a52f68eb9474e28feefca9b0c8cd6a4a44dd25377a2f386ca2"
+            },
+            {
+              "path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/6afbb344d9e246aa51710d6f7e6f0c44e3026cead95c2283582170cc19faf6f8.json",
+              "resolved_path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/6afbb344d9e246aa51710d6f7e6f0c44e3026cead95c2283582170cc19faf6f8.json",
+              "sha256": "f9eb856008aa5cf14afba4b35fd98efc436474a1bfb2be9a9165db698f732def"
+            },
+            {
+              "path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/6ba11ceb9f84161a4e3f6d859b41808464c1c443cad35666f5c4ad11b06dd422.json",
+              "resolved_path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/6ba11ceb9f84161a4e3f6d859b41808464c1c443cad35666f5c4ad11b06dd422.json",
+              "sha256": "ffddc45283ffb894c4e1b2905c8b706cab20b112f03852f9cb7196d77a78ee45"
+            },
+            {
+              "path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/6f539ece2670f0469c0a762b14f8d54d5a669c3ff74adfabc75f2afbe96a9699.json",
+              "resolved_path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/6f539ece2670f0469c0a762b14f8d54d5a669c3ff74adfabc75f2afbe96a9699.json",
+              "sha256": "c9c64d625fd60fc6fc57a31cd8a598e2e1da43fb72b56631006f8bfdff11a736"
+            },
+            {
+              "path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/7908f188b80f45a40d9fa61ca80cd3e860ac1ac1519de8110b510bcea4b6bd37.json",
+              "resolved_path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/7908f188b80f45a40d9fa61ca80cd3e860ac1ac1519de8110b510bcea4b6bd37.json",
+              "sha256": "7177165066ea466f622ae1a4795c68955013f9b8d151cc2bf46a0cebce765723"
+            },
+            {
+              "path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/7c90768fd433754082983312030946a19fd54425cbe5d76861756a247d67a496.json",
+              "resolved_path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/7c90768fd433754082983312030946a19fd54425cbe5d76861756a247d67a496.json",
+              "sha256": "ea16d99d9a9b8e432c32423a93bdbf61207501aea5ab079ed38ddebd9bf2d20d"
+            },
+            {
+              "path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/8d9b1bb98f3aa569cbf4ece3b57fd32023009785b246d37a41e62d7e8c6dc8d2.json",
+              "resolved_path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/8d9b1bb98f3aa569cbf4ece3b57fd32023009785b246d37a41e62d7e8c6dc8d2.json",
+              "sha256": "7d86e6fa8095689d6b7343544301530bed0f970709948857a8bc2fa854d5d4f7"
+            },
+            {
+              "path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/99c8e78de692d815c6403745a3c5c1a7466a4765c49fae852315deba86a4292a.json",
+              "resolved_path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/99c8e78de692d815c6403745a3c5c1a7466a4765c49fae852315deba86a4292a.json",
+              "sha256": "604fa9946a28b070455bbb47954cc15e8f1ffa37b97721dd6bedc3e34c1e2abc"
+            },
+            {
+              "path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/9f7b4b9fc0e523c28d282ad875f7bf9ff92e3ef8df6f4c887065521a3c5c08f4.json",
+              "resolved_path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/9f7b4b9fc0e523c28d282ad875f7bf9ff92e3ef8df6f4c887065521a3c5c08f4.json",
+              "sha256": "a5f8a58af61f557d7a1f612debc7baf8c4dcc1485cd3f040fc1aef782eb4dc9a"
+            },
+            {
+              "path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/a5839830648b93faeb33654bdf7168975957ae259552b1384f8e23ca85055a5c.json",
+              "resolved_path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/a5839830648b93faeb33654bdf7168975957ae259552b1384f8e23ca85055a5c.json",
+              "sha256": "c484aca3d47751dc07df0f606ae5c294d74510e74e9e371a3ed48c29c39c207f"
+            },
+            {
+              "path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/aac8f9a7fdca98fe1d6d542619cfd26f28475e7307c6eb357e6845948cdff601.json",
+              "resolved_path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/aac8f9a7fdca98fe1d6d542619cfd26f28475e7307c6eb357e6845948cdff601.json",
+              "sha256": "c897fc0f0941aff83fdeb32170b919e55e0e808862dff9a4b07b4f6d914a6783"
+            },
+            {
+              "path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/ae83de8b954c2227662a198f8dad94f510dc97a77d1faeb56d3372250cf52783.json",
+              "resolved_path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/ae83de8b954c2227662a198f8dad94f510dc97a77d1faeb56d3372250cf52783.json",
+              "sha256": "41e0c8ba93c1cfa8abaa3fd6b32c2b47274fca1ffa54bcf13d98fabc01bb2e36"
+            },
+            {
+              "path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/b5d8daec5ef1577a87c9a477db105c1969895334640fc1b024a50fcc68b22a11.json",
+              "resolved_path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/b5d8daec5ef1577a87c9a477db105c1969895334640fc1b024a50fcc68b22a11.json",
+              "sha256": "435927a5ad3a8910117aa4f73a77f3b15c6a4f3f7ae9ad24712349fbf7efb102"
+            },
+            {
+              "path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/c1899d84cc70f36e09cad52dff048edd3c36b8355e7dc9b6c251c9cbc3ddb29d.json",
+              "resolved_path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/c1899d84cc70f36e09cad52dff048edd3c36b8355e7dc9b6c251c9cbc3ddb29d.json",
+              "sha256": "2fefaebd9954f7211f1d7e1dfc394329719bd48bcca0bf8c09faba16088aae47"
+            },
+            {
+              "path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/c8e2dd842c92b4ff6b2b2804cfa699d7cfe0f88eca9873a0c45b88aadefb5fc1.json",
+              "resolved_path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/c8e2dd842c92b4ff6b2b2804cfa699d7cfe0f88eca9873a0c45b88aadefb5fc1.json",
+              "sha256": "2aac74f833773e0279089319ad13d9313fcdfe18379cb61cca715875bcaa9f52"
+            },
+            {
+              "path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/cc82d5335d3a5bf51174391d4f608bf5330d39a8d7898a34927a7bf674a18c39.json",
+              "resolved_path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/cc82d5335d3a5bf51174391d4f608bf5330d39a8d7898a34927a7bf674a18c39.json",
+              "sha256": "a9d8003b97c98ef745fb63da207d16716191fa8684e5909789f89569f68bd2aa"
+            },
+            {
+              "path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/d238f5baf8a53d53a3b39bac4e887090a37710a7e3acf65bbde9e9143281a048.json",
+              "resolved_path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/d238f5baf8a53d53a3b39bac4e887090a37710a7e3acf65bbde9e9143281a048.json",
+              "sha256": "b455d3878bd9149279c3a4645c8b7417aca2610042b77ad58e374d3eb919983b"
+            },
+            {
+              "path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/d2caaf16473bc333930cbd51d551da3dff97037df4d0ab8fdee51364a119d15b.json",
+              "resolved_path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/d2caaf16473bc333930cbd51d551da3dff97037df4d0ab8fdee51364a119d15b.json",
+              "sha256": "ae2020f910c81b266e16064ea27632602ee7ec3a382beae0da6308a8c3fec7d9"
+            },
+            {
+              "path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/d8870e88357871114e5177c5731ce8eb4cf0f1292e55a264ed0ce97f38f623e5.json",
+              "resolved_path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/d8870e88357871114e5177c5731ce8eb4cf0f1292e55a264ed0ce97f38f623e5.json",
+              "sha256": "f0986a7a79981fffdb96cc441d9bd4dc6057d0be68b3a0e8b217a892466d61d5"
+            },
+            {
+              "path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/e5e5fd843bf313efe421e53ba8ea54d02932e0af163b70b011de380e0e891abc.json",
+              "resolved_path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/e5e5fd843bf313efe421e53ba8ea54d02932e0af163b70b011de380e0e891abc.json",
+              "sha256": "08aaf5bcea68e321e6ff8c0bd527ef4e6d11880c52f4469bc101d0de311ededb"
+            },
+            {
+              "path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/e6b0761c494c855f69f9e2ad7b684c427a342a4645a0aa5aa07feab4f031a3c4.json",
+              "resolved_path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/e6b0761c494c855f69f9e2ad7b684c427a342a4645a0aa5aa07feab4f031a3c4.json",
+              "sha256": "0f0bba27f97fe2b78a35af4b6d68d85eb76466ebe642a545e27c9a8ed23055ad"
+            },
+            {
+              "path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/efefa901286dafba70072719774893cea38f030d8ac05b27eb27bb5d2c9fd1e1.json",
+              "resolved_path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/efefa901286dafba70072719774893cea38f030d8ac05b27eb27bb5d2c9fd1e1.json",
+              "sha256": "b199d354a1af6f3261819ae2b458ecd6fe9e4be80c67a4b94764e6b023d866d9"
+            },
+            {
+              "path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/f417660e312151a9872eaca4e5aa85ab96b4be86d860ad5773c3a70772f4fa12.json",
+              "resolved_path": "campaign://activation-successor2/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard000/f417660e312151a9872eaca4e5aa85ab96b4be86d860ad5773c3a70772f4fa12.json",
+              "sha256": "0aec728cea6febf65f7b9e7b9dcca20a070fb09a20e8a84b71ba309e0f83df21"
+            }
+          ],
+          "prediction_scoring_journals": [
+            {
+              "path": "campaign://activation-successor/quality-campaign/runs/original15-successor2-halo-humaneval_plus-shard000/humaneval_plus--screen-32/20261014_233941/execution-journal.jsonl",
+              "resolved_path": "campaign://activation-successor/quality-campaign/runs/original15-successor2-halo-humaneval_plus-shard000/humaneval_plus--screen-32/20261014_233941/execution-journal.jsonl",
+              "sha256": "91a4660515a4a3ab45a9ee336b92d7aa2a7d453ddd08b7bb1eaf2ebf61d80b2f"
+            },
+            {
+              "path": "campaign://activation-successor/quality-campaign/runs/original15-successor2-halo-humaneval_plus-shard000/humaneval_plus--screen-32/20261014_233941/predictions/original15-successor2-halo-humaneval_plus-shard000/humaneval_plus_default.jsonl",
+              "resolved_path": "campaign://activation-successor/quality-campaign/runs/original15-successor2-halo-humaneval_plus-shard000/humaneval_plus--screen-32/20261014_233941/predictions/original15-successor2-halo-humaneval_plus-shard000/humaneval_plus_default.jsonl",
+              "sha256": "8f1209b9051fd2c9fc109b5655ea812ea34694d791c9fa763dca6e1c3d20ab66"
+            },
+            {
+              "path": "campaign://activation-successor/quality-campaign/runs/original15-successor2-halo-humaneval_plus-shard000/humaneval_plus--screen-32/20261014_233941/reviews/original15-successor2-halo-humaneval_plus-shard000/humaneval_plus_default.jsonl",
+              "resolved_path": "campaign://activation-successor/quality-campaign/runs/original15-successor2-halo-humaneval_plus-shard000/humaneval_plus--screen-32/20261014_233941/reviews/original15-successor2-halo-humaneval_plus-shard000/humaneval_plus_default.jsonl",
+              "sha256": "5b26b22dede6afeafaf9531fe8c2a5c150d15e2a354e09ec64015faf2cd5ea4f"
+            }
+          ],
+          "window_custody": {
+            "status.json": {
+              "path": "campaign://activation-successor2/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard000/status.json",
+              "resolved_path": "campaign://activation-successor2/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard000/status.json",
+              "sha256": "2447d40793ca9e5ddccaed5811a4d412caaaa642e469ecc3c1c46226ee440eb4"
+            },
+            "run.json": {
+              "path": "campaign://activation-successor2/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard000/run.json",
+              "resolved_path": "campaign://activation-successor2/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard000/run.json",
+              "sha256": "e803eb6295a7c7573007fc8de975dc4b7c59adfcc4d7199723891768e87feceb"
+            },
+            "harness.json": {
+              "path": "campaign://activation-successor2/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard000/harness.json",
+              "resolved_path": "campaign://activation-successor2/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard000/harness.json",
+              "sha256": "737464c80d42e1096f10546ea56164ae3034c3ec8cd466ed8bb8506ed018c4bd"
+            },
+            "worker-spec.json": {
+              "path": "campaign://activation-successor2/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard000/worker-spec.json",
+              "resolved_path": "campaign://activation-successor2/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard000/worker-spec.json",
+              "sha256": "fbb8076b68a1e2b98af525a4d5b81b089a79c44769b296724bbe8a8e78298827"
+            },
+            "worker-teardown.json": {
+              "path": "campaign://activation-successor2/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard000/worker-teardown.json",
+              "resolved_path": "campaign://activation-successor2/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard000/worker-teardown.json",
+              "sha256": "e276141c74232c42dc6aa6b28d985312c3110026b278d0ebaf8a71746b02bf52"
+            }
+          }
+        },
+        {
+          "shard": 1,
+          "count": 32,
+          "correct": 28,
+          "status": {
+            "path": "campaign://activation-successor3/quality-campaign/status/original15-successor2-halo-humaneval_plus-shard001--humaneval_plus.json",
+            "resolved_path": "campaign://activation-successor3/quality-campaign/status/original15-successor2-halo-humaneval_plus-shard001--humaneval_plus.json",
+            "sha256": "4b7f191b5e4aa020835faf99685503540e2ca6979273fbe16fd207b2862f7fbd"
+          },
+          "raw_receipts": [
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/181e9af0779cf8c3a035ac5a514d7636e862bc12c8533a29682a14ca1bde2a0e.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/181e9af0779cf8c3a035ac5a514d7636e862bc12c8533a29682a14ca1bde2a0e.json",
+              "sha256": "149d075b19fad46e870683c38cd1bc9ba9115d72a84e03fb2df886916edab9d5"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/1f8b714f91b15ffddd3c17eba630c16665f25f44b39cd54b4b0201f5215af1ac.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/1f8b714f91b15ffddd3c17eba630c16665f25f44b39cd54b4b0201f5215af1ac.json",
+              "sha256": "b85aa418cdc156ab4a7c92f8e07a59d7f6883d56200cf1866895ea5ac742c251"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/21390e7ded01a79d8ade23e3665798fce8709bbacd3816b8066ecfae7bcd1dec.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/21390e7ded01a79d8ade23e3665798fce8709bbacd3816b8066ecfae7bcd1dec.json",
+              "sha256": "e7fc14d635fb07459730f57aa5c29e544ad07399075833de79bcecea91765a85"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/319f5e2f2770b95405743749e289f898a456ce02b9cafdfeae4499b6e1d9eb0b.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/319f5e2f2770b95405743749e289f898a456ce02b9cafdfeae4499b6e1d9eb0b.json",
+              "sha256": "ee935257ee23986ee674c5b8054adba903e8cde552e1d80e0b26959881f06958"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/328bd893e59355cbb90e499ddb89b4765a7691ba309ac8272f8bdefc2eeb7eb7.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/328bd893e59355cbb90e499ddb89b4765a7691ba309ac8272f8bdefc2eeb7eb7.json",
+              "sha256": "afa3f53a141faa4d71aed730f6c9dec849d33808c7909ecfa1f6c98e1947b90f"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/34e7dd8fe370798d6bff3b6400842db48f704ba9b52fde59420a114951e672bb.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/34e7dd8fe370798d6bff3b6400842db48f704ba9b52fde59420a114951e672bb.json",
+              "sha256": "3d37d6310b1e46a396595a05b66dd519d05c9cb76819c9764e09c3400f4e4e91"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/3561b8e80c567213dc4110a6d42bd44815aca149f9d60ccaf0717d8cf879e698.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/3561b8e80c567213dc4110a6d42bd44815aca149f9d60ccaf0717d8cf879e698.json",
+              "sha256": "ac046d1dfd77554e67e76a8a1471e4e660b30c144161f524b6e1710c5eaf51f2"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/44e536d4d6b26a666baf2fe0aea1a5785d6341842051e1ba4caa2b9d105919b4.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/44e536d4d6b26a666baf2fe0aea1a5785d6341842051e1ba4caa2b9d105919b4.json",
+              "sha256": "eee0c7e5b6db0ccdbf97e6984642f44948f8ab67f9690f8d19ddd42b2df136e6"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/4842ee35e132e93b86e6632e30089478d7eb72cbb33928c0268cc81d540eca00.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/4842ee35e132e93b86e6632e30089478d7eb72cbb33928c0268cc81d540eca00.json",
+              "sha256": "db3f60fc402bbe2ac3892c7899e126688c1fae333011c88bc90d0510e13f2950"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/48f58932e2de2f9905dc3c6afc0607ca4329c6ba25975f19234e76efde9eb9b5.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/48f58932e2de2f9905dc3c6afc0607ca4329c6ba25975f19234e76efde9eb9b5.json",
+              "sha256": "3f5bb5239f4d1d5a4a799e2cd97a89e21705c34fd4833a93ecea19b7941b8c35"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/5499a7c8ed3038042b2cd3366c13bd4f7715bcbe27c93fc45a65cc18c3e82dbb.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/5499a7c8ed3038042b2cd3366c13bd4f7715bcbe27c93fc45a65cc18c3e82dbb.json",
+              "sha256": "107c419413726f9ed2706e141cb9e96b979942e9ce10dc0b65aa80bd8648f974"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/65faf49622f2c0ffd9108a5efa936c864f14982cc1ae6741f8c36bc1af8f15e6.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/65faf49622f2c0ffd9108a5efa936c864f14982cc1ae6741f8c36bc1af8f15e6.json",
+              "sha256": "58113ade0e43c1ce6f6c499989bf1e85be4e5e3481b82f0026c06768c39dcc1c"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/697ee550d28e901f80f5eadee0916c2bdf5fde99239e080408e7215f117a598c.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/697ee550d28e901f80f5eadee0916c2bdf5fde99239e080408e7215f117a598c.json",
+              "sha256": "09fb21fe79dbdcff549a3cb854c03b10d680af48f45085e7c0042538e688e05b"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/6fd331339b4a9634476e2bd2eff36a4680afcee368a7e4304023b7c50e37fb6c.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/6fd331339b4a9634476e2bd2eff36a4680afcee368a7e4304023b7c50e37fb6c.json",
+              "sha256": "10cd37a04855b8ccec7a658f2669ef0b960ca753bb3e76e3111df4741db41419"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/78445a0979f4fda1a7ffe4f38259b2484d68251eec43f02221c6bf855abf0184.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/78445a0979f4fda1a7ffe4f38259b2484d68251eec43f02221c6bf855abf0184.json",
+              "sha256": "93fa7802823a3e6d7ee06d66063318c35cff26760bbd0bfc01d189fb62a28d88"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/82e5b52831fdbea7aca0650956ac67ee133df3a3646a94067ff0733598eecdd5.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/82e5b52831fdbea7aca0650956ac67ee133df3a3646a94067ff0733598eecdd5.json",
+              "sha256": "dff1aba2c50af8edf3ec5bb606a1d886b1701f37b1dc2e7d80fe55c91f0a6bf1"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/83cdbd5126cbf8a294288a4cc43c212dc81df2de70ade5940e0d9d91ded77144.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/83cdbd5126cbf8a294288a4cc43c212dc81df2de70ade5940e0d9d91ded77144.json",
+              "sha256": "4dc202357c378b3ecce440576e14bafaef35e75f831483bb9a5094709d985712"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/a01a8ad6c3159c44462898c0ec51fd65f5bc7d6cf48cd29b07c133765e70da70.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/a01a8ad6c3159c44462898c0ec51fd65f5bc7d6cf48cd29b07c133765e70da70.json",
+              "sha256": "08d9c639f13ac5269c82f944772944a81212e13d6cb720014df3946a0f2eb033"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/a0464d94583e48d2428dce8f247135ee00003404da1506b62ed143f8300108c0.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/a0464d94583e48d2428dce8f247135ee00003404da1506b62ed143f8300108c0.json",
+              "sha256": "03c98963963f7bda30e3eadf0466a4348131694444d1c75b974365b75a696532"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/a144bbeb2b8ba8630fd66fcd86d40c0a0a84c61d22888203694fd39911da83d8.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/a144bbeb2b8ba8630fd66fcd86d40c0a0a84c61d22888203694fd39911da83d8.json",
+              "sha256": "cd14750f03a33d135aa4f793663419dbe170bb83c3752e2ec0f3ac3ab41bde1c"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/a1c7bae04c1ccfaccca4474e18dfdfb09f429f7ba831bf112fd21f51b13bf5f4.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/a1c7bae04c1ccfaccca4474e18dfdfb09f429f7ba831bf112fd21f51b13bf5f4.json",
+              "sha256": "d9bd66aca88cf720fe6222aa9701ab481f69151d3b9b57df65f92b04aae646e0"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/a78f9328c69072f3bbc5956dbc4888a8836e99b83fc750ccd34c8be6bd097acf.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/a78f9328c69072f3bbc5956dbc4888a8836e99b83fc750ccd34c8be6bd097acf.json",
+              "sha256": "c2ab4115ce78bea0494b9b4459759f76fd57e8d33830de754d474797481a5c6b"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/b00e642415455157c859b57e398a8d509b7fea61dd9a64ec5643687276337827.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/b00e642415455157c859b57e398a8d509b7fea61dd9a64ec5643687276337827.json",
+              "sha256": "c86e3db6f4a821f2fae63e0e899e0735ee9b89c86a1f0e60633162b9bb573827"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/bab2054e9fc7f7def2a30a6df1b7ec49f7f246ee678afcfa36e368a312b1c3ca.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/bab2054e9fc7f7def2a30a6df1b7ec49f7f246ee678afcfa36e368a312b1c3ca.json",
+              "sha256": "60be06f26b0da77f5f4067c7d080a82a6b5a7872531a8fa1c94ab06a76031849"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/c43208003252eff239665bff607bcab7eeb51c84f09ae51f5d3a2f0e7b22bdc6.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/c43208003252eff239665bff607bcab7eeb51c84f09ae51f5d3a2f0e7b22bdc6.json",
+              "sha256": "53f824e8f3d2a254add44c9d53bbcd0fa987a48616f9bfeed35767edcf253ef2"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/c480e609af394fa024fc5253c64bb17710a86bd3a0dc3ca5f2668a3f6475c787.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/c480e609af394fa024fc5253c64bb17710a86bd3a0dc3ca5f2668a3f6475c787.json",
+              "sha256": "9a2c511c39e88f721c5c95ac06f902bdd6590e70f70211d1f7c9d60475703eff"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/d30b17352c9b4635fbb3298b9b8c450628ba02418ed64a63b79e9632fc422376.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/d30b17352c9b4635fbb3298b9b8c450628ba02418ed64a63b79e9632fc422376.json",
+              "sha256": "970fb667763b1cc716be4dd83e2c06556dc830a1a0b5134b7831eae065f2f564"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/d43500eb41f7a9ba2a08a492b14e0be87031b9ddd9fca2f32ba001245f354620.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/d43500eb41f7a9ba2a08a492b14e0be87031b9ddd9fca2f32ba001245f354620.json",
+              "sha256": "871611d0da4bd8f96fd4ff2326c8e50de19fb72c0cde420dce6e2587e5bdec3b"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/d99c8f1878121402a31380cf01c7cb862c42fa669de6a5c7a44d45d0c72a3b99.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/d99c8f1878121402a31380cf01c7cb862c42fa669de6a5c7a44d45d0c72a3b99.json",
+              "sha256": "e1f648dd3c4282022429e263c4e088e5cf7cc6b5e5d6c869380316397d9f2dbb"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/ed3e456cd1670a206d2724ca997fec7551e1539809da3892bbda8dd90a1c72a4.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/ed3e456cd1670a206d2724ca997fec7551e1539809da3892bbda8dd90a1c72a4.json",
+              "sha256": "ae92717219876d1ddcb11a952d1394276a5e00d85be44d847766db32a0cbfdbf"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/f03eb2d4696a2f36338eadf9a19994e061bb2407727f03ad0ecc483f5707dfc1.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/f03eb2d4696a2f36338eadf9a19994e061bb2407727f03ad0ecc483f5707dfc1.json",
+              "sha256": "5fd340b0d0460fe3f0343a3dd972ba9452393bd7ffaa68220c398974cee30a28"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/f18bccdd4b72e8cec38552d670e71bed2eda8a7d9514dac8ab791ff0becb058f.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard001/f18bccdd4b72e8cec38552d670e71bed2eda8a7d9514dac8ab791ff0becb058f.json",
+              "sha256": "add51294382fe9bc6db58fb037982e0684fca2e9fd4d37c3b395f64efc085bf4"
+            }
+          ],
+          "prediction_scoring_journals": [
+            {
+              "path": "campaign://activation-successor3/quality-campaign/runs/original15-successor2-halo-humaneval_plus-shard001/humaneval_plus--screen-32/20261015_000937/execution-journal.jsonl",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/runs/original15-successor2-halo-humaneval_plus-shard001/humaneval_plus--screen-32/20261015_000937/execution-journal.jsonl",
+              "sha256": "abaed677951fd03760d0b95b44f73e3146986737f428868aa052f25804452f96"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/runs/original15-successor2-halo-humaneval_plus-shard001/humaneval_plus--screen-32/20261015_000937/predictions/original15-successor2-halo-humaneval_plus-shard001/humaneval_plus_default.jsonl",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/runs/original15-successor2-halo-humaneval_plus-shard001/humaneval_plus--screen-32/20261015_000937/predictions/original15-successor2-halo-humaneval_plus-shard001/humaneval_plus_default.jsonl",
+              "sha256": "ed61bf3dcab4bbe99ae5c2ed32daa84599d0d2fcc9e101b6d92fddea8d12b6d8"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/runs/original15-successor2-halo-humaneval_plus-shard001/humaneval_plus--screen-32/20261015_000937/reviews/original15-successor2-halo-humaneval_plus-shard001/humaneval_plus_default.jsonl",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/runs/original15-successor2-halo-humaneval_plus-shard001/humaneval_plus--screen-32/20261015_000937/reviews/original15-successor2-halo-humaneval_plus-shard001/humaneval_plus_default.jsonl",
+              "sha256": "c0a39960ea98e1430cc7bfe3520f94413a9d2d4d57688fbdb85719770fbbdc33"
+            }
+          ],
+          "window_custody": {
+            "status.json": {
+              "path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard001/status.json",
+              "resolved_path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard001/status.json",
+              "sha256": "c7054ca1da459d5412c4c7e739ba8dbb9c6c8709faf6f450b3ced3eb853f877d"
+            },
+            "run.json": {
+              "path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard001/run.json",
+              "resolved_path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard001/run.json",
+              "sha256": "4b967e6324da1a544fb7cf70152b8ee8c2b8b54e4526156071193377e2c230e5"
+            },
+            "harness.json": {
+              "path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard001/harness.json",
+              "resolved_path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard001/harness.json",
+              "sha256": "177f0a079e810e7d96ba1286646a52462a4cc775f197a7952c8a9abfef9d3246"
+            },
+            "worker-spec.json": {
+              "path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard001/worker-spec.json",
+              "resolved_path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard001/worker-spec.json",
+              "sha256": "598f523edcd6a26d3c911c6683197f0d9bd36afa5370cd1aa995f07dcb176edf"
+            },
+            "worker-teardown.json": {
+              "path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard001/worker-teardown.json",
+              "resolved_path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard001/worker-teardown.json",
+              "sha256": "cced2441f0848f48b33ef945d20d751587ef2821714994aebd21360dece53e05"
+            }
+          }
+        },
+        {
+          "shard": 2,
+          "count": 32,
+          "correct": 29,
+          "status": {
+            "path": "campaign://activation-successor3/quality-campaign/status/original15-successor2-halo-humaneval_plus-shard002--humaneval_plus.json",
+            "resolved_path": "campaign://activation-successor3/quality-campaign/status/original15-successor2-halo-humaneval_plus-shard002--humaneval_plus.json",
+            "sha256": "cb22df3207d5499fb2a3f29a73f1da7df040acdf8a46039901dfe832c7d42517"
+          },
+          "raw_receipts": [
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/089fad21072186c2f6971d37eb44546bc80727340a64d68e760e7e0f0dcd1f2a.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/089fad21072186c2f6971d37eb44546bc80727340a64d68e760e7e0f0dcd1f2a.json",
+              "sha256": "8676017fc1873788233f2091139a5919e317902bdede30caac7802345109303a"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/0be6b7a050e50d0f432e183e4f2ec5e94e607219278bc685a93ea3d82b4d505c.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/0be6b7a050e50d0f432e183e4f2ec5e94e607219278bc685a93ea3d82b4d505c.json",
+              "sha256": "ec408a3cd3c869cb8d16b46ac073d5569ae5aa55b81ce60c6837c6a35012fe07"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/0cbb6aca925d6e2e346f6e9997b3e89bc8ad5e186cc141f9baeccba2b4441cdf.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/0cbb6aca925d6e2e346f6e9997b3e89bc8ad5e186cc141f9baeccba2b4441cdf.json",
+              "sha256": "6b17fcb70543356e296c3084bee78808816c61528e3c7ca6343c064fab37a7e0"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/10ee5461cd504dbe48168ed39d228b402b34b9ccd28136151d1351a902eb4bb9.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/10ee5461cd504dbe48168ed39d228b402b34b9ccd28136151d1351a902eb4bb9.json",
+              "sha256": "3a5cea11a4a6fd236c4907f24d60578d8b4ba827140620ad2fa4fa8e2682118d"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/24c5a0feebf4dc29a5e5eb6d2757c89d8f55119ed0442576c02be52aa7d693b6.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/24c5a0feebf4dc29a5e5eb6d2757c89d8f55119ed0442576c02be52aa7d693b6.json",
+              "sha256": "edd20ffc8209871b64f7b90c4740633f0a90a65398247ab95108e09ed702e4ec"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/2cc5a12c888a44cb744997512eff57303172482a071b55d54ff87365f1f4a707.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/2cc5a12c888a44cb744997512eff57303172482a071b55d54ff87365f1f4a707.json",
+              "sha256": "dfc3f0c90fd4628cb1a743ab968e324ee470149c3823b9b324f0a39c99616024"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/2fe0b0c4df8098e3d8851ba9178ecbf846107cf31925c728537ecabb38f4f651.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/2fe0b0c4df8098e3d8851ba9178ecbf846107cf31925c728537ecabb38f4f651.json",
+              "sha256": "a0838c72a37ffeb5418d29fa01efae52f5e949c211c67d276c30466273791e2b"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/36899923d8d066bbb2f2ca0c4b945eea028213dd842c0692a9af969b04fee3df.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/36899923d8d066bbb2f2ca0c4b945eea028213dd842c0692a9af969b04fee3df.json",
+              "sha256": "2a4e1d072d304f39ddc11348ee251349af91399badc545ba6c17f1015ab3512f"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/3a5ef2cc47d1dfdb3ceb04c122ba61a732594bc38741c513c5d9dde417c722d9.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/3a5ef2cc47d1dfdb3ceb04c122ba61a732594bc38741c513c5d9dde417c722d9.json",
+              "sha256": "9d2bac7298e8901ed89e9f109f941844626b0eca592611be564bdfbcdb121fed"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/4bdab1cb0d3bd759f2e791560181a1108cd5a899a27d2804c09acda6fe21da73.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/4bdab1cb0d3bd759f2e791560181a1108cd5a899a27d2804c09acda6fe21da73.json",
+              "sha256": "4a81b8841e775d3e1c023d1f5a51540ae9260ccb590f2245a5e5f93df0a361d9"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/4d27329c0ccc3e1aa6338a431ddd70810dca62001f34c663eaf9f212d99ea248.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/4d27329c0ccc3e1aa6338a431ddd70810dca62001f34c663eaf9f212d99ea248.json",
+              "sha256": "a012b6970f76fc5d034da84582835283e4fead037a2d28ea9132353df14a83b4"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/52b6239cafa2dc3c82e6e9af79f8976df2187807008c182feed483d5c6d1e7f2.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/52b6239cafa2dc3c82e6e9af79f8976df2187807008c182feed483d5c6d1e7f2.json",
+              "sha256": "5851250582c0d86fd8c7603d289c54cea91b3d0f8996d74755bb83d2fe4bead2"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/68ed4b92b7cbb73db85b82e96b0983a51d61c945bc63e8d8221e70c8f26fb7fb.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/68ed4b92b7cbb73db85b82e96b0983a51d61c945bc63e8d8221e70c8f26fb7fb.json",
+              "sha256": "3552f284c2854d7016b768642659308d06d5ecb970e2b8bb0374fa2ff2fe26a9"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/7a6874bb23f0e2c539e860eca3c1a0eeede5c0ad39d202411283229519bf8b83.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/7a6874bb23f0e2c539e860eca3c1a0eeede5c0ad39d202411283229519bf8b83.json",
+              "sha256": "da710a1819a034236c3c7d9b8e8550e3bf08890e8798866eff966e2d5d15a210"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/866205d6b1ec56c1f37c04a74e81f7d0a2172cebb286956bb9411b52209e1fec.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/866205d6b1ec56c1f37c04a74e81f7d0a2172cebb286956bb9411b52209e1fec.json",
+              "sha256": "1657cc4a3382105247f2d182b3a52694767a101180f0a8cbd70b64ee2712d167"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/8ab90cc8224c49db418a1426e02d11a8d2d6f66ede21cf026f9241c52ba33852.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/8ab90cc8224c49db418a1426e02d11a8d2d6f66ede21cf026f9241c52ba33852.json",
+              "sha256": "14abfc7ed618b0c0545881c25b706ef02d2321086f49a562aed6a4770cfead10"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/8bf4dc0bf5cc3fdc962b9fb728ede06e622a331f3e3e1297a40eb2d2f7eb5bed.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/8bf4dc0bf5cc3fdc962b9fb728ede06e622a331f3e3e1297a40eb2d2f7eb5bed.json",
+              "sha256": "28d0dc7c3a0b32e3ef39669a84ed0b599c94b1653f67f43829a3071674866c5e"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/9212d9341d8277a4d07e2af6d32ed56324c1ab16a5c7e7c95bdc640e03a0a8d9.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/9212d9341d8277a4d07e2af6d32ed56324c1ab16a5c7e7c95bdc640e03a0a8d9.json",
+              "sha256": "cf95716fc41bbd5ce6a0181dc98d8d2474bd9c37a2a2cdf2edd0d0b470e7dfaa"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/a359b1d264356dfb07dec4d5cc98d35e65c35d7b674b001cf2ecd90f96466ed5.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/a359b1d264356dfb07dec4d5cc98d35e65c35d7b674b001cf2ecd90f96466ed5.json",
+              "sha256": "fee018ef71c8f408197e638ba04b2bc159598eee872ef7fff71d76f9865afb63"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/a7ccddcb2bc785528b09f9a23dab91564bc12e436a78e0a78a95c3c4da5eb9ed.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/a7ccddcb2bc785528b09f9a23dab91564bc12e436a78e0a78a95c3c4da5eb9ed.json",
+              "sha256": "491911b31d479f0c69a3baf1fcfe9de3601971b19b05df70b29bd9aa3cc5f843"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/ad35427a0dc373f2ce8c3bb987f7266a5eb4f4deafa5f2f33f46bb6fcba2317c.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/ad35427a0dc373f2ce8c3bb987f7266a5eb4f4deafa5f2f33f46bb6fcba2317c.json",
+              "sha256": "95a1b2ead44ec1977349b13e9c730fa1c47f9584278bad3c3960fc4b2612514e"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/b633ae3875c20a0b7e08b1c4275086a36c23dfe0ac9adbf2490e8ff8c90db3e5.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/b633ae3875c20a0b7e08b1c4275086a36c23dfe0ac9adbf2490e8ff8c90db3e5.json",
+              "sha256": "7449bfdd03c3804319b111bc748c220e16dd5e21ff9c9ede25388dd901c8c83b"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/bb74f8c2ff80079374c525f59e6ab33a905ba837b7ff20ee213bf511f4b5857d.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/bb74f8c2ff80079374c525f59e6ab33a905ba837b7ff20ee213bf511f4b5857d.json",
+              "sha256": "414675e7234a8f3526071c171fd0658faee7419d5655225567d13078801e3c2b"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/d3d192f72f76b956dcd1fe92a5e47a81f99f398c8fc953b71cf379cff30e4283.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/d3d192f72f76b956dcd1fe92a5e47a81f99f398c8fc953b71cf379cff30e4283.json",
+              "sha256": "867d6571ea9c26748649507cf76fe4289be35530b456f76f262eab6923c4a229"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/da736f272f8599b7017e4c2b2d462ebf1f9e6be39214c37189b4e6282ef5cd08.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/da736f272f8599b7017e4c2b2d462ebf1f9e6be39214c37189b4e6282ef5cd08.json",
+              "sha256": "89931f21e46f006d7f1d4ed3a8f028eed857ccf07367984a386a5a4e2abcd272"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/dc4e230d85e194c41baa64b992fbe8a7249d3901ba49cf1342c08a56e93c876a.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/dc4e230d85e194c41baa64b992fbe8a7249d3901ba49cf1342c08a56e93c876a.json",
+              "sha256": "d842a90f0640ad9becad53acfe18f2299b566ea7d6b84ebe375debefecd7a699"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/deba737fc981f6efc8e5fe52c555bff35041ab89e9a93238714a17efd9a61d7a.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/deba737fc981f6efc8e5fe52c555bff35041ab89e9a93238714a17efd9a61d7a.json",
+              "sha256": "05ab8862899f19030af15fc1d2072e788f6b11bcf6fc965b946db634c84c891c"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/e13051e0a14fe89fd3d173aeb5bbb4598cdbc7b39d2f8a2df8763286a9766e0a.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/e13051e0a14fe89fd3d173aeb5bbb4598cdbc7b39d2f8a2df8763286a9766e0a.json",
+              "sha256": "c50b3fc8dab14e35f5f0e899ea3e149a4c06895d97658b5747533a8df4d1087a"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/eb87dceb40f43b2dd12613faf7f6f28e75cdb3713cd404c587d9d028b65c73c2.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/eb87dceb40f43b2dd12613faf7f6f28e75cdb3713cd404c587d9d028b65c73c2.json",
+              "sha256": "fc098281d377c21ff4a974d27b0cd717c8b92f6c915ec97e5c34ede09b2b3c4b"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/f0e8020b85b8dbec6e11ef0e769053452d83a8e780920a87a4a86d69689eacf0.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/f0e8020b85b8dbec6e11ef0e769053452d83a8e780920a87a4a86d69689eacf0.json",
+              "sha256": "2fb5d277eb63b5503c2f1036bc7c83940f8384ad5e12c7256d8420c5acb628bf"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/f7f9ab59d4b6d10dfd41efb34f3d4293108fb83950ab3bf174a0c1e7e47b4fe9.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/f7f9ab59d4b6d10dfd41efb34f3d4293108fb83950ab3bf174a0c1e7e47b4fe9.json",
+              "sha256": "a9d4065033fde174bb8a5277ba14ce7caec28dd495bf1cab2d67cccccdcc133d"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/fbbdd9e55258f042ca5b735e349a65d3c3f66b29ccf0f35a2e3436c9b48324cd.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard002/fbbdd9e55258f042ca5b735e349a65d3c3f66b29ccf0f35a2e3436c9b48324cd.json",
+              "sha256": "1b746b520cf148015d3f27d2a8f376d35d303a9b606ac2189d3b1334257bdeec"
+            }
+          ],
+          "prediction_scoring_journals": [
+            {
+              "path": "campaign://activation-successor3/quality-campaign/runs/original15-successor2-halo-humaneval_plus-shard002/humaneval_plus--screen-32/20261015_002609/execution-journal.jsonl",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/runs/original15-successor2-halo-humaneval_plus-shard002/humaneval_plus--screen-32/20261015_002609/execution-journal.jsonl",
+              "sha256": "fff55665d8a9b98e07e6e15efb90a9a0b80aaf61960e8afde66c77a43db37270"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/runs/original15-successor2-halo-humaneval_plus-shard002/humaneval_plus--screen-32/20261015_002609/predictions/original15-successor2-halo-humaneval_plus-shard002/humaneval_plus_default.jsonl",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/runs/original15-successor2-halo-humaneval_plus-shard002/humaneval_plus--screen-32/20261015_002609/predictions/original15-successor2-halo-humaneval_plus-shard002/humaneval_plus_default.jsonl",
+              "sha256": "f8b43384c48122fb38539fee616ddc23fde7db5c3b1a329dd150d77a7e28c0bd"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/runs/original15-successor2-halo-humaneval_plus-shard002/humaneval_plus--screen-32/20261015_002609/reviews/original15-successor2-halo-humaneval_plus-shard002/humaneval_plus_default.jsonl",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/runs/original15-successor2-halo-humaneval_plus-shard002/humaneval_plus--screen-32/20261015_002609/reviews/original15-successor2-halo-humaneval_plus-shard002/humaneval_plus_default.jsonl",
+              "sha256": "128cae1e25e878c1a5a592c457968f65a1234d1fde05c84c77842249c0443416"
+            }
+          ],
+          "window_custody": {
+            "status.json": {
+              "path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard002/status.json",
+              "resolved_path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard002/status.json",
+              "sha256": "966b6170f946d0424289ac5261c90627487ca4115e8eced8f09ac5b371376851"
+            },
+            "run.json": {
+              "path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard002/run.json",
+              "resolved_path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard002/run.json",
+              "sha256": "9bfe00e616f4a6ea094cb0109f6c21c8f4df90e1fb021616a898f66d665a634a"
+            },
+            "harness.json": {
+              "path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard002/harness.json",
+              "resolved_path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard002/harness.json",
+              "sha256": "1f20627e890f54ad9c5af9d82848e3ecdc2bea7fe63c933eb1ea3236a1d6a7f5"
+            },
+            "worker-spec.json": {
+              "path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard002/worker-spec.json",
+              "resolved_path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard002/worker-spec.json",
+              "sha256": "daa412574827f6d3c9e7d6af6db0531eb8cb8ae09b9f68e88d259fc4ab7c4db0"
+            },
+            "worker-teardown.json": {
+              "path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard002/worker-teardown.json",
+              "resolved_path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard002/worker-teardown.json",
+              "sha256": "d55f32744da819fd84668dec32f7519810839244ce809d9ea1d749c1cba5c910"
+            }
+          }
+        },
+        {
+          "shard": 3,
+          "count": 32,
+          "correct": 32,
+          "status": {
+            "path": "campaign://activation-successor3/quality-campaign/status/original15-successor2-halo-humaneval_plus-shard003--humaneval_plus.json",
+            "resolved_path": "campaign://activation-successor3/quality-campaign/status/original15-successor2-halo-humaneval_plus-shard003--humaneval_plus.json",
+            "sha256": "59e0adc270560188bc49f6e7017d571c1821f00509acde0b3be0f1a1c37fd0e6"
+          },
+          "raw_receipts": [
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/047a336df3cf44cfb2cc229b0d6bb5b07de3b8b2ca2c9cf1f689ac260aeadd24.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/047a336df3cf44cfb2cc229b0d6bb5b07de3b8b2ca2c9cf1f689ac260aeadd24.json",
+              "sha256": "43d363279f614191523e9f06bbcbcb377e5a1ad10985e337943b9e5ccadf40b1"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/0637fa619db515a77ca71493ddf3895ab050f3b934a334fb6e40f19c00c11668.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/0637fa619db515a77ca71493ddf3895ab050f3b934a334fb6e40f19c00c11668.json",
+              "sha256": "f79e5149bf064b0e027712b1c3e86bddc100ecc2716c7a7e3a88ddf33480b50c"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/064f61b995b3b36f4ec5cd0407711e43e36f2a78f9de26687efb8bfa0056ab20.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/064f61b995b3b36f4ec5cd0407711e43e36f2a78f9de26687efb8bfa0056ab20.json",
+              "sha256": "fbcef196d6cabee526fa79acfe2a0ed6f96023025b42ab6a05306349a22f2d8d"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/0f78406a2b8cfc6262b39f81b507cafaacc84f947b8773e814c8dbef6495b3ea.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/0f78406a2b8cfc6262b39f81b507cafaacc84f947b8773e814c8dbef6495b3ea.json",
+              "sha256": "22a88cd7173c43c5521bd551d230aac873170f46fe3ff97fdec33f2d2927ee3a"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/166ca0e8b6d010abf968bddccdcd802971df72979b8ed6fa78907e131a9fdc1a.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/166ca0e8b6d010abf968bddccdcd802971df72979b8ed6fa78907e131a9fdc1a.json",
+              "sha256": "fedc446648ab0cb5d8bf888b9b7a0839026e4d8d8a0befa409d578e3bcb3fef0"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/1db99ab8ad60b6d7f7eadbb4ae68107a09ad42ca3e88b405942327a0d248ccf2.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/1db99ab8ad60b6d7f7eadbb4ae68107a09ad42ca3e88b405942327a0d248ccf2.json",
+              "sha256": "c2b9833bca5727a5c5d14950ea856bb552d8398e932b5d7288279823a802fdd6"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/23e7ab50fa77d8b17ea4c28e4da709ea65b3e4c8f2113116fafb9e92103d021c.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/23e7ab50fa77d8b17ea4c28e4da709ea65b3e4c8f2113116fafb9e92103d021c.json",
+              "sha256": "38365e79ea8d4f90c8c564f8182941a77e76d06eeb5954d4b3d6b8b67b253016"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/25026910a9a52c5cce96aefba0a601d731b0dd5acaf172335f1d0b96a057d22d.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/25026910a9a52c5cce96aefba0a601d731b0dd5acaf172335f1d0b96a057d22d.json",
+              "sha256": "b0f8304d847c7135af3b7974530d9bd6049086701c9d8553c44f4612fca8ebff"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/31feee080c31b18f834193f3d2c84c896468753dfc6e3db507290de10ce807d2.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/31feee080c31b18f834193f3d2c84c896468753dfc6e3db507290de10ce807d2.json",
+              "sha256": "686cf64176c552063c15cbe8ef36c3faa07733f6f71844f8b66352a89dab9166"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/3a6369de6aa4a226ce7ef6fae079aa0ba7c2a0a031c5859d493c4a716a92c0f0.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/3a6369de6aa4a226ce7ef6fae079aa0ba7c2a0a031c5859d493c4a716a92c0f0.json",
+              "sha256": "41b4dfce6533420bd6b9428a7625ca7a89e0b155b067605268a94f6a28106053"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/41f499a4ceefe6d59ffbff139d39310056ee44493bf46ca09dd1babff6744f37.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/41f499a4ceefe6d59ffbff139d39310056ee44493bf46ca09dd1babff6744f37.json",
+              "sha256": "ea83bbcbd758965b9e7145ec8547b48484e0ffc5fc802fc5ff6d717cf5af8018"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/5be11431f1fb8dda46d20a62d0dbcfaa065994a925b5e1513f5505b3017c9f7a.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/5be11431f1fb8dda46d20a62d0dbcfaa065994a925b5e1513f5505b3017c9f7a.json",
+              "sha256": "6f0ecbae05c26efbfedfdd21e81262a66b0a4f2b4e7a69649665e371b5ca8d7f"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/649f680d6fd903a7c1de29b0b783b206b6565113dcf9dd15deeda37400bf9929.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/649f680d6fd903a7c1de29b0b783b206b6565113dcf9dd15deeda37400bf9929.json",
+              "sha256": "7ac151c40f8ac7faec0b3c013ab5fad13d23153b7a8cfef74bbc93d0b697825c"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/66b1cb1d9472ac47aa5f7059aa5dfdfdcbde17ae04a77d134e78d079917cc955.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/66b1cb1d9472ac47aa5f7059aa5dfdfdcbde17ae04a77d134e78d079917cc955.json",
+              "sha256": "969433627f23e0ba2d65d96419dbcaea5783f2e362add69644d204e01df77390"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/8502865e9e4212b52d81e433085e05eab13552d03731dcf670448dc1ec5a1cfe.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/8502865e9e4212b52d81e433085e05eab13552d03731dcf670448dc1ec5a1cfe.json",
+              "sha256": "3ee5c98cd1b09821e4180440c90e7fd52ad7996a2d3d09e995e21d01dd804614"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/8858e7ba6e9db4e07465ace033a4aef4ee219e1eec13bb7e029fb4b3de08b71f.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/8858e7ba6e9db4e07465ace033a4aef4ee219e1eec13bb7e029fb4b3de08b71f.json",
+              "sha256": "132364b12e7ed77c65a1b0ff350c06eddaa413e0895239a15244f190fefb1b5d"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/a24eb864f48f8b2370a3ac61d0e52b8a40b43711f753d12ea22bd36566f77e4e.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/a24eb864f48f8b2370a3ac61d0e52b8a40b43711f753d12ea22bd36566f77e4e.json",
+              "sha256": "302c213ba7526a851cbe1e4fae9304de49508bfb050a4e571f4200b6a34ce734"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/a9d2f52386cb732689856d6a61e337f5faecb17b87b9e8dd57ae811d95f029a4.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/a9d2f52386cb732689856d6a61e337f5faecb17b87b9e8dd57ae811d95f029a4.json",
+              "sha256": "ae3c6cc689f015028105152138d1110f94c345676bf3410b99d7fec51e693e2a"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/af0183c84fc46258fe4e4b9398f8aabba6d1cda9e3475d6a8677e568d24b9351.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/af0183c84fc46258fe4e4b9398f8aabba6d1cda9e3475d6a8677e568d24b9351.json",
+              "sha256": "e264426e21d01b0df473760e62ed966bcc800edff9b77b2a1825975fc62fb7f6"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/b1befcf5cd4cd8979b1723edbdd2e33a12afcfc6a53fc8d1cade3ba5267e5fac.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/b1befcf5cd4cd8979b1723edbdd2e33a12afcfc6a53fc8d1cade3ba5267e5fac.json",
+              "sha256": "14e1b6b8f743b9b36c268b4387cbf535c5055b8019a7e6166e45952347b2506c"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/b6473e49f6e71ed9d50bb9243d91f511ac3616ab17c38cbf460a9d519938226d.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/b6473e49f6e71ed9d50bb9243d91f511ac3616ab17c38cbf460a9d519938226d.json",
+              "sha256": "314bd88eaa2bcc83827c0bd6f511b2fc627335a0d06979a2f069caaa82a7008b"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/b9a60bb8855a4d2a7f8b67966a0f55ed000b51b223b77a8dd8ab25add0346cd0.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/b9a60bb8855a4d2a7f8b67966a0f55ed000b51b223b77a8dd8ab25add0346cd0.json",
+              "sha256": "9a96b02a960094a90674d2007617c8e722accd2f562fe4332494ad4a3aa9489d"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/b9ae7f347f01e1d88e63f5f1ea068196c5ef894b6f5cf6fafd50c245625ec85a.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/b9ae7f347f01e1d88e63f5f1ea068196c5ef894b6f5cf6fafd50c245625ec85a.json",
+              "sha256": "3450641bd8896a9738733643d08467f37e5ae68738f325af6f8562e6c86e2a3c"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/caf21dad228542f6d0c548e709f80449aa53f49ff9abaa447acdc342f72a5b5b.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/caf21dad228542f6d0c548e709f80449aa53f49ff9abaa447acdc342f72a5b5b.json",
+              "sha256": "4ca9aca8d6de2949707c20db25930eeced2ce59fa76183e0bd43ff1b28b1047f"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/cd1612267b6fadd38d71d1ba67447ce4f618f0fab90bc91f9b6c782f0f28747d.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/cd1612267b6fadd38d71d1ba67447ce4f618f0fab90bc91f9b6c782f0f28747d.json",
+              "sha256": "013cd5dac175b321cb0b7c2cdfd38e66148f28e1e79d9d179601be7bb52d025b"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/dc799372a2d844ca0071065ece9198de00ad19978e3d62b9a3912fd2fffe521c.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/dc799372a2d844ca0071065ece9198de00ad19978e3d62b9a3912fd2fffe521c.json",
+              "sha256": "e6a4f7bd6562adfc2203e1010928e43a50c7686a014317464beffe48d348437a"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/dcde24dc63ae9d309f9b5b611e5667dd4c52d60f7aa1aafe3dc59ba406f45fd4.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/dcde24dc63ae9d309f9b5b611e5667dd4c52d60f7aa1aafe3dc59ba406f45fd4.json",
+              "sha256": "c56136230d404ebbf184d8ef95a9bb94dad31260f0402f3b57b17cc34338cd37"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/dfee95a992b0688ebba6e404589094a6de80e2647270a26fdf880ef944331653.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/dfee95a992b0688ebba6e404589094a6de80e2647270a26fdf880ef944331653.json",
+              "sha256": "ed746a74b7ea48d937bf3790fce16fcf8c20fa29fdea546c5648dbfcfa8acd87"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/e790a6f49b0ed2c9f77d3fe2e6737d188f10778e252b92bec174c5f89ca79031.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/e790a6f49b0ed2c9f77d3fe2e6737d188f10778e252b92bec174c5f89ca79031.json",
+              "sha256": "11e60f2a3305d6308503f62b4d446d1af85979104d48df1a77562240b453cf6e"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/ee13dfbb909df63a4f642b86b36fa62bfa8df1a17fce1d2f9034cbfb88a6adde.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/ee13dfbb909df63a4f642b86b36fa62bfa8df1a17fce1d2f9034cbfb88a6adde.json",
+              "sha256": "aea7800f94e4b1661901970c5986c94b6ae5a0b940164157f1556a0f6ef4b40b"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/f54c872fbb164679e2fb48ce3d1c14a77d501b2d38ee0ce534eaa37cf063332c.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/f54c872fbb164679e2fb48ce3d1c14a77d501b2d38ee0ce534eaa37cf063332c.json",
+              "sha256": "08780d08b4940ee4aed93c51dcc10c8b71b54747dcad39da2cd6caa24d86e5b6"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/ff2ad55483d8520d349141c3eee2cd5c45b05d24dff16ec54ad3e4d5051cc83f.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard003/ff2ad55483d8520d349141c3eee2cd5c45b05d24dff16ec54ad3e4d5051cc83f.json",
+              "sha256": "c379ff1dc6419d7050968736c56384b78bcd27f6de7900bd718acffda624e7f6"
+            }
+          ],
+          "prediction_scoring_journals": [
+            {
+              "path": "campaign://activation-successor3/quality-campaign/runs/original15-successor2-halo-humaneval_plus-shard003/humaneval_plus--screen-32/20261015_003927/execution-journal.jsonl",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/runs/original15-successor2-halo-humaneval_plus-shard003/humaneval_plus--screen-32/20261015_003927/execution-journal.jsonl",
+              "sha256": "a26c5a31f0241fa238adeaf3b248c9f00c7779c6a33854684c7002743725ae1c"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/runs/original15-successor2-halo-humaneval_plus-shard003/humaneval_plus--screen-32/20261015_003927/predictions/original15-successor2-halo-humaneval_plus-shard003/humaneval_plus_default.jsonl",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/runs/original15-successor2-halo-humaneval_plus-shard003/humaneval_plus--screen-32/20261015_003927/predictions/original15-successor2-halo-humaneval_plus-shard003/humaneval_plus_default.jsonl",
+              "sha256": "8c46deed43b5f6ccaf9a207a6e0809ec9ef058dca374922471055fd9813a786e"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/runs/original15-successor2-halo-humaneval_plus-shard003/humaneval_plus--screen-32/20261015_003927/reviews/original15-successor2-halo-humaneval_plus-shard003/humaneval_plus_default.jsonl",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/runs/original15-successor2-halo-humaneval_plus-shard003/humaneval_plus--screen-32/20261015_003927/reviews/original15-successor2-halo-humaneval_plus-shard003/humaneval_plus_default.jsonl",
+              "sha256": "2bbf2d71ef110bb552acba6b77022d621d5d8e513923625e2f2d7c9dbf5bad2f"
+            }
+          ],
+          "window_custody": {
+            "status.json": {
+              "path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard003/status.json",
+              "resolved_path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard003/status.json",
+              "sha256": "c7c20070fa563758e4d02ed5ca09400fa0dc1ebdd3de7ca081a67a829d80d9c7"
+            },
+            "run.json": {
+              "path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard003/run.json",
+              "resolved_path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard003/run.json",
+              "sha256": "30419ca1228b37bf8f490e0e4ae01ff498426f265cf1cc128067e7569aac2baa"
+            },
+            "harness.json": {
+              "path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard003/harness.json",
+              "resolved_path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard003/harness.json",
+              "sha256": "2f503235555634a93d4e3b4a1dec0525477d19e266f48716e8e2e65f9ed1bde5"
+            },
+            "worker-spec.json": {
+              "path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard003/worker-spec.json",
+              "resolved_path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard003/worker-spec.json",
+              "sha256": "209f7d0a440cb89c065bde88b5f943d3e5062558069a2fcbfa38c34d1c7a3c31"
+            },
+            "worker-teardown.json": {
+              "path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard003/worker-teardown.json",
+              "resolved_path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard003/worker-teardown.json",
+              "sha256": "125c21d40ef2f6583c45bd1c0ee90f38a5dabbf71fa5c23ad32d661927dfb533"
+            }
+          }
+        },
+        {
+          "shard": 4,
+          "count": 32,
+          "correct": 30,
+          "status": {
+            "path": "campaign://activation-successor3/quality-campaign/status/original15-successor2-halo-humaneval_plus-shard004--humaneval_plus.json",
+            "resolved_path": "campaign://activation-successor3/quality-campaign/status/original15-successor2-halo-humaneval_plus-shard004--humaneval_plus.json",
+            "sha256": "6115b0dc4a64f865595ab78fa6c71bdc851712cbe7916a4eaf2d6d536d068c57"
+          },
+          "raw_receipts": [
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/10e3efc823ea9600aef2bc2e8287b8684ff6c69dd802997ac8ebfeb003e504a3.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/10e3efc823ea9600aef2bc2e8287b8684ff6c69dd802997ac8ebfeb003e504a3.json",
+              "sha256": "dbb74be14b79a0c4cdd4dab1610190c76ec0a9d9f05f474641335c73b00a5908"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/1bc3d20b95f7f70e4ed89f8be1e4d52cc067ae28bc39a6763d57986d93e110bb.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/1bc3d20b95f7f70e4ed89f8be1e4d52cc067ae28bc39a6763d57986d93e110bb.json",
+              "sha256": "afc491206898dfa6a99cb0cb3c91e44993e49a32e65431243910a55f5e2f86c9"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/38975890f36b9ce9e956b436231b09ce73b6c25727f42b53fc602ba4d0aeeb89.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/38975890f36b9ce9e956b436231b09ce73b6c25727f42b53fc602ba4d0aeeb89.json",
+              "sha256": "d446eeee38d3655809f0252f03a2cf576d23eae25fedde25e58e9eba48199e48"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/45a99338041e94e607f992955ecdf84db24a3d300f3d4b656401117529757c16.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/45a99338041e94e607f992955ecdf84db24a3d300f3d4b656401117529757c16.json",
+              "sha256": "9362c132658efb1bfd005a2f4b6306dbbec32eab417ed9c1c222c56d22c7cfe5"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/4a31df45594a7f49a1cb9fdc13655c601c94413a865a6ccfde841f2036b8fbea.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/4a31df45594a7f49a1cb9fdc13655c601c94413a865a6ccfde841f2036b8fbea.json",
+              "sha256": "1a0b78be3c031554e84ef46ea617e0c2be8dbaeca7ec22d388da3e3906719f4f"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/4a988f55af3840ea62cb65e8693b0c872ef4e087031b48a44691f1b6f973e0f6.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/4a988f55af3840ea62cb65e8693b0c872ef4e087031b48a44691f1b6f973e0f6.json",
+              "sha256": "943fb7651f581cce57f42e85357422926e87d3a3a46c823e29d8c0a8851ec04e"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/52b365561f7e987eaed57fdcc07d6a200c9ba8a9eba3ed383bc2c983105b5265.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/52b365561f7e987eaed57fdcc07d6a200c9ba8a9eba3ed383bc2c983105b5265.json",
+              "sha256": "a35a273be3c7efff7fb7af4b996d5c496a0417296679e28b08bed4522be32749"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/53e026b109d708c25a5d0f1ff9bdb36187a4f9121210f8feebf4394e34b6696a.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/53e026b109d708c25a5d0f1ff9bdb36187a4f9121210f8feebf4394e34b6696a.json",
+              "sha256": "d21aed9a0bf102b784fdc77b4a1a96d0784b84969410e75d3501865ab7d1f32d"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/7452da1858fa168f9afa771deb48a62b609902ec7b177f20104834ffa013aa5d.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/7452da1858fa168f9afa771deb48a62b609902ec7b177f20104834ffa013aa5d.json",
+              "sha256": "fc602cea8c7a578eb3f1f1a71459ec266fedaefa22a3a8a5a0001be06f8ab782"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/760ccbf91c167afeb45654136cea3cbd9bcc7aa81f0cd583d6039bcb50e6b452.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/760ccbf91c167afeb45654136cea3cbd9bcc7aa81f0cd583d6039bcb50e6b452.json",
+              "sha256": "919e3013f026cf8b018e56442a12f809526bf6d8dc25d8793fa9c78b7ff49715"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/765fe7bc7380248bb243eedcf9e7234b5f0169b870618d586ff397e064ed25f6.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/765fe7bc7380248bb243eedcf9e7234b5f0169b870618d586ff397e064ed25f6.json",
+              "sha256": "98f7ae9f614fff41300899aee5f7b8c1d982a90a8077c26f56c0d7932f86fe8c"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/7802aa9dfcc0556a31a15534c19a5032c70414239fa9a90f2cb4a252dc611f1c.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/7802aa9dfcc0556a31a15534c19a5032c70414239fa9a90f2cb4a252dc611f1c.json",
+              "sha256": "c9740a44853078421c76f24ea1b99e9652f94bbcd61d95d325e7db6c4891b2a1"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/7a33a74aedcd74fedad3e0cc852fe54fd3f4fdd107fc773fc8042d1fde366bf8.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/7a33a74aedcd74fedad3e0cc852fe54fd3f4fdd107fc773fc8042d1fde366bf8.json",
+              "sha256": "00e84757c1853fb496efabaf75fede181e61de60eea12ca8f21942bc187647e3"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/8319c31240f7e2fdc774cee66275f6bf21b1620b64f930a85c595c44cff4c874.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/8319c31240f7e2fdc774cee66275f6bf21b1620b64f930a85c595c44cff4c874.json",
+              "sha256": "9dd8f5a08faf82be9750e47c5939edca39028bd3cb800c8fe0919604fc5d1f3c"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/85f8f0234aa16e669751013bf93d7c111004f93ae863c8cc55514942a2eea059.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/85f8f0234aa16e669751013bf93d7c111004f93ae863c8cc55514942a2eea059.json",
+              "sha256": "ff564734f90286b79b4a85dc1f45da6c346c8fb9aa322a7ae3e4ccd355258bad"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/8b9c2b7c91708f4cd47b70b5d8221af4b9bb0e58d87473f4f0df6755ce6184fe.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/8b9c2b7c91708f4cd47b70b5d8221af4b9bb0e58d87473f4f0df6755ce6184fe.json",
+              "sha256": "1c3678c2bfec6d9cad43233f97cd776866d7decc6d2fad6994fdc0d1f3d6b1ab"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/8d7c45e8b94c409adfa30319ba6bc9243979814290012abd60f1efbc55cbaa59.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/8d7c45e8b94c409adfa30319ba6bc9243979814290012abd60f1efbc55cbaa59.json",
+              "sha256": "8bd12cf2bcc44afdbf817f1f76541e17df60bcbfc5e5f53914298a5d87ea5974"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/a335288e72070472b5ade6b8e7646f251477868285e5cf08212a7a90a4b893f2.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/a335288e72070472b5ade6b8e7646f251477868285e5cf08212a7a90a4b893f2.json",
+              "sha256": "2230f3db686dc440d411c4b2891e001b271275b1687ff23e83c8aec0a2bf7613"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/a57045d8b4ec8382324126c1f75a739d9e1c2adc8dfa18e54745f1bcceacd787.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/a57045d8b4ec8382324126c1f75a739d9e1c2adc8dfa18e54745f1bcceacd787.json",
+              "sha256": "1d4e0ed7a590c9cf00760b65e4ee1c408452d94e3d856b3559910903d1233b17"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/a57bbac0b2f1020a36199b04d627f697f2f9e317e84c9ea4e0a3d52859d70bce.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/a57bbac0b2f1020a36199b04d627f697f2f9e317e84c9ea4e0a3d52859d70bce.json",
+              "sha256": "cc5d7ec88619c68aa19fbb0ac9d892f2b7e5a725e9022d969753b8c93f93162f"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/a944eeb87ca5bffd23bc93d60c2d99a4df88c869faa5f03b733b95cbf723e3dc.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/a944eeb87ca5bffd23bc93d60c2d99a4df88c869faa5f03b733b95cbf723e3dc.json",
+              "sha256": "1943f910f7dcab75854952c0ad0eee2299bd37846d853504c7291e4a54458c5a"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/ac61cc0a2e4d2e16b97c2db7332e4590ad7c9d396046dc40ede62136dd1f97d3.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/ac61cc0a2e4d2e16b97c2db7332e4590ad7c9d396046dc40ede62136dd1f97d3.json",
+              "sha256": "15002f95ed4927b3bb35ef4cd80793e8dbeaca13c2cee6a35e7f56c37fa13726"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/b9630c985065e453583431505c0c61765341c586dad6d464ace26c4d7799a192.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/b9630c985065e453583431505c0c61765341c586dad6d464ace26c4d7799a192.json",
+              "sha256": "3d7c47a2b070ab9349b64aa0349fbd0192d9e3bcbb6b6021483f4d5f6c8179c7"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/b977f3b4142fb80cc3db9ea65691d185c5ff623f92af29e2124ca6ddd47af4af.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/b977f3b4142fb80cc3db9ea65691d185c5ff623f92af29e2124ca6ddd47af4af.json",
+              "sha256": "56c674d778fa420adfdea398044927646a3c78256a6688655cadddf0b46a906d"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/c3d139a8d35c10da54342423c5fa34798e5a402f566d386250ba7afec42ddeb6.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/c3d139a8d35c10da54342423c5fa34798e5a402f566d386250ba7afec42ddeb6.json",
+              "sha256": "e82a355fdd169d410d4d486b7208c41eecd2671eb41333b443cacd35dc43c444"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/c72bdfdba047d8fb091efdf5180ab939ef5c0d558e338a9ffa665431c6c853eb.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/c72bdfdba047d8fb091efdf5180ab939ef5c0d558e338a9ffa665431c6c853eb.json",
+              "sha256": "10a5c561c80e35560610efb770776aaa6677494d48d88855edf994ce71af8bac"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/cb771a7ed26cccea0562314d039550c525a2e8c037f73eb0977d9dd7c7b72067.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/cb771a7ed26cccea0562314d039550c525a2e8c037f73eb0977d9dd7c7b72067.json",
+              "sha256": "6934dd79bec8b1adcf8357e1a35ec94b7cf1bd7838397e1c9d5bb5b0bdf1fe04"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/cc3bb48d24adfba702de1abeab89315996fa2807a457503cc61276dfdd075eea.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/cc3bb48d24adfba702de1abeab89315996fa2807a457503cc61276dfdd075eea.json",
+              "sha256": "ae8a8c65f81abdd4f59a7476e5f12c7b2752f787d47c96a90988c9dfe9b857b1"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/e68cbabf71ac317c97466bf60ee98e6f296c5ec590aa8d255d1d31cdb559597e.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/e68cbabf71ac317c97466bf60ee98e6f296c5ec590aa8d255d1d31cdb559597e.json",
+              "sha256": "414fba04861f842140896af7f96326136b00611ed96edff93e71107d7df5afaa"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/ecc48aa52a812413acfe79b04d0cd047d342a0309c6c6c0cb0ccf5e3d7f867c5.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/ecc48aa52a812413acfe79b04d0cd047d342a0309c6c6c0cb0ccf5e3d7f867c5.json",
+              "sha256": "1afb1c346315b14e9f862111b98131b1739c319a2953cc6acbb4c64c576dc1a6"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/f03fb3cc15ee6a77a29c8acf773d9622c327c2486c86832c4589c242bad19659.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/f03fb3cc15ee6a77a29c8acf773d9622c327c2486c86832c4589c242bad19659.json",
+              "sha256": "d125cd07bfbf8d2199c42163fc5f44f145fec7b7059049576d1e075cbd19e281"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/fd96239f3925e63da9250af66a0f3270aae234af5819f021400933a6b7056a6f.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard004/fd96239f3925e63da9250af66a0f3270aae234af5819f021400933a6b7056a6f.json",
+              "sha256": "05e68d534555b5a683abe380fc0f58c8a9effc140d8d0f757df027caa06bf03c"
+            }
+          ],
+          "prediction_scoring_journals": [
+            {
+              "path": "campaign://activation-successor3/quality-campaign/runs/original15-successor2-halo-humaneval_plus-shard004/humaneval_plus--screen-32/20261015_004644/execution-journal.jsonl",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/runs/original15-successor2-halo-humaneval_plus-shard004/humaneval_plus--screen-32/20261015_004644/execution-journal.jsonl",
+              "sha256": "bda4a2302e90bc47ce96655fc0a33cc4f280b07dc46acc013a41f953c8ca5527"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/runs/original15-successor2-halo-humaneval_plus-shard004/humaneval_plus--screen-32/20261015_004644/predictions/original15-successor2-halo-humaneval_plus-shard004/humaneval_plus_default.jsonl",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/runs/original15-successor2-halo-humaneval_plus-shard004/humaneval_plus--screen-32/20261015_004644/predictions/original15-successor2-halo-humaneval_plus-shard004/humaneval_plus_default.jsonl",
+              "sha256": "19d745c1758d0652afc87d3eaec77fbe2ed09b26412b438cc8d8da88938cad47"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/runs/original15-successor2-halo-humaneval_plus-shard004/humaneval_plus--screen-32/20261015_004644/reviews/original15-successor2-halo-humaneval_plus-shard004/humaneval_plus_default.jsonl",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/runs/original15-successor2-halo-humaneval_plus-shard004/humaneval_plus--screen-32/20261015_004644/reviews/original15-successor2-halo-humaneval_plus-shard004/humaneval_plus_default.jsonl",
+              "sha256": "c95159e6d733594ea1a389c68d0ed072c92627267c8affe9728871de89c31bf6"
+            }
+          ],
+          "window_custody": {
+            "status.json": {
+              "path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard004/status.json",
+              "resolved_path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard004/status.json",
+              "sha256": "780ff4a3f23443d74f20a735cd179cbd3863432cc617570f33f2f1d5cfba1e5d"
+            },
+            "run.json": {
+              "path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard004/run.json",
+              "resolved_path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard004/run.json",
+              "sha256": "5d14f0a927b6a532b366a71fbec0da8bfdca5cfaab74d6116cec273963a89398"
+            },
+            "harness.json": {
+              "path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard004/harness.json",
+              "resolved_path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard004/harness.json",
+              "sha256": "3e649ace6bf049d44f1b209c196f98308547d98d1213fed5ffe16c6dd9b05c2f"
+            },
+            "worker-spec.json": {
+              "path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard004/worker-spec.json",
+              "resolved_path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard004/worker-spec.json",
+              "sha256": "8d61aa158d0193036ae712cfe211fe9902767a03bb55819b8e2f9bb8d0c89430"
+            },
+            "worker-teardown.json": {
+              "path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard004/worker-teardown.json",
+              "resolved_path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard004/worker-teardown.json",
+              "sha256": "0ca05d11c8ce4cadabea0e705cca7970ed4a1338279056a0e572635833986f99"
+            }
+          }
+        },
+        {
+          "shard": 5,
+          "count": 4,
+          "correct": 4,
+          "status": {
+            "path": "campaign://activation-successor3/quality-campaign/status/original15-successor2-halo-humaneval_plus-shard005--humaneval_plus.json",
+            "resolved_path": "campaign://activation-successor3/quality-campaign/status/original15-successor2-halo-humaneval_plus-shard005--humaneval_plus.json",
+            "sha256": "af1aef4828646d942b0d241c38cee11915eee4dceac64228501888b853417be5"
+          },
+          "raw_receipts": [
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard005/2ee7ec0f1634a05c94757225883e22f9c9d7335b6a012270aafbb0c104939f33.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard005/2ee7ec0f1634a05c94757225883e22f9c9d7335b6a012270aafbb0c104939f33.json",
+              "sha256": "99ddc723dbf2d9d58ad5028af8562b8de624e37b92f577fbb8f97093433616ee"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard005/6dc825e7062891bd4e3d6b0b97de2b8a364e5106fe663296b54e4cd39da85d80.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard005/6dc825e7062891bd4e3d6b0b97de2b8a364e5106fe663296b54e4cd39da85d80.json",
+              "sha256": "8f06f15a3b93506ff8ac7cd09944c1b263b0679886b7fb7262f92977c010fbb7"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard005/c77161fa93809ddeccc337cfafe24bbbff2461e7d0585bd9275f5ef83aa8c34a.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard005/c77161fa93809ddeccc337cfafe24bbbff2461e7d0585bd9275f5ef83aa8c34a.json",
+              "sha256": "ecfeffb66bd7c579e71ca1aeaac93b8bae88e3cfee547bfdc0899738c42e3f1e"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard005/f99e2c4ba6ff0585de1169a03ffb73671f75ade116db600fe68b83e1bce2d5ec.json",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/receipts/original15-successor2-halo-humaneval_plus-shard005/f99e2c4ba6ff0585de1169a03ffb73671f75ade116db600fe68b83e1bce2d5ec.json",
+              "sha256": "0b359d7edb63228d65545f9dc326db323086c4b71856bd0a857548bd6377dc80"
+            }
+          ],
+          "prediction_scoring_journals": [
+            {
+              "path": "campaign://activation-successor3/quality-campaign/runs/original15-successor2-halo-humaneval_plus-shard005/humaneval_plus--screen-4/20261015_005409/execution-journal.jsonl",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/runs/original15-successor2-halo-humaneval_plus-shard005/humaneval_plus--screen-4/20261015_005409/execution-journal.jsonl",
+              "sha256": "5319c061f683026e723432e56ba252fa0e881cd8ca3a525c607f8592943b95cc"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/runs/original15-successor2-halo-humaneval_plus-shard005/humaneval_plus--screen-4/20261015_005409/predictions/original15-successor2-halo-humaneval_plus-shard005/humaneval_plus_default.jsonl",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/runs/original15-successor2-halo-humaneval_plus-shard005/humaneval_plus--screen-4/20261015_005409/predictions/original15-successor2-halo-humaneval_plus-shard005/humaneval_plus_default.jsonl",
+              "sha256": "b57a8a57b6385594b70c9fad67bc2a864ff7c0972bd904c5141dfe86c1d6e02e"
+            },
+            {
+              "path": "campaign://activation-successor3/quality-campaign/runs/original15-successor2-halo-humaneval_plus-shard005/humaneval_plus--screen-4/20261015_005409/reviews/original15-successor2-halo-humaneval_plus-shard005/humaneval_plus_default.jsonl",
+              "resolved_path": "campaign://activation-successor3/quality-campaign/runs/original15-successor2-halo-humaneval_plus-shard005/humaneval_plus--screen-4/20261015_005409/reviews/original15-successor2-halo-humaneval_plus-shard005/humaneval_plus_default.jsonl",
+              "sha256": "f6bea0d599f2663af92ed90157a46211c6a9d24900f8a98f43a7b53cb818901f"
+            }
+          ],
+          "window_custody": {
+            "status.json": {
+              "path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard005/status.json",
+              "resolved_path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard005/status.json",
+              "sha256": "031c0d1d9077461a198cefe296c982eea5ed2a7245007ff46847889fb614b39b"
+            },
+            "run.json": {
+              "path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard005/run.json",
+              "resolved_path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard005/run.json",
+              "sha256": "4d4c7a825e2f5e973687c5f01fc7508c90ffa1beb04f99912d15db5b0bf593b4"
+            },
+            "harness.json": {
+              "path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard005/harness.json",
+              "resolved_path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard005/harness.json",
+              "sha256": "6a2884a38f36620eb7f5090eda52a5da5538efa1d0652dbfc952c24e8dfb2b3a"
+            },
+            "worker-spec.json": {
+              "path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard005/worker-spec.json",
+              "resolved_path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard005/worker-spec.json",
+              "sha256": "d213abacd38751996bb11faab0d30408f9603eea02129568dd00a77c609e0d75"
+            },
+            "worker-teardown.json": {
+              "path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard005/worker-teardown.json",
+              "resolved_path": "campaign://activation-successor3/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard005/worker-teardown.json",
+              "sha256": "b7e8c593c78e34b6e70519f90d3b36b2d18fdf5feee798e1b00873cfeec8b53b"
+            }
+          }
+        }
+      ],
+      "original_prebind_failure": {
+        "path": "campaign://activation-successor2/intake-bfcl-lcb/windows/original15-successor2-halo-humaneval_plus-shard001/status.json",
+        "sha256": "22c264879658bd57301dad76857e3814cd45bfba276ea179c6b04f3355db936b",
+        "state": "incomplete_or_error",
+        "cleanup": []
+      }
+    }
+  },
+  "tau2": {
+    "state": "partial_retained_snapshot",
+    "expected_occurrences": 114,
+    "counts": {
+      "errored": 2,
+      "missing": 29,
+      "scored": 82,
+      "untouched": 1
+    },
+    "scored_correct": 66,
+    "full_quality": {
+      "accuracy": null,
+      "percent": null,
+      "state": "incomplete"
+    },
+    "partitions": {
+      "errored": [
+        80,
+        113
+      ],
+      "missing": [
+        7,
+        19,
+        22,
+        30,
+        34,
+        39,
+        40,
+        42,
+        45,
+        55,
+        56,
+        57,
+        61,
+        64,
+        65,
+        67,
+        69,
+        75,
+        81,
+        84,
+        86,
+        93,
+        95,
+        98,
+        100,
+        101,
+        103,
+        108,
+        112
+      ],
+      "scored": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        20,
+        21,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        31,
+        32,
+        33,
+        35,
+        36,
+        37,
+        38,
+        41,
+        43,
+        44,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        58,
+        59,
+        60,
+        62,
+        63,
+        66,
+        68,
+        70,
+        71,
+        72,
+        73,
+        74,
+        76,
+        77,
+        78,
+        79,
+        82,
+        83,
+        85,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        94,
+        96,
+        97,
+        99,
+        102,
+        104,
+        105,
+        106,
+        107,
+        109,
+        110,
+        111
+      ],
+      "untouched": [
+        8
+      ]
+    },
+    "original_repeats_per_task": 1,
+    "snapshot_report": {
+      "path": "campaign://tau2-full114-reducer-successor016/current/reports/0fde4e6c2a59a3b79f638db5f385f3f88b451852ea6bea7eaa9f70263a088a47.json",
+      "sha256": "07dbe1857c8ac22d32bf14cf824560fdd529c97fd39cc816c7387d60c5e5bf36"
+    },
+    "snapshot_selection": {
+      "path": "campaign://tau2-full114-reducer-successor016/current/selections/0fde4e6c2a59a3b79f638db5f385f3f88b451852ea6bea7eaa9f70263a088a47.json",
+      "sha256": "c8501c48a02ffb41b63d74b159164424ddf21706e31cbaf932e565224909f755"
+    },
+    "evidence_bindings": [
+      {
+        "path": "campaign://tau2-full114-reducer-successor016/current/reports/0fde4e6c2a59a3b79f638db5f385f3f88b451852ea6bea7eaa9f70263a088a47.json",
+        "resolved_path": "campaign://tau2-full114-reducer-successor016/current/reports/0fde4e6c2a59a3b79f638db5f385f3f88b451852ea6bea7eaa9f70263a088a47.json",
+        "sha256": "07dbe1857c8ac22d32bf14cf824560fdd529c97fd39cc816c7387d60c5e5bf36"
+      },
+      {
+        "path": "campaign://tau2-full114-reducer-successor016/current/selections/0fde4e6c2a59a3b79f638db5f385f3f88b451852ea6bea7eaa9f70263a088a47.json",
+        "resolved_path": "campaign://tau2-full114-reducer-successor016/current/selections/0fde4e6c2a59a3b79f638db5f385f3f88b451852ea6bea7eaa9f70263a088a47.json",
+        "sha256": "c8501c48a02ffb41b63d74b159164424ddf21706e31cbaf932e565224909f755"
+      },
+      {
+        "path": "campaign://quality-campaign/runs/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard000/tau2_bench--screen-5/20261014_205118/predictions/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard000/tau2_bench_telecom.jsonl",
+        "resolved_path": "campaign://quality-campaign/runs/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard000/tau2_bench--screen-5/20261014_205118/predictions/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard000/tau2_bench_telecom.jsonl",
+        "sha256": "92cf5140939063a1bea940f137325ede5a0045a301e3bdec3b54f15ec89e50b0"
+      },
+      {
+        "path": "campaign://quality-campaign/status/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard000--tau2_bench.json",
+        "resolved_path": "campaign://quality-campaign/status/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard000--tau2_bench.json",
+        "sha256": "69a188c978fb6b249614ece3b658993f04ceea1e989ca7d093a44841b4f32eca"
+      },
+      {
+        "path": "campaign://quality-campaign/runs/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard001/tau2_bench--screen-5/20261014_210241/predictions/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard001/tau2_bench_telecom.jsonl",
+        "resolved_path": "campaign://quality-campaign/runs/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard001/tau2_bench--screen-5/20261014_210241/predictions/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard001/tau2_bench_telecom.jsonl",
+        "sha256": "18176bfc2d59dafe4172f63f1f629141f6c9883aa4461617a19ad2204faab398"
+      },
+      {
+        "path": "campaign://quality-campaign/status/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard001--tau2_bench.json",
+        "resolved_path": "campaign://quality-campaign/status/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard001--tau2_bench.json",
+        "sha256": "c588b8fd7a2eaf971c4f751b959d6dd6661571e300a90c23652aef29d06d669a"
+      },
+      {
+        "path": "campaign://quality-campaign/runs/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard002/tau2_bench--screen-5/20261014_211126/predictions/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard002/tau2_bench_telecom.jsonl",
+        "resolved_path": "campaign://quality-campaign/runs/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard002/tau2_bench--screen-5/20261014_211126/predictions/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard002/tau2_bench_telecom.jsonl",
+        "sha256": "e124ebb8e6ecb035b46b1fa6dabf58666efc42ce596a7b6815f4e31b0c39e145"
+      },
+      {
+        "path": "campaign://quality-campaign/status/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard002--tau2_bench.json",
+        "resolved_path": "campaign://quality-campaign/status/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard002--tau2_bench.json",
+        "sha256": "a2986f0dfec3050f0485f9e76c36f1940fa7f68c401665f330c8258bdc177bc4"
+      },
+      {
+        "path": "campaign://quality-campaign/runs/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard003/tau2_bench--screen-5/20261014_212106/predictions/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard003/tau2_bench_telecom.jsonl",
+        "resolved_path": "campaign://quality-campaign/runs/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard003/tau2_bench--screen-5/20261014_212106/predictions/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard003/tau2_bench_telecom.jsonl",
+        "sha256": "f6ea4ebb7bc172d7b0cc9a66f958a2c6ff43677a3109aa6b4c081d5635a61cd9"
+      },
+      {
+        "path": "campaign://quality-campaign/status/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard003--tau2_bench.json",
+        "resolved_path": "campaign://quality-campaign/status/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard003--tau2_bench.json",
+        "sha256": "2e33d9046b730b41f9fdaee0054224da14816f6dc1064a46f94f37621c6fcb4d"
+      },
+      {
+        "path": "campaign://quality-campaign/runs/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard004/tau2_bench--screen-5/20261014_213059/predictions/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard004/tau2_bench_telecom.jsonl",
+        "resolved_path": "campaign://quality-campaign/runs/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard004/tau2_bench--screen-5/20261014_213059/predictions/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard004/tau2_bench_telecom.jsonl",
+        "sha256": "8e7af4225625d67d48a8e0421719079f1e91e27adea51457184f95e617bbc9b4"
+      },
+      {
+        "path": "campaign://quality-campaign/status/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard004--tau2_bench.json",
+        "resolved_path": "campaign://quality-campaign/status/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard004--tau2_bench.json",
+        "sha256": "26ff64bd0666bc8533fde50d17c0a87149e4b4bea451d88628aee7f75c03c4be"
+      },
+      {
+        "path": "campaign://quality-campaign/runs/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard005/tau2_bench--screen-5/20261014_214408/predictions/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard005/tau2_bench_telecom.jsonl",
+        "resolved_path": "campaign://quality-campaign/runs/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard005/tau2_bench--screen-5/20261014_214408/predictions/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard005/tau2_bench_telecom.jsonl",
+        "sha256": "16eafebb8adeb167d0dcdb2ac908c38d654016d79eba568aa00e39dc993718f7"
+      },
+      {
+        "path": "campaign://quality-campaign/status/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard005--tau2_bench.json",
+        "resolved_path": "campaign://quality-campaign/status/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard005--tau2_bench.json",
+        "sha256": "addd2da09772b9524ada777a8c411ffaad301c1bff7d33dcda253494c0f037de"
+      },
+      {
+        "path": "campaign://quality-campaign/runs/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard006/tau2_bench--screen-5/20261014_215842/predictions/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard006/tau2_bench_telecom.jsonl",
+        "resolved_path": "campaign://quality-campaign/runs/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard006/tau2_bench--screen-5/20261014_215842/predictions/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard006/tau2_bench_telecom.jsonl",
+        "sha256": "52a7984027ee6f0c2076eb17aa3c2c8da2b74a9fba8026eae52f28dbb02f25a7"
+      },
+      {
+        "path": "campaign://quality-campaign/status/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard006--tau2_bench.json",
+        "resolved_path": "campaign://quality-campaign/status/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard006--tau2_bench.json",
+        "sha256": "1c4de9f20495f7834d79ccbd44d7e712a2e6ee469c169f657781b78040d67f0e"
+      },
+      {
+        "path": "campaign://quality-campaign/runs/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard007/tau2_bench--screen-5/20261014_221311/predictions/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard007/tau2_bench_telecom.jsonl",
+        "resolved_path": "campaign://quality-campaign/runs/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard007/tau2_bench--screen-5/20261014_221311/predictions/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard007/tau2_bench_telecom.jsonl",
+        "sha256": "caa227abc61bf9898933ff64e8d3374eb03c25aa4a4c3e67a9cd076a5b0a31e1"
+      },
+      {
+        "path": "campaign://quality-campaign/status/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard007--tau2_bench.json",
+        "resolved_path": "campaign://quality-campaign/status/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard007--tau2_bench.json",
+        "sha256": "b83d4637667bd03b74147ee1faac1a958d61acaa478e55d5db3e6ffe7f2325f5"
+      },
+      {
+        "path": "campaign://quality-campaign/runs/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard008/tau2_bench--screen-5/20261014_221857/predictions/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard008/tau2_bench_telecom.jsonl",
+        "resolved_path": "campaign://quality-campaign/runs/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard008/tau2_bench--screen-5/20261014_221857/predictions/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard008/tau2_bench_telecom.jsonl",
+        "sha256": "3f341142486a925703380a61c82299a4b0a8a1bd652ec3a736a74afc601dd347"
+      },
+      {
+        "path": "campaign://quality-campaign/status/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard008--tau2_bench.json",
+        "resolved_path": "campaign://quality-campaign/status/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard008--tau2_bench.json",
+        "sha256": "2541a83960f470ec5495a485cbe52de1d3f8ddb6ea844a54a1c7e6f9bea3983d"
+      },
+      {
+        "path": "campaign://quality-campaign/runs/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard009/tau2_bench--screen-5/20261014_222449/predictions/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard009/tau2_bench_telecom.jsonl",
+        "resolved_path": "campaign://quality-campaign/runs/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard009/tau2_bench--screen-5/20261014_222449/predictions/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard009/tau2_bench_telecom.jsonl",
+        "sha256": "d1dadfd7f248b412e862b9de2325a6ee044e5851e543278feb47e87bbbf873c7"
+      },
+      {
+        "path": "campaign://quality-campaign/status/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard009--tau2_bench.json",
+        "resolved_path": "campaign://quality-campaign/status/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard009--tau2_bench.json",
+        "sha256": "97d592da2f764745d38a720d8fa627b680a69fa56d56d0cbca37f630e3c0c5c6"
+      },
+      {
+        "path": "campaign://quality-campaign/runs/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard010/tau2_bench--screen-5/20261014_223511/predictions/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard010/tau2_bench_telecom.jsonl",
+        "resolved_path": "campaign://quality-campaign/runs/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard010/tau2_bench--screen-5/20261014_223511/predictions/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard010/tau2_bench_telecom.jsonl",
+        "sha256": "4916b6c0ccf960929b84794866bc5e6541bfb6b755b280b1b8aec7ee84e4bad9"
+      },
+      {
+        "path": "campaign://quality-campaign/status/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard010--tau2_bench.json",
+        "resolved_path": "campaign://quality-campaign/status/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard010--tau2_bench.json",
+        "sha256": "0e95fa3f686e22e653fac7a480eb35a51509687e4bfb717f7399f27c8b623e03"
+      },
+      {
+        "path": "campaign://quality-campaign/runs/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard012/tau2_bench--screen-5/20261014_225316/predictions/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard012/tau2_bench_telecom.jsonl",
+        "resolved_path": "campaign://quality-campaign/runs/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard012/tau2_bench--screen-5/20261014_225316/predictions/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard012/tau2_bench_telecom.jsonl",
+        "sha256": "06ff29c9b3abba3505e03d6f746e66b2f641f945026ed57ae635fe5e007ac265"
+      },
+      {
+        "path": "campaign://quality-campaign/status/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard012--tau2_bench.json",
+        "resolved_path": "campaign://quality-campaign/status/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard012--tau2_bench.json",
+        "sha256": "c3534096ed1fa0585cc0c8e9655cc6f2f2ac76cfacab344a9d1e459f66accfd1"
+      },
+      {
+        "path": "campaign://quality-campaign/runs/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard013/tau2_bench--screen-5/20261014_225859/predictions/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard013/tau2_bench_telecom.jsonl",
+        "resolved_path": "campaign://quality-campaign/runs/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard013/tau2_bench--screen-5/20261014_225859/predictions/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard013/tau2_bench_telecom.jsonl",
+        "sha256": "26f60b5ab48dee7b47a22784a8fe94466b78239113c787e27767b6383693d993"
+      },
+      {
+        "path": "campaign://quality-campaign/status/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard013--tau2_bench.json",
+        "resolved_path": "campaign://quality-campaign/status/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard013--tau2_bench.json",
+        "sha256": "edfc25b745156223b559262918d5ef23ac7379daa096e30451c2f95ffebf8fba"
+      },
+      {
+        "path": "campaign://quality-campaign/runs/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard014/tau2_bench--screen-5/20261014_230556/predictions/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard014/tau2_bench_telecom.jsonl",
+        "resolved_path": "campaign://quality-campaign/runs/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard014/tau2_bench--screen-5/20261014_230556/predictions/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard014/tau2_bench_telecom.jsonl",
+        "sha256": "683ced440fb7c9431a67bfefce5abe13a348f051c5553dbb28d444cc619f58ff"
+      },
+      {
+        "path": "campaign://quality-campaign/status/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard014--tau2_bench.json",
+        "resolved_path": "campaign://quality-campaign/status/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard014--tau2_bench.json",
+        "sha256": "2a2d015ddede44098ae3aa0a62d86e1fb32418fc3cb40676e15c1fdec178a4f9"
+      },
+      {
+        "path": "campaign://quality-campaign/runs/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard015/tau2_bench--screen-5/20261014_231736/predictions/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard015/tau2_bench_telecom.jsonl",
+        "resolved_path": "campaign://quality-campaign/runs/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard015/tau2_bench--screen-5/20261014_231736/predictions/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard015/tau2_bench_telecom.jsonl",
+        "sha256": "e8a5b4d8b096489ec4752fc2105708af038e914ac2370d234b4c099f6a563ff8"
+      },
+      {
+        "path": "campaign://quality-campaign/status/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard015--tau2_bench.json",
+        "resolved_path": "campaign://quality-campaign/status/original15-temp07-c92160-s2-deepinfra-halo-tau2_bench-shard015--tau2_bench.json",
+        "sha256": "b730e8d93914a6182608423fe932ed1fb06ed3a557419b6f340bd3bfa1aab71c"
+      },
+      {
+        "path": "campaign://tau2_bench-shards/partition.json",
+        "resolved_path": "campaign://tau2_bench-shards/partition.json",
+        "sha256": "65232930cec1916143078ad21dc69c92d8f50e8191575c770d4521b1d95823d2"
+      },
+      {
+        "path": "campaign://tau2-retained-recovery-shard011/completed-tasks.json",
+        "resolved_path": "campaign://tau2-retained-recovery-shard011/completed-tasks.json",
+        "sha256": "a5ecb4b79d05be400e73c4654d88fdaacb56f22d34807964b069071886adf62e"
+      },
+      {
+        "path": "campaign://tau2-retained-recovery-shard011/delivery.json",
+        "resolved_path": "campaign://tau2-retained-recovery-shard011/delivery.json",
+        "sha256": "935a51b78298752f2e78d016d8269a754b521bcc947ce87cec1a0323cf6060bc"
+      },
+      {
+        "path": "campaign://tau2-retained-recovery-shard011/pending-task-state.json",
+        "resolved_path": "campaign://tau2-retained-recovery-shard011/pending-task-state.json",
+        "sha256": "f7d78242f1866cf4ca854136bc0b6a3e9485cbdf0a3112878471796a7f470a35"
+      },
+      {
+        "path": "campaign://tau2-retained-recovery-shard011/recovered-scores.json",
+        "resolved_path": "campaign://tau2-retained-recovery-shard011/recovered-scores.json",
+        "sha256": "529b7ada28729c3ae34de281add938d9b005e893c3830ad2341ab5d799db0f75"
+      },
+      {
+        "path": "campaign://tau2-retained-recovery-shard011/untouched-task008.json",
+        "resolved_path": "campaign://tau2-retained-recovery-shard011/untouched-task008.json",
+        "sha256": "05d38a161e86bda77dab6fe86e71824b06cc3860f31af3676de9b2c30d4fbdd5"
+      },
+      {
+        "path": "campaign://tau2-retained-recovery-shard016/completed-tasks.json",
+        "resolved_path": "campaign://tau2-retained-recovery-shard016/completed-tasks.json",
+        "sha256": "8cdbffda6c111848f3574529ca8a1b008d10e1c80113392a9e46d2e04def6211"
+      },
+      {
+        "path": "campaign://tau2-retained-recovery-shard016/delivery.json",
+        "resolved_path": "campaign://tau2-retained-recovery-shard016/delivery.json",
+        "sha256": "e2a3e326709d8d07d8eb045a23a7150c2b615f04a92eec1f7d6711e0db31e777"
+      },
+      {
+        "path": "campaign://tau2-retained-recovery-shard016/failed-effect-snapshot.json",
+        "resolved_path": "campaign://tau2-retained-recovery-shard016/failed-effect-snapshot.json",
+        "sha256": "df284a45803708dc454f37dc6630d939757dd80f0bc56e4a74c77edf862ca5f6"
+      },
+      {
+        "path": "campaign://tau2-retained-recovery-shard016/unsettled-simulator-request.json",
+        "resolved_path": "campaign://tau2-retained-recovery-shard016/unsettled-simulator-request.json",
+        "sha256": "94e55ff0136f10145e2e08236077f44d5a2bd43e26d45f4e8b390e9a52114120"
+      },
+      {
+        "path": "campaign://tau2-retained-recovery-shard016/pending-task-state.json",
+        "resolved_path": "campaign://tau2-retained-recovery-shard016/pending-task-state.json",
+        "sha256": "be9392df74cf152377214d17e52e8f7f742a7e3dad39deeb41ec5f1a7d6c3591"
+      },
+      {
+        "path": "campaign://tau2-retained-recovery-shard016/recovered-scores.json",
+        "resolved_path": "campaign://tau2-retained-recovery-shard016/recovered-scores.json",
+        "sha256": "79862ed78d478549a6376bdc25506c30399d2fa8f00d691212eea565d6cb6f5f"
+      }
+    ],
+    "scope": "telecom; exact non-reasoning Qwen235B simulator/DeepInfra, dual-control,100 steps; original unknown effects retained; no complete benchmark score"
+  },
+  "publication_work": {
+    "inference_reruns": 0,
+    "paid_calls": 0,
+    "GPU_calls": 0,
+    "remote_effects": 0,
+    "source3_mutated": false
+  }
+}

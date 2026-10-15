@@ -56,7 +56,8 @@ def main():
     require(score==audit['parse_failure_only_correct'],'Native trigger total differs')
     results={'gsm8k':{'correct':score,'count':len(rows),'percent':100*score/len(rows)},
              'math_500':coverage('halo-math_500-coverage.json','math_500'),
-             'ifeval':coverage('halo-ifeval-coverage.json','ifeval')}
+             'ifeval':coverage('halo-ifeval-coverage.json','ifeval'),
+             'humaneval_plus':coverage('humaneval-plus-full.json','humaneval_plus')}
     for row in canonical['results']:
         actual=results[row['benchmark']]
         require(actual['correct']==row['correct']and actual['count']==row['count'],'Canonical score disagrees')
@@ -64,13 +65,12 @@ def main():
     ids=[i for values in partition.values()for i in values]
     require(sorted(ids)==list(range(tau['expected_occurrences'])),'Tau2 partial coverage partitions differ')
     require({k:len(v)for k,v in partition.items()}==tau['counts'],'Tau2 partial counts differ')
-    he=load('humaneval-plus-partial.json');done=[s for s in he['shards']if s['status']=='completed']
-    require(sum(s['scored_count']for s in done)==he['covered']and sum(s['correct']for s in done)==he['correct'],
-            'HumanEval partial disagrees')
+    he=load('humaneval-plus-full.json')
+    require(he['state']=='full' and he['covered']==he['expected']==164,'HumanEval coverage is incomplete')
+    require(he['diagnostics']['finish_stop']==159 and he['diagnostics']['finish_length']==5,'HumanEval completion diagnostics differ')
     print(json.dumps({'state':'retained_receipts_reduced','results':results,
         'gsm_broad_diagnostic_only':{'correct':broad,'count':len(rows),'percent':100*broad/len(rows)},
         'partials':{'tau2':{'scored':tau['counts']['scored'],'expected':tau['expected_occurrences'],
-                           'correct':tau['scored_correct'],'full_score':tau['full_quality']},
-                    'humaneval_plus':{k:he[k]for k in ['state','correct','covered','expected','full_accuracy']}},
-        'scope':'GSM per-occurrence retained native extraction/judge decisions; MATH/IFEval retained shard scores plus exact disjoint source indices. No fresh model, extractor, judge or program execution.'},indent=2))
+                           'correct':tau['scored_correct'],'full_score':tau['full_quality']}},
+        'scope':'GSM per-occurrence retained native extraction/judge decisions; MATH/IFEval/HumanEval+ retained shard scores plus exact disjoint source indices. No fresh model, extractor, judge or program execution.'},indent=2))
 if __name__=='__main__':main()

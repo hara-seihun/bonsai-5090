@@ -1,0 +1,14 @@
+{
+  "schema": "benchmark.source.binding.v1",
+  "programme12_commit": "eb6cd0356ca6176f27741b8948e2f08c4f582de7",
+  "source_readme": "results/real-model/ternary-results/README.md",
+  "source_readme_blob": "69dacf600815e6c2aa6fd090d02985e57a60e723",
+  "source_bindings_path": "results/real-model/ternary-results/prism-original15/retained-result-bindings.json",
+  "source_bindings_blob": "0f142b4a8062e04098b6a8ecaa603c2f434228e5",
+  "source_bindings_sha256": "826e23110db69a77b9fb12d91393a7fb50dbadd432f4428bed3a455ef6ca1771",
+  "export_bindings_sha256": "18621cb2b84e0dc120d94b07498cc9950f536079cc93c70bc89dba35e7db56b4",
+  "aggregate_original_sha256": "2ee178fdbebf1aa077cd72dee2eb2d4d2f9c4b927bdc26e150e46b9a335d9484",
+  "partition_original_sha256": "63dc9fe51ebd7ca0c948b2d70fb0663f66c0146a26779ca5d271adaa6ce6aea3",
+  "transform": "Replace original host campaign root with campaign://; preserve all numeric values, task/status/source hashes and checkpoint caveats",
+  "scope": "Full HumanEval+ and retained partial Tau2 binding identities; raw generation/scoring streams are not bundled. Aggregate and partition original bytes matched their committed binding hashes."
+}

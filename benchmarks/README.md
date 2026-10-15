@@ -11,8 +11,9 @@ Canonical machine-readable summary: [`receipts/canonical-scores.json`](receipts/
 | GSM8K, native parse-failure-only trigger | **1276/1319 = 96.74%** | 96.06% | 8/8 |
 | MATH500, Gemini grading | **494/500 = 98.8%** | 99.20% | 10/10 |
 | IFEval, prompt-strict | **500/541 = 92.4%** | 85.03% | 7/8 |
+| HumanEval+ (EvalPlus), pass@1 | **154/164 = 93.90%** | 93.90% | full pending |
 
-The three complete results cover 21/25/9 disjoint seeded windows. The native screens overlap the complete task sets and are never added to their denominators; full native arms remain unfinished. Halo screens are respectively 8/8, 10/10 and 8/8. These are variable-work quality measurements, not fixed-work speed comparisons.
+The four complete results cover 21/25/9/6 disjoint seeded windows respectively. The native screens overlap the complete task sets and are never added to their denominators; full native arms remain unfinished. Halo screens are respectively 8/8, 10/10 and 8/8. These are variable-work quality measurements, not fixed-work speed comparisons.
 
 July's original Ternary Bonsai27B is Qwen3.6-derived; the tested September Bonsai2 is Qwen3.8-derived. Nominal score deltas conflate checkpoints and execution. Same-weight native screens remove the checkpoint difference but matched seeds still do not imply matched stochastic draws.
 
@@ -24,6 +25,21 @@ The installed `auto`/`RULE_DEFAULT` route had skipped Gemini. Original rule-only
 
 **1283/1319 = 97.27% is diagnostic only.** Broad `llm_recall` judges all 43 rule misses, including parsed wrong answers: two semantic/format upgrades and five numeric-gold disagreements. All seven upgraded responses parsed successfully and receive no canonical fallback credit. Original gold answers remain unchanged. [`Diagnostic receipt`](receipts/gsm-broad-recall-diagnostic.json), [`arithmetic checks`](receipts/gsm-gold-disagreement-check.json). Fifty historical judge receipts include seven explicit judge-output parse recoveries; one used low reasoning effort. No new paid calls or generation occurred for this export.
 
+## HumanEval+ — complete
+
+[Full aggregate](receipts/humaneval-plus-full.json): **154/164 = 93.9024390% pass@1**.
+Six disjoint windows score **31/32, 28/32, 29/32, 32/32, 30/32, 4/4**; the original32 and continuation132
+are counted once, task-weighted. All164 remain: **159 EOS/reasoning-closed, five capped/unclosed**.
+Rule/execution scoring,30,000 output cap,92,160 context/two slots, no paid judging.
+The full same-weight native arm remains pending; published93.90% concerns the older Bonsai checkpoint.
+
+Canonical programme-12 source **`eb6cd0356ca6176f27741b8948e2f08c4f582de7`** supplies the
+[retained result bindings](receipts/retained-result-bindings.json): all164 generation-receipt hashes,
+18 prediction/scoring-journal hashes, six status identities, exact partition and source adoption.
+[Source provenance](receipts/humaneval-plus-source.json) records the original Git blob/SHA256 and
+sanitized export identity. The original aggregate and partition bytes were checked against those
+committed bindings. Raw streams remain outside this compact export. No inference or scoring was rerun.
+
 ## Offline receipt replay
 
 From the repository root, Python standard library only, no GPU/network/paid services:
@@ -32,14 +48,14 @@ From the repository root, Python standard library only, no GPU/network/paid serv
 python3 benchmarks/replay.py
 ```
 
-This derives GSM's count from each retained native extraction/judge decision, and MATH/IFEval from retained per-window scores. It checks complete disjoint source-index coverage against exported partitions and agreement with the canonical summary. It also validates partial coverage totals. It does **not** rerun the extractor, Gemini, instruction checks or code execution. The compact export omits the complete raw model streams and judge messages; their hashes/source coordinates remain evidence identities, not claims those bytes are bundled. Root `scripts/gsm8k.py` is a separate rule-only reproduction path.
+This derives GSM's count from each retained native extraction/judge decision, and MATH/IFEval/HumanEval+ from retained per-window scores. It checks complete disjoint source-index coverage against exported partitions and agreement with the canonical summary. It also validates partial coverage totals. It does **not** rerun the extractor, Gemini, instruction checks or code execution. The compact export omits the complete raw model streams and judge messages; their hashes/source coordinates remain evidence identities, not claims those bytes are bundled. Root `scripts/gsm8k.py` is a separate rule-only reproduction path.
 
 ## Partial observations
 
 - [`Tau2 partial`](receipts/tau2-partial.json): retained full114 reducer snapshot, **66 correct among 82 scored / 114 telecom occurrences**, with 2 errored, 29 missing and 1 untouched. Full score is unset. Its disjoint partition and source-report hash are retained; this is a frozen observation, not live campaign monitoring. Simulator: non-reasoning Qwen3-235B-A22B-Instruct-2507, DeepInfra-only, temperature0; default dual-control, 100 steps, one pass. Historical Prism domain/simulator/revision is unknown; current AA's three repeats differ. The earlier programme12 excerpt's 45/114 is historical.
-- [`HumanEval+ partial`](receipts/humaneval-plus-partial.json): **120 correct / 128 scored / 164 expected**, completed shards 000–003 only at capture. Shard004 was running and excluded. CPU fixture/control statuses are excluded. Integer counts are recovered from pass_at_k/k1 metrics rounded to four decimal places (32-item windows make the integer unambiguous). Full score is unset.
 
-These partials are not full benchmark scores and should not be compared to published full results. Continuations may have advanced after capture.
+
+Tau2 remains a retained partial observation, with no full score. Its future completion run does not alter this frozen snapshot.
 
 ## Source identities and protocol
 

@@ -4,18 +4,46 @@
   "observed_exit_code": 0,
   "state": "retained_receipts_reduced",
   "results": {
-    "gsm8k": {"correct": 1276, "count": 1319, "percent": 96.73995451099317},
-    "math_500": {"correct": 494, "count": 500, "percent": 98.8},
-    "ifeval": {"correct": 500, "count": 541, "percent": 92.42144177449168}
+    "gsm8k": {
+      "correct": 1276.0,
+      "count": 1319,
+      "percent": 96.73995451099317
+    },
+    "math_500": {
+      "correct": 494,
+      "count": 500,
+      "percent": 98.8
+    },
+    "ifeval": {
+      "correct": 500,
+      "count": 541,
+      "percent": 92.42144177449168
+    },
+    "humaneval_plus": {
+      "correct": 154,
+      "count": 164,
+      "percent": 93.90243902439025
+    }
   },
-  "gsm_diagnostic_only": {"correct": 1283, "count": 1319},
+  "gsm_broad_diagnostic_only": {
+    "correct": 1283.0,
+    "count": 1319,
+    "percent": 97.27065959059894
+  },
   "partials": {
-    "tau2_bench": {"correct": 66, "scored": 82, "expected": 114, "full_score": null},
-    "humaneval_plus": {"correct": 120, "scored": 128, "expected": 164, "full_score": null}
+    "tau2": {
+      "scored": 82,
+      "expected": 114,
+      "correct": 66.0,
+      "full_score": {
+        "accuracy": null,
+        "percent": null,
+        "state": "incomplete"
+      }
+    }
   },
-  "python_sources": "AST parsing passed for every exported .py file",
+  "scope": "GSM per-occurrence retained native extraction/judge decisions; MATH/IFEval/HumanEval+ retained shard scores plus exact disjoint source indices. No fresh model, extractor, judge or program execution.",
   "new_generation": false,
   "gpu_calls": 0,
-  "paid_calls": 0,
-  "scope": "Offline receipt reduction and Python syntax only. No fresh grading, dependency install, Docker execution or live endpoint acceptance."
+  "paid_calls": 0
 }

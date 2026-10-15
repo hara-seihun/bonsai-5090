@@ -23,8 +23,8 @@
     },
     {
       "export": "README.md",
-      "sha256": "8e9b34066a0c28a8d40e89e36651dfc9a390f973d3032bc5fbf9d5280e0f07db",
-      "bytes": 13185,
+      "sha256": "87ec0bdf0436ce95a742a4b58808927e2e3822d5f7fa883354ab9b600549f7d2",
+      "bytes": 13986,
       "source": "synthesized export projection/documentation; see receipt embedded source hashes where present"
     },
     {
@@ -156,8 +156,8 @@
     },
     {
       "export": "receipts/canonical-scores.json",
-      "sha256": "47567b3adda38b3789969495b76e4cb6ab5e8a0efdf372e500fa60adbb3a85d5",
-      "bytes": 1356,
+      "sha256": "2e7c68cf1d904cb6dcf1a41350840d14247a2a93aabf25d1682d1c3db4b139f6",
+      "bytes": 1524,
       "source": "synthesized export projection/documentation; see receipt embedded source hashes where present"
     },
     {
@@ -233,10 +233,16 @@
       "transformed": true
     },
     {
-      "export": "receipts/humaneval-plus-partial.json",
-      "sha256": "ff76704dcd5a6727ea3732f4da8e5ce0ebfb0a899501659d128767070ac23315",
-      "bytes": 3210,
-      "source": "synthesized export projection/documentation; see receipt embedded source hashes where present"
+      "export": "receipts/humaneval-plus-full.json",
+      "source": "HumanEval+ completion export; see receipts/humaneval-plus-source.json for source identities",
+      "sha256": "da7af209d12687a9bf8529169591f6a6953c3f55d2d6db94841ae075a54acc8d",
+      "bytes": 3612
+    },
+    {
+      "export": "receipts/humaneval-plus-source.json",
+      "source": "HumanEval+ completion export; see receipts/humaneval-plus-source.json for source identities",
+      "sha256": "6d7b71a2c9f0166a91de94b2a1b2f17082322b0f36dc1d5d43b55b2ad7d65cdf",
+      "bytes": 1173
     },
     {
       "export": "receipts/ifeval-native-screen-failure.json",
@@ -265,8 +271,8 @@
     {
       "export": "receipts/offline-replay-check.json",
       "source": "synthesized export projection/documentation; see receipt embedded source hashes where present",
-      "sha256": "fee0bce7e65157dae83378776491a9c41192789777a167d62ee4df9d02f12f01",
-      "bytes": 940
+      "sha256": "4ca1bc584323371ce880fa770873780650e1b7244b177063e5935ac04db6f585",
+      "bytes": 1191
     },
     {
       "export": "receipts/partitions/gsm.json",
@@ -278,8 +284,8 @@
     },
     {
       "export": "receipts/partitions/humaneval_plus.json",
-      "sha256": "e3d3692bc7c786567edc48bd4a90595e1a28ed006079ea103ac470b8166b6d40",
-      "bytes": 4482,
+      "sha256": "409c693a454a5b2e35789d10c15e7fb77aea60fd1bcd89b248028870ce708c3a",
+      "bytes": 4507,
       "source": "humaneval_plus-shards/partition.json",
       "source_sha256": "63dc9fe51ebd7ca0c948b2d70fb0663f66c0146a26779ca5d271adaa6ce6aea3",
       "transformed": true
@@ -337,6 +343,12 @@
       "source": "synthesized export projection/documentation; see receipt embedded source hashes where present"
     },
     {
+      "export": "receipts/retained-result-bindings.json",
+      "source": "HumanEval+ completion export; see receipts/humaneval-plus-source.json for source identities",
+      "sha256": "18621cb2b84e0dc120d94b07498cc9950f536079cc93c70bc89dba35e7db56b4",
+      "bytes": 141150
+    },
+    {
       "export": "receipts/tau2-partial.json",
       "sha256": "719f9a447c3758e48dcb5d40a5143d0b897511c3d3149aa4a51e14d22c9bd670",
       "bytes": 2076,
@@ -344,8 +356,8 @@
     },
     {
       "export": "replay.py",
-      "sha256": "48ab3b2f768054a34dc19efeed804f6885786757e2d443f4f6a55f9db3f8454c",
-      "bytes": 4852,
+      "sha256": "4b70dcae144da877b62153a795a32de90786579c0f29a37dd385f7b460fb46a1",
+      "bytes": 4860,
       "source": "synthesized export projection/documentation; see receipt embedded source hashes where present"
     },
     {
@@ -354,5 +366,6 @@
       "bytes": 228,
       "source": "synthesized export projection/documentation; see receipt embedded source hashes where present"
     }
-  ]
+  ],
+  "humaneval_complete_programme12_commit": "eb6cd0356ca6176f27741b8948e2f08c4f582de7"
 }

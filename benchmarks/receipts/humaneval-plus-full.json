@@ -1,0 +1,110 @@
+{
+  "engine": "halo",
+  "benchmark": "humaneval_plus",
+  "cohort": "original15-successor2",
+  "expected": 164,
+  "covered": 164,
+  "correct": 154,
+  "accuracy": 0.9390243902439024,
+  "state": "full",
+  "primary_metric": "accuracy",
+  "diagnostics": {
+    "reasoning_closed": 159,
+    "finish_stop": 159,
+    "reasoning_unclosed": 5,
+    "finish_length": 5
+  },
+  "shards": [
+    {
+      "shard": 0,
+      "state": "completed",
+      "count": 32,
+      "correct": 31,
+      "accuracy": 0.96875,
+      "judge_strategy": "rule",
+      "diagnostics": {
+        "reasoning_closed": 32,
+        "finish_stop": 32
+      },
+      "status_file": "campaign://activation-successor3/quality-campaign/status/original15-successor2-halo-humaneval_plus-shard000--humaneval_plus.json"
+    },
+    {
+      "shard": 1,
+      "state": "completed",
+      "count": 32,
+      "correct": 28,
+      "accuracy": 0.875,
+      "judge_strategy": "rule",
+      "diagnostics": {
+        "reasoning_closed": 29,
+        "finish_stop": 29,
+        "reasoning_unclosed": 3,
+        "finish_length": 3
+      },
+      "status_file": "campaign://activation-successor3/quality-campaign/status/original15-successor2-halo-humaneval_plus-shard001--humaneval_plus.json"
+    },
+    {
+      "shard": 2,
+      "state": "completed",
+      "count": 32,
+      "correct": 29,
+      "accuracy": 0.90625,
+      "judge_strategy": "rule",
+      "diagnostics": {
+        "reasoning_closed": 30,
+        "finish_stop": 30,
+        "reasoning_unclosed": 2,
+        "finish_length": 2
+      },
+      "status_file": "campaign://activation-successor3/quality-campaign/status/original15-successor2-halo-humaneval_plus-shard002--humaneval_plus.json"
+    },
+    {
+      "shard": 3,
+      "state": "completed",
+      "count": 32,
+      "correct": 32,
+      "accuracy": 1.0,
+      "judge_strategy": "rule",
+      "diagnostics": {
+        "reasoning_closed": 32,
+        "finish_stop": 32
+      },
+      "status_file": "campaign://activation-successor3/quality-campaign/status/original15-successor2-halo-humaneval_plus-shard003--humaneval_plus.json"
+    },
+    {
+      "shard": 4,
+      "state": "completed",
+      "count": 32,
+      "correct": 30,
+      "accuracy": 0.9375,
+      "judge_strategy": "rule",
+      "diagnostics": {
+        "reasoning_closed": 32,
+        "finish_stop": 32
+      },
+      "status_file": "campaign://activation-successor3/quality-campaign/status/original15-successor2-halo-humaneval_plus-shard004--humaneval_plus.json"
+    },
+    {
+      "shard": 5,
+      "state": "completed",
+      "count": 4,
+      "correct": 4,
+      "accuracy": 1.0,
+      "judge_strategy": "rule",
+      "diagnostics": {
+        "reasoning_closed": 4,
+        "finish_stop": 4
+      },
+      "status_file": "campaign://activation-successor3/quality-campaign/status/original15-successor2-halo-humaneval_plus-shard005--humaneval_plus.json"
+    }
+  ],
+  "partition": "campaign://humaneval_plus-shards/partition.json",
+  "excluded": "all overlapping subset screens and other engine/profile cohorts",
+  "published_original_percent": 93.9,
+  "checkpoint_comparison": "original Qwen3.6 Bonsai versus present Qwen3.8 Bonsai2; native control uses same Bonsai2 weights",
+  "source_adoption": "campaign://activation-successor3/repair-seal.json",
+  "adopted_shard000": "campaign://activation-successor/quality-campaign/status/original15-successor2-halo-humaneval_plus-shard000--humaneval_plus.json",
+  "continuation_source_owner": "campaign://activation-successor3",
+  "aggregation": "original32 plus disjoint remaining132; pass@1 task-weighted",
+  "model_quality": 0.9390243902439024
+}
