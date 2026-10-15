@@ -191,5 +191,5 @@ See [LICENSE](LICENSE) and [NOTICE](NOTICE), plus component notices. Third-party
 benchmarks and datasets retain their original licenses. Weights, model-derived activation/cache
 payloads, compiled binaries, generated dependencies, credentials and private personal data are
 excluded. Only sanitized source snapshots and selected scientific evidence are exported; private
-source Git history and machine-operation state remain outside this repository. The repository
-remains private.
+source Git history and machine-operation state remain outside this repository. Our own code is
+Apache-2.0.
