@@ -1,0 +1,32 @@
+{
+  "cohort": "b2lc-20261015-halo-aa_lcr-full",
+  "model": "Ternary Bonsai 2 27B PTQ1_0",
+  "model_gguf_sha256": "53107f530aa52eb00912263ab1ee29bd199261c87cd7b4ad4ca1318c1fe33ee3",
+  "engine": "halo-5090",
+  "engine_build_sha256": "a836fd6818df9bc92a8df71d2f9e92fc97b9a64195fab4142d9101fb20785e7c",
+  "hardware": "RTX 5090",
+  "ctx": 163840,
+  "slots": 1,
+  "sampler": {
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 20,
+    "min_p": 0,
+    "presence_penalty": 0.0,
+    "repetition_penalty": 1.0,
+    "seed": 20261014
+  },
+  "output_cap": 32768,
+  "thinking_effort": "xhigh",
+  "judge_model": "gemini-3-flash-preview",
+  "judge_temperature": 0,
+  "dataset_source": "ArtificialAnalysis/AA-LCR",
+  "dataset_revision": "9a77ef56b717057ade24ceab4d273712a0b4f19e",
+  "question_count": 100,
+  "selection": "Full split, one answer per item, shuffle seed 20261014; reported index is shuffled evaluation index. Earlier 60-count was an interim observation of this same 100-question run.",
+  "start_utc": "2026-10-15T18:45:45.562245Z",
+  "end_utc": null,
+  "evalscope_revision": "78b061cb3d1e9cda9d86a001d65f58e2b19e95ab",
+  "original_attempt_unchanged": true,
+  "scoring_policy": "Original retained scorer: capped empty model answers have explicit INCORRECT verdicts and remain in the scored denominator. Judge-parse exclusions are unscored. No new calls or verdict changes in this export."
+}
