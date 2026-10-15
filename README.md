@@ -65,6 +65,15 @@ unexplained. [The full ladder](docs/ladder.md) explains each change, its measure
 changes that have no standalone ablation. [Clean-build status](docs/reproduction.md) records the
 successful Windows run and the incomplete Linux build/run qualification.
 
+### Single stream, PP512 / TG128
+
+PrismML's community table uses llama-bench PP512/TG128, one stream, no speculation. We measured the same
+workload definitions with this engine's own harness, on the same `PTQ1_0` model file as the published RTX 5090 row:
+**PP512 8,986.8 ± 88.1 tok/s (2.18× the published 4,116.6)** and **TG128 135.8 ± 2.3 tok/s**. That is
+1.02× the published PTQ1_0 row (133.0) and below the published PQ2_0 row (143.0). The figures are means
+of five quiescent repeats. Execution precision, KV format, microbatching, OS and driver differ from the
+published llama.cpp run. [Method, raw samples and the separate compile-overlapped repeat](benchmarks/pp512-tg128/).
+
 ## Quality against PrismML's published results
 
 The model under test is **Ternary Bonsai 2 27B** (GGUF sha256 `53107f53…33ee3`) on our engine, one RTX 5090.
@@ -93,14 +102,22 @@ documented in the [benchmark report](benchmarks/README.md).
 In items, against Bonsai 2's published scores: GSM8K +1, MATH500 identical, IFEval +6, HumanEval+ −2.
 Five of our HumanEval+ responses hit our 30,000 cap; PrismML's Bonsai 2 cap was 49,152.
 
-**AA-LCR (long-context reasoning), Bonsai 2 protocol, running — not a final score.** Temperature 1.0,
-output cap 32,768, 163,840-token context, prompts 87,891–122,152 tokens, rule-first grading with a
-Gemini 3 Flash judge fallback, seed 20261014, AA-LCR revision `9a77ef56`. Snapshot at 2026-10-15 21:49 UTC:
-**62/85 scored correct (72.94%)**, 86 of 100 questions generated, 9 generations hit the output cap with an
-empty final answer (counted wrong), 1 judge-parse exclusion, 0 transport errors.
-[Settings, result, commands and every retained output with its verdict](benchmarks/aa-lcr/b2lc-20261015-halo-aa_lcr-full/).
-Published: Bonsai 2 **77.0**, FP16 parent 78.0. A separate attempt with a raised output cap is being
-prepared and will be reported as its own result; the capped failures above stay attributed to this run.
+**AA-LCR (long-context reasoning), Bonsai 2 protocol: 73.0% — 73/100.** Full split, all 100 questions
+generated and scored. Temperature 1.0, output cap 32,768, 163,840-token context, prompts 87,891–122,152
+tokens, rule-first grading with a Gemini 3 Flash judge fallback, seed 20261014, AA-LCR revision `9a77ef56`.
+Published: Bonsai 2 **77.0**, FP16 parent 78.0.
+
+- **Capped answers:** 12 generations hit the output cap with an empty final answer and are counted wrong.
+- **Errors and exclusions:** 0 transport errors, 0 remaining exclusions.
+- **Generation:** 98 outputs come from the original run, which was interrupted for the PP512/TG128
+  measurement. A continuation generated only the 2 missing items; no completed answer was regenerated.
+- **Item 64:** its original judge reply failed to parse. That failure is retained, and a distinct judge request
+  over the same output (8,192 tokens, low thinking) graded it INCORRECT. No scoring rule changed.
+
+[Settings, result, commands and every output with its verdict](benchmarks/aa-lcr/b2lc-20261015-halo-aa_lcr-full/).
+Earlier running snapshots of this same run are kept in git history as historical states, not results:
+52/73 at `b197222` and 62/85 at `5118ac2`. A separate full run with a raised output cap (40,960) is in
+progress and will be reported as its own result. The capped failures above stay attributed to this run.
 
 Canonical GSM8K uses rule-first grading with judge fallback **only on parse failure**. The retained
 outputs contain 1,276 parsed correct answers, 34 parsed wrong answers and nine empty parse failures;

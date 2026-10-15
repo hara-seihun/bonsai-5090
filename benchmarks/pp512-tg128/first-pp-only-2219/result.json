@@ -1,0 +1,13 @@
+{
+  "state": "sample",
+  "kind": "pp512",
+  "n_depth": 0,
+  "n_prompt": 512,
+  "n_gen": 0,
+  "elapsed_ns": 56342200,
+  "processed_tokens": 512,
+  "tokens_per_second": 9087.327083429473,
+  "speculative_depth": 0,
+  "slots": 1,
+  "repetition": 0
+}

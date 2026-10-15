@@ -25,9 +25,42 @@
   "question_count": 100,
   "selection": "Full split, one answer per item, shuffle seed 20261014; reported index is shuffled evaluation index. Earlier 60-count was an interim observation of this same 100-question run.",
   "start_utc": "2026-10-15T18:45:45.562245Z",
-  "end_utc": null,
+  "end_utc": "2026-10-15T22:39:00.846843Z",
   "evalscope_revision": "78b061cb3d1e9cda9d86a001d65f58e2b19e95ab",
   "original_attempt_unchanged": true,
-  "scoring_policy": "Original capped empty answers retain explicit judge verdicts; parse exclusions remain unscored. Recovery overlays, when selected, are separate retained-output judgments.",
-  "recovery_overlay_applied": false
+  "scoring_policy": "100 original-cap outputs, 98 retained original + 2 missing-only continuation. Original 64 parse exclusion retained; distinct 8192/low retained-output judge is INCORRECT. No scoring-rule change.",
+  "recovery_overlay_applied": true,
+  "export_kind": "normalized_original_plus_continuation",
+  "generation_parts": {
+    "original": 98,
+    "missing_only_continuation": 2
+  },
+  "continuation_review_indices": [
+    97,
+    98,
+    99
+  ],
+  "judge_recovery": {
+    "index": 64,
+    "original": "excluded parse_error; retained unchanged",
+    "new_verdict": "INCORRECT",
+    "max_tokens": 8192,
+    "thinking_level": "low",
+    "different_judge_request": true
+  },
+  "source_sha256": {
+    "long-context-recovery/continuation-export/sources/export-7df7e22207e1a01930331f822e4db6bee52fcb8a24edc0bfe3248205d4678be2.py": "7df7e22207e1a01930331f822e4db6bee52fcb8a24edc0bfe3248205d4678be2",
+    "long-context-recovery/aalcr-original-resume/seal.json": "20bcb11ef1a10d0812894fac6920c7e45a5a6850cc1038bf33792a5219284969",
+    "long-context-recovery/aalcr-original-resume/plan.json": "67f5c6ab9ace152dc35b17f9a51223ebb79c60254e3105ab043525cc9e8aa7ec",
+    "long-context-recovery/aalcr-original-resume/activation/admission.json": "c5d89fb887b111a501212b052f184739c5e63a3a80a63bbb68a25d4b15ef4f2c",
+    "long-context-recovery/aalcr-original-resume/activation/terminal.json": "1e6cd77d2e2390cbea7a30060a4aa6756aca5240d592f542fa64ee7a03cb3093",
+    "long-context-recovery/aalcr-original-resume/activation/combined-overlay.json": "272a9d35806e603aab23e75a606af40a33bc426a7450682b4d617a870e6cf389",
+    "long-context-recovery/aalcr-original-resume/activation/worker-spec.json": "459aebcc2c0a10de38954299bdf0995dbbd486c3da0ef9cfee9f576b440dde31",
+    "long-context-recovery/aalcr-original-resume/activation/stopped-remote.stdout": "f3630b6f4a6028622fff70782f8290ba64c7835738eb8bdb99e5bce2c28a990e",
+    "long-context-recovery/retained-tools/attempts/original-judge-recovery-01/overlay.json": "696b0a966565418e5341b6ffdfefcb7aa2f0aceb8f2d4a9fafe27dcd51bcf1ec",
+    "long-context-recovery/retained-tools/attempts/original-judge-recovery-01/terminal.json": "ff48ade6b3b66386ce16559f7f0c6094df5b1dda88f1c49e26954c7a7ab22518",
+    "long-context-recovery/aalcr-original-resume/activation/review-97.json": "25f246d929846ae411e0aa7d81068d2470fddce6da2617ff472167c12e3458f6",
+    "long-context-recovery/aalcr-original-resume/activation/review-98.json": "b955b8559c8883141bfaeab53f76f2627badf5fcd0dcbb8925afc6b1c27458a3",
+    "long-context-recovery/aalcr-original-resume/activation/review-99.json": "8635e06e16cfc0da5090fbed81ca604d07956e05266bba65d50ed8f46051d6b6"
+  }
 }

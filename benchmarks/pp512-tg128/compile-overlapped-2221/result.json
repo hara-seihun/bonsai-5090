@@ -1,0 +1,60 @@
+{
+  "state": "measured",
+  "metrics": {
+    "pp512": {
+      "samples_ns": [
+        57696500,
+        55129700,
+        54322200,
+        54225500,
+        55313900
+      ],
+      "samples_ts": [
+        8874.021821081002,
+        9287.190026428585,
+        9425.244191141006,
+        9442.052171026546,
+        9256.262892329052
+      ],
+      "avg_ts": 9256.954220401238,
+      "stddev_ts": 229.2022414414072
+    },
+    "tg128_random": {
+      "samples_ns": [
+        1024439100,
+        956930500,
+        964404700,
+        966322700,
+        1005036900
+      ],
+      "samples_ts": [
+        124.94642190053074,
+        133.76102026218206,
+        132.72436353742367,
+        132.46092635513995,
+        127.35850793140033
+      ],
+      "avg_ts": 130.25024799733535,
+      "stddev_ts": 3.8673828449310714
+    }
+  },
+  "official_external_rank": null,
+  "published_comparator_position": {
+    "state": "uncomputed",
+    "reason": "Reducer required; autoregressive companion unmatched"
+  },
+  "exact_historical_token_ids": {
+    "state": "unsupported",
+    "reason": "Historical random IDs were not retained; source-equivalent glibc seed1 sequence used"
+  },
+  "comparators": {
+    "ptq_pp512": 4116.644248,
+    "ptq_tg128": 133.012539,
+    "pq_tg128": 142.965539
+  },
+  "comparisons": {
+    "pp_speedup_ptq": 2.2486650929087615,
+    "tg_change_percent_ptq": -2.0767147394011087,
+    "tg_change_percent_pq": -8.893955208789617
+  }
+}

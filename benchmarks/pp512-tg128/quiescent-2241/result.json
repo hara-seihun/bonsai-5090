@@ -1,0 +1,129 @@
+{
+  "state": "measured_pair",
+  "metrics": {
+    "pp512": {
+      "samples_ns": [
+        56452100,
+        56608400,
+        56798300,
+        57864000,
+        57160900
+      ],
+      "samples_ts": [
+        9069.63602771199,
+        9044.594088509832,
+        9014.354302857655,
+        8848.334024609429,
+        8957.171773012671
+      ],
+      "avg_ts": 8986.818043340316,
+      "stddev_ts": 88.05092320245636
+    },
+    "tg128_random": {
+      "samples_ns": [
+        972120000,
+        933930400,
+        934207000,
+        936825900,
+        937701400
+      ],
+      "samples_ts": [
+        131.67098712093158,
+        137.05518098564946,
+        137.01460168891904,
+        136.63157690238924,
+        136.50400863217226
+      ],
+      "avg_ts": 135.77527106601232,
+      "stddev_ts": 2.3067062352439507
+    }
+  },
+  "published_comparisons": [
+    {
+      "arm": "pp512",
+      "published_model": "/var/tmp/bonsai-5090-20260930/models/Ternary-Bonsai-2-27B-PQ2_0.gguf",
+      "published_avg_ts": 4074.886213,
+      "our_avg_ts": 8986.818043340316,
+      "ratio": 2.2054157033072266
+    },
+    {
+      "arm": "tg128_random",
+      "published_model": "/var/tmp/bonsai-5090-20260930/models/Ternary-Bonsai-2-27B-PQ2_0.gguf",
+      "published_avg_ts": 142.965539,
+      "our_avg_ts": 135.77527106601232,
+      "ratio": 0.9497062859743586
+    },
+    {
+      "arm": "pp512",
+      "published_model": "/var/tmp/bonsai-5090-20260930/models/Ternary-Bonsai-2-27B-PTQ1_0.gguf",
+      "published_avg_ts": 4116.644248,
+      "our_avg_ts": 8986.818043340316,
+      "ratio": 2.183044611568368
+    },
+    {
+      "arm": "tg128_random",
+      "published_model": "/var/tmp/bonsai-5090-20260930/models/Ternary-Bonsai-2-27B-PTQ1_0.gguf",
+      "published_avg_ts": 133.012539,
+      "our_avg_ts": 135.77527106601232,
+      "ratio": 1.020770463347161
+    }
+  ],
+  "official_external_rank": null,
+  "scope": "Plain custom FP4 on exact published PTQ input, random-fed TG128, single/depth0. Published Linux fork precision/KV/microbatch/context differ. Autoregressive companion separate.",
+  "native_binding": {
+    "state": "started",
+    "source_sha256": "7d052e49a8dcc050f462ba1e0d801bd1596080553b78be87e61f091d1b8e65c0",
+    "manifest_sha256": "73b0228e862f8f975107f7f3216f906256f43ed83c11ca040a896fe9ad44a44b",
+    "vocab": 248320,
+    "bos": 248044,
+    "add_bos": false,
+    "context": 163840,
+    "rows": 256,
+    "environment": {
+      "H5_AB_PARALLEL": "1",
+      "H5_ACT": "fp4",
+      "H5_ATTN_DIRECT": "0",
+      "H5_CARRIER_WF0": "1",
+      "H5_COMPACT": "dense5",
+      "H5_GDN_ARITH": "fp32",
+      "H5_GDN_BITS": "6",
+      "H5_GDN_CG": "8",
+      "H5_GDN_OCC": "2",
+      "H5_GDN_PIPE": "0",
+      "H5_GDN_Q8_SCALE": "ls",
+      "H5_GDN_SCALED": "0",
+      "H5_GDN_SINGLE": "separate",
+      "H5_GEMM_PREWAIT": "5",
+      "H5_GRAPH_NODES": "native",
+      "H5_HEAD_KS": "1",
+      "H5_KV": "fp8",
+      "H5_LOAD_THREADS": "4",
+      "H5_NO_SPEC": "1",
+      "H5_PDL": "1",
+      "H5_PLAN_FILL": "1",
+      "H5_PLAN_READ": "<WORKSPACE>/experiments/bonsai-quality-20261013/custom/frozen-production-plan.txt",
+      "H5_PREP_CHUNK": "2",
+      "H5_PREP_CHUNK_WIDE": "1",
+      "H5_PREP_CLEAR": "0",
+      "H5_PREP_EARLY": "4",
+      "H5_PREP_G4": "0.015625",
+      "H5_PREP_WIDE": "multi",
+      "H5_SCALE_CARRIER": "1",
+      "H5_STATE": "q8",
+      "H5_STATE_FUSION": "0",
+      "H5_TERNARY_OPERANDS": "packed",
+      "H5_TOPK_SPLIT": "1",
+      "H5_WEIGHTS": "fp4",
+      "H5_WSCALE": "f16",
+      "P12_FP4_CACHE": "0",
+      "P12_FP4_SLOTS": "1",
+      "QC_KV": "fp4-direct",
+      "QC_Q6_LAYOUT": "planes",
+      "H5_GRAPH_MAX_ROWS": "1"
+    },
+    "eog_policy": "fixed work ignores EOG",
+    "pid": 37160
+  },
+  "raw_sha256": "7b7cd666c006cb05475d3aea3e5ed386a50fb257ce3ba4da8205e27421ba2cba",
+  "published_report_sha256": "013fa4b4a9edcd459dc32127046f3d4b184ffdda1873b54386ad9af79fd198b8"
+}
