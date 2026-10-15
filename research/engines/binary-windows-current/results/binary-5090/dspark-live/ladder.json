@@ -1,0 +1,153 @@
+{
+  "scope": "fresh measured panels; exact benchmark counts and mode are recorded per row",
+  "rows": [
+    {
+      "path": "results/binary-5090/dspark-live/tasks-live-hybrid-dspark4-b1",
+      "receipt": {
+        "status": "complete",
+        "exit_code": 0
+      },
+      "mode": "quick",
+      "decoding": {
+        "temperature": 0,
+        "sampling": null,
+        "enable_thinking": false,
+        "max_tokens": {
+          "gsm8k": 4096,
+          "humaneval_plus": 4096
+        },
+        "concurrency": 1
+      },
+      "manifest_sha256": "0330533de253a6b29421216609c18cb4afe5a7e9bc16cb0c574af8b0b4d15c58",
+      "tokens": 21074,
+      "generation_seconds": 70.49841206241399,
+      "http_tokens_second": 298.92871886735077,
+      "benchmarks": {
+        "gsm8k": {
+          "n": 32,
+          "metrics": {
+            "accuracy": {
+              "score": 0.90625,
+              "se": 0.05152697639950359,
+              "n": 32,
+              "correct": 29
+            }
+          },
+          "truncated": 1,
+          "completion_tokens": 16084,
+          "generation_s": 56.102460492402315,
+          "http_tokens_second": 286.6897433523112
+        },
+        "humaneval_plus": {
+          "n": 32,
+          "metrics": {
+            "base": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            },
+            "plus": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            }
+          },
+          "truncated": 0,
+          "completion_tokens": 4990,
+          "generation_s": 14.395951570011675,
+          "http_tokens_second": 346.6252283311865
+        }
+      },
+      "native_counters": {
+        "accepted_drafts": 15722,
+        "proposed_drafts": 21524,
+        "verify_rounds": 5381,
+        "generated_tokens": 21137,
+        "lookup_proposed": 0,
+        "lookup_accepted": 0,
+        "lookup_rounds": 0,
+        "verify_s": 43.354748758,
+        "draft_s": 27.094076566000002,
+        "busy_s": 70.459917395,
+        "acceptance_fraction": 0.7304404385801896,
+        "emitted_per_verify_round": 3.9280802824753764
+      }
+    },
+    {
+      "path": "results/binary-5090/dspark-live/tasks-old-hybrid-dspark4-b1",
+      "receipt": {
+        "status": "complete",
+        "exit_code": 0
+      },
+      "mode": "quick",
+      "decoding": {
+        "temperature": 0,
+        "sampling": null,
+        "enable_thinking": false,
+        "max_tokens": {
+          "gsm8k": 4096,
+          "humaneval_plus": 4096
+        },
+        "concurrency": 1
+      },
+      "manifest_sha256": "0330533de253a6b29421216609c18cb4afe5a7e9bc16cb0c574af8b0b4d15c58",
+      "tokens": 21074,
+      "generation_seconds": 83.93558130785823,
+      "http_tokens_second": 251.07349793295597,
+      "benchmarks": {
+        "gsm8k": {
+          "n": 32,
+          "metrics": {
+            "accuracy": {
+              "score": 0.90625,
+              "se": 0.05152697639950359,
+              "n": 32,
+              "correct": 29
+            }
+          },
+          "truncated": 1,
+          "completion_tokens": 16084,
+          "generation_s": 66.38373186439276,
+          "http_tokens_second": 242.28827678528296
+        },
+        "humaneval_plus": {
+          "n": 32,
+          "metrics": {
+            "base": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            },
+            "plus": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            }
+          },
+          "truncated": 0,
+          "completion_tokens": 4990,
+          "generation_s": 17.55184944346547,
+          "http_tokens_second": 284.3005243449014
+        }
+      },
+      "native_counters": {
+        "accepted_drafts": 15722,
+        "proposed_drafts": 21524,
+        "verify_rounds": 5381,
+        "generated_tokens": 21137,
+        "lookup_proposed": 0,
+        "lookup_accepted": 0,
+        "lookup_rounds": 0,
+        "verify_s": 43.21992533,
+        "draft_s": 40.665014963000004,
+        "busy_s": 83.895892368,
+        "acceptance_fraction": 0.7304404385801896,
+        "emitted_per_verify_round": 3.9280802824753764
+      }
+    }
+  ]
+}

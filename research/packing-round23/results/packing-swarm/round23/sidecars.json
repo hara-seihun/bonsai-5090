@@ -1,0 +1,19 @@
+{
+  "state": "all_disjoint_source_receipts_integrated_and_closed",
+  "CPU": {
+    "thread": "spawn-6da7c05aecb408a6d28556a2f22ed9a4133729c44824dad836f29fe939ba6caf",
+    "receipt_SHA256": "919c43188df3e7bceddb1b1163719afbfe48a8acc594aa33387d1f5d72d45fae",
+    "lifecycle": "closed"
+  },
+  "proof": {
+    "thread": "spawn-b8330838319be1479e15fbc0b41e71909ef3a58c66dca2b599c88aa301c7f9cf",
+    "receipt_SHA256": "dc0aa19ee76ccbd5ccd2ed35f3dce97091dd357d4c84c83433abb409a8c4690f",
+    "lifecycle": "closed_after_durable_files_delivery",
+    "final_recovery": "coordinator final-source replay9.535s/159audits after Close interrupted a rerun"
+  },
+  "cost": {
+    "thread": "spawn-351fdc33526a929307efce98d65039bc9320b28c9aa8c440a658e82f466d8d68",
+    "receipt_SHA256": "fbced81189b6acda4c6fbd5b2734d549084ad6f3d62f1b7e1de7661614b8d400",
+    "lifecycle": "closed"
+  }
+}

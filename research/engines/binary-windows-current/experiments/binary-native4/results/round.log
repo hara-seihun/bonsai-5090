@@ -1,0 +1,34 @@
+Welcome to vast.ai. If authentication fails, try again after a few seconds, and double check your ssh key.
+Have fun!
+gu stable_dp4a01 N34816 K5120 R8 tile0 chunk16 inclusive cold 43.008us carrier cold 45.024us maxabs 0 rms 0
+gu native4 N34816 K5120 R8 tile32 chunk16 inclusive cold 141.312us carrier cold 141.312us maxabs 0 rms 0
+gu native4 N34816 K5120 R8 tile64 chunk16 inclusive cold 163.840us carrier cold 163.808us maxabs 0 rms 0
+gu native4 N34816 K5120 R8 tile128 chunk16 inclusive cold 180.224us carrier cold 180.192us maxabs 0 rms 0
+gu stable_dp4a01 N34816 K5120 R32 tile0 chunk4 inclusive cold 112.640us carrier cold 116.736us maxabs 0 rms 0
+gu native4 N34816 K5120 R32 tile32 chunk16 inclusive cold 348.128us carrier cold 349.952us maxabs 3.58e-07 rms 3.3e-08
+gu native4 N34816 K5120 R32 tile64 chunk16 inclusive cold 354.272us carrier cold 352.256us maxabs 3.58e-07 rms 3.3e-08
+gu native4 N34816 K5120 R32 tile128 chunk16 inclusive cold 249.856us carrier cold 247.808us maxabs 3.58e-07 rms 3.3e-08
+down stable_dp4a01 N5120 K17408 R8 tile0 chunk4 inclusive cold 28.672us carrier cold 28.672us maxabs 0 rms 0
+down native4 N5120 K17408 R8 tile32 chunk16 inclusive cold 86.016us carrier cold 84.000us maxabs 1.43e-06 rms 9.27e-08
+down native4 N5120 K17408 R8 tile64 chunk16 inclusive cold 86.016us carrier cold 86.016us maxabs 1.43e-06 rms 9.27e-08
+down native4 N5120 K17408 R8 tile128 chunk16 inclusive cold 92.160us carrier cold 92.160us maxabs 1.43e-06 rms 9.27e-08
+down stable_dp4a01 N5120 K17408 R32 tile0 chunk4 inclusive cold 65.536us carrier cold 67.552us maxabs 0 rms 0
+down native4 N5120 K17408 R32 tile32 chunk16 inclusive cold 184.320us carrier cold 188.416us maxabs 6.68e-06 rms 9.41e-08
+down native4 N5120 K17408 R32 tile64 chunk16 inclusive cold 182.016us carrier cold 178.176us maxabs 6.68e-06 rms 9.41e-08
+down native4 N5120 K17408 R32 tile128 chunk16 inclusive cold 129.024us carrier cold 124.960us maxabs 6.68e-06 rms 9.41e-08
+head65536 stable_dp4a01 N65536 K5120 R8 tile0 chunk4 inclusive cold 69.632us carrier cold 75.776us maxabs 0 rms 0
+head65536 native4 N65536 K5120 R8 tile32 chunk16 inclusive cold 245.760us carrier cold 245.760us maxabs 4.77e-07 rms 4.47e-08
+head65536 native4 N65536 K5120 R8 tile64 chunk16 inclusive cold 290.784us carrier cold 292.832us maxabs 4.77e-07 rms 4.47e-08
+head65536 native4 N65536 K5120 R8 tile128 chunk16 inclusive cold 327.680us carrier cold 329.728us maxabs 4.77e-07 rms 4.47e-08
+head65536 stable_dp4a01 N65536 K5120 R32 tile0 chunk16 inclusive cold 190.464us carrier cold 194.560us maxabs 0 rms 0
+head65536 native4 N65536 K5120 R32 tile32 chunk16 inclusive cold 630.784us carrier cold 636.896us maxabs 0 rms 0
+head65536 native4 N65536 K5120 R32 tile64 chunk16 inclusive cold 647.136us carrier cold 645.088us maxabs 0 rms 0
+head65536 native4 N65536 K5120 R32 tile128 chunk16 inclusive cold 471.040us carrier cold 471.040us maxabs 0 rms 0
+fullhead stable_dp4a01 N248320 K5120 R8 tile0 chunk16 inclusive cold 213.024us carrier cold 223.232us maxabs 0 rms 0
+fullhead native4 N248320 K5120 R8 tile32 chunk16 inclusive cold 862.208us carrier cold 864.256us maxabs 0 rms 0
+fullhead native4 N248320 K5120 R8 tile64 chunk16 inclusive cold 1019.648us carrier cold 1019.872us maxabs 0 rms 0
+fullhead native4 N248320 K5120 R8 tile128 chunk16 inclusive cold 1152.992us carrier cold 1150.976us maxabs 0 rms 0
+fullhead stable_dp4a01 N248320 K5120 R32 tile0 chunk40 inclusive cold 720.928us carrier cold 722.976us maxabs 0 rms 0
+fullhead native4 N248320 K5120 R32 tile32 chunk16 inclusive cold 2343.904us carrier cold 2345.696us maxabs 7.15e-07 rms 5.06e-08
+fullhead native4 N248320 K5120 R32 tile64 chunk16 inclusive cold 2403.296us carrier cold 2403.040us maxabs 7.15e-07 rms 5.06e-08
+fullhead native4 N248320 K5120 R32 tile128 chunk16 inclusive cold 1714.144us carrier cold 1713.888us maxabs 7.15e-07 rms 5.06e-08

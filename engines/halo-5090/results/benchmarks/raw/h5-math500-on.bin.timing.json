@@ -1,0 +1,1 @@
+{"engine": "halo-5090 spec", "prompts": 500, "gen_tokens": 937245, "gen_s": 324.7, "tok_s": 2886, "tokens_per_verify": 5.097, "wall_s": 345.6893525123596, "slots": 14, "maxnew": 32768}

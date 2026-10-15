@@ -1,0 +1,121 @@
+{
+  "scope": "fresh measured panels; exact benchmark counts and mode are recorded per row",
+  "rows": [
+    {
+      "path": "results/binary-5090/digits-b64-fp8/tasks-gsm256-digits-ragged-b64-ctx4608",
+      "receipt": {
+        "status": "complete",
+        "exit_code": 0
+      },
+      "mode": "selected",
+      "decoding": {
+        "temperature": 0,
+        "sampling": null,
+        "enable_thinking": false,
+        "max_tokens": {
+          "gsm8k": 4096
+        },
+        "concurrency": 64
+      },
+      "manifest_sha256": "0330533de253a6b29421216609c18cb4afe5a7e9bc16cb0c574af8b0b4d15c58",
+      "tokens": 165061,
+      "generation_seconds": 132.0812606178224,
+      "http_tokens_second": 1249.6927969032986,
+      "benchmarks": {
+        "gsm8k": {
+          "n": 256,
+          "metrics": {
+            "accuracy": {
+              "score": 0.92578125,
+              "se": 0.016382909247859002,
+              "n": 256,
+              "correct": 237
+            },
+            "accuracy_fresh32": {
+              "score": 0.9375,
+              "se": 0.0427908248050911,
+              "n": 32,
+              "correct": 30
+            }
+          },
+          "truncated": 15,
+          "completion_tokens": 165061,
+          "generation_s": 132.0812606178224,
+          "http_tokens_second": 1249.6927969032986
+        }
+      },
+      "native_counters": {
+        "accepted_drafts": 0,
+        "proposed_drafts": 0,
+        "verify_rounds": 0,
+        "generated_tokens": 165302,
+        "lookup_proposed": 0,
+        "lookup_accepted": 0,
+        "lookup_rounds": 0,
+        "verify_s": 131.861087056,
+        "draft_s": 0.00015359500000000002,
+        "busy_s": 132.075427929,
+        "acceptance_fraction": null,
+        "emitted_per_verify_round": null
+      }
+    },
+    {
+      "path": "results/binary-5090/digits-b64-fp8/tasks-gsm256-dp4a-pf32-b64-ctx4608",
+      "receipt": {
+        "status": "complete",
+        "exit_code": 0
+      },
+      "mode": "selected",
+      "decoding": {
+        "temperature": 0,
+        "sampling": null,
+        "enable_thinking": false,
+        "max_tokens": {
+          "gsm8k": 4096
+        },
+        "concurrency": 64
+      },
+      "manifest_sha256": "0330533de253a6b29421216609c18cb4afe5a7e9bc16cb0c574af8b0b4d15c58",
+      "tokens": 139563,
+      "generation_seconds": 125.55298419855535,
+      "http_tokens_second": 1111.586481921358,
+      "benchmarks": {
+        "gsm8k": {
+          "n": 256,
+          "metrics": {
+            "accuracy": {
+              "score": 0.94140625,
+              "se": 0.014678923355036537,
+              "n": 256,
+              "correct": 241
+            },
+            "accuracy_fresh32": {
+              "score": 0.90625,
+              "se": 0.05152697639950359,
+              "n": 32,
+              "correct": 29
+            }
+          },
+          "truncated": 9,
+          "completion_tokens": 139563,
+          "generation_s": 125.55298419855535,
+          "http_tokens_second": 1111.586481921358
+        }
+      },
+      "native_counters": {
+        "accepted_drafts": 0,
+        "proposed_drafts": 0,
+        "verify_rounds": 0,
+        "generated_tokens": 139810,
+        "lookup_proposed": 0,
+        "lookup_accepted": 0,
+        "lookup_rounds": 0,
+        "verify_s": 125.36657629700001,
+        "draft_s": 0.000150222,
+        "busy_s": 125.54745089200001,
+        "acceptance_fraction": null,
+        "emitted_per_verify_round": null
+      }
+    }
+  ]
+}

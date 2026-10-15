@@ -1,0 +1,8 @@
+{
+  "state": "all_completed_and_explicitly_closed",
+  "CPU": {"threadId": "spawn-31b7214f9464b2e473af8680667aff2e9622eb81a360f841f4c34eac417a8e25", "scope": "method/results/archive round22 CPU", "receipt": "cpu/receipt.json", "closed": true},
+  "proof": {"threadId": "spawn-3b9ceca052b707286779ef52baa1e1e08bd51e2d128bdaf3f86f19724d96e4ce", "scope": "method/results/archive round22 proof", "receipt": "proof/receipt.json", "closed": true},
+  "cost": {"threadId": "spawn-8f0c86b031f08f03203792ea3f4c23283b2df44b44f39ebd75a7c159d2f786bd", "scope": "method/results/archive round22 cost", "receipt": "invoice.json", "closed": true},
+  "commits": "one coordinator-owned combined private publication; no individual worker commits",
+  "continuing_jobs_or_wakes": "none"
+}

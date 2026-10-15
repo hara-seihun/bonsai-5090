@@ -1,0 +1,181 @@
+{
+  "scope": "Fresh matched quick64,32GSM+32HE+, S1ctx8192/pruned65536/greedy cap4096/thinkingoff, same repaired0ff native0ff/target952/server909, F16stateKV, verifyall4; not identical text",
+  "points": [
+    {
+      "mode": "bf16",
+      "generated_tokens": 21074,
+      "generation_s": 70.4614584473893,
+      "http_tok_s": 299.08549247153456,
+      "metrics": {
+        "verify_s": 43.353789808,
+        "draft_s": 27.055976648,
+        "verify_rounds": 5381,
+        "accepted_drafts": 15722,
+        "proposed_drafts": 21524,
+        "steps": 5858,
+        "busy_s": 70.42124037900001
+      },
+      "acceptance": 0.7304404385801896,
+      "scores": {
+        "gsm8k": {
+          "accuracy": {
+            "score": 0.90625,
+            "se": 0.05152697639950359,
+            "n": 32,
+            "correct": 29
+          }
+        },
+        "humaneval_plus": {
+          "base": {
+            "score": 1.0,
+            "se": 0.0,
+            "n": 32,
+            "correct": 32
+          },
+          "plus": {
+            "score": 1.0,
+            "se": 0.0,
+            "n": 32,
+            "correct": 32
+          }
+        }
+      },
+      "caps": {
+        "gsm8k": 1,
+        "humaneval_plus": 0
+      }
+    },
+    {
+      "mode": "nvfp4-a1",
+      "generated_tokens": 21415,
+      "generation_s": 66.78151289187372,
+      "http_tok_s": 320.67257947080554,
+      "metrics": {
+        "verify_s": 44.749409877000005,
+        "draft_s": 21.969986115,
+        "verify_rounds": 5564,
+        "accepted_drafts": 15877,
+        "proposed_drafts": 22256,
+        "steps": 6041,
+        "busy_s": 66.73167486300001
+      },
+      "acceptance": 0.71338066139468,
+      "scores": {
+        "gsm8k": {
+          "accuracy": {
+            "score": 0.90625,
+            "se": 0.05152697639950359,
+            "n": 32,
+            "correct": 29
+          }
+        },
+        "humaneval_plus": {
+          "base": {
+            "score": 1.0,
+            "se": 0.0,
+            "n": 32,
+            "correct": 32
+          },
+          "plus": {
+            "score": 1.0,
+            "se": 0.0,
+            "n": 32,
+            "correct": 32
+          }
+        }
+      },
+      "caps": {
+        "gsm8k": 1,
+        "humaneval_plus": 0
+      }
+    },
+    {
+      "mode": "nvfp4-a2",
+      "generated_tokens": 22334,
+      "generation_s": 73.96060886885971,
+      "http_tok_s": 301.9715540687427,
+      "metrics": {
+        "verify_s": 45.737208954,
+        "draft_s": 28.170874424,
+        "verify_rounds": 5705,
+        "accepted_drafts": 16656,
+        "proposed_drafts": 22820,
+        "steps": 6182,
+        "busy_s": 73.920183804
+      },
+      "acceptance": 0.72988606485539,
+      "scores": {
+        "gsm8k": {
+          "accuracy": {
+            "score": 0.9375,
+            "se": 0.0427908248050911,
+            "n": 32,
+            "correct": 30
+          }
+        },
+        "humaneval_plus": {
+          "base": {
+            "score": 1.0,
+            "se": 0.0,
+            "n": 32,
+            "correct": 32
+          },
+          "plus": {
+            "score": 1.0,
+            "se": 0.0,
+            "n": 32,
+            "correct": 32
+          }
+        }
+      },
+      "caps": {
+        "gsm8k": 1,
+        "humaneval_plus": 0
+      }
+    },
+    {
+      "mode": "nvfp4-head-a2",
+      "generated_tokens": 21497,
+      "generation_s": 72.07332206517458,
+      "http_tok_s": 298.2657019827761,
+      "metrics": {
+        "verify_s": 44.546028207000006,
+        "draft_s": 27.474681296,
+        "verify_rounds": 5520,
+        "accepted_drafts": 16004,
+        "proposed_drafts": 22080,
+        "steps": 5997,
+        "busy_s": 72.032998088
+      },
+      "acceptance": 0.7248188405797101,
+      "scores": {
+        "gsm8k": {
+          "accuracy": {
+            "score": 0.90625,
+            "se": 0.05152697639950359,
+            "n": 32,
+            "correct": 29
+          }
+        },
+        "humaneval_plus": {
+          "base": {
+            "score": 1.0,
+            "se": 0.0,
+            "n": 32,
+            "correct": 32
+          },
+          "plus": {
+            "score": 1.0,
+            "se": 0.0,
+            "n": 32,
+            "correct": 32
+          }
+        }
+      },
+      "caps": {
+        "gsm8k": 1,
+        "humaneval_plus": 0
+      }
+    }
+  ]
+}

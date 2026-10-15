@@ -1,97 +1,188 @@
-# Ternary Bonsai 2 27B on one RTX 5090
+# Bonsai inference: packed weights, native kernels, measured results
 
-A standalone CUDA decode engine for PrismML's
-[Ternary-Bonsai-2-27B](https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf) (PTQ1_0 GGUF), with
-the scripts to build it, benchmark it, serve it and run GSM8K on it, plus a step-by-step account of how
-it got from PrismML's llama.cpp fork to here.
+Native inference engines for PrismML's Bonsai models, plus the benchmark harness, measurements,
+and packed-computation experiments behind them. The primary runnable target here is
+**Ternary Bonsai 2 27B on one RTX 5090**. The repository also preserves the original CUDA
+speculative server, AMD HIP engine, related MoE engine, binary-model work and five-wide kernel research.
 
-## Results
+Start with the root build for the current batch-decode engine. [Other engines](engines/README.md),
+[packed/binary research](research/README.md) and [quality benchmarks](benchmarks/README.md) have
+separate source identities and reproduction instructions. Their experimental changes are **not all
+combined into the root engine**.
 
-| Measurement | Value | Conditions |
+## What we changed, and why
+
+A ternary weight has three possible values: negative, zero or positive, multiplied by a scale.
+Storing those choices in floating-point wastes bandwidth. Expanding them into a large floating-point
+matrix before every multiplication wastes it again. We keep the weights packed and arrange their
+bits so the GPU can turn them directly into the operands its instructions consume.
+
+The model has both recurrent layers and conventional attention. Making its matrix multiplications
+faster exposes the cost of recurrent-state traffic, the KV cache, launch overhead and CPU round trips.
+The engine therefore optimizes the complete decode path:
+
+- **Packed weight readers:** two-bit trits for most matrices; five trits per byte for the vocabulary
+  head. Weight conversion is done at load time; no full floating-point weight expansion is needed.
+- **Blackwell FP4 Tensor Cores:** prepare activations directly in the instruction's layout; fuse
+  normalization, sign changes, Hadamard rotation and quantization. Fuse gate/up projections and
+  nonlinear/residual output work where appropriate.
+- **Less state traffic:** cooperative recurrent updates and six-bit recurrent-state storage, with
+  FP32 update arithmetic. A direct FP4 KV reader avoids staging a half-precision cache tile.
+- **Less orchestration:** GPU token selection, resident embeddings, CUDA graphs, asynchronous weight
+  copies and programmatic dependent launch.
+
+These are engineering approximations as well as layout changes. FP4 activations, six-bit recurrent
+state, FP4 KV and mean weight scales are lossy relative to the reference. Quality is measured
+separately. Deterministic reductions make repeated executions stable; they do not make this engine
+numerically identical to PrismML's reference.
+
+The research takes the same idea further: treat packed bits as a coordinate system to compute in.
+Search for an instruction composition that preserves the final answer, including constructions whose
+intermediate labels never resemble ordinary numbers. A proof of such a construction, a native kernel
+check and a whole-engine speedup are separate results. The export includes unsuccessful consumers
+and unintegrated candidates alongside the wins.
+
+## Decode performance
+
+Every figure below links to retained evidence. Rates count generated tokens across all streams during
+**decode only**: load, conversion, tuning, tokenization and prefill are excluded. These runs are greedy,
+without speculation. They are not HTTP service throughput or single-user token rates.
+
+| Measurement | Result | Receipt / conditions |
 |---|---:|---|
-| Batch-64 decode throughput | **6,777 tok/s** (median; 6,778.4 / 6,777.4 / 6,775.7) | RTX 5090, Windows, 64 streams × 128 timed tokens, 3 passes, `profiles/serving.json` |
-| Same, deterministic mode | **6,583 tok/s** (median; 6,585.4 / 6,583.1 / 6,579.8) | as above + `H5_DETERMINISTIC_GEMM=1`; repeats are bit-identical |
-| GSM8K, full test set | **1276 / 1319 (96.74%)** | thinking on, temperature 0.7, see below |
-| PrismML llama.cpp baseline | 930.6 tok/s | different RTX 5090 (Linux), 64 × 1,024 tokens; see [docs/ladder.md](docs/ladder.md) |
-| **Clean checkout of this repo** | **6,731.7 tok/s** ordinary; **6,550.5 / 6,549.7** deterministic (tokens identical) | same RTX 5090 as the first two rows, fresh build; [docs/reproduction.md](docs/reproduction.md) |
+| PrismML llama.cpp, original baseline | 930.6 tok/s | [Ladder](receipts/ladder.json): Linux RTX 5090, batch 64, 1,024 timed tokens per stream |
+| Fused FP4 engine | 4,579.7 tok/s | [Same ladder](receipts/ladder.json), same device/window; the FP4 bundle was measured together |
+| + six-bit recurrence | 6,118.4 tok/s | [Same ladder](receipts/ladder.json) |
+| + direct FP4 KV | **6,446.4 tok/s; 6.93× baseline** | [Same ladder](receipts/ladder.json), matched device/window |
+| Original final engine measurement | **6,777.4 tok/s** | [Receipt](receipts/serving-b64x128.json): another RTX 5090, Windows, batch 64 × 128 timed tokens |
+| Original deterministic measurement | **6,583.1 tok/s** | [Receipt](receipts/deterministic-b64x128.json), fixed-order split-K reduction |
+| Clean checkout, ordinary | **6,731.7 tok/s** | [Receipt](receipts/clean-checkout/serving-b64x128.json) |
+| Clean checkout, deterministic | **6,550.5 / 6,549.7 tok/s** | [Receipt](receipts/clean-checkout/deterministic-b64x128.json), repeated tokens identical |
 
-The first two rows are the original measurements of the engine. A fresh build of this repository on the
-same GPU currently runs 0.67% (ordinary) and 0.50% (deterministic) slower; the cause has not been
-isolated. See [docs/reproduction.md](docs/reproduction.md).
+**6.93× is the same-machine speedup.** Dividing the later Windows result by the Linux baseline
+would mix devices and timing windows. The clean-build gap to the original final measurement remains
+unexplained. [The full ladder](docs/ladder.md) explains each change, its measured boundary and the
+changes that have no standalone ablation. [Clean-build status](docs/reproduction.md) records the
+successful Windows run and the incomplete Linux build/run qualification.
 
-Throughput counts generated tokens across all 64 streams during the timed decode window only. Model
-load, load-time weight conversion, plan tuning, tokenisation and prefill are excluded; 8 warm-up tokens
-per stream precede the timer. Decoding is greedy with no speculation. The two machines were never
-measured under identical conditions, so the ladder's same-machine ratio (6.93×, row 6 vs baseline) is
-the honest speedup figure. See [docs/ladder.md](docs/ladder.md).
+## Quality against PrismML's published results
 
-Precision: weights are PrismML's ternary values; activations are FP4 (E2M1, block-scaled), the
-recurrent state is six-bit, and the KV cache is FP4. All three are lossy relative to the baseline. The
-GSM8K score is measured on exactly this configuration.
+PrismML's original [Bonsai 27B whitepaper](https://github.com/PrismML-Eng/Bonsai-demo/blob/main/bonsai-27b-whitepaper.pdf)
+reports the original Bonsai generation. We evaluated **Bonsai 2** with the recovered original
+thinking-on protocol. The checkpoints differ: these nominal comparisons do **not** isolate the
+engine's effect. Full same-weight reference arms remain unfinished; small overlapping reference
+screens are documented in the [benchmark report](benchmarks/README.md).
 
-## Requirements
+| Benchmark | PrismML published | Our complete result | Evidence |
+|---|---:|---:|---|
+| GSM8K | 96.06% | **96.74% — 1,276/1,319** | [Native-trigger grading and receipts](benchmarks/README.md#gsm8k) |
+| MATH500 | 99.20% | **98.8% — 494/500** | [Full quality report](benchmarks/README.md) |
+| IFEval, prompt-strict | 85.03% | **92.4% — 500/541** | [Full quality report](benchmarks/README.md) |
 
-- NVIDIA RTX 5090 (sm_120a; the kernels use Blackwell block-scaled FP4 MMA and won't run elsewhere)
-- CUDA Toolkit 13.0 or newer, CMake ≥ 3.28, Ninja
-- Linux: GCC 13+. Windows: Visual Studio 2022 (MSVC 14.4x), run from an x64 Native Tools prompt
-- Python 3.10+; `pip install -r requirements.txt` for GSM8K only
-- About 6 GB of disk for the model and 32 GB of VRAM
+Canonical GSM8K uses rule-first grading with judge fallback **only on parse failure**. The retained
+outputs contain 1,276 parsed correct answers, 34 parsed wrong answers and nine empty parse failures;
+the judge gives those nine zero. A broader regrade of every rule miss produces
+**97.27% — 1,283/1,319**, retained **only as a diagnostic**. It is not the canonical benchmark result.
+Gold answers were not changed. [Canonical score receipts](benchmarks/receipts/canonical-scores.json)
+and [programme-12 provenance](benchmarks/receipts/programme12-source.json) bind the grading to
+`08dadac9f891c4ccdad2ed5db853d8001a1c68ac` and keep both policies explicit.
 
-The build fetches PrismML's llama.cpp fork at a pinned commit and compiles it CPU-only. The engine uses
-it only for the tokenizer and chat template.
+Thinking is on; temperature 0.7, top-p 0.95, top-k 20. Output caps are 16,384 (GSM8K),
+81,920 (MATH500) and 20,480 (IFEval). Our explicit choices for unpublished details include zero-shot,
+xhigh reasoning and fixed generation/dataset seeds. Empty capped finals stay wrong. The publisher's
+exact historical extractor, prompts, shots, harness/dataset revisions and instruction-check seed are
+unknown. Judge-replay and programmatic scores have different reproduction requirements.
 
-## Reproduce
+**Partial snapshots — excluded from the full-result table:**
 
-```bash
-python scripts/fetch_model.py                        # 5.9 GB, pinned revision, sha256-verified
+| Benchmark | Retained completed portion | Full benchmark state |
+|---|---|---|
+| Tau2 telecom | **66 correct / 82 scored**, out of 114 intended occurrences | [Partial receipt](benchmarks/receipts/tau2-partial.json): two errors, one untouched, 29 missing; full score unset |
+| HumanEval+ | **120 correct / 128 scored**, out of 164 intended tasks | [Partial receipt](benchmarks/receipts/humaneval-plus-partial.json): completed disjoint windows only; full score unset |
+
+These are frozen export observations of unfinished campaigns. No partial is presented as a completed
+suite score, and prepared adapters for other benchmarks establish no quality result.
+
+Reduce the exported quality receipts without GPU, dependencies or paid calls:
+
+```sh
+python benchmarks/replay.py
+```
+
+This checks GSM occurrence-level grading decisions and disjoint shard coverage; it does not rerun
+the model, judge, instruction checker or code execution.
+
+## Build and reproduce the primary engine
+
+Requirements: RTX 5090 / `sm_120a`, CUDA Toolkit 13+, CMake 3.28+, Ninja, Python 3.10+;
+Windows additionally needs Visual Studio 2022's x64 Native Tools prompt. Linux needs a compatible
+host compiler; its complete clean-build GPU qualification remains pending. Allow model storage and
+32 GB VRAM. Model and drafter weights are acquired separately under their original licenses.
+
+```sh
+python scripts/fetch_model.py
 cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release
-cmake --build build                                   # the CUDA kernels take a while to compile
+cmake --build build
 python scripts/bench.py --model models/Ternary-Bonsai-2-27B-PTQ1_0.gguf
-python scripts/bench.py --model models/Ternary-Bonsai-2-27B-PTQ1_0.gguf --profile deterministic --check-determinism
+python scripts/bench.py --model models/Ternary-Bonsai-2-27B-PTQ1_0.gguf \
+  --profile deterministic --check-determinism
 ```
 
-Each `bench.py` run writes a JSON receipt under `results/` with the per-pass numbers, the exact
-environment, input hashes, binary hashes and `nvidia-smi` device line. GEMM launch geometry is read from the frozen plan in
-`engine/frozen-production-plan.txt`, which `bench.py` verifies is unchanged before and after the run;
-any plan output is written to a separate file in the run directory, never over the frozen plan.
+The model fetch pins its revision and SHA256. CMake fetches PrismML's llama.cpp at
+`6067dbea986ed1359db98c42ab06eb49426bbf16`, CPU-only, for tokenization/chat templates.
+`bench.py` checks the prompt fixture and frozen GEMM plan and writes per-pass timings, environment,
+input identities and binary hashes under `results/`. Generated results are local; retained evidence
+lives in `receipts/`.
 
-### Serving
+### Serve and run GSM8K
 
-```bash
-python engine/serve.py --model models/Ternary-Bonsai-2-27B-PTQ1_0.gguf --profile profiles/serving.json \
-    --slots 8 --ctx 20480 --port 18322
-```
-
-`POST /v1/completions` takes one raw, already-templated prompt; `POST /v1/batch/completions` takes
-`{"requests": [...]}` with up to `--slots` entries and decodes them as one batch. Sampling
-(temperature, top-p, top-k, min-p, presence and repetition penalty, per-request seed) runs on the GPU.
-
-### GSM8K
-
-```bash
+```sh
+python -m pip install -r requirements.txt
+python engine/serve.py --model models/Ternary-Bonsai-2-27B-PTQ1_0.gguf \
+  --profile profiles/serving.json --slots 8 --ctx 20480 --port 18322
+# In another terminal:
 python scripts/gsm8k.py --url http://127.0.0.1:18322 --out results/gsm8k
 ```
 
-This sends the same request bytes as the measured run: the dataset revision, chat-template rendering,
-system prompt, sampling settings and per-item seeds are fixed in the script (`--print-request N` shows
-one). Scoring takes the text after `</think>` and compares it with the gold answer using Math-Verify.
-Sampling at temperature 0.7 on a GPU is not bit-reproducible across runs (see deterministic mode), so
-expect a score near 1276, not necessarily equal. The measured outputs are in
-`receipts/gsm8k/outputs.jsonl.gz`; `--score-only` against them reproduces 1276 exactly.
+The server accepts already-templated prompts at `/v1/completions` and batches at
+`/v1/batch/completions`. Sampling runs on the GPU. The portable GSM script uses Math-Verify rule
+scoring, which reproduces the retained canonical count on these outputs; it does not itself call a
+fallback judge. Use the [full benchmark harness](benchmarks/README.md) for native-trigger replay,
+MATH500, IFEval and partial tool/code tasks.
 
-## Layout
+To rescore the original retained GSM8K outputs without GPU inference:
 
-| Path | Contents |
+```sh
+python -c "import gzip,pathlib; p=pathlib.Path('results/gsm8k'); p.mkdir(parents=True,exist_ok=True); (p/'outputs.jsonl').write_bytes(gzip.decompress(pathlib.Path('receipts/gsm8k/outputs.jsonl.gz').read_bytes()))"
+python scripts/gsm8k.py --out results/gsm8k --score-only
+```
+
+The dataset fetch still needs network access. Fresh temperature-0.7 generation is not expected to
+produce identical sampled answers or exactly the same score. Historical quality scores are retained
+measurements, not a claim that this expanded repository was rerun end-to-end at publication.
+
+## Repository map
+
+| Path | Purpose |
 |---|---|
-| `engine/` | Engine source (`src/`), C API (`api.cpp`), FP4 KV dispatch, benchmark driver (`length_bench.cpp`), HTTP server, frozen GEMM plan |
-| `profiles/` | Exact runtime settings for the measured runs |
-| `scripts/` | `fetch_model.py`, `bench.py`, `gsm8k.py` |
-| `data/` | Benchmark prompt fixture (GSM8K questions, see NOTICE) |
-| `docs/ladder.md`, `docs/steps/` | The optimisation ladder, change by change, with code views |
-| `docs/reproduction.md` | What was verified, where, and what is still pending |
-| `receipts/` | Ladder measurements, headline receipts, GSM8K outputs |
+| `engine/`, `CMakeLists.txt`, `profiles/` | Portable batch-decode engine, C/Python API, HTTP server, frozen plan |
+| `scripts/`, `data/` | Model fetch, throughput harness, portable GSM scorer and prompt fixture |
+| `receipts/` | Original ladder, final-engine/clean-build timings and retained GSM outputs |
+| `docs/ladder.md`, `docs/steps/` | Measured optimization sequence and explanatory source excerpts |
+| `docs/reproduction.md` | What has actually run from the clean portable build |
+| `engines/` | Additional coherent engine snapshots and their own build/results guides |
+| `research/` | Binary, packed/five-wide, full-K, Dict8 and related source/finite experiments |
+| `benchmarks/` | Quality harness, source pins, complete and explicitly partial results |
 
-## License
+The added source snapshots preserve their own configuration contracts. An experimental loss or
+successful microkernel check does not select a new serving default. Hardware/runtime work was not
+started by this publication.
 
-Engine source and scripts: Apache-2.0 ([LICENSE](LICENSE)). Third-party material and attributions:
-[NOTICE](NOTICE). The model weights are not included; download them from PrismML under their license.
+## License and exclusions
+
+See [LICENSE](LICENSE) and [NOTICE](NOTICE), plus component notices. Third-party dependencies,
+benchmarks and datasets retain their original licenses. Weights, model-derived activation/cache
+payloads, compiled binaries, generated dependencies, credentials and private personal data are
+excluded. Only sanitized source snapshots and selected scientific evidence are exported; private
+source Git history and machine-operation state remain outside this repository. The repository
+remains private.

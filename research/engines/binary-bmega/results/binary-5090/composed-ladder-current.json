@@ -1,0 +1,502 @@
+{
+  "scope": "fresh64request quick32+32 ladder; not full gate",
+  "rows": [
+    {
+      "path": "results/binary-5090/tasks-composed/tasks-modern-packed1-fused-plain",
+      "receipt": {
+        "status": "complete",
+        "exit_code": 0
+      },
+      "decoding": {
+        "temperature": 0,
+        "sampling": null,
+        "enable_thinking": false,
+        "max_tokens": {
+          "gsm8k": 4096,
+          "humaneval_plus": 4096
+        },
+        "concurrency": 1
+      },
+      "manifest_sha256": "0330533de253a6b29421216609c18cb4afe5a7e9bc16cb0c574af8b0b4d15c58",
+      "tokens": 20307,
+      "generation_seconds": 105.94873703364283,
+      "http_tokens_second": 191.6681648932893,
+      "benchmarks": {
+        "gsm8k": {
+          "metrics": {
+            "accuracy": {
+              "score": 0.90625,
+              "se": 0.05152697639950359,
+              "n": 32,
+              "correct": 29
+            }
+          },
+          "truncated": 1,
+          "completion_tokens": 15282,
+          "generation_s": 78.38746056612581,
+          "http_tokens_second": 194.95465077744757
+        },
+        "humaneval_plus": {
+          "metrics": {
+            "base": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            },
+            "plus": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            }
+          },
+          "truncated": 0,
+          "completion_tokens": 5025,
+          "generation_s": 27.56127646751702,
+          "http_tokens_second": 182.3210186190879
+        }
+      },
+      "native_counters": {
+        "accepted_drafts": 0,
+        "proposed_drafts": 0,
+        "verify_rounds": 0,
+        "generated_tokens": 20370,
+        "lookup_proposed": 0,
+        "lookup_accepted": 0,
+        "lookup_rounds": 0,
+        "verify_s": 105.86801818800001,
+        "draft_s": 0.000381201,
+        "busy_s": 105.892616547,
+        "acceptance_fraction": null,
+        "emitted_per_verify_round": null
+      }
+    },
+    {
+      "path": "results/binary-5090/tasks-composed/tasks-modern-packed1-fused-plain-b16",
+      "receipt": {
+        "status": "complete",
+        "exit_code": 0
+      },
+      "decoding": {
+        "temperature": 0,
+        "sampling": null,
+        "enable_thinking": false,
+        "max_tokens": {
+          "gsm8k": 4096,
+          "humaneval_plus": 4096
+        },
+        "concurrency": 16
+      },
+      "manifest_sha256": "0330533de253a6b29421216609c18cb4afe5a7e9bc16cb0c574af8b0b4d15c58",
+      "tokens": 21428,
+      "generation_seconds": 35.074307271279395,
+      "http_tokens_second": 610.9315241571805,
+      "benchmarks": {
+        "gsm8k": {
+          "metrics": {
+            "accuracy": {
+              "score": 0.9375,
+              "se": 0.0427908248050911,
+              "n": 32,
+              "correct": 30
+            }
+          },
+          "truncated": 0,
+          "completion_tokens": 16290,
+          "generation_s": 26.820916352793574,
+          "http_tokens_second": 607.3617987441838
+        },
+        "humaneval_plus": {
+          "metrics": {
+            "base": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            },
+            "plus": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            }
+          },
+          "truncated": 0,
+          "completion_tokens": 5138,
+          "generation_s": 8.25339091848582,
+          "http_tokens_second": 622.5320054199766
+        }
+      },
+      "native_counters": {
+        "accepted_drafts": 0,
+        "proposed_drafts": 0,
+        "verify_rounds": 0,
+        "generated_tokens": 21492,
+        "lookup_proposed": 0,
+        "lookup_accepted": 0,
+        "lookup_rounds": 0,
+        "verify_s": 35.043958956000004,
+        "draft_s": 8.309900000000001e-05,
+        "busy_s": 35.068508409,
+        "acceptance_fraction": null,
+        "emitted_per_verify_round": null
+      }
+    },
+    {
+      "path": "results/binary-5090/tasks-composed/tasks-modern-packed1-fused-plain-b2",
+      "receipt": {
+        "status": "complete",
+        "exit_code": 0
+      },
+      "decoding": {
+        "temperature": 0,
+        "sampling": null,
+        "enable_thinking": false,
+        "max_tokens": {
+          "gsm8k": 4096,
+          "humaneval_plus": 4096
+        },
+        "concurrency": 2
+      },
+      "manifest_sha256": "0330533de253a6b29421216609c18cb4afe5a7e9bc16cb0c574af8b0b4d15c58",
+      "tokens": 20846,
+      "generation_seconds": 66.95053840149194,
+      "http_tokens_second": 311.3641876184742,
+      "benchmarks": {
+        "gsm8k": {
+          "metrics": {
+            "accuracy": {
+              "score": 0.90625,
+              "se": 0.05152697639950359,
+              "n": 32,
+              "correct": 29
+            }
+          },
+          "truncated": 1,
+          "completion_tokens": 15720,
+          "generation_s": 50.39543493837118,
+          "http_tokens_second": 311.93301574287557
+        },
+        "humaneval_plus": {
+          "metrics": {
+            "base": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            },
+            "plus": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            }
+          },
+          "truncated": 0,
+          "completion_tokens": 5126,
+          "generation_s": 16.55510346312076,
+          "http_tokens_second": 309.63261639644935
+        }
+      },
+      "native_counters": {
+        "accepted_drafts": 0,
+        "proposed_drafts": 0,
+        "verify_rounds": 0,
+        "generated_tokens": 20909,
+        "lookup_proposed": 0,
+        "lookup_accepted": 0,
+        "lookup_rounds": 0,
+        "verify_s": 66.923091619,
+        "draft_s": 0.00028226600000000004,
+        "busy_s": 66.94507022,
+        "acceptance_fraction": null,
+        "emitted_per_verify_round": null
+      }
+    },
+    {
+      "path": "results/binary-5090/tasks-composed/tasks-modern-packed1-fused-plain-b32",
+      "receipt": {
+        "status": "complete",
+        "exit_code": 0
+      },
+      "decoding": {
+        "temperature": 0,
+        "sampling": null,
+        "enable_thinking": false,
+        "max_tokens": {
+          "gsm8k": 4096,
+          "humaneval_plus": 4096
+        },
+        "concurrency": 32
+      },
+      "manifest_sha256": "0330533de253a6b29421216609c18cb4afe5a7e9bc16cb0c574af8b0b4d15c58",
+      "tokens": 21749,
+      "generation_seconds": 39.18764764163643,
+      "http_tokens_second": 554.9963141163884,
+      "benchmarks": {
+        "gsm8k": {
+          "metrics": {
+            "accuracy": {
+              "score": 0.9375,
+              "se": 0.0427908248050911,
+              "n": 32,
+              "correct": 30
+            }
+          },
+          "truncated": 1,
+          "completion_tokens": 16620,
+          "generation_s": 31.401020715013146,
+          "http_tokens_second": 529.2821577629102
+        },
+        "humaneval_plus": {
+          "metrics": {
+            "base": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            },
+            "plus": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            }
+          },
+          "truncated": 0,
+          "completion_tokens": 5129,
+          "generation_s": 7.786626926623285,
+          "http_tokens_second": 658.6934302019039
+        }
+      },
+      "native_counters": {
+        "accepted_drafts": 0,
+        "proposed_drafts": 0,
+        "verify_rounds": 0,
+        "generated_tokens": 21812,
+        "lookup_proposed": 0,
+        "lookup_accepted": 0,
+        "lookup_rounds": 0,
+        "verify_s": 39.154374053000005,
+        "draft_s": 9.8171e-05,
+        "busy_s": 39.18151232,
+        "acceptance_fraction": null,
+        "emitted_per_verify_round": null
+      }
+    },
+    {
+      "path": "results/binary-5090/tasks-composed/tasks-modern-packed1-fused-plain-b4",
+      "receipt": {
+        "status": "complete",
+        "exit_code": 0
+      },
+      "decoding": {
+        "temperature": 0,
+        "sampling": null,
+        "enable_thinking": false,
+        "max_tokens": {
+          "gsm8k": 4096,
+          "humaneval_plus": 4096
+        },
+        "concurrency": 4
+      },
+      "manifest_sha256": "0330533de253a6b29421216609c18cb4afe5a7e9bc16cb0c574af8b0b4d15c58",
+      "tokens": 21991,
+      "generation_seconds": 49.46831474453211,
+      "http_tokens_second": 444.547183658217,
+      "benchmarks": {
+        "gsm8k": {
+          "metrics": {
+            "accuracy": {
+              "score": 0.90625,
+              "se": 0.05152697639950359,
+              "n": 32,
+              "correct": 29
+            }
+          },
+          "truncated": 1,
+          "completion_tokens": 16980,
+          "generation_s": 39.01674101408571,
+          "http_tokens_second": 435.19780378043185
+        },
+        "humaneval_plus": {
+          "metrics": {
+            "base": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            },
+            "plus": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            }
+          },
+          "truncated": 0,
+          "completion_tokens": 5011,
+          "generation_s": 10.451573730446398,
+          "http_tokens_second": 479.44932784643663
+        }
+      },
+      "native_counters": {
+        "accepted_drafts": 0,
+        "proposed_drafts": 0,
+        "verify_rounds": 0,
+        "generated_tokens": 22054,
+        "lookup_proposed": 0,
+        "lookup_accepted": 0,
+        "lookup_rounds": 0,
+        "verify_s": 49.440531364,
+        "draft_s": 0.000155376,
+        "busy_s": 49.463633287,
+        "acceptance_fraction": null,
+        "emitted_per_verify_round": null
+      }
+    },
+    {
+      "path": "results/binary-5090/tasks-composed/tasks-modern-packed1-fused-plain-b5",
+      "receipt": {
+        "status": "complete",
+        "exit_code": 0
+      },
+      "decoding": {
+        "temperature": 0,
+        "sampling": null,
+        "enable_thinking": false,
+        "max_tokens": {
+          "gsm8k": 4096,
+          "humaneval_plus": 4096
+        },
+        "concurrency": 5
+      },
+      "manifest_sha256": "0330533de253a6b29421216609c18cb4afe5a7e9bc16cb0c574af8b0b4d15c58",
+      "tokens": 23201,
+      "generation_seconds": 49.118247895501554,
+      "http_tokens_second": 472.3499105538095,
+      "benchmarks": {
+        "gsm8k": {
+          "metrics": {
+            "accuracy": {
+              "score": 0.90625,
+              "se": 0.05152697639950359,
+              "n": 32,
+              "correct": 29
+            }
+          },
+          "truncated": 1,
+          "completion_tokens": 18070,
+          "generation_s": 38.83889374230057,
+          "http_tokens_second": 465.25527013967024
+        },
+        "humaneval_plus": {
+          "metrics": {
+            "base": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            },
+            "plus": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            }
+          },
+          "truncated": 0,
+          "completion_tokens": 5131,
+          "generation_s": 10.279354153200984,
+          "http_tokens_second": 499.15587336799854
+        }
+      },
+      "native_counters": {
+        "accepted_drafts": 0,
+        "proposed_drafts": 0,
+        "verify_rounds": 0,
+        "generated_tokens": 23264,
+        "lookup_proposed": 0,
+        "lookup_accepted": 0,
+        "lookup_rounds": 0,
+        "verify_s": 49.08894565000001,
+        "draft_s": 0.000135317,
+        "busy_s": 49.114184822000006,
+        "acceptance_fraction": null,
+        "emitted_per_verify_round": null
+      }
+    },
+    {
+      "path": "results/binary-5090/tasks-composed/tasks-modern-packed1-fused-plain-b8",
+      "receipt": {
+        "status": "complete",
+        "exit_code": 0
+      },
+      "decoding": {
+        "temperature": 0,
+        "sampling": null,
+        "enable_thinking": false,
+        "max_tokens": {
+          "gsm8k": 4096,
+          "humaneval_plus": 4096
+        },
+        "concurrency": 8
+      },
+      "manifest_sha256": "0330533de253a6b29421216609c18cb4afe5a7e9bc16cb0c574af8b0b4d15c58",
+      "tokens": 21102,
+      "generation_seconds": 41.219418263062835,
+      "http_tokens_second": 511.94317846328585,
+      "benchmarks": {
+        "gsm8k": {
+          "metrics": {
+            "accuracy": {
+              "score": 0.9375,
+              "se": 0.0427908248050911,
+              "n": 32,
+              "correct": 30
+            }
+          },
+          "truncated": 1,
+          "completion_tokens": 15974,
+          "generation_s": 32.59036439936608,
+          "http_tokens_second": 490.1448724000985
+        },
+        "humaneval_plus": {
+          "metrics": {
+            "base": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            },
+            "plus": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            }
+          },
+          "truncated": 0,
+          "completion_tokens": 5128,
+          "generation_s": 8.629053863696754,
+          "http_tokens_second": 594.2714092415139
+        }
+      },
+      "native_counters": {
+        "accepted_drafts": 0,
+        "proposed_drafts": 0,
+        "verify_rounds": 0,
+        "generated_tokens": 21165,
+        "lookup_proposed": 0,
+        "lookup_accepted": 0,
+        "lookup_rounds": 0,
+        "verify_s": 41.193832876,
+        "draft_s": 0.00011374100000000001,
+        "busy_s": 41.214857032000005,
+        "acceptance_fraction": null,
+        "emitted_per_verify_round": null
+      }
+    }
+  ]
+}

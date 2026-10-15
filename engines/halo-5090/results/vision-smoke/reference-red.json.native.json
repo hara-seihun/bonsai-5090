@@ -1,0 +1,19 @@
+{
+  "prompt_rows": 44,
+  "image_tokens": 16,
+  "next_rope_pos": 32,
+  "encode_s": 0.328752129,
+  "first_visual_rope": [
+    4,
+    4,
+    4,
+    0
+  ],
+  "native_first_token": 5844,
+  "comparison": {
+    "native_top1": 5844,
+    "reference_top1": 1114,
+    "reference_to_native_kld": 0.02459729611525968,
+    "logit_cosine": 0.9937296145108115
+  }
+}

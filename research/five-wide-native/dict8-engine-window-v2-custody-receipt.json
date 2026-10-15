@@ -1,0 +1,12 @@
+{
+  "bytes": 112165400,
+  "sha256": "9a534da504d9109755a986e37515eaa1b6340fc1bb77a6b7c5586ea2615f1ab3",
+  "state": "lossless_export_verified",
+  "logical_files": 47,
+  "unique_objects": 31,
+  "GPU_replay": false,
+  "export_job_id": "00000000-0000-0000-0000-000000000000",
+  "driver_job_id": "00000000-0000-0000-0000-000000000000",
+  "transport_exit": 143,
+  "native_state": "matrix_completed"
+}

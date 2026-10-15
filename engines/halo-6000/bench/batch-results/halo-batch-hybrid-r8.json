@@ -1,0 +1,23 @@
+{
+  "name": "halo-batch-hybrid-r8",
+  "command": [
+    "python3",
+    "/workspace/halo-6000/bench/run-batch.py",
+    "/workspace/models/gguf/Qwen3.6-35B-A3B-ablate-nonexpert-q8-down-q2-PTQ1_0.gguf",
+    "8",
+    "--steps",
+    "16"
+  ],
+  "started_at": "2026-10-05T03:30:17.881259+00:00",
+  "state": "succeeded",
+  "pid": 55188,
+  "process_identity": {
+    "start_ticks": "64553948",
+    "boot_id": "00000000-0000-0000-0000-000000000000"
+  },
+  "child_pid": 55190,
+  "child_pgid": 55190,
+  "exit_code": 0,
+  "wall_seconds": 194.61293777404353,
+  "finished_at": "2026-10-05T03:33:32.494188+00:00"
+}

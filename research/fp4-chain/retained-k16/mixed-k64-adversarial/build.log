@@ -1,0 +1,8 @@
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z5probePKhS0_S0_PjPy' for 'sm_120a'
+ptxas info    : Function properties for _Z5probePKhS0_S0_PjPy
+    64 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 40 registers, used 0 barriers, 64 bytes cumulative stack size
+ptxas info    : Compile time = 0.000 ms
+native_mixed_k64_adversarial.cu
+tmpxft_000003d0_00000000-10_native_mixed_k64_adversarial.cudafe1.cpp

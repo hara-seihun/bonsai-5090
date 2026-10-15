@@ -1,0 +1,7 @@
+{
+  "state": "compiled",
+  "scope": "Exact paired-bit label/terminal continuation and lane-bit ownership; CUDA/F32 and q4/s4/g4 conformance unrun",
+  "compiler": "Lean4.33.0",
+  "source_sha256": "83f1a629c2dfe03a499cc9c850c78c9353351133d7eaa85172d09161e0faa498",
+  "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

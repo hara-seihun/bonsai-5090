@@ -1,0 +1,9 @@
+{
+  "status": "failed",
+  "stage": "startup",
+  "server_exit_code": 1,
+  "error": {
+    "kind": "RuntimeError",
+    "detail": "SERVER_EXIT_BEFORE_READY:1"
+  }
+}

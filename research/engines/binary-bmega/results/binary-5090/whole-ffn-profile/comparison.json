@@ -1,0 +1,16 @@
+{
+  "scope": "Synthetic independent-slot R32, token198 prefix32/ctx512, six decode steps/pass, two passes, F16state/KV, PDL1, hybrid target, exact3 R16+ baseline; no HTTP/DSpark/prefill in timing",
+  "source": "952efb353dcc769e32862386c13c153eb98075ad",
+  "routes": {
+    "off": {
+      "samples": 12,
+      "median_ms": 19.110585,
+      "tokens_per_s": 1674.6018737617512
+    },
+    "three-direct-r16": {
+      "samples": 12,
+      "median_ms": 16.962620499999996,
+      "tokens_per_s": 1886.206701867279
+    }
+  }
+}

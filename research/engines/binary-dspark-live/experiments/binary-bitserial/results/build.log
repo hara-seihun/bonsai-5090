@@ -1,0 +1,134 @@
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_ZN9bitserial10projectionILi16ELb0EEEvPKjPK6__halfNS_7CarrierEPfS7_iiiiff' for 'sm_120a'
+ptxas info    : Function properties for _ZN9bitserial10projectionILi16ELb0EEEvPKjPK6__halfNS_7CarrierEPfS7_iiiiff
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 148 registers, used 1 barriers, 192 bytes smem
+ptxas info    : Compile time = 61.808 ms
+ptxas info    : Compiling entry function '_ZN9bitserial10projectionILi16ELb1EEEvPKjPK6__halfNS_7CarrierEPfS7_iiiiff' for 'sm_120a'
+ptxas info    : Function properties for _ZN9bitserial10projectionILi16ELb1EEEvPKjPK6__halfNS_7CarrierEPfS7_iiiiff
+    184 bytes stack frame, 244 bytes spill stores, 240 bytes spill loads
+ptxas info    : Used 255 registers, used 1 barriers, 184 bytes cumulative stack size, 192 bytes smem
+ptxas info    : Compile time = 170.873 ms
+ptxas info    : Compiling entry function '_ZN9bitserial10projectionILi8ELb0EEEvPKjPK6__halfNS_7CarrierEPfS7_iiiiff' for 'sm_120a'
+ptxas info    : Function properties for _ZN9bitserial10projectionILi8ELb0EEEvPKjPK6__halfNS_7CarrierEPfS7_iiiiff
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 85 registers, used 1 barriers, 96 bytes smem
+ptxas info    : Compile time = 31.406 ms
+ptxas info    : Compiling entry function '_ZN9bitserial10projectionILi8ELb1EEEvPKjPK6__halfNS_7CarrierEPfS7_iiiiff' for 'sm_120a'
+ptxas info    : Function properties for _ZN9bitserial10projectionILi8ELb1EEEvPKjPK6__halfNS_7CarrierEPfS7_iiiiff
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 160 registers, used 1 barriers, 96 bytes smem
+ptxas info    : Compile time = 43.429 ms
+ptxas info    : Compiling entry function '_ZN9bitserial10projectionILi1ELb0EEEvPKjPK6__halfNS_7CarrierEPfS7_iiiiff' for 'sm_120a'
+ptxas info    : Function properties for _ZN9bitserial10projectionILi1ELb0EEEvPKjPK6__halfNS_7CarrierEPfS7_iiiiff
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 40 registers, used 1 barriers, 16 bytes smem
+ptxas info    : Compile time = 9.611 ms
+ptxas info    : Compiling entry function '_ZN9bitserial10projectionILi1ELb1EEEvPKjPK6__halfNS_7CarrierEPfS7_iiiiff' for 'sm_120a'
+ptxas info    : Function properties for _ZN9bitserial10projectionILi1ELb1EEEvPKjPK6__halfNS_7CarrierEPfS7_iiiiff
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 46 registers, used 1 barriers, 16 bytes smem
+ptxas info    : Compile time = 7.982 ms
+ptxas info    : Compiling entry function '_ZN9bitserial12continuationEPKfPfiiff' for 'sm_120a'
+ptxas info    : Function properties for _ZN9bitserial12continuationEPKfPfiiff
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 40 registers, used 0 barriers
+ptxas info    : Compile time = 4.603 ms
+ptxas info    : Compiling entry function '_ZN9bitserial8producerILb0EEEvPKfiNS_7CarrierE' for 'sm_120a'
+ptxas info    : Function properties for _ZN9bitserial8producerILb0EEEvPKfiNS_7CarrierE
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 27 registers, used 1 barriers, 48 bytes smem
+ptxas info    : Compile time = 6.790 ms
+ptxas info    : Compiling entry function '_ZN9bitserial8producerILb1EEEvPKfiNS_7CarrierE' for 'sm_120a'
+ptxas info    : Function properties for _ZN9bitserial8producerILb1EEEvPKfiNS_7CarrierE
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 24 registers, used 1 barriers, 48 bytes smem
+ptxas info    : Compile time = 7.606 ms
+ptxas info    : Compiling entry function '_ZN9bitserial9transposeEPKhPjP6__halfii' for 'sm_120a'
+ptxas info    : Function properties for _ZN9bitserial9transposeEPKhPjP6__halfii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 26 registers, used 0 barriers
+ptxas info    : Compile time = 4.594 ms
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_ZN14int8_reference50_GLOBAL__N__3cd25dca_17_reference_int8_cu_d35d8adf9k_gemm_t2ILi0EEEvPKaPKfiiPK5uint4S5_iPfi' for 'sm_120a'
+ptxas info    : Function properties for _ZN14int8_reference50_GLOBAL__N__3cd25dca_17_reference_int8_cu_d35d8adf9k_gemm_t2ILi0EEEvPKaPKfiiPK5uint4S5_iPfi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 239 registers, used 1 barriers
+ptxas info    : Compile time = 33.764 ms
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z9referencePKhPKaPKfPfii' for 'sm_120a'
+ptxas info    : Function properties for _Z9referencePKhPKaPKfPfii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 28 registers, used 0 barriers
+ptxas info    : Compile time = 3.770 ms
+ptxas info    : Compiling entry function '_Z5evictPjm' for 'sm_120a'
+ptxas info    : Function properties for _Z5evictPjm
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 8 registers, used 0 barriers
+ptxas info    : Compile time = 0.855 ms
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_ZN7packed19lut_multiILi8EEEvPKjPK6__halfPKfPfS8_iiiiff' for 'sm_120a'
+ptxas info    : Function properties for _ZN7packed19lut_multiILi8EEEvPKjPK6__halfPKfPfS8_iiiiff
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 40 registers, used 1 barriers
+ptxas info    : Compile time = 26.466 ms
+ptxas info    : Compiling entry function '_ZN7packed19lut_multiILi7EEEvPKjPK6__halfPKfPfS8_iiiiff' for 'sm_120a'
+ptxas info    : Function properties for _ZN7packed19lut_multiILi7EEEvPKjPK6__halfPKfPfS8_iiiiff
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 40 registers, used 1 barriers
+ptxas info    : Compile time = 23.655 ms
+ptxas info    : Compiling entry function '_ZN7packed19lut_multiILi6EEEvPKjPK6__halfPKfPfS8_iiiiff' for 'sm_120a'
+ptxas info    : Function properties for _ZN7packed19lut_multiILi6EEEvPKjPK6__halfPKfPfS8_iiiiff
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 40 registers, used 1 barriers
+ptxas info    : Compile time = 21.046 ms
+ptxas info    : Compiling entry function '_ZN7packed19lut_multiILi5EEEvPKjPK6__halfPKfPfS8_iiiiff' for 'sm_120a'
+ptxas info    : Function properties for _ZN7packed19lut_multiILi5EEEvPKjPK6__halfPKfPfS8_iiiiff
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 40 registers, used 1 barriers
+ptxas info    : Compile time = 18.749 ms
+ptxas info    : Compiling entry function '_ZN7packed19lut_multiILi4EEEvPKjPK6__halfPKfPfS8_iiiiff' for 'sm_120a'
+ptxas info    : Function properties for _ZN7packed19lut_multiILi4EEEvPKjPK6__halfPKfPfS8_iiiiff
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 40 registers, used 1 barriers
+ptxas info    : Compile time = 16.589 ms
+ptxas info    : Compiling entry function '_ZN7packed19lut_multiILi3EEEvPKjPK6__halfPKfPfS8_iiiiff' for 'sm_120a'
+ptxas info    : Function properties for _ZN7packed19lut_multiILi3EEEvPKjPK6__halfPKfPfS8_iiiiff
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 40 registers, used 1 barriers
+ptxas info    : Compile time = 12.479 ms
+ptxas info    : Compiling entry function '_ZN7packed19lut_multiILi2EEEvPKjPK6__halfPKfPfS8_iiiiff' for 'sm_120a'
+ptxas info    : Function properties for _ZN7packed19lut_multiILi2EEEvPKjPK6__halfPKfPfS8_iiiiff
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 40 registers, used 1 barriers
+ptxas info    : Compile time = 10.617 ms
+ptxas info    : Compiling entry function '_ZN7packed19lut_multiILi1EEEvPKjPK6__halfPKfPfS8_iiiiff' for 'sm_120a'
+ptxas info    : Function properties for _ZN7packed19lut_multiILi1EEEvPKjPK6__halfPKfPfS8_iiiiff
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 36 registers, used 1 barriers
+ptxas info    : Compile time = 7.509 ms
+ptxas info    : Compiling entry function '_ZN7packed112continuationEPKfPfiiiff' for 'sm_120a'
+ptxas info    : Function properties for _ZN7packed112continuationEPKfPfiiiff
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 40 registers, used 0 barriers
+ptxas info    : Compile time = 4.596 ms
+ptxas info    : Compiling entry function '_ZN7packed115warp_projectionEPKjPK6__halfPKfPfS7_iiiiff' for 'sm_120a'
+ptxas info    : Function properties for _ZN7packed115warp_projectionEPKjPK6__halfPKfPfS7_iiiiff
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 40 registers, used 0 barriers
+ptxas info    : Compile time = 8.477 ms
+ptxas info    : Compiling entry function '_ZN7packed110projectionEPKjPK6__halfPKfS6_PfS7_iiiiff' for 'sm_120a'
+ptxas info    : Function properties for _ZN7packed110projectionEPKjPK6__halfPKfS6_PfS7_iiiiff
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 39 registers, used 1 barriers
+ptxas info    : Compile time = 11.830 ms
+ptxas info    : Compiling entry function '_ZN7packed17produceEPKfPfii' for 'sm_120a'
+ptxas info    : Function properties for _ZN7packed17produceEPKfPfii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 14 registers, used 0 barriers
+ptxas info    : Compile time = 1.101 ms
+ptxas info    : Compiling entry function '_ZN7packed19transposeEPKhPjP6__halfii' for 'sm_120a'
+ptxas info    : Function properties for _ZN7packed19transposeEPKhPjP6__halfii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 26 registers, used 0 barriers
+ptxas info    : Compile time = 4.608 ms

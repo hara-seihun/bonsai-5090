@@ -1,0 +1,2305 @@
+{
+  "grid": 188,
+  "position": 40,
+  "token_us": 3292.064,
+  "buckets_us": {
+    "down_sum": 489.37600000000015,
+    "projections": 482.624,
+    "head": 413.856,
+    "gate_up_q": 332.992,
+    "router": 280.9920000000001,
+    "norm_q": 279.32800000000003,
+    "residual_norm_q": 273.696,
+    "output_mv": 237.34400000000005,
+    "select": 109.47200000000002,
+    "conv_prepare": 106.52800000000005,
+    "recur": 101.76000000000003,
+    "finish_q": 89.82400000000001,
+    "norm_rope_append": 26.272,
+    "gate_q": 20.671999999999997,
+    "softmax": 17.183999999999997,
+    "scores": 16.128,
+    "finalnorm_q": 6.464,
+    "argmax_partials": 4.896,
+    "embedding": 1.696,
+    "argmax_finish": 0.96
+  },
+  "rows": [
+    {
+      "layer": null,
+      "phase": "embedding",
+      "us": 1.696
+    },
+    {
+      "layer": 0,
+      "phase": "norm_q",
+      "us": 7.936
+    },
+    {
+      "layer": 0,
+      "phase": "projections",
+      "us": 13.28
+    },
+    {
+      "layer": 0,
+      "phase": "conv_prepare",
+      "us": 3.552
+    },
+    {
+      "layer": 0,
+      "phase": "recur",
+      "us": 3.328
+    },
+    {
+      "layer": 0,
+      "phase": "finish_q",
+      "us": 3.2
+    },
+    {
+      "layer": 0,
+      "phase": "output_mv",
+      "us": 6.72
+    },
+    {
+      "layer": 0,
+      "phase": "residual_norm_q",
+      "us": 6.656
+    },
+    {
+      "layer": 0,
+      "phase": "router",
+      "us": 7.136
+    },
+    {
+      "layer": 0,
+      "phase": "select",
+      "us": 4.992
+    },
+    {
+      "layer": 0,
+      "phase": "gate_up_q",
+      "us": 9.184
+    },
+    {
+      "layer": 0,
+      "phase": "down_sum",
+      "us": 12.416
+    },
+    {
+      "layer": 1,
+      "phase": "norm_q",
+      "us": 6.528
+    },
+    {
+      "layer": 1,
+      "phase": "projections",
+      "us": 12.192
+    },
+    {
+      "layer": 1,
+      "phase": "conv_prepare",
+      "us": 3.776
+    },
+    {
+      "layer": 1,
+      "phase": "recur",
+      "us": 2.976
+    },
+    {
+      "layer": 1,
+      "phase": "finish_q",
+      "us": 2.976
+    },
+    {
+      "layer": 1,
+      "phase": "output_mv",
+      "us": 5.664
+    },
+    {
+      "layer": 1,
+      "phase": "residual_norm_q",
+      "us": 6.752
+    },
+    {
+      "layer": 1,
+      "phase": "router",
+      "us": 6.88
+    },
+    {
+      "layer": 1,
+      "phase": "select",
+      "us": 2.592
+    },
+    {
+      "layer": 1,
+      "phase": "gate_up_q",
+      "us": 7.616
+    },
+    {
+      "layer": 1,
+      "phase": "down_sum",
+      "us": 12.32
+    },
+    {
+      "layer": 2,
+      "phase": "norm_q",
+      "us": 6.848
+    },
+    {
+      "layer": 2,
+      "phase": "projections",
+      "us": 12.352
+    },
+    {
+      "layer": 2,
+      "phase": "conv_prepare",
+      "us": 3.808
+    },
+    {
+      "layer": 2,
+      "phase": "recur",
+      "us": 3.04
+    },
+    {
+      "layer": 2,
+      "phase": "finish_q",
+      "us": 3.072
+    },
+    {
+      "layer": 2,
+      "phase": "output_mv",
+      "us": 5.664
+    },
+    {
+      "layer": 2,
+      "phase": "residual_norm_q",
+      "us": 6.752
+    },
+    {
+      "layer": 2,
+      "phase": "router",
+      "us": 6.592
+    },
+    {
+      "layer": 2,
+      "phase": "select",
+      "us": 2.592
+    },
+    {
+      "layer": 2,
+      "phase": "gate_up_q",
+      "us": 7.712
+    },
+    {
+      "layer": 2,
+      "phase": "down_sum",
+      "us": 12.288
+    },
+    {
+      "layer": 3,
+      "phase": "norm_q",
+      "us": 6.88
+    },
+    {
+      "layer": 3,
+      "phase": "projections",
+      "us": 11.008
+    },
+    {
+      "layer": 3,
+      "phase": "norm_rope_append",
+      "us": 2.56
+    },
+    {
+      "layer": 3,
+      "phase": "scores",
+      "us": 1.632
+    },
+    {
+      "layer": 3,
+      "phase": "softmax",
+      "us": 1.824
+    },
+    {
+      "layer": 3,
+      "phase": "gate_q",
+      "us": 2.08
+    },
+    {
+      "layer": 3,
+      "phase": "output_mv",
+      "us": 6.816
+    },
+    {
+      "layer": 3,
+      "phase": "residual_norm_q",
+      "us": 6.88
+    },
+    {
+      "layer": 3,
+      "phase": "router",
+      "us": 6.656
+    },
+    {
+      "layer": 3,
+      "phase": "select",
+      "us": 4.672
+    },
+    {
+      "layer": 3,
+      "phase": "gate_up_q",
+      "us": 9.28
+    },
+    {
+      "layer": 3,
+      "phase": "down_sum",
+      "us": 12.608
+    },
+    {
+      "layer": 4,
+      "phase": "norm_q",
+      "us": 7.456
+    },
+    {
+      "layer": 4,
+      "phase": "projections",
+      "us": 12.544
+    },
+    {
+      "layer": 4,
+      "phase": "conv_prepare",
+      "us": 3.552
+    },
+    {
+      "layer": 4,
+      "phase": "recur",
+      "us": 3.264
+    },
+    {
+      "layer": 4,
+      "phase": "finish_q",
+      "us": 3.168
+    },
+    {
+      "layer": 4,
+      "phase": "output_mv",
+      "us": 5.92
+    },
+    {
+      "layer": 4,
+      "phase": "residual_norm_q",
+      "us": 6.912
+    },
+    {
+      "layer": 4,
+      "phase": "router",
+      "us": 6.848
+    },
+    {
+      "layer": 4,
+      "phase": "select",
+      "us": 2.624
+    },
+    {
+      "layer": 4,
+      "phase": "gate_up_q",
+      "us": 8.096
+    },
+    {
+      "layer": 4,
+      "phase": "down_sum",
+      "us": 12.288
+    },
+    {
+      "layer": 5,
+      "phase": "norm_q",
+      "us": 7.136
+    },
+    {
+      "layer": 5,
+      "phase": "projections",
+      "us": 12.608
+    },
+    {
+      "layer": 5,
+      "phase": "conv_prepare",
+      "us": 3.392
+    },
+    {
+      "layer": 5,
+      "phase": "recur",
+      "us": 3.36
+    },
+    {
+      "layer": 5,
+      "phase": "finish_q",
+      "us": 2.944
+    },
+    {
+      "layer": 5,
+      "phase": "output_mv",
+      "us": 5.696
+    },
+    {
+      "layer": 5,
+      "phase": "residual_norm_q",
+      "us": 6.624
+    },
+    {
+      "layer": 5,
+      "phase": "router",
+      "us": 7.04
+    },
+    {
+      "layer": 5,
+      "phase": "select",
+      "us": 2.592
+    },
+    {
+      "layer": 5,
+      "phase": "gate_up_q",
+      "us": 7.936
+    },
+    {
+      "layer": 5,
+      "phase": "down_sum",
+      "us": 12.48
+    },
+    {
+      "layer": 6,
+      "phase": "norm_q",
+      "us": 6.816
+    },
+    {
+      "layer": 6,
+      "phase": "projections",
+      "us": 12.384
+    },
+    {
+      "layer": 6,
+      "phase": "conv_prepare",
+      "us": 3.52
+    },
+    {
+      "layer": 6,
+      "phase": "recur",
+      "us": 3.232
+    },
+    {
+      "layer": 6,
+      "phase": "finish_q",
+      "us": 3.008
+    },
+    {
+      "layer": 6,
+      "phase": "output_mv",
+      "us": 5.536
+    },
+    {
+      "layer": 6,
+      "phase": "residual_norm_q",
+      "us": 6.752
+    },
+    {
+      "layer": 6,
+      "phase": "router",
+      "us": 7.008
+    },
+    {
+      "layer": 6,
+      "phase": "select",
+      "us": 2.56
+    },
+    {
+      "layer": 6,
+      "phase": "gate_up_q",
+      "us": 8.352
+    },
+    {
+      "layer": 6,
+      "phase": "down_sum",
+      "us": 11.968
+    },
+    {
+      "layer": 7,
+      "phase": "norm_q",
+      "us": 7.168
+    },
+    {
+      "layer": 7,
+      "phase": "projections",
+      "us": 10.144
+    },
+    {
+      "layer": 7,
+      "phase": "norm_rope_append",
+      "us": 2.688
+    },
+    {
+      "layer": 7,
+      "phase": "scores",
+      "us": 1.568
+    },
+    {
+      "layer": 7,
+      "phase": "softmax",
+      "us": 1.632
+    },
+    {
+      "layer": 7,
+      "phase": "gate_q",
+      "us": 2.016
+    },
+    {
+      "layer": 7,
+      "phase": "output_mv",
+      "us": 6.272
+    },
+    {
+      "layer": 7,
+      "phase": "residual_norm_q",
+      "us": 6.752
+    },
+    {
+      "layer": 7,
+      "phase": "router",
+      "us": 7.392
+    },
+    {
+      "layer": 7,
+      "phase": "select",
+      "us": 2.688
+    },
+    {
+      "layer": 7,
+      "phase": "gate_up_q",
+      "us": 8.864
+    },
+    {
+      "layer": 7,
+      "phase": "down_sum",
+      "us": 12.64
+    },
+    {
+      "layer": 8,
+      "phase": "norm_q",
+      "us": 7.04
+    },
+    {
+      "layer": 8,
+      "phase": "projections",
+      "us": 12.704
+    },
+    {
+      "layer": 8,
+      "phase": "conv_prepare",
+      "us": 3.616
+    },
+    {
+      "layer": 8,
+      "phase": "recur",
+      "us": 3.456
+    },
+    {
+      "layer": 8,
+      "phase": "finish_q",
+      "us": 3.04
+    },
+    {
+      "layer": 8,
+      "phase": "output_mv",
+      "us": 5.76
+    },
+    {
+      "layer": 8,
+      "phase": "residual_norm_q",
+      "us": 6.72
+    },
+    {
+      "layer": 8,
+      "phase": "router",
+      "us": 7.456
+    },
+    {
+      "layer": 8,
+      "phase": "select",
+      "us": 2.656
+    },
+    {
+      "layer": 8,
+      "phase": "gate_up_q",
+      "us": 8.288
+    },
+    {
+      "layer": 8,
+      "phase": "down_sum",
+      "us": 11.968
+    },
+    {
+      "layer": 9,
+      "phase": "norm_q",
+      "us": 6.976
+    },
+    {
+      "layer": 9,
+      "phase": "projections",
+      "us": 12.896
+    },
+    {
+      "layer": 9,
+      "phase": "conv_prepare",
+      "us": 3.424
+    },
+    {
+      "layer": 9,
+      "phase": "recur",
+      "us": 3.2
+    },
+    {
+      "layer": 9,
+      "phase": "finish_q",
+      "us": 3.04
+    },
+    {
+      "layer": 9,
+      "phase": "output_mv",
+      "us": 5.728
+    },
+    {
+      "layer": 9,
+      "phase": "residual_norm_q",
+      "us": 6.976
+    },
+    {
+      "layer": 9,
+      "phase": "router",
+      "us": 7.136
+    },
+    {
+      "layer": 9,
+      "phase": "select",
+      "us": 2.56
+    },
+    {
+      "layer": 9,
+      "phase": "gate_up_q",
+      "us": 8.352
+    },
+    {
+      "layer": 9,
+      "phase": "down_sum",
+      "us": 12.128
+    },
+    {
+      "layer": 10,
+      "phase": "norm_q",
+      "us": 6.72
+    },
+    {
+      "layer": 10,
+      "phase": "projections",
+      "us": 12.576
+    },
+    {
+      "layer": 10,
+      "phase": "conv_prepare",
+      "us": 3.424
+    },
+    {
+      "layer": 10,
+      "phase": "recur",
+      "us": 3.616
+    },
+    {
+      "layer": 10,
+      "phase": "finish_q",
+      "us": 2.88
+    },
+    {
+      "layer": 10,
+      "phase": "output_mv",
+      "us": 5.792
+    },
+    {
+      "layer": 10,
+      "phase": "residual_norm_q",
+      "us": 6.784
+    },
+    {
+      "layer": 10,
+      "phase": "router",
+      "us": 6.848
+    },
+    {
+      "layer": 10,
+      "phase": "select",
+      "us": 2.592
+    },
+    {
+      "layer": 10,
+      "phase": "gate_up_q",
+      "us": 7.968
+    },
+    {
+      "layer": 10,
+      "phase": "down_sum",
+      "us": 12.576
+    },
+    {
+      "layer": 11,
+      "phase": "norm_q",
+      "us": 7.04
+    },
+    {
+      "layer": 11,
+      "phase": "projections",
+      "us": 10.432
+    },
+    {
+      "layer": 11,
+      "phase": "norm_rope_append",
+      "us": 2.56
+    },
+    {
+      "layer": 11,
+      "phase": "scores",
+      "us": 1.856
+    },
+    {
+      "layer": 11,
+      "phase": "softmax",
+      "us": 2.336
+    },
+    {
+      "layer": 11,
+      "phase": "gate_q",
+      "us": 2.208
+    },
+    {
+      "layer": 11,
+      "phase": "output_mv",
+      "us": 6.016
+    },
+    {
+      "layer": 11,
+      "phase": "residual_norm_q",
+      "us": 7.136
+    },
+    {
+      "layer": 11,
+      "phase": "router",
+      "us": 7.328
+    },
+    {
+      "layer": 11,
+      "phase": "select",
+      "us": 2.688
+    },
+    {
+      "layer": 11,
+      "phase": "gate_up_q",
+      "us": 8.864
+    },
+    {
+      "layer": 11,
+      "phase": "down_sum",
+      "us": 12.16
+    },
+    {
+      "layer": 12,
+      "phase": "norm_q",
+      "us": 7.168
+    },
+    {
+      "layer": 12,
+      "phase": "projections",
+      "us": 12.768
+    },
+    {
+      "layer": 12,
+      "phase": "conv_prepare",
+      "us": 3.552
+    },
+    {
+      "layer": 12,
+      "phase": "recur",
+      "us": 3.264
+    },
+    {
+      "layer": 12,
+      "phase": "finish_q",
+      "us": 3.136
+    },
+    {
+      "layer": 12,
+      "phase": "output_mv",
+      "us": 6.016
+    },
+    {
+      "layer": 12,
+      "phase": "residual_norm_q",
+      "us": 6.816
+    },
+    {
+      "layer": 12,
+      "phase": "router",
+      "us": 6.976
+    },
+    {
+      "layer": 12,
+      "phase": "select",
+      "us": 2.624
+    },
+    {
+      "layer": 12,
+      "phase": "gate_up_q",
+      "us": 8.416
+    },
+    {
+      "layer": 12,
+      "phase": "down_sum",
+      "us": 12.224
+    },
+    {
+      "layer": 13,
+      "phase": "norm_q",
+      "us": 6.752
+    },
+    {
+      "layer": 13,
+      "phase": "projections",
+      "us": 12.928
+    },
+    {
+      "layer": 13,
+      "phase": "conv_prepare",
+      "us": 3.584
+    },
+    {
+      "layer": 13,
+      "phase": "recur",
+      "us": 3.552
+    },
+    {
+      "layer": 13,
+      "phase": "finish_q",
+      "us": 3.136
+    },
+    {
+      "layer": 13,
+      "phase": "output_mv",
+      "us": 6.048
+    },
+    {
+      "layer": 13,
+      "phase": "residual_norm_q",
+      "us": 6.848
+    },
+    {
+      "layer": 13,
+      "phase": "router",
+      "us": 7.008
+    },
+    {
+      "layer": 13,
+      "phase": "select",
+      "us": 2.592
+    },
+    {
+      "layer": 13,
+      "phase": "gate_up_q",
+      "us": 8.352
+    },
+    {
+      "layer": 13,
+      "phase": "down_sum",
+      "us": 12.192
+    },
+    {
+      "layer": 14,
+      "phase": "norm_q",
+      "us": 6.784
+    },
+    {
+      "layer": 14,
+      "phase": "projections",
+      "us": 12.928
+    },
+    {
+      "layer": 14,
+      "phase": "conv_prepare",
+      "us": 3.328
+    },
+    {
+      "layer": 14,
+      "phase": "recur",
+      "us": 3.296
+    },
+    {
+      "layer": 14,
+      "phase": "finish_q",
+      "us": 3.04
+    },
+    {
+      "layer": 14,
+      "phase": "output_mv",
+      "us": 5.76
+    },
+    {
+      "layer": 14,
+      "phase": "residual_norm_q",
+      "us": 6.88
+    },
+    {
+      "layer": 14,
+      "phase": "router",
+      "us": 6.912
+    },
+    {
+      "layer": 14,
+      "phase": "select",
+      "us": 2.592
+    },
+    {
+      "layer": 14,
+      "phase": "gate_up_q",
+      "us": 8.384
+    },
+    {
+      "layer": 14,
+      "phase": "down_sum",
+      "us": 12.096
+    },
+    {
+      "layer": 15,
+      "phase": "norm_q",
+      "us": 6.88
+    },
+    {
+      "layer": 15,
+      "phase": "projections",
+      "us": 10.208
+    },
+    {
+      "layer": 15,
+      "phase": "norm_rope_append",
+      "us": 2.624
+    },
+    {
+      "layer": 15,
+      "phase": "scores",
+      "us": 1.632
+    },
+    {
+      "layer": 15,
+      "phase": "softmax",
+      "us": 1.664
+    },
+    {
+      "layer": 15,
+      "phase": "gate_q",
+      "us": 2.048
+    },
+    {
+      "layer": 15,
+      "phase": "output_mv",
+      "us": 6.016
+    },
+    {
+      "layer": 15,
+      "phase": "residual_norm_q",
+      "us": 6.88
+    },
+    {
+      "layer": 15,
+      "phase": "router",
+      "us": 6.976
+    },
+    {
+      "layer": 15,
+      "phase": "select",
+      "us": 2.688
+    },
+    {
+      "layer": 15,
+      "phase": "gate_up_q",
+      "us": 8.448
+    },
+    {
+      "layer": 15,
+      "phase": "down_sum",
+      "us": 12.064
+    },
+    {
+      "layer": 16,
+      "phase": "norm_q",
+      "us": 6.944
+    },
+    {
+      "layer": 16,
+      "phase": "projections",
+      "us": 12.928
+    },
+    {
+      "layer": 16,
+      "phase": "conv_prepare",
+      "us": 3.52
+    },
+    {
+      "layer": 16,
+      "phase": "recur",
+      "us": 3.456
+    },
+    {
+      "layer": 16,
+      "phase": "finish_q",
+      "us": 3.104
+    },
+    {
+      "layer": 16,
+      "phase": "output_mv",
+      "us": 5.984
+    },
+    {
+      "layer": 16,
+      "phase": "residual_norm_q",
+      "us": 6.784
+    },
+    {
+      "layer": 16,
+      "phase": "router",
+      "us": 6.688
+    },
+    {
+      "layer": 16,
+      "phase": "select",
+      "us": 2.624
+    },
+    {
+      "layer": 16,
+      "phase": "gate_up_q",
+      "us": 8.512
+    },
+    {
+      "layer": 16,
+      "phase": "down_sum",
+      "us": 12.064
+    },
+    {
+      "layer": 17,
+      "phase": "norm_q",
+      "us": 6.784
+    },
+    {
+      "layer": 17,
+      "phase": "projections",
+      "us": 12.32
+    },
+    {
+      "layer": 17,
+      "phase": "conv_prepare",
+      "us": 3.552
+    },
+    {
+      "layer": 17,
+      "phase": "recur",
+      "us": 3.232
+    },
+    {
+      "layer": 17,
+      "phase": "finish_q",
+      "us": 2.976
+    },
+    {
+      "layer": 17,
+      "phase": "output_mv",
+      "us": 5.728
+    },
+    {
+      "layer": 17,
+      "phase": "residual_norm_q",
+      "us": 6.592
+    },
+    {
+      "layer": 17,
+      "phase": "router",
+      "us": 7.296
+    },
+    {
+      "layer": 17,
+      "phase": "select",
+      "us": 2.592
+    },
+    {
+      "layer": 17,
+      "phase": "gate_up_q",
+      "us": 8.096
+    },
+    {
+      "layer": 17,
+      "phase": "down_sum",
+      "us": 12.448
+    },
+    {
+      "layer": 18,
+      "phase": "norm_q",
+      "us": 6.656
+    },
+    {
+      "layer": 18,
+      "phase": "projections",
+      "us": 12.576
+    },
+    {
+      "layer": 18,
+      "phase": "conv_prepare",
+      "us": 3.584
+    },
+    {
+      "layer": 18,
+      "phase": "recur",
+      "us": 3.232
+    },
+    {
+      "layer": 18,
+      "phase": "finish_q",
+      "us": 2.912
+    },
+    {
+      "layer": 18,
+      "phase": "output_mv",
+      "us": 5.632
+    },
+    {
+      "layer": 18,
+      "phase": "residual_norm_q",
+      "us": 7.2
+    },
+    {
+      "layer": 18,
+      "phase": "router",
+      "us": 7.392
+    },
+    {
+      "layer": 18,
+      "phase": "select",
+      "us": 2.592
+    },
+    {
+      "layer": 18,
+      "phase": "gate_up_q",
+      "us": 8.224
+    },
+    {
+      "layer": 18,
+      "phase": "down_sum",
+      "us": 12.192
+    },
+    {
+      "layer": 19,
+      "phase": "norm_q",
+      "us": 6.752
+    },
+    {
+      "layer": 19,
+      "phase": "projections",
+      "us": 10.176
+    },
+    {
+      "layer": 19,
+      "phase": "norm_rope_append",
+      "us": 2.592
+    },
+    {
+      "layer": 19,
+      "phase": "scores",
+      "us": 1.408
+    },
+    {
+      "layer": 19,
+      "phase": "softmax",
+      "us": 1.632
+    },
+    {
+      "layer": 19,
+      "phase": "gate_q",
+      "us": 2.016
+    },
+    {
+      "layer": 19,
+      "phase": "output_mv",
+      "us": 6.016
+    },
+    {
+      "layer": 19,
+      "phase": "residual_norm_q",
+      "us": 7.04
+    },
+    {
+      "layer": 19,
+      "phase": "router",
+      "us": 7.424
+    },
+    {
+      "layer": 19,
+      "phase": "select",
+      "us": 2.72
+    },
+    {
+      "layer": 19,
+      "phase": "gate_up_q",
+      "us": 8.576
+    },
+    {
+      "layer": 19,
+      "phase": "down_sum",
+      "us": 12.096
+    },
+    {
+      "layer": 20,
+      "phase": "norm_q",
+      "us": 7.392
+    },
+    {
+      "layer": 20,
+      "phase": "projections",
+      "us": 12.768
+    },
+    {
+      "layer": 20,
+      "phase": "conv_prepare",
+      "us": 3.392
+    },
+    {
+      "layer": 20,
+      "phase": "recur",
+      "us": 3.328
+    },
+    {
+      "layer": 20,
+      "phase": "finish_q",
+      "us": 3.008
+    },
+    {
+      "layer": 20,
+      "phase": "output_mv",
+      "us": 6.08
+    },
+    {
+      "layer": 20,
+      "phase": "residual_norm_q",
+      "us": 6.912
+    },
+    {
+      "layer": 20,
+      "phase": "router",
+      "us": 6.816
+    },
+    {
+      "layer": 20,
+      "phase": "select",
+      "us": 2.656
+    },
+    {
+      "layer": 20,
+      "phase": "gate_up_q",
+      "us": 8.16
+    },
+    {
+      "layer": 20,
+      "phase": "down_sum",
+      "us": 12.16
+    },
+    {
+      "layer": 21,
+      "phase": "norm_q",
+      "us": 6.976
+    },
+    {
+      "layer": 21,
+      "phase": "projections",
+      "us": 12.48
+    },
+    {
+      "layer": 21,
+      "phase": "conv_prepare",
+      "us": 3.648
+    },
+    {
+      "layer": 21,
+      "phase": "recur",
+      "us": 3.392
+    },
+    {
+      "layer": 21,
+      "phase": "finish_q",
+      "us": 2.912
+    },
+    {
+      "layer": 21,
+      "phase": "output_mv",
+      "us": 5.728
+    },
+    {
+      "layer": 21,
+      "phase": "residual_norm_q",
+      "us": 6.88
+    },
+    {
+      "layer": 21,
+      "phase": "router",
+      "us": 7.232
+    },
+    {
+      "layer": 21,
+      "phase": "select",
+      "us": 2.56
+    },
+    {
+      "layer": 21,
+      "phase": "gate_up_q",
+      "us": 7.936
+    },
+    {
+      "layer": 21,
+      "phase": "down_sum",
+      "us": 12.224
+    },
+    {
+      "layer": 22,
+      "phase": "norm_q",
+      "us": 6.624
+    },
+    {
+      "layer": 22,
+      "phase": "projections",
+      "us": 12.576
+    },
+    {
+      "layer": 22,
+      "phase": "conv_prepare",
+      "us": 3.456
+    },
+    {
+      "layer": 22,
+      "phase": "recur",
+      "us": 3.68
+    },
+    {
+      "layer": 22,
+      "phase": "finish_q",
+      "us": 2.848
+    },
+    {
+      "layer": 22,
+      "phase": "output_mv",
+      "us": 6.08
+    },
+    {
+      "layer": 22,
+      "phase": "residual_norm_q",
+      "us": 6.752
+    },
+    {
+      "layer": 22,
+      "phase": "router",
+      "us": 7.136
+    },
+    {
+      "layer": 22,
+      "phase": "select",
+      "us": 2.592
+    },
+    {
+      "layer": 22,
+      "phase": "gate_up_q",
+      "us": 8.096
+    },
+    {
+      "layer": 22,
+      "phase": "down_sum",
+      "us": 12.416
+    },
+    {
+      "layer": 23,
+      "phase": "norm_q",
+      "us": 6.784
+    },
+    {
+      "layer": 23,
+      "phase": "projections",
+      "us": 10.592
+    },
+    {
+      "layer": 23,
+      "phase": "norm_rope_append",
+      "us": 2.656
+    },
+    {
+      "layer": 23,
+      "phase": "scores",
+      "us": 1.664
+    },
+    {
+      "layer": 23,
+      "phase": "softmax",
+      "us": 1.664
+    },
+    {
+      "layer": 23,
+      "phase": "gate_q",
+      "us": 2.016
+    },
+    {
+      "layer": 23,
+      "phase": "output_mv",
+      "us": 6.208
+    },
+    {
+      "layer": 23,
+      "phase": "residual_norm_q",
+      "us": 6.944
+    },
+    {
+      "layer": 23,
+      "phase": "router",
+      "us": 7.008
+    },
+    {
+      "layer": 23,
+      "phase": "select",
+      "us": 2.688
+    },
+    {
+      "layer": 23,
+      "phase": "gate_up_q",
+      "us": 8.608
+    },
+    {
+      "layer": 23,
+      "phase": "down_sum",
+      "us": 12.672
+    },
+    {
+      "layer": 24,
+      "phase": "norm_q",
+      "us": 7.04
+    },
+    {
+      "layer": 24,
+      "phase": "projections",
+      "us": 12.544
+    },
+    {
+      "layer": 24,
+      "phase": "conv_prepare",
+      "us": 3.744
+    },
+    {
+      "layer": 24,
+      "phase": "recur",
+      "us": 4.064
+    },
+    {
+      "layer": 24,
+      "phase": "finish_q",
+      "us": 2.944
+    },
+    {
+      "layer": 24,
+      "phase": "output_mv",
+      "us": 5.984
+    },
+    {
+      "layer": 24,
+      "phase": "residual_norm_q",
+      "us": 6.752
+    },
+    {
+      "layer": 24,
+      "phase": "router",
+      "us": 6.848
+    },
+    {
+      "layer": 24,
+      "phase": "select",
+      "us": 2.656
+    },
+    {
+      "layer": 24,
+      "phase": "gate_up_q",
+      "us": 8.16
+    },
+    {
+      "layer": 24,
+      "phase": "down_sum",
+      "us": 12.352
+    },
+    {
+      "layer": 25,
+      "phase": "norm_q",
+      "us": 6.944
+    },
+    {
+      "layer": 25,
+      "phase": "projections",
+      "us": 12.928
+    },
+    {
+      "layer": 25,
+      "phase": "conv_prepare",
+      "us": 3.36
+    },
+    {
+      "layer": 25,
+      "phase": "recur",
+      "us": 3.424
+    },
+    {
+      "layer": 25,
+      "phase": "finish_q",
+      "us": 2.976
+    },
+    {
+      "layer": 25,
+      "phase": "output_mv",
+      "us": 5.632
+    },
+    {
+      "layer": 25,
+      "phase": "residual_norm_q",
+      "us": 6.72
+    },
+    {
+      "layer": 25,
+      "phase": "router",
+      "us": 7.008
+    },
+    {
+      "layer": 25,
+      "phase": "select",
+      "us": 2.592
+    },
+    {
+      "layer": 25,
+      "phase": "gate_up_q",
+      "us": 8.16
+    },
+    {
+      "layer": 25,
+      "phase": "down_sum",
+      "us": 12.16
+    },
+    {
+      "layer": 26,
+      "phase": "norm_q",
+      "us": 6.816
+    },
+    {
+      "layer": 26,
+      "phase": "projections",
+      "us": 12.736
+    },
+    {
+      "layer": 26,
+      "phase": "conv_prepare",
+      "us": 3.456
+    },
+    {
+      "layer": 26,
+      "phase": "recur",
+      "us": 3.456
+    },
+    {
+      "layer": 26,
+      "phase": "finish_q",
+      "us": 2.912
+    },
+    {
+      "layer": 26,
+      "phase": "output_mv",
+      "us": 5.696
+    },
+    {
+      "layer": 26,
+      "phase": "residual_norm_q",
+      "us": 6.752
+    },
+    {
+      "layer": 26,
+      "phase": "router",
+      "us": 7.04
+    },
+    {
+      "layer": 26,
+      "phase": "select",
+      "us": 2.592
+    },
+    {
+      "layer": 26,
+      "phase": "gate_up_q",
+      "us": 7.936
+    },
+    {
+      "layer": 26,
+      "phase": "down_sum",
+      "us": 12.0
+    },
+    {
+      "layer": 27,
+      "phase": "norm_q",
+      "us": 6.912
+    },
+    {
+      "layer": 27,
+      "phase": "projections",
+      "us": 10.144
+    },
+    {
+      "layer": 27,
+      "phase": "norm_rope_append",
+      "us": 2.624
+    },
+    {
+      "layer": 27,
+      "phase": "scores",
+      "us": 1.504
+    },
+    {
+      "layer": 27,
+      "phase": "softmax",
+      "us": 1.664
+    },
+    {
+      "layer": 27,
+      "phase": "gate_q",
+      "us": 2.112
+    },
+    {
+      "layer": 27,
+      "phase": "output_mv",
+      "us": 6.144
+    },
+    {
+      "layer": 27,
+      "phase": "residual_norm_q",
+      "us": 7.136
+    },
+    {
+      "layer": 27,
+      "phase": "router",
+      "us": 6.848
+    },
+    {
+      "layer": 27,
+      "phase": "select",
+      "us": 2.688
+    },
+    {
+      "layer": 27,
+      "phase": "gate_up_q",
+      "us": 8.768
+    },
+    {
+      "layer": 27,
+      "phase": "down_sum",
+      "us": 12.096
+    },
+    {
+      "layer": 28,
+      "phase": "norm_q",
+      "us": 7.328
+    },
+    {
+      "layer": 28,
+      "phase": "projections",
+      "us": 12.608
+    },
+    {
+      "layer": 28,
+      "phase": "conv_prepare",
+      "us": 3.68
+    },
+    {
+      "layer": 28,
+      "phase": "recur",
+      "us": 3.456
+    },
+    {
+      "layer": 28,
+      "phase": "finish_q",
+      "us": 3.04
+    },
+    {
+      "layer": 28,
+      "phase": "output_mv",
+      "us": 5.888
+    },
+    {
+      "layer": 28,
+      "phase": "residual_norm_q",
+      "us": 6.72
+    },
+    {
+      "layer": 28,
+      "phase": "router",
+      "us": 6.752
+    },
+    {
+      "layer": 28,
+      "phase": "select",
+      "us": 2.656
+    },
+    {
+      "layer": 28,
+      "phase": "gate_up_q",
+      "us": 8.16
+    },
+    {
+      "layer": 28,
+      "phase": "down_sum",
+      "us": 12.576
+    },
+    {
+      "layer": 29,
+      "phase": "norm_q",
+      "us": 6.656
+    },
+    {
+      "layer": 29,
+      "phase": "projections",
+      "us": 12.064
+    },
+    {
+      "layer": 29,
+      "phase": "conv_prepare",
+      "us": 3.584
+    },
+    {
+      "layer": 29,
+      "phase": "recur",
+      "us": 3.552
+    },
+    {
+      "layer": 29,
+      "phase": "finish_q",
+      "us": 2.944
+    },
+    {
+      "layer": 29,
+      "phase": "output_mv",
+      "us": 5.792
+    },
+    {
+      "layer": 29,
+      "phase": "residual_norm_q",
+      "us": 6.848
+    },
+    {
+      "layer": 29,
+      "phase": "router",
+      "us": 7.136
+    },
+    {
+      "layer": 29,
+      "phase": "select",
+      "us": 2.592
+    },
+    {
+      "layer": 29,
+      "phase": "gate_up_q",
+      "us": 8.256
+    },
+    {
+      "layer": 29,
+      "phase": "down_sum",
+      "us": 12.0
+    },
+    {
+      "layer": 30,
+      "phase": "norm_q",
+      "us": 6.88
+    },
+    {
+      "layer": 30,
+      "phase": "projections",
+      "us": 12.512
+    },
+    {
+      "layer": 30,
+      "phase": "conv_prepare",
+      "us": 3.776
+    },
+    {
+      "layer": 30,
+      "phase": "recur",
+      "us": 3.136
+    },
+    {
+      "layer": 30,
+      "phase": "finish_q",
+      "us": 2.816
+    },
+    {
+      "layer": 30,
+      "phase": "output_mv",
+      "us": 5.856
+    },
+    {
+      "layer": 30,
+      "phase": "residual_norm_q",
+      "us": 6.848
+    },
+    {
+      "layer": 30,
+      "phase": "router",
+      "us": 6.88
+    },
+    {
+      "layer": 30,
+      "phase": "select",
+      "us": 2.592
+    },
+    {
+      "layer": 30,
+      "phase": "gate_up_q",
+      "us": 7.776
+    },
+    {
+      "layer": 30,
+      "phase": "down_sum",
+      "us": 12.16
+    },
+    {
+      "layer": 31,
+      "phase": "norm_q",
+      "us": 6.944
+    },
+    {
+      "layer": 31,
+      "phase": "projections",
+      "us": 9.888
+    },
+    {
+      "layer": 31,
+      "phase": "norm_rope_append",
+      "us": 2.656
+    },
+    {
+      "layer": 31,
+      "phase": "scores",
+      "us": 1.6
+    },
+    {
+      "layer": 31,
+      "phase": "softmax",
+      "us": 1.6
+    },
+    {
+      "layer": 31,
+      "phase": "gate_q",
+      "us": 2.08
+    },
+    {
+      "layer": 31,
+      "phase": "output_mv",
+      "us": 5.952
+    },
+    {
+      "layer": 31,
+      "phase": "residual_norm_q",
+      "us": 7.232
+    },
+    {
+      "layer": 31,
+      "phase": "router",
+      "us": 6.976
+    },
+    {
+      "layer": 31,
+      "phase": "select",
+      "us": 2.688
+    },
+    {
+      "layer": 31,
+      "phase": "gate_up_q",
+      "us": 8.576
+    },
+    {
+      "layer": 31,
+      "phase": "down_sum",
+      "us": 12.416
+    },
+    {
+      "layer": 32,
+      "phase": "norm_q",
+      "us": 7.648
+    },
+    {
+      "layer": 32,
+      "phase": "projections",
+      "us": 12.512
+    },
+    {
+      "layer": 32,
+      "phase": "conv_prepare",
+      "us": 3.552
+    },
+    {
+      "layer": 32,
+      "phase": "recur",
+      "us": 3.488
+    },
+    {
+      "layer": 32,
+      "phase": "finish_q",
+      "us": 3.072
+    },
+    {
+      "layer": 32,
+      "phase": "output_mv",
+      "us": 6.08
+    },
+    {
+      "layer": 32,
+      "phase": "residual_norm_q",
+      "us": 6.752
+    },
+    {
+      "layer": 32,
+      "phase": "router",
+      "us": 6.912
+    },
+    {
+      "layer": 32,
+      "phase": "select",
+      "us": 2.656
+    },
+    {
+      "layer": 32,
+      "phase": "gate_up_q",
+      "us": 8.384
+    },
+    {
+      "layer": 32,
+      "phase": "down_sum",
+      "us": 12.224
+    },
+    {
+      "layer": 33,
+      "phase": "norm_q",
+      "us": 6.848
+    },
+    {
+      "layer": 33,
+      "phase": "projections",
+      "us": 12.768
+    },
+    {
+      "layer": 33,
+      "phase": "conv_prepare",
+      "us": 3.488
+    },
+    {
+      "layer": 33,
+      "phase": "recur",
+      "us": 3.424
+    },
+    {
+      "layer": 33,
+      "phase": "finish_q",
+      "us": 2.912
+    },
+    {
+      "layer": 33,
+      "phase": "output_mv",
+      "us": 5.792
+    },
+    {
+      "layer": 33,
+      "phase": "residual_norm_q",
+      "us": 6.688
+    },
+    {
+      "layer": 33,
+      "phase": "router",
+      "us": 7.264
+    },
+    {
+      "layer": 33,
+      "phase": "select",
+      "us": 2.592
+    },
+    {
+      "layer": 33,
+      "phase": "gate_up_q",
+      "us": 8.256
+    },
+    {
+      "layer": 33,
+      "phase": "down_sum",
+      "us": 11.968
+    },
+    {
+      "layer": 34,
+      "phase": "norm_q",
+      "us": 7.072
+    },
+    {
+      "layer": 34,
+      "phase": "projections",
+      "us": 12.8
+    },
+    {
+      "layer": 34,
+      "phase": "conv_prepare",
+      "us": 3.328
+    },
+    {
+      "layer": 34,
+      "phase": "recur",
+      "us": 3.296
+    },
+    {
+      "layer": 34,
+      "phase": "finish_q",
+      "us": 3.168
+    },
+    {
+      "layer": 34,
+      "phase": "output_mv",
+      "us": 5.984
+    },
+    {
+      "layer": 34,
+      "phase": "residual_norm_q",
+      "us": 6.688
+    },
+    {
+      "layer": 34,
+      "phase": "router",
+      "us": 7.552
+    },
+    {
+      "layer": 34,
+      "phase": "select",
+      "us": 2.592
+    },
+    {
+      "layer": 34,
+      "phase": "gate_up_q",
+      "us": 8.256
+    },
+    {
+      "layer": 34,
+      "phase": "down_sum",
+      "us": 12.096
+    },
+    {
+      "layer": 35,
+      "phase": "norm_q",
+      "us": 7.168
+    },
+    {
+      "layer": 35,
+      "phase": "projections",
+      "us": 10.24
+    },
+    {
+      "layer": 35,
+      "phase": "norm_rope_append",
+      "us": 2.624
+    },
+    {
+      "layer": 35,
+      "phase": "scores",
+      "us": 1.568
+    },
+    {
+      "layer": 35,
+      "phase": "softmax",
+      "us": 1.6
+    },
+    {
+      "layer": 35,
+      "phase": "gate_q",
+      "us": 2.08
+    },
+    {
+      "layer": 35,
+      "phase": "output_mv",
+      "us": 6.016
+    },
+    {
+      "layer": 35,
+      "phase": "residual_norm_q",
+      "us": 7.136
+    },
+    {
+      "layer": 35,
+      "phase": "router",
+      "us": 7.232
+    },
+    {
+      "layer": 35,
+      "phase": "select",
+      "us": 2.72
+    },
+    {
+      "layer": 35,
+      "phase": "gate_up_q",
+      "us": 8.64
+    },
+    {
+      "layer": 35,
+      "phase": "down_sum",
+      "us": 12.096
+    },
+    {
+      "layer": 36,
+      "phase": "norm_q",
+      "us": 7.104
+    },
+    {
+      "layer": 36,
+      "phase": "projections",
+      "us": 13.088
+    },
+    {
+      "layer": 36,
+      "phase": "conv_prepare",
+      "us": 3.552
+    },
+    {
+      "layer": 36,
+      "phase": "recur",
+      "us": 3.52
+    },
+    {
+      "layer": 36,
+      "phase": "finish_q",
+      "us": 2.848
+    },
+    {
+      "layer": 36,
+      "phase": "output_mv",
+      "us": 5.92
+    },
+    {
+      "layer": 36,
+      "phase": "residual_norm_q",
+      "us": 6.592
+    },
+    {
+      "layer": 36,
+      "phase": "router",
+      "us": 7.072
+    },
+    {
+      "layer": 36,
+      "phase": "select",
+      "us": 2.656
+    },
+    {
+      "layer": 36,
+      "phase": "gate_up_q",
+      "us": 8.512
+    },
+    {
+      "layer": 36,
+      "phase": "down_sum",
+      "us": 12.064
+    },
+    {
+      "layer": 37,
+      "phase": "norm_q",
+      "us": 7.232
+    },
+    {
+      "layer": 37,
+      "phase": "projections",
+      "us": 12.512
+    },
+    {
+      "layer": 37,
+      "phase": "conv_prepare",
+      "us": 3.744
+    },
+    {
+      "layer": 37,
+      "phase": "recur",
+      "us": 3.36
+    },
+    {
+      "layer": 37,
+      "phase": "finish_q",
+      "us": 2.976
+    },
+    {
+      "layer": 37,
+      "phase": "output_mv",
+      "us": 5.728
+    },
+    {
+      "layer": 37,
+      "phase": "residual_norm_q",
+      "us": 7.008
+    },
+    {
+      "layer": 37,
+      "phase": "router",
+      "us": 6.848
+    },
+    {
+      "layer": 37,
+      "phase": "select",
+      "us": 2.592
+    },
+    {
+      "layer": 37,
+      "phase": "gate_up_q",
+      "us": 7.904
+    },
+    {
+      "layer": 37,
+      "phase": "down_sum",
+      "us": 12.064
+    },
+    {
+      "layer": 38,
+      "phase": "norm_q",
+      "us": 6.816
+    },
+    {
+      "layer": 38,
+      "phase": "projections",
+      "us": 12.736
+    },
+    {
+      "layer": 38,
+      "phase": "conv_prepare",
+      "us": 3.584
+    },
+    {
+      "layer": 38,
+      "phase": "recur",
+      "us": 3.68
+    },
+    {
+      "layer": 38,
+      "phase": "finish_q",
+      "us": 2.816
+    },
+    {
+      "layer": 38,
+      "phase": "output_mv",
+      "us": 5.824
+    },
+    {
+      "layer": 38,
+      "phase": "residual_norm_q",
+      "us": 6.72
+    },
+    {
+      "layer": 38,
+      "phase": "router",
+      "us": 6.944
+    },
+    {
+      "layer": 38,
+      "phase": "select",
+      "us": 2.592
+    },
+    {
+      "layer": 38,
+      "phase": "gate_up_q",
+      "us": 8.32
+    },
+    {
+      "layer": 38,
+      "phase": "down_sum",
+      "us": 12.288
+    },
+    {
+      "layer": 39,
+      "phase": "norm_q",
+      "us": 6.88
+    },
+    {
+      "layer": 39,
+      "phase": "projections",
+      "us": 10.176
+    },
+    {
+      "layer": 39,
+      "phase": "norm_rope_append",
+      "us": 2.688
+    },
+    {
+      "layer": 39,
+      "phase": "scores",
+      "us": 1.696
+    },
+    {
+      "layer": 39,
+      "phase": "softmax",
+      "us": 1.568
+    },
+    {
+      "layer": 39,
+      "phase": "gate_q",
+      "us": 2.016
+    },
+    {
+      "layer": 39,
+      "phase": "output_mv",
+      "us": 6.176
+    },
+    {
+      "layer": 39,
+      "phase": "residual_norm_q",
+      "us": 6.88
+    },
+    {
+      "layer": 39,
+      "phase": "router",
+      "us": 6.496
+    },
+    {
+      "layer": 39,
+      "phase": "select",
+      "us": 2.688
+    },
+    {
+      "layer": 39,
+      "phase": "gate_up_q",
+      "us": 8.608
+    },
+    {
+      "layer": 39,
+      "phase": "down_sum",
+      "us": 12.128
+    },
+    {
+      "layer": null,
+      "phase": "finalnorm_q",
+      "us": 6.464
+    },
+    {
+      "layer": null,
+      "phase": "head",
+      "us": 413.856
+    },
+    {
+      "layer": null,
+      "phase": "argmax_partials",
+      "us": 4.896
+    },
+    {
+      "layer": null,
+      "phase": "argmax_finish",
+      "us": 0.96
+    }
+  ],
+  "note": "Block0 globaltimer timestamps after each publication barrier. Includes useful phase+waiting/barrier; not independent kernel sums."
+}

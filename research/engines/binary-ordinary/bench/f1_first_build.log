@@ -1,0 +1,1731 @@
+src/mega.cu(414): warning #1886-D: specified alignment (128) is different from alignment (16) specified on a previous declaration
+    extern __attribute__((shared)) __attribute__((aligned(128))) uint8_t smem[];
+                                   ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=8, WG=1, TOKW=32, MODE=3, WF=0]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=8, WG=1, TOKW=32, MODE=3, WF=0]" at line 325
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=8, WG=1, TOKW=32, MODE=3, WF=2]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=8, WG=1, TOKW=32, MODE=3, WF=2]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=8, WG=1, TOKW=64, MODE=3, WF=0]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=8, WG=1, TOKW=64, MODE=3, WF=0]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=8, WG=1, TOKW=64, MODE=3, WF=2]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=8, WG=1, TOKW=64, MODE=3, WF=2]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=4, WG=1, TOKW=64, MODE=3, WF=0]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=4, WG=1, TOKW=64, MODE=3, WF=0]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=4, WG=1, TOKW=64, MODE=3, WF=2]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=4, WG=1, TOKW=64, MODE=3, WF=2]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=4, WG=2, TOKW=32, MODE=3, WF=0]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=4, WG=2, TOKW=32, MODE=3, WF=0]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=4, WG=2, TOKW=32, MODE=3, WF=2]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=4, WG=2, TOKW=32, MODE=3, WF=2]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=4, WG=1, TOKW=32, MODE=3, WF=0]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=4, WG=1, TOKW=32, MODE=3, WF=0]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=4, WG=1, TOKW=32, MODE=3, WF=2]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=4, WG=1, TOKW=32, MODE=3, WF=2]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=2, WG=1, TOKW=64, MODE=3, WF=0]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=2, WG=1, TOKW=64, MODE=3, WF=0]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=2, WG=1, TOKW=64, MODE=3, WF=2]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=2, WG=1, TOKW=64, MODE=3, WF=2]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=2, WG=2, TOKW=64, MODE=3, WF=0]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=2, WG=2, TOKW=64, MODE=3, WF=0]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=2, WG=2, TOKW=64, MODE=3, WF=2]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=2, WG=2, TOKW=64, MODE=3, WF=2]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=4, WG=2, TOKW=64, MODE=3, WF=0]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=4, WG=2, TOKW=64, MODE=3, WF=0]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=4, WG=2, TOKW=64, MODE=3, WF=2]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=4, WG=2, TOKW=64, MODE=3, WF=2]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=8, WG=1, TOKW=128, MODE=3, WF=0]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=8, WG=1, TOKW=128, MODE=3, WF=0]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=8, WG=1, TOKW=128, MODE=3, WF=2]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=8, WG=1, TOKW=128, MODE=3, WF=2]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=16, WG=1, TOKW=32, MODE=3, WF=0]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=16, WG=1, TOKW=32, MODE=3, WF=0]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=16, WG=1, TOKW=32, MODE=3, WF=2]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=16, WG=1, TOKW=32, MODE=3, WF=2]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=12, WG=1, TOKW=32, MODE=3, WF=0]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=12, WG=1, TOKW=32, MODE=3, WF=0]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=12, WG=1, TOKW=32, MODE=3, WF=2]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=12, WG=1, TOKW=32, MODE=3, WF=2]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=16, WG=1, TOKW=16, MODE=3, WF=0]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=16, WG=1, TOKW=16, MODE=3, WF=0]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=16, WG=1, TOKW=16, MODE=3, WF=2]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=16, WG=1, TOKW=16, MODE=3, WF=2]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=8, WG=1, TOKW=16, MODE=3, WF=0]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=8, WG=1, TOKW=16, MODE=3, WF=0]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=8, WG=1, TOKW=16, MODE=3, WF=2]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=8, WG=1, TOKW=16, MODE=3, WF=2]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=8, WG=2, TOKW=32, MODE=3, WF=0]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=8, WG=2, TOKW=32, MODE=3, WF=0]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=8, WG=2, TOKW=32, MODE=3, WF=2]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=8, WG=2, TOKW=32, MODE=3, WF=2]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=8, WG=2, TOKW=64, MODE=3, WF=0]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=8, WG=2, TOKW=64, MODE=3, WF=0]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=8, WG=2, TOKW=64, MODE=3, WF=2]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=8, WG=2, TOKW=64, MODE=3, WF=2]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=6, WG=2, TOKW=64, MODE=3, WF=0]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=6, WG=2, TOKW=64, MODE=3, WF=0]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=6, WG=2, TOKW=64, MODE=3, WF=2]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=6, WG=2, TOKW=64, MODE=3, WF=2]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=8, WG=2, TOKW=16, MODE=3, WF=0]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=8, WG=2, TOKW=16, MODE=3, WF=0]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=8, WG=2, TOKW=16, MODE=3, WF=2]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=8, WG=2, TOKW=16, MODE=3, WF=2]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=4, WG=2, TOKW=128, MODE=3, WF=0]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=4, WG=2, TOKW=128, MODE=3, WF=0]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=4, WG=2, TOKW=128, MODE=3, WF=2]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=4, WG=2, TOKW=128, MODE=3, WF=2]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=8, WG=1, TOKW=32, MODE=3, WF=0]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=8, WG=1, TOKW=32, MODE=3, WF=0]" at line 325
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=8, WG=1, TOKW=32, MODE=3, WF=2]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=8, WG=1, TOKW=32, MODE=3, WF=2]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=8, WG=1, TOKW=64, MODE=3, WF=0]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=8, WG=1, TOKW=64, MODE=3, WF=0]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=8, WG=1, TOKW=64, MODE=3, WF=2]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=8, WG=1, TOKW=64, MODE=3, WF=2]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=4, WG=1, TOKW=64, MODE=3, WF=0]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=4, WG=1, TOKW=64, MODE=3, WF=0]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=4, WG=1, TOKW=64, MODE=3, WF=2]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=4, WG=1, TOKW=64, MODE=3, WF=2]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=4, WG=2, TOKW=32, MODE=3, WF=0]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=4, WG=2, TOKW=32, MODE=3, WF=0]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=4, WG=2, TOKW=32, MODE=3, WF=2]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=4, WG=2, TOKW=32, MODE=3, WF=2]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=4, WG=1, TOKW=32, MODE=3, WF=0]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=4, WG=1, TOKW=32, MODE=3, WF=0]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=4, WG=1, TOKW=32, MODE=3, WF=2]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=4, WG=1, TOKW=32, MODE=3, WF=2]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=2, WG=1, TOKW=64, MODE=3, WF=0]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=2, WG=1, TOKW=64, MODE=3, WF=0]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=2, WG=1, TOKW=64, MODE=3, WF=2]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=2, WG=1, TOKW=64, MODE=3, WF=2]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=2, WG=2, TOKW=64, MODE=3, WF=0]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=2, WG=2, TOKW=64, MODE=3, WF=0]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=2, WG=2, TOKW=64, MODE=3, WF=2]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=2, WG=2, TOKW=64, MODE=3, WF=2]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=4, WG=2, TOKW=64, MODE=3, WF=0]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=4, WG=2, TOKW=64, MODE=3, WF=0]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=4, WG=2, TOKW=64, MODE=3, WF=2]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=4, WG=2, TOKW=64, MODE=3, WF=2]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=8, WG=1, TOKW=128, MODE=3, WF=0]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=8, WG=1, TOKW=128, MODE=3, WF=0]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=8, WG=1, TOKW=128, MODE=3, WF=2]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=8, WG=1, TOKW=128, MODE=3, WF=2]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=16, WG=1, TOKW=32, MODE=3, WF=0]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=16, WG=1, TOKW=32, MODE=3, WF=0]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=16, WG=1, TOKW=32, MODE=3, WF=2]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=16, WG=1, TOKW=32, MODE=3, WF=2]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=12, WG=1, TOKW=32, MODE=3, WF=0]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=12, WG=1, TOKW=32, MODE=3, WF=0]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=12, WG=1, TOKW=32, MODE=3, WF=2]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=12, WG=1, TOKW=32, MODE=3, WF=2]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=16, WG=1, TOKW=16, MODE=3, WF=0]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=16, WG=1, TOKW=16, MODE=3, WF=0]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=16, WG=1, TOKW=16, MODE=3, WF=2]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=16, WG=1, TOKW=16, MODE=3, WF=2]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=8, WG=1, TOKW=16, MODE=3, WF=0]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=8, WG=1, TOKW=16, MODE=3, WF=0]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=8, WG=1, TOKW=16, MODE=3, WF=2]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=8, WG=1, TOKW=16, MODE=3, WF=2]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=8, WG=2, TOKW=32, MODE=3, WF=0]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=8, WG=2, TOKW=32, MODE=3, WF=0]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=8, WG=2, TOKW=32, MODE=3, WF=2]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=8, WG=2, TOKW=32, MODE=3, WF=2]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=8, WG=2, TOKW=64, MODE=3, WF=0]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=8, WG=2, TOKW=64, MODE=3, WF=0]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=8, WG=2, TOKW=64, MODE=3, WF=2]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=8, WG=2, TOKW=64, MODE=3, WF=2]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=6, WG=2, TOKW=64, MODE=3, WF=0]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=6, WG=2, TOKW=64, MODE=3, WF=0]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=6, WG=2, TOKW=64, MODE=3, WF=2]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=6, WG=2, TOKW=64, MODE=3, WF=2]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=8, WG=2, TOKW=16, MODE=3, WF=0]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=8, WG=2, TOKW=16, MODE=3, WF=0]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=8, WG=2, TOKW=16, MODE=3, WF=2]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=8, WG=2, TOKW=16, MODE=3, WF=2]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=4, WG=2, TOKW=128, MODE=3, WF=0]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=4, WG=2, TOKW=128, MODE=3, WF=0]" at line 325
+
+src/fp4.cu(281): warning #128-D: loop is not reachable
+    for (int n = 0; n < NT; n++) {
+    ^
+          detected during:
+            instantiation of "void h5::k_gemm_fp4<FW,WG,TOKW,MODE,WF>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *) [with FW=4, WG=2, TOKW=128, MODE=3, WF=2]" at line 305
+            instantiation of "h5::Fp4Fn h5::fp4_fn<FW,WG,TOKW,MODE,WF>() [with FW=4, WG=2, TOKW=128, MODE=3, WF=2]" at line 325
+
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z7perturbPjm' for 'sm_120a'
+ptxas info    : Function properties for _Z7perturbPjm
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 8 registers, used 0 barriers
+ptxas info    : Compile time = 2.018 ms
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_ZN2f16k_prepEPKfS1_iifPhS2_Pf' for 'sm_120a'
+ptxas info    : Function properties for _ZN2f16k_prepEPKfS1_iifPhS2_Pf
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 56 registers, used 1 barriers, 68 bytes smem
+ptxas info    : Compile time = 41.416 ms
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_ZN2f110k_gemm_fp4ILi8ELi2ELi64ELi4ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_PhS6_S5_S4_f' for 'sm_120a'
+ptxas info    : Function properties for _ZN2f110k_gemm_fp4ILi8ELi2ELi64ELi4ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_PhS6_S5_S4_f
+    192 bytes stack frame, 376 bytes spill stores, 376 bytes spill loads
+ptxas info    : Used 168 registers, used 1 barriers, 192 bytes cumulative stack size
+ptxas info    : Compile time = 195.168 ms
+ptxas info    : Compiling entry function '_ZN2f110k_gemm_fp4ILi8ELi2ELi32ELi4ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_PhS6_S5_S4_f' for 'sm_120a'
+ptxas info    : Function properties for _ZN2f110k_gemm_fp4ILi8ELi2ELi32ELi4ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_PhS6_S5_S4_f
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 136 registers, used 1 barriers
+ptxas info    : Compile time = 130.493 ms
+ptxas info    : Compiling entry function '_ZN2f110k_gemm_fp4ILi4ELi1ELi64ELi0ELi4EEEvPKhS2_PKfiiS2_S2_iPfiS4_PhS6_S5_S4_f' for 'sm_120a'
+ptxas info    : Function properties for _ZN2f110k_gemm_fp4ILi4ELi1ELi64ELi0ELi4EEEvPKhS2_PKfiiS2_S2_iPfiS4_PhS6_S5_S4_f
+    8 bytes stack frame, 8 bytes spill stores, 8 bytes spill loads
+ptxas info    : Used 128 registers, used 1 barriers, 8 bytes cumulative stack size
+ptxas info    : Compile time = 70.081 ms
+ptxas info    : Compiling entry function '_ZN2f110k_gemm_fp4ILi4ELi1ELi64ELi0ELi3EEEvPKhS2_PKfiiS2_S2_iPfiS4_PhS6_S5_S4_f' for 'sm_120a'
+ptxas info    : Function properties for _ZN2f110k_gemm_fp4ILi4ELi1ELi64ELi0ELi3EEEvPKhS2_PKfiiS2_S2_iPfiS4_PhS6_S5_S4_f
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 128 registers, used 1 barriers, 512 bytes smem
+ptxas info    : Compile time = 113.942 ms
+ptxas info    : Compiling entry function '_ZN2f110k_gemm_fp4ILi4ELi1ELi32ELi0ELi4EEEvPKhS2_PKfiiS2_S2_iPfiS4_PhS6_S5_S4_f' for 'sm_120a'
+ptxas info    : Function properties for _ZN2f110k_gemm_fp4ILi4ELi1ELi32ELi0ELi4EEEvPKhS2_PKfiiS2_S2_iPfiS4_PhS6_S5_S4_f
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 85 registers, used 1 barriers
+ptxas info    : Compile time = 49.836 ms
+ptxas info    : Compiling entry function '_ZN2f110k_gemm_fp4ILi4ELi1ELi32ELi0ELi3EEEvPKhS2_PKfiiS2_S2_iPfiS4_PhS6_S5_S4_f' for 'sm_120a'
+ptxas info    : Function properties for _ZN2f110k_gemm_fp4ILi4ELi1ELi32ELi0ELi3EEEvPKhS2_PKfiiS2_S2_iPfiS4_PhS6_S5_S4_f
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 83 registers, used 1 barriers, 512 bytes smem
+ptxas info    : Compile time = 90.377 ms
+src/mega.cu(414): warning #1886-D: specified alignment (128) is different from alignment (16) specified on a previous declaration
+    extern __attribute__((shared)) __attribute__((aligned(128))) uint8_t smem[];
+                                   ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+src/mega.cu(414): warning #1886-D: specified alignment (128) is different from alignment (16) specified on a previous declaration
+    extern __attribute__((shared)) __attribute__((aligned(128))) uint8_t smem[];
+                                   ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+ptxas info    : 27 bytes gmem
+ptxas info    : Compiling entry function '_ZN2h59k_attn_tcILi3ELb0ELi256ELi6EEEvNS_10AttnTcArgsE' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h59k_attn_tcILi3ELb0ELi256ELi6EEEvNS_10AttnTcArgsE
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 176 registers, used 1 barriers
+ptxas info    : Compile time = 70.032 ms
+ptxas info    : Compiling entry function '_ZN2h59k_attn_tcILi3ELb1ELi256ELi6EEEvNS_10AttnTcArgsE' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h59k_attn_tcILi3ELb1ELi256ELi6EEEvNS_10AttnTcArgsE
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 176 registers, used 1 barriers
+ptxas info    : Compile time = 68.844 ms
+ptxas info    : Compiling entry function '_ZN2h59k_attn_tcILi2ELb0ELi256ELi6EEEvNS_10AttnTcArgsE' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h59k_attn_tcILi2ELb0ELi256ELi6EEEvNS_10AttnTcArgsE
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 128 registers, used 1 barriers
+ptxas info    : Compile time = 45.570 ms
+ptxas info    : Compiling entry function '_ZN2h59k_attn_tcILi2ELb1ELi256ELi6EEEvNS_10AttnTcArgsE' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h59k_attn_tcILi2ELb1ELi256ELi6EEEvNS_10AttnTcArgsE
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 128 registers, used 1 barriers
+ptxas info    : Compile time = 44.267 ms
+ptxas info    : Compiling entry function '_ZN2h59k_attn_tcILi1ELb0ELi256ELi6EEEvNS_10AttnTcArgsE' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h59k_attn_tcILi1ELb0ELi256ELi6EEEvNS_10AttnTcArgsE
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 72 registers, used 1 barriers
+ptxas info    : Compile time = 26.945 ms
+ptxas info    : Compiling entry function '_ZN2h59k_attn_tcILi1ELb1ELi256ELi6EEEvNS_10AttnTcArgsE' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h59k_attn_tcILi1ELb1ELi256ELi6EEEvNS_10AttnTcArgsE
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 80 registers, used 1 barriers
+ptxas info    : Compile time = 27.813 ms
+ptxas info    : Compiling entry function '_ZN2h57k_attn8ILi3EEEvNS_10AttnTcArgsE' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h57k_attn8ILi3EEEvNS_10AttnTcArgsE
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 128 registers, used 1 barriers
+ptxas info    : Compile time = 62.414 ms
+ptxas info    : Compiling entry function '_ZN2h57k_attn8ILi2EEEvNS_10AttnTcArgsE' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h57k_attn8ILi2EEEvNS_10AttnTcArgsE
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 113 registers, used 1 barriers
+ptxas info    : Compile time = 46.620 ms
+ptxas info    : Compiling entry function '_ZN2h57k_attn8ILi1EEEvNS_10AttnTcArgsE' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h57k_attn8ILi1EEEvNS_10AttnTcArgsE
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 64 registers, used 1 barriers
+ptxas info    : Compile time = 29.690 ms
+ptxas info    : Compiling entry function '_ZN2h59k_attn_tcILi2ELb0ELi128ELi4EEEvNS_10AttnTcArgsE' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h59k_attn_tcILi2ELb0ELi128ELi4EEEvNS_10AttnTcArgsE
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 86 registers, used 1 barriers
+ptxas info    : Compile time = 30.386 ms
+ptxas info    : Compiling entry function '_ZN2h59k_attn_tcILi1ELb0ELi128ELi4EEEvNS_10AttnTcArgsE' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h59k_attn_tcILi1ELb0ELi128ELi4EEEvNS_10AttnTcArgsE
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 56 registers, used 1 barriers
+ptxas info    : Compile time = 19.881 ms
+ptxas info    : Compiling entry function '_ZN2h55k_gdnIfLi4EEEvNS_7GdnArgsE' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h55k_gdnIfLi4EEEvNS_7GdnArgsE
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 118 registers, used 1 barriers, 20608 bytes smem
+ptxas info    : Compile time = 17.987 ms
+ptxas info    : Compiling entry function '_ZN2h55k_gdnIfLi16EEEvNS_7GdnArgsE' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h55k_gdnIfLi16EEEvNS_7GdnArgsE
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 96 registers, used 1 barriers, 20608 bytes smem
+ptxas info    : Compile time = 13.660 ms
+ptxas info    : Compiling entry function '_ZN2h55k_gdnIfLi8EEEvNS_7GdnArgsE' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h55k_gdnIfLi8EEEvNS_7GdnArgsE
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 96 registers, used 1 barriers, 20608 bytes smem
+ptxas info    : Compile time = 15.141 ms
+ptxas info    : Compiling entry function '_ZN2h55k_gdnI13__nv_bfloat16Li4EEEvNS_7GdnArgsE' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h55k_gdnI13__nv_bfloat16Li4EEEvNS_7GdnArgsE
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 111 registers, used 1 barriers, 20608 bytes smem
+ptxas info    : Compile time = 16.819 ms
+ptxas info    : Compiling entry function '_ZN2h55k_gdnI13__nv_bfloat16Li16EEEvNS_7GdnArgsE' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h55k_gdnI13__nv_bfloat16Li16EEEvNS_7GdnArgsE
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 69 registers, used 1 barriers, 20608 bytes smem
+ptxas info    : Compile time = 11.102 ms
+ptxas info    : Compiling entry function '_ZN2h55k_gdnI13__nv_bfloat16Li8EEEvNS_7GdnArgsE' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h55k_gdnI13__nv_bfloat16Li8EEEvNS_7GdnArgsE
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 87 registers, used 1 barriers, 20608 bytes smem
+ptxas info    : Compile time = 13.392 ms
+ptxas info    : Compiling entry function '_ZN2h55k_gdnI6__halfLi4EEEvNS_7GdnArgsE' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h55k_gdnI6__halfLi4EEEvNS_7GdnArgsE
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 107 registers, used 1 barriers, 20608 bytes smem
+ptxas info    : Compile time = 16.933 ms
+ptxas info    : Compiling entry function '_ZN2h55k_gdnI6__halfLi16EEEvNS_7GdnArgsE' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h55k_gdnI6__halfLi16EEEvNS_7GdnArgsE
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 69 registers, used 1 barriers, 20608 bytes smem
+ptxas info    : Compile time = 11.088 ms
+ptxas info    : Compiling entry function '_ZN2h55k_gdnI6__halfLi8EEEvNS_7GdnArgsE' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h55k_gdnI6__halfLi8EEEvNS_7GdnArgsE
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 87 registers, used 1 barriers, 20608 bytes smem
+ptxas info    : Compile time = 13.333 ms
+ptxas info    : Compiling entry function '_ZN2h56k_megaILi3EEEvNS_8MegaArgsE' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h56k_megaILi3EEEvNS_8MegaArgsE
+    32 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 255 registers, used 1 barriers, 32 bytes cumulative stack size, 1152 bytes smem
+ptxas info    : Compile time = 1409.674 ms
+ptxas info    : Compiling entry function '_ZN2h56k_megaILi2EEEvNS_8MegaArgsE' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h56k_megaILi2EEEvNS_8MegaArgsE
+    32 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 250 registers, used 1 barriers, 32 bytes cumulative stack size, 1152 bytes smem
+ptxas info    : Compile time = 1331.931 ms
+ptxas info    : Compiling entry function '_ZN2h56k_megaILi1EEEvNS_8MegaArgsE' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h56k_megaILi1EEEvNS_8MegaArgsE
+    48 bytes stack frame, 16 bytes spill stores, 16 bytes spill loads
+ptxas info    : Used 254 registers, used 1 barriers, 48 bytes cumulative stack size, 1152 bytes smem
+ptxas info    : Compile time = 1457.191 ms
+ptxas info    : Compiling entry function '_ZN2h514k_attn_combineENS_10AttnTcArgsEii' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h514k_attn_combineENS_10AttnTcArgsEii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 40 registers, used 0 barriers
+ptxas info    : Compile time = 18.973 ms
+ptxas info    : Compiling entry function '_ZN2h58k_argmaxEPKfiPi' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h58k_argmaxEPKfiPi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 44 registers, used 1 barriers, 256 bytes smem
+ptxas info    : Compile time = 5.675 ms
+ptxas info    : Compiling entry function '_ZN2h510k_attn_preENS_8AttnArgsE' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_attn_preENS_8AttnArgsE
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 36 registers, used 1 barriers, 1120 bytes smem
+ptxas info    : Compile time = 16.883 ms
+ptxas info    : Compiling entry function '_ZN2h56k_convIfEEvNS_8ConvArgsE' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h56k_convIfEEvNS_8ConvArgsE
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 34 registers, used 1 barriers, 32 bytes smem
+ptxas info    : Compile time = 15.750 ms
+ptxas info    : Compiling entry function '_ZN2h56k_convI13__nv_bfloat16EEvNS_8ConvArgsE' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h56k_convI13__nv_bfloat16EEvNS_8ConvArgsE
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 37 registers, used 1 barriers, 32 bytes smem
+ptxas info    : Compile time = 15.995 ms
+ptxas info    : Compiling entry function '_ZN2h56k_convI6__halfEEvNS_8ConvArgsE' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h56k_convI6__halfEEvNS_8ConvArgsE
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 37 registers, used 1 barriers, 32 bytes smem
+ptxas info    : Compile time = 16.037 ms
+ptxas info    : Compiling entry function '_ZN2h54k_abEPK13__nv_bfloat16PKfPf' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h54k_abEPK13__nv_bfloat16PKfPf
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 38 registers, used 0 barriers
+ptxas info    : Compile time = 2.924 ms
+ptxas info    : Compiling entry function '_ZN2h57k_embedEPKhPKiPf' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h57k_embedEPKhPKiPf
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 32 registers, used 0 barriers
+ptxas info    : Compile time = 23.894 ms
+ptxas info    : Compiling entry function '_ZN2h57k_prep2ENS_8PrepArgsE' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h57k_prep2ENS_8PrepArgsE
+    72 bytes stack frame, 68 bytes spill stores, 132 bytes spill loads
+ptxas info    : Used 96 registers, used 1 barriers, 72 bytes cumulative stack size, 144 bytes smem
+ptxas info    : Compile time = 124.567 ms
+ptxas info    : Compiling entry function '_ZN2h59k_gemm_t2ILi1EEEvPKaPKfiiPK5uint4S4_iPfi' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h59k_gemm_t2ILi1EEEvPKaPKfiiPK5uint4S4_iPfi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 220 registers, used 1 barriers
+ptxas info    : Compile time = 33.361 ms
+ptxas info    : Compiling entry function '_ZN2h59k_gemm_t2ILi0EEEvPKaPKfiiPK5uint4S4_iPfi' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h59k_gemm_t2ILi0EEEvPKaPKfiiPK5uint4S4_iPfi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 238 registers, used 1 barriers
+ptxas info    : Compile time = 30.126 ms
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi2ELi128ELi3ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi2ELi128ELi3ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    256 bytes stack frame, 496 bytes spill stores, 500 bytes spill loads
+ptxas info    : Used 255 registers, used 1 barriers, 256 bytes cumulative stack size
+ptxas info    : Compile time = 294.274 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi2ELi128ELi3ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi2ELi128ELi3ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    296 bytes stack frame, 584 bytes spill stores, 584 bytes spill loads
+ptxas info    : Used 255 registers, used 1 barriers, 296 bytes cumulative stack size
+ptxas info    : Compile time = 286.222 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi2ELi128ELi2ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi2ELi128ELi2ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    256 bytes stack frame, 496 bytes spill stores, 500 bytes spill loads
+ptxas info    : Used 255 registers, used 1 barriers, 256 bytes cumulative stack size
+ptxas info    : Compile time = 174.678 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi2ELi128ELi1ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi2ELi128ELi1ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    256 bytes stack frame, 496 bytes spill stores, 500 bytes spill loads
+ptxas info    : Used 255 registers, used 1 barriers, 256 bytes cumulative stack size
+ptxas info    : Compile time = 187.096 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi2ELi128ELi0ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi2ELi128ELi0ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    256 bytes stack frame, 496 bytes spill stores, 500 bytes spill loads
+ptxas info    : Used 255 registers, used 1 barriers, 256 bytes cumulative stack size
+ptxas info    : Compile time = 171.677 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi2ELi128ELi2ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi2ELi128ELi2ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    296 bytes stack frame, 548 bytes spill stores, 548 bytes spill loads
+ptxas info    : Used 255 registers, used 1 barriers, 296 bytes cumulative stack size
+ptxas info    : Compile time = 173.535 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi2ELi128ELi1ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi2ELi128ELi1ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    296 bytes stack frame, 548 bytes spill stores, 548 bytes spill loads
+ptxas info    : Used 255 registers, used 1 barriers, 296 bytes cumulative stack size
+ptxas info    : Compile time = 186.963 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi2ELi128ELi0ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi2ELi128ELi0ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    296 bytes stack frame, 548 bytes spill stores, 548 bytes spill loads
+ptxas info    : Used 255 registers, used 1 barriers, 296 bytes cumulative stack size
+ptxas info    : Compile time = 168.640 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi2ELi128ELi2ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi2ELi128ELi2ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    928 bytes stack frame, 1856 bytes spill stores, 1856 bytes spill loads
+ptxas info    : Used 96 registers, used 1 barriers, 928 bytes cumulative stack size
+ptxas info    : Compile time = 208.537 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi2ELi128ELi1ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi2ELi128ELi1ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    928 bytes stack frame, 1856 bytes spill stores, 1856 bytes spill loads
+ptxas info    : Used 96 registers, used 1 barriers, 928 bytes cumulative stack size
+ptxas info    : Compile time = 215.347 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi2ELi128ELi0ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi2ELi128ELi0ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    296 bytes stack frame, 584 bytes spill stores, 584 bytes spill loads
+ptxas info    : Used 255 registers, used 1 barriers, 296 bytes cumulative stack size
+ptxas info    : Compile time = 173.197 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi2ELi16ELi3ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi2ELi16ELi3ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 70 registers, used 1 barriers
+ptxas info    : Compile time = 66.503 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi2ELi16ELi3ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi2ELi16ELi3ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 94 registers, used 1 barriers
+ptxas info    : Compile time = 64.660 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi2ELi16ELi2ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi2ELi16ELi2ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 71 registers, used 1 barriers
+ptxas info    : Compile time = 50.976 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi2ELi16ELi1ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi2ELi16ELi1ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 72 registers, used 1 barriers
+ptxas info    : Compile time = 51.846 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi2ELi16ELi0ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi2ELi16ELi0ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 71 registers, used 1 barriers
+ptxas info    : Compile time = 50.446 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi2ELi16ELi2ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi2ELi16ELi2ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 77 registers, used 1 barriers
+ptxas info    : Compile time = 47.374 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi2ELi16ELi1ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi2ELi16ELi1ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 77 registers, used 1 barriers
+ptxas info    : Compile time = 49.237 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi2ELi16ELi0ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi2ELi16ELi0ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 77 registers, used 1 barriers
+ptxas info    : Compile time = 47.727 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi2ELi16ELi2ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi2ELi16ELi2ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 94 registers, used 1 barriers
+ptxas info    : Compile time = 49.173 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi2ELi16ELi1ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi2ELi16ELi1ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 79 registers, used 1 barriers
+ptxas info    : Compile time = 50.950 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi2ELi16ELi0ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi2ELi16ELi0ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 94 registers, used 1 barriers
+ptxas info    : Compile time = 49.178 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi6ELi2ELi64ELi3ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi6ELi2ELi64ELi3ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 212 registers, used 1 barriers
+ptxas info    : Compile time = 146.554 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi6ELi2ELi64ELi3ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi6ELi2ELi64ELi3ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    64 bytes stack frame, 128 bytes spill stores, 128 bytes spill loads
+ptxas info    : Used 255 registers, used 1 barriers, 64 bytes cumulative stack size
+ptxas info    : Compile time = 144.669 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi6ELi2ELi64ELi2ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi6ELi2ELi64ELi2ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 212 registers, used 1 barriers
+ptxas info    : Compile time = 88.861 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi6ELi2ELi64ELi1ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi6ELi2ELi64ELi1ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 212 registers, used 1 barriers
+ptxas info    : Compile time = 95.751 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi6ELi2ELi64ELi0ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi6ELi2ELi64ELi0ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 212 registers, used 1 barriers
+ptxas info    : Compile time = 89.721 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi6ELi2ELi64ELi2ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi6ELi2ELi64ELi2ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 214 registers, used 1 barriers
+ptxas info    : Compile time = 87.897 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi6ELi2ELi64ELi1ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi6ELi2ELi64ELi1ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 214 registers, used 1 barriers
+ptxas info    : Compile time = 94.170 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi6ELi2ELi64ELi0ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi6ELi2ELi64ELi0ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 214 registers, used 1 barriers
+ptxas info    : Compile time = 87.958 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi6ELi2ELi64ELi2ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi6ELi2ELi64ELi2ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    64 bytes stack frame, 128 bytes spill stores, 128 bytes spill loads
+ptxas info    : Used 255 registers, used 1 barriers, 64 bytes cumulative stack size
+ptxas info    : Compile time = 100.994 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi6ELi2ELi64ELi1ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi6ELi2ELi64ELi1ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    64 bytes stack frame, 128 bytes spill stores, 128 bytes spill loads
+ptxas info    : Used 255 registers, used 1 barriers, 64 bytes cumulative stack size
+ptxas info    : Compile time = 106.841 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi6ELi2ELi64ELi0ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi6ELi2ELi64ELi0ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    64 bytes stack frame, 128 bytes spill stores, 128 bytes spill loads
+ptxas info    : Used 255 registers, used 1 barriers, 64 bytes cumulative stack size
+ptxas info    : Compile time = 98.787 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi2ELi64ELi3ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi2ELi64ELi3ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    72 bytes stack frame, 108 bytes spill stores, 108 bytes spill loads
+ptxas info    : Used 168 registers, used 1 barriers, 72 bytes cumulative stack size
+ptxas info    : Compile time = 149.189 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi2ELi64ELi3ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi2ELi64ELi3ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    192 bytes stack frame, 376 bytes spill stores, 376 bytes spill loads
+ptxas info    : Used 168 registers, used 1 barriers, 192 bytes cumulative stack size
+ptxas info    : Compile time = 150.978 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi2ELi64ELi2ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi2ELi64ELi2ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    72 bytes stack frame, 108 bytes spill stores, 108 bytes spill loads
+ptxas info    : Used 168 registers, used 1 barriers, 72 bytes cumulative stack size
+ptxas info    : Compile time = 93.479 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi2ELi64ELi1ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi2ELi64ELi1ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    72 bytes stack frame, 108 bytes spill stores, 108 bytes spill loads
+ptxas info    : Used 168 registers, used 1 barriers, 72 bytes cumulative stack size
+ptxas info    : Compile time = 100.178 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi2ELi64ELi0ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi2ELi64ELi0ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    72 bytes stack frame, 108 bytes spill stores, 108 bytes spill loads
+ptxas info    : Used 168 registers, used 1 barriers, 72 bytes cumulative stack size
+ptxas info    : Compile time = 93.490 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi2ELi64ELi2ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi2ELi64ELi2ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    1416 bytes stack frame, 2132 bytes spill stores, 2136 bytes spill loads
+ptxas info    : Used 56 registers, used 1 barriers, 1416 bytes cumulative stack size
+ptxas info    : Compile time = 109.237 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi2ELi64ELi1ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi2ELi64ELi1ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    1416 bytes stack frame, 2132 bytes spill stores, 2136 bytes spill loads
+ptxas info    : Used 56 registers, used 1 barriers, 1416 bytes cumulative stack size
+ptxas info    : Compile time = 116.747 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi2ELi64ELi0ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi2ELi64ELi0ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    1416 bytes stack frame, 2132 bytes spill stores, 2136 bytes spill loads
+ptxas info    : Used 56 registers, used 1 barriers, 1416 bytes cumulative stack size
+ptxas info    : Compile time = 109.154 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi2ELi64ELi2ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi2ELi64ELi2ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    192 bytes stack frame, 376 bytes spill stores, 376 bytes spill loads
+ptxas info    : Used 168 registers, used 1 barriers, 192 bytes cumulative stack size
+ptxas info    : Compile time = 95.204 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi2ELi64ELi1ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi2ELi64ELi1ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    192 bytes stack frame, 376 bytes spill stores, 376 bytes spill loads
+ptxas info    : Used 168 registers, used 1 barriers, 192 bytes cumulative stack size
+ptxas info    : Compile time = 101.363 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi2ELi64ELi0ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi2ELi64ELi0ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    192 bytes stack frame, 376 bytes spill stores, 376 bytes spill loads
+ptxas info    : Used 168 registers, used 1 barriers, 192 bytes cumulative stack size
+ptxas info    : Compile time = 94.655 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi2ELi32ELi3ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi2ELi32ELi3ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 118 registers, used 1 barriers
+ptxas info    : Compile time = 87.685 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi2ELi32ELi3ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi2ELi32ELi3ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 136 registers, used 1 barriers
+ptxas info    : Compile time = 85.576 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi2ELi32ELi2ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi2ELi32ELi2ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 118 registers, used 1 barriers
+ptxas info    : Compile time = 60.098 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi2ELi32ELi1ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi2ELi32ELi1ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 118 registers, used 1 barriers
+ptxas info    : Compile time = 63.452 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi2ELi32ELi0ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi2ELi32ELi0ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 118 registers, used 1 barriers
+ptxas info    : Compile time = 60.656 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi2ELi32ELi2ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi2ELi32ELi2ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 125 registers, used 1 barriers
+ptxas info    : Compile time = 58.111 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi2ELi32ELi1ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi2ELi32ELi1ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 125 registers, used 1 barriers
+ptxas info    : Compile time = 61.296 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi2ELi32ELi0ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi2ELi32ELi0ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 125 registers, used 1 barriers
+ptxas info    : Compile time = 58.381 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi2ELi32ELi2ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi2ELi32ELi2ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 136 registers, used 1 barriers
+ptxas info    : Compile time = 58.121 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi2ELi32ELi1ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi2ELi32ELi1ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 136 registers, used 1 barriers
+ptxas info    : Compile time = 60.742 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi2ELi32ELi0ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi2ELi32ELi0ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 136 registers, used 1 barriers
+ptxas info    : Compile time = 58.155 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi1ELi16ELi3ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi1ELi16ELi3ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 52 registers, used 1 barriers
+ptxas info    : Compile time = 39.543 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi1ELi16ELi3ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi1ELi16ELi3ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 50 registers, used 1 barriers
+ptxas info    : Compile time = 39.087 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi1ELi16ELi2ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi1ELi16ELi2ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 61 registers, used 1 barriers
+ptxas info    : Compile time = 51.227 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi1ELi16ELi1ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi1ELi16ELi1ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 61 registers, used 1 barriers
+ptxas info    : Compile time = 51.727 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi1ELi16ELi0ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi1ELi16ELi0ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 61 registers, used 1 barriers
+ptxas info    : Compile time = 51.098 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi1ELi16ELi2ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi1ELi16ELi2ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 56 registers, used 1 barriers
+ptxas info    : Compile time = 49.545 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi1ELi16ELi1ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi1ELi16ELi1ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 56 registers, used 1 barriers
+ptxas info    : Compile time = 50.902 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi1ELi16ELi0ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi1ELi16ELi0ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 56 registers, used 1 barriers
+ptxas info    : Compile time = 49.643 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi1ELi16ELi2ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi1ELi16ELi2ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 72 registers, used 1 barriers
+ptxas info    : Compile time = 52.124 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi1ELi16ELi1ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi1ELi16ELi1ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 72 registers, used 1 barriers
+ptxas info    : Compile time = 53.365 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi1ELi16ELi0ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi1ELi16ELi0ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 72 registers, used 1 barriers
+ptxas info    : Compile time = 51.980 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi16ELi1ELi16ELi3ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi16ELi1ELi16ELi3ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 49 registers, used 1 barriers
+ptxas info    : Compile time = 38.581 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi16ELi1ELi16ELi3ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi16ELi1ELi16ELi3ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 49 registers, used 1 barriers
+ptxas info    : Compile time = 37.486 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi16ELi1ELi16ELi2ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi16ELi1ELi16ELi2ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 56 registers, used 1 barriers
+ptxas info    : Compile time = 53.871 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi16ELi1ELi16ELi1ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi16ELi1ELi16ELi1ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 56 registers, used 1 barriers
+ptxas info    : Compile time = 55.618 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi16ELi1ELi16ELi0ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi16ELi1ELi16ELi0ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 56 registers, used 1 barriers
+ptxas info    : Compile time = 54.348 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi16ELi1ELi16ELi2ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi16ELi1ELi16ELi2ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 56 registers, used 1 barriers
+ptxas info    : Compile time = 49.648 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi16ELi1ELi16ELi1ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi16ELi1ELi16ELi1ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 56 registers, used 1 barriers
+ptxas info    : Compile time = 50.369 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi16ELi1ELi16ELi0ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi16ELi1ELi16ELi0ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 56 registers, used 1 barriers
+ptxas info    : Compile time = 49.907 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi16ELi1ELi16ELi2ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi16ELi1ELi16ELi2ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 71 registers, used 1 barriers
+ptxas info    : Compile time = 52.533 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi16ELi1ELi16ELi1ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi16ELi1ELi16ELi1ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 71 registers, used 1 barriers
+ptxas info    : Compile time = 52.886 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi16ELi1ELi16ELi0ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi16ELi1ELi16ELi0ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 71 registers, used 1 barriers
+ptxas info    : Compile time = 52.170 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi12ELi1ELi32ELi3ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi12ELi1ELi32ELi3ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 48 registers, used 1 barriers
+ptxas info    : Compile time = 37.941 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi12ELi1ELi32ELi3ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi12ELi1ELi32ELi3ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 48 registers, used 1 barriers
+ptxas info    : Compile time = 36.070 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi12ELi1ELi32ELi2ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi12ELi1ELi32ELi2ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 71 registers, used 1 barriers
+ptxas info    : Compile time = 50.066 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi12ELi1ELi32ELi1ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi12ELi1ELi32ELi1ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 71 registers, used 1 barriers
+ptxas info    : Compile time = 50.918 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi12ELi1ELi32ELi0ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi12ELi1ELi32ELi0ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 71 registers, used 1 barriers
+ptxas info    : Compile time = 49.609 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi12ELi1ELi32ELi2ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi12ELi1ELi32ELi2ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 86 registers, used 1 barriers
+ptxas info    : Compile time = 60.239 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi12ELi1ELi32ELi1ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi12ELi1ELi32ELi1ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 84 registers, used 1 barriers
+ptxas info    : Compile time = 60.974 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi12ELi1ELi32ELi0ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi12ELi1ELi32ELi0ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 84 registers, used 1 barriers
+ptxas info    : Compile time = 58.788 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi12ELi1ELi32ELi2ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi12ELi1ELi32ELi2ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 83 registers, used 1 barriers
+ptxas info    : Compile time = 48.968 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi12ELi1ELi32ELi1ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi12ELi1ELi32ELi1ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 83 registers, used 1 barriers
+ptxas info    : Compile time = 50.790 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi12ELi1ELi32ELi0ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi12ELi1ELi32ELi0ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 83 registers, used 1 barriers
+ptxas info    : Compile time = 50.239 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi16ELi1ELi32ELi3ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi16ELi1ELi32ELi3ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    16 bytes stack frame, 24 bytes spill stores, 36 bytes spill loads
+ptxas info    : Used 56 registers, used 1 barriers, 16 bytes cumulative stack size
+ptxas info    : Compile time = 41.426 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi16ELi1ELi32ELi3ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi16ELi1ELi32ELi3ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 50 registers, used 1 barriers
+ptxas info    : Compile time = 34.008 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi16ELi1ELi32ELi2ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi16ELi1ELi32ELi2ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 85 registers, used 1 barriers
+ptxas info    : Compile time = 59.413 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi16ELi1ELi32ELi1ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi16ELi1ELi32ELi1ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 85 registers, used 1 barriers
+ptxas info    : Compile time = 60.644 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi16ELi1ELi32ELi0ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi16ELi1ELi32ELi0ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 85 registers, used 1 barriers
+ptxas info    : Compile time = 59.586 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi16ELi1ELi32ELi2ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi16ELi1ELi32ELi2ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 84 registers, used 1 barriers
+ptxas info    : Compile time = 56.066 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi16ELi1ELi32ELi1ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi16ELi1ELi32ELi1ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 84 registers, used 1 barriers
+ptxas info    : Compile time = 57.137 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi16ELi1ELi32ELi0ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi16ELi1ELi32ELi0ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 84 registers, used 1 barriers
+ptxas info    : Compile time = 56.339 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi16ELi1ELi32ELi2ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi16ELi1ELi32ELi2ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 84 registers, used 1 barriers
+ptxas info    : Compile time = 47.782 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi16ELi1ELi32ELi1ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi16ELi1ELi32ELi1ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 84 registers, used 1 barriers
+ptxas info    : Compile time = 49.072 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi16ELi1ELi32ELi0ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi16ELi1ELi32ELi0ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 84 registers, used 1 barriers
+ptxas info    : Compile time = 48.893 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi1ELi128ELi3ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi1ELi128ELi3ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 48 registers, used 1 barriers
+ptxas info    : Compile time = 36.672 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi1ELi128ELi3ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi1ELi128ELi3ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 48 registers, used 1 barriers
+ptxas info    : Compile time = 33.811 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi1ELi128ELi2ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi1ELi128ELi2ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 168 registers, used 1 barriers
+ptxas info    : Compile time = 90.654 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi1ELi128ELi1ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi1ELi128ELi1ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 168 registers, used 1 barriers
+ptxas info    : Compile time = 94.587 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi1ELi128ELi0ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi1ELi128ELi0ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 168 registers, used 1 barriers
+ptxas info    : Compile time = 88.689 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi1ELi128ELi2ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi1ELi128ELi2ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    8 bytes stack frame, 12 bytes spill stores, 12 bytes spill loads
+ptxas info    : Used 168 registers, used 1 barriers, 8 bytes cumulative stack size
+ptxas info    : Compile time = 96.647 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi1ELi128ELi1ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi1ELi128ELi1ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    8 bytes stack frame, 12 bytes spill stores, 12 bytes spill loads
+ptxas info    : Used 168 registers, used 1 barriers, 8 bytes cumulative stack size
+ptxas info    : Compile time = 103.417 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi1ELi128ELi0ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi1ELi128ELi0ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    8 bytes stack frame, 12 bytes spill stores, 12 bytes spill loads
+ptxas info    : Used 168 registers, used 1 barriers, 8 bytes cumulative stack size
+ptxas info    : Compile time = 96.460 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi1ELi128ELi2ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi1ELi128ELi2ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    32 bytes stack frame, 64 bytes spill stores, 64 bytes spill loads
+ptxas info    : Used 168 registers, used 1 barriers, 32 bytes cumulative stack size
+ptxas info    : Compile time = 91.618 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi1ELi128ELi1ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi1ELi128ELi1ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    32 bytes stack frame, 64 bytes spill stores, 64 bytes spill loads
+ptxas info    : Used 168 registers, used 1 barriers, 32 bytes cumulative stack size
+ptxas info    : Compile time = 97.858 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi1ELi128ELi0ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi1ELi128ELi0ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    32 bytes stack frame, 64 bytes spill stores, 64 bytes spill loads
+ptxas info    : Used 168 registers, used 1 barriers, 32 bytes cumulative stack size
+ptxas info    : Compile time = 95.553 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi2ELi64ELi3ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi2ELi64ELi3ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 218 registers, used 1 barriers
+ptxas info    : Compile time = 146.497 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi2ELi64ELi3ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi2ELi64ELi3ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    64 bytes stack frame, 128 bytes spill stores, 128 bytes spill loads
+ptxas info    : Used 255 registers, used 1 barriers, 64 bytes cumulative stack size
+ptxas info    : Compile time = 145.511 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi2ELi64ELi2ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi2ELi64ELi2ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 217 registers, used 1 barriers
+ptxas info    : Compile time = 88.430 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi2ELi64ELi1ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi2ELi64ELi1ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 217 registers, used 1 barriers
+ptxas info    : Compile time = 95.602 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi2ELi64ELi0ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi2ELi64ELi0ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 217 registers, used 1 barriers
+ptxas info    : Compile time = 89.046 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi2ELi64ELi2ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi2ELi64ELi2ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 215 registers, used 1 barriers
+ptxas info    : Compile time = 85.096 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi2ELi64ELi1ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi2ELi64ELi1ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 215 registers, used 1 barriers
+ptxas info    : Compile time = 91.665 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi2ELi64ELi0ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi2ELi64ELi0ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 215 registers, used 1 barriers
+ptxas info    : Compile time = 85.033 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi2ELi64ELi2ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi2ELi64ELi2ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    64 bytes stack frame, 128 bytes spill stores, 128 bytes spill loads
+ptxas info    : Used 255 registers, used 1 barriers, 64 bytes cumulative stack size
+ptxas info    : Compile time = 101.175 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi2ELi64ELi1ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi2ELi64ELi1ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    64 bytes stack frame, 128 bytes spill stores, 128 bytes spill loads
+ptxas info    : Used 255 registers, used 1 barriers, 64 bytes cumulative stack size
+ptxas info    : Compile time = 107.151 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi2ELi64ELi0ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi2ELi64ELi0ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    64 bytes stack frame, 128 bytes spill stores, 128 bytes spill loads
+ptxas info    : Used 255 registers, used 1 barriers, 64 bytes cumulative stack size
+ptxas info    : Compile time = 99.893 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi2ELi2ELi64ELi3ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi2ELi2ELi64ELi3ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 207 registers, used 1 barriers
+ptxas info    : Compile time = 145.734 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi2ELi2ELi64ELi3ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi2ELi2ELi64ELi3ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    64 bytes stack frame, 120 bytes spill stores, 120 bytes spill loads
+ptxas info    : Used 255 registers, used 1 barriers, 64 bytes cumulative stack size
+ptxas info    : Compile time = 145.243 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi2ELi2ELi64ELi2ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi2ELi2ELi64ELi2ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 209 registers, used 1 barriers
+ptxas info    : Compile time = 88.485 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi2ELi2ELi64ELi1ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi2ELi2ELi64ELi1ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 209 registers, used 1 barriers
+ptxas info    : Compile time = 95.264 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi2ELi2ELi64ELi0ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi2ELi2ELi64ELi0ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 209 registers, used 1 barriers
+ptxas info    : Compile time = 88.898 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi2ELi2ELi64ELi2ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi2ELi2ELi64ELi2ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 214 registers, used 1 barriers
+ptxas info    : Compile time = 87.673 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi2ELi2ELi64ELi1ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi2ELi2ELi64ELi1ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 214 registers, used 1 barriers
+ptxas info    : Compile time = 94.565 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi2ELi2ELi64ELi0ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi2ELi2ELi64ELi0ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 214 registers, used 1 barriers
+ptxas info    : Compile time = 88.090 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi2ELi2ELi64ELi2ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi2ELi2ELi64ELi2ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    64 bytes stack frame, 120 bytes spill stores, 120 bytes spill loads
+ptxas info    : Used 255 registers, used 1 barriers, 64 bytes cumulative stack size
+ptxas info    : Compile time = 101.175 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi2ELi2ELi64ELi1ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi2ELi2ELi64ELi1ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    64 bytes stack frame, 120 bytes spill stores, 120 bytes spill loads
+ptxas info    : Used 255 registers, used 1 barriers, 64 bytes cumulative stack size
+ptxas info    : Compile time = 106.868 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi2ELi2ELi64ELi0ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi2ELi2ELi64ELi0ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    64 bytes stack frame, 120 bytes spill stores, 120 bytes spill loads
+ptxas info    : Used 255 registers, used 1 barriers, 64 bytes cumulative stack size
+ptxas info    : Compile time = 99.323 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi2ELi1ELi64ELi3ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi2ELi1ELi64ELi3ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 48 registers, used 1 barriers
+ptxas info    : Compile time = 40.674 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi2ELi1ELi64ELi3ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi2ELi1ELi64ELi3ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 46 registers, used 1 barriers
+ptxas info    : Compile time = 37.083 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi2ELi1ELi64ELi2ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi2ELi1ELi64ELi2ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 126 registers, used 1 barriers
+ptxas info    : Compile time = 61.068 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi2ELi1ELi64ELi1ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi2ELi1ELi64ELi1ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 126 registers, used 1 barriers
+ptxas info    : Compile time = 63.777 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi2ELi1ELi64ELi0ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi2ELi1ELi64ELi0ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 126 registers, used 1 barriers
+ptxas info    : Compile time = 61.314 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi2ELi1ELi64ELi2ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi2ELi1ELi64ELi2ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 127 registers, used 1 barriers
+ptxas info    : Compile time = 60.468 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi2ELi1ELi64ELi1ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi2ELi1ELi64ELi1ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 127 registers, used 1 barriers
+ptxas info    : Compile time = 64.320 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi2ELi1ELi64ELi0ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi2ELi1ELi64ELi0ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 127 registers, used 1 barriers
+ptxas info    : Compile time = 60.369 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi2ELi1ELi64ELi2ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi2ELi1ELi64ELi2ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 127 registers, used 1 barriers
+ptxas info    : Compile time = 60.136 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi2ELi1ELi64ELi1ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi2ELi1ELi64ELi1ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 127 registers, used 1 barriers
+ptxas info    : Compile time = 63.048 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi2ELi1ELi64ELi0ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi2ELi1ELi64ELi0ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 127 registers, used 1 barriers
+ptxas info    : Compile time = 62.416 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi1ELi32ELi3ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi1ELi32ELi3ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    8 bytes stack frame, 4 bytes spill stores, 4 bytes spill loads
+ptxas info    : Used 48 registers, used 1 barriers, 8 bytes cumulative stack size
+ptxas info    : Compile time = 43.410 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi1ELi32ELi3ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi1ELi32ELi3ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    8 bytes stack frame, 4 bytes spill stores, 4 bytes spill loads
+ptxas info    : Used 48 registers, used 1 barriers, 8 bytes cumulative stack size
+ptxas info    : Compile time = 38.101 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi1ELi32ELi2ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi1ELi32ELi2ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 86 registers, used 1 barriers
+ptxas info    : Compile time = 59.986 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi1ELi32ELi1ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi1ELi32ELi1ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 86 registers, used 1 barriers
+ptxas info    : Compile time = 61.521 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi1ELi32ELi0ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi1ELi32ELi0ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 86 registers, used 1 barriers
+ptxas info    : Compile time = 60.289 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi1ELi32ELi2ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi1ELi32ELi2ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 90 registers, used 1 barriers
+ptxas info    : Compile time = 58.183 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi1ELi32ELi1ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi1ELi32ELi1ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 90 registers, used 1 barriers
+ptxas info    : Compile time = 60.346 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi1ELi32ELi0ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi1ELi32ELi0ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 90 registers, used 1 barriers
+ptxas info    : Compile time = 59.036 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi1ELi32ELi2ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi1ELi32ELi2ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 96 registers, used 1 barriers
+ptxas info    : Compile time = 51.436 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi1ELi32ELi1ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi1ELi32ELi1ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 96 registers, used 1 barriers
+ptxas info    : Compile time = 52.183 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi1ELi32ELi0ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi1ELi32ELi0ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 96 registers, used 1 barriers
+ptxas info    : Compile time = 52.661 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi2ELi32ELi3ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi2ELi32ELi3ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 115 registers, used 1 barriers
+ptxas info    : Compile time = 91.114 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi2ELi32ELi3ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi2ELi32ELi3ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 135 registers, used 1 barriers
+ptxas info    : Compile time = 87.214 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi2ELi32ELi2ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi2ELi32ELi2ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 116 registers, used 1 barriers
+ptxas info    : Compile time = 61.467 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi2ELi32ELi1ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi2ELi32ELi1ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 116 registers, used 1 barriers
+ptxas info    : Compile time = 64.914 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi2ELi32ELi0ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi2ELi32ELi0ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 116 registers, used 1 barriers
+ptxas info    : Compile time = 62.041 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi2ELi32ELi2ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi2ELi32ELi2ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 128 registers, used 1 barriers
+ptxas info    : Compile time = 58.512 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi2ELi32ELi1ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi2ELi32ELi1ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 128 registers, used 1 barriers
+ptxas info    : Compile time = 61.556 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi2ELi32ELi0ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi2ELi32ELi0ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 128 registers, used 1 barriers
+ptxas info    : Compile time = 58.570 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi2ELi32ELi2ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi2ELi32ELi2ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 128 registers, used 1 barriers
+ptxas info    : Compile time = 64.300 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi2ELi32ELi1ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi2ELi32ELi1ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 128 registers, used 1 barriers
+ptxas info    : Compile time = 67.326 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi2ELi32ELi0ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi2ELi32ELi0ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 128 registers, used 1 barriers
+ptxas info    : Compile time = 64.366 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi1ELi64ELi3ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi1ELi64ELi3ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 48 registers, used 1 barriers
+ptxas info    : Compile time = 40.060 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi1ELi64ELi3ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi1ELi64ELi3ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 46 registers, used 1 barriers
+ptxas info    : Compile time = 36.321 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi1ELi64ELi2ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi1ELi64ELi2ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 128 registers, used 1 barriers
+ptxas info    : Compile time = 62.064 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi1ELi64ELi1ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi1ELi64ELi1ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 128 registers, used 1 barriers
+ptxas info    : Compile time = 64.739 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi1ELi64ELi0ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi1ELi64ELi0ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 128 registers, used 1 barriers
+ptxas info    : Compile time = 61.984 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi1ELi64ELi2ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi1ELi64ELi2ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 125 registers, used 1 barriers
+ptxas info    : Compile time = 62.002 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi1ELi64ELi1ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi1ELi64ELi1ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 125 registers, used 1 barriers
+ptxas info    : Compile time = 64.376 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi1ELi64ELi0ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi1ELi64ELi0ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 125 registers, used 1 barriers
+ptxas info    : Compile time = 61.707 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi1ELi64ELi2ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi1ELi64ELi2ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 128 registers, used 1 barriers
+ptxas info    : Compile time = 64.087 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi1ELi64ELi1ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi1ELi64ELi1ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 128 registers, used 1 barriers
+ptxas info    : Compile time = 67.255 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi4ELi1ELi64ELi0ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi4ELi1ELi64ELi0ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 128 registers, used 1 barriers
+ptxas info    : Compile time = 67.390 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi1ELi64ELi3ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi1ELi64ELi3ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 45 registers, used 1 barriers
+ptxas info    : Compile time = 38.657 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi1ELi64ELi3ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi1ELi64ELi3ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 46 registers, used 1 barriers
+ptxas info    : Compile time = 37.449 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi1ELi64ELi2ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi1ELi64ELi2ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 128 registers, used 1 barriers
+ptxas info    : Compile time = 62.376 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi1ELi64ELi1ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi1ELi64ELi1ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 128 registers, used 1 barriers
+ptxas info    : Compile time = 64.791 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi1ELi64ELi0ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi1ELi64ELi0ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 128 registers, used 1 barriers
+ptxas info    : Compile time = 62.101 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi1ELi64ELi2ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi1ELi64ELi2ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 127 registers, used 1 barriers
+ptxas info    : Compile time = 59.163 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi1ELi64ELi1ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi1ELi64ELi1ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 127 registers, used 1 barriers
+ptxas info    : Compile time = 62.274 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi1ELi64ELi0ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi1ELi64ELi0ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 127 registers, used 1 barriers
+ptxas info    : Compile time = 59.222 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi1ELi64ELi2ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi1ELi64ELi2ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 135 registers, used 1 barriers
+ptxas info    : Compile time = 60.734 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi1ELi64ELi1ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi1ELi64ELi1ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 135 registers, used 1 barriers
+ptxas info    : Compile time = 63.253 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi1ELi64ELi0ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi1ELi64ELi0ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 135 registers, used 1 barriers
+ptxas info    : Compile time = 63.784 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi1ELi32ELi3ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi1ELi32ELi3ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 52 registers, used 1 barriers
+ptxas info    : Compile time = 40.957 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi1ELi32ELi3ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi1ELi32ELi3ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 50 registers, used 1 barriers
+ptxas info    : Compile time = 35.904 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi1ELi32ELi2ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi1ELi32ELi2ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 84 registers, used 1 barriers
+ptxas info    : Compile time = 59.567 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi1ELi32ELi1ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi1ELi32ELi1ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 84 registers, used 1 barriers
+ptxas info    : Compile time = 61.381 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi1ELi32ELi0ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi1ELi32ELi0ELi2EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 84 registers, used 1 barriers
+ptxas info    : Compile time = 60.723 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi1ELi32ELi2ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi1ELi32ELi2ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 82 registers, used 1 barriers
+ptxas info    : Compile time = 57.112 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi1ELi32ELi1ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi1ELi32ELi1ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 82 registers, used 1 barriers
+ptxas info    : Compile time = 58.365 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi1ELi32ELi0ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi1ELi32ELi0ELi1EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 82 registers, used 1 barriers
+ptxas info    : Compile time = 57.121 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi1ELi32ELi2ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi1ELi32ELi2ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 83 registers, used 1 barriers
+ptxas info    : Compile time = 48.580 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi1ELi32ELi1ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi1ELi32ELi1ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 83 registers, used 1 barriers
+ptxas info    : Compile time = 49.715 ms
+ptxas info    : Compiling entry function '_ZN2h510k_gemm_fp4ILi8ELi1ELi32ELi0ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h510k_gemm_fp4ILi8ELi1ELi32ELi0ELi0EEEvPKhS2_PKfiiS2_S2_iPfiS4_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 83 registers, used 1 barriers
+ptxas info    : Compile time = 49.253 ms

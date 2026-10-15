@@ -1,0 +1,27 @@
+unfused_selected R8 tile8 chunk16 down0 warm35.072 cold47.104 us
+unfused_matching R8 tile8 chunk4 down0 warm35.104 cold49.152 us
+fused R8 tile1 chunk4 down0 warm57.504 cold61.408 us
+fused R8 tile4 chunk4 down0 warm28.992 cold36.864 us
+fused R8 tile8 chunk4 down0 warm27.488 cold34.560 us
+unfused_matching R8 tile8 chunk16 down0 warm35.008 cold47.104 us
+fused R8 tile1 chunk16 down0 warm58.400 cold61.184 us
+fused R8 tile4 chunk16 down0 warm31.040 cold42.976 us
+fused R8 tile8 chunk16 down0 warm30.944 cold42.752 us
+unfused_matching R8 tile8 chunk40 down0 warm54.304 cold77.568 us
+fused R8 tile1 chunk40 down0 warm61.728 cold63.232 us
+fused R8 tile4 chunk40 down0 warm39.296 cold67.296 us
+fused R8 tile8 chunk40 down0 warm49.536 cold73.472 us
+unfused_selected R8 tile8 chunk16 down1 warm50.368 cold67.552 us
+unfused_matching R8 tile8 chunk4 down1 warm51.264 cold69.632 us
+fused R8 tile1 chunk4 down1 warm73.920 cold81.920 us
+fused R8 tile4 chunk4 down1 warm45.440 cold57.344 us
+fused R8 tile8 chunk4 down1 warm43.264 cold57.088 us
+unfused_matching R8 tile8 chunk16 down1 warm50.400 cold67.584 us
+fused R8 tile1 chunk16 down1 warm74.592 cold81.920 us
+fused R8 tile4 chunk16 down1 warm47.328 cold63.456 us
+fused R8 tile8 chunk16 down1 warm47.136 cold63.456 us
+unfused_matching R8 tile8 chunk40 down1 warm69.856 cold98.304 us
+fused R8 tile1 chunk40 down1 warm78.112 cold83.712 us
+fused R8 tile4 chunk40 down1 warm55.488 cold87.808 us
+fused R8 tile8 chunk40 down1 warm65.728 cold93.952 us
+PASS carrier and downstream bitwise equality for all priced same-chunk continuations R8; q=139264 scale=1088

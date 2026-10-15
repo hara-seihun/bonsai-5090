@@ -1,0 +1,308 @@
+[
+  {
+    "scope": "same-item scoped panel, not full quality gate",
+    "reference": "results/binary-5090/tasks-hybrid-initial/tasks-modern-packed1-hybrid-plain",
+    "candidate": "results/binary-5090/tasks-composed/tasks-modern-packed1-fused-plain",
+    "reference_timing": {
+      "completion_tokens": 20286,
+      "seconds": 106.41807738598436,
+      "http_tok_s": 190.6255074165786
+    },
+    "candidate_timing": {
+      "completion_tokens": 20307,
+      "seconds": 105.94873703364283,
+      "http_tok_s": 191.6681648932893
+    },
+    "http_ratio": 1.0054696640068852,
+    "benchmarks": {
+      "gsm8k": {
+        "paired": {
+          "accuracy": {
+            "n": 32,
+            "reference_correct": 29,
+            "candidate_correct": 29,
+            "gains": 0,
+            "losses": 0
+          }
+        },
+        "reference_truncated": 1,
+        "candidate_truncated": 1
+      },
+      "humaneval_plus": {
+        "paired": {
+          "base": {
+            "n": 32,
+            "reference_correct": 32,
+            "candidate_correct": 32,
+            "gains": 0,
+            "losses": 0
+          },
+          "plus": {
+            "n": 32,
+            "reference_correct": 32,
+            "candidate_correct": 32,
+            "gains": 0,
+            "losses": 0
+          }
+        },
+        "reference_truncated": 0,
+        "candidate_truncated": 0
+      }
+    }
+  },
+  {
+    "scope": "same-item scoped panel, not full quality gate",
+    "reference": "results/binary-5090/tasks-batch-baselines/tasks-modern-packed1-hybrid-plain-b2",
+    "candidate": "results/binary-5090/tasks-composed/tasks-modern-packed1-fused-plain-b2",
+    "reference_timing": {
+      "completion_tokens": 21159,
+      "seconds": 72.96490843687207,
+      "http_tok_s": 289.988714483297
+    },
+    "candidate_timing": {
+      "completion_tokens": 20846,
+      "seconds": 66.95053840149194,
+      "http_tok_s": 311.3641876184742
+    },
+    "http_ratio": 1.073711396573705,
+    "benchmarks": {
+      "gsm8k": {
+        "paired": {
+          "accuracy": {
+            "n": 32,
+            "reference_correct": 29,
+            "candidate_correct": 29,
+            "gains": 0,
+            "losses": 0
+          }
+        },
+        "reference_truncated": 1,
+        "candidate_truncated": 1
+      },
+      "humaneval_plus": {
+        "paired": {
+          "base": {
+            "n": 32,
+            "reference_correct": 32,
+            "candidate_correct": 32,
+            "gains": 0,
+            "losses": 0
+          },
+          "plus": {
+            "n": 32,
+            "reference_correct": 32,
+            "candidate_correct": 32,
+            "gains": 0,
+            "losses": 0
+          }
+        },
+        "reference_truncated": 0,
+        "candidate_truncated": 0
+      }
+    }
+  },
+  {
+    "scope": "same-item scoped panel, not full quality gate",
+    "reference": "results/binary-5090/tasks-batch-baselines/tasks-modern-packed1-hybrid-plain-b4",
+    "candidate": "results/binary-5090/tasks-composed/tasks-modern-packed1-fused-plain-b4",
+    "reference_timing": {
+      "completion_tokens": 21990,
+      "seconds": 52.63890005275607,
+      "http_tok_s": 417.7518902933202
+    },
+    "candidate_timing": {
+      "completion_tokens": 21991,
+      "seconds": 49.46831474453211,
+      "http_tok_s": 444.547183658217
+    },
+    "http_ratio": 1.0641416448075982,
+    "benchmarks": {
+      "gsm8k": {
+        "paired": {
+          "accuracy": {
+            "n": 32,
+            "reference_correct": 29,
+            "candidate_correct": 29,
+            "gains": 0,
+            "losses": 0
+          }
+        },
+        "reference_truncated": 1,
+        "candidate_truncated": 1
+      },
+      "humaneval_plus": {
+        "paired": {
+          "base": {
+            "n": 32,
+            "reference_correct": 32,
+            "candidate_correct": 32,
+            "gains": 0,
+            "losses": 0
+          },
+          "plus": {
+            "n": 32,
+            "reference_correct": 32,
+            "candidate_correct": 32,
+            "gains": 0,
+            "losses": 0
+          }
+        },
+        "reference_truncated": 0,
+        "candidate_truncated": 0
+      }
+    }
+  },
+  {
+    "scope": "same-item scoped panel, not full quality gate",
+    "reference": "results/binary-5090/tasks-batch-baselines/tasks-modern-packed1-hybrid-plain-b5",
+    "candidate": "results/binary-5090/tasks-composed/tasks-modern-packed1-fused-plain-b5",
+    "reference_timing": {
+      "completion_tokens": 19848,
+      "seconds": 41.847600686363876,
+      "http_tok_s": 474.2924247618218
+    },
+    "candidate_timing": {
+      "completion_tokens": 23201,
+      "seconds": 49.118247895501554,
+      "http_tok_s": 472.3499105538095
+    },
+    "http_ratio": 0.9959043954602737,
+    "benchmarks": {
+      "gsm8k": {
+        "paired": {
+          "accuracy": {
+            "n": 32,
+            "reference_correct": 30,
+            "candidate_correct": 29,
+            "gains": 0,
+            "losses": 1
+          }
+        },
+        "reference_truncated": 0,
+        "candidate_truncated": 1
+      },
+      "humaneval_plus": {
+        "paired": {
+          "plus": {
+            "n": 32,
+            "reference_correct": 32,
+            "candidate_correct": 32,
+            "gains": 0,
+            "losses": 0
+          },
+          "base": {
+            "n": 32,
+            "reference_correct": 32,
+            "candidate_correct": 32,
+            "gains": 0,
+            "losses": 0
+          }
+        },
+        "reference_truncated": 0,
+        "candidate_truncated": 0
+      }
+    }
+  },
+  {
+    "scope": "same-item scoped panel, not full quality gate",
+    "reference": "results/binary-5090/tasks-hybrid-initial/tasks-modern-packed1-hybrid-plain-b8",
+    "candidate": "results/binary-5090/tasks-composed/tasks-modern-packed1-fused-plain-b8",
+    "reference_timing": {
+      "completion_tokens": 20853,
+      "seconds": 42.9448879500851,
+      "http_tok_s": 485.5758390669797
+    },
+    "candidate_timing": {
+      "completion_tokens": 21102,
+      "seconds": 41.219418263062835,
+      "http_tok_s": 511.94317846328585
+    },
+    "http_ratio": 1.0543011766132562,
+    "benchmarks": {
+      "gsm8k": {
+        "paired": {
+          "accuracy": {
+            "n": 32,
+            "reference_correct": 29,
+            "candidate_correct": 30,
+            "gains": 1,
+            "losses": 0
+          }
+        },
+        "reference_truncated": 1,
+        "candidate_truncated": 1
+      },
+      "humaneval_plus": {
+        "paired": {
+          "plus": {
+            "n": 32,
+            "reference_correct": 32,
+            "candidate_correct": 32,
+            "gains": 0,
+            "losses": 0
+          },
+          "base": {
+            "n": 32,
+            "reference_correct": 32,
+            "candidate_correct": 32,
+            "gains": 0,
+            "losses": 0
+          }
+        },
+        "reference_truncated": 0,
+        "candidate_truncated": 0
+      }
+    }
+  },
+  {
+    "scope": "same-item scoped panel, not full quality gate",
+    "reference": "results/binary-5090/tasks-batch-baselines/tasks-modern-packed1-hybrid-plain-b16",
+    "candidate": "results/binary-5090/tasks-composed/tasks-modern-packed1-fused-plain-b16",
+    "reference_timing": {
+      "completion_tokens": 20337,
+      "seconds": 39.173311659134924,
+      "http_tok_s": 519.1544737642206
+    },
+    "candidate_timing": {
+      "completion_tokens": 21428,
+      "seconds": 35.074307271279395,
+      "http_tok_s": 610.9315241571805
+    },
+    "http_ratio": 1.1767817769680657,
+    "benchmarks": {
+      "gsm8k": {
+        "paired": {
+          "accuracy": {
+            "n": 32,
+            "reference_correct": 29,
+            "candidate_correct": 30,
+            "gains": 1,
+            "losses": 0
+          }
+        },
+        "reference_truncated": 1,
+        "candidate_truncated": 0
+      },
+      "humaneval_plus": {
+        "paired": {
+          "plus": {
+            "n": 32,
+            "reference_correct": 32,
+            "candidate_correct": 32,
+            "gains": 0,
+            "losses": 0
+          },
+          "base": {
+            "n": 32,
+            "reference_correct": 32,
+            "candidate_correct": 32,
+            "gains": 0,
+            "losses": 0
+          }
+        },
+        "reference_truncated": 0,
+        "candidate_truncated": 0
+      }
+    }
+  }
+]

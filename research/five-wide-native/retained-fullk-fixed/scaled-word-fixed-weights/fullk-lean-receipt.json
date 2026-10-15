@@ -1,0 +1,8 @@
+{
+  "compiler": "Lean (version 4.33.0, x86_64-unknown-linux-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+  "source_sha256": "20c8ee15dbaa8c75f7526c2c606e934b254aa76c1b7307ee3588e636f1953841",
+  "exit": 0,
+  "stdout": "",
+  "stderr": "",
+  "scope": "Integer/code and conditional ordered-observer contracts; CUDA/RZ/F32 conformance empirical."
+}

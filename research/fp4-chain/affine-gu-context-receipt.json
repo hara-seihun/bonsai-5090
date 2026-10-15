@@ -1,0 +1,14 @@
+{
+  "exit": 0,
+  "stdout": "{\"status\":\"pass\",\"cases\":54675,\"validation_checks\":54675,\"missing\":0,\"mismatches\":0,\"resident_label_bytes\":5688,\"source_oracle_fp4_bytes\":60,\"native_observer_table_bytes\":0,\"scale_context_table_bytes\":504,\"source_lookup_bytes\":218700,\"coordinate_axis_bytes\":936,\"output_bytes\":218700,\"preparation_ms\":{\"labels_scale_allocation_transfer_context\":85.500700,\"control_table_validation\":0.306700,\"graphs_warmup\":3.690400},\"timings_ms\":{\"context_tile_one_MMA_final_analytic\":{\"median\":0.003007,\"min\":0.002999,\"max\":0.003182,\"registers\":21,\"local_bytes\":0,\"shared_bytes\":0},\"direct_Q8\":{\"median\":0.002139,\"min\":0.002124,\"max\":0.002385,\"registers\":20,\"local_bytes\":0,\"shared_bytes\":0},\"full_map_lookup\":{\"median\":0.001470,\"min\":0.001465,\"max\":0.001500,\"registers\":12,\"local_bytes\":0,\"shared_bytes\":0}},\"scope\":\"one nonuniform-K MMA/128 distinct outputs plus final exact-bit observer; 936B coordinate axes+5688B cached-global prepared labels (row3 fields+padding, column2 fields); analytic final observer recovers conventional doubled g/u and down role only at endpoint, then applies dynamic E4M3/dyadic scale context and SiLU/Q8; dynamic cached-global producer/ISA composition/int index/readout/output charged; Q8 scale1 with E4M3 activation scale codes0..125 and dyadic up-scale1+j/16 selected deterministically per source id; only these 54675 case/context pairs were natively checked; no learned-model or speedup claim\"}\n",
+  "stderr": "",
+  "wall_s": 1.7865943908691406,
+  "mutex": "Local\\BonsaiGPU",
+  "mutex_wait_result": 0,
+  "hashes": {
+    "native_affine_context.cu": "ef80ae6d01a54a33e2b5b0f94a473b0ea9d2ccff53b1815729430fb70c52d0b1",
+    "native_affine_context.exe": "ba2b601bd32de17d2c4bcdb54b2dc50eb353f5250cfa8f9e6a3afb1e4e59705a",
+    "affine-observer.bin": "fab9aff7e926c4402c12f3111796064dbb5b353080b93c8c56964f19b035af8d",
+    "build.log": "f14748a8e0c3d8576a5d86427e793d4e216f2461058cfe0b44ef97151342281f"
+  }
+}

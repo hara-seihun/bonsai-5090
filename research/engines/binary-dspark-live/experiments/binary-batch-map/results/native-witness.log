@@ -1,0 +1,1 @@
+native mad.lo.u32 K128: all 131072 uniform two-byte × weight-bit cases exact; extrema +/-16384 and lifted sums32640; 262144 integer outputs checked

@@ -1,0 +1,40 @@
+{
+  "gpu": "RTX5090",
+  "power_limit_w": 500,
+  "cuda": "13.1.115",
+  "model_sha256": "17ef842e47450caeb8eaa3ebfbbab5d2f2278b62b79be107985fb69a2f819aa0",
+  "remote_directory": "/workspace/binary/pair",
+  "baseline_owner_commit": "4c57b94",
+  "source_commit_at_build": "4a81c7cfc15ee6fe37c6a57e1b931148100c18ff",
+  "consumer_compile_flags": "-O3 -std=c++17 -gencode arch=compute_120a,code=sm_120a -Isrc --expt-relaxed-constexpr",
+  "producer_compile_flags": "-O3 -std=c++17 -gencode arch=compute_120a,code=sm_120a -lineinfo -Xcompiler -fPIC,-O3 --expt-relaxed-constexpr",
+  "producer_object_owner": "/workspace/binary/modern/halo/build/kernels.o",
+  "producer_object_sha256": "1f52e6d721df757b7d34983341ac547819c409a09a2ba9098e4be86a732fd6cd",
+  "benchmark_executable_sha256": "02693db45124a1e5615ba807bba87ab5e4c7122a151dc3d1e63c1cf7005c7a4a",
+  "source_sha256": {
+    "src/fp4.cu": "c080036935e65f7f9ccb41cf76567a4058cf7c6017e18277d07c9a82dd4b17f5",
+    "src/fp4_ops.cuh": "1dfa009cd680d1b0227ab5bebf0d650ebab4fba5a33896c2fae452512d37bf39",
+    "src/kernels.cu": "dd4f37461a7670b0167751ebbfe668c4acc4e082a3faf84f988af6a9415a45c3",
+    "src/kernels.cuh": "961a92632bf26b29a47eef1af411b09d370300087a58795c96c750aca5a84abd",
+    "src/prep_chunk.cuh": "456484471822ad328448b53b04bf412d27a4a6fde2f62b2feee799012deab87c",
+    "src/gguf.cpp": "fb9bd8444685afe3c44cffda0f1776de5f6e1103d6dd320daba4fb9a78cac0bf",
+    "src/model.h": "99da38b3617ba6b18ce0d3a1931180fccbc3ee6996cc3ea8a7764521bc31e372",
+    "experiments/binary-fp4-pair/pair.cu": "8a8a92d2e9ef60d88401496a68471ef4958cbf34b50264993f9b6c120fc7b8d6",
+    "experiments/binary-fp4-pair/pair.cuh": "96b7b7adb1f5a68f48405a1a9230e9b9f8e1abde81dd115cbfffaa0d3166a8cf",
+    "experiments/binary-fp4-pair/bench.cu": "8ef75ba8526da4bee2f44f72f29be9cf3a4afed1c4b5f17fbb5f23e599e7dbec"
+  },
+  "runtime_environment": {
+    "H5_PDL": "1",
+    "H5_PREP_CHUNK": "0",
+    "H5_PREP_WIDE": "0"
+  },
+  "timing": {
+    "lock": "/tmp/binary-gpu.lock",
+    "warmups": 3,
+    "median_samples": 10,
+    "cold_evict_bytes": 134217728
+  },
+  "inputs": "synthetic deterministic mix; actual trained Q1 weights and RMSNorm vectors",
+  "results": "9 complete shapes, 56 schedules/arms per shape, 504 records; exact additive-contract check for all joint configurations",
+  "finished_at": "2026-10-10T19:57:52Z"
+}

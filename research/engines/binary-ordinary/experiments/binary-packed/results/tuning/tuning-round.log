@@ -1,0 +1,72 @@
+NVIDIA GeForce RTX 5090 SM170 CUDA runtime13010
+best N5120 K5120 R1 lut4 chunk1 threads128 10.208us cold
+alpha .75 beta .25 independent initial Y maxerr 1.8954277e-05
+NVIDIA GeForce RTX 5090 SM170 CUDA runtime13010
+best N17408 K5120 R1 lut4 chunk2 threads64 16.352us cold
+alpha .75 beta .25 independent initial Y maxerr 2.33650208e-05
+NVIDIA GeForce RTX 5090 SM170 CUDA runtime13010
+best N5120 K17408 R1 lut4 chunk4 threads128 16.128us cold
+alpha .75 beta .25 independent initial Y maxerr 8.07195902e-05
+NVIDIA GeForce RTX 5090 SM170 CUDA runtime13010
+best N248320 K5120 R1 lut4 chunk40 threads128 118.784us cold
+alpha .75 beta .25 independent initial Y maxerr 2.37375498e-05
+NVIDIA GeForce RTX 5090 SM170 CUDA runtime13010
+best N5120 K5120 R1 ilp chunk1 threads64 10.208us cold
+alpha .75 beta .25 independent initial Y maxerr 1.58622861e-05
+NVIDIA GeForce RTX 5090 SM170 CUDA runtime13010
+best N17408 K5120 R1 ilp chunk2 threads64 16.352us cold
+alpha .75 beta .25 independent initial Y maxerr 2.12788582e-05
+NVIDIA GeForce RTX 5090 SM170 CUDA runtime13010
+best N5120 K17408 R1 ilp chunk4 threads128 16.128us cold
+alpha .75 beta .25 independent initial Y maxerr 6.16759062e-05
+NVIDIA GeForce RTX 5090 SM170 CUDA runtime13010
+best N248320 K5120 R1 ilp chunk40 threads128 118.784us cold
+alpha .75 beta .25 independent initial Y maxerr 1.85519457e-05
+NVIDIA GeForce RTX 5090 SM170 CUDA runtime13010
+best N5120 K5120 R1 lut8 chunk1 threads256 10.208us cold
+alpha .75 beta .25 independent initial Y maxerr 1.71512365e-05
+NVIDIA GeForce RTX 5090 SM170 CUDA runtime13010
+best N17408 K5120 R1 lut8 chunk1 threads256 16.352us cold
+alpha .75 beta .25 independent initial Y maxerr 1.88350677e-05
+NVIDIA GeForce RTX 5090 SM170 CUDA runtime13010
+best N5120 K17408 R1 lut8 chunk2 threads256 18.176us cold
+alpha .75 beta .25 independent initial Y maxerr 6.13033772e-05
+NVIDIA GeForce RTX 5090 SM170 CUDA runtime13010
+best N248320 K5120 R1 lut8 chunk40 threads256 122.880us cold
+alpha .75 beta .25 independent initial Y maxerr 1.87158585e-05
+NVIDIA GeForce RTX 5090 SM170 CUDA runtime13010
+best N5120 K5120 R8 lut4 chunk2 threads256 18.176us cold
+alpha .75 beta .25 independent initial Y maxerr 2.76090577e-05
+NVIDIA GeForce RTX 5090 SM170 CUDA runtime13010
+best N17408 K5120 R8 lut4 chunk2 threads256 38.624us cold
+alpha .75 beta .25 independent initial Y maxerr 2.76118517e-05
+NVIDIA GeForce RTX 5090 SM170 CUDA runtime13010
+best N5120 K17408 R8 lut4 chunk2 threads256 40.672us cold
+alpha .75 beta .25 independent initial Y maxerr 8.01458955e-05
+NVIDIA GeForce RTX 5090 SM170 CUDA runtime13010
+best N248320 K5120 R8 lut4 chunk16 threads256 417.792us cold
+alpha .75 beta .25 independent initial Y maxerr 3.04877758e-05
+NVIDIA GeForce RTX 5090 SM170 CUDA runtime13010
+best N5120 K5120 R8 ilp chunk2 threads256 20.192us cold
+alpha .75 beta .25 independent initial Y maxerr 2.57790089e-05
+NVIDIA GeForce RTX 5090 SM170 CUDA runtime13010
+best N17408 K5120 R8 ilp chunk2 threads256 40.672us cold
+alpha .75 beta .25 independent initial Y maxerr 2.76118517e-05
+NVIDIA GeForce RTX 5090 SM170 CUDA runtime13010
+best N5120 K17408 R8 ilp chunk4 threads256 40.960us cold
+alpha .75 beta .25 independent initial Y maxerr 0.00012665987
+NVIDIA GeForce RTX 5090 SM170 CUDA runtime13010
+best N248320 K5120 R8 ilp chunk16 threads256 428.032us cold
+alpha .75 beta .25 independent initial Y maxerr 3.53902578e-05
+NVIDIA GeForce RTX 5090 SM170 CUDA runtime13010
+best N5120 K5120 R8 lut8 chunk1 threads256 32.736us cold
+alpha .75 beta .25 independent initial Y maxerr 2.3715198e-05
+NVIDIA GeForce RTX 5090 SM170 CUDA runtime13010
+best N17408 K5120 R8 lut8 chunk16 threads256 81.888us cold
+alpha .75 beta .25 independent initial Y maxerr 2.78651714e-05
+NVIDIA GeForce RTX 5090 SM170 CUDA runtime13010
+best N5120 K17408 R8 lut8 chunk16 threads256 86.016us cold
+alpha .75 beta .25 independent initial Y maxerr 0.000111401081
+NVIDIA GeForce RTX 5090 SM170 CUDA runtime13010
+best N248320 K5120 R8 lut8 chunk16 threads256 1038.304us cold
+alpha .75 beta .25 independent initial Y maxerr 3.53902578e-05

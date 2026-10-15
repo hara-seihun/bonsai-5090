@@ -1,0 +1,2 @@
+3f55a6b4e09ad28a2f7687f809c6b1bef4c6a0f624f7a4ea91ed13abd70f8d2c  binary-batch-map-bench
+9fd8871e89bf199cb6141977d0c31abc33cb73720527f19120513cd7357f0ed1  binary-batch-map-witness

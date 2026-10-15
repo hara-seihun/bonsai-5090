@@ -21,8 +21,14 @@ it agrees with the original per-item verdicts on all 1,319 items.
 **Request identity.** For all 1,319 items, the request body `scripts/gsm8k.py` sends (prompt, sampling,
 seed, stop strings) is byte-identical to the request recorded during the measured run.
 
-For reference, PrismML's published GSM8K figure for Ternary Bonsai 2 27B is 96.06%. It was measured with
-PrismML's own setup, not this protocol, so the two aren't a controlled comparison.
+The subsequent native-trigger audit keeps this count: fallback runs only for the nine empty parse
+failures, all judged zero. Broader every-miss recall reaches 1283/1319 and remains a diagnostic.
+See [canonical scores and provenance](../../benchmarks/receipts/canonical-scores.json) and the
+[benchmark report](../../benchmarks/README.md#gsm8k).
+
+For reference, PrismML's published **original Ternary Bonsai 27B** GSM8K figure is 96.06%.
+Our checkpoint is **Bonsai 2**. Recovered published settings permit a qualified comparison,
+while checkpoint differences and unpublished harness details prevent an engine-only inference.
 
 Rescore:
 

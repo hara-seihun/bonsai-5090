@@ -1,0 +1,45 @@
+{
+  "benchmark_source_commit": "d0430a2",
+  "kernel_source_commit": "f53754a",
+  "gpu": "RTX5090",
+  "cuda": "13.1.115",
+  "power_limit_w": 500,
+  "kjob": "binary-a8-fp4-ragged-round",
+  "exit": 0,
+  "exclusive_limit_seconds": 55,
+  "finished_at": "2026-10-10T22:03:22Z",
+  "flags": "-O3 -std=c++17 -gencode arch=compute_120a,code=sm_120a -Isrc",
+  "runtime_environment": {
+    "H5_PDL": "1"
+  },
+  "rows": [
+    16,
+    24,
+    31
+  ],
+  "trained_families": [
+    "gu",
+    "down",
+    "head"
+  ],
+  "candidate_records": 180,
+  "records": 189,
+  "parity": "everycandidatefulloutput bitexactWF8 sameplan",
+  "max_error_vs_DP4A": 6.67572021e-06,
+  "max_relative_rms_vs_DP4A": 2.42138634e-07,
+  "sha256": {
+    "digits.cu": "0db624118ccff417de30915b722d67054e0f3c10242d280c176581faa7c30a55",
+    "digits.cuh": "33af5418757c777f70c6f6da62585340a3bda34ed4c2b8b12bc535eda20e0936",
+    "bench.cu": "0e55e5a814ebcc658631c2ae07e10d8a2801c5c4aa5d2a86fa0dd07e92a9bda9",
+    "build/digits.o": "c783e12e68948e8eea0dce5776d29c3c079ab0eced3857a0bd899e572ab1653d",
+    "build/bench": "13be8d3a64db1810f248a9b0358304c3b8aaa7dea22c4121b8aea232e05f54de"
+  },
+  "input": "deterministic synthetic F32projectioncoordinate, originaltrainedQ1weights/scales",
+  "gpu_lock": "/tmp/binary-gpu.lock",
+  "samples": {
+    "discarded": 2,
+    "median": 7,
+    "eviction_bytes": 134217728
+  },
+  "selection": "selectedF4G2T16+allalternatives measured separately; interior untested rowcounts inferred, exactcrossoverunknown"
+}

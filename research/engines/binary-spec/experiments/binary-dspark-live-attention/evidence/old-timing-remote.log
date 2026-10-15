@@ -1,0 +1,13 @@
+DEVICE impl=live-history name=NVIDIA GeForce RTX 5090 compute=12.0 seed=0x31415926
+CORRECT impl=live-history case=ring8196-history48 phase=initial layer=0 rows=8 ring=8196 window=48 max_abs_error=1.6843112e-07 nan_count=0 status=0
+CORRECT impl=live-history case=ring8196-history48 phase=post-timing layer=0 rows=8 ring=8196 window=48 max_abs_error=1.6843112e-07 nan_count=0 status=0
+TIMING impl=live-history case=ring8196-history48 ring=8196 history_slot0=48 window=48 queries_per_slot=4 slots=2 q_heads=8 kv_heads=2 head_dim=128 warmup=8 iterations=64 samples=5 min_us=351.851501 median_us=351.884003 max_us=351.891022
+CORRECT impl=live-history case=ring8196-history176 phase=initial layer=2 rows=8 ring=8196 window=176 max_abs_error=7.8462217e-07 nan_count=0 status=0
+CORRECT impl=live-history case=ring8196-history176 phase=post-timing layer=2 rows=8 ring=8196 window=176 max_abs_error=7.8462217e-07 nan_count=0 status=0
+TIMING impl=live-history case=ring8196-history176 ring=8196 history_slot0=176 window=176 queries_per_slot=4 slots=2 q_heads=8 kv_heads=2 head_dim=128 warmup=8 iterations=64 samples=5 min_us=385.057983 median_us=385.080475 max_us=385.130493
+CORRECT impl=live-history case=wrap64-history48 phase=initial layer=2 rows=8 ring=64 window=48 max_abs_error=4.6443777e-07 nan_count=0 status=0
+CORRECT impl=live-history case=wrap256-history176-block16 phase=initial layer=0 rows=32 ring=256 window=176 max_abs_error=2.5462833e-07 nan_count=0 status=0
+CORRECT impl=live-history case=context-begin-clamp phase=initial layer=1 rows=8 ring=256 window=176 max_abs_error=1.7028368e-07 nan_count=0 status=0
+CORRECT impl=live-history case=anchor-zero phase=initial layer=1 rows=8 ring=64 window=48 max_abs_error=1.5832691e-07 nan_count=0 status=0
+CORRECT impl=live-history case=exact-tag-missing phase=initial layer=2 rows=8 ring=256 window=176 max_abs_error=7.8462217e-07 nan_count=4096 status=3
+PASS impl=live-history cases=7 mode=--timing

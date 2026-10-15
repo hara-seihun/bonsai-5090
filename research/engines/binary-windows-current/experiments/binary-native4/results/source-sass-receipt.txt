@@ -1,0 +1,17 @@
+d52b0cbe8e97b35ab12d196f64ea187e6405180cfdea235d4f79577ed2a1ec3a  native4.o
+ad80abfe5efe459f9ba46fd8c8a7914d7b9421dbf409c0ec6bf92305cedba060  bench
+9bd1d92439c0e42d560dd2d6f401a430a5e13b462b4d868696b267b76d535fca  native4.sass
+2b6e9062bd27b43866217274914106bf6753aa3c1741329ec6e028e95674ec98  experiments/binary-native4/native4.cu
+64b9e066bfeb7a6b31306a641d4d2316191a81bb7545fcbe8fddcd4c7d2b3fc6  experiments/binary-bitserial/bitserial.cu
+      1         /*2e10*/                   IMMA.16832.U8.S8 R24, R24.ROW, R28.COL, RZ ;                       /* 0x0000001c18187237 */
+      1         /*2e30*/                   IMMA.16832.U8.S8 R24, R24.ROW, R28.COL, RZ ;                       /* 0x0000001c18187237 */
+      1         /*2e50*/                   IMMA.16832.U8.S8 R24, R24.ROW, R28.COL, RZ ;                       /* 0x0000001c18187237 */
+      1         /*2e90*/                   IMMA.16832.U8.S8 R24, R24.ROW, R28.COL, RZ ;                       /* 0x0000001c18187237 */
+      1         /*2f00*/                   IMMA.16832.U8.S8 R28, R28.ROW, R50.COL, RZ ;                       /* 0x000000321c1c7237 */
+      1         /*2f10*/                   IMMA.16832.U8.S8 R24, R24.ROW, R28.COL, RZ ;                       /* 0x0000001c18187237 */
+      1         /*2f20*/                   IMMA.16832.U8.S8 R28, R28.ROW, R50.COL, RZ ;                       /* 0x000000321c1c7237 */
+      1         /*2f40*/                   IMMA.16832.U8.S8 R28, R28.ROW, R50.COL, RZ ;                       /* 0x000000321c1c7237 */
+      1         /*2f80*/                   IMMA.16832.U8.S8 R28, R28.ROW, R50.COL, RZ ;                       /* 0x000000321c1c7237 */
+      1         /*3000*/                   IMMA.16832.U8.S8 R28, R28.ROW, R50.COL, RZ ;                       /* 0x000000321c1c7237 */
+      1         /*3170*/                   IMMA.16832.U8.S8 R16, R16.ROW, R20.COL, RZ ;                       /* 0x0000001410107237 */
+      1         /*3220*/                   IMMA.16832.U8.S8 R20, R20.ROW, R34.COL, RZ ;                       /* 0x0000002214147237 */

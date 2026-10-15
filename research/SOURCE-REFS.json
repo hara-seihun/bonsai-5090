@@ -1,0 +1,54 @@
+{
+  "binary-windows-current": {
+    "ref": "windows-binary-20261011",
+    "commit": "c7d236b4f35f9022579aba3a9ac2cfcb047e598c"
+  },
+  "binary-ordinary": {
+    "ref": "binary-bonsai-5090",
+    "commit": "5dda8267a89fe86b3b4068ec9246af6cb179e6ce"
+  },
+  "binary-spec": {
+    "ref": "binary-spec-bonsai-5090",
+    "commit": "2566215ab71e749cd857b0062e4f6f8fbb903952"
+  },
+  "binary-f32-control": {
+    "ref": "binary-modern-baseline",
+    "commit": "f0ed5067574f89382a85d0800959fd98b3aef99d"
+  },
+  "binary-batchpair": {
+    "ref": "binary-batchpair-bonsai-5090",
+    "commit": "a27c2e76f40d2ce5e53006c8ea7890a26fc08dcf"
+  },
+  "binary-dspark-live": {
+    "ref": "binary-dspark-live-control",
+    "commit": "90d157783010b18ce0974a863780d57fde651565"
+  },
+  "binary-bmega": {
+    "ref": "opus-bmega",
+    "commit": "e1634c97d50d708a52c165dcf804206c20fd4459"
+  },
+  "fullk-gu": {
+    "ref": "31ad74a9a8253e8b6016613994cde33bf18c5c64",
+    "commit": "31ad74a9a8253e8b6016613994cde33bf18c5c64"
+  },
+  "packed-tail": {
+    "ref": "d7926585e8c84ee0ffacd84a4b15249951f752e9",
+    "commit": "d7926585e8c84ee0ffacd84a4b15249951f752e9"
+  },
+  "h1-graph-v3": {
+    "ref": "95fce9015",
+    "commit": "95fce9015b13e65954793c415c12153e8fa8bc0f"
+  },
+  "dict8-v2": {
+    "ref": "3fdbad4547e51455b82d5e7e3f5d6194081449cb",
+    "commit": "3fdbad4547e51455b82d5e7e3f5d6194081449cb"
+  },
+  "dict8-offline-identity": {
+    "ref": "9387d08aed0127afb523db5517a58ba5f43f308d",
+    "commit": "9387d08aed0127afb523db5517a58ba5f43f308d"
+  },
+  "dict8-joint-consumer": {
+    "ref": "3dc21a76b8e99401e3eea0b7e561feb3bbb27554",
+    "commit": "3dc21a76b8e99401e3eea0b7e561feb3bbb27554"
+  }
+}

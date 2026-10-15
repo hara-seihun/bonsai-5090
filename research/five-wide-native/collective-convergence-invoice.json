@@ -1,0 +1,144 @@
+{
+  "scope": "Static placement plus native witness; asm volatile and memory clobber do not encode warp convergence.",
+  "variants": {
+    "scaled-word-collision": {
+      "executable_sha256": "9c0565e2a25df7fc5c540b6d60e8f2b53527e9d4d43aba8f07e7ddf8fc72e72d",
+      "exit": 1,
+      "placement": [
+        "/*0140*/               @P2 BRA 0x650 ;                                                             /* 0x0000000400402947 */",
+        "/*0200*/                   OMMA.SF.16864.F32.E2M1.E2M1.UE4M3.4X R4, R12, R22, RZ, R4, R5, URZ ;    /* 0x705004160c04747f */",
+        "/*0220*/                   OMMA.SF.16864.F32.E2M1.E2M1.UE4M3.4X R16, R8, R20, RZ, R16, R17, URZ ;  /* 0x711010140810747f */",
+        "/*06e0*/                   OMMA.SF.16864.F32.E2M1.E2M1.UE4M3.4X R4, R12, R22, RZ, R4, R5, URZ ;    /* 0x705004160c04747f */",
+        "/*0730*/                   OMMA.SF.16864.F32.E2M1.E2M1.UE4M3.4X R8, R12, R20, RZ, R8, R9, URZ ;    /* 0x709008140c08747f */",
+        "/*0d20*/               @P2 BRA 0x1190 ;                                                            /* 0x0000000400182947 */"
+      ],
+      "observations": {
+        "state": "unexpected",
+        "carrier_bits": [
+          2016966712,
+          1269301248
+        ],
+        "gate": [
+          4.39213763e-05,
+          0.0009765625
+        ],
+        "up": [
+          1.92615046e-27,
+          43008
+        ],
+        "y": [
+          4.23005169e-32,
+          21.0102539
+        ],
+        "q8_scale": [
+          3.33074947e-34,
+          0.165435076
+        ],
+        "q8": [
+          127,
+          127
+        ],
+        "activation_scale_codes": [
+          126,
+          1
+        ],
+        "weight_scale": 1,
+        "scope": "single scalar FP32 g+512u carrier across two independently scaled16K blocks; rest of K5120 and127 block features zero"
+      }
+    },
+    "scaled-word-collision-clobber": {
+      "executable_sha256": "c2fa8011cf1e0f58e5c4c9c6592e62c1423f47c304114219aa25748d495b2ffb",
+      "exit": 1,
+      "placement": [
+        "/*0140*/               @P2 BRA 0x650 ;                                                             /* 0x0000000400402947 */",
+        "/*0200*/                   OMMA.SF.16864.F32.E2M1.E2M1.UE4M3.4X R4, R12, R22, RZ, R4, R5, URZ ;    /* 0x705004160c04747f */",
+        "/*0220*/                   OMMA.SF.16864.F32.E2M1.E2M1.UE4M3.4X R16, R8, R20, RZ, R16, R17, URZ ;  /* 0x711010140810747f */",
+        "/*06e0*/                   OMMA.SF.16864.F32.E2M1.E2M1.UE4M3.4X R4, R12, R22, RZ, R4, R5, URZ ;    /* 0x705004160c04747f */",
+        "/*0730*/                   OMMA.SF.16864.F32.E2M1.E2M1.UE4M3.4X R8, R12, R20, RZ, R8, R9, URZ ;    /* 0x709008140c08747f */",
+        "/*0d20*/               @P2 BRA 0x1190 ;                                                            /* 0x0000000400182947 */"
+      ],
+      "observations": {
+        "state": "unexpected",
+        "carrier_bits": [
+          2016966712,
+          1269301248
+        ],
+        "gate": [
+          4.39213763e-05,
+          0.0009765625
+        ],
+        "up": [
+          3.85230093e-27,
+          43008
+        ],
+        "y": [
+          8.46010337e-32,
+          21.0102539
+        ],
+        "q8_scale": [
+          6.66149894e-34,
+          0.165435076
+        ],
+        "q8": [
+          127,
+          127
+        ],
+        "activation_scale_codes": [
+          126,
+          1
+        ],
+        "weight_scale": 1,
+        "scope": "single scalar FP32 g+512u carrier across two independently scaled16K blocks; rest of K5120 and127 block features zero"
+      }
+    },
+    "scaled-word-collision-sync": {
+      "executable_sha256": "7e6a8619056a4bf416fe07dab0f4396e2c635d236f89aa2bb23210ef915b54fe",
+      "exit": 0,
+      "placement": [
+        "/*01e0*/                   OMMA.SF.16864.F32.E2M1.E2M1.UE4M3.4X R16, R8, R20, RZ, R16, R17, URZ ;  /* 0x711010140810747f */",
+        "/*0240*/                   OMMA.SF.16864.F32.E2M1.E2M1.UE4M3.4X R4, R12, R18, RZ, R4, R5, URZ ;    /* 0x705004120c04747f */",
+        "/*0260*/               @P2 BRA 0x6a0 ;                                                             /* 0x00000004000c2947 */",
+        "/*0770*/                   OMMA.SF.16864.F32.E2M1.E2M1.UE4M3.4X R8, R4, R20, RZ, R8, R9, URZ ;     /* 0x709008140408747f */",
+        "/*07d0*/                   OMMA.SF.16864.F32.E2M1.E2M1.UE4M3.4X R4, R12, R18, RZ, R4, R5, URZ ;    /* 0x705004120c04747f */",
+        "/*0d30*/               @P2 BRA 0x1270 ;                                                            /* 0x00000004004c2947 */",
+        "/*0df0*/               @P2 BRA 0x1200 ;                                                            /* 0x0000000400002947 */",
+        "/*0fe0*/               @P2 BRA 0x11a0 ;                                                            /* 0x00000000006c2947 */",
+        "/*1000*/               @P2 BRA 0x11e0 ;                                                            /* 0x0000000000742947 */"
+      ],
+      "observations": {
+        "state": "native_target_collision",
+        "carrier_bits": [
+          1269301248,
+          1269301248
+        ],
+        "gate": [
+          0,
+          0.0009765625
+        ],
+        "up": [
+          43008,
+          43008
+        ],
+        "y": [
+          0,
+          21.0102539
+        ],
+        "q8_scale": [
+          0,
+          0.165435076
+        ],
+        "q8": [
+          0,
+          127
+        ],
+        "activation_scale_codes": [
+          126,
+          1
+        ],
+        "weight_scale": 1,
+        "scope": "single scalar FP32 g+512u carrier across two independently scaled16K blocks; rest of K5120 and127 block features zero"
+      }
+    }
+  },
+  "fixed_weight_full_fragment_carriers_equal": true
+}

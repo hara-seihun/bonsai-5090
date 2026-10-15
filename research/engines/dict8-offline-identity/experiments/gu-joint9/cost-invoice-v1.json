@@ -1,0 +1,237 @@
+{
+  "gpu_work": false,
+  "native_model_execution": false,
+  "matched_compiler_receipt_sha256": "2ef2b0a9118a2bfb15c3e22eceb3b5c847187fc94189036b624e61239c5b9569",
+  "functions": {
+    "_ZN2h518independent3_probeEPKhS1_PKfiiS1_iPfiS3_": {
+      "static_instruction_lines": 2976,
+      "static_omma": 32,
+      "static_lds": 78,
+      "backedge_regions_with_omma": [
+        {
+          "from": "0x5a30",
+          "backedge": "0x71f0",
+          "instruction_lines": 381,
+          "omma": 32,
+          "lds": 78,
+          "idx": 0
+        },
+        {
+          "from": "0x24e0",
+          "backedge": "0xb160",
+          "instruction_lines": 2249,
+          "omma": 32,
+          "lds": 78,
+          "idx": 0
+        },
+        {
+          "from": "0x2e50",
+          "backedge": "0xb1a0",
+          "instruction_lines": 2102,
+          "omma": 32,
+          "lds": 78,
+          "idx": 0
+        },
+        {
+          "from": "0x3830",
+          "backedge": "0xb1e0",
+          "instruction_lines": 1948,
+          "omma": 32,
+          "lds": 78,
+          "idx": 0
+        },
+        {
+          "from": "0x4210",
+          "backedge": "0xb220",
+          "instruction_lines": 1794,
+          "omma": 32,
+          "lds": 78,
+          "idx": 0
+        },
+        {
+          "from": "0x4d50",
+          "backedge": "0xb260",
+          "instruction_lines": 1618,
+          "omma": 32,
+          "lds": 78,
+          "idx": 0
+        },
+        {
+          "from": "0x5b30",
+          "backedge": "0xb2a0",
+          "instruction_lines": 1400,
+          "omma": 32,
+          "lds": 78,
+          "idx": 0
+        }
+      ]
+    },
+    "_ZN2h513native0_probeEPKhS1_PKfiiS1_iPfiS3_": {
+      "static_instruction_lines": 2288,
+      "static_omma": 32,
+      "static_lds": 16,
+      "backedge_regions_with_omma": [
+        {
+          "from": "0x3d50",
+          "backedge": "0x4740",
+          "instruction_lines": 160,
+          "omma": 32,
+          "lds": 16,
+          "idx": 0
+        },
+        {
+          "from": "0x1170",
+          "backedge": "0x86b0",
+          "instruction_lines": 1877,
+          "omma": 32,
+          "lds": 16,
+          "idx": 0
+        },
+        {
+          "from": "0x1900",
+          "backedge": "0x86f0",
+          "instruction_lines": 1760,
+          "omma": 32,
+          "lds": 16,
+          "idx": 0
+        },
+        {
+          "from": "0x2080",
+          "backedge": "0x8730",
+          "instruction_lines": 1644,
+          "omma": 32,
+          "lds": 16,
+          "idx": 0
+        },
+        {
+          "from": "0x2800",
+          "backedge": "0x8770",
+          "instruction_lines": 1528,
+          "omma": 32,
+          "lds": 16,
+          "idx": 0
+        },
+        {
+          "from": "0x3160",
+          "backedge": "0x87b0",
+          "instruction_lines": 1382,
+          "omma": 32,
+          "lds": 16,
+          "idx": 0
+        },
+        {
+          "from": "0x3ee0",
+          "backedge": "0x87f0",
+          "instruction_lines": 1170,
+          "omma": 32,
+          "lds": 16,
+          "idx": 0
+        }
+      ]
+    },
+    "_ZN2h512joint9_probeEPKhS1_PKfiiS1_iPfiS3_": {
+      "static_instruction_lines": 2896,
+      "static_omma": 32,
+      "static_lds": 77,
+      "backedge_regions_with_omma": [
+        {
+          "from": "0x4e50",
+          "backedge": "0x6cf0",
+          "instruction_lines": 491,
+          "omma": 32,
+          "lds": 77,
+          "idx": 0
+        },
+        {
+          "from": "0x1900",
+          "backedge": "0xac70",
+          "instruction_lines": 2360,
+          "omma": 32,
+          "lds": 77,
+          "idx": 0
+        },
+        {
+          "from": "0x2270",
+          "backedge": "0xacb0",
+          "instruction_lines": 2213,
+          "omma": 32,
+          "lds": 77,
+          "idx": 0
+        },
+        {
+          "from": "0x2c50",
+          "backedge": "0xacf0",
+          "instruction_lines": 2059,
+          "omma": 32,
+          "lds": 77,
+          "idx": 0
+        },
+        {
+          "from": "0x3630",
+          "backedge": "0xad30",
+          "instruction_lines": 1905,
+          "omma": 32,
+          "lds": 77,
+          "idx": 0
+        },
+        {
+          "from": "0x4170",
+          "backedge": "0xad70",
+          "instruction_lines": 1729,
+          "omma": 32,
+          "lds": 77,
+          "idx": 0
+        },
+        {
+          "from": "0x4f50",
+          "backedge": "0xadb0",
+          "instruction_lines": 1511,
+          "omma": 32,
+          "lds": 77,
+          "idx": 0
+        }
+      ]
+    }
+  },
+  "whole_gu_route": {
+    "B": 64,
+    "K": 5120,
+    "logical_output_features": 17408,
+    "physical_gate_up_rows": 34816,
+    "cta_grid": [
+      2,
+      68,
+      1
+    ],
+    "consumer_warps_per_cta": 8,
+    "K128_stages": 40,
+    "MMA_half_K": 64,
+    "MMA_sites_per_warp_stage": 32,
+    "warp_MMA_instructions_per_layer_decode": 1392640,
+    "WF0_weight_bytes_per_layer": 44564480,
+    "joint9_weight_bytes_per_layer": 36208640,
+    "weight_byte_delta_fraction": -0.1875,
+    "prepared_weight_bytes_64_layers": 2317352960,
+    "row_mean_bytes_per_layer_unchanged": 139264,
+    "raw_GU_SiLU_output_bytes_per_layer_unchanged": 4456448,
+    "minimum_GU_write_plus_one_observer_read_bytes_per_layer_unchanged": 8912896,
+    "additional_joint_table_bytes_per_CTA": 2048,
+    "additional_joint_tables_per_layer": 136,
+    "MMA_instruction_count_delta": 0,
+    "activation_q4_s4_g4_format_delta": 0,
+    "scale_AG_mean_order_delta": 0,
+    "downstream_SiLU_sign_Hadamard1024_FP4_observer_delta": 0,
+    "non_GU_projection_delta": 0,
+    "global_GU_carrier_newly_introduced": false
+  },
+  "unmeasured": [
+    "executed ALU/LDS/producer branch instruction counts",
+    "bank conflicts",
+    "latency share",
+    "registered occupancy",
+    "linked full engine/capture",
+    "full-model endpoints and TPS",
+    "absolute complete-observer traffic; original consumer retained and its delta is zero"
+  ],
+  "scope": "Payload and source-schedule accounting; compiler static backedge regions are not cycle or executed-work measurements. This probe leaves the original complete consumer unchanged; no H1 carrier is introduced."
+}

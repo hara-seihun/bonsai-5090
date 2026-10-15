@@ -1,0 +1,1392 @@
+{
+  "status": "ok",
+  "model": {
+    "path": "~/data/bonsai1/Bonsai-27B-Q1_0.gguf",
+    "bytes": 3803452480,
+    "mtime_ns": 1791493756943908374
+  },
+  "layout": "GGUF type41 Q1_0: row-major K128, FP16 little-endian d then 16 sign bytes, bit1=+d bit0=-d, little-bit-order",
+  "scope": "exhaustive signs and original positive finite FP16 scales on layers explicitly listed; statistical observations and priced arithmetic candidates, not runtime speedup or a whole-FFN carrier proof",
+  "layers": {
+    "0": {
+      "GU": {
+        "matched_sign_k128_blocks_identical": 0,
+        "matched_sign_k128_blocks_antipodal": 0,
+        "matched_scaled_k128_blocks_identical": 0,
+        "matched_scaled_k128_blocks_antipodal": 0,
+        "matched_original_fp16_scales_equal": 6446,
+        "matched_blocks": 696320,
+        "matched_sign_disagreement_fraction": 0.4993067797492532,
+        "disagreements_per_matched_k128": {
+          "min": 16,
+          "mean": 63.91126780790441,
+          "max": 105,
+          "p05": 46.0,
+          "p50": 64.0,
+          "p95": 82.0
+        },
+        "disagreement_fraction_per_matched_whole_row": {
+          "min": 0.25078125,
+          "mean": 0.49930677974925325,
+          "max": 0.7318359375,
+          "p05": 0.378125,
+          "p50": 0.4982421875,
+          "p95": 0.6212890625
+        },
+        "union_gate_up_sign_k128_blocks": {
+          "items": 1392640,
+          "classes": 1392640,
+          "duplicate_items": 0,
+          "collision_pairs": 0,
+          "maximum_multiplicity": 1
+        },
+        "union_gate_up_sign_k128_blocks_up_to_antipode": {
+          "items": 1392640,
+          "classes": 1392640,
+          "duplicate_items": 0,
+          "collision_pairs": 0,
+          "maximum_multiplicity": 1
+        },
+        "matched_sign_rows_identical": 0,
+        "matched_sign_rows_antipodal": 0,
+        "union_gate_up_sign_rows": {
+          "items": 34816,
+          "classes": 34816,
+          "duplicate_items": 0,
+          "collision_pairs": 0,
+          "maximum_multiplicity": 1
+        },
+        "union_gate_up_sign_rows_up_to_antipode": {
+          "items": 34816,
+          "classes": 34816,
+          "duplicate_items": 0,
+          "collision_pairs": 0,
+          "maximum_multiplicity": 1
+        },
+        "two_class_k128_carrier": {
+          "same_sign_columns": {
+            "min": 23,
+            "mean": 64.08873219209559,
+            "max": 112,
+            "p05": 46.0,
+            "p50": 64.0,
+            "p95": 82.0
+          },
+          "opposite_sign_columns": {
+            "min": 16,
+            "mean": 63.91126780790441,
+            "max": 105,
+            "p05": 46.0,
+            "p50": 64.0,
+            "p95": 82.0
+          },
+          "recurrence": "P=sum(gsign*x where gsign=usign), Q=sum(gsign*x where gsign!=usign); G=original_dG*(P+Q), U=original_dU*(P-Q)",
+          "signed_addition_model_per_k128": {
+            "carrier": 128,
+            "direct_two_reductions": 254
+          },
+          "scope": "exact real linear algebra, not floating-point accumulation order; no activation capture, quantization or timing",
+          "recurring_boundary": "two sign bits/class+orientation per input, two accumulators, independent original G/U scales; no SiLU/product closure asserted"
+        }
+      },
+      "matrices": {
+        "gate": {
+          "rows": 17408,
+          "k": 5120,
+          "q1_bytes": 12533760,
+          "scale_fp16_unique": 426,
+          "scale_fp16_bits_or_hex": "3ff8",
+          "scale_11bit_reconstruct_all_exact": true,
+          "scale_storage_candidate": "11-bit label=FP16_bits>>3, exact original FP16_bits=label<<3; bit-reconstruction cost unpriced",
+          "scale_min": 0.00115966796875,
+          "scale_max": 0.0211181640625,
+          "sign_rows": {
+            "items": 17408,
+            "classes": 17408,
+            "duplicate_items": 0,
+            "collision_pairs": 0,
+            "maximum_multiplicity": 1
+          },
+          "sign_rows_up_to_antipode": {
+            "items": 17408,
+            "classes": 17408,
+            "duplicate_items": 0,
+            "collision_pairs": 0,
+            "maximum_multiplicity": 1
+          },
+          "sign_k128_blocks": {
+            "items": 696320,
+            "classes": 696320,
+            "duplicate_items": 0,
+            "collision_pairs": 0,
+            "maximum_multiplicity": 1
+          },
+          "sign_k128_blocks_up_to_antipode": {
+            "items": 696320,
+            "classes": 696320,
+            "duplicate_items": 0,
+            "collision_pairs": 0,
+            "maximum_multiplicity": 1
+          },
+          "local_sign_words": {
+            "8": {
+              "aligned_words": 11141120,
+              "distinct": 256,
+              "entropy_bits": 7.999943429521187,
+              "maximum_frequency": 44497,
+              "distinct_per_original_k128": {
+                "min": 10,
+                "mean": 15.538877240349265,
+                "max": 16,
+                "p05": 14.0,
+                "p50": 16.0,
+                "p95": 16.0
+              }
+            },
+            "16": {
+              "aligned_words": 5570560,
+              "distinct": 65536,
+              "entropy_bits": 15.991386359192305,
+              "maximum_frequency": 127,
+              "distinct_per_original_k128": {
+                "min": 7,
+                "mean": 7.999533260569853,
+                "max": 8,
+                "p05": 8.0,
+                "p50": 8.0,
+                "p95": 8.0
+              }
+            },
+            "32": {
+              "aligned_words": 2785280,
+              "distinct": 2784356,
+              "entropy_bits": 21.40872690603121,
+              "maximum_frequency": 3,
+              "distinct_per_original_k128": {
+                "min": 4,
+                "mean": 4.0,
+                "max": 4,
+                "p05": 4.0,
+                "p50": 4.0,
+                "p95": 4.0
+              }
+            }
+          },
+          "aligned_2x2": {
+            "count": 22282240,
+            "rank_one": 11144121,
+            "rank_two": 11138119
+          }
+        },
+        "up": {
+          "rows": 17408,
+          "k": 5120,
+          "q1_bytes": 12533760,
+          "scale_fp16_unique": 379,
+          "scale_fp16_bits_or_hex": "3ff8",
+          "scale_11bit_reconstruct_all_exact": true,
+          "scale_storage_candidate": "11-bit label=FP16_bits>>3, exact original FP16_bits=label<<3; bit-reconstruction cost unpriced",
+          "scale_min": 0.0003795623779296875,
+          "scale_max": 0.01519775390625,
+          "sign_rows": {
+            "items": 17408,
+            "classes": 17408,
+            "duplicate_items": 0,
+            "collision_pairs": 0,
+            "maximum_multiplicity": 1
+          },
+          "sign_rows_up_to_antipode": {
+            "items": 17408,
+            "classes": 17408,
+            "duplicate_items": 0,
+            "collision_pairs": 0,
+            "maximum_multiplicity": 1
+          },
+          "sign_k128_blocks": {
+            "items": 696320,
+            "classes": 696320,
+            "duplicate_items": 0,
+            "collision_pairs": 0,
+            "maximum_multiplicity": 1
+          },
+          "sign_k128_blocks_up_to_antipode": {
+            "items": 696320,
+            "classes": 696320,
+            "duplicate_items": 0,
+            "collision_pairs": 0,
+            "maximum_multiplicity": 1
+          },
+          "local_sign_words": {
+            "8": {
+              "aligned_words": 11141120,
+              "distinct": 256,
+              "entropy_bits": 7.999951235454177,
+              "maximum_frequency": 44591,
+              "distinct_per_original_k128": {
+                "min": 10,
+                "mean": 15.539909811580882,
+                "max": 16,
+                "p05": 14.0,
+                "p50": 16.0,
+                "p95": 16.0
+              }
+            },
+            "16": {
+              "aligned_words": 5570560,
+              "distinct": 65536,
+              "entropy_bits": 15.991395302386582,
+              "maximum_frequency": 124,
+              "distinct_per_original_k128": {
+                "min": 7,
+                "mean": 7.999583524816177,
+                "max": 8,
+                "p05": 8.0,
+                "p50": 8.0,
+                "p95": 8.0
+              }
+            },
+            "32": {
+              "aligned_words": 2785280,
+              "distinct": 2784382,
+              "entropy_bits": 21.408745846635924,
+              "maximum_frequency": 3,
+              "distinct_per_original_k128": {
+                "min": 4,
+                "mean": 4.0,
+                "max": 4,
+                "p05": 4.0,
+                "p50": 4.0,
+                "p95": 4.0
+              }
+            }
+          },
+          "aligned_2x2": {
+            "count": 22282240,
+            "rank_one": 11144411,
+            "rank_two": 11137829
+          }
+        },
+        "down": {
+          "rows": 5120,
+          "k": 17408,
+          "q1_bytes": 12533760,
+          "scale_fp16_unique": 423,
+          "scale_fp16_bits_or_hex": "3ff8",
+          "scale_11bit_reconstruct_all_exact": true,
+          "scale_storage_candidate": "11-bit label=FP16_bits>>3, exact original FP16_bits=label<<3; bit-reconstruction cost unpriced",
+          "scale_min": 0.001708984375,
+          "scale_max": 0.1298828125,
+          "sign_rows": {
+            "items": 5120,
+            "classes": 5120,
+            "duplicate_items": 0,
+            "collision_pairs": 0,
+            "maximum_multiplicity": 1
+          },
+          "sign_rows_up_to_antipode": {
+            "items": 5120,
+            "classes": 5120,
+            "duplicate_items": 0,
+            "collision_pairs": 0,
+            "maximum_multiplicity": 1
+          },
+          "sign_k128_blocks": {
+            "items": 696320,
+            "classes": 696320,
+            "duplicate_items": 0,
+            "collision_pairs": 0,
+            "maximum_multiplicity": 1
+          },
+          "sign_k128_blocks_up_to_antipode": {
+            "items": 696320,
+            "classes": 696320,
+            "duplicate_items": 0,
+            "collision_pairs": 0,
+            "maximum_multiplicity": 1
+          },
+          "local_sign_words": {
+            "8": {
+              "aligned_words": 11141120,
+              "distinct": 256,
+              "entropy_bits": 7.999934676819459,
+              "maximum_frequency": 44617,
+              "distinct_per_original_k128": {
+                "min": 11,
+                "mean": 15.539415785845588,
+                "max": 16,
+                "p05": 14.0,
+                "p50": 16.0,
+                "p95": 16.0
+              }
+            },
+            "16": {
+              "aligned_words": 5570560,
+              "distinct": 65536,
+              "entropy_bits": 15.991275958862987,
+              "maximum_frequency": 128,
+              "distinct_per_original_k128": {
+                "min": 7,
+                "mean": 7.9996194278492645,
+                "max": 8,
+                "p05": 8.0,
+                "p50": 8.0,
+                "p95": 8.0
+              }
+            },
+            "32": {
+              "aligned_words": 2785280,
+              "distinct": 2784344,
+              "entropy_bits": 21.408718560330776,
+              "maximum_frequency": 3,
+              "distinct_per_original_k128": {
+                "min": 4,
+                "mean": 4.0,
+                "max": 4,
+                "p05": 4.0,
+                "p50": 4.0,
+                "p95": 4.0
+              }
+            }
+          },
+          "aligned_2x2": {
+            "count": 22282240,
+            "rank_one": 11145341,
+            "rank_two": 11136899
+          }
+        }
+      },
+      "down_observer": {
+        "original_k128_blocks": 136,
+        "full_output_column_identical_duplicate_items": 0,
+        "full_output_column_antipodal_or_identical_duplicate_items": 0,
+        "scope": "128 columns compared only within each original K128; all 5120 outputs; each output scale shared by these 128 columns",
+        "small_output_tile_carriers": {
+          "4": {
+            "tile_k128_pairs": 174080,
+            "classes_per_128_columns": {
+              "min": 8,
+              "mean": 8.0,
+              "max": 8,
+              "p05": 8.0,
+              "p50": 8.0,
+              "p95": 8.0
+            },
+            "total_classes": 1392640,
+            "exact_recurrence": "orient each input by row0 sign, sum inputs by relative column-sign code, form r signed class sums, then multiply each output by its ORIGINAL FP16 scale",
+            "arithmetic_model": {
+              "aggregation_additions": 20889600,
+              "output_reduction_additions": 4874240,
+              "combined_additions": 25763840,
+              "direct_signed_reduction_additions": 88432640,
+              "addition_ratio": 0.29133858267716534,
+              "scale_multiplications_unchanged": 696320
+            },
+            "boundaries_not_priced": "prepared class IDs, runtime indexed aggregation/scatter, class initialization, output signs, loads and kernel launch; this is NOT a measured speedup",
+            "class_id_bits_upper_bound": 3,
+            "orientation_bits_per_column": 1
+          },
+          "8": {
+            "tile_k128_pairs": 87040,
+            "classes_per_128_columns": {
+              "min": 67,
+              "mean": 81.08664981617648,
+              "max": 96,
+              "p05": 75.0,
+              "p50": 81.0,
+              "p95": 87.0
+            },
+            "total_classes": 7057782,
+            "exact_recurrence": "orient each input by row0 sign, sum inputs by relative column-sign code, form r signed class sums, then multiply each output by its ORIGINAL FP16 scale",
+            "arithmetic_model": {
+              "aggregation_additions": 4083338,
+              "output_reduction_additions": 55765936,
+              "combined_additions": 59849274,
+              "direct_signed_reduction_additions": 88432640,
+              "addition_ratio": 0.6767780991272001,
+              "scale_multiplications_unchanged": 696320
+            },
+            "boundaries_not_priced": "prepared class IDs, runtime indexed aggregation/scatter, class initialization, output signs, loads and kernel launch; this is NOT a measured speedup",
+            "class_id_bits_upper_bound": 7,
+            "orientation_bits_per_column": 1
+          },
+          "16": {
+            "tile_k128_pairs": 43520,
+            "classes_per_128_columns": {
+              "min": 124,
+              "mean": 127.74928768382352,
+              "max": 128,
+              "p05": 127.0,
+              "p50": 128.0,
+              "p95": 128.0
+            },
+            "total_classes": 5559649,
+            "exact_recurrence": "orient each input by row0 sign, sum inputs by relative column-sign code, form r signed class sums, then multiply each output by its ORIGINAL FP16 scale",
+            "arithmetic_model": {
+              "aggregation_additions": 10911,
+              "output_reduction_additions": 88258064,
+              "combined_additions": 88268975,
+              "direct_signed_reduction_additions": 88432640,
+              "addition_ratio": 0.9981492693195635,
+              "scale_multiplications_unchanged": 696320
+            },
+            "boundaries_not_priced": "prepared class IDs, runtime indexed aggregation/scatter, class initialization, output signs, loads and kernel launch; this is NOT a measured speedup",
+            "class_id_bits_upper_bound": 15,
+            "orientation_bits_per_column": 1
+          }
+        },
+        "local_merge_and_global_rejection_witness": {
+          "k128": 0,
+          "input_columns": [
+            0,
+            127
+          ],
+          "observed_outputs": [
+            0,
+            8
+          ],
+          "antipodal": true,
+          "relative_sign_code": 123,
+          "original_output_scale_fp16_hex": [
+            "20c8",
+            "2180",
+            "1f38",
+            "1f38",
+            "1fa8",
+            "1e08",
+            "2028",
+            "20c0"
+          ],
+          "full_output_rejection": {
+            "first_differing_output": 8,
+            "column_sign_bits": [
+              1,
+              1
+            ],
+            "original_scale_fp16_hex": "1ff0"
+          }
+        }
+      },
+      "elapsed_seconds": 4.002324728993699
+    },
+    "30": {
+      "GU": {
+        "matched_sign_k128_blocks_identical": 0,
+        "matched_sign_k128_blocks_antipodal": 0,
+        "matched_scaled_k128_blocks_identical": 0,
+        "matched_scaled_k128_blocks_antipodal": 0,
+        "matched_original_fp16_scales_equal": 7360,
+        "matched_blocks": 696320,
+        "matched_sign_disagreement_fraction": 0.4990783803603228,
+        "disagreements_per_matched_k128": {
+          "min": 32,
+          "mean": 63.88203268612132,
+          "max": 98,
+          "p05": 52.0,
+          "p50": 64.0,
+          "p95": 76.0
+        },
+        "disagreement_fraction_per_matched_whole_row": {
+          "min": 0.34921875,
+          "mean": 0.49907838036032287,
+          "max": 0.6712890625,
+          "p05": 0.443359375,
+          "p50": 0.49921875,
+          "p95": 0.555078125
+        },
+        "union_gate_up_sign_k128_blocks": {
+          "items": 1392640,
+          "classes": 1392640,
+          "duplicate_items": 0,
+          "collision_pairs": 0,
+          "maximum_multiplicity": 1
+        },
+        "union_gate_up_sign_k128_blocks_up_to_antipode": {
+          "items": 1392640,
+          "classes": 1392640,
+          "duplicate_items": 0,
+          "collision_pairs": 0,
+          "maximum_multiplicity": 1
+        },
+        "matched_sign_rows_identical": 0,
+        "matched_sign_rows_antipodal": 0,
+        "union_gate_up_sign_rows": {
+          "items": 34816,
+          "classes": 34816,
+          "duplicate_items": 0,
+          "collision_pairs": 0,
+          "maximum_multiplicity": 1
+        },
+        "union_gate_up_sign_rows_up_to_antipode": {
+          "items": 34816,
+          "classes": 34816,
+          "duplicate_items": 0,
+          "collision_pairs": 0,
+          "maximum_multiplicity": 1
+        },
+        "two_class_k128_carrier": {
+          "same_sign_columns": {
+            "min": 30,
+            "mean": 64.11796731387868,
+            "max": 96,
+            "p05": 52.0,
+            "p50": 64.0,
+            "p95": 76.0
+          },
+          "opposite_sign_columns": {
+            "min": 32,
+            "mean": 63.88203268612132,
+            "max": 98,
+            "p05": 52.0,
+            "p50": 64.0,
+            "p95": 76.0
+          },
+          "recurrence": "P=sum(gsign*x where gsign=usign), Q=sum(gsign*x where gsign!=usign); G=original_dG*(P+Q), U=original_dU*(P-Q)",
+          "signed_addition_model_per_k128": {
+            "carrier": 128,
+            "direct_two_reductions": 254
+          },
+          "scope": "exact real linear algebra, not floating-point accumulation order; no activation capture, quantization or timing",
+          "recurring_boundary": "two sign bits/class+orientation per input, two accumulators, independent original G/U scales; no SiLU/product closure asserted"
+        }
+      },
+      "matrices": {
+        "gate": {
+          "rows": 17408,
+          "k": 5120,
+          "q1_bytes": 12533760,
+          "scale_fp16_unique": 399,
+          "scale_fp16_bits_or_hex": "3ff8",
+          "scale_11bit_reconstruct_all_exact": true,
+          "scale_storage_candidate": "11-bit label=FP16_bits>>3, exact original FP16_bits=label<<3; bit-reconstruction cost unpriced",
+          "scale_min": 0.000919342041015625,
+          "scale_max": 0.017822265625,
+          "sign_rows": {
+            "items": 17408,
+            "classes": 17408,
+            "duplicate_items": 0,
+            "collision_pairs": 0,
+            "maximum_multiplicity": 1
+          },
+          "sign_rows_up_to_antipode": {
+            "items": 17408,
+            "classes": 17408,
+            "duplicate_items": 0,
+            "collision_pairs": 0,
+            "maximum_multiplicity": 1
+          },
+          "sign_k128_blocks": {
+            "items": 696320,
+            "classes": 696320,
+            "duplicate_items": 0,
+            "collision_pairs": 0,
+            "maximum_multiplicity": 1
+          },
+          "sign_k128_blocks_up_to_antipode": {
+            "items": 696320,
+            "classes": 696320,
+            "duplicate_items": 0,
+            "collision_pairs": 0,
+            "maximum_multiplicity": 1
+          },
+          "local_sign_words": {
+            "8": {
+              "aligned_words": 11141120,
+              "distinct": 256,
+              "entropy_bits": 7.9997613574468085,
+              "maximum_frequency": 45416,
+              "distinct_per_original_k128": {
+                "min": 11,
+                "mean": 15.540811695772058,
+                "max": 16,
+                "p05": 14.0,
+                "p50": 16.0,
+                "p95": 16.0
+              }
+            },
+            "16": {
+              "aligned_words": 5570560,
+              "distinct": 65536,
+              "entropy_bits": 15.991004358817019,
+              "maximum_frequency": 137,
+              "distinct_per_original_k128": {
+                "min": 7,
+                "mean": 7.999559110753676,
+                "max": 8,
+                "p05": 8.0,
+                "p50": 8.0,
+                "p95": 8.0
+              }
+            },
+            "32": {
+              "aligned_words": 2785280,
+              "distinct": 2784391,
+              "entropy_bits": 21.408752309181878,
+              "maximum_frequency": 3,
+              "distinct_per_original_k128": {
+                "min": 4,
+                "mean": 4.0,
+                "max": 4,
+                "p05": 4.0,
+                "p50": 4.0,
+                "p95": 4.0
+              }
+            }
+          },
+          "aligned_2x2": {
+            "count": 22282240,
+            "rank_one": 11145327,
+            "rank_two": 11136913
+          }
+        },
+        "up": {
+          "rows": 17408,
+          "k": 5120,
+          "q1_bytes": 12533760,
+          "scale_fp16_unique": 333,
+          "scale_fp16_bits_or_hex": "3ff8",
+          "scale_11bit_reconstruct_all_exact": true,
+          "scale_storage_candidate": "11-bit label=FP16_bits>>3, exact original FP16_bits=label<<3; bit-reconstruction cost unpriced",
+          "scale_min": 0.002288818359375,
+          "scale_max": 0.017333984375,
+          "sign_rows": {
+            "items": 17408,
+            "classes": 17408,
+            "duplicate_items": 0,
+            "collision_pairs": 0,
+            "maximum_multiplicity": 1
+          },
+          "sign_rows_up_to_antipode": {
+            "items": 17408,
+            "classes": 17408,
+            "duplicate_items": 0,
+            "collision_pairs": 0,
+            "maximum_multiplicity": 1
+          },
+          "sign_k128_blocks": {
+            "items": 696320,
+            "classes": 696320,
+            "duplicate_items": 0,
+            "collision_pairs": 0,
+            "maximum_multiplicity": 1
+          },
+          "sign_k128_blocks_up_to_antipode": {
+            "items": 696320,
+            "classes": 696320,
+            "duplicate_items": 0,
+            "collision_pairs": 0,
+            "maximum_multiplicity": 1
+          },
+          "local_sign_words": {
+            "8": {
+              "aligned_words": 11141120,
+              "distinct": 256,
+              "entropy_bits": 7.999945297862601,
+              "maximum_frequency": 44545,
+              "distinct_per_original_k128": {
+                "min": 10,
+                "mean": 15.540280330882354,
+                "max": 16,
+                "p05": 14.0,
+                "p50": 16.0,
+                "p95": 16.0
+              }
+            },
+            "16": {
+              "aligned_words": 5570560,
+              "distinct": 65536,
+              "entropy_bits": 15.991408851487897,
+              "maximum_frequency": 126,
+              "distinct_per_original_k128": {
+                "min": 7,
+                "mean": 7.9995447495404415,
+                "max": 8,
+                "p05": 8.0,
+                "p50": 8.0,
+                "p95": 8.0
+              }
+            },
+            "32": {
+              "aligned_words": 2785280,
+              "distinct": 2784363,
+              "entropy_bits": 21.40873220348335,
+              "maximum_frequency": 3,
+              "distinct_per_original_k128": {
+                "min": 4,
+                "mean": 4.0,
+                "max": 4,
+                "p05": 4.0,
+                "p50": 4.0,
+                "p95": 4.0
+              }
+            }
+          },
+          "aligned_2x2": {
+            "count": 22282240,
+            "rank_one": 11143206,
+            "rank_two": 11139034
+          }
+        },
+        "down": {
+          "rows": 5120,
+          "k": 17408,
+          "q1_bytes": 12533760,
+          "scale_fp16_unique": 666,
+          "scale_fp16_bits_or_hex": "3ff8",
+          "scale_11bit_reconstruct_all_exact": true,
+          "scale_storage_candidate": "11-bit label=FP16_bits>>3, exact original FP16_bits=label<<3; bit-reconstruction cost unpriced",
+          "scale_min": 5.054473876953125e-05,
+          "scale_max": 0.03125,
+          "sign_rows": {
+            "items": 5120,
+            "classes": 5120,
+            "duplicate_items": 0,
+            "collision_pairs": 0,
+            "maximum_multiplicity": 1
+          },
+          "sign_rows_up_to_antipode": {
+            "items": 5120,
+            "classes": 5120,
+            "duplicate_items": 0,
+            "collision_pairs": 0,
+            "maximum_multiplicity": 1
+          },
+          "sign_k128_blocks": {
+            "items": 696320,
+            "classes": 696320,
+            "duplicate_items": 0,
+            "collision_pairs": 0,
+            "maximum_multiplicity": 1
+          },
+          "sign_k128_blocks_up_to_antipode": {
+            "items": 696320,
+            "classes": 696320,
+            "duplicate_items": 0,
+            "collision_pairs": 0,
+            "maximum_multiplicity": 1
+          },
+          "local_sign_words": {
+            "8": {
+              "aligned_words": 11141120,
+              "distinct": 256,
+              "entropy_bits": 7.999941534137393,
+              "maximum_frequency": 44689,
+              "distinct_per_original_k128": {
+                "min": 10,
+                "mean": 15.539303768382354,
+                "max": 16,
+                "p05": 14.0,
+                "p50": 16.0,
+                "p95": 16.0
+              }
+            },
+            "16": {
+              "aligned_words": 5570560,
+              "distinct": 65536,
+              "entropy_bits": 15.991343512826491,
+              "maximum_frequency": 127,
+              "distinct_per_original_k128": {
+                "min": 7,
+                "mean": 7.999592141544118,
+                "max": 8,
+                "p05": 8.0,
+                "p50": 8.0,
+                "p95": 8.0
+              }
+            },
+            "32": {
+              "aligned_words": 2785280,
+              "distinct": 2784363,
+              "entropy_bits": 21.40873247451086,
+              "maximum_frequency": 2,
+              "distinct_per_original_k128": {
+                "min": 4,
+                "mean": 4.0,
+                "max": 4,
+                "p05": 4.0,
+                "p50": 4.0,
+                "p95": 4.0
+              }
+            }
+          },
+          "aligned_2x2": {
+            "count": 22282240,
+            "rank_one": 11139116,
+            "rank_two": 11143124
+          }
+        }
+      },
+      "down_observer": {
+        "original_k128_blocks": 136,
+        "full_output_column_identical_duplicate_items": 0,
+        "full_output_column_antipodal_or_identical_duplicate_items": 0,
+        "scope": "128 columns compared only within each original K128; all 5120 outputs; each output scale shared by these 128 columns",
+        "small_output_tile_carriers": {
+          "4": {
+            "tile_k128_pairs": 174080,
+            "classes_per_128_columns": {
+              "min": 8,
+              "mean": 8.0,
+              "max": 8,
+              "p05": 8.0,
+              "p50": 8.0,
+              "p95": 8.0
+            },
+            "total_classes": 1392640,
+            "exact_recurrence": "orient each input by row0 sign, sum inputs by relative column-sign code, form r signed class sums, then multiply each output by its ORIGINAL FP16 scale",
+            "arithmetic_model": {
+              "aggregation_additions": 20889600,
+              "output_reduction_additions": 4874240,
+              "combined_additions": 25763840,
+              "direct_signed_reduction_additions": 88432640,
+              "addition_ratio": 0.29133858267716534,
+              "scale_multiplications_unchanged": 696320
+            },
+            "boundaries_not_priced": "prepared class IDs, runtime indexed aggregation/scatter, class initialization, output signs, loads and kernel launch; this is NOT a measured speedup",
+            "class_id_bits_upper_bound": 3,
+            "orientation_bits_per_column": 1
+          },
+          "8": {
+            "tile_k128_pairs": 87040,
+            "classes_per_128_columns": {
+              "min": 66,
+              "mean": 81.0388671875,
+              "max": 95,
+              "p05": 75.0,
+              "p50": 81.0,
+              "p95": 87.0
+            },
+            "total_classes": 7053623,
+            "exact_recurrence": "orient each input by row0 sign, sum inputs by relative column-sign code, form r signed class sums, then multiply each output by its ORIGINAL FP16 scale",
+            "arithmetic_model": {
+              "aggregation_additions": 4087497,
+              "output_reduction_additions": 55732664,
+              "combined_additions": 59820161,
+              "direct_signed_reduction_additions": 88432640,
+              "addition_ratio": 0.6764488881028543,
+              "scale_multiplications_unchanged": 696320
+            },
+            "boundaries_not_priced": "prepared class IDs, runtime indexed aggregation/scatter, class initialization, output signs, loads and kernel launch; this is NOT a measured speedup",
+            "class_id_bits_upper_bound": 7,
+            "orientation_bits_per_column": 1
+          },
+          "16": {
+            "tile_k128_pairs": 43520,
+            "classes_per_128_columns": {
+              "min": 124,
+              "mean": 127.75048253676471,
+              "max": 128,
+              "p05": 127.0,
+              "p50": 128.0,
+              "p95": 128.0
+            },
+            "total_classes": 5559701,
+            "exact_recurrence": "orient each input by row0 sign, sum inputs by relative column-sign code, form r signed class sums, then multiply each output by its ORIGINAL FP16 scale",
+            "arithmetic_model": {
+              "aggregation_additions": 10859,
+              "output_reduction_additions": 88258896,
+              "combined_additions": 88269755,
+              "direct_signed_reduction_additions": 88432640,
+              "addition_ratio": 0.9981580895922592,
+              "scale_multiplications_unchanged": 696320
+            },
+            "boundaries_not_priced": "prepared class IDs, runtime indexed aggregation/scatter, class initialization, output signs, loads and kernel launch; this is NOT a measured speedup",
+            "class_id_bits_upper_bound": 15,
+            "orientation_bits_per_column": 1
+          }
+        },
+        "local_merge_and_global_rejection_witness": {
+          "k128": 0,
+          "input_columns": [
+            0,
+            26
+          ],
+          "observed_outputs": [
+            0,
+            8
+          ],
+          "antipodal": true,
+          "relative_sign_code": 102,
+          "original_output_scale_fp16_hex": [
+            "2028",
+            "1ea8",
+            "2310",
+            "2020",
+            "1ff8",
+            "2070",
+            "2108",
+            "1ed0"
+          ],
+          "full_output_rejection": {
+            "first_differing_output": 9,
+            "column_sign_bits": [
+              1,
+              1
+            ],
+            "original_scale_fp16_hex": "2138"
+          }
+        }
+      },
+      "elapsed_seconds": 3.9956175069964956
+    },
+    "61": {
+      "GU": {
+        "matched_sign_k128_blocks_identical": 0,
+        "matched_sign_k128_blocks_antipodal": 0,
+        "matched_scaled_k128_blocks_identical": 0,
+        "matched_scaled_k128_blocks_antipodal": 0,
+        "matched_original_fp16_scales_equal": 7846,
+        "matched_blocks": 696320,
+        "matched_sign_disagreement_fraction": 0.49908540389117073,
+        "disagreements_per_matched_k128": {
+          "min": 22,
+          "mean": 63.882931698069854,
+          "max": 105,
+          "p05": 49.0,
+          "p50": 64.0,
+          "p95": 78.0
+        },
+        "disagreement_fraction_per_matched_whole_row": {
+          "min": 0.275390625,
+          "mean": 0.49908540389117073,
+          "max": 0.7212890625,
+          "p05": 0.4044921875,
+          "p50": 0.5,
+          "p95": 0.5916015625
+        },
+        "union_gate_up_sign_k128_blocks": {
+          "items": 1392640,
+          "classes": 1392640,
+          "duplicate_items": 0,
+          "collision_pairs": 0,
+          "maximum_multiplicity": 1
+        },
+        "union_gate_up_sign_k128_blocks_up_to_antipode": {
+          "items": 1392640,
+          "classes": 1392640,
+          "duplicate_items": 0,
+          "collision_pairs": 0,
+          "maximum_multiplicity": 1
+        },
+        "matched_sign_rows_identical": 0,
+        "matched_sign_rows_antipodal": 0,
+        "union_gate_up_sign_rows": {
+          "items": 34816,
+          "classes": 34816,
+          "duplicate_items": 0,
+          "collision_pairs": 0,
+          "maximum_multiplicity": 1
+        },
+        "union_gate_up_sign_rows_up_to_antipode": {
+          "items": 34816,
+          "classes": 34816,
+          "duplicate_items": 0,
+          "collision_pairs": 0,
+          "maximum_multiplicity": 1
+        },
+        "two_class_k128_carrier": {
+          "same_sign_columns": {
+            "min": 23,
+            "mean": 64.11706830193015,
+            "max": 106,
+            "p05": 50.0,
+            "p50": 64.0,
+            "p95": 79.0
+          },
+          "opposite_sign_columns": {
+            "min": 22,
+            "mean": 63.882931698069854,
+            "max": 105,
+            "p05": 49.0,
+            "p50": 64.0,
+            "p95": 78.0
+          },
+          "recurrence": "P=sum(gsign*x where gsign=usign), Q=sum(gsign*x where gsign!=usign); G=original_dG*(P+Q), U=original_dU*(P-Q)",
+          "signed_addition_model_per_k128": {
+            "carrier": 128,
+            "direct_two_reductions": 254
+          },
+          "scope": "exact real linear algebra, not floating-point accumulation order; no activation capture, quantization or timing",
+          "recurring_boundary": "two sign bits/class+orientation per input, two accumulators, independent original G/U scales; no SiLU/product closure asserted"
+        }
+      },
+      "matrices": {
+        "gate": {
+          "rows": 17408,
+          "k": 5120,
+          "q1_bytes": 12533760,
+          "scale_fp16_unique": 364,
+          "scale_fp16_bits_or_hex": "3ff8",
+          "scale_11bit_reconstruct_all_exact": true,
+          "scale_storage_candidate": "11-bit label=FP16_bits>>3, exact original FP16_bits=label<<3; bit-reconstruction cost unpriced",
+          "scale_min": 0.0010223388671875,
+          "scale_max": 0.019287109375,
+          "sign_rows": {
+            "items": 17408,
+            "classes": 17408,
+            "duplicate_items": 0,
+            "collision_pairs": 0,
+            "maximum_multiplicity": 1
+          },
+          "sign_rows_up_to_antipode": {
+            "items": 17408,
+            "classes": 17408,
+            "duplicate_items": 0,
+            "collision_pairs": 0,
+            "maximum_multiplicity": 1
+          },
+          "sign_k128_blocks": {
+            "items": 696320,
+            "classes": 696320,
+            "duplicate_items": 0,
+            "collision_pairs": 0,
+            "maximum_multiplicity": 1
+          },
+          "sign_k128_blocks_up_to_antipode": {
+            "items": 696320,
+            "classes": 696320,
+            "duplicate_items": 0,
+            "collision_pairs": 0,
+            "maximum_multiplicity": 1
+          },
+          "local_sign_words": {
+            "8": {
+              "aligned_words": 11141120,
+              "distinct": 256,
+              "entropy_bits": 7.999850231547142,
+              "maximum_frequency": 45092,
+              "distinct_per_original_k128": {
+                "min": 11,
+                "mean": 15.538321461397059,
+                "max": 16,
+                "p05": 14.0,
+                "p50": 16.0,
+                "p95": 16.0
+              }
+            },
+            "16": {
+              "aligned_words": 5570560,
+              "distinct": 65536,
+              "entropy_bits": 15.990809532608669,
+              "maximum_frequency": 134,
+              "distinct_per_original_k128": {
+                "min": 7,
+                "mean": 7.999590705422794,
+                "max": 8,
+                "p05": 8.0,
+                "p50": 8.0,
+                "p95": 8.0
+              }
+            },
+            "32": {
+              "aligned_words": 2785280,
+              "distinct": 2784389,
+              "entropy_bits": 21.408751144088065,
+              "maximum_frequency": 2,
+              "distinct_per_original_k128": {
+                "min": 4,
+                "mean": 4.0,
+                "max": 4,
+                "p05": 4.0,
+                "p50": 4.0,
+                "p95": 4.0
+              }
+            }
+          },
+          "aligned_2x2": {
+            "count": 22282240,
+            "rank_one": 11143082,
+            "rank_two": 11139158
+          }
+        },
+        "up": {
+          "rows": 17408,
+          "k": 5120,
+          "q1_bytes": 12533760,
+          "scale_fp16_unique": 341,
+          "scale_fp16_bits_or_hex": "3ff8",
+          "scale_11bit_reconstruct_all_exact": true,
+          "scale_storage_candidate": "11-bit label=FP16_bits>>3, exact original FP16_bits=label<<3; bit-reconstruction cost unpriced",
+          "scale_min": 0.0016937255859375,
+          "scale_max": 0.02099609375,
+          "sign_rows": {
+            "items": 17408,
+            "classes": 17408,
+            "duplicate_items": 0,
+            "collision_pairs": 0,
+            "maximum_multiplicity": 1
+          },
+          "sign_rows_up_to_antipode": {
+            "items": 17408,
+            "classes": 17408,
+            "duplicate_items": 0,
+            "collision_pairs": 0,
+            "maximum_multiplicity": 1
+          },
+          "sign_k128_blocks": {
+            "items": 696320,
+            "classes": 696320,
+            "duplicate_items": 0,
+            "collision_pairs": 0,
+            "maximum_multiplicity": 1
+          },
+          "sign_k128_blocks_up_to_antipode": {
+            "items": 696320,
+            "classes": 696320,
+            "duplicate_items": 0,
+            "collision_pairs": 0,
+            "maximum_multiplicity": 1
+          },
+          "local_sign_words": {
+            "8": {
+              "aligned_words": 11141120,
+              "distinct": 256,
+              "entropy_bits": 7.9999712548655975,
+              "maximum_frequency": 44328,
+              "distinct_per_original_k128": {
+                "min": 10,
+                "mean": 15.541001263786764,
+                "max": 16,
+                "p05": 14.0,
+                "p50": 16.0,
+                "p95": 16.0
+              }
+            },
+            "16": {
+              "aligned_words": 5570560,
+              "distinct": 65536,
+              "entropy_bits": 15.991393724805189,
+              "maximum_frequency": 129,
+              "distinct_per_original_k128": {
+                "min": 7,
+                "mean": 7.999605066636029,
+                "max": 8,
+                "p05": 8.0,
+                "p50": 8.0,
+                "p95": 8.0
+              }
+            },
+            "32": {
+              "aligned_words": 2785280,
+              "distinct": 2784385,
+              "entropy_bits": 21.40874827184542,
+              "maximum_frequency": 2,
+              "distinct_per_original_k128": {
+                "min": 4,
+                "mean": 4.0,
+                "max": 4,
+                "p05": 4.0,
+                "p50": 4.0,
+                "p95": 4.0
+              }
+            }
+          },
+          "aligned_2x2": {
+            "count": 22282240,
+            "rank_one": 11143579,
+            "rank_two": 11138661
+          }
+        },
+        "down": {
+          "rows": 5120,
+          "k": 17408,
+          "q1_bytes": 12533760,
+          "scale_fp16_unique": 455,
+          "scale_fp16_bits_or_hex": "3ff8",
+          "scale_11bit_reconstruct_all_exact": true,
+          "scale_storage_candidate": "11-bit label=FP16_bits>>3, exact original FP16_bits=label<<3; bit-reconstruction cost unpriced",
+          "scale_min": 0.00010538101196289062,
+          "scale_max": 0.022216796875,
+          "sign_rows": {
+            "items": 5120,
+            "classes": 5120,
+            "duplicate_items": 0,
+            "collision_pairs": 0,
+            "maximum_multiplicity": 1
+          },
+          "sign_rows_up_to_antipode": {
+            "items": 5120,
+            "classes": 5120,
+            "duplicate_items": 0,
+            "collision_pairs": 0,
+            "maximum_multiplicity": 1
+          },
+          "sign_k128_blocks": {
+            "items": 696320,
+            "classes": 696320,
+            "duplicate_items": 0,
+            "collision_pairs": 0,
+            "maximum_multiplicity": 1
+          },
+          "sign_k128_blocks_up_to_antipode": {
+            "items": 696320,
+            "classes": 696320,
+            "duplicate_items": 0,
+            "collision_pairs": 0,
+            "maximum_multiplicity": 1
+          },
+          "local_sign_words": {
+            "8": {
+              "aligned_words": 11141120,
+              "distinct": 256,
+              "entropy_bits": 7.999978012968959,
+              "maximum_frequency": 44151,
+              "distinct_per_original_k128": {
+                "min": 11,
+                "mean": 15.540396656709559,
+                "max": 16,
+                "p05": 14.0,
+                "p50": 16.0,
+                "p95": 16.0
+              }
+            },
+            "16": {
+              "aligned_words": 5570560,
+              "distinct": 65536,
+              "entropy_bits": 15.99150126046584,
+              "maximum_frequency": 128,
+              "distinct_per_original_k128": {
+                "min": 7,
+                "mean": 7.999602194393383,
+                "max": 8,
+                "p05": 8.0,
+                "p50": 8.0,
+                "p95": 8.0
+              }
+            },
+            "32": {
+              "aligned_words": 2785280,
+              "distinct": 2784379,
+              "entropy_bits": 21.40874396348145,
+              "maximum_frequency": 2,
+              "distinct_per_original_k128": {
+                "min": 4,
+                "mean": 4.0,
+                "max": 4,
+                "p05": 4.0,
+                "p50": 4.0,
+                "p95": 4.0
+              }
+            }
+          },
+          "aligned_2x2": {
+            "count": 22282240,
+            "rank_one": 11141829,
+            "rank_two": 11140411
+          }
+        }
+      },
+      "down_observer": {
+        "original_k128_blocks": 136,
+        "full_output_column_identical_duplicate_items": 0,
+        "full_output_column_antipodal_or_identical_duplicate_items": 0,
+        "scope": "128 columns compared only within each original K128; all 5120 outputs; each output scale shared by these 128 columns",
+        "small_output_tile_carriers": {
+          "4": {
+            "tile_k128_pairs": 174080,
+            "classes_per_128_columns": {
+              "min": 8,
+              "mean": 8.0,
+              "max": 8,
+              "p05": 8.0,
+              "p50": 8.0,
+              "p95": 8.0
+            },
+            "total_classes": 1392640,
+            "exact_recurrence": "orient each input by row0 sign, sum inputs by relative column-sign code, form r signed class sums, then multiply each output by its ORIGINAL FP16 scale",
+            "arithmetic_model": {
+              "aggregation_additions": 20889600,
+              "output_reduction_additions": 4874240,
+              "combined_additions": 25763840,
+              "direct_signed_reduction_additions": 88432640,
+              "addition_ratio": 0.29133858267716534,
+              "scale_multiplications_unchanged": 696320
+            },
+            "boundaries_not_priced": "prepared class IDs, runtime indexed aggregation/scatter, class initialization, output signs, loads and kernel launch; this is NOT a measured speedup",
+            "class_id_bits_upper_bound": 3,
+            "orientation_bits_per_column": 1
+          },
+          "8": {
+            "tile_k128_pairs": 87040,
+            "classes_per_128_columns": {
+              "min": 65,
+              "mean": 81.06868106617647,
+              "max": 98,
+              "p05": 75.0,
+              "p50": 81.0,
+              "p95": 87.0
+            },
+            "total_classes": 7056218,
+            "exact_recurrence": "orient each input by row0 sign, sum inputs by relative column-sign code, form r signed class sums, then multiply each output by its ORIGINAL FP16 scale",
+            "arithmetic_model": {
+              "aggregation_additions": 4084902,
+              "output_reduction_additions": 55753424,
+              "combined_additions": 59838326,
+              "direct_signed_reduction_additions": 88432640,
+              "addition_ratio": 0.6766542986842867,
+              "scale_multiplications_unchanged": 696320
+            },
+            "boundaries_not_priced": "prepared class IDs, runtime indexed aggregation/scatter, class initialization, output signs, loads and kernel launch; this is NOT a measured speedup",
+            "class_id_bits_upper_bound": 7,
+            "orientation_bits_per_column": 1
+          },
+          "16": {
+            "tile_k128_pairs": 43520,
+            "classes_per_128_columns": {
+              "min": 124,
+              "mean": 127.75521599264705,
+              "max": 128,
+              "p05": 127.0,
+              "p50": 128.0,
+              "p95": 128.0
+            },
+            "total_classes": 5559907,
+            "exact_recurrence": "orient each input by row0 sign, sum inputs by relative column-sign code, form r signed class sums, then multiply each output by its ORIGINAL FP16 scale",
+            "arithmetic_model": {
+              "aggregation_additions": 10653,
+              "output_reduction_additions": 88262192,
+              "combined_additions": 88272845,
+              "direct_signed_reduction_additions": 88432640,
+              "addition_ratio": 0.9981930314417844,
+              "scale_multiplications_unchanged": 696320
+            },
+            "boundaries_not_priced": "prepared class IDs, runtime indexed aggregation/scatter, class initialization, output signs, loads and kernel launch; this is NOT a measured speedup",
+            "class_id_bits_upper_bound": 15,
+            "orientation_bits_per_column": 1
+          }
+        },
+        "local_merge_and_global_rejection_witness": {
+          "k128": 0,
+          "input_columns": [
+            0,
+            24
+          ],
+          "observed_outputs": [
+            0,
+            8
+          ],
+          "antipodal": false,
+          "relative_sign_code": 21,
+          "original_output_scale_fp16_hex": [
+            "2168",
+            "1f80",
+            "2250",
+            "2168",
+            "2058",
+            "2080",
+            "2160",
+            "2148"
+          ],
+          "full_output_rejection": {
+            "first_differing_output": 9,
+            "column_sign_bits": [
+              1,
+              0
+            ],
+            "original_scale_fp16_hex": "20f0"
+          }
+        }
+      },
+      "elapsed_seconds": 4.1063693150063045
+    }
+  }
+}

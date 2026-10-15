@@ -1,0 +1,66 @@
+{
+  "actual_native_inference": true,
+  "repeat_after_full_reset_equal": true,
+  "health": {
+    "backend": "halo6000",
+    "gpu_batching": false,
+    "status": "ok"
+  },
+  "first": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "content": "hello",
+          "role": "assistant"
+        }
+      }
+    ],
+    "created": 1791162714,
+    "id": "chatcmpl-halo-1",
+    "model": "evaluated-model",
+    "object": "chat.completion",
+    "timings": {
+      "cache_n": 0,
+      "predicted_ms": 9.326751708984375,
+      "predicted_n": 2,
+      "prompt_ms": 79.98947143554688,
+      "prompt_n": 19
+    },
+    "usage": {
+      "completion_tokens": 2,
+      "prompt_tokens": 19,
+      "total_tokens": 21
+    }
+  },
+  "second": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "content": "hello",
+          "role": "assistant"
+        }
+      }
+    ],
+    "created": 1791162714,
+    "id": "chatcmpl-halo-2",
+    "model": "evaluated-model",
+    "object": "chat.completion",
+    "timings": {
+      "cache_n": 0,
+      "predicted_ms": 6.474815845489502,
+      "predicted_n": 2,
+      "prompt_ms": 81.61660766601562,
+      "prompt_n": 19
+    },
+    "usage": {
+      "completion_tokens": 2,
+      "prompt_tokens": 19,
+      "total_tokens": 21
+    }
+  },
+  "gpu_batched_streams": false
+}

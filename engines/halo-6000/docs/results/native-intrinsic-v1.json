@@ -1,0 +1,255 @@
+{
+  "state": "succeeded",
+  "scope": "intrinsic-only",
+  "backend": "halo",
+  "model": "/workspace/models/gguf/Qwen3.6-35B-A3B-ternary-v1-PTQ1_0.gguf",
+  "model_bytes": 8538502944,
+  "name": "halo-v1-native-intrinsic-r2",
+  "config_id": "0062cb11becaec2eea537c4300f8c9619e7b057ca7bd41044d5432ef7cced9b7",
+  "engine": "/workspace/halo-6000/build/halo-6000-v1-eval-2",
+  "engine_sha256": "8c17d996a871bb38ff5154e78457e7af0b8bd266e0dc9dabe24964366d37f12e",
+  "pod_hourly_usd": 1.69,
+  "started_at": "2026-10-05T01:18:31.948279+00:00",
+  "intrinsic": {
+    "ppl": 18.137656307563564,
+    "mean_kld": 0.9867076607284202,
+    "top1_agreement_pct": 58.504901960784316,
+    "mean_delta_p_pp": -14.840944120198166,
+    "scored_positions": 4080,
+    "reference_codec": "llama-perplexity uint16 log-probs",
+    "kld_direction": "Q8 reference || candidate; reference p_log>-16 mask, no renormalization",
+    "raw_logits_sha256": null
+  },
+  "native_manifest": {
+    "backend": "halo6000_native",
+    "cache": {
+      "geometry": 2895825589908799489,
+      "path": "/workspace/models/halo6000-cache/halo6000-317d2b887854b482.bin",
+      "source_identity": {
+        "ctime_ns": 1791162288068845374,
+        "device": 66304,
+        "inode": 2232498863,
+        "mtime_ns": 1791146302523348112,
+        "size": 8538502944
+      },
+      "version": 1
+    },
+    "chunk_timings": [
+      {
+        "chunk": 0,
+        "gpu_ms": 2980.342595100403,
+        "scored_rows": 255,
+        "teacher_tokens": 512,
+        "wall_ms": 3169.12446
+      },
+      {
+        "chunk": 1,
+        "gpu_ms": 2994.8392271995544,
+        "scored_rows": 255,
+        "teacher_tokens": 512,
+        "wall_ms": 3183.373556
+      },
+      {
+        "chunk": 2,
+        "gpu_ms": 2919.5344972610474,
+        "scored_rows": 255,
+        "teacher_tokens": 512,
+        "wall_ms": 3107.926095
+      },
+      {
+        "chunk": 3,
+        "gpu_ms": 2962.508192062378,
+        "scored_rows": 255,
+        "teacher_tokens": 512,
+        "wall_ms": 3151.151302
+      },
+      {
+        "chunk": 4,
+        "gpu_ms": 2987.5211520195007,
+        "scored_rows": 255,
+        "teacher_tokens": 512,
+        "wall_ms": 3176.202051
+      },
+      {
+        "chunk": 5,
+        "gpu_ms": 2833.693090438843,
+        "scored_rows": 255,
+        "teacher_tokens": 512,
+        "wall_ms": 3022.301328
+      },
+      {
+        "chunk": 6,
+        "gpu_ms": 2990.200729370117,
+        "scored_rows": 255,
+        "teacher_tokens": 512,
+        "wall_ms": 3179.095264
+      },
+      {
+        "chunk": 7,
+        "gpu_ms": 2869.3351678848267,
+        "scored_rows": 255,
+        "teacher_tokens": 512,
+        "wall_ms": 3057.798567
+      },
+      {
+        "chunk": 8,
+        "gpu_ms": 2775.65695810318,
+        "scored_rows": 255,
+        "teacher_tokens": 512,
+        "wall_ms": 2964.380222
+      },
+      {
+        "chunk": 9,
+        "gpu_ms": 2813.392346382141,
+        "scored_rows": 255,
+        "teacher_tokens": 512,
+        "wall_ms": 3001.81566
+      },
+      {
+        "chunk": 10,
+        "gpu_ms": 2795.8752012252808,
+        "scored_rows": 255,
+        "teacher_tokens": 512,
+        "wall_ms": 2984.164167
+      },
+      {
+        "chunk": 11,
+        "gpu_ms": 2831.0383081436157,
+        "scored_rows": 255,
+        "teacher_tokens": 512,
+        "wall_ms": 3019.395987
+      },
+      {
+        "chunk": 12,
+        "gpu_ms": 2792.561155796051,
+        "scored_rows": 255,
+        "teacher_tokens": 512,
+        "wall_ms": 2981.349992
+      },
+      {
+        "chunk": 13,
+        "gpu_ms": 2788.3343091011047,
+        "scored_rows": 255,
+        "teacher_tokens": 512,
+        "wall_ms": 2982.098166
+      },
+      {
+        "chunk": 14,
+        "gpu_ms": 2794.854049682617,
+        "scored_rows": 255,
+        "teacher_tokens": 512,
+        "wall_ms": 2984.418458
+      },
+      {
+        "chunk": 15,
+        "gpu_ms": 2793.263331413269,
+        "scored_rows": 255,
+        "teacher_tokens": 512,
+        "wall_ms": 2982.653469
+      }
+    ],
+    "dtype": "little-endian-float32",
+    "execution_route": "all-serial-native-token-id-teacher-forcing",
+    "finite_logits": true,
+    "fork_inference": false,
+    "grid": 188,
+    "logits_bytes": 4052582400,
+    "logits_file": "logits.f32",
+    "logits_sha256": "24a690ebdee65604fd44714199213ae7aecb35df1a6633cf5778658838dd644d",
+    "model": "/workspace/models/gguf/Qwen3.6-35B-A3B-ternary-v1-PTQ1_0.gguf",
+    "model_bytes": 8538502944,
+    "shape": [
+      16,
+      255,
+      248320
+    ],
+    "slots_used": 1,
+    "spec": {
+      "add_bos": false,
+      "add_eos": false,
+      "chunks": 16,
+      "config_id": "0062cb11becaec2eea537c4300f8c9619e7b057ca7bd41044d5432ef7cced9b7",
+      "context": 512,
+      "logit_positions": {
+        "first": 256,
+        "last_inclusive": 510
+      },
+      "output_dtype": "little-endian-float32",
+      "output_order": "C: chunk, position, vocabulary-id; no header",
+      "output_shape": [
+        16,
+        255,
+        248320
+      ],
+      "parse_special": false,
+      "position_start": 0,
+      "reference": "/workspace/ternary-bench/data/q8-reference-0062cb11beca.logits",
+      "reference_bytes": 2026356628,
+      "reference_header_sha256": "2e57093d51970002eb1a9fe0fe2b841b249d6dc8b09f9c5fd91b58213c308688",
+      "reference_mtime_ns": 1791144698956253615,
+      "reset_before_each_chunk": [
+        "recurrent_state",
+        "conv_history",
+        "kv_cache",
+        "absolute_position"
+      ],
+      "target_positions": {
+        "first": 257,
+        "last_inclusive": 511
+      },
+      "token_dtype": "little-endian-int32",
+      "token_shape": [
+        16,
+        512
+      ],
+      "tokens_file": "/workspace/ternary-bench/oracle/teacher-v1/tokens.i32",
+      "tokens_sha256": "aa910a0346ea2137c7c2f6bfdcb45b834c6a70e0639e72aabc625862adb5db99",
+      "version": 1,
+      "vocab": 248320
+    },
+    "spec_sha256": "ca5e500536af2c2958cbcec770cf741642ba798dd9db1412004128a5bc0b867f",
+    "state": "succeeded",
+    "state_reset_before_each_chunk": true,
+    "timings": {
+      "copy_ms": 254.61340300000012,
+      "finite_check_sha256_ms": 2399.201352999995,
+      "flush_ms": 288.675592,
+      "gpu_forward_ms": 45922.95031118393,
+      "gpu_teacher_tokens_per_second": 178.38575144865956,
+      "includes_prompt_decode_all_positions": true,
+      "model_load_included": false,
+      "reset_ms": 1.151747,
+      "scored_rows": 4080,
+      "teacher_tokens": 8192,
+      "wall_ms": 49237.543775,
+      "write_ms": 320.45219600000036
+    },
+    "tokens_first16": [
+      198,
+      283,
+      8137,
+      211388,
+      455,
+      283,
+      14305,
+      8137,
+      211388,
+      455,
+      369,
+      449,
+      6163,
+      4383,
+      1116,
+      12069
+    ],
+    "tokens_sha256": "aa910a0346ea2137c7c2f6bfdcb45b834c6a70e0639e72aabc625862adb5db99",
+    "version": 1
+  },
+  "stage_seconds": {
+    "intrinsic": 60.74430440599099,
+    "intrinsic-score": 5.268694772035815
+  },
+  "wall_seconds": 66.0267744140001,
+  "finished_at": "2026-10-05T01:19:37.963141+00:00",
+  "estimated_pod_cost_usd": 0.030995902433238933
+}

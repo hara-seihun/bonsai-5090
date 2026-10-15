@@ -1,0 +1,17 @@
+{
+  "source_sha256": "9c2562bb52cdb40bc4633520ac735b85dd0899cf84847bba893002d530a972c1",
+  "exit": 0,
+  "stdout": "{\"full_pairs\":184528125,\"full_errors\":0,\"first_error\":4294967295,\"native_fingerprint\":44361825457853400,\"chain_errors\":0,\"native_us\":5.205760,\"direct_us\":8.325760,\"observer_max_probes\":21,\"weight_producer_bytes\":972,\"activation_producer_bytes\":3037500,\"observer_bytes\":257,\"serial_mmas_per_warp\":6,\"control_bit_images_bytes\":1510}\n",
+  "stderr": "",
+  "wall_s": 0.38008737564086914,
+  "hashes": {
+    "build.cmd": "71d20e2a46d93faea81c06c7ba216bf4fb8223b4d4645244e577414118f2917c",
+    "build.log": "e1c3d453520a8d5fac3d0a167419eed937a060f7f6639d93acb7a93e619632d6",
+    "crt5.cu": "598711dec8eb9eea7b320a89761e4f2e6fdef966f7b149fa55d2582faa6194e2",
+    "crt5.exe": "aa167d95c25ef35c17ce7c22620936dd98402d6044f88e38117c313ace170fb7",
+    "mixed-activation-encoding.bin": "288fa7f506a631874739a2f85eb7584d9b0b7858adc1bc7d5bb9a21d3e14fded",
+    "mixed-final-observer.bin": "17d58cac62965aa60c3718747e87269097fe3176a064496ec4064346be9ff543",
+    "mixed-small-observer.bin": "c8bf9a852841e2113e385a398b15b79a9a1df371a1f218097437bd06807eee63",
+    "mixed-weight-encoding.bin": "ef08ed87da155e33a20723c78f6737e80548da2b7e64a3a009e565b55e4e2a31"
+  }
+}

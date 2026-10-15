@@ -1,0 +1,726 @@
+{
+  "build-receipt.json": {
+    "bytes": 20456,
+    "sha256": "88d9cce23db0d26a5aaf4f17f3f6a2246f618cda4e6f92bcf290238a2d7596e1"
+  },
+  "build.cmd": {
+    "bytes": 1189,
+    "sha256": "ad4a9ae78b88d41dc81a8bc89f41a24cb529e256e26dad272f0f3d32a7c3e634"
+  },
+  "build.log": {
+    "bytes": 15728,
+    "sha256": "4fa8d9a60608f8130dee5f815a43550d89dddd9655b70cdf1e9ab5d3974dadb3"
+  },
+  "cache-identity.json": {
+    "bytes": 643,
+    "sha256": "db5778742ecbe83fd97ef6eff3255043e2aa13573b904fd2889ab960c9825cc3"
+  },
+  "cache_tool.cpp": {
+    "bytes": 9349,
+    "sha256": "afe1a5b7722f99cad3eb89bafdf02f4614f7ccaeab46a7fda7d33e1eaa1ecda4"
+  },
+  "cache_tool.exe": {
+    "bytes": 352256,
+    "sha256": "613c328b39041c723f21ec413d08ebfcefc91968303a13afa175f4dbef326c90"
+  },
+  "cache_tool.obj": {
+    "bytes": 1429468,
+    "sha256": "eed2cf8d299882a258680447542b5bcf586274464c9bea5f519fc014c9adbdff"
+  },
+  "CMakeLists.txt": {
+    "bytes": 1516,
+    "sha256": "1b228d08e79196802756d88709d62dd5c2834cbbbbee4dae3dab6fee437bace0"
+  },
+  "compare-receipt.json": {
+    "bytes": 1638,
+    "sha256": "20ae032eeb37208850586f4e8f28fa3f2955d84c2e8288fce9fbcd07e5835232"
+  },
+  "existing-no-overwrite.stderr.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "existing-no-overwrite.stdout.log": {
+    "bytes": 58,
+    "sha256": "a4a8ee5cdc50db5f3cadd39ad948867124de6b4fea9260a168008d1e96c2ea7a"
+  },
+  "fault-cpp.stderr.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "fault-cpp.stdout.log": {
+    "bytes": 267,
+    "sha256": "c7e4785a1510feadb49f4c958b242a92da87f9436bca4cb6e4bf32b3ccf4396f"
+  },
+  "fault-receipt.json": {
+    "bytes": 5053,
+    "sha256": "2cd6525657f0ed835b19622fa3c1ced5498cb39a8661e32ba98b20057e2ea945"
+  },
+  "fault_test.cpp": {
+    "bytes": 4492,
+    "sha256": "8ce835d6a8d2fb2c9682b118f0c6cce11c97f9ebec723db8738bc17e84fea585"
+  },
+  "fault_test.exe": {
+    "bytes": 360448,
+    "sha256": "e48a9a8afa0edd378ae70a7ad4dc864e4b66d31620a1082812567a745b2dc6e3"
+  },
+  "fault_test.obj": {
+    "bytes": 1340999,
+    "sha256": "a384994e6da4c5437a28f286c69e77f217907b87ffb9da0918c5fe103d555cc1"
+  },
+  "gguf.obj": {
+    "bytes": 437829,
+    "sha256": "fcc86b543af76392578c80904df66ff42a3f4b6decc8e00cb20842e1c9517673"
+  },
+  "inspect.cmd": {
+    "bytes": 212,
+    "sha256": "7011078fd406378cea00cffa2b01971afe77265b958ef3d9245d17a7acae674c"
+  },
+  "inspect.log": {
+    "bytes": 13935,
+    "sha256": "530385e5d7b5cc37b2593b2c2db6b4e67e376c42c72fad9c422f7873aefc0de9"
+  },
+  "insufficient-budget.stderr.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "insufficient-budget.stdout.log": {
+    "bytes": 58,
+    "sha256": "eb612bb1b02ab23a2821df50acd484a3df4fb45b95e60363bc2e7aec09dc057f"
+  },
+  "model-rejected-before-unsafe-parse.stderr.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "model-rejected-before-unsafe-parse.stdout.log": {
+    "bytes": 64,
+    "sha256": "88fa465508e5575b61b74a8962100b614874d8f7f37eda17259fca0920fe40ce"
+  },
+  "prepare-v2-receipt.json": {
+    "bytes": 1983,
+    "sha256": "d370e65caa150444e430adaa2809fb624b545ac314e00f8a73ce1d49d0d8e205"
+  },
+  "prepare.log": {
+    "bytes": 978,
+    "sha256": "89c572b4e7e2acfd6f04e7e4dc2786b16372a658d48b371e1425d15cdde0f24f"
+  },
+  "staged-not-recomputed.stderr.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "staged-not-recomputed.stdout.log": {
+    "bytes": 58,
+    "sha256": "0b19c2a0383b6237ce5b4d9a59be425232d45892393373b5051f73e2fb2841ec"
+  },
+  "build\\.ninja_deps": {
+    "bytes": 43588,
+    "sha256": "33752db6725c854fe1cce23321ad5eaa2e510ab53f08e37f322a5b508a431dd6"
+  },
+  "build\\.ninja_log": {
+    "bytes": 417,
+    "sha256": "b5ff958c8b20e8010ef3c8a262035cb967ec9038504a13dd6d070e4f2aa008aa"
+  },
+  "build\\build.ninja": {
+    "bytes": 48902,
+    "sha256": "b58773602cb81b028ea8629d2f3c8a7b2e4add45b884cdb556fdba2001a33d7c"
+  },
+  "build\\CMakeCache.txt": {
+    "bytes": 30705,
+    "sha256": "b8cc2041f9433aef69ef03c8acbbe79aeb619cab0c6d9b06e0945b1e48771642"
+  },
+  "build\\cmake_install.cmake": {
+    "bytes": 2151,
+    "sha256": "a65e284f6a894bfa90b30342bf3ece20a6e3ef6094a2a2245721994f5fad5738"
+  },
+  "build\\quality_custom.dll": {
+    "bytes": 52602368,
+    "sha256": "d1af25a44a9bebc8238bc7413d49339126eeecf3576033507a4dded95be097d7"
+  },
+  "build\\quality_custom.exp": {
+    "bytes": 3513,
+    "sha256": "6cd11bb38f2bc0060d051ea99b4190f7d3944f4960d6e8c96307e1a5bbe37d15"
+  },
+  "build\\quality_custom.lib": {
+    "bytes": 6584,
+    "sha256": "abfdbea069d8bba27c4b8f3c080f36d9967c6b3fe081d31ea84a0f926cde30f9"
+  },
+  "inherited\\api.cpp.obj": {
+    "bytes": 139556,
+    "sha256": "8212a801c237a2918cd5ae1fbb0b0092c1547d0b99df82409fe2d17596a2b02f"
+  },
+  "inherited\\dispatch.cu.obj": {
+    "bytes": 1665946,
+    "sha256": "e79a5c779a73e627514b5fde87454c6278126c6294264053fa293249a7684744"
+  },
+  "inherited\\draft.cu.obj": {
+    "bytes": 1518535,
+    "sha256": "9075a67aa546307bb27b2d61779f978b7c6d778b891e912f0b0616651a778f69"
+  },
+  "inherited\\f02-continuation.cu.obj": {
+    "bytes": 131294,
+    "sha256": "1697e0a17d063b2f4561a488edfb5ab72a1e19b1acc52a789622a3a3758e0291"
+  },
+  "inherited\\f02-producer.cu.obj": {
+    "bytes": 4857130,
+    "sha256": "ea6663a8d2c2a1ba26cc65ab523e39a3a54e575e0059a809195f2fcf57bb2497"
+  },
+  "inherited\\fp4.cu.obj": {
+    "bytes": 40983595,
+    "sha256": "d311baae6799d28543fa0726df66a3ada251cefd7967071626f2b427573b922a"
+  },
+  "inherited\\gdn_q6.cu.obj": {
+    "bytes": 3685928,
+    "sha256": "937768ce6ddd35510e9ae5667424cd6cab2f7e77dd21085a2cec96abff5b6cb6"
+  },
+  "inherited\\gguf.cpp.obj": {
+    "bytes": 446215,
+    "sha256": "73e206135aac22751a3319856d13d873e0e94bdebe5cb30c96b3bba7a154a333"
+  },
+  "inherited\\graph_memory.cu.obj": {
+    "bytes": 201839,
+    "sha256": "00273ed0a6417cf13dd8d7e66c2efb714e18cdc94e992807e269576577ef3c1c"
+  },
+  "inherited\\kernels.cu.obj": {
+    "bytes": 12323774,
+    "sha256": "a78fe376d46a07ba73658773166b5813c3d0876d53a0a3acce17819f5f114680"
+  },
+  "inherited\\sampling_gpu.cu.obj": {
+    "bytes": 1153487,
+    "sha256": "141c43667e7776d33ba09a43909c0e01049c79a1fc11a5e1309064135f8a236c"
+  },
+  "inherited\\sk.cu.obj": {
+    "bytes": 4041623,
+    "sha256": "dc5dc2b1f9e19578fac15811a91b3a425a2d6fc2723c361167dbc736770652a5"
+  },
+  "src\\batch_spec.h": {
+    "bytes": 5465,
+    "sha256": "f06b8c154e1ddb630592a6f35cf1189ac19985642811ec2813da49a2104b9130"
+  },
+  "src\\chat.h": {
+    "bytes": 1969,
+    "sha256": "443c5e596cee479002d2249833efdd6ea9e99f4342a5f85d3e1751e40e91183c"
+  },
+  "src\\commit_policy.h": {
+    "bytes": 15332,
+    "sha256": "4409b5e86561d34f6d663311b767504dfa4c52427b016195d64cb15eee5ac8eb"
+  },
+  "src\\compact.cuh": {
+    "bytes": 1370,
+    "sha256": "7bf6fe661a613bdb7e0278b0c801b3613dfa9e46192bfe01f931f4a84ccea500"
+  },
+  "src\\compact.hpp": {
+    "bytes": 1165,
+    "sha256": "0bb601c87e20bc05bcec43f34097933bccee2f5b14b3e4eb483ed215c79af7c9"
+  },
+  "src\\deterministic_gemm.cuh": {
+    "bytes": 2275,
+    "sha256": "1e6809b97c4b5ed298b3b573c22c043728dff70952bd40959b06a5b81817b57d"
+  },
+  "src\\dict8.cu": {
+    "bytes": 40825,
+    "sha256": "043509429b79c58c3a4647e23b6b1738c7b7a9d025f2f889b65577d1708f86d3"
+  },
+  "src\\dict8.cuh": {
+    "bytes": 791,
+    "sha256": "185310505704ab7ac3abdeafdc12553794ceec5f889cefede1428139a8e843e4"
+  },
+  "src\\dict8_binding.hpp": {
+    "bytes": 7714,
+    "sha256": "0ddaef13548df290147fa1c38c11aeed76e790d5c571a455483c3c70d4f5234d"
+  },
+  "src\\dict8_cache.hpp": {
+    "bytes": 2548,
+    "sha256": "80cc62ffbea0d81e7a3390af371d245e064f024c7b0ca98943e596f19c398b5c"
+  },
+  "src\\dict8_checks.cu": {
+    "bytes": 1612,
+    "sha256": "d32e099960de7cd51a3e56a9e7950d5e5a71256c838d60868069c194bbaba1af"
+  },
+  "src\\dict8_codec.hpp": {
+    "bytes": 2168,
+    "sha256": "47e34a43add40b9c83fba0ab3e03e98df2c178a2d632edd22a3e83b74b4eb9bc"
+  },
+  "src\\dict8_common.hpp": {
+    "bytes": 4918,
+    "sha256": "06158e15585fc1db7c37df24d14907a0968e122fd4492bc2dd2d3436d115daa6"
+  },
+  "src\\dict8_model.hpp": {
+    "bytes": 11366,
+    "sha256": "15880a28ee2f4704a5295d7e3c6d232e0bda74f39d932abbb10668997686a96b"
+  },
+  "src\\dict8_offline.hpp": {
+    "bytes": 1419,
+    "sha256": "83343b24feefe5f699c020bf72a1688245ee92d1ab76f1dce4edfe5085530423"
+  },
+  "src\\draft_contract.h": {
+    "bytes": 3837,
+    "sha256": "9053ed96dcda04f941d8ddab59db79d29edfc3571115b17d74b4b68aea5b103c"
+  },
+  "src\\draft_horizon.h": {
+    "bytes": 2497,
+    "sha256": "a054f9515797d39947e8c8ebf830075bad0562c54bcc37de653b4e635fe64d1d"
+  },
+  "src\\draft_lz.cuh": {
+    "bytes": 2273,
+    "sha256": "8bc4275f20a6daeda66f706f3059781418ec609609dbe4fc5d7823fce175352f"
+  },
+  "src\\draft_probe.h": {
+    "bytes": 665,
+    "sha256": "ea265b3cd4f0c5a65acfd5aae08a2b5bd524cde91b64e360df28b95a4ab18dab"
+  },
+  "src\\engine.cu": {
+    "bytes": 236461,
+    "sha256": "6445a05870929ae76b314ae96f39c9ce3f426bb8a0ddf71616ffe53b7abe183b"
+  },
+  "src\\f02.cuh": {
+    "bytes": 1279,
+    "sha256": "6250eecac423aaf4f81d4e94427a3eeb28a16c6917976769bbef438a6a8afa7d"
+  },
+  "src\\f02_route.h": {
+    "bytes": 2522,
+    "sha256": "d2c4e62a00932b7a26b02bbd6f9f4de91d41c52a1cc7ad9fcf71793ff1f188fb"
+  },
+  "src\\f07.cuh": {
+    "bytes": 1265,
+    "sha256": "776a922f83bba8f12057d9f6a0e115c775fc1559832b2e1d748be9dcf0266e68"
+  },
+  "src\\f07_contract.h": {
+    "bytes": 2462,
+    "sha256": "7ed3a1dbd0be23d0eef25a85b8a2a8efbf9adb448c7b0b6bf50ce4ed418e0e1e"
+  },
+  "src\\f1.cuh": {
+    "bytes": 870,
+    "sha256": "b921b2ac82841f7132936d9ff1651714e9ea9a955dfac6043cf70b2e58add25c"
+  },
+  "src\\f1_epilogue.cuh": {
+    "bytes": 2058,
+    "sha256": "457321fb89b8240d49ca21c28d247d25420a790ee94200cc10179bcdfca520d9"
+  },
+  "src\\f1_swar.cuh": {
+    "bytes": 893,
+    "sha256": "883845e16119b676ef6a9e4f68dee10c843362340c3e7d62bfb1b29679cdb996"
+  },
+  "src\\fp4_ops.cuh": {
+    "bytes": 5255,
+    "sha256": "1dfa009cd680d1b0227ab5bebf0d650ebab4fba5a33896c2fae452512d37bf39"
+  },
+  "src\\fullk_gu.cuh": {
+    "bytes": 1686,
+    "sha256": "d9739183ae3f79b54f153615b1822fae996631dbba0b4189c220e2d5c327edf8"
+  },
+  "src\\fullk_profile.h": {
+    "bytes": 1533,
+    "sha256": "617b15eeb2c57b17c95e58eec90816f22c234c1a2b825b2e6c6c47743f186df2"
+  },
+  "src\\gdn_diagnostic.h": {
+    "bytes": 7395,
+    "sha256": "cecbcee8354f26147e2b5f64bb05ff66909e3922ed269259addeaffbeba3c418"
+  },
+  "src\\gdn_single.cuh": {
+    "bytes": 9911,
+    "sha256": "e5b2ed76fc78c42c814141bbaa61f72d349995e315556403190f46757e0e63cf"
+  },
+  "src\\gdn_single.h": {
+    "bytes": 1088,
+    "sha256": "e31acb893f9555acc631e6c8509de2d2b85ba1a72c03fd15f80467705d2766d2"
+  },
+  "src\\gdn_verify.cuh": {
+    "bytes": 10465,
+    "sha256": "5983bb22b076cd3f3d1bc79060f6bfbe9b2828bcfefac0cd46453b06931a0430"
+  },
+  "src\\gdn_verify_fused.cuh": {
+    "bytes": 5439,
+    "sha256": "5b8a54c09cc98dae38cb936cb2acfc747770494b88c7bd62915711b7c2ad0c2a"
+  },
+  "src\\gguf.cpp": {
+    "bytes": 3032,
+    "sha256": "631f6ee5645fa3504e14d72dec729069369ef12062b955b92437b7a70785f2b7"
+  },
+  "src\\gguf.h": {
+    "bytes": 685,
+    "sha256": "7fbf51c8b43ebca7f027791d2b407b655e31666107e317818d1606d454fa34e3"
+  },
+  "src\\gpu_grammar.h": {
+    "bytes": 2204,
+    "sha256": "23a362bfc81a0e33ecbcf3d28b903181b578ad6535611c20220bd2834767a632"
+  },
+  "src\\gpu_grammar_batch_engine.cuh": {
+    "bytes": 1694,
+    "sha256": "31993b9d759a2416b9a5ad8870c9553af449476bfc2f88ff834cfb00c74c4616"
+  },
+  "src\\gpu_grammar_batch_head.cuh": {
+    "bytes": 705,
+    "sha256": "528eec199c699d17ed96dce52542727b964e96619b5e10688c2e029c0aba2474"
+  },
+  "src\\gpu_grammar_cache.h": {
+    "bytes": 1852,
+    "sha256": "a5ef4f110b47bf443dfdfe4e571e0da9127741664066f41dbe40a38a8b519c79"
+  },
+  "src\\gpu_grammar_engine.cuh": {
+    "bytes": 14466,
+    "sha256": "187fa432d93cf5e12799dfd5b521ce8d7b7c766f9c29c7b03fc0cab6ce466d12"
+  },
+  "src\\gpu_grammar_runtime.cuh": {
+    "bytes": 8886,
+    "sha256": "637a1dc5076126e0def4fa60fecf881ee164f4b36a02e03d9120a8bf49e3467c"
+  },
+  "src\\gpu_grammar_select.cuh": {
+    "bytes": 5748,
+    "sha256": "c9e2ea66059d3e8448a3fab3de3b63ca1afdb32e425b1a4b39984c3339e34c6b"
+  },
+  "src\\gpu_grammar_select_engine.cuh": {
+    "bytes": 422,
+    "sha256": "063e3667da2a087ffe99317ff19b7ea2e91b9fc53935a819ba092e00e57f3125"
+  },
+  "src\\gpu_grammar_token_compile.cuh": {
+    "bytes": 6587,
+    "sha256": "7d3e3d959cf0e220d6ee9b6f0c8456475a5f0f5eef242c340d459b1f3e26b5d1"
+  },
+  "src\\grammar.h": {
+    "bytes": 2823,
+    "sha256": "3f8a5bc694d471b572f695acfa4dc777eba4e92d1fdb5d8778554fc3f62f749f"
+  },
+  "src\\grammar_host_select.h": {
+    "bytes": 8619,
+    "sha256": "03c2225ff1155fc5ad0070a8868ca0df5a094bc25f52f52f2449f9ada2c6f9b8"
+  },
+  "src\\graph_memory.h": {
+    "bytes": 1204,
+    "sha256": "497f6af9d2d7e7deda1d6d20cf9909973bd5bd673f238910cdbabb789e873bdc"
+  },
+  "src\\graph_probe.h": {
+    "bytes": 1304,
+    "sha256": "1398e18bbf9e63517fc505240eb4ff8674e2380fd34737d50975b106cc25e444"
+  },
+  "src\\head_demand.h": {
+    "bytes": 3459,
+    "sha256": "8a65aebe2bc0389a08c3bab012500cf7f15464e9ec3162bb9c2eed6e4c2dd81d"
+  },
+  "src\\kernels.cuh": {
+    "bytes": 18049,
+    "sha256": "35616396297bd19feafdc87b932d0df1ea06d52eadec3d6256406b5ff5af5ce8"
+  },
+  "src\\lz_penalty.h": {
+    "bytes": 7861,
+    "sha256": "a649a900f69c3aaddd00f144cece32f33ffc4aa7bd42c5fa3a5f94dc8e21979a"
+  },
+  "src\\model.h": {
+    "bytes": 1705,
+    "sha256": "af5109d43722389bee2eaf357c70480587798d683bdb41d303e6c869668da84e"
+  },
+  "src\\pdl_clock.cuh": {
+    "bytes": 2432,
+    "sha256": "93f0a0a8c9d9711f3f98659e1e0ec61063dfe6ef59b981c82c95dcb67d7f700b"
+  },
+  "src\\pf_chain.h": {
+    "bytes": 806,
+    "sha256": "45a40d6073bcae955f68c5572242c38cba5f1257832c8ec2d2e5bab4cb604016"
+  },
+  "src\\platform.h": {
+    "bytes": 3133,
+    "sha256": "4f7784f04998b2f36d9ce94bf65991dab849ec7ee3303af457c6e9ba634484af"
+  },
+  "src\\prep_chunk.cuh": {
+    "bytes": 20196,
+    "sha256": "b22a2929452397adcbd4bb17fbe2b1e71d9281962d87f330c2468b3e53eec3f5"
+  },
+  "src\\profile_trace.h": {
+    "bytes": 922,
+    "sha256": "429f7c6a4750f1697065f997378143a825963d3b0fc557de38b345376df910d3"
+  },
+  "src\\prompt_lookup.h": {
+    "bytes": 2960,
+    "sha256": "6f8cc0528ff38d84afd773b633717ca2cb080fd2acdde125abc1afe6eb068849"
+  },
+  "src\\q8_scale.h": {
+    "bytes": 834,
+    "sha256": "1968e4eff5cde41b342abfe9e32de3fd629f610d9950cf9a93f69d414f96d519"
+  },
+  "src\\quad13.cuh": {
+    "bytes": 6721,
+    "sha256": "99fd85fb4abb7af511644d8bc8e0e108ac04e54329e76fd232f8a41968fc671b"
+  },
+  "src\\relax_policy.h": {
+    "bytes": 18779,
+    "sha256": "db1dcd1b482ec1f456c0e80268a2f3864f114308f4d810858beda01bcaece32e"
+  },
+  "src\\sampling.h": {
+    "bytes": 6846,
+    "sha256": "dbda24a66db8722057fb50d61662e0a46fd965617f82587825942df8ffc18f7a"
+  },
+  "src\\sampling_contract.h": {
+    "bytes": 1189,
+    "sha256": "e8bba33d7d336b5fdfb71f8c011c7b4fec0f8dca63096105820a67fdd9345298"
+  },
+  "src\\sampling_gpu.cuh": {
+    "bytes": 1794,
+    "sha256": "5a6926c49ee156c691f3ab39e0beb08b67b1322df9292a4a5dad5ed5fd161690"
+  },
+  "src\\sampling_noise.h": {
+    "bytes": 895,
+    "sha256": "7102f80987c7d2b777bfc43cde5d31d4c02ee48252190a7a3b05d61abf6f8e20"
+  },
+  "src\\scale_carrier.cuh": {
+    "bytes": 4055,
+    "sha256": "6f81c61a73029f1170018d9b34be74c18a7964126943a92d246e75c4035ba86a"
+  },
+  "src\\serving_policy.h": {
+    "bytes": 4175,
+    "sha256": "aa2bfd6a03d2fdc795bd516ca1bff3e60ddd0f89911c62bda7a0c6c198e34b68"
+  },
+  "src\\sk.h": {
+    "bytes": 2316,
+    "sha256": "7eb5da7f2d7f74086bc2523f22b4e02363729ddd1673034601f27c3317451a57"
+  },
+  "src\\smlit.cuh": {
+    "bytes": 4909,
+    "sha256": "2eaf41de0ef050db65a98725988e23e675ef65dde3c6285cc1284bddc23d835b"
+  },
+  "src\\sparse_head.cuh": {
+    "bytes": 18660,
+    "sha256": "2d858e30d7326b1b276babc9d0cad984b89b4231ec69a3a5d2d952f0bb0d2a18"
+  },
+  "src\\sparse_head_check.cuh": {
+    "bytes": 1097,
+    "sha256": "f9da8f8600a11d099397c078320c9ecf4d172be80fc15b92aaa340b2727427ce"
+  },
+  "src\\spec_copy.cuh": {
+    "bytes": 1513,
+    "sha256": "d23df6747e6b0a87398e14d61fe6256419d86a94c693f29c6f3ffc77b0b5b570"
+  },
+  "src\\state_format.h": {
+    "bytes": 1189,
+    "sha256": "be2c06c7f427a49f07d45f2d1bc13197bf568e42b497be200fce1f6377f3e9f3"
+  },
+  "src\\state_fusion.cuh": {
+    "bytes": 7932,
+    "sha256": "507078f3ad20197f20fb58c294d014fa8086feb7a4cd908a1000701458b2589c"
+  },
+  "src\\tail_prep.cuh": {
+    "bytes": 13150,
+    "sha256": "ab2d9d2a7355288b01d627f470353df1614565139f305078b4c5f3507e8f0291"
+  },
+  "src\\ternary_operands.h": {
+    "bytes": 1707,
+    "sha256": "99a6babf5e0d1804543a2660776f93d27a028356fbe4c83c954fac3bffc89846"
+  },
+  "src\\two_path_policy.h": {
+    "bytes": 1361,
+    "sha256": "7aa813c222fa36d407829a7139653218da6c782534bddb0d09667aa9a5aad010"
+  },
+  "src\\two_path_runner.h": {
+    "bytes": 11853,
+    "sha256": "866f5fc4eb98d69c019c2cef14947916bc90f862809a5a20befe650513856c9f"
+  },
+  "src\\vision.h": {
+    "bytes": 826,
+    "sha256": "0f9921fa963763caff61abaf045840cab1c0b3b8c9764a553d453c049618d422"
+  },
+  "src\\warp_microscope.cuh": {
+    "bytes": 3324,
+    "sha256": "499ba46c5c742057ab33fd7dbc350a496b7da7d4363f91221d15ac1d6c1d0033"
+  },
+  "experiments\\gu-dict8-cache\\fault_test.cpp": {
+    "bytes": 4492,
+    "sha256": "8ce835d6a8d2fb2c9682b118f0c6cce11c97f9ebec723db8738bc17e84fea585"
+  },
+  "experiments\\gu-dict8-cache\\identity-abi-test-receipt.json": {
+    "bytes": 920,
+    "sha256": "d75a430659b2eae37cea2170af27b0d6a87de4738824df38aa1497ece46429b3"
+  },
+  "experiments\\gu-dict8-cache\\identity-test-receipt.json": {
+    "bytes": 2349,
+    "sha256": "4f07e663423c40f9c503dd8f562c3f21d085b8b79178a3369b41bd5c420a28ac"
+  },
+  "experiments\\gu-dict8-cache\\identity_test.cpp": {
+    "bytes": 11598,
+    "sha256": "1aeac0f5d8353cfc583c31bcccfaee823d3673d35db60140d32d72a49dd8536c"
+  },
+  "experiments\\gu-dict8-cache\\test_identity.py": {
+    "bytes": 6015,
+    "sha256": "a911d972f6cb1d1c337b0cbd1b031ea56b438beefdbb7e5bb9faf2c3669a463b"
+  },
+  "experiments\\gu-dict8-cache\\test_identity_abi.py": {
+    "bytes": 2648,
+    "sha256": "e5f27af39eb62b63b4c4be4d6b64a410d7ff03d496dc4a979f65e4ad813f3bc2"
+  },
+  "build\\CMakeFiles\\cmake.check_cache": {
+    "bytes": 86,
+    "sha256": "95079b44bcef481d601432c2fd3c654d7fe85b9c8386c355f2874502b47441d7"
+  },
+  "build\\CMakeFiles\\CMakeConfigureLog.yaml": {
+    "bytes": 2732780,
+    "sha256": "30e2113eb63b9d3b9d9454e90f7a0da1bb87074988b66d22612c5a00d30af150"
+  },
+  "build\\CMakeFiles\\InstallScripts.json": {
+    "bytes": 196,
+    "sha256": "bad7204526433aa1db6bb387c8cc79d73718836b06c4e2323a808a21c261dcac"
+  },
+  "build\\CMakeFiles\\rules.ninja": {
+    "bytes": 3258,
+    "sha256": "ac9cd8a3c6e8966a377b65de47267165c2a8b305f10de356a1f3675fc5fe057d"
+  },
+  "build\\CMakeFiles\\TargetDirectories.txt": {
+    "bytes": 427,
+    "sha256": "831cef2c5768f7d71885ac5a4f85c01b4216284a52f89ffa36e160aeed3f93b0"
+  },
+  "build\\CMakeFiles\\4.1.2\\CMakeCUDACompiler.cmake": {
+    "bytes": 4537,
+    "sha256": "04477836663e3386f23442a04dcfe073487a8ed9740af039d46a7b19eaa88c25"
+  },
+  "build\\CMakeFiles\\4.1.2\\CMakeCXXCompiler.cmake": {
+    "bytes": 6701,
+    "sha256": "1f242bae01bef67cf1db5eb1f000ab8fa2f37fb6617f6d08185a96a03f4696e1"
+  },
+  "build\\CMakeFiles\\4.1.2\\CMakeDetermineCompilerABI_CUDA.bin": {
+    "bytes": 774144,
+    "sha256": "cfc862656df3c4cd2b62d069b37d2123e71ecd99005e72c14a074bddcf0893b9"
+  },
+  "build\\CMakeFiles\\4.1.2\\CMakeDetermineCompilerABI_CXX.bin": {
+    "bytes": 53248,
+    "sha256": "4dfed9b69737c5a169715780390b2c7a4de967c7cfbf13fcb535376c2b12f582"
+  },
+  "build\\CMakeFiles\\4.1.2\\CMakeRCCompiler.cmake": {
+    "bytes": 308,
+    "sha256": "3d8990f616bde5c18eaaabfdcabe4d5406d06c165c3d1fdc52865619626681db"
+  },
+  "build\\CMakeFiles\\4.1.2\\CMakeSystem.cmake": {
+    "bytes": 395,
+    "sha256": "cb655f074177502b26612fa979ee72c606731a0b59f300e936ebba161d8cce09"
+  },
+  "build\\CMakeFiles\\ShowIncludes\\foo.h": {
+    "bytes": 2,
+    "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+  },
+  "build\\CMakeFiles\\ShowIncludes\\main.c": {
+    "bytes": 33,
+    "sha256": "cdfab295fc8e12c3ecfb6982f99058f032ee8284926ad71a829e70ea3bf02549"
+  },
+  "build\\CMakeFiles\\ShowIncludes\\main.obj": {
+    "bytes": 710,
+    "sha256": "da08db08b73b974929c4e4085785fb77fe86c6c58269daf99f2268a6c6361c90"
+  },
+  "build\\CMakeFiles\\quality_custom.dir\\src\\dict8.cu.obj": {
+    "bytes": 468662,
+    "sha256": "a2c67a8871f32eb0f38e72f50dfb451ae04e3f5dc71820730339c346937761db"
+  },
+  "build\\CMakeFiles\\quality_custom.dir\\src\\dict8_checks.cu.obj": {
+    "bytes": 52910,
+    "sha256": "ef3182c152cb33809b4cf0575c54f1ccb636c6e533f2217c98b624ec6cc5b979"
+  },
+  "build\\CMakeFiles\\quality_custom.dir\\src\\engine.cu.obj": {
+    "bytes": 4464805,
+    "sha256": "2a4cf501f5072ace872fb80a9dbe3365c1a8fce72f8e1bb56949767d430fe07d"
+  },
+  "build\\CMakeFiles\\4.1.2\\CompilerIdCUDA\\a.exe": {
+    "bytes": 125440,
+    "sha256": "d642539db5debf822c9ce47fc68dfc69eac948757215eef049258fbca2f8fdd0"
+  },
+  "build\\CMakeFiles\\4.1.2\\CompilerIdCUDA\\CMakeCUDACompilerId.cu": {
+    "bytes": 31690,
+    "sha256": "e4362d486a1973727d0fa9ab7c43edb370dac2638801b23b65a52f01aff1fcdb"
+  },
+  "build\\CMakeFiles\\4.1.2\\CompilerIdCXX\\CMakeCXXCompilerId.cpp": {
+    "bytes": 30429,
+    "sha256": "9e26b0f20786a2d59935f5dddb7dbeceb54e40f39ffd6996b2fc0e339431808d"
+  },
+  "build\\CMakeFiles\\4.1.2\\CompilerIdCXX\\CMakeCXXCompilerId.exe": {
+    "bytes": 108032,
+    "sha256": "b3f42e1c2394ddb79198a137c5763544421eaa1436b10efcf4096927310a1bfc"
+  },
+  "build\\CMakeFiles\\4.1.2\\CompilerIdCXX\\CMakeCXXCompilerId.obj": {
+    "bytes": 2086,
+    "sha256": "d8cc84c995468e4f342f01a86ea8611631655b14a436bb6afef55875aff52464"
+  },
+  "build\\CMakeFiles\\4.1.2\\CompilerIdCUDA\\tmp\\a.exe.res": {
+    "bytes": 502,
+    "sha256": "27136efaf479ddaaa348482d193400e3d800de7b2ed6dd130cd3a71212594b71"
+  },
+  "build\\CMakeFiles\\4.1.2\\CompilerIdCUDA\\tmp\\a_dlink.fatbin": {
+    "bytes": 1408,
+    "sha256": "c1698dc6f9cadcdcc184e035a175032f949c561e3946f143ff557ec72a9bb049"
+  },
+  "build\\CMakeFiles\\4.1.2\\CompilerIdCUDA\\tmp\\a_dlink.fatbin.c": {
+    "bytes": 4695,
+    "sha256": "e2d3083a4911166d7fc2046cd87f67ac6eaa7ecefb07cf8a2e7f043c5fa63116"
+  },
+  "build\\CMakeFiles\\4.1.2\\CompilerIdCUDA\\tmp\\a_dlink.obj": {
+    "bytes": 2496,
+    "sha256": "eb287eaf650a8d1abf7b5719c46ce4546779169be8e31ed2f737720dadb8ddaa"
+  },
+  "build\\CMakeFiles\\4.1.2\\CompilerIdCUDA\\tmp\\a_dlink.obj.res": {
+    "bytes": 678,
+    "sha256": "1a28d487f2c6b5dd9ab02cc6c9efae8d2ed1cd0e8de24dcc72c28c2a45ce153f"
+  },
+  "build\\CMakeFiles\\4.1.2\\CompilerIdCUDA\\tmp\\a_dlink.reg.c": {
+    "bytes": 33,
+    "sha256": "377e0c156093e118d786c8e7a7452a3c786e1d830b8bc1ebbe8ebb57c86a8256"
+  },
+  "build\\CMakeFiles\\4.1.2\\CompilerIdCUDA\\tmp\\a_dlink.sm_75.cubin": {
+    "bytes": 1328,
+    "sha256": "7d4f15b510865df1161fd981b6ef4d7c2b5149e30162ef7a03481529d0c9e4a0"
+  },
+  "build\\CMakeFiles\\4.1.2\\CompilerIdCUDA\\tmp\\a_dlink.sm_75.cubin.optf": {
+    "bytes": 238,
+    "sha256": "4edff9bc708e17f92216e7f075299b10864b1615fca51cdc790f92cd2606b146"
+  },
+  "build\\CMakeFiles\\4.1.2\\CompilerIdCUDA\\tmp\\CMakeCUDACompilerId.cpp1.ii": {
+    "bytes": 2198724,
+    "sha256": "1356d0f8d9c6147e0bdace505461022da3cc4b1dd0d1321803d86da8e504a059"
+  },
+  "build\\CMakeFiles\\4.1.2\\CompilerIdCUDA\\tmp\\CMakeCUDACompilerId.cpp1.ii.res": {
+    "bytes": 528,
+    "sha256": "6bea68baf6dd19367c8677afbc678c892af829a7426c10ccf848d487bbc302d2"
+  },
+  "build\\CMakeFiles\\4.1.2\\CompilerIdCUDA\\tmp\\CMakeCUDACompilerId.cpp4.ii": {
+    "bytes": 1656636,
+    "sha256": "2afe9a341bb534451352bb5a89c741e8eb7ca3543a8b824ca9804819505963a9"
+  },
+  "build\\CMakeFiles\\4.1.2\\CompilerIdCUDA\\tmp\\CMakeCUDACompilerId.cpp4.ii.res": {
+    "bytes": 478,
+    "sha256": "4b9b67321d86cbf1390ed46d4cb226f852f8a04ab93a386d6eab93b8858b35c7"
+  },
+  "build\\CMakeFiles\\4.1.2\\CompilerIdCUDA\\tmp\\CMakeCUDACompilerId.cudafe1.c": {
+    "bytes": 3401,
+    "sha256": "a95eaa4d7d16e60ac68f5bfe33debcc1ff5014e0d8a985f140251b3a604511f1"
+  },
+  "build\\CMakeFiles\\4.1.2\\CompilerIdCUDA\\tmp\\CMakeCUDACompilerId.cudafe1.cpp": {
+    "bytes": 872749,
+    "sha256": "9e22152b938f0a2bd703e58991d022586dd05e4c3d834355580f8822cae9ab2c"
+  },
+  "build\\CMakeFiles\\4.1.2\\CompilerIdCUDA\\tmp\\CMakeCUDACompilerId.cudafe1.gpu": {
+    "bytes": 590,
+    "sha256": "10b85d9b0706c87e638ccdd4c10c15dbc99103842de83bbcf8ec04432eaf881f"
+  },
+  "build\\CMakeFiles\\4.1.2\\CompilerIdCUDA\\tmp\\CMakeCUDACompilerId.cudafe1.stub.c": {
+    "bytes": 745,
+    "sha256": "58334cccf00663f7e6b78cbabaad302d595feb73639ebdae96f525ef04c56a8b"
+  },
+  "build\\CMakeFiles\\4.1.2\\CompilerIdCUDA\\tmp\\CMakeCUDACompilerId.fatbin": {
+    "bytes": 1696,
+    "sha256": "0a1718d93800f59a8fca6902bf4de02cd628afda533f738d2b8a32dddec26ac5"
+  },
+  "build\\CMakeFiles\\4.1.2\\CompilerIdCUDA\\tmp\\CMakeCUDACompilerId.fatbin.c": {
+    "bytes": 5476,
+    "sha256": "9b677be71026114aa4c910af35c1447238f83feb5bb483b3c5ac62aeb6da953c"
+  },
+  "build\\CMakeFiles\\4.1.2\\CompilerIdCUDA\\tmp\\CMakeCUDACompilerId.module_id": {
+    "bytes": 44,
+    "sha256": "8ba63e1469d30cbe9a8883060a5fade85bbe3250fd2483a453d1b4c9a8f8f03e"
+  },
+  "build\\CMakeFiles\\4.1.2\\CompilerIdCUDA\\tmp\\CMakeCUDACompilerId.obj": {
+    "bytes": 38550,
+    "sha256": "c9a04bf7f89b11c60a3f6f2a7d3572ee590781e15004b80d090b4fc1df8112c8"
+  },
+  "build\\CMakeFiles\\4.1.2\\CompilerIdCUDA\\tmp\\CMakeCUDACompilerId.obj.res": {
+    "bytes": 436,
+    "sha256": "443fc1fabfcd2417b042ebb23bbfbf0edd8ad7b5fa74e0dc941ae36e98572158"
+  },
+  "build\\CMakeFiles\\4.1.2\\CompilerIdCUDA\\tmp\\CMakeCUDACompilerId.ptx": {
+    "bytes": 215,
+    "sha256": "bc267a3b2a3db41b3b0b58e39553f798e28c5dea10e7a55dd5079a38b75382a9"
+  },
+  "build\\CMakeFiles\\4.1.2\\CompilerIdCUDA\\tmp\\CMakeCUDACompilerId.sm_75.cubin": {
+    "bytes": 1464,
+    "sha256": "7a6dd2eeac7a7b4312726614130fdd70fb6e0d537f321573c8b8cc4ae87b42cc"
+  }
+}

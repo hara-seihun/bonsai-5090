@@ -1,0 +1,2 @@
+NVIDIA Nsight Systems version 2025.4.1.0
+78c94e429d1c6881a24a97e131e31636a59b5d81b180374ac6a1b254c554432a  /workspace/binary/pruned/halo/h5-server

@@ -1,0 +1,18 @@
+{
+  "exit": 0,
+  "stdout": "{\"kind\":\"compact_projection\",\"states\":240,\"max_probe\":2,\"table_bytes\":8192,\"target_encoding\":\"three independent 3-bit fields\"}\n{\"kind\":\"observer_projection\",\"native_image_inputs\":729,\"states\":240,\"max_probe\":3,\"hash_bytes\":16384}\n{\"status\":\"pass\",\"device\":\"NVIDIA GeForce RTX 5090\",\"cases\":531441,\"distinct_outputs_per_full_tile\":128,\"mma_per_tile\":2,\"missing\":0,\"mismatches\":0,\"dictionary_bytes\":16384,\"labels_bytes\":108,\"input_bytes\":2916,\"output_bytes\":2125764,\"timings_ms\":{\"native_tile_hash_joint_observer\":{\"median\":0.004948,\"min\":0.004931,\"max\":0.004980},\"native_tile_compact_joint_observer\":{\"median\":0.004798,\"min\":0.004778,\"max\":0.004820},\"native_tile_binary_joint_observer\":{\"median\":0.013349,\"min\":0.013287,\"max\":0.013393},\"native_tile_prepared_joint_observer\":{\"median\":0.004541,\"min\":0.004518,\"max\":0.004568},\"native_tile_ptx_joint_observer\":{\"median\":0.004383,\"min\":0.004338,\"max\":0.004400},\"native_tile_branchless_joint_observer\":{\"median\":0.004252,\"min\":0.004212,\"max\":0.004273},\"lane_direct\":{\"median\":0.003258,\"min\":0.003252,\"max\":0.003265},\"pair_lookup_control\":{\"median\":0.002309,\"min\":0.002124,\"max\":0.002410}},\"graph_repetitions\":100,\"graph_rounds\":7,\"binary_dictionary_bytes\":149520,\"compact_dictionary_bytes\":8192,\"prepared_label_bytes\":108,\"pair_lookup_bytes\":729,\"packed_dictionary_bytes\":4096,\"registers\":[24,24,24,26,26,26,24,14],\"local_bytes_per_thread\":[0,0,0,0,0,0,0,0],\"shared_bytes_per_block\":[0,0,0,0,0,0,0,0],\"scope\":\"all 27^4 ternary source tuples as shuffled 729x729 Cartesian pair matrix; 128 independent output cells per full tile; two TF32 MMAs with uniform K replication in each pair, 1/8 normalization, RNA padding, two reachable-pair exact-key hash lookups and final three-component dot-sum join; all producers and output included; no single-MMA K compression/model/HTTP claim\"}\n",
+  "stderr": "",
+  "wall_s": 2.302196502685547,
+  "mutex": "Local\\BonsaiGPU",
+  "mutex_wait_result": 0,
+  "hashes": {
+    "native_tile_branchless.cu": "82b02d8b9c2c67ced7b07025539864e425d9103e1c32671d5cc96fb5b2b704c1",
+    "native_tile_branchless.exe": "1daf94b0a55998a7dbbc4a58c32a247c52f3ca0bec5a7ab9d196baa212769a12",
+    "native-prime-observer.bin": "93a78c169f3d8876f65f90c72e1459f7597f8dbe968d5f10f62d4b452ea42116",
+    "native-pair-image.bin": "83450831d4b02f40db18e2e713824efce4dcbb79e6d84ee30e867811f08ad645",
+    "native-pair-hash.bin": "cbb38564dcc2273e9e67e7401fee54467abb1b3fc23aecafb6182c852b8782da",
+    "native-pair-compact.bin": "0eeda7e7361f1709293357f9069f618f2e7243707e53bf7617ac5a93fc94d7c9",
+    "native-pair-packed.bin": "a8949713e90818f59b2fb95666076ad561ec245d8a6ecef3f853da0b4e4674bd",
+    "build.log": "a0c822599973f82d5b3750c7a3f2106f800404192129c99ea35c983f5f93358a"
+  }
+}

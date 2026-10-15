@@ -1,0 +1,21 @@
+{
+  "timed_executable_sha256": "0620c152d79a5faf83b1aaa9ccf56f41379d0bfa6c357cec204528c429f12c4d",
+  "timed_source_sha256": {
+    "composition.cu": "b34f60901282e8b0a5b4706f8fafb787043d1cb100f721b0c5f6229c29e54005",
+    "bench.cu": "3ee10f249d700db549c74eeabaaa814eb253e8bc65ce4b0c06b5b68460d55c5a",
+    "composition.cuh": "630db3ee1090ce372b1a4c9b9b5aadc4ea10ced4e83d8d20d257c6b972cc0def"
+  },
+  "post_timing_change": "Host-only validation rejects n>INT_MAX/2 before 2*n; no device kernel changed.",
+  "base_source": "4fb3647",
+  "command": "flock -w 600 /tmp/binary-gpu.lock timeout 55s /workspace/binary/composition/sweep.sh /workspace/binary/models/Bonsai-27B-Q1_0.gguf /workspace/binary/composition/results",
+  "exit": 0,
+  "final_device_sass_identical_to_timed": true,
+  "final_executable_sha256": "684c25ce03adc4e5aeb33cbf9b8aaadf2c2a3e92e3ee038892de3dd697c8003a",
+  "final_source_sha256": {
+    "composition.cu": "6b9ba7164ba0d00426bb5e765aa76a6f58622c472b616cd7c1e6ffa9311a19e4",
+    "composition.cuh": "630db3ee1090ce372b1a4c9b9b5aadc4ea10ced4e83d8d20d257c6b972cc0def",
+    "bench.cu": "3ee10f249d700db549c74eeabaaa814eb253e8bc65ce4b0c06b5b68460d55c5a",
+    "search.cpp": "49e0f1876e9b8f37763542358b4c42985685cff738e2a14e4ab8bc79fcdc87b6",
+    "Composition.lean": "9eb4cb2f689246fcc5b744b7484be334e8926592fd09fc01eaa61402d9cc87d7"
+  }
+}

@@ -1,0 +1,5 @@
+ptxas /tmp/tmpxft_003d457b_00000000-7_mixed_unscaled.compute_120.ptx, line 29; error   : Instruction 'mma with with FP6/FP4 floating point type' not supported on .target 'sm_120'
+ptxas /tmp/tmpxft_003d457b_00000000-7_mixed_unscaled.compute_120.ptx, line 29; error   : Feature '.kind::f8f6f4' not supported on .target 'sm_120'
+ptxas fatal   : Ptx assembly aborted due to errors
+
+exit=255

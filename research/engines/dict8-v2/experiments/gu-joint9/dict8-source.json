@@ -1,0 +1,8 @@
+{
+  "parent_probe_sha256": "64b02b33ec5b22d2165d75587e3944a7ee0198a3f4a3ba745fb58bef9901bed0",
+  "generated_source_sha256": "139a9bcb2009bda2eb1ab19c8999df195dcdbc8af086f97e8ba431759b20b7d5",
+  "dictionary_entries": 6561,
+  "dictionary_bytes": 26244,
+  "prepared_weight_payload_ratio_vs_WF0": 0.8125,
+  "scope": "Original separate operand words and per-output native contraction/epilogue schedule; no RN/RTZ distribution assumption. Compiler probe only."
+}

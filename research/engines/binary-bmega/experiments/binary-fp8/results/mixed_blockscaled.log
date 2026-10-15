@@ -1,0 +1,7 @@
+ptxas /tmp/tmpxft_003d4652_00000000-7_mixed_blockscaled.compute_120.ptx, line 32; error   : Instruction 'mma with block scale' not supported on .target 'sm_120'
+ptxas /tmp/tmpxft_003d4652_00000000-7_mixed_blockscaled.compute_120.ptx, line 32; error   : Feature '.kind::mxf8f6f4' not supported on .target 'sm_120'
+ptxas /tmp/tmpxft_003d4652_00000000-7_mixed_blockscaled.compute_120.ptx, line 32; error   : Feature '.block_scale' not supported on .target 'sm_120'
+ptxas /tmp/tmpxft_003d4652_00000000-7_mixed_blockscaled.compute_120.ptx, line 32; error   : Feature '.scale_vec::1X' not supported on .target 'sm_120'
+ptxas fatal   : Ptx assembly aborted due to errors
+
+exit=255

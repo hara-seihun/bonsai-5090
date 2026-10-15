@@ -1,0 +1,12 @@
+{
+  "source": "eb161be8b01b043127dbafd2aed596d09658a861",
+  "engine_source": "6e4ed05",
+  "target": "17ef842e47450caeb8eaa3ebfbbab5d2f2278b62b79be107985fb69a2f819aa0",
+  "scope": "256 WikiText next-token predictions after prefix128; fixed reference continuation chat64; teacher forced, not generated task score",
+  "modes": {"target_weights":"packed1","state":"f16","kv":"f16","deterministic_gemm":"1","a8_gu":"off","project":["dp4a","fp4-digits"],"activation":["a8","f32-r1-a8"],"wiki_chunk":[32,64],"chat_chunk":32},
+  "harness_repair": "First run used rejected H5_A8_PROJECT=off. Explicit supported dp4a baseline replaces it; failed receipt retained in sibling keyholes-digits-tuned.",
+  "job": "binary-5090-digits-quality-repaired",
+  "command": "flock -w 600 /tmp/binary-gpu.lock timeout 600 bash /workspace/binary/digits-keyholes-repaired.sh /workspace/binary/digits-tuned/halo /workspace/binary/results/keyholes-digits-tuned-repaired",
+  "status": "completed exit0",
+  "consumer_exactness": "Given A8, four radix4 FP4 digits retain the integer map; split-K floating association differs from DP4A. Full-model PPL/KL recorded rather than assuming equal logits."
+}

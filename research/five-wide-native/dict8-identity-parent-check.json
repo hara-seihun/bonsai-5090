@@ -1,0 +1,14 @@
+{
+  "state": "passed",
+  "scope": "independent local successor manifest check; no native execution",
+  "entries_checked": 584,
+  "errors": [],
+  "seconds": 0.7436256849905476,
+  "gpu_work": false,
+  "prior_check_failure": {
+    "job": "00000000-0000-0000-0000-000000000000",
+    "cause": "checker assumed flat manifest; actual schema uses files object",
+    "exit_code": 1,
+    "before_any_output_write": true
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "lane": "dense5-single",
+  "execution": "passed",
+  "hardware": {
+    "stage": "hardware",
+    "device": "NVIDIA GeForce RTX 5090",
+    "sm": 120,
+    "layer": 10,
+    "precision": "unchanged E2M1 A16 / FP16 W128 / FP32 accumulation"
+  },
+  "correctness": [
+    {
+      "stage": "native_register_certificate",
+      "legal_packets": 243,
+      "register_checks": 3888,
+      "passed": true
+    },
+    {
+      "stage": "native_correctness",
+      "arm": "literal2bit",
+      "rows": 1,
+      "phase": "same_geometry_GU_SiLU",
+      "values": 17408,
+      "bit_mismatches": 0,
+      "max_abs": 0
+    },
+    {
+      "stage": "native_correctness",
+      "arm": "literal2bit",
+      "rows": 1,
+      "phase": "same_geometry_down_KS1",
+      "values": 5120,
+      "bit_mismatches": 0,
+      "max_abs": 0
+    },
+    {
+      "stage": "native_correctness",
+      "arm": "dense5_native",
+      "rows": 1,
+      "phase": "same_geometry_GU_SiLU",
+      "values": 17408,
+      "bit_mismatches": 0,
+      "max_abs": 0
+    },
+    {
+      "stage": "native_correctness",
+      "arm": "dense5_native",
+      "rows": 1,
+      "phase": "same_geometry_down_KS1",
+      "values": 5120,
+      "bit_mismatches": 0,
+      "max_abs": 0
+    },
+    {
+      "stage": "native_correctness",
+      "arm": "literal2bit",
+      "rows": 8,
+      "phase": "same_geometry_GU_SiLU",
+      "values": 139264,
+      "bit_mismatches": 0,
+      "max_abs": 0
+    },
+    {
+      "stage": "native_correctness",
+      "arm": "literal2bit",
+      "rows": 8,
+      "phase": "same_geometry_down_KS1",
+      "values": 40960,
+      "bit_mismatches": 0,
+      "max_abs": 0
+    },
+    {
+      "stage": "native_correctness",
+      "arm": "dense5_native",
+      "rows": 8,
+      "phase": "same_geometry_GU_SiLU",
+      "values": 139264,
+      "bit_mismatches": 0,
+      "max_abs": 0
+    },
+    {
+      "stage": "native_correctness",
+      "arm": "dense5_native",
+      "rows": 8,
+      "phase": "same_geometry_down_KS1",
+      "values": 40960,
+      "bit_mismatches": 0,
+      "max_abs": 0
+    }
+  ],
+  "summary": [
+    {
+      "stage": "summary",
+      "arm": "literal2bit",
+      "rows": 1,
+      "cache_perturbed": false,
+      "chain_us": 38.856,
+      "ratio_to_current_baseline": 1.0,
+      "adopted": false,
+      "scope": "complete normalized input to FFN contribution; common RMSNorm/residual omitted"
+    },
+    {
+      "stage": "summary",
+      "arm": "dense5_native",
+      "rows": 1,
+      "cache_perturbed": false,
+      "chain_us": 43.314667,
+      "ratio_to_current_baseline": 1.114748,
+      "adopted": false,
+      "scope": "complete normalized input to FFN contribution; common RMSNorm/residual omitted"
+    },
+    {
+      "stage": "summary",
+      "arm": "literal2bit",
+      "rows": 1,
+      "cache_perturbed": true,
+      "chain_us": 65.533334,
+      "ratio_to_current_baseline": 1.0,
+      "adopted": false,
+      "scope": "complete normalized input to FFN contribution; common RMSNorm/residual omitted"
+    },
+    {
+      "stage": "summary",
+      "arm": "dense5_native",
+      "rows": 1,
+      "cache_perturbed": true,
+      "chain_us": 62.623998,
+      "ratio_to_current_baseline": 0.955605,
+      "adopted": false,
+      "scope": "complete normalized input to FFN contribution; common RMSNorm/residual omitted"
+    },
+    {
+      "stage": "summary",
+      "arm": "literal2bit",
+      "rows": 8,
+      "cache_perturbed": false,
+      "chain_us": 39.544,
+      "ratio_to_current_baseline": 1.0,
+      "adopted": false,
+      "scope": "complete normalized input to FFN contribution; common RMSNorm/residual omitted"
+    },
+    {
+      "stage": "summary",
+      "arm": "dense5_native",
+      "rows": 8,
+      "cache_perturbed": false,
+      "chain_us": 44.517335,
+      "ratio_to_current_baseline": 1.125767,
+      "adopted": false,
+      "scope": "complete normalized input to FFN contribution; common RMSNorm/residual omitted"
+    },
+    {
+      "stage": "summary",
+      "arm": "literal2bit",
+      "rows": 8,
+      "cache_perturbed": true,
+      "chain_us": 66.714668,
+      "ratio_to_current_baseline": 1.0,
+      "adopted": false,
+      "scope": "complete normalized input to FFN contribution; common RMSNorm/residual omitted"
+    },
+    {
+      "stage": "summary",
+      "arm": "dense5_native",
+      "rows": 8,
+      "cache_perturbed": true,
+      "chain_us": 63.815999,
+      "ratio_to_current_baseline": 0.956551,
+      "adopted": false,
+      "scope": "complete normalized input to FFN contribution; common RMSNorm/residual omitted"
+    }
+  ],
+  "scope": "Real layer10 complete FFN, rows1/8. Not full-model single-stream proof.",
+  "adopted": false,
+  "all_warm_and_perturbed_win": false
+}

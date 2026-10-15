@@ -1,0 +1,19 @@
+{
+  "state": "CPU_staged_not_run",
+  "gpu_work": false,
+  "native_model_execution": false,
+  "candidate_dll_sha256": "4098ba03c9d8b53e0672e9f6800d1461c453bce46e80923c46e389edbc415dfa",
+  "stage_payload_sha256": "da1348dbcb7ac18e15e1f93316bb9911d1bc66099d69b49f343c318eaa349473",
+  "plan_sha256": "29ad08e111d352a09f6384ce1740f6ed6c2b43a3bc164adacb83aafa132fdb5f",
+  "isolated_contract_exit": 0,
+  "isolated_contract_output": "{\"GPU_execution\": false, \"native_model_execution\": false, \"warmup_contract\": true, \"old_capture_prefix_rejected\": true, \"every_endpoint_field_mutation_rejected\": true, \"isolated_imports\": \"stdlib-only worker; pure function extraction executed\", \"handback_fabricated\": false}\n",
+  "PE_exports_verified_without_loading": true,
+  "handback_fabricated": false,
+  "runtime_receipt_exists": false,
+  "files": {
+    "strict-worker.py": "e338759716d5d8b6cd0ac3e99730a5b53884d1739a8e1f02bbbdf7ae4295d7ca",
+    "driver.py": "e615692d4ba12d515ab989e257e11a988d1a4b5294b8613889e54b4eb7329281",
+    "environment.json": "d3674f18b9d44db8f09a7e308b72fec3b9e756c30134824ab92865c1c80f2c6e",
+    "test_harness.py": "a6baf5d756e7b14538c77a2b2e033c1a5c478a568878b18e6ab4ac1fb5be8373"
+  }
+}

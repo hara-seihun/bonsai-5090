@@ -1,0 +1,95 @@
+{
+  "halo": {
+    "correct": 10,
+    "total": 10,
+    "finish_reasons": {
+      "stop": 10
+    },
+    "reasoning_closed": 10,
+    "generation_tokens": 11819,
+    "evaluation_seconds": 90.93333387374878,
+    "judge": {
+      "status": "success",
+      "scored": 10,
+      "total": 10,
+      "coverage": 1.0,
+      "judge_models": [
+        "gemini-3-flash-preview"
+      ],
+      "valid_observations": 10,
+      "total_observations": 10,
+      "failures": {},
+      "disagreement": {
+        "numeric": {
+          "acc": {
+            "mean_std": 0.0,
+            "max_range": 0.0,
+            "samples": 10
+          }
+        },
+        "categorical": {
+          "judge": {
+            "mean_agreement_ratio": 1.0,
+            "mean_vote_entropy": 0.0,
+            "samples": 10
+          }
+        },
+        "position_consistency": {
+          "mean": null,
+          "samples": 0,
+          "swap_flip_count": 0
+        }
+      },
+      "error": null
+    },
+    "profile": "original15-temp07-c92160-s2-halo-math_500-subset2"
+  },
+  "reference": {
+    "correct": 10,
+    "total": 10,
+    "finish_reasons": {
+      "stop": 10
+    },
+    "reasoning_closed": 10,
+    "generation_tokens": 7643,
+    "evaluation_seconds": 51.12716293334961,
+    "judge": {
+      "status": "success",
+      "scored": 10,
+      "total": 10,
+      "coverage": 1.0,
+      "judge_models": [
+        "gemini-3-flash-preview"
+      ],
+      "valid_observations": 10,
+      "total_observations": 10,
+      "failures": {},
+      "disagreement": {
+        "numeric": {
+          "acc": {
+            "mean_std": 0.0,
+            "max_range": 0.0,
+            "samples": 10
+          }
+        },
+        "categorical": {
+          "judge": {
+            "mean_agreement_ratio": 1.0,
+            "mean_vote_entropy": 0.0,
+            "samples": 10
+          }
+        },
+        "position_consistency": {
+          "mean": null,
+          "samples": 0,
+          "swap_flip_count": 0
+        }
+      },
+      "error": null
+    },
+    "profile": "original15-temp07-c92160-s2-reference-math_500-subset2"
+  },
+  "matched_requests_seeds_template": true,
+  "scope": "overlapping10-item screen, two per level; not full MATH500",
+  "estimated_judge_usd_total": 0.027429000000000002
+}

@@ -1,0 +1,13 @@
+{
+  "exit": 2,
+  "stdout": "{\"status\":\"mixed_whole_observation\",\"domain_errors\":0,\"prefix_errors\":[774,572,560],\"q8_errors\":0,\"scale_errors\":12,\"K\":128,\"group_scales\":8,\"logical_cases\":16384}\n",
+  "stderr": "",
+  "wall_s": 2.135345220565796,
+  "mutex": "Local\\BonsaiGPU",
+  "mutex_wait_result": 0,
+  "hashes": {
+    "native_mixed_sumdiff.cu": "87273d1d3a666196bd166c496fd27976eb2fc6ef7b08be6d3ce4598c68de50f0",
+    "native_mixed_sumdiff.exe": "2632d87755ad7277932f71bd18a9872672ef889ad579b34e25906270893e5b7a",
+    "build.log": "674dd4c9e3d35b06e590157a58481991e973bb18e3bb8c3573e57c844e851081"
+  }
+}

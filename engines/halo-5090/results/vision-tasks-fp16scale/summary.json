@@ -1,0 +1,10 @@
+{
+  "ordinary": {
+    "correct": 10,
+    "total": 10
+  },
+  "speculative": {
+    "correct": 10,
+    "total": 10
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "files": 10227,
+  "logical_bytes": 80132644,
+  "maximum_file_bytes": 4431999,
+  "forbidden_artifacts": [],
+  "targeted_sensitive_findings": [],
+  "missing_build_references": [],
+  "build_or_gpu_execution": false,
+  "notes": [
+    "Path inventory only; no compiler/model/GPU execution. Historical original CMake/Makefile targets are retained; research/BUILD.md defines supported build entry points."
+  ]
+}

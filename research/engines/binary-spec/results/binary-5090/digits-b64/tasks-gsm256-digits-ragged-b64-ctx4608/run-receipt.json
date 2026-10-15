@@ -1,0 +1,9 @@
+{
+  "status": "failed",
+  "stage": "metrics-after",
+  "server_exit_code": null,
+  "error": {
+    "kind": "URLError",
+    "detail": "<urlopen error [Errno 111] Connection refused>"
+  }
+}

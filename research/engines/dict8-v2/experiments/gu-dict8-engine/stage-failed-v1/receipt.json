@@ -1,0 +1,11 @@
+{
+  "state": "local_generator_failed",
+  "jobId": "00000000-0000-0000-0000-000000000000",
+  "exit_code": 1,
+  "error": "KeyError: 'src/dict8.cu'",
+  "cause": "Windows relative source paths consumed as POSIX names",
+  "GPU_execution": false,
+  "native_model_execution": false,
+  "native_staging_reached": false,
+  "repair": "Normalize source paths once; reject collisions/missing required keys before stage generation"
+}

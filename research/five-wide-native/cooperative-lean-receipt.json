@@ -1,0 +1,7 @@
+{
+  "state": "compiled",
+  "exit": 0,
+  "proof_sha256": "3929b6fe8a8e1d9a3cc628543d92d724b4668d43f37c15e5c783e69b964cbb02",
+  "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "scope": "all61 nibble windows over arbitrary320-bit input; bit wiring only"
+}

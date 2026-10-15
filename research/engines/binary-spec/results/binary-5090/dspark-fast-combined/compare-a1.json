@@ -1,0 +1,53 @@
+{
+  "scope": "same-item scoped panel, not full quality gate",
+  "reference": "results/binary-5090/dspark-fast-repaired/tasks-hybrid-dspark4-nvfp4-a1-b1",
+  "candidate": "results/binary-5090/dspark-fast-combined/tasks-hybrid-fused-dspark4-nvfp4-a1-b1",
+  "reference_timing": {
+    "completion_tokens": 21415,
+    "seconds": 66.78151289187372,
+    "http_tok_s": 320.67257947080554
+  },
+  "candidate_timing": {
+    "completion_tokens": 22082,
+    "seconds": 67.55015981197357,
+    "http_tok_s": 326.89782024891474
+  },
+  "http_ratio": 1.0194130748203745,
+  "benchmarks": {
+    "gsm8k": {
+      "paired": {
+        "accuracy": {
+          "n": 32,
+          "reference_correct": 29,
+          "candidate_correct": 29,
+          "gains": 0,
+          "losses": 0
+        }
+      },
+      "aggregate_only": {},
+      "reference_truncated": 1,
+      "candidate_truncated": 1
+    },
+    "humaneval_plus": {
+      "paired": {
+        "plus": {
+          "n": 32,
+          "reference_correct": 32,
+          "candidate_correct": 32,
+          "gains": 0,
+          "losses": 0
+        },
+        "base": {
+          "n": 32,
+          "reference_correct": 32,
+          "candidate_correct": 32,
+          "gains": 0,
+          "losses": 0
+        }
+      },
+      "aggregate_only": {},
+      "reference_truncated": 0,
+      "candidate_truncated": 0
+    }
+  }
+}

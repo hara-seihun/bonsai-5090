@@ -1,0 +1,19 @@
+{
+  "state": "route-specific-falsifier-custody-complete",
+  "gpu_work": false,
+  "native_model_execution": false,
+  "serving_mutation": false,
+  "future_window_nominee": false,
+  "source_commit": "768a66c0a6aa8cf571139e05ec4dab0f48efcfc2",
+  "source_branch": "agent/gu-scale-absorb",
+  "source_origin": "~/projects/halo-5090",
+  "source_bundle": "gu-scale-absorb-v1.bundle",
+  "source_bundle_sha256": "f246296e51a335d05ffa2880091da88d96f9b4ac99075d187d610680e38678ea",
+  "readable_result": "gu-scale-absorb-result-v1/README.md",
+  "evidence_archive": "gu-scale-absorb-result-v1.tar.zst",
+  "evidence_archive_sha256": "5da515a823fc5bdd2665e8cd504c8badd365398d91d8b0e2121f1a96ee5b885f",
+  "native_cpu_archive_sha256": "b35c5cdcd2291a500b40edc31272ad5420f8703186fb6e8e7b6b219c36a3e199",
+  "writer_registry": "00000000-0000-0000-0000-000000000000",
+  "writer_release_observed": {"action":"released","leaseExpiresAt":0,"classification":"reclaimable","processes":[],"containers":[],"systemdUnits":[]},
+  "scope": "One-plane row-mean absorption only. Richer full-target carriers remain open; CPU continuation stays separate from the operator's paired-WF0/K128/radix512 frontier. the GPU remains with the PrismML quality campaign."
+}

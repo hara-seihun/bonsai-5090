@@ -1,0 +1,62 @@
+[
+  {
+    "kind": "bench",
+    "row_lanes": 32,
+    "grid": 188,
+    "warm": 40,
+    "steps": 128,
+    "gpu_ms": 533.912598,
+    "wall_ms": 533.924708,
+    "tokens_per_second": 239.739614,
+    "weights_bytes": 10103327232,
+    "prefix_route": "all_serial_teacher_forcing"
+  },
+  {
+    "kind": "bench",
+    "row_lanes": 16,
+    "grid": 188,
+    "warm": 40,
+    "steps": 128,
+    "gpu_ms": 423.565002,
+    "wall_ms": 423.579853,
+    "tokens_per_second": 302.196828,
+    "weights_bytes": 10103327232,
+    "prefix_route": "all_serial_teacher_forcing"
+  },
+  {
+    "kind": "bench",
+    "row_lanes": 8,
+    "grid": 188,
+    "warm": 40,
+    "steps": 128,
+    "gpu_ms": 413.989288,
+    "wall_ms": 414.004822,
+    "tokens_per_second": 309.186744,
+    "weights_bytes": 10103327232,
+    "prefix_route": "all_serial_teacher_forcing"
+  },
+  {
+    "kind": "bench",
+    "row_lanes": 16,
+    "grid": 188,
+    "warm": 40,
+    "steps": 128,
+    "gpu_ms": 423.505493,
+    "wall_ms": 423.518539,
+    "tokens_per_second": 302.239291,
+    "weights_bytes": 10103327232,
+    "prefix_route": "all_serial_teacher_forcing"
+  },
+  {
+    "kind": "bench",
+    "row_lanes": 32,
+    "grid": 188,
+    "warm": 40,
+    "steps": 128,
+    "gpu_ms": 533.897217,
+    "wall_ms": 533.91309,
+    "tokens_per_second": 239.74652,
+    "weights_bytes": 10103327232,
+    "prefix_route": "all_serial_teacher_forcing"
+  }
+]

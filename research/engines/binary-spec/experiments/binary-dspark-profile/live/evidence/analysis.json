@@ -1,0 +1,1188 @@
+{
+  "stages": {
+    "prefill_target": {
+      "calls": 3,
+      "wall_ms": 45.083621,
+      "kernel_union_ms": 32.506911,
+      "kernel_sum_ms": 35.472043,
+      "gpu_busy_union_ms": 32.526016,
+      "wall_minus_gpu_busy_ms": 12.557605000000002,
+      "copy_sum_ms": 0.019105,
+      "copy_bytes": 4915976,
+      "copy_counts": {
+        "1": 16,
+        "8": 15,
+        "2": 4
+      },
+      "api_sum_ms": 44.511133,
+      "kernels": [
+        {
+          "name": "void bitserial::projection<(int)16, (bool)0>(const unsigned int *, const __half *, bitserial::Carrier, float *, float *, int, int, int, int, float, float)",
+          "count": 912,
+          "sum_ms": 21.686281,
+          "median_us": 25.376,
+          "geometry": {
+            "[128, 10, 1, 128, 1, 1]": 144,
+            "[1, 40, 1, 128, 1, 1]": 144,
+            "[40, 12, 1, 128, 1, 1]": 192,
+            "[272, 10, 1, 128, 1, 1]": 192,
+            "[40, 34, 1, 128, 1, 1]": 192,
+            "[112, 10, 1, 128, 1, 1]": 48
+          }
+        },
+        {
+          "name": "void h5::k_prep2<(bool)0>(h5::PrepArgs)",
+          "count": 772,
+          "sum_ms": 5.678266,
+          "median_us": 3.456,
+          "geometry": {
+            "[16, 1, 1, 160, 1, 1]": 387,
+            "[16, 1, 1, 192, 1, 1]": 192,
+            "[16, 1, 1, 544, 1, 1]": 192,
+            "[1, 1, 1, 160, 1, 1]": 1
+          }
+        },
+        {
+          "name": "void h5::k_gdn<__half, (int)4, (int)2, (bool)0, (bool)0, (bool)0>(h5::GdnArgs)",
+          "count": 144,
+          "sum_ms": 2.607981,
+          "median_us": 18.08,
+          "geometry": {
+            "[96, 1, 1, 256, 1, 1]": 144
+          }
+        },
+        {
+          "name": "bitserial::continuation(const float *, float *, int, int, float, float)",
+          "count": 912,
+          "sum_ms": 2.596148,
+          "median_us": 2.816,
+          "geometry": {
+            "[64, 16, 1, 256, 1, 1]": 144,
+            "[1, 16, 1, 256, 1, 1]": 144,
+            "[20, 16, 1, 256, 1, 1]": 384,
+            "[136, 16, 1, 256, 1, 1]": 192,
+            "[56, 16, 1, 256, 1, 1]": 48
+          }
+        },
+        {
+          "name": "void bitserial::producer<(bool)0>(const float *, int, bitserial::Carrier)",
+          "count": 768,
+          "sum_ms": 0.996614,
+          "median_us": 1.152,
+          "geometry": {
+            "[40, 16, 1, 128, 1, 1]": 384,
+            "[48, 16, 1, 128, 1, 1]": 192,
+            "[136, 16, 1, 128, 1, 1]": 192
+          }
+        },
+        {
+          "name": "void h5::k_conv<__half>(h5::ConvArgs)",
+          "count": 144,
+          "sum_ms": 0.890369,
+          "median_us": 6.144,
+          "geometry": {
+            "[80, 1, 1, 128, 1, 1]": 144
+          }
+        },
+        {
+          "name": "h5::k_attn_combine(h5::AttnTcArgs, int, int)",
+          "count": 48,
+          "sum_ms": 0.39344,
+          "median_us": 8.256,
+          "geometry": {
+            "[16, 24, 1, 256, 1, 1]": 48
+          }
+        },
+        {
+          "name": "void h5::k_attn_tc<(int)3, (bool)0, (int)256, (int)6>(h5::AttnTcArgs)",
+          "count": 48,
+          "sum_ms": 0.373568,
+          "median_us": 7.776,
+          "geometry": {
+            "[2, 4, 1, 128, 1, 1]": 32,
+            "[2, 4, 2, 128, 1, 1]": 16
+          }
+        },
+        {
+          "name": "void packed1::lut_multi<(int)1>(const unsigned int *, const __half *, const float *, float *, float *, int, int, int, int, float, float)",
+          "count": 1,
+          "sum_ms": 0.112896,
+          "median_us": 112.896,
+          "geometry": {
+            "[970, 1, 1, 256, 1, 1]": 1
+          }
+        },
+        {
+          "name": "h5::k_attn_pre(h5::AttnArgs)",
+          "count": 48,
+          "sum_ms": 0.106208,
+          "median_us": 2.176,
+          "geometry": {
+            "[28, 16, 1, 256, 1, 1]": 48
+          }
+        },
+        {
+          "name": "h5::k_embed_q1(const unsigned char *, const int *, float *)",
+          "count": 3,
+          "sum_ms": 0.016224,
+          "median_us": 5.344,
+          "geometry": {
+            "[16, 1, 1, 64, 1, 1]": 3
+          }
+        },
+        {
+          "name": "void h5::k_argmax<(bool)0>(const float *, int, int *, const int *, const h5::Seg *, int, int, float, const int *, h5::RowStat *, int)",
+          "count": 1,
+          "sum_ms": 0.013312,
+          "median_us": 13.312,
+          "geometry": {
+            "[1, 1, 1, 1024, 1, 1]": 1
+          }
+        },
+        {
+          "name": "packed1::produce(const float *, float *, int, int)",
+          "count": 1,
+          "sum_ms": 0.000736,
+          "median_us": 0.736,
+          "geometry": {
+            "[80, 1, 1, 256, 1, 1]": 1
+          }
+        }
+      ]
+    },
+    "prefill_draft_ingest": {
+      "calls": 2,
+      "wall_ms": 0.693033,
+      "kernel_union_ms": 0.590434,
+      "kernel_sum_ms": 0.590434,
+      "gpu_busy_union_ms": 0.597506,
+      "wall_minus_gpu_busy_ms": 0.09552700000000003,
+      "copy_sum_ms": 0.007072,
+      "copy_bytes": 3277192,
+      "copy_counts": {
+        "8": 2,
+        "1": 6,
+        "2": 2
+      },
+      "api_sum_ms": 0.611319,
+      "kernels": [
+        {
+          "name": "void cutlass::Kernel2<cutlass_80_wmma_tensorop_s161616gemm_bf16_16x16_128x2_tn_align8>(T1::Params)",
+          "count": 14,
+          "sum_ms": 0.513346,
+          "median_us": 8.992,
+          "geometry": {
+            "[8, 40, 1, 32, 1, 1]": 2,
+            "[8, 8, 16, 32, 1, 1]": 12
+          }
+        },
+        {
+          "name": "h5::dspark::<unnamed>::qkv_kernel(h5::dspark::QkvArgs)",
+          "count": 12,
+          "sum_ms": 0.02448,
+          "median_us": 1.968,
+          "geometry": {
+            "[16, 4, 1, 128, 1, 1]": 12
+          }
+        },
+        {
+          "name": "h5::dspark::<unnamed>::rms_kernel(const float *, const float *, float *, int, float, bool)",
+          "count": 2,
+          "sum_ms": 0.020992,
+          "median_us": 10.496,
+          "geometry": {
+            "[16, 1, 1, 256, 1, 1]": 2
+          }
+        },
+        {
+          "name": "void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, float, (bool)0, float, float, float, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublasSplitKParams<T6>, const T4 *, const T10 *, T9 *, T5 *, const T6 *, const T6 *, const T11 *, const T4 *, T11 *, void *, long, T6 *, int *, T6 *, T6 *, const T6 *, const T6 *, const T6 *, const T6 *, const T6 *)",
+          "count": 12,
+          "sum_ms": 0.016608,
+          "median_us": 1.344,
+          "geometry": {
+            "[32, 1, 1, 32, 16, 1]": 12
+          }
+        },
+        {
+          "name": "h5::dspark::<unnamed>::convert_kernel(const float *, __nv_bfloat16 *, unsigned long)",
+          "count": 14,
+          "sum_ms": 0.015008,
+          "median_us": 0.832,
+          "geometry": {
+            "[1600, 1, 1, 256, 1, 1]": 2,
+            "[320, 1, 1, 256, 1, 1]": 12
+          }
+        }
+      ]
+    },
+    "initial_draft": {
+      "calls": 1,
+      "wall_ms": 2.705958,
+      "kernel_union_ms": 2.500716,
+      "kernel_sum_ms": 2.500812,
+      "gpu_busy_union_ms": 2.52462,
+      "wall_minus_gpu_busy_ms": 0.18133799999999978,
+      "copy_sum_ms": 0.023904,
+      "copy_bytes": 2769276,
+      "copy_counts": {
+        "8": 17,
+        "1": 11,
+        "2": 6
+      },
+      "api_sum_ms": 2.533279,
+      "kernels": [
+        {
+          "name": "void cutlass::Kernel2<cutlass_80_wmma_tensorop_s161616gemm_bf16_16x16_128x2_tn_align8>(T1::Params)",
+          "count": 38,
+          "sum_ms": 1.873417,
+          "median_us": 39.056,
+          "geometry": {
+            "[8, 40, 1, 32, 1, 1]": 25,
+            "[8, 8, 16, 32, 1, 1]": 6,
+            "[8, 48, 1, 32, 1, 1]": 6,
+            "[8, 512, 1, 32, 1, 1]": 1
+          }
+        },
+        {
+          "name": "h5::dspark::<unnamed>::attention_kernel(h5::dspark::AttentionArgs)",
+          "count": 6,
+          "sum_ms": 0.191168,
+          "median_us": 31.888,
+          "geometry": {
+            "[4, 40, 1, 128, 1, 1]": 6
+          }
+        },
+        {
+          "name": "h5::dspark::<unnamed>::rms_kernel(const float *, const float *, float *, int, float, bool)",
+          "count": 14,
+          "sum_ms": 0.146465,
+          "median_us": 10.4645,
+          "geometry": {
+            "[16, 1, 1, 256, 1, 1]": 1,
+            "[4, 1, 1, 256, 1, 1]": 13
+          }
+        },
+        {
+          "name": "h5::dspark::<unnamed>::argmax_kernel(const float *, int *, float *, float *, int *, int, const int *, int)",
+          "count": 4,
+          "sum_ms": 0.088961,
+          "median_us": 22.2245,
+          "geometry": {
+            "[1, 1, 1, 256, 1, 1]": 4
+          }
+        },
+        {
+          "name": "h5::dspark::<unnamed>::markov_kernel(h5::dspark::MarkovArgs)",
+          "count": 4,
+          "sum_ms": 0.055808,
+          "median_us": 11.136,
+          "geometry": {
+            "[8192, 1, 1, 256, 1, 1]": 4
+          }
+        },
+        {
+          "name": "h5::dspark::<unnamed>::convert_kernel(const float *, __nv_bfloat16 *, unsigned long)",
+          "count": 42,
+          "sum_ms": 0.04496,
+          "median_us": 1.184,
+          "geometry": {
+            "[1600, 1, 1, 256, 1, 1]": 1,
+            "[320, 1, 1, 256, 1, 1]": 6,
+            "[80, 1, 1, 256, 1, 1]": 31,
+            "[21, 1, 1, 256, 1, 1]": 4
+          }
+        },
+        {
+          "name": "h5::dspark::<unnamed>::qkv_kernel(h5::dspark::QkvArgs)",
+          "count": 12,
+          "sum_ms": 0.026496,
+          "median_us": 2.224,
+          "geometry": {
+            "[16, 4, 1, 128, 1, 1]": 6,
+            "[4, 44, 1, 128, 1, 1]": 6
+          }
+        },
+        {
+          "name": "void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, float, (bool)0, float, float, float, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublasSplitKParams<T6>, const T4 *, const T10 *, T9 *, T5 *, const T6 *, const T6 *, const T11 *, const T4 *, T11 *, void *, long, T6 *, int *, T6 *, T6 *, const T6 *, const T6 *, const T6 *, const T6 *, const T6 *)",
+          "count": 10,
+          "sum_ms": 0.02544,
+          "median_us": 1.504,
+          "geometry": {
+            "[32, 1, 1, 32, 16, 1]": 6,
+            "[1, 1, 1, 32, 16, 1]": 4
+          }
+        },
+        {
+          "name": "void h5::dspark::<unnamed>::binary_kernel<(bool)0>(const float *, const float *, float *, unsigned long)",
+          "count": 12,
+          "sum_ms": 0.016576,
+          "median_us": 1.376,
+          "geometry": {
+            "[80, 1, 1, 256, 1, 1]": 12
+          }
+        },
+        {
+          "name": "h5::dspark::<unnamed>::embedding_kernel(h5::dspark::EmbeddingArgs)",
+          "count": 1,
+          "sum_ms": 0.008576,
+          "median_us": 8.576,
+          "geometry": {
+            "[4, 1, 1, 256, 1, 1]": 1
+          }
+        },
+        {
+          "name": "void h5::dspark::<unnamed>::binary_kernel<(bool)1>(const float *, const float *, float *, unsigned long)",
+          "count": 6,
+          "sum_ms": 0.007361,
+          "median_us": 1.2165,
+          "geometry": {
+            "[80, 1, 1, 256, 1, 1]": 6
+          }
+        },
+        {
+          "name": "std::enable_if<!T7, void>::type internal::gemvx::kernel<int, int, __nv_bfloat16, float, float, float, (bool)0, (bool)1, (bool)1, (bool)0, (int)6, (bool)0, cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<const float>, cublasGemvTensorStridedBatched<float>, float>>(T13)",
+          "count": 4,
+          "sum_ms": 0.006624,
+          "median_us": 1.552,
+          "geometry": {
+            "[1, 1, 224, 16, 4, 1]": 4
+          }
+        },
+        {
+          "name": "h5::<unnamed>::confidence_input(const float *, const __nv_bfloat16 *, const int *, float *, int, int *)",
+          "count": 4,
+          "sum_ms": 0.00496,
+          "median_us": 1.136,
+          "geometry": {
+            "[21, 1, 1, 256, 1, 1]": 4
+          }
+        },
+        {
+          "name": "h5::<unnamed>::sigmoid_conf(float *, float, int)",
+          "count": 4,
+          "sum_ms": 0.004,
+          "median_us": 0.832,
+          "geometry": {
+            "[1, 1, 1, 256, 1, 1]": 4
+          }
+        }
+      ]
+    },
+    "decode_target": {
+      "calls": 55,
+      "wall_ms": 427.96084,
+      "kernel_union_ms": 377.391723,
+      "kernel_sum_ms": 411.129528,
+      "gpu_busy_union_ms": 377.749804,
+      "wall_minus_gpu_busy_ms": 50.211036000000036,
+      "copy_sum_ms": 0.358081,
+      "copy_bytes": 47315840,
+      "copy_counts": {
+        "1": 275,
+        "8": 275,
+        "2": 110
+      },
+      "api_sum_ms": 427.835222,
+      "kernels": [
+        {
+          "name": "void bitserial::projection<(int)5, (bool)0>(const unsigned int *, const __half *, bitserial::Carrier, float *, float *, int, int, int, int, float, float)",
+          "count": 16775,
+          "sum_ms": 229.986328,
+          "median_us": 11.904,
+          "geometry": {
+            "[64, 10, 1, 256, 1, 1]": 2640,
+            "[1, 40, 1, 128, 1, 1]": 2640,
+            "[20, 12, 1, 256, 1, 1]": 3520,
+            "[272, 3, 1, 128, 1, 1]": 3520,
+            "[20, 34, 1, 256, 1, 1]": 3520,
+            "[56, 10, 1, 256, 1, 1]": 880,
+            "[1940, 3, 1, 128, 1, 1]": 55
+          }
+        },
+        {
+          "name": "void h5::k_prep2<(bool)0>(h5::PrepArgs)",
+          "count": 14190,
+          "sum_ms": 87.208536,
+          "median_us": 3.328,
+          "geometry": {
+            "[5, 1, 1, 160, 1, 1]": 7150,
+            "[5, 1, 1, 192, 1, 1]": 3520,
+            "[5, 1, 1, 544, 1, 1]": 3520
+          }
+        },
+        {
+          "name": "void h5::k_gdn<__half, (int)4, (int)2, (bool)0, (bool)0, (bool)0>(h5::GdnArgs)",
+          "count": 2640,
+          "sum_ms": 28.073736,
+          "median_us": 10.528,
+          "geometry": {
+            "[96, 1, 1, 256, 1, 1]": 2640
+          }
+        },
+        {
+          "name": "bitserial::continuation(const float *, float *, int, int, float, float)",
+          "count": 16775,
+          "sum_ms": 25.803981,
+          "median_us": 1.44,
+          "geometry": {
+            "[64, 5, 1, 256, 1, 1]": 2640,
+            "[1, 5, 1, 256, 1, 1]": 2640,
+            "[20, 5, 1, 256, 1, 1]": 7040,
+            "[136, 5, 1, 256, 1, 1]": 3520,
+            "[56, 5, 1, 256, 1, 1]": 880,
+            "[970, 5, 1, 256, 1, 1]": 55
+          }
+        },
+        {
+          "name": "void bitserial::producer<(bool)0>(const float *, int, bitserial::Carrier)",
+          "count": 14135,
+          "sum_ms": 14.467044,
+          "median_us": 0.992,
+          "geometry": {
+            "[40, 5, 1, 128, 1, 1]": 7095,
+            "[48, 5, 1, 128, 1, 1]": 3520,
+            "[136, 5, 1, 128, 1, 1]": 3520
+          }
+        },
+        {
+          "name": "void h5::k_conv<__half>(h5::ConvArgs)",
+          "count": 2640,
+          "sum_ms": 11.287675,
+          "median_us": 4.224,
+          "geometry": {
+            "[80, 1, 1, 128, 1, 1]": 2640
+          }
+        },
+        {
+          "name": "h5::k_attn_combine(h5::AttnTcArgs, int, int)",
+          "count": 880,
+          "sum_ms": 5.779357,
+          "median_us": 6.624,
+          "geometry": {
+            "[5, 24, 1, 256, 1, 1]": 880
+          }
+        },
+        {
+          "name": "void h5::k_attn_tc<(int)2, (bool)0, (int)256, (int)6>(h5::AttnTcArgs)",
+          "count": 880,
+          "sum_ms": 5.714883,
+          "median_us": 6.496,
+          "geometry": {
+            "[1, 4, 2, 128, 1, 1]": 112,
+            "[1, 4, 3, 128, 1, 1]": 272,
+            "[1, 4, 4, 128, 1, 1]": 160,
+            "[1, 4, 5, 128, 1, 1]": 224,
+            "[1, 4, 6, 128, 1, 1]": 112
+          }
+        },
+        {
+          "name": "h5::k_attn_pre(h5::AttnArgs)",
+          "count": 880,
+          "sum_ms": 1.739471,
+          "median_us": 1.984,
+          "geometry": {
+            "[28, 5, 1, 256, 1, 1]": 880
+          }
+        },
+        {
+          "name": "void h5::k_argmax<(bool)0>(const float *, int, int *, const int *, const h5::Seg *, int, int, float, const int *, h5::RowStat *, int)",
+          "count": 55,
+          "sum_ms": 0.773636,
+          "median_us": 14.08,
+          "geometry": {
+            "[5, 1, 1, 1024, 1, 1]": 55
+          }
+        },
+        {
+          "name": "h5::k_embed_q1(const unsigned char *, const int *, float *)",
+          "count": 55,
+          "sum_ms": 0.294881,
+          "median_us": 5.376,
+          "geometry": {
+            "[5, 1, 1, 64, 1, 1]": 55
+          }
+        }
+      ]
+    },
+    "steady_draft": {
+      "calls": 54,
+      "wall_ms": 155.043226,
+      "kernel_union_ms": 144.572942,
+      "kernel_sum_ms": 144.57899,
+      "gpu_busy_union_ms": 145.827057,
+      "wall_minus_gpu_busy_ms": 9.216169000000008,
+      "copy_sum_ms": 1.254115,
+      "copy_bytes": 73960848,
+      "copy_counts": {
+        "8": 918,
+        "1": 594,
+        "2": 324
+      },
+      "api_sum_ms": 146.336731,
+      "kernels": [
+        {
+          "name": "void cutlass::Kernel2<cutlass_80_wmma_tensorop_s161616gemm_bf16_16x16_128x2_tn_align8>(T1::Params)",
+          "count": 1884,
+          "sum_ms": 94.623828,
+          "median_us": 39.425,
+          "geometry": {
+            "[8, 48, 1, 32, 1, 1]": 324,
+            "[8, 40, 1, 32, 1, 1]": 1296,
+            "[8, 512, 1, 32, 1, 1]": 54,
+            "[8, 40, 16, 32, 1, 1]": 30,
+            "[8, 8, 16, 32, 1, 1]": 180
+          }
+        },
+        {
+          "name": "h5::dspark::<unnamed>::attention_kernel(h5::dspark::AttentionArgs)",
+          "count": 324,
+          "sum_ms": 21.307361,
+          "median_us": 64.48,
+          "geometry": {
+            "[4, 40, 1, 128, 1, 1]": 324
+          }
+        },
+        {
+          "name": "h5::dspark::<unnamed>::rms_kernel(const float *, const float *, float *, int, float, bool)",
+          "count": 756,
+          "sum_ms": 7.946707,
+          "median_us": 10.496,
+          "geometry": {
+            "[1, 1, 1, 256, 1, 1]": 24,
+            "[4, 1, 1, 256, 1, 1]": 711,
+            "[5, 1, 1, 256, 1, 1]": 6,
+            "[2, 1, 1, 256, 1, 1]": 9,
+            "[3, 1, 1, 256, 1, 1]": 6
+          }
+        },
+        {
+          "name": "h5::dspark::<unnamed>::argmax_kernel(const float *, int *, float *, float *, int *, int, const int *, int)",
+          "count": 216,
+          "sum_ms": 4.766426,
+          "median_us": 22.048,
+          "geometry": {
+            "[1, 1, 1, 256, 1, 1]": 216
+          }
+        },
+        {
+          "name": "std::enable_if<!T7, void>::type internal::gemvx::kernel<int, int, __nv_bfloat16, float, float, float, (bool)0, (bool)1, (bool)1, (bool)0, (int)7, (bool)0, cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<const float>, cublasGemvTensorStridedBatched<float>, float>>(T13)",
+          "count": 24,
+          "sum_ms": 3.974162,
+          "median_us": 165.329,
+          "geometry": {
+            "[1280, 1, 1, 32, 4, 1]": 24
+          }
+        },
+        {
+          "name": "h5::dspark::<unnamed>::markov_kernel(h5::dspark::MarkovArgs)",
+          "count": 216,
+          "sum_ms": 3.016043,
+          "median_us": 11.136,
+          "geometry": {
+            "[8192, 1, 1, 256, 1, 1]": 216
+          }
+        },
+        {
+          "name": "h5::dspark::<unnamed>::convert_kernel(const float *, __nv_bfloat16 *, unsigned long)",
+          "count": 2268,
+          "sum_ms": 2.319436,
+          "median_us": 1.024,
+          "geometry": {
+            "[100, 1, 1, 256, 1, 1]": 60,
+            "[20, 1, 1, 256, 1, 1]": 144,
+            "[80, 1, 1, 256, 1, 1]": 1728,
+            "[21, 1, 1, 256, 1, 1]": 216,
+            "[500, 1, 1, 256, 1, 1]": 6,
+            "[200, 1, 1, 256, 1, 1]": 9,
+            "[40, 1, 1, 256, 1, 1]": 54,
+            "[300, 1, 1, 256, 1, 1]": 6,
+            "[60, 1, 1, 256, 1, 1]": 36,
+            "[400, 1, 1, 256, 1, 1]": 9
+          }
+        },
+        {
+          "name": "std::enable_if<!T7, void>::type internal::gemvx::kernel<int, int, __nv_bfloat16, float, float, float, (bool)0, (bool)1, (bool)1, (bool)0, (int)6, (bool)0, cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<const float>, cublasGemvTensorStridedBatched<float>, float>>(T13)",
+          "count": 360,
+          "sum_ms": 1.804806,
+          "median_us": 2.112,
+          "geometry": {
+            "[256, 1, 1, 16, 4, 1]": 144,
+            "[1, 1, 224, 16, 4, 1]": 216
+          }
+        },
+        {
+          "name": "h5::dspark::<unnamed>::qkv_kernel(h5::dspark::QkvArgs)",
+          "count": 648,
+          "sum_ms": 1.389161,
+          "median_us": 2.144,
+          "geometry": {
+            "[1, 4, 1, 128, 1, 1]": 144,
+            "[4, 44, 1, 128, 1, 1]": 324,
+            "[5, 4, 1, 128, 1, 1]": 36,
+            "[2, 4, 1, 128, 1, 1]": 54,
+            "[3, 4, 1, 128, 1, 1]": 36,
+            "[4, 4, 1, 128, 1, 1]": 54
+          }
+        },
+        {
+          "name": "void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, float, (bool)0, float, float, float, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublasSplitKParams<T6>, const T4 *, const T10 *, T9 *, T5 *, const T6 *, const T6 *, const T11 *, const T4 *, T11 *, void *, long, T6 *, int *, T6 *, T6 *, const T6 *, const T6 *, const T6 *, const T6 *, const T6 *)",
+          "count": 426,
+          "sum_ms": 1.163338,
+          "median_us": 3.36,
+          "geometry": {
+            "[1, 1, 1, 32, 16, 1]": 216,
+            "[160, 1, 1, 32, 16, 1]": 30,
+            "[32, 1, 1, 32, 16, 1]": 180
+          }
+        },
+        {
+          "name": "void h5::dspark::<unnamed>::binary_kernel<(bool)0>(const float *, const float *, float *, unsigned long)",
+          "count": 648,
+          "sum_ms": 0.908133,
+          "median_us": 1.408,
+          "geometry": {
+            "[80, 1, 1, 256, 1, 1]": 648
+          }
+        },
+        {
+          "name": "h5::dspark::<unnamed>::embedding_kernel(h5::dspark::EmbeddingArgs)",
+          "count": 54,
+          "sum_ms": 0.473731,
+          "median_us": 8.768,
+          "geometry": {
+            "[4, 1, 1, 256, 1, 1]": 54
+          }
+        },
+        {
+          "name": "void h5::dspark::<unnamed>::binary_kernel<(bool)1>(const float *, const float *, float *, unsigned long)",
+          "count": 324,
+          "sum_ms": 0.401441,
+          "median_us": 1.216,
+          "geometry": {
+            "[80, 1, 1, 256, 1, 1]": 324
+          }
+        },
+        {
+          "name": "h5::<unnamed>::confidence_input(const float *, const __nv_bfloat16 *, const int *, float *, int, int *)",
+          "count": 216,
+          "sum_ms": 0.270368,
+          "median_us": 1.152,
+          "geometry": {
+            "[21, 1, 1, 256, 1, 1]": 216
+          }
+        },
+        {
+          "name": "h5::<unnamed>::sigmoid_conf(float *, float, int)",
+          "count": 216,
+          "sum_ms": 0.214049,
+          "median_us": 0.832,
+          "geometry": {
+            "[1, 1, 1, 256, 1, 1]": 216
+          }
+        }
+      ]
+    },
+    "final_draft_ingest": {
+      "calls": 1,
+      "wall_ms": 0.306851,
+      "kernel_union_ms": 0.262145,
+      "kernel_sum_ms": 0.262145,
+      "gpu_busy_union_ms": 0.264833,
+      "wall_minus_gpu_busy_ms": 0.042018,
+      "copy_sum_ms": 0.002688,
+      "copy_bytes": 307240,
+      "copy_counts": {
+        "8": 1,
+        "1": 3,
+        "2": 1
+      },
+      "api_sum_ms": 0.274753,
+      "kernels": [
+        {
+          "name": "void cutlass::Kernel2<cutlass_80_wmma_tensorop_s161616gemm_bf16_16x16_128x2_tn_align8>(T1::Params)",
+          "count": 7,
+          "sum_ms": 0.225601,
+          "median_us": 9.12,
+          "geometry": {
+            "[8, 40, 16, 32, 1, 1]": 1,
+            "[8, 8, 16, 32, 1, 1]": 6
+          }
+        },
+        {
+          "name": "h5::dspark::<unnamed>::qkv_kernel(h5::dspark::QkvArgs)",
+          "count": 6,
+          "sum_ms": 0.011872,
+          "median_us": 1.888,
+          "geometry": {
+            "[3, 4, 1, 128, 1, 1]": 6
+          }
+        },
+        {
+          "name": "h5::dspark::<unnamed>::rms_kernel(const float *, const float *, float *, int, float, bool)",
+          "count": 1,
+          "sum_ms": 0.010528,
+          "median_us": 10.528,
+          "geometry": {
+            "[3, 1, 1, 256, 1, 1]": 1
+          }
+        },
+        {
+          "name": "void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, float, (bool)0, float, float, float, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublasSplitKParams<T6>, const T4 *, const T10 *, T9 *, T5 *, const T6 *, const T6 *, const T11 *, const T4 *, T11 *, void *, long, T6 *, int *, T6 *, T6 *, const T6 *, const T6 *, const T6 *, const T6 *, const T6 *)",
+          "count": 7,
+          "sum_ms": 0.008448,
+          "median_us": 1.056,
+          "geometry": {
+            "[160, 1, 1, 32, 16, 1]": 1,
+            "[32, 1, 1, 32, 16, 1]": 6
+          }
+        },
+        {
+          "name": "h5::dspark::<unnamed>::convert_kernel(const float *, __nv_bfloat16 *, unsigned long)",
+          "count": 7,
+          "sum_ms": 0.005696,
+          "median_us": 0.8,
+          "geometry": {
+            "[300, 1, 1, 256, 1, 1]": 1,
+            "[60, 1, 1, 256, 1, 1]": 6
+          }
+        }
+      ]
+    }
+  },
+  "prepared_rows": {
+    "target_verify": {
+      "5": 55
+    },
+    "draft_query": {
+      "4": 55
+    },
+    "draft_ingested_steady": {
+      "1": 24,
+      "5": 6,
+      "2": 9,
+      "3": 6,
+      "4": 9
+    },
+    "draft_initial_ingested": 16,
+    "target_projection_evidence": "projection<int5> and producer gridY5; no R16 prepared padding",
+    "draft_ingest_evidence": "tap FC f32-to-bf16 launch has ceil(ni*25600/256)=100*ni CTAs"
+  },
+  "draft_query_kernel_parts_ms": {
+    "other": 108.14520599999872,
+    "norm": 8.09317199999996,
+    "qkv_rope_cache": 1.4156569999999944,
+    "attention": 21.498529,
+    "markov": 3.0718510000000023,
+    "candidate_argmax": 4.855386999999992
+  },
+  "draft_projects": {
+    "tap_fc": {
+      "sum_ms": 9.398121,
+      "kernels": [
+        {
+          "name": "void cutlass::Kernel2<cutlass_80_wmma_tensorop_s161616gemm_bf16_16x16_128x2_tn_align8>(T1::Params)",
+          "count": 31,
+          "sum_ms": 5.321751,
+          "median_us": 170.817,
+          "geometry": {
+            "[8, 40, 1, 32, 1, 1]": 1,
+            "[8, 40, 16, 32, 1, 1]": 30
+          }
+        },
+        {
+          "name": "std::enable_if<!T7, void>::type internal::gemvx::kernel<int, int, __nv_bfloat16, float, float, float, (bool)0, (bool)1, (bool)1, (bool)0, (int)7, (bool)0, cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<const float>, cublasGemvTensorStridedBatched<float>, float>>(T13)",
+          "count": 24,
+          "sum_ms": 3.974162,
+          "median_us": 165.329,
+          "geometry": {
+            "[1280, 1, 1, 32, 4, 1]": 24
+          }
+        },
+        {
+          "name": "h5::dspark::<unnamed>::convert_kernel(const float *, __nv_bfloat16 *, unsigned long)",
+          "count": 55,
+          "sum_ms": 0.052736,
+          "median_us": 0.928,
+          "geometry": {
+            "[1600, 1, 1, 256, 1, 1]": 1,
+            "[100, 1, 1, 256, 1, 1]": 24,
+            "[500, 1, 1, 256, 1, 1]": 6,
+            "[200, 1, 1, 256, 1, 1]": 9,
+            "[300, 1, 1, 256, 1, 1]": 6,
+            "[400, 1, 1, 256, 1, 1]": 9
+          }
+        },
+        {
+          "name": "void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, float, (bool)0, float, float, float, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublasSplitKParams<T6>, const T4 *, const T10 *, T9 *, T5 *, const T6 *, const T6 *, const T11 *, const T4 *, T11 *, void *, long, T6 *, int *, T6 *, T6 *, const T6 *, const T6 *, const T6 *, const T6 *, const T6 *)",
+          "count": 30,
+          "sum_ms": 0.049472,
+          "median_us": 1.632,
+          "geometry": {
+            "[160, 1, 1, 32, 16, 1]": 30
+          }
+        }
+      ]
+    },
+    "ingest_kv": {
+      "sum_ms": 3.621586,
+      "kernels": [
+        {
+          "name": "void cutlass::Kernel2<cutlass_80_wmma_tensorop_s161616gemm_bf16_16x16_128x2_tn_align8>(T1::Params)",
+          "count": 186,
+          "sum_ms": 1.694603,
+          "median_us": 8.992,
+          "geometry": {
+            "[8, 8, 16, 32, 1, 1]": 186
+          }
+        },
+        {
+          "name": "std::enable_if<!T7, void>::type internal::gemvx::kernel<int, int, __nv_bfloat16, float, float, float, (bool)0, (bool)1, (bool)1, (bool)0, (int)6, (bool)0, cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<const float>, cublasGemvTensorStridedBatched<float>, float>>(T13)",
+          "count": 144,
+          "sum_ms": 1.443077,
+          "median_us": 10.016,
+          "geometry": {
+            "[256, 1, 1, 16, 4, 1]": 144
+          }
+        },
+        {
+          "name": "h5::dspark::<unnamed>::convert_kernel(const float *, __nv_bfloat16 *, unsigned long)",
+          "count": 330,
+          "sum_ms": 0.276993,
+          "median_us": 0.8,
+          "geometry": {
+            "[320, 1, 1, 256, 1, 1]": 6,
+            "[20, 1, 1, 256, 1, 1]": 144,
+            "[100, 1, 1, 256, 1, 1]": 36,
+            "[40, 1, 1, 256, 1, 1]": 54,
+            "[60, 1, 1, 256, 1, 1]": 36,
+            "[80, 1, 1, 256, 1, 1]": 54
+          }
+        },
+        {
+          "name": "void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, float, (bool)0, float, float, float, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublasSplitKParams<T6>, const T4 *, const T10 *, T9 *, T5 *, const T6 *, const T6 *, const T11 *, const T4 *, T11 *, void *, long, T6 *, int *, T6 *, T6 *, const T6 *, const T6 *, const T6 *, const T6 *, const T6 *)",
+          "count": 186,
+          "sum_ms": 0.206913,
+          "median_us": 1.088,
+          "geometry": {
+            "[32, 1, 1, 32, 16, 1]": 186
+          }
+        }
+      ]
+    },
+    "trunk": {
+      "sum_ms": 68.679635,
+      "kernels": [
+        {
+          "name": "void cutlass::Kernel2<cutlass_80_wmma_tensorop_s161616gemm_bf16_16x16_128x2_tn_align8>(T1::Params)",
+          "count": 1650,
+          "sum_ms": 66.909803,
+          "median_us": 39.584,
+          "geometry": {
+            "[8, 48, 1, 32, 1, 1]": 330,
+            "[8, 40, 1, 32, 1, 1]": 1320
+          }
+        },
+        {
+          "name": "h5::dspark::<unnamed>::convert_kernel(const float *, __nv_bfloat16 *, unsigned long)",
+          "count": 1650,
+          "sum_ms": 1.769832,
+          "median_us": 1.184,
+          "geometry": {
+            "[80, 1, 1, 256, 1, 1]": 1650
+          }
+        }
+      ]
+    },
+    "head": {
+      "sum_ms": 22.635792,
+      "kernels": [
+        {
+          "name": "void cutlass::Kernel2<cutlass_80_wmma_tensorop_s161616gemm_bf16_16x16_128x2_tn_align8>(T1::Params)",
+          "count": 55,
+          "sum_ms": 22.571088,
+          "median_us": 410.243,
+          "geometry": {
+            "[8, 512, 1, 32, 1, 1]": 55
+          }
+        },
+        {
+          "name": "h5::dspark::<unnamed>::convert_kernel(const float *, __nv_bfloat16 *, unsigned long)",
+          "count": 55,
+          "sum_ms": 0.064704,
+          "median_us": 1.216,
+          "geometry": {
+            "[80, 1, 1, 256, 1, 1]": 55
+          }
+        }
+      ]
+    },
+    "confidence": {
+      "sum_ms": 1.500877,
+      "kernels": [
+        {
+          "name": "void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, float, (bool)0, float, float, float, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublasSplitKParams<T6>, const T4 *, const T10 *, T9 *, T5 *, const T6 *, const T6 *, const T11 *, const T4 *, T11 *, void *, long, T6 *, int *, T6 *, T6 *, const T6 *, const T6 *, const T6 *, const T6 *, const T6 *)",
+          "count": 220,
+          "sum_ms": 0.932393,
+          "median_us": 3.392,
+          "geometry": {
+            "[1, 1, 1, 32, 16, 1]": 220
+          }
+        },
+        {
+          "name": "std::enable_if<!T7, void>::type internal::gemvx::kernel<int, int, __nv_bfloat16, float, float, float, (bool)0, (bool)1, (bool)1, (bool)0, (int)6, (bool)0, cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<const float>, cublasGemvTensorStridedBatched<float>, float>>(T13)",
+          "count": 220,
+          "sum_ms": 0.368353,
+          "median_us": 1.568,
+          "geometry": {
+            "[1, 1, 224, 16, 4, 1]": 220
+          }
+        },
+        {
+          "name": "h5::dspark::<unnamed>::convert_kernel(const float *, __nv_bfloat16 *, unsigned long)",
+          "count": 220,
+          "sum_ms": 0.200131,
+          "median_us": 0.8,
+          "geometry": {
+            "[21, 1, 1, 256, 1, 1]": 220
+          }
+        }
+      ]
+    }
+  },
+  "requests": {
+    "control": {
+      "usage": {
+        "prompt_tokens": 48,
+        "completion_tokens": 128,
+        "total_tokens": 176
+      },
+      "timings": {
+        "image_tokens": 0,
+        "image_encode_s": 0.0,
+        "native_prefill_s": 0.04136800020933151,
+        "vision_speculation": false,
+        "drafter": "dspark-bf16",
+        "draft_proposals": 4,
+        "draft_query_rows": 4,
+        "verifier_rows_per_full_round": 5,
+        "checkpoint_length_extrapolation": false,
+        "bonus_policy": "greedy",
+        "sampling_seed": null,
+        "draft_verify_limit": 4,
+        "draft_sampling": {
+          "temperature": 0.0,
+          "top_p": 1.0,
+          "top_k": 0,
+          "min_p": 0.0,
+          "presence_penalty": 0.0,
+          "repetition_penalty": 1.0
+        },
+        "commitment": {
+          "config": {
+            "mode": "fixed",
+            "minimum": 4,
+            "maximum": 4,
+            "confidence_gap_threshold": null,
+            "confidence_signal": null,
+            "feedback_growth": null,
+            "target_regret_observed": false,
+            "selection_timing": "before-target-verification"
+          },
+          "error": null,
+          "rounds": []
+        },
+        "verify_rounds": 55,
+        "verifier_rows": 275,
+        "prefix_histogram": [
+          24,
+          9,
+          7,
+          9,
+          6
+        ],
+        "position_proposed": [
+          55,
+          55,
+          55,
+          55
+        ],
+        "position_reached": [
+          55,
+          31,
+          22,
+          15
+        ],
+        "position_accepted": [
+          31,
+          22,
+          15,
+          6
+        ],
+        "position_emitted": [
+          55,
+          30,
+          21,
+          15,
+          6
+        ],
+        "position_reject_target_eos": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "position_reject_proposed_eos": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "position_reject_other": [
+          24,
+          9,
+          7,
+          9
+        ],
+        "proposed_drafts": 220,
+        "accepted_drafts": 74,
+        "relax_offered": 0,
+        "relax_vetoed": 0,
+        "loop_closes": 0,
+        "loop_close": false,
+        "lz_penalty": 0.0,
+        "lz_draft": false,
+        "lz_draft_alpha": 0.0,
+        "marker_penalty": 0.0,
+        "verify_s": 0.4135048929601908,
+        "draft_s": 0.15274583734571934,
+        "sampling_s": 0.0,
+        "tree_rounds": 0,
+        "tree_rescues": 0,
+        "clone_s": 0.0,
+        "tree_fallback_rounds": 0,
+        "ttft_s": 0.04223238676786423,
+        "total_s": 0.6086936937645078,
+        "decode_tok_per_s": 224.19889660840067
+      },
+      "client_wall_s": 0.6091921087354422
+    },
+    "traced": {
+      "usage": {
+        "prompt_tokens": 48,
+        "completion_tokens": 128,
+        "total_tokens": 176
+      },
+      "timings": {
+        "image_tokens": 0,
+        "image_encode_s": 0.0,
+        "native_prefill_s": 0.04508745763450861,
+        "vision_speculation": false,
+        "drafter": "dspark-bf16",
+        "draft_proposals": 4,
+        "draft_query_rows": 4,
+        "verifier_rows_per_full_round": 5,
+        "checkpoint_length_extrapolation": false,
+        "bonus_policy": "greedy",
+        "sampling_seed": null,
+        "draft_verify_limit": 4,
+        "draft_sampling": {
+          "temperature": 0.0,
+          "top_p": 1.0,
+          "top_k": 0,
+          "min_p": 0.0,
+          "presence_penalty": 0.0,
+          "repetition_penalty": 1.0
+        },
+        "commitment": {
+          "config": {
+            "mode": "fixed",
+            "minimum": 4,
+            "maximum": 4,
+            "confidence_gap_threshold": null,
+            "confidence_signal": null,
+            "feedback_growth": null,
+            "target_regret_observed": false,
+            "selection_timing": "before-target-verification"
+          },
+          "error": null,
+          "rounds": []
+        },
+        "verify_rounds": 55,
+        "verifier_rows": 275,
+        "prefix_histogram": [
+          24,
+          9,
+          7,
+          9,
+          6
+        ],
+        "position_proposed": [
+          55,
+          55,
+          55,
+          55
+        ],
+        "position_reached": [
+          55,
+          31,
+          22,
+          15
+        ],
+        "position_accepted": [
+          31,
+          22,
+          15,
+          6
+        ],
+        "position_emitted": [
+          55,
+          30,
+          21,
+          15,
+          6
+        ],
+        "position_reject_target_eos": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "position_reject_proposed_eos": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "position_reject_other": [
+          24,
+          9,
+          7,
+          9
+        ],
+        "proposed_drafts": 220,
+        "accepted_drafts": 74,
+        "relax_offered": 0,
+        "relax_vetoed": 0,
+        "loop_closes": 0,
+        "loop_close": false,
+        "lz_penalty": 0.0,
+        "lz_draft": false,
+        "lz_draft_alpha": 0.0,
+        "marker_penalty": 0.0,
+        "verify_s": 0.42799727991223335,
+        "draft_s": 0.15778848715126514,
+        "sampling_s": 0.0,
+        "tree_rounds": 0,
+        "tree_rescues": 0,
+        "clone_s": 0.0,
+        "tree_fallback_rounds": 0,
+        "ttft_s": 0.04606457892805338,
+        "total_s": 0.632083541713655,
+        "decode_tok_per_s": 216.71653660542665
+      },
+      "client_wall_s": 0.63264524564147
+    }
+  },
+  "identical_text": true,
+  "note": "Prefill target and two ingestion-only calls excluded. Initial draft contains last16 prefill rows, separated. Final ingestion has no new draft and is separately charged. Wall minus GPU busy includes host submission, synchronization, scheduling and trace overhead, not just CPU compute. Kernel sums are not elapsed time."
+}

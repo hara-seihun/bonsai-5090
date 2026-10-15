@@ -1,0 +1,17 @@
+{
+  "exit": 0,
+  "stdout": "{\"kind\":\"compact_projection\",\"states\":240,\"max_probe\":2,\"table_bytes\":8192,\"target_encoding\":\"three independent 3-bit fields\"}\n{\"kind\":\"observer_projection\",\"native_image_inputs\":729,\"states\":240,\"max_probe\":3,\"hash_bytes\":16384}\n{\"status\":\"pass\",\"device\":\"NVIDIA GeForce RTX 5090\",\"cases\":531441,\"distinct_outputs_per_full_tile\":128,\"mma_per_tile\":2,\"missing\":0,\"mismatches\":0,\"dictionary_bytes\":16384,\"labels_bytes\":108,\"input_bytes\":2916,\"output_bytes\":2125764,\"timings_ms\":{\"native_tile_hash_joint_observer\":{\"median\":0.005114,\"min\":0.004937,\"max\":0.005118},\"native_tile_compact_joint_observer\":{\"median\":0.004695,\"min\":0.004680,\"max\":0.004868},\"native_tile_binary_joint_observer\":{\"median\":0.013268,\"min\":0.013260,\"max\":0.013302},\"native_tile_prepared_joint_observer\":{\"median\":0.004525,\"min\":0.004518,\"max\":0.004558},\"lane_direct\":{\"median\":0.003252,\"min\":0.003240,\"max\":0.003271}},\"graph_repetitions\":100,\"graph_rounds\":7,\"binary_dictionary_bytes\":149520,\"compact_dictionary_bytes\":8192,\"prepared_label_bytes\":108,\"registers\":[24,24,24,26,24],\"local_bytes_per_thread\":[0,0,0,0,0],\"shared_bytes_per_block\":[0,0,0,0,0],\"scope\":\"all 27^4 ternary source tuples as shuffled 729x729 Cartesian pair matrix; 128 independent output cells per full tile; two TF32 MMAs with uniform K replication in each pair, 1/8 normalization, RNA padding, two reachable-pair exact-key hash lookups and final three-component dot-sum join; all producers and output included; no single-MMA K compression/model/HTTP claim\"}\n",
+  "stderr": "",
+  "wall_s": 2.0616209506988525,
+  "mutex": "Local\\BonsaiGPU",
+  "mutex_wait_result": 0,
+  "hashes": {
+    "native_tile_prepared.cu": "addc2684796f9924adda81e7db24def116f455a2d5c3f64c1cc04d7a40746846",
+    "native_tile_prepared.exe": "e47f84598cbf850d3a5d5b70448865440b4ff3dcb4d3ed8cef22f924e80335aa",
+    "native-prime-observer.bin": "93a78c169f3d8876f65f90c72e1459f7597f8dbe968d5f10f62d4b452ea42116",
+    "native-pair-image.bin": "83450831d4b02f40db18e2e713824efce4dcbb79e6d84ee30e867811f08ad645",
+    "native-pair-hash.bin": "cbb38564dcc2273e9e67e7401fee54467abb1b3fc23aecafb6182c852b8782da",
+    "native-pair-compact.bin": "0eeda7e7361f1709293357f9069f618f2e7243707e53bf7617ac5a93fc94d7c9",
+    "build.log": "d741e1ad5a17b32fa896d0c9761aa2509495a33d90f501513f6726428f05ab1c"
+  }
+}

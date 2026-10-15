@@ -1,0 +1,15 @@
+{
+  "state": "GPU_returned_CPU_only",
+  "original_driver_job_id": "00000000-0000-0000-0000-000000000000",
+  "start_epoch_s": 1792025030.9647703,
+  "finish_epoch_s": 1792025055.705744,
+  "children_ceased": true,
+  "release_mutex_return": 1,
+  "close_mutex_return": 1,
+  "handback_send_operation_id": "00000000-0000-0000-0000-000000000000",
+  "owner_independent_probe_epoch_s": 1792025184.9244978,
+  "owner_report": "no benchmark/nsys children; old ports closed; mutex acquire0/release; GGUF, servingDLL, benchmark and frozenplan exact",
+  "reserved_successor": false,
+  "acceptance": null,
+  "TPS": null
+}

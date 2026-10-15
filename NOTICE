@@ -27,3 +27,10 @@ GSM8K
   instruction. receipts/gsm8k/ contains model outputs on the GSM8K test set.
 
 Math-Verify (Hugging Face, Apache-2.0) is used for GSM8K answer scoring.
+
+Additional engine and research exports (October 2026)
+  engines/NOTICE and component LICENSE/NOTICE files preserve engine/vendor attributions.
+  benchmarks/NOTICE and benchmarks/README.md describe benchmark dependencies and dataset custody.
+  research/ preserves our binary/packed kernel source, finite proofs and selected technical evidence;
+  component notices and upstream attributions apply to code derived from those dependencies.
+  These exports do not redistribute model weights or grant rights beyond each upstream license.

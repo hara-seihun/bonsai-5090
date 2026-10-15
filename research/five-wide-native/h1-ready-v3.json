@@ -1,0 +1,31 @@
+{
+  "state": "cpu_staged_gpu_unrun",
+  "generation": "fullk-h1-tail-v3",
+  "source_commit": "95fce9015b13e65954793c415c12153e8fa8bc0f",
+  "source_branch": "agent/fullk-h1-import",
+  "parent_source_commit": "cfd08f7df54f86cf09513e51a1a48044ce18f7f5",
+  "private_source_owner": "~/projects/halo-5090",
+  "bundle_sha256": "47b2d027a825de257c3923f93ab85a4374bf5d0cd2050e9d2db73fd27d7f2c0f",
+  "dll_sha256": "398a9d2bb38ec8613af6663dd782a282727da04b5f255f43e4c10780f1c6d768",
+  "driver_sha256": "95491795dccfc766e68a6b1a3e04921412e695ccfdfa4f64eff6d221eac40292",
+  "worker_sha256": "ed6dd51de4bcc6785008ebe55f989c602aa5f5d089ca12e50fe189088b1e38be",
+  "warmup_steps": 3,
+  "observed_steps": 2,
+  "strict_profile": {
+    "H5_DETERMINISTIC_GEMM": "1",
+    "H5_DOWN_CLEAR": "0"
+  },
+  "strict_graph_contract": "observed hits2/captures0; warmup counters and teacher-forced tokens separately retained and compared",
+  "gpu_window_bound_seconds": 240,
+  "native_subprocess_bound_seconds": 50,
+  "gpu_authority": "fresh explicit PrismML between-shard handback required",
+  "predecessor_failure": "h1-window-v1-result.json reference graph prerequisite; h1-window-v2-result.json isolated Python import failure before native loading; neither candidate/TPS ran",
+  "native_stage_receipt": "h1-graph-v3/cpu-stage-receipt.json",
+  "native_driver": "C:/work/models/experiments/bonsai-quality-20261013/fullk-h1-tail-v3/driver.py",
+  "serving_mutation": false,
+  "gpu_window_created": false,
+  "managed_writer": "released after private push; source reclaimable",
+  "native_cpu_contract_passed": true,
+  "python_isolated": 1,
+  "helper_delivery": "directly embedded into all six strict workers, no runtime module discovery"
+}

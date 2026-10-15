@@ -1,0 +1,37 @@
+{
+  "state": "cpu_cache_complete_no_adoption",
+  "source_commit": "5bdb08fafd6958f1ae46427f1058158a6f961d0b",
+  "private_ref": "agent/gu-dict8-offline-cache",
+  "delivery": "dict8-cache-result/DELIVERY.json",
+  "delivery_sha256": "855f1bcc10f20927334f40b57b223a40ac23d0f46122dd35b62e43f38b79dca7",
+  "package_manifest_sha256": "f62a64fc6b2e96ca5a1e857fea6e25d782a77098d2a6b666626f9a18ec2353ae",
+  "parent_manifest_check": "dict8-cache-parent-check.json",
+  "parent_manifest_check_sha256": "a880d613ca7b65964f822335453e7cda3f912db7a8f95fe617196377c231cde1",
+  "original_consumer_result": "dict8-engine-window-v2-settlement.json",
+  "original_consumer_settlement_sha256": "e0d4f3c4097d9bee1124e43557f39d8a88ba79237680d0fa27f558f7811562d7",
+  "scope": "CPU implementation, exact real-model cache, private native compilation, host failure contracts; numerical GPU acceptance for this successor is unset",
+  "native_cached_startup": null,
+  "device_upload": null,
+  "gpu_residency": null,
+  "throughput": null,
+  "gpu_work": false,
+  "v1_v2_replayed": false,
+  "serving_mutation": false,
+  "gpu_reservation": false,
+  "future_profile_window_used": false,
+  "writer_release": {
+    "state": "released",
+    "workspace_id": "00000000-0000-0000-0000-000000000000",
+    "classification": "reclaimable",
+    "head": "5bdb08fafd6958f1ae46427f1058158a6f961d0b",
+    "processes": [],
+    "source_custody": "private pushed ref plus source.bundle and readable snapshot"
+  },
+  "recurring_costs": [
+    "two full 5946648928-byte model hashes",
+    "2317352960-byte private host payload allocation/read/hash/free",
+    "original WF0 GU repack/upload/means",
+    "26244-byte codebook construction",
+    "cached payload device upload (unobserved)"
+  ]
+}

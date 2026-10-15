@@ -1,0 +1,92 @@
+[
+  {
+    "route": "native0",
+    "kloop_static_instructions": 137,
+    "registers": 124,
+    "dynamic_shared_bytes": 78912,
+    "threads": 288
+  },
+  {
+    "route": "baseline",
+    "kloop_static_instructions": 272,
+    "registers": 130,
+    "dynamic_shared_bytes": 66624,
+    "threads": 288
+  },
+  {
+    "route": "split53_shared",
+    "kloop_static_instructions": 422,
+    "registers": 134,
+    "dynamic_shared_bytes": 67776,
+    "threads": 288
+  },
+  {
+    "route": "split53_shuffle",
+    "kloop_static_instructions": 387,
+    "registers": 147,
+    "dynamic_shared_bytes": 67648,
+    "threads": 288
+  },
+  {
+    "route": "shared8",
+    "kloop_static_instructions": 242,
+    "registers": 126,
+    "dynamic_shared_bytes": 92992,
+    "threads": 288
+  },
+  {
+    "route": "shared8_compact",
+    "kloop_static_instructions": 242,
+    "registers": 126,
+    "dynamic_shared_bytes": 88896,
+    "threads": 288
+  },
+  {
+    "route": "shared8_dual",
+    "kloop_static_instructions": 243,
+    "registers": 126,
+    "dynamic_shared_bytes": 44320,
+    "threads": 160
+  },
+  {
+    "route": "literal3",
+    "kloop_static_instructions": 361,
+    "registers": 121,
+    "dynamic_shared_bytes": 64576,
+    "threads": 288
+  }
+]
+{
+  "full8": {
+    "warp_loads": 1280,
+    "mean_max_distinct_words_per_bank": 3.5359375,
+    "worst_max_distinct_words_per_bank": 7,
+    "histogram": {
+      "4": 450,
+      "3": 676,
+      "5": 104,
+      "7": 2,
+      "2": 31,
+      "6": 17
+    }
+  },
+  "low5": {
+    "warp_loads": 1280,
+    "mean_max_distinct_words_per_bank": 3.15078125,
+    "worst_max_distinct_words_per_bank": 5,
+    "histogram": {
+      "3": 846,
+      "4": 276,
+      "2": 133,
+      "5": 25
+    }
+  },
+  "high3": {
+    "warp_loads": 1280,
+    "mean_max_distinct_words_per_bank": 1.0,
+    "worst_max_distinct_words_per_bank": 1,
+    "histogram": {
+      "1": 1280
+    }
+  }
+}

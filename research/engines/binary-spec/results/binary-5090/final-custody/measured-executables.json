@@ -1,0 +1,31 @@
+{
+  "exported_at": "2026-10-11T00:10:41.056060+00:00",
+  "artifacts": [
+    {
+      "path": "~/data/binary-5090/final-serving/h5",
+      "bytes": 22424576,
+      "sha256": "e313149215e9e81fde319fb59fa059b5e321a122275a767f412fe570d9fdffad"
+    },
+    {
+      "path": "~/data/binary-5090/final-serving/h5-server",
+      "bytes": 24093440,
+      "sha256": "bacfa67fd76ab37e38a0ea49a1ec0bdf6699f5f6155b90929f03a9704c177457"
+    },
+    {
+      "path": "~/data/binary-5090/final-serving/dspark-native-contract",
+      "bytes": 8357760,
+      "sha256": "424c7478c29b50afae67b5b9c2ad9c928504910cd738e3619f177b4ab88718d5"
+    },
+    {
+      "path": "~/data/binary-5090/final-serving/whole-ffn/h5",
+      "bytes": 22298920,
+      "sha256": "08cf5a5c960d9902984c1031e6bc8a71a3d1f376873d67146d1d0cd3b9684577"
+    },
+    {
+      "path": "~/data/binary-5090/final-serving/whole-ffn/h5-server",
+      "bytes": 23962504,
+      "sha256": "2f770f8ab4dd884ec1c8cff29001f39c2a01d0b0b2016c05f84100205ef16fee"
+    }
+  ],
+  "scope": "Measured repaired0ff Native DSpark S1 and separate952 whole-FFN binaries; dependency/source closure in original build receipts."
+}

@@ -1,0 +1,40 @@
+{
+  "command": [
+    "/workspace/binary/isa/halo/h5-server",
+    "/workspace/binary/models/Bonsai-27B-Q1_0.gguf",
+    "/workspace/binary/models/procreations-r2-gptq2.safetensors",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "8088",
+    "--slots",
+    "32",
+    "--ctx",
+    "8192",
+    "--prefill",
+    "8"
+  ],
+  "env": {
+    "H5_STATE": "f16",
+    "H5_KV": "f16",
+    "H5_DRAFT_WFMT": "nvfp4",
+    "H5_DRAFT_MARGIN": "0",
+    "H5_DETERMINISTIC_GEMM": "1",
+    "H5_ORDERED_PREP": "off",
+    "H5_WEIGHTS": "packed1",
+    "H5_ACT": "f32",
+    "H5_CHUNK": "8",
+    "H5_NO_SPEC": "1"
+  },
+  "url": "http://127.0.0.1:8088",
+  "out": "/workspace/binary/results/steady/tasks-gsm256-f32-b32",
+  "gate_args": [
+    "--benchmarks",
+    "gsm8k",
+    "--concurrency",
+    "32"
+  ],
+  "startup_seconds": 180,
+  "run_seconds": 3600,
+  "metrics_path": "/metrics"
+}

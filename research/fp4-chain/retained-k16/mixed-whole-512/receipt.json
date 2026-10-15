@@ -1,0 +1,13 @@
+{
+  "exit": 0,
+  "stdout": "{\"status\":\"mixed_whole_observation\",\"domain_errors\":0,\"prefix_errors\":[0,0,0],\"q8_errors\":0,\"scale_errors\":0,\"K\":128,\"group_scales\":8,\"logical_cases\":16384}\n{\"status\":\"pass\",\"timings_ms\":[0.002915,0.001864],\"ranges_ms\":[[0.002878,0.003101],[0.001854,0.001933]],\"registers\":[44,37],\"local_bytes\":[0,0],\"shared_bytes\":[512,256],\"scope\":\"opaque radix512 per16 GU carriers from four data-scale MXFP4 instructions; paired WF0 upper bits directly supply E2M1 +/-2 via mask, scale256 supplies role coordinate; final digit interpretation is signed shifts/masks meet only in final joint observer; eight independent source scales; exact2^-10 integer-grid sum and sign-magnitude bit truncation per native K64 update; no FP64 arithmetic or ordinary floating g/u until final SFU; int32 domain bounded for K128; conventional g/u recovered inside final observer only; complete packed producers/placement/observer/collectiveQ8/stores timed; encoded64 vs native128 logical endpoints per warp; four instructions per warp on both routes; generated plus adversarial matrix, no learned/model acceptance\"}\n{\"preparation_ms\":[97.109700,3.342400,2.954800],\"input_bytes\":[16384,4096,512],\"capture_only_trace_bytes\":393216,\"timed_global_intermediate_bytes\":0}\n",
+  "stderr": "",
+  "wall_s": 2.2295725345611572,
+  "mutex": "Local\\BonsaiGPU",
+  "mutex_wait_result": 0,
+  "hashes": {
+    "native_mixed_whole_512.cu": "ed915cffa8d6e7755899ee1793f7012ceb8539d3a41467b3f31ea15ca94a16df",
+    "native_mixed_whole_512.exe": "260aa021727730c1e22586b6a41ce18a0e72b049e048d90d8c5be48cd6c517ec",
+    "build.log": "2f7a0037033ccb9e8889932cfeed034ac29cff57ae5af52ae4996e55d75a9a2e"
+  }
+}

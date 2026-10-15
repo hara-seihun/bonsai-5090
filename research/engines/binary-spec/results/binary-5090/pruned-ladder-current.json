@@ -1,0 +1,153 @@
+{
+  "scope": "fresh measured panels; exact benchmark counts and mode are recorded per row",
+  "rows": [
+    {
+      "path": "results/binary-5090/tasks-pruned/tasks-hybrid-dspark4-b1",
+      "receipt": {
+        "status": "complete",
+        "exit_code": 0
+      },
+      "mode": "quick",
+      "decoding": {
+        "temperature": 0,
+        "sampling": null,
+        "enable_thinking": false,
+        "max_tokens": {
+          "gsm8k": 4096,
+          "humaneval_plus": 4096
+        },
+        "concurrency": 1
+      },
+      "manifest_sha256": "0330533de253a6b29421216609c18cb4afe5a7e9bc16cb0c574af8b0b4d15c58",
+      "tokens": 21074,
+      "generation_seconds": 84.1927107423544,
+      "http_tokens_second": 250.30670487009763,
+      "benchmarks": {
+        "gsm8k": {
+          "n": 32,
+          "metrics": {
+            "accuracy": {
+              "score": 0.90625,
+              "se": 0.05152697639950359,
+              "n": 32,
+              "correct": 29
+            }
+          },
+          "truncated": 1,
+          "completion_tokens": 16084,
+          "generation_s": 66.59803268592805,
+          "http_tokens_second": 241.50863548554187
+        },
+        "humaneval_plus": {
+          "n": 32,
+          "metrics": {
+            "base": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            },
+            "plus": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            }
+          },
+          "truncated": 0,
+          "completion_tokens": 4990,
+          "generation_s": 17.594678056426346,
+          "http_tokens_second": 283.6084857021543
+        }
+      },
+      "native_counters": {
+        "accepted_drafts": 15722,
+        "proposed_drafts": 21524,
+        "verify_rounds": 5381,
+        "generated_tokens": 21137,
+        "lookup_proposed": 0,
+        "lookup_accepted": 0,
+        "lookup_rounds": 0,
+        "verify_s": 43.377485596,
+        "draft_s": 40.762993273,
+        "busy_s": 84.15284265400001,
+        "acceptance_fraction": 0.7304404385801896,
+        "emitted_per_verify_round": 3.9280802824753764
+      }
+    },
+    {
+      "path": "results/binary-5090/tasks-pruned/tasks-hybrid-dspark4-b8",
+      "receipt": {
+        "status": "complete",
+        "exit_code": 0
+      },
+      "mode": "quick",
+      "decoding": {
+        "temperature": 0,
+        "sampling": null,
+        "enable_thinking": false,
+        "max_tokens": {
+          "gsm8k": 4096,
+          "humaneval_plus": 4096
+        },
+        "concurrency": 8
+      },
+      "manifest_sha256": "0330533de253a6b29421216609c18cb4afe5a7e9bc16cb0c574af8b0b4d15c58",
+      "tokens": 22766,
+      "generation_seconds": 65.68231319822371,
+      "http_tokens_second": 346.6077683849855,
+      "benchmarks": {
+        "gsm8k": {
+          "n": 32,
+          "metrics": {
+            "accuracy": {
+              "score": 0.90625,
+              "se": 0.05152697639950359,
+              "n": 32,
+              "correct": 29
+            }
+          },
+          "truncated": 1,
+          "completion_tokens": 17637,
+          "generation_s": 52.28225395549089,
+          "http_tokens_second": 337.34199782233554
+        },
+        "humaneval_plus": {
+          "n": 32,
+          "metrics": {
+            "base": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            },
+            "plus": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            }
+          },
+          "truncated": 0,
+          "completion_tokens": 5129,
+          "generation_s": 13.400059242732823,
+          "http_tokens_second": 382.7595018120223
+        }
+      },
+      "native_counters": {
+        "accepted_drafts": 4115,
+        "proposed_drafts": 6788,
+        "verify_rounds": 18655,
+        "generated_tokens": 22829,
+        "lookup_proposed": 0,
+        "lookup_accepted": 0,
+        "lookup_rounds": 0,
+        "verify_s": 33.264056979,
+        "draft_s": 32.391720109000005,
+        "busy_s": 65.677720358,
+        "acceptance_fraction": 0.6062168532704774,
+        "emitted_per_verify_round": 1.2237469847225946
+      }
+    }
+  ]
+}

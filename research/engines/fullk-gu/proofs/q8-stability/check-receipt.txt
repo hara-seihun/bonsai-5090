@@ -1,0 +1,31 @@
+checked_at_utc=2026-10-08T21:26:31Z
+Lean (version 4.33.0, x86_64-unknown-linux-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)
+mathlib_commit=db584cd6d46c92f209a44c0f1c829460d327499d
+891db25bf0a46a038e2001911d281e85f91835d0b6281ece7d648a10c37ad3f8  Stability.lean
+3ebcda65c441df955460845ef03241a9e295c7469d31275852f5dc023cf8af89  Runaway.lean
+6fc98b9c6a28a4bf020b162bd19c579d5c6775f96b216d859dbbdb9ca7d01291  Audit.lean
+'Q8Stability.ls_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Q8Stability.ls_residual_orthogonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Q8Stability.ls_pythagoras' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Q8Stability.ls_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Q8Stability.adaptive_ls_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Q8Stability.rankOne_energy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Q8Stability.rankOne_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Q8Stability.gdn_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Q8Stability.quantized_step_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Q8Stability.quantized_homogeneous_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Q8Stability.linear_forcing_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Q8Runaway.rne_127' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Q8Runaway.rne_half_127' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Q8Runaway.P_idempotent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Q8Runaway.P_self_adjoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Q8Runaway.P_energy_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Q8Runaway.P_energy_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Q8Runaway.P_ray' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Q8Runaway.maxQuant_half_ray' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Q8Runaway.gain_gt_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Q8Runaway.exact_expanding_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Q8Runaway.exact_expanding_orbit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Q8Runaway.ray_energy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Q8Runaway.quantized_projection_energy_increases' depends on axioms: [propext, Classical.choice, Quot.sound]
+PASS: all declarations compiled; theorem axioms printed above

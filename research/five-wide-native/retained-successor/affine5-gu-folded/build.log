@@ -1,0 +1,49 @@
+C:/work\models\experiments\bonsai-quality-20261013\five-wide-native\affine5-gu-folded\affine5_gu_folded.cu(8): warning #177-D: variable "NW" was declared but never referenced
+  constexpr int NW=59049,NL=15121,STEP=16320,NT=47761;
+                ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z6nativeILb0EEvPK4TilePKyPKaPaPii' for 'sm_120a'
+ptxas info    : Function properties for _Z6nativeILb0EEvPK4TilePKyPKaPaPii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 30 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6nativeILb1EEvPK4TilePKyPKaPaPii' for 'sm_120a'
+ptxas info    : Function properties for _Z6nativeILb1EEvPK4TilePKyPKaPaPii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 34 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z11folded_tilePK4TilePKyPKaPai' for 'sm_120a'
+ptxas info    : Function properties for _Z11folded_tilePK4TilePKyPKaPai
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 28 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z11folded_simtPK4TilePKyPKaPai' for 'sm_120a'
+ptxas info    : Function properties for _Z11folded_simtPK4TilePKyPKaPai
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 23 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z13dp4a_observerPK4TilePKyPKaPai' for 'sm_120a'
+ptxas info    : Function properties for _Z13dp4a_observerPK4TilePKyPKaPai
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 23 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z12dp4a_controlPK4TilePKyPai' for 'sm_120a'
+ptxas info    : Function properties for _Z12dp4a_controlPK4TilePKyPai
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 23 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6directPK4TilePaPii' for 'sm_120a'
+ptxas info    : Function properties for _Z6directPK4TilePaPii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 29 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z9maketablePai' for 'sm_120a'
+ptxas info    : Function properties for _Z9maketablePai
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 19 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+affine5_gu_folded.cu
+tmpxft_000062cc_00000000-10_affine5_gu_folded.cudafe1.cpp

@@ -1,0 +1,18 @@
+Welcome to vast.ai. If authentication fails, try again after a few seconds, and double check your ssh key.
+Have fun!
+gu stable_dp4a01 N34816 K5120 R32 tile0 split4 inclusive cold 112.640us carrier cold 116.736us
+gu native_e4m3 N34816 K5120 R32 tile32 split16 inclusive cold 139.264us carrier cold 139.264us
+gu native_e4m3 N34816 K5120 R32 tile64 split16 inclusive cold 141.312us carrier cold 145.376us
+gu native_e4m3 N34816 K5120 R32 tile128 split16 inclusive cold 143.328us carrier cold 143.360us
+down stable_dp4a01 N5120 K17408 R32 tile0 split4 inclusive cold 65.504us carrier cold 67.328us
+down native_e4m3 N5120 K17408 R32 tile32 split16 inclusive cold 79.616us carrier cold 77.824us
+down native_e4m3 N5120 K17408 R32 tile64 split16 inclusive cold 79.840us carrier cold 83.968us
+down native_e4m3 N5120 K17408 R32 tile128 split16 inclusive cold 79.872us carrier cold 77.792us
+head65536 stable_dp4a01 N65536 K5120 R32 tile0 split16 inclusive cold 190.464us carrier cold 192.512us
+head65536 native_e4m3 N65536 K5120 R32 tile32 split16 inclusive cold 249.856us carrier cold 249.856us
+head65536 native_e4m3 N65536 K5120 R32 tile64 split16 inclusive cold 251.904us carrier cold 262.112us
+head65536 native_e4m3 N65536 K5120 R32 tile128 split16 inclusive cold 259.808us carrier cold 261.888us
+fullhead stable_dp4a01 N248320 K5120 R32 tile0 split40 inclusive cold 725.024us carrier cold 725.024us
+fullhead native_e4m3 N248320 K5120 R32 tile32 split16 inclusive cold 946.176us carrier cold 946.176us
+fullhead native_e4m3 N248320 K5120 R32 tile64 split16 inclusive cold 944.128us carrier cold 945.920us
+fullhead native_e4m3 N248320 K5120 R32 tile128 split16 inclusive cold 966.400us carrier cold 966.400us

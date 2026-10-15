@@ -1,0 +1,19 @@
+{
+  "source": "e4de70869e44d479cbc5f90c8d1c49111916e6f8",
+  "scope": "official BF16 drafter, synthetic four raw target tap rows; restricted actual-fork oracle, full-A source domain; not a task-quality result",
+  "candidate_vocab": 65536,
+  "resident_weights_gb": 5.39,
+  "proposal_ids": [
+    256,
+    471,
+    2972,
+    48401
+  ],
+  "matched_sequential_proposals": 4,
+  "compared_sequential_proposals": 4,
+  "relative_rms": 0.00270070715,
+  "cosine": 0.999996372749,
+  "max_error": 0.03250706196,
+  "job": "binary-dspark-vocab-contract",
+  "reported_exit": 0
+}

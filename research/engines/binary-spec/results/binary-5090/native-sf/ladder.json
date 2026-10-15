@@ -1,0 +1,79 @@
+{
+  "scope": "fresh measured panels; exact benchmark counts and mode are recorded per row",
+  "rows": [
+    {
+      "path": "results/binary-5090/native-sf/tasks-modern-binary1-sf-off-plain-b32",
+      "receipt": {
+        "status": "complete",
+        "exit_code": 0
+      },
+      "mode": "quick",
+      "decoding": {
+        "temperature": 0,
+        "sampling": null,
+        "enable_thinking": false,
+        "max_tokens": {
+          "gsm8k": 4096,
+          "humaneval_plus": 4096
+        },
+        "concurrency": 32
+      },
+      "manifest_sha256": "0330533de253a6b29421216609c18cb4afe5a7e9bc16cb0c574af8b0b4d15c58",
+      "tokens": 20509,
+      "generation_seconds": 45.214997539296746,
+      "http_tokens_second": 453.58843561089327,
+      "benchmarks": {
+        "gsm8k": {
+          "n": 32,
+          "metrics": {
+            "accuracy": {
+              "score": 0.90625,
+              "se": 0.05152697639950359,
+              "n": 32,
+              "correct": 29
+            }
+          },
+          "truncated": 1,
+          "completion_tokens": 15371,
+          "generation_s": 39.023804877884686,
+          "http_tokens_second": 393.88778331840604
+        },
+        "humaneval_plus": {
+          "n": 32,
+          "metrics": {
+            "base": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            },
+            "plus": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            }
+          },
+          "truncated": 0,
+          "completion_tokens": 5138,
+          "generation_s": 6.19119266141206,
+          "http_tokens_second": 829.8885660631578
+        }
+      },
+      "native_counters": {
+        "accepted_drafts": 0,
+        "proposed_drafts": 0,
+        "verify_rounds": 0,
+        "generated_tokens": 20572,
+        "lookup_proposed": 0,
+        "lookup_accepted": 0,
+        "lookup_rounds": 0,
+        "verify_s": 45.181826171000004,
+        "draft_s": 0.00010922500000000001,
+        "busy_s": 45.208658541000005,
+        "acceptance_fraction": null,
+        "emitted_per_verify_round": null
+      }
+    }
+  ]
+}

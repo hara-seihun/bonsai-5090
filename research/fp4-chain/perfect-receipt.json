@@ -1,0 +1,19 @@
+{
+  "exit": 0,
+  "stdout": "{\"kind\":\"compact_projection\",\"states\":240,\"max_probe\":2,\"table_bytes\":8192,\"target_encoding\":\"three independent 3-bit fields\"}\n{\"kind\":\"observer_projection\",\"native_image_inputs\":729,\"states\":240,\"max_probe\":3,\"hash_bytes\":16384}\n{\"status\":\"pass\",\"device\":\"NVIDIA GeForce RTX 5090\",\"cases\":531441,\"distinct_outputs_per_full_tile\":128,\"mma_per_tile\":2,\"missing\":0,\"mismatches\":0,\"dictionary_bytes\":16384,\"labels_bytes\":108,\"input_bytes\":2916,\"output_bytes\":2125764,\"timings_ms\":{\"native_tile_hash_joint_observer\":{\"median\":0.005176,\"min\":0.005136,\"max\":0.005390},\"native_tile_compact_joint_observer\":{\"median\":0.004941,\"min\":0.004926,\"max\":0.004971},\"native_tile_binary_joint_observer\":{\"median\":0.013508,\"min\":0.013472,\"max\":0.013513},\"native_tile_prepared_joint_observer\":{\"median\":0.004684,\"min\":0.004662,\"max\":0.004692},\"native_tile_ptx_joint_observer\":{\"median\":0.004416,\"min\":0.004396,\"max\":0.004647},\"native_tile_branchless_joint_observer\":{\"median\":0.004176,\"min\":0.004169,\"max\":0.004192},\"native_tile_perfect_joint_observer\":{\"median\":0.004686,\"min\":0.004678,\"max\":0.004708},\"lane_direct\":{\"median\":0.003252,\"min\":0.003247,\"max\":0.003436},\"pair_lookup_control\":{\"median\":0.002330,\"min\":0.002125,\"max\":0.002381}},\"graph_repetitions\":100,\"graph_rounds\":7,\"binary_dictionary_bytes\":149520,\"compact_dictionary_bytes\":8192,\"prepared_label_bytes\":108,\"pair_lookup_bytes\":729,\"packed_dictionary_bytes\":4096,\"perfect_dictionary_bytes\":8192,\"registers\":[24,24,24,26,26,26,26,24,14],\"local_bytes_per_thread\":[0,0,0,0,0,0,0,0,0],\"shared_bytes_per_block\":[0,0,0,0,0,0,0,0,0],\"scope\":\"all 27^4 ternary source tuples as shuffled 729x729 Cartesian pair matrix; 128 independent output cells per full tile; two TF32 MMAs with uniform K replication in each pair, 1/8 normalization, RNA padding, two reachable-pair exact-key hash lookups and final three-component dot-sum join; all producers and output included; no single-MMA K compression/model/HTTP claim\"}\n",
+  "stderr": "",
+  "wall_s": 2.3892714977264404,
+  "mutex": "Local\\BonsaiGPU",
+  "mutex_wait_result": 0,
+  "hashes": {
+    "native_tile_perfect.cu": "5562cab7445afdefdc01d9ef871aeaed0faf661c184d17a8a81036ed93b4bd35",
+    "native_tile_perfect.exe": "db1d0efd2dec923c0619286bdd4902f12bd451ebaa8741c47a83a7e66bf0c9e0",
+    "native-prime-observer.bin": "93a78c169f3d8876f65f90c72e1459f7597f8dbe968d5f10f62d4b452ea42116",
+    "native-pair-image.bin": "83450831d4b02f40db18e2e713824efce4dcbb79e6d84ee30e867811f08ad645",
+    "native-pair-hash.bin": "cbb38564dcc2273e9e67e7401fee54467abb1b3fc23aecafb6182c852b8782da",
+    "native-pair-compact.bin": "0eeda7e7361f1709293357f9069f618f2e7243707e53bf7617ac5a93fc94d7c9",
+    "native-pair-packed.bin": "a8949713e90818f59b2fb95666076ad561ec245d8a6ecef3f853da0b4e4674bd",
+    "native-pair-perfect.bin": "06daa2fa7d3fe6e53c10d7cf83425b8cc72cf36f950e7ab11bb8770d93ba078c",
+    "build.log": "02b8133bd5cd6241cffeb12f61b05ba160df09437f657139e8154460fa34123b"
+  }
+}

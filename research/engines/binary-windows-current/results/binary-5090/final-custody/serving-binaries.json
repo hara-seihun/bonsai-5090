@@ -1,0 +1,22 @@
+{
+  "status": "exported-and-sha256-checked",
+  "checked_at": "2026-10-11T00:10:11Z",
+  "local_owner": "~/data/binary-5090/final-serving",
+  "dspark_precision": {
+    "source": "0ffcaea",
+    "target_engine_source": "952efb353dcc769e32862386c13c153eb98075ad",
+    "remote_root": "/workspace/binary/dspark-fast-repaired/halo",
+    "files": {
+      "h5": "e313149215e9e81fde319fb59fa059b5e321a122275a767f412fe570d9fdffad",
+      "h5-server": "bacfa67fd76ab37e38a0ea49a1ec0bdf6699f5f6155b90929f03a9704c177457",
+      "dspark-native-contract": "424c7478c29b50afae67b5b9c2ad9c928504910cd738e3619f177b4ab88718d5"
+    }
+  },
+  "whole_ffn": {
+    "source": "952efb353dcc769e32862386c13c153eb98075ad",
+    "remote_root": "/workspace/binary/whole-ffn/halo",
+    "local_subdirectory": "whole-ffn",
+    "manifest": "~/data/binary-5090/final-serving/whole-ffn-final.sha256"
+  },
+  "deletion_boundary": "Measured executables and their hash manifests are retained custody. Compressed transfer duplicates may be removed after verified extraction; no serving unit is installed. Rebuildable object/source caches have their named source owners in tools/binary/README.md."
+}

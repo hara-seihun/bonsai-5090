@@ -1,0 +1,2 @@
+name, driver_version, power.limit [W], clocks.current.sm [MHz], memory.total [MiB]
+NVIDIA GeForce RTX 5090, 595.58.03, 500.00 W, 2715 MHz, 32607 MiB

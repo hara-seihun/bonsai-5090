@@ -1,0 +1,10 @@
+Welcome to vast.ai. If authentication fails, try again after a few seconds, and double check your ssh key.
+Have fun!
+a2cbd9a932c762919f927e5e9a1b2cd0390d6e40a68ef55316a2fbad1f6ffe97  /workspace/binary/whole-map/three-h5
+cd56c128ee21db5467b7b217d90510a9d16f3d4bf1fa41b504233395d40c40cc  /workspace/binary/whole-map/three-server
+1817da260053ed9eac281f8153a55dc7813396b9b4e2cbadf3489c5fb992d8aa  /workspace/binary/whole-map/adapter.o
+1e34948c19906f64ffd2ad56847da49ef73492f70a1db29d2e90c8f77ade1d09  experiments/binary-whole-map/build/signed_digits.o
+5b29212cb2ecab3ef748f4c5e7220b2e047bb88cbc8417f5c4e77f242baae342  build/engine.o
+7c5e57a70f5a2cd01b8109ceba877011ec735cb27aa341ff6ddd965dfce69554  build/main.o
+462944b9ede315f1c5da3c6681db70eb468cbeeef05772885b7d780252929e06  build/server.o
+usage: h5 check|decodebench|gen|bench MODEL ...

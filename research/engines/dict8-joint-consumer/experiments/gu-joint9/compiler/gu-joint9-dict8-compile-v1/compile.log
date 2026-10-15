@@ -1,0 +1,22 @@
+C:/work\models\experiments\bonsai-quality-20261013\gu-joint9-dict8-compile-v1\src\probe.cu(795): error: no instance of function template "h5::gemm_fp4_body" matches the argument list
+            argument types are: (const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, std::nullptr_t, int, float *, int, const float *, h5::FuseArgs, h5::TailArgs, const uint32_t *)
+   gemm_fp4_body<8,2,32,3,10,0,false,true>(A,AS,AG,R,K,W,nullptr,N,out,ldo,means,FuseArgs{},TailArgs{},dict);
+   ^
+C:/work\models\experiments\bonsai-quality-20261013\gu-joint9-dict8-compile-v1\src\probe.cu(243): note #3322-D: number of parameters of function template "h5::gemm_fp4_body" does not match the call
+  __declspec(__device__) __forceinline void gemm_fp4_body(const uint8_t* __restrict A, const uint8_t* __restrict AS, const float* __restrict AG,
+                                            ^
+
+C:/work\models\experiments\bonsai-quality-20261013\gu-joint9-dict8-compile-v1\src\probe.cu(288): warning #177-D: variable "book" was declared but never referenced
+    uint32_t* book = nullptr;
+              ^
+          detected during instantiation of "void h5::gemm_fp4_body<FW,WG,TOKW,MODE,WF,PIPE,MICRO,CARRIER,DEGREE8,FUSE,TAIL>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *, const h5::FuseArgs &, const h5::TailArgs &) [with FW=8, WG=2, TOKW=32, MODE=3, WF=0, PIPE=0, MICRO=false, CARRIER=true, DEGREE8=false, FUSE=false, TAIL=0]" at line 798
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+C:/work\models\experiments\bonsai-quality-20261013\gu-joint9-dict8-compile-v1\src\probe.cu(406): warning #177-D: variable "fregs" was declared but never referenced
+    FuseRegs<FW, FUSE ? FTPW : 1> fregs;
+                                  ^
+          detected during instantiation of "void h5::gemm_fp4_body<FW,WG,TOKW,MODE,WF,PIPE,MICRO,CARRIER,DEGREE8,FUSE,TAIL>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *, const h5::FuseArgs &, const h5::TailArgs &) [with FW=8, WG=2, TOKW=32, MODE=3, WF=0, PIPE=0, MICRO=false, CARRIER=true, DEGREE8=false, FUSE=false, TAIL=0]" at line 798
+
+1 error detected in the compilation of "src/probe.cu".
+probe.cu

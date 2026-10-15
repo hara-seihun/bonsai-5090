@@ -1,0 +1,47 @@
+{
+  "gpu_work": false,
+  "platform": "Linux",
+  "repaired_failed_prefix": "The first successor fault sequence lacked header/size restoration after extra-byte case; the actual sequence now runs under isolated tiny fixture and reports expected/actual errors. Prior failure remains in v1 native custody.",
+  "builds": [
+    {
+      "name": "cache_tool",
+      "command": [
+        "g++",
+        "-std=c++17",
+        "-O2",
+        "-pthread",
+        "-I~/work/clones/dict8-model-identity/src",
+        "~/work/clones/dict8-model-identity/experiments/gu-dict8-cache/cache_tool.cpp",
+        "~/work/clones/dict8-model-identity/src/gguf.cpp",
+        "-lcrypto",
+        "-o",
+        "/tmp/dict8-cpu-tools-3_wpdk8p/cache_tool"
+      ],
+      "exit": 0,
+      "seconds": 2.4341012130025774,
+      "stderr": "",
+      "source_sha256": "afe1a5b7722f99cad3eb89bafdf02f4614f7ccaeab46a7fda7d33e1eaa1ecda4"
+    },
+    {
+      "name": "fault_test",
+      "command": [
+        "g++",
+        "-std=c++17",
+        "-O2",
+        "-pthread",
+        "-I~/work/clones/dict8-model-identity/src",
+        "~/work/clones/dict8-model-identity/experiments/gu-dict8-cache/fault_test.cpp",
+        "~/work/clones/dict8-model-identity/src/gguf.cpp",
+        "-lcrypto",
+        "-o",
+        "/tmp/dict8-cpu-tools-3_wpdk8p/fault_test"
+      ],
+      "exit": 0,
+      "seconds": 2.207670461037196,
+      "stderr": "",
+      "source_sha256": "8ce835d6a8d2fb2c9682b118f0c6cce11c97f9ebec723db8738bc17e84fea585"
+    }
+  ],
+  "model_source_sha256": "15880a28ee2f4704a5295d7e3c6d232e0bda74f39d932abbb10668997686a96b",
+  "common_source_sha256": "06158e15585fc1db7c37df24d14907a0968e122fd4492bc2dd2d3436d115daa6"
+}

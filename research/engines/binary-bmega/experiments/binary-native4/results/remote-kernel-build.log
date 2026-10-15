@@ -1,0 +1,46 @@
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_ZN7native410projectionILi128ELi2EEEvNS_7WeightsENS_7CarrierEPfiS3_iiiiiff' for 'sm_120a'
+ptxas info    : Function properties for _ZN7native410projectionILi128ELi2EEEvNS_7WeightsENS_7CarrierEPfiS3_iiiiiff
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 64 registers, used 1 barriers, 8448 bytes smem
+ptxas info    : Compile time = 24.393 ms
+ptxas info    : Compiling entry function '_ZN7native410projectionILi128ELi1EEEvNS_7WeightsENS_7CarrierEPfiS3_iiiiiff' for 'sm_120a'
+ptxas info    : Function properties for _ZN7native410projectionILi128ELi1EEEvNS_7WeightsENS_7CarrierEPfiS3_iiiiiff
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 96 registers, used 1 barriers, 4224 bytes smem
+ptxas info    : Compile time = 21.471 ms
+ptxas info    : Compiling entry function '_ZN7native410projectionILi64ELi2EEEvNS_7WeightsENS_7CarrierEPfiS3_iiiiiff' for 'sm_120a'
+ptxas info    : Function properties for _ZN7native410projectionILi64ELi2EEEvNS_7WeightsENS_7CarrierEPfiS3_iiiiiff
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 94 registers, used 1 barriers, 8448 bytes smem
+ptxas info    : Compile time = 22.474 ms
+ptxas info    : Compiling entry function '_ZN7native410projectionILi64ELi1EEEvNS_7WeightsENS_7CarrierEPfiS3_iiiiiff' for 'sm_120a'
+ptxas info    : Function properties for _ZN7native410projectionILi64ELi1EEEvNS_7WeightsENS_7CarrierEPfiS3_iiiiiff
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 94 registers, used 1 barriers, 4224 bytes smem
+ptxas info    : Compile time = 22.320 ms
+ptxas info    : Compiling entry function '_ZN7native410projectionILi32ELi2EEEvNS_7WeightsENS_7CarrierEPfiS3_iiiiiff' for 'sm_120a'
+ptxas info    : Function properties for _ZN7native410projectionILi32ELi2EEEvNS_7WeightsENS_7CarrierEPfiS3_iiiiiff
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 94 registers, used 1 barriers, 8448 bytes smem
+ptxas info    : Compile time = 29.448 ms
+ptxas info    : Compiling entry function '_ZN7native410projectionILi32ELi1EEEvNS_7WeightsENS_7CarrierEPfiS3_iiiiiff' for 'sm_120a'
+ptxas info    : Function properties for _ZN7native410projectionILi32ELi1EEEvNS_7WeightsENS_7CarrierEPfiS3_iiiiiff
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 94 registers, used 1 barriers, 4224 bytes smem
+ptxas info    : Compile time = 22.332 ms
+ptxas info    : Compiling entry function '_ZN7native412continuationEPKfPfiiiff' for 'sm_120a'
+ptxas info    : Function properties for _ZN7native412continuationEPKfPfiiiff
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 40 registers, used 0 barriers
+ptxas info    : Compile time = 4.931 ms
+ptxas info    : Compiling entry function '_ZN7native413repack_kernelEiNS_7CarrierE' for 'sm_120a'
+ptxas info    : Function properties for _ZN7native413repack_kernelEiNS_7CarrierE
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 20 registers, used 0 barriers
+ptxas info    : Compile time = 1.419 ms
+ptxas info    : Compiling entry function '_ZN7native414prepare_kernelEPKjNS_7WeightsEii' for 'sm_120a'
+ptxas info    : Function properties for _ZN7native414prepare_kernelEPKjNS_7WeightsEii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 46 registers, used 0 barriers
+ptxas info    : Compile time = 10.375 ms

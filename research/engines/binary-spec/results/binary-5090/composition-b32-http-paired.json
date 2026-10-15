@@ -1,0 +1,51 @@
+{
+  "scope": "same-item scoped panel, not full quality gate",
+  "reference": "results/binary-5090/tasks-hybrid-initial/tasks-modern-packed1-hybrid-plain-b32",
+  "candidate": "results/binary-5090/tasks-composed/tasks-modern-packed1-fused-plain-b32",
+  "reference_timing": {
+    "completion_tokens": 20914,
+    "seconds": 38.94110944215208,
+    "http_tok_s": 537.0673896969533
+  },
+  "candidate_timing": {
+    "completion_tokens": 21749,
+    "seconds": 39.18764764163643,
+    "http_tok_s": 554.9963141163884
+  },
+  "http_ratio": 1.0333830069808403,
+  "benchmarks": {
+    "gsm8k": {
+      "paired": {
+        "accuracy": {
+          "n": 32,
+          "reference_correct": 29,
+          "candidate_correct": 30,
+          "gains": 1,
+          "losses": 0
+        }
+      },
+      "reference_truncated": 1,
+      "candidate_truncated": 1
+    },
+    "humaneval_plus": {
+      "paired": {
+        "plus": {
+          "n": 32,
+          "reference_correct": 32,
+          "candidate_correct": 32,
+          "gains": 0,
+          "losses": 0
+        },
+        "base": {
+          "n": 32,
+          "reference_correct": 32,
+          "candidate_correct": 32,
+          "gains": 0,
+          "losses": 0
+        }
+      },
+      "reference_truncated": 0,
+      "candidate_truncated": 0
+    }
+  }
+}

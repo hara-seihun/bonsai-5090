@@ -1,0 +1,24 @@
+{
+  "name": "halo-batch-buckets-v1-r8",
+  "command": [
+    "python3",
+    "/workspace/halo-6000/bench/run-batch.py",
+    "/workspace/models/gguf/Qwen3.6-35B-A3B-ternary-v1-PTQ1_0.gguf",
+    "8",
+    "--steps",
+    "16",
+    "--bucketed"
+  ],
+  "started_at": "2026-10-05T03:47:16.277255+00:00",
+  "state": "succeeded",
+  "pid": 65897,
+  "process_identity": {
+    "start_ticks": "64655788",
+    "boot_id": "00000000-0000-0000-0000-000000000000"
+  },
+  "child_pid": 65899,
+  "child_pgid": 65899,
+  "exit_code": 0,
+  "wall_seconds": 250.15583994297776,
+  "finished_at": "2026-10-05T03:51:26.433088+00:00"
+}

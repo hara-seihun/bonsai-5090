@@ -1,0 +1,1003 @@
+{
+  "scope": "synthetic fixed work: repeated token198, prefix32 per slot, independent-slot decode positions32..37, ctx512, hybrid/F16state/F16KV, PDL1, GUoff; not HTTP throughput",
+  "rows": {
+    "32": {
+      "native_decode_samples": 12,
+      "native_decode_median_ms": 22.981759999999998,
+      "native_decode_tokens_per_s": 1392.444128931754,
+      "native_graph_routes": {
+        "2": 12
+      },
+      "native_host_mean_ms": {
+        "prepare_ns": 0.00061975,
+        "submit_ns": 0.012279166666666666,
+        "sync_ns": 22.96801475,
+        "finish_ns": 0.00013783333333333334,
+        "total_ns": 22.9810515,
+        "launch_wall_ns": 0.0108435
+      },
+      "traced_rounds": [
+        {
+          "traced_wall_ms": 23.736636,
+          "kernel_union_ms": 21.88793,
+          "kernel_sum_ms": 22.253797,
+          "launches": 1879
+        },
+        {
+          "traced_wall_ms": 23.192029,
+          "kernel_union_ms": 21.910948,
+          "kernel_sum_ms": 22.279086,
+          "launches": 1879
+        },
+        {
+          "traced_wall_ms": 23.221525,
+          "kernel_union_ms": 21.964641,
+          "kernel_sum_ms": 22.33201,
+          "launches": 1879
+        },
+        {
+          "traced_wall_ms": 23.235302,
+          "kernel_union_ms": 21.976232,
+          "kernel_sum_ms": 22.346295,
+          "launches": 1879
+        },
+        {
+          "traced_wall_ms": 23.198431,
+          "kernel_union_ms": 21.934304,
+          "kernel_sum_ms": 22.301391,
+          "launches": 1879
+        },
+        {
+          "traced_wall_ms": 23.226195,
+          "kernel_union_ms": 21.971334,
+          "kernel_sum_ms": 22.341423,
+          "launches": 1879
+        }
+      ],
+      "family_work_ms_per_round": {
+        "other": 0.005152166666666667,
+        "prep-normalization": 1.7794761666666667,
+        "A8-producer": 0.47376233333333334,
+        "packed-projections": 13.970746,
+        "projection-continuations": 1.7652038333333333,
+        "conv": 0.30648983333333335,
+        "gdn": 2.9869921666666666,
+        "attention": 0.29326633333333335,
+        "packed-head": 0.7082896666666666,
+        "head-select": 0.019621833333333335
+      },
+      "family_union_ms_per_round": {
+        "other": 0.005152166666666667,
+        "prep-normalization": 1.7778546666666666,
+        "A8-producer": 0.47376233333333334,
+        "packed-projections": 13.970746,
+        "projection-continuations": 1.7652038333333333,
+        "conv": 0.30648983333333335,
+        "gdn": 2.9869921666666666,
+        "attention": 0.17495366666666667,
+        "packed-head": 0.708199,
+        "head-select": 0.019621833333333335
+      },
+      "kernel_groups": [
+        {
+          "name": "void bitserial::projection<(int)16, (bool)0>(const unsigned int *, const __half *, bitserial::Carrier, float *, float *, int, int, int, int, float, float)",
+          "geometry": [
+            272,
+            10,
+            1,
+            128,
+            1,
+            1,
+            148,
+            2048
+          ],
+          "count": 768,
+          "work_ms_per_round": 6.0403519999999995,
+          "median_us": 47.394
+        },
+        {
+          "name": "void bitserial::projection<(int)16, (bool)0>(const unsigned int *, const __half *, bitserial::Carrier, float *, float *, int, int, int, int, float, float)",
+          "geometry": [
+            40,
+            34,
+            1,
+            128,
+            1,
+            1,
+            148,
+            2048
+          ],
+          "count": 768,
+          "work_ms_per_round": 3.2680061666666664,
+          "median_us": 26.049
+        },
+        {
+          "name": "void h5::k_gdn<__half, (int)4, (int)2, (bool)0, (bool)0, (bool)0>(h5::GdnArgs)",
+          "geometry": [
+            96,
+            32,
+            1,
+            256,
+            1,
+            1,
+            128,
+            0
+          ],
+          "count": 288,
+          "work_ms_per_round": 2.9869921666666666,
+          "median_us": 62.21
+        },
+        {
+          "name": "void bitserial::projection<(int)16, (bool)0>(const unsigned int *, const __half *, bitserial::Carrier, float *, float *, int, int, int, int, float, float)",
+          "geometry": [
+            128,
+            10,
+            1,
+            128,
+            1,
+            1,
+            148,
+            2048
+          ],
+          "count": 576,
+          "work_ms_per_round": 2.3303743333333333,
+          "median_us": 24.577
+        },
+        {
+          "name": "void bitserial::projection<(int)16, (bool)0>(const unsigned int *, const __half *, bitserial::Carrier, float *, float *, int, int, int, int, float, float)",
+          "geometry": [
+            40,
+            12,
+            1,
+            128,
+            1,
+            1,
+            148,
+            2048
+          ],
+          "count": 768,
+          "work_ms_per_round": 1.39437,
+          "median_us": 10.88
+        },
+        {
+          "name": "void h5::k_prep2<(bool)0>(h5::PrepArgs)",
+          "geometry": [
+            32,
+            1,
+            1,
+            192,
+            1,
+            1,
+            96,
+            0
+          ],
+          "count": 384,
+          "work_ms_per_round": 0.7935726666666666,
+          "median_us": 12.5125
+        },
+        {
+          "name": "void bitserial::projection<(int)16, (bool)0>(const unsigned int *, const __half *, bitserial::Carrier, float *, float *, int, int, int, int, float, float)",
+          "geometry": [
+            112,
+            10,
+            1,
+            128,
+            1,
+            1,
+            148,
+            2048
+          ],
+          "count": 192,
+          "work_ms_per_round": 0.719396,
+          "median_us": 22.753
+        },
+        {
+          "name": "void bitserial::projection<(int)16, (bool)0>(const unsigned int *, const __half *, bitserial::Carrier, float *, float *, int, int, int, int, float, float)",
+          "geometry": [
+            1940,
+            1,
+            1,
+            128,
+            1,
+            1,
+            148,
+            2048
+          ],
+          "count": 12,
+          "work_ms_per_round": 0.7082896666666666,
+          "median_us": 354.315
+        },
+        {
+          "name": "bitserial::continuation(const float *, float *, int, int, float, float)",
+          "geometry": [
+            136,
+            16,
+            1,
+            256,
+            1,
+            1,
+            40,
+            0
+          ],
+          "count": 768,
+          "work_ms_per_round": 0.6589898333333334,
+          "median_us": 5.152
+        },
+        {
+          "name": "bitserial::continuation(const float *, float *, int, int, float, float)",
+          "geometry": [
+            20,
+            16,
+            1,
+            256,
+            1,
+            1,
+            40,
+            0
+          ],
+          "count": 1536,
+          "work_ms_per_round": 0.6202106666666667,
+          "median_us": 2.704
+        },
+        {
+          "name": "void h5::k_prep2<(bool)0>(h5::PrepArgs)",
+          "geometry": [
+            32,
+            1,
+            1,
+            544,
+            1,
+            1,
+            96,
+            0
+          ],
+          "count": 384,
+          "work_ms_per_round": 0.5136211666666667,
+          "median_us": 7.968
+        },
+        {
+          "name": "void h5::k_prep2<(bool)0>(h5::PrepArgs)",
+          "geometry": [
+            32,
+            1,
+            1,
+            160,
+            1,
+            1,
+            96,
+            0
+          ],
+          "count": 780,
+          "work_ms_per_round": 0.4722823333333333,
+          "median_us": 3.584
+        },
+        {
+          "name": "void h5::k_conv<__half>(h5::ConvArgs)",
+          "geometry": [
+            80,
+            32,
+            1,
+            128,
+            1,
+            1,
+            64,
+            0
+          ],
+          "count": 288,
+          "work_ms_per_round": 0.30648983333333335,
+          "median_us": 6.368
+        },
+        {
+          "name": "bitserial::continuation(const float *, float *, int, int, float, float)",
+          "geometry": [
+            64,
+            16,
+            1,
+            256,
+            1,
+            1,
+            40,
+            0
+          ],
+          "count": 576,
+          "work_ms_per_round": 0.275854,
+          "median_us": 2.88
+        },
+        {
+          "name": "void bitserial::projection<(int)16, (bool)0>(const unsigned int *, const __half *, bitserial::Carrier, float *, float *, int, int, int, int, float, float)",
+          "geometry": [
+            1,
+            40,
+            1,
+            128,
+            1,
+            1,
+            148,
+            2048
+          ],
+          "count": 576,
+          "work_ms_per_round": 0.2182475,
+          "median_us": 2.352
+        },
+        {
+          "name": "void bitserial::producer<(bool)0>(const float *, int, bitserial::Carrier)",
+          "geometry": [
+            136,
+            32,
+            1,
+            128,
+            1,
+            1,
+            27,
+            0
+          ],
+          "count": 384,
+          "work_ms_per_round": 0.19044799999999998,
+          "median_us": 2.976
+        },
+        {
+          "name": "void bitserial::producer<(bool)0>(const float *, int, bitserial::Carrier)",
+          "geometry": [
+            40,
+            32,
+            1,
+            128,
+            1,
+            1,
+            27,
+            0
+          ],
+          "count": 774,
+          "work_ms_per_round": 0.18341866666666665,
+          "median_us": 1.408
+        },
+        {
+          "name": "bitserial::continuation(const float *, float *, int, int, float, float)",
+          "geometry": [
+            1,
+            16,
+            1,
+            256,
+            1,
+            1,
+            40,
+            0
+          ],
+          "count": 576,
+          "work_ms_per_round": 0.12825416666666667,
+          "median_us": 1.376
+        },
+        {
+          "name": "h5::k_attn_combine(h5::AttnTcArgs, int, int)",
+          "geometry": [
+            32,
+            24,
+            1,
+            256,
+            1,
+            1,
+            40,
+            0
+          ],
+          "count": 96,
+          "work_ms_per_round": 0.12747533333333333,
+          "median_us": 7.968
+        },
+        {
+          "name": "void h5::k_attn_tc<(int)1, (bool)0, (int)256, (int)6>(h5::AttnTcArgs)",
+          "geometry": [
+            32,
+            4,
+            1,
+            128,
+            1,
+            1,
+            72,
+            98304
+          ],
+          "count": 96,
+          "work_ms_per_round": 0.12195,
+          "median_us": 7.648
+        },
+        {
+          "name": "void bitserial::producer<(bool)0>(const float *, int, bitserial::Carrier)",
+          "geometry": [
+            48,
+            32,
+            1,
+            128,
+            1,
+            1,
+            27,
+            0
+          ],
+          "count": 384,
+          "work_ms_per_round": 0.09989566666666666,
+          "median_us": 1.568
+        },
+        {
+          "name": "bitserial::continuation(const float *, float *, int, int, float, float)",
+          "geometry": [
+            56,
+            16,
+            1,
+            256,
+            1,
+            1,
+            40,
+            0
+          ],
+          "count": 192,
+          "work_ms_per_round": 0.08189516666666667,
+          "median_us": 2.56
+        },
+        {
+          "name": "h5::k_attn_pre(h5::AttnArgs)",
+          "geometry": [
+            28,
+            32,
+            1,
+            256,
+            1,
+            1,
+            38,
+            0
+          ],
+          "count": 96,
+          "work_ms_per_round": 0.043841,
+          "median_us": 2.688
+        },
+        {
+          "name": "void h5::k_argmax<(bool)0>(const float *, int, int *, const int *, const h5::Seg *, int, int, float, const int *, h5::RowStat *, int)",
+          "geometry": [
+            32,
+            1,
+            1,
+            1024,
+            1,
+            1,
+            42,
+            0
+          ],
+          "count": 6,
+          "work_ms_per_round": 0.019621833333333335,
+          "median_us": 19.5525
+        },
+        {
+          "name": "h5::k_embed_q1(const unsigned char *, const int *, float *)",
+          "geometry": [
+            32,
+            1,
+            1,
+            64,
+            1,
+            1,
+            40,
+            0
+          ],
+          "count": 6,
+          "work_ms_per_round": 0.005152166666666667,
+          "median_us": 5.1365
+        }
+      ],
+      "CUPTI_ACTIVITY_KIND_MEMCPY": {
+        "count": 42,
+        "bytes_per_round": 1924.0,
+        "work_ms_per_round": 0.0029600000000000004
+      },
+      "CUPTI_ACTIVITY_KIND_MEMSET": {
+        "count": 6,
+        "bytes_per_round": 4.0,
+        "work_ms_per_round": 0.000272
+      },
+      "note": "PDL1 kernel work sums can overlap; family unions also overlap across families. Native control is the untraced cached-graph decode price; traced kernels diagnose stages, not HTTP throughput."
+    },
+    "8": {
+      "native_decode_samples": 12,
+      "native_decode_median_ms": 8.5801895,
+      "native_decode_tokens_per_s": 932.7148539999579,
+      "native_graph_routes": {
+        "2": 12
+      },
+      "native_host_mean_ms": {
+        "prepare_ns": 0.0003800833333333333,
+        "submit_ns": 0.011446833333333333,
+        "sync_ns": 8.5650625,
+        "finish_ns": 0.000131,
+        "total_ns": 8.577020416666667,
+        "launch_wall_ns": 0.010049333333333334
+      },
+      "traced_rounds": [
+        {
+          "traced_wall_ms": 9.587705,
+          "kernel_union_ms": 8.457327,
+          "kernel_sum_ms": 8.714235,
+          "launches": 1271
+        },
+        {
+          "traced_wall_ms": 9.331051,
+          "kernel_union_ms": 8.44744,
+          "kernel_sum_ms": 8.701402,
+          "launches": 1271
+        },
+        {
+          "traced_wall_ms": 9.317125,
+          "kernel_union_ms": 8.450003,
+          "kernel_sum_ms": 8.705661,
+          "launches": 1271
+        },
+        {
+          "traced_wall_ms": 9.308869,
+          "kernel_union_ms": 8.436177,
+          "kernel_sum_ms": 8.693625,
+          "launches": 1271
+        },
+        {
+          "traced_wall_ms": 9.302427,
+          "kernel_union_ms": 8.436113,
+          "kernel_sum_ms": 8.693052,
+          "launches": 1271
+        },
+        {
+          "traced_wall_ms": 9.303188,
+          "kernel_union_ms": 8.438414,
+          "kernel_sum_ms": 8.69625,
+          "launches": 1271
+        }
+      ],
+      "family_work_ms_per_round": {
+        "other": 0.005088333333333334,
+        "prep-normalization": 1.443998,
+        "A8-producer": 0.278159,
+        "packed-projections": 5.121396333333333,
+        "projection-continuations": 0.5438731666666666,
+        "conv": 0.14585116666666667,
+        "gdn": 0.7921326666666667,
+        "attention": 0.16838050000000002,
+        "packed-head": 0.18825666666666666,
+        "head-select": 0.013568333333333333
+      },
+      "family_union_ms_per_round": {
+        "other": 0.005088333333333334,
+        "prep-normalization": 1.4425686666666666,
+        "A8-producer": 0.278159,
+        "packed-projections": 5.121396333333333,
+        "projection-continuations": 0.5438731666666666,
+        "conv": 0.14585116666666667,
+        "gdn": 0.7921326666666667,
+        "attention": 0.10741250000000001,
+        "packed-head": 0.18825666666666666,
+        "head-select": 0.013568333333333333
+      },
+      "kernel_groups": [
+        {
+          "name": "void bitserial::projection<(int)8, (bool)0>(const unsigned int *, const __half *, bitserial::Carrier, float *, float *, int, int, int, int, float, float)",
+          "geometry": [
+            272,
+            3,
+            1,
+            128,
+            1,
+            1,
+            85,
+            1024
+          ],
+          "count": 384,
+          "work_ms_per_round": 2.156527666666667,
+          "median_us": 33.985
+        },
+        {
+          "name": "void bitserial::projection<(int)8, (bool)0>(const unsigned int *, const __half *, bitserial::Carrier, float *, float *, int, int, int, int, float, float)",
+          "geometry": [
+            20,
+            34,
+            1,
+            256,
+            1,
+            1,
+            85,
+            1024
+          ],
+          "count": 384,
+          "work_ms_per_round": 1.1693405,
+          "median_us": 18.273
+        },
+        {
+          "name": "void bitserial::projection<(int)8, (bool)0>(const unsigned int *, const __half *, bitserial::Carrier, float *, float *, int, int, int, int, float, float)",
+          "geometry": [
+            64,
+            10,
+            1,
+            256,
+            1,
+            1,
+            85,
+            1024
+          ],
+          "count": 288,
+          "work_ms_per_round": 0.8222385,
+          "median_us": 17.0725
+        },
+        {
+          "name": "void h5::k_gdn<__half, (int)4, (int)2, (bool)0, (bool)0, (bool)0>(h5::GdnArgs)",
+          "geometry": [
+            96,
+            8,
+            1,
+            256,
+            1,
+            1,
+            128,
+            0
+          ],
+          "count": 288,
+          "work_ms_per_round": 0.7921326666666667,
+          "median_us": 16.4805
+        },
+        {
+          "name": "void bitserial::projection<(int)8, (bool)0>(const unsigned int *, const __half *, bitserial::Carrier, float *, float *, int, int, int, int, float, float)",
+          "geometry": [
+            20,
+            12,
+            1,
+            256,
+            1,
+            1,
+            85,
+            1024
+          ],
+          "count": 384,
+          "work_ms_per_round": 0.5943071666666667,
+          "median_us": 9.28
+        },
+        {
+          "name": "void h5::k_prep2<(bool)0>(h5::PrepArgs)",
+          "geometry": [
+            8,
+            1,
+            1,
+            192,
+            1,
+            1,
+            96,
+            0
+          ],
+          "count": 384,
+          "work_ms_per_round": 0.5208586666666667,
+          "median_us": 8.96
+        },
+        {
+          "name": "void h5::k_prep2<(bool)0>(h5::PrepArgs)",
+          "geometry": [
+            8,
+            1,
+            1,
+            544,
+            1,
+            1,
+            96,
+            0
+          ],
+          "count": 384,
+          "work_ms_per_round": 0.4815686666666667,
+          "median_us": 7.52
+        },
+        {
+          "name": "void h5::k_prep2<(bool)0>(h5::PrepArgs)",
+          "geometry": [
+            8,
+            1,
+            1,
+            160,
+            1,
+            1,
+            96,
+            0
+          ],
+          "count": 780,
+          "work_ms_per_round": 0.4415706666666666,
+          "median_us": 3.36
+        },
+        {
+          "name": "void bitserial::projection<(int)8, (bool)0>(const unsigned int *, const __half *, bitserial::Carrier, float *, float *, int, int, int, int, float, float)",
+          "geometry": [
+            56,
+            10,
+            1,
+            256,
+            1,
+            1,
+            85,
+            1024
+          ],
+          "count": 96,
+          "work_ms_per_round": 0.2656615,
+          "median_us": 16.5765
+        },
+        {
+          "name": "bitserial::continuation(const float *, float *, int, int, float, float)",
+          "geometry": [
+            20,
+            8,
+            1,
+            256,
+            1,
+            1,
+            40,
+            0
+          ],
+          "count": 768,
+          "work_ms_per_round": 0.22932466666666665,
+          "median_us": 1.872
+        },
+        {
+          "name": "void bitserial::projection<(int)8, (bool)0>(const unsigned int *, const __half *, bitserial::Carrier, float *, float *, int, int, int, int, float, float)",
+          "geometry": [
+            1940,
+            3,
+            1,
+            128,
+            1,
+            1,
+            85,
+            1024
+          ],
+          "count": 6,
+          "work_ms_per_round": 0.18825666666666666,
+          "median_us": 188.438
+        },
+        {
+          "name": "void h5::k_conv<__half>(h5::ConvArgs)",
+          "geometry": [
+            80,
+            8,
+            1,
+            128,
+            1,
+            1,
+            64,
+            0
+          ],
+          "count": 288,
+          "work_ms_per_round": 0.14585116666666667,
+          "median_us": 3.04
+        },
+        {
+          "name": "void bitserial::producer<(bool)0>(const float *, int, bitserial::Carrier)",
+          "geometry": [
+            40,
+            8,
+            1,
+            128,
+            1,
+            1,
+            27,
+            0
+          ],
+          "count": 774,
+          "work_ms_per_round": 0.12801633333333332,
+          "median_us": 0.992
+        },
+        {
+          "name": "bitserial::continuation(const float *, float *, int, int, float, float)",
+          "geometry": [
+            136,
+            8,
+            1,
+            256,
+            1,
+            1,
+            40,
+            0
+          ],
+          "count": 384,
+          "work_ms_per_round": 0.125246,
+          "median_us": 1.952
+        },
+        {
+          "name": "void bitserial::projection<(int)8, (bool)0>(const unsigned int *, const __half *, bitserial::Carrier, float *, float *, int, int, int, int, float, float)",
+          "geometry": [
+            1,
+            40,
+            1,
+            128,
+            1,
+            1,
+            85,
+            1024
+          ],
+          "count": 288,
+          "work_ms_per_round": 0.113321,
+          "median_us": 2.336
+        },
+        {
+          "name": "bitserial::continuation(const float *, float *, int, int, float, float)",
+          "geometry": [
+            64,
+            8,
+            1,
+            256,
+            1,
+            1,
+            40,
+            0
+          ],
+          "count": 288,
+          "work_ms_per_round": 0.08386416666666667,
+          "median_us": 1.728
+        },
+        {
+          "name": "void bitserial::producer<(bool)0>(const float *, int, bitserial::Carrier)",
+          "geometry": [
+            136,
+            8,
+            1,
+            128,
+            1,
+            1,
+            27,
+            0
+          ],
+          "count": 384,
+          "work_ms_per_round": 0.08371383333333333,
+          "median_us": 1.312
+        },
+        {
+          "name": "h5::k_attn_combine(h5::AttnTcArgs, int, int)",
+          "geometry": [
+            8,
+            24,
+            1,
+            256,
+            1,
+            1,
+            40,
+            0
+          ],
+          "count": 96,
+          "work_ms_per_round": 0.070707,
+          "median_us": 4.384
+        },
+        {
+          "name": "bitserial::continuation(const float *, float *, int, int, float, float)",
+          "geometry": [
+            1,
+            8,
+            1,
+            256,
+            1,
+            1,
+            40,
+            0
+          ],
+          "count": 288,
+          "work_ms_per_round": 0.0665515,
+          "median_us": 1.376
+        },
+        {
+          "name": "void bitserial::producer<(bool)0>(const float *, int, bitserial::Carrier)",
+          "geometry": [
+            48,
+            8,
+            1,
+            128,
+            1,
+            1,
+            27,
+            0
+          ],
+          "count": 384,
+          "work_ms_per_round": 0.06642883333333334,
+          "median_us": 1.024
+        },
+        {
+          "name": "void h5::k_attn_tc<(int)1, (bool)0, (int)256, (int)6>(h5::AttnTcArgs)",
+          "geometry": [
+            8,
+            4,
+            2,
+            128,
+            1,
+            1,
+            72,
+            98304
+          ],
+          "count": 96,
+          "work_ms_per_round": 0.06431733333333334,
+          "median_us": 4.0
+        },
+        {
+          "name": "h5::k_attn_pre(h5::AttnArgs)",
+          "geometry": [
+            28,
+            8,
+            1,
+            256,
+            1,
+            1,
+            38,
+            0
+          ],
+          "count": 96,
+          "work_ms_per_round": 0.033356166666666666,
+          "median_us": 2.08
+        },
+        {
+          "name": "bitserial::continuation(const float *, float *, int, int, float, float)",
+          "geometry": [
+            56,
+            8,
+            1,
+            256,
+            1,
+            1,
+            40,
+            0
+          ],
+          "count": 96,
+          "work_ms_per_round": 0.028721,
+          "median_us": 1.792
+        },
+        {
+          "name": "void h5::k_argmax<(bool)0>(const float *, int, int *, const int *, const h5::Seg *, int, int, float, const int *, h5::RowStat *, int)",
+          "geometry": [
+            8,
+            1,
+            1,
+            1024,
+            1,
+            1,
+            42,
+            0
+          ],
+          "count": 6,
+          "work_ms_per_round": 0.013568333333333333,
+          "median_us": 13.5525
+        },
+        {
+          "name": "bitserial::continuation(const float *, float *, int, int, float, float)",
+          "geometry": [
+            970,
+            8,
+            1,
+            256,
+            1,
+            1,
+            40,
+            0
+          ],
+          "count": 6,
+          "work_ms_per_round": 0.010165833333333334,
+          "median_us": 10.16
+        },
+        {
+          "name": "h5::k_embed_q1(const unsigned char *, const int *, float *)",
+          "geometry": [
+            8,
+            1,
+            1,
+            64,
+            1,
+            1,
+            40,
+            0
+          ],
+          "count": 6,
+          "work_ms_per_round": 0.005088333333333334,
+          "median_us": 5.0885
+        }
+      ],
+      "CUPTI_ACTIVITY_KIND_MEMCPY": {
+        "count": 42,
+        "bytes_per_round": 484.0,
+        "work_ms_per_round": 0.002736
+      },
+      "CUPTI_ACTIVITY_KIND_MEMSET": {
+        "count": 6,
+        "bytes_per_round": 4.0,
+        "work_ms_per_round": 0.0002666666666666667
+      },
+      "note": "PDL1 kernel work sums can overlap; family unions also overlap across families. Native control is the untraced cached-graph decode price; traced kernels diagnose stages, not HTTP throughput."
+    }
+  }
+}

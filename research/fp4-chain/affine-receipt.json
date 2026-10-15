@@ -1,0 +1,15 @@
+{
+  "exit": 0,
+  "stdout": "{\"state\":\"fibre_consistent\",\"cases\":54675,\"native_mma_count\":2,\"fragment_checks\":6998400,\"fragment_mismatches\":0,\"physical_states\":2115,\"target_collisions\":0,\"producer_bytes\":2448,\"carrier\":\"first nonuniform-K MMA contracts two independent activation products into opaque2g+64*2u; second MMA uses C to append4096*down_role without recovering g/u; one final Q8 observer\",\"witness\":{\"bits\":0,\"targets\":[0,0],\"inputs\":[0,0]}}\n",
+  "stderr": "",
+  "wall_s": 1.450636863708496,
+  "mutex": "Local\\BonsaiGPU",
+  "mutex_wait_result": 0,
+  "hashes": {
+    "native_affine_gu.cu": "37effbd723acf25b85e5588ef825223837baa7aeb600042051febf8bfbf37cb7",
+    "native_affine_gu.exe": "fb5a4234f1d1cf7e3cf85bd33717be639e36a5571e861aef4180d02bedc08f51",
+    "native-affine-image.bin": "4ff372a2d30ffaab016ab518450b77fcc1f9725ffd3d35bb28db0e93e66c6db0",
+    "affine-observer.bin": "fab9aff7e926c4402c12f3111796064dbb5b353080b93c8c56964f19b035af8d",
+    "build.log": "da0fd3119c454d0dc6804f79cf7d0107f672d6adfd8f9a9c4fddfd9571ae4398"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "status": "linked-and-keyholes-passed",
+  "reason": "Remote parallel lineinfo compilation exceeded the30GB cgroup memory limit; memory.events reported oom_kill1. Own remaining remote compiler process group81094 was terminated and reconciled absent.",
+  "reference_engine_source": "f0ed5067574f89382a85d0800959fd98b3aef99d",
+  "isa_engine_source": "4a81c7cfc15ee6fe37c6a57e1b931148100c18ff",
+  "engine_objects": {
+    "baseline": "8c0d4c8eab5c296fb0d8a576e9d790748b5a7a0e65ce82e145c1b2546523836b",
+    "isa": "6462c435161fab00945a005410c64bdbb84f942eea2a4d61c7a9fe6233507ab3"
+  },
+  "executables": {
+    "baseline_h5": "c5a0a1b86e719ff5e70a649f0a2e85138a806c1fadb7a5e85b16bf8fceb91f3c",
+    "baseline_server": "e0847689938fa243f18cf5c1bb23105e765d776cef459292ee25414e9674a7f2",
+    "isa_h5": "c5353e27578442e36bcd0f0c58981b4825e7a0e138fe7510bb8da29ca330102d",
+    "isa_server": "7adc6e158b030bbcf0044c74ad61bd55eccc49855ec8f48361a3a2362d577e0d"
+  },
+  "gpu_compiler": "CUDA13.1.115",
+  "gpu_host_compiler": "GNU15.2.0 Ubuntu26.04",
+  "remote_link_host": "GNU13.3.0 Ubuntu24.04, glibc2.39",
+  "flags": ["-O3", "-std=c++17", "-gencode", "arch=compute_120a,code=sm_120a", "--expt-relaxed-constexpr", "-c"],
+  "objects": {
+    "kernels.o": {"state": "transferred", "sha256": "1f52e6d721df757b7d34983341ac547819c409a09a2ba9098e4be86a732fd6cd", "source_sha256": "dd4f37461a7670b0167751ebbfe668c4acc4e082a3faf84f988af6a9415a45c3"},
+    "fp4.o": {"state": "transferred", "sha256": "29f6b15b4601f0d6fef10d562c8aba2842679de3f6f3b35232d9eaf642758180", "source_sha256": "c080036935e65f7f9ccb41cf76567a4058cf7c6017e18277d07c9a82dd4b17f5"},
+    "draft.o": {"state": "linked", "sha256": "f1b494b3dc85944354dc5295a1dfe6c05c585c9fbcce7dc3119123ec6c82bd75"}
+  },
+  "numerics": "Same GPU sources and transitive numerical headers as8b5ee20/4c57b94. Imported GPU objects omit lineinfo, fPIC and host-O3. Other baseline objects use original remote Makefile flags. This is a mixed-host build, not an all-remote build. Both remote links succeeded, hashes recorded above, and full-model Wiki256/chunk8/chunk16/greedy keyholes passed. Baseline F32 and ISA F32 quality numbers agree; explicit A8/hybrid numbers belong to their own keyhole receipts. Engine objects use release flags with fPIC/host-O3; draft/kernels/fp4 use the listed flags; other cached objects retain original remote lineinfo flags.",
+  "permanent_build_repair": "9872d0303fd52bb3c6200e307600e8658e8ef01e: explicit release/lineinfo mode, cloud launch serial release compilation. 4a81c7c guards three carrier-profile-only engine references and rejects requested unsupported prefetch/fusion; f0ed506 is the same fix on isolated numerical baseline. CUDA13 unified edge API repair is4c57b94."
+}

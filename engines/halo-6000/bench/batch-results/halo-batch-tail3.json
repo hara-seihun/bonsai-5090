@@ -1,0 +1,25 @@
+{
+  "name": "halo-batch-tail3",
+  "command": [
+    "python3",
+    "/workspace/halo-6000/bench/run-batch.py",
+    "/workspace/models/gguf/Qwen3.6-35B-A3B-ternary-v1-PTQ1_0.gguf",
+    "3",
+    "--steps",
+    "2",
+    "--context",
+    "32"
+  ],
+  "started_at": "2026-10-05T03:37:08.527986+00:00",
+  "state": "succeeded",
+  "pid": 59160,
+  "process_identity": {
+    "start_ticks": "64595013",
+    "boot_id": "00000000-0000-0000-0000-000000000000"
+  },
+  "child_pid": 59168,
+  "child_pgid": 59168,
+  "exit_code": 0,
+  "wall_seconds": 54.99405249697156,
+  "finished_at": "2026-10-05T03:38:03.522032+00:00"
+}

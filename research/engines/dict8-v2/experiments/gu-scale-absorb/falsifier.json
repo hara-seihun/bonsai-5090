@@ -1,0 +1,1626 @@
+{
+  "state": "route-specific-falsifier",
+  "gpu_work": false,
+  "native_execution": false,
+  "input_custody_sha256": "d0a9652b8573d25b7c6bb75e19b234cbad8c9ce21773016ba02e9fa1d65065cd",
+  "source_engine_sha256": "e2ae33c409fc8a4fe668f8c5cbf51009f65ea76745741fd5d3135c329a5b18c4",
+  "source_fp4_sha256": "0754bd730848620791da50c9aaadd6ba0a8f431434a75428b916969464164f52",
+  "model_sha256": "53107f530aa52eb00912263ab1ee29bd199261c87cd7b4ad4ca1318c1fe33ee3",
+  "rows_examined": 64,
+  "one_plane_exact_rows": 0,
+  "power_of_two_residual_odd_bound_failed_rows": 64,
+  "witnesses": [
+    {
+      "tensor": "blk.0.ffn_gate.weight",
+      "row": 0,
+      "weight_nz_k": 0,
+      "weight_trit": -1,
+      "zero_weight_amax_guard_k": 17,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": -0.5,
+      "mean_bits": 1011352371,
+      "target_bits": 3150447411,
+      "nearest_one_plane_coefficient": 0.0126953125,
+      "nearest_q2_s4": [
+        1,
+        13
+      ],
+      "absorbed_bits": 3150970880,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_gate.weight",
+      "row": 1,
+      "weight_nz_k": 0,
+      "weight_trit": -1,
+      "zero_weight_amax_guard_k": 16,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": -0.5,
+      "mean_bits": 1010107597,
+      "target_bits": 3149202637,
+      "nearest_one_plane_coefficient": 0.0107421875,
+      "nearest_q2_s4": [
+        1,
+        11
+      ],
+      "absorbed_bits": 3148873728,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_gate.weight",
+      "row": 2,
+      "weight_nz_k": 1,
+      "weight_trit": -1,
+      "zero_weight_amax_guard_k": 16,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": -0.5,
+      "mean_bits": 1010596454,
+      "target_bits": 3149691494,
+      "nearest_one_plane_coefficient": 0.01171875,
+      "nearest_q2_s4": [
+        12,
+        1
+      ],
+      "absorbed_bits": 3149922304,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_gate.weight",
+      "row": 3,
+      "weight_nz_k": 1,
+      "weight_trit": 1,
+      "zero_weight_amax_guard_k": 16,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": 0.5,
+      "mean_bits": 1010288230,
+      "target_bits": 1001899622,
+      "nearest_one_plane_coefficient": 0.0107421875,
+      "nearest_q2_s4": [
+        1,
+        11
+      ],
+      "absorbed_bits": 1001390080,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_gate.weight",
+      "row": 4,
+      "weight_nz_k": 1,
+      "weight_trit": 1,
+      "zero_weight_amax_guard_k": 16,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": 0.5,
+      "mean_bits": 1009349222,
+      "target_bits": 1000960614,
+      "nearest_one_plane_coefficient": 0.0107421875,
+      "nearest_q2_s4": [
+        1,
+        11
+      ],
+      "absorbed_bits": 1001390080,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_gate.weight",
+      "row": 5,
+      "weight_nz_k": 0,
+      "weight_trit": -1,
+      "zero_weight_amax_guard_k": 16,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": -0.5,
+      "mean_bits": 1009720525,
+      "target_bits": 3148815565,
+      "nearest_one_plane_coefficient": 0.0107421875,
+      "nearest_q2_s4": [
+        1,
+        11
+      ],
+      "absorbed_bits": 3148873728,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_gate.weight",
+      "row": 6,
+      "weight_nz_k": 1,
+      "weight_trit": 1,
+      "zero_weight_amax_guard_k": 16,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": 0.5,
+      "mean_bits": 1009899520,
+      "target_bits": 1001510912,
+      "nearest_one_plane_coefficient": 0.0107421875,
+      "nearest_q2_s4": [
+        1,
+        11
+      ],
+      "absorbed_bits": 1001390080,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_gate.weight",
+      "row": 7,
+      "weight_nz_k": 0,
+      "weight_trit": 1,
+      "zero_weight_amax_guard_k": 16,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": 0.5,
+      "mean_bits": 1010322022,
+      "target_bits": 1001933414,
+      "nearest_one_plane_coefficient": 0.01171875,
+      "nearest_q2_s4": [
+        12,
+        1
+      ],
+      "absorbed_bits": 1002438656,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_gate.weight",
+      "row": 8,
+      "weight_nz_k": 2,
+      "weight_trit": 1,
+      "zero_weight_amax_guard_k": 16,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": 0.5,
+      "mean_bits": 1010123776,
+      "target_bits": 1001735168,
+      "nearest_one_plane_coefficient": 0.0107421875,
+      "nearest_q2_s4": [
+        1,
+        11
+      ],
+      "absorbed_bits": 1001390080,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_gate.weight",
+      "row": 9,
+      "weight_nz_k": 1,
+      "weight_trit": -1,
+      "zero_weight_amax_guard_k": 17,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": -0.5,
+      "mean_bits": 1009497702,
+      "target_bits": 3148592742,
+      "nearest_one_plane_coefficient": 0.0107421875,
+      "nearest_q2_s4": [
+        1,
+        11
+      ],
+      "absorbed_bits": 3148873728,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_gate.weight",
+      "row": 10,
+      "weight_nz_k": 0,
+      "weight_trit": 1,
+      "zero_weight_amax_guard_k": 17,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": 0.5,
+      "mean_bits": 1009799987,
+      "target_bits": 1001411379,
+      "nearest_one_plane_coefficient": 0.0107421875,
+      "nearest_q2_s4": [
+        1,
+        11
+      ],
+      "absorbed_bits": 1001390080,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_gate.weight",
+      "row": 11,
+      "weight_nz_k": 0,
+      "weight_trit": 1,
+      "zero_weight_amax_guard_k": 16,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": 0.5,
+      "mean_bits": 1010077491,
+      "target_bits": 1001688883,
+      "nearest_one_plane_coefficient": 0.0107421875,
+      "nearest_q2_s4": [
+        1,
+        11
+      ],
+      "absorbed_bits": 1001390080,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_gate.weight",
+      "row": 12,
+      "weight_nz_k": 0,
+      "weight_trit": 1,
+      "zero_weight_amax_guard_k": 16,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": 0.5,
+      "mean_bits": 1009802854,
+      "target_bits": 1001414246,
+      "nearest_one_plane_coefficient": 0.0107421875,
+      "nearest_q2_s4": [
+        1,
+        11
+      ],
+      "absorbed_bits": 1001390080,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_gate.weight",
+      "row": 13,
+      "weight_nz_k": 0,
+      "weight_trit": 1,
+      "zero_weight_amax_guard_k": 16,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": 0.5,
+      "mean_bits": 1009541120,
+      "target_bits": 1001152512,
+      "nearest_one_plane_coefficient": 0.0107421875,
+      "nearest_q2_s4": [
+        1,
+        11
+      ],
+      "absorbed_bits": 1001390080,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_gate.weight",
+      "row": 14,
+      "weight_nz_k": 0,
+      "weight_trit": -1,
+      "zero_weight_amax_guard_k": 18,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": -0.5,
+      "mean_bits": 1009802854,
+      "target_bits": 3148897894,
+      "nearest_one_plane_coefficient": 0.0107421875,
+      "nearest_q2_s4": [
+        1,
+        11
+      ],
+      "absorbed_bits": 3148873728,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_gate.weight",
+      "row": 15,
+      "weight_nz_k": 0,
+      "weight_trit": -1,
+      "zero_weight_amax_guard_k": 18,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": -0.5,
+      "mean_bits": 1010753536,
+      "target_bits": 3149848576,
+      "nearest_one_plane_coefficient": 0.01171875,
+      "nearest_q2_s4": [
+        12,
+        1
+      ],
+      "absorbed_bits": 3149922304,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_gate.weight",
+      "row": 16,
+      "weight_nz_k": 3,
+      "weight_trit": -1,
+      "zero_weight_amax_guard_k": 19,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": -0.5,
+      "mean_bits": 1011279667,
+      "target_bits": 3150374707,
+      "nearest_one_plane_coefficient": 0.01171875,
+      "nearest_q2_s4": [
+        12,
+        1
+      ],
+      "absorbed_bits": 3149922304,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_gate.weight",
+      "row": 17,
+      "weight_nz_k": 0,
+      "weight_trit": -1,
+      "zero_weight_amax_guard_k": 17,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": -0.5,
+      "mean_bits": 1009983078,
+      "target_bits": 3149078118,
+      "nearest_one_plane_coefficient": 0.0107421875,
+      "nearest_q2_s4": [
+        1,
+        11
+      ],
+      "absorbed_bits": 3148873728,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_gate.weight",
+      "row": 18,
+      "weight_nz_k": 0,
+      "weight_trit": -1,
+      "zero_weight_amax_guard_k": 17,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": -0.5,
+      "mean_bits": 1010661990,
+      "target_bits": 3149757030,
+      "nearest_one_plane_coefficient": 0.01171875,
+      "nearest_q2_s4": [
+        12,
+        1
+      ],
+      "absorbed_bits": 3149922304,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_gate.weight",
+      "row": 19,
+      "weight_nz_k": 1,
+      "weight_trit": 1,
+      "zero_weight_amax_guard_k": 18,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": 0.5,
+      "mean_bits": 1010209178,
+      "target_bits": 1001820570,
+      "nearest_one_plane_coefficient": 0.0107421875,
+      "nearest_q2_s4": [
+        1,
+        11
+      ],
+      "absorbed_bits": 1001390080,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_gate.weight",
+      "row": 20,
+      "weight_nz_k": 0,
+      "weight_trit": -1,
+      "zero_weight_amax_guard_k": 16,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": -0.5,
+      "mean_bits": 1010874982,
+      "target_bits": 3149970022,
+      "nearest_one_plane_coefficient": 0.01171875,
+      "nearest_q2_s4": [
+        12,
+        1
+      ],
+      "absorbed_bits": 3149922304,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_gate.weight",
+      "row": 21,
+      "weight_nz_k": 1,
+      "weight_trit": 1,
+      "zero_weight_amax_guard_k": 17,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": 0.5,
+      "mean_bits": 1010014003,
+      "target_bits": 1001625395,
+      "nearest_one_plane_coefficient": 0.0107421875,
+      "nearest_q2_s4": [
+        1,
+        11
+      ],
+      "absorbed_bits": 1001390080,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_gate.weight",
+      "row": 22,
+      "weight_nz_k": 0,
+      "weight_trit": 1,
+      "zero_weight_amax_guard_k": 21,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": 0.5,
+      "mean_bits": 1010050867,
+      "target_bits": 1001662259,
+      "nearest_one_plane_coefficient": 0.0107421875,
+      "nearest_q2_s4": [
+        1,
+        11
+      ],
+      "absorbed_bits": 1001390080,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_gate.weight",
+      "row": 23,
+      "weight_nz_k": 0,
+      "weight_trit": -1,
+      "zero_weight_amax_guard_k": 17,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": -0.5,
+      "mean_bits": 1009936998,
+      "target_bits": 3149032038,
+      "nearest_one_plane_coefficient": 0.0107421875,
+      "nearest_q2_s4": [
+        1,
+        11
+      ],
+      "absorbed_bits": 3148873728,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_gate.weight",
+      "row": 24,
+      "weight_nz_k": 0,
+      "weight_trit": 1,
+      "zero_weight_amax_guard_k": 16,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": 0.5,
+      "mean_bits": 1010327757,
+      "target_bits": 1001939149,
+      "nearest_one_plane_coefficient": 0.01171875,
+      "nearest_q2_s4": [
+        12,
+        1
+      ],
+      "absorbed_bits": 1002438656,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_gate.weight",
+      "row": 25,
+      "weight_nz_k": 1,
+      "weight_trit": 1,
+      "zero_weight_amax_guard_k": 18,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": 0.5,
+      "mean_bits": 1010409472,
+      "target_bits": 1002020864,
+      "nearest_one_plane_coefficient": 0.01171875,
+      "nearest_q2_s4": [
+        12,
+        1
+      ],
+      "absorbed_bits": 1002438656,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_gate.weight",
+      "row": 26,
+      "weight_nz_k": 0,
+      "weight_trit": -1,
+      "zero_weight_amax_guard_k": 17,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": -0.5,
+      "mean_bits": 1009394074,
+      "target_bits": 3148489114,
+      "nearest_one_plane_coefficient": 0.0107421875,
+      "nearest_q2_s4": [
+        1,
+        11
+      ],
+      "absorbed_bits": 3148873728,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_gate.weight",
+      "row": 27,
+      "weight_nz_k": 5,
+      "weight_trit": 1,
+      "zero_weight_amax_guard_k": 17,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": 0.5,
+      "mean_bits": 1010733875,
+      "target_bits": 1002345267,
+      "nearest_one_plane_coefficient": 0.01171875,
+      "nearest_q2_s4": [
+        12,
+        1
+      ],
+      "absorbed_bits": 1002438656,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_gate.weight",
+      "row": 28,
+      "weight_nz_k": 1,
+      "weight_trit": 1,
+      "zero_weight_amax_guard_k": 16,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": 0.5,
+      "mean_bits": 1010249728,
+      "target_bits": 1001861120,
+      "nearest_one_plane_coefficient": 0.0107421875,
+      "nearest_q2_s4": [
+        1,
+        11
+      ],
+      "absorbed_bits": 1001390080,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_gate.weight",
+      "row": 29,
+      "weight_nz_k": 1,
+      "weight_trit": -1,
+      "zero_weight_amax_guard_k": 21,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": -0.5,
+      "mean_bits": 1010395955,
+      "target_bits": 3149490995,
+      "nearest_one_plane_coefficient": 0.01171875,
+      "nearest_q2_s4": [
+        12,
+        1
+      ],
+      "absorbed_bits": 3149922304,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_gate.weight",
+      "row": 30,
+      "weight_nz_k": 0,
+      "weight_trit": 1,
+      "zero_weight_amax_guard_k": 16,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": 0.5,
+      "mean_bits": 1011391078,
+      "target_bits": 1003002470,
+      "nearest_one_plane_coefficient": 0.0126953125,
+      "nearest_q2_s4": [
+        1,
+        13
+      ],
+      "absorbed_bits": 1003487232,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_gate.weight",
+      "row": 31,
+      "weight_nz_k": 1,
+      "weight_trit": 1,
+      "zero_weight_amax_guard_k": 21,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": 0.5,
+      "mean_bits": 1010040218,
+      "target_bits": 1001651610,
+      "nearest_one_plane_coefficient": 0.0107421875,
+      "nearest_q2_s4": [
+        1,
+        11
+      ],
+      "absorbed_bits": 1001390080,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_up.weight",
+      "row": 0,
+      "weight_nz_k": 0,
+      "weight_trit": -1,
+      "zero_weight_amax_guard_k": 19,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": -0.5,
+      "mean_bits": 1010749850,
+      "target_bits": 3149844890,
+      "nearest_one_plane_coefficient": 0.01171875,
+      "nearest_q2_s4": [
+        12,
+        1
+      ],
+      "absorbed_bits": 3149922304,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_up.weight",
+      "row": 1,
+      "weight_nz_k": 0,
+      "weight_trit": 1,
+      "zero_weight_amax_guard_k": 18,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": 0.5,
+      "mean_bits": 1010074624,
+      "target_bits": 1001686016,
+      "nearest_one_plane_coefficient": 0.0107421875,
+      "nearest_q2_s4": [
+        1,
+        11
+      ],
+      "absorbed_bits": 1001390080,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_up.weight",
+      "row": 2,
+      "weight_nz_k": 0,
+      "weight_trit": -1,
+      "zero_weight_amax_guard_k": 17,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": -0.5,
+      "mean_bits": 1010332467,
+      "target_bits": 3149427507,
+      "nearest_one_plane_coefficient": 0.01171875,
+      "nearest_q2_s4": [
+        12,
+        1
+      ],
+      "absorbed_bits": 3149922304,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_up.weight",
+      "row": 3,
+      "weight_nz_k": 0,
+      "weight_trit": -1,
+      "zero_weight_amax_guard_k": 16,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": -0.5,
+      "mean_bits": 1009493606,
+      "target_bits": 3148588646,
+      "nearest_one_plane_coefficient": 0.0107421875,
+      "nearest_q2_s4": [
+        1,
+        11
+      ],
+      "absorbed_bits": 3148873728,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_up.weight",
+      "row": 4,
+      "weight_nz_k": 0,
+      "weight_trit": -1,
+      "zero_weight_amax_guard_k": 16,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": -0.5,
+      "mean_bits": 1009266483,
+      "target_bits": 3148361523,
+      "nearest_one_plane_coefficient": 0.0107421875,
+      "nearest_q2_s4": [
+        1,
+        11
+      ],
+      "absorbed_bits": 3148873728,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_up.weight",
+      "row": 5,
+      "weight_nz_k": 0,
+      "weight_trit": -1,
+      "zero_weight_amax_guard_k": 16,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": -0.5,
+      "mean_bits": 1009844019,
+      "target_bits": 3148939059,
+      "nearest_one_plane_coefficient": 0.0107421875,
+      "nearest_q2_s4": [
+        1,
+        11
+      ],
+      "absorbed_bits": 3148873728,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_up.weight",
+      "row": 6,
+      "weight_nz_k": 1,
+      "weight_trit": -1,
+      "zero_weight_amax_guard_k": 25,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": -0.5,
+      "mean_bits": 1009825587,
+      "target_bits": 3148920627,
+      "nearest_one_plane_coefficient": 0.0107421875,
+      "nearest_q2_s4": [
+        1,
+        11
+      ],
+      "absorbed_bits": 3148873728,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_up.weight",
+      "row": 7,
+      "weight_nz_k": 1,
+      "weight_trit": -1,
+      "zero_weight_amax_guard_k": 19,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": -0.5,
+      "mean_bits": 1009676288,
+      "target_bits": 3148771328,
+      "nearest_one_plane_coefficient": 0.0107421875,
+      "nearest_q2_s4": [
+        1,
+        11
+      ],
+      "absorbed_bits": 3148873728,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_up.weight",
+      "row": 8,
+      "weight_nz_k": 1,
+      "weight_trit": 1,
+      "zero_weight_amax_guard_k": 18,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": 0.5,
+      "mean_bits": 1009376461,
+      "target_bits": 1000987853,
+      "nearest_one_plane_coefficient": 0.0107421875,
+      "nearest_q2_s4": [
+        1,
+        11
+      ],
+      "absorbed_bits": 1001390080,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_up.weight",
+      "row": 9,
+      "weight_nz_k": 0,
+      "weight_trit": 1,
+      "zero_weight_amax_guard_k": 19,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": 0.5,
+      "mean_bits": 1009271808,
+      "target_bits": 1000883200,
+      "nearest_one_plane_coefficient": 0.0107421875,
+      "nearest_q2_s4": [
+        1,
+        11
+      ],
+      "absorbed_bits": 1001390080,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_up.weight",
+      "row": 10,
+      "weight_nz_k": 1,
+      "weight_trit": -1,
+      "zero_weight_amax_guard_k": 21,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": -0.5,
+      "mean_bits": 1009504666,
+      "target_bits": 3148599706,
+      "nearest_one_plane_coefficient": 0.0107421875,
+      "nearest_q2_s4": [
+        1,
+        11
+      ],
+      "absorbed_bits": 3148873728,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_up.weight",
+      "row": 11,
+      "weight_nz_k": 2,
+      "weight_trit": -1,
+      "zero_weight_amax_guard_k": 18,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": -0.5,
+      "mean_bits": 1009738547,
+      "target_bits": 3148833587,
+      "nearest_one_plane_coefficient": 0.0107421875,
+      "nearest_q2_s4": [
+        1,
+        11
+      ],
+      "absorbed_bits": 3148873728,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_up.weight",
+      "row": 12,
+      "weight_nz_k": 0,
+      "weight_trit": 1,
+      "zero_weight_amax_guard_k": 18,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": 0.5,
+      "mean_bits": 1009712538,
+      "target_bits": 1001323930,
+      "nearest_one_plane_coefficient": 0.0107421875,
+      "nearest_q2_s4": [
+        1,
+        11
+      ],
+      "absorbed_bits": 1001390080,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_up.weight",
+      "row": 13,
+      "weight_nz_k": 0,
+      "weight_trit": -1,
+      "zero_weight_amax_guard_k": 19,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": -0.5,
+      "mean_bits": 1009202790,
+      "target_bits": 3148297830,
+      "nearest_one_plane_coefficient": 0.009765625,
+      "nearest_q2_s4": [
+        2,
+        5
+      ],
+      "absorbed_bits": 3147825152,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_up.weight",
+      "row": 14,
+      "weight_nz_k": 2,
+      "weight_trit": 1,
+      "zero_weight_amax_guard_k": 17,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": 0.5,
+      "mean_bits": 1009422336,
+      "target_bits": 1001033728,
+      "nearest_one_plane_coefficient": 0.0107421875,
+      "nearest_q2_s4": [
+        1,
+        11
+      ],
+      "absorbed_bits": 1001390080,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_up.weight",
+      "row": 15,
+      "weight_nz_k": 2,
+      "weight_trit": -1,
+      "zero_weight_amax_guard_k": 17,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": -0.5,
+      "mean_bits": 1010120704,
+      "target_bits": 3149215744,
+      "nearest_one_plane_coefficient": 0.0107421875,
+      "nearest_q2_s4": [
+        1,
+        11
+      ],
+      "absorbed_bits": 3148873728,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_up.weight",
+      "row": 16,
+      "weight_nz_k": 0,
+      "weight_trit": 1,
+      "zero_weight_amax_guard_k": 20,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": 0.5,
+      "mean_bits": 1010662605,
+      "target_bits": 1002273997,
+      "nearest_one_plane_coefficient": 0.01171875,
+      "nearest_q2_s4": [
+        12,
+        1
+      ],
+      "absorbed_bits": 1002438656,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_up.weight",
+      "row": 17,
+      "weight_nz_k": 0,
+      "weight_trit": 1,
+      "zero_weight_amax_guard_k": 16,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": 0.5,
+      "mean_bits": 1009799373,
+      "target_bits": 1001410765,
+      "nearest_one_plane_coefficient": 0.0107421875,
+      "nearest_q2_s4": [
+        1,
+        11
+      ],
+      "absorbed_bits": 1001390080,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_up.weight",
+      "row": 18,
+      "weight_nz_k": 0,
+      "weight_trit": 1,
+      "zero_weight_amax_guard_k": 22,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": 0.5,
+      "mean_bits": 1010465178,
+      "target_bits": 1002076570,
+      "nearest_one_plane_coefficient": 0.01171875,
+      "nearest_q2_s4": [
+        12,
+        1
+      ],
+      "absorbed_bits": 1002438656,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_up.weight",
+      "row": 19,
+      "weight_nz_k": 0,
+      "weight_trit": -1,
+      "zero_weight_amax_guard_k": 18,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": -0.5,
+      "mean_bits": 1009886618,
+      "target_bits": 3148981658,
+      "nearest_one_plane_coefficient": 0.0107421875,
+      "nearest_q2_s4": [
+        1,
+        11
+      ],
+      "absorbed_bits": 3148873728,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_up.weight",
+      "row": 20,
+      "weight_nz_k": 1,
+      "weight_trit": -1,
+      "zero_weight_amax_guard_k": 17,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": -0.5,
+      "mean_bits": 1010485248,
+      "target_bits": 3149580288,
+      "nearest_one_plane_coefficient": 0.01171875,
+      "nearest_q2_s4": [
+        12,
+        1
+      ],
+      "absorbed_bits": 3149922304,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_up.weight",
+      "row": 21,
+      "weight_nz_k": 2,
+      "weight_trit": 1,
+      "zero_weight_amax_guard_k": 16,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": 0.5,
+      "mean_bits": 1009801626,
+      "target_bits": 1001413018,
+      "nearest_one_plane_coefficient": 0.0107421875,
+      "nearest_q2_s4": [
+        1,
+        11
+      ],
+      "absorbed_bits": 1001390080,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_up.weight",
+      "row": 22,
+      "weight_nz_k": 0,
+      "weight_trit": -1,
+      "zero_weight_amax_guard_k": 21,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": -0.5,
+      "mean_bits": 1009886822,
+      "target_bits": 3148981862,
+      "nearest_one_plane_coefficient": 0.0107421875,
+      "nearest_q2_s4": [
+        1,
+        11
+      ],
+      "absorbed_bits": 3148873728,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_up.weight",
+      "row": 23,
+      "weight_nz_k": 0,
+      "weight_trit": 1,
+      "zero_weight_amax_guard_k": 20,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": 0.5,
+      "mean_bits": 1009819648,
+      "target_bits": 1001431040,
+      "nearest_one_plane_coefficient": 0.0107421875,
+      "nearest_q2_s4": [
+        1,
+        11
+      ],
+      "absorbed_bits": 1001390080,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_up.weight",
+      "row": 24,
+      "weight_nz_k": 0,
+      "weight_trit": 1,
+      "zero_weight_amax_guard_k": 17,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": 0.5,
+      "mean_bits": 1009781146,
+      "target_bits": 1001392538,
+      "nearest_one_plane_coefficient": 0.0107421875,
+      "nearest_q2_s4": [
+        1,
+        11
+      ],
+      "absorbed_bits": 1001390080,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_up.weight",
+      "row": 25,
+      "weight_nz_k": 0,
+      "weight_trit": 1,
+      "zero_weight_amax_guard_k": 19,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": 0.5,
+      "mean_bits": 1010120090,
+      "target_bits": 1001731482,
+      "nearest_one_plane_coefficient": 0.0107421875,
+      "nearest_q2_s4": [
+        1,
+        11
+      ],
+      "absorbed_bits": 1001390080,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_up.weight",
+      "row": 26,
+      "weight_nz_k": 1,
+      "weight_trit": 1,
+      "zero_weight_amax_guard_k": 16,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": 0.5,
+      "mean_bits": 1009288397,
+      "target_bits": 1000899789,
+      "nearest_one_plane_coefficient": 0.0107421875,
+      "nearest_q2_s4": [
+        1,
+        11
+      ],
+      "absorbed_bits": 1001390080,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_up.weight",
+      "row": 27,
+      "weight_nz_k": 1,
+      "weight_trit": 1,
+      "zero_weight_amax_guard_k": 20,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": 0.5,
+      "mean_bits": 1010236621,
+      "target_bits": 1001848013,
+      "nearest_one_plane_coefficient": 0.0107421875,
+      "nearest_q2_s4": [
+        1,
+        11
+      ],
+      "absorbed_bits": 1001390080,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_up.weight",
+      "row": 28,
+      "weight_nz_k": 0,
+      "weight_trit": -1,
+      "zero_weight_amax_guard_k": 16,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": -0.5,
+      "mean_bits": 1010075034,
+      "target_bits": 3149170074,
+      "nearest_one_plane_coefficient": 0.0107421875,
+      "nearest_q2_s4": [
+        1,
+        11
+      ],
+      "absorbed_bits": 3148873728,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_up.weight",
+      "row": 29,
+      "weight_nz_k": 0,
+      "weight_trit": -1,
+      "zero_weight_amax_guard_k": 16,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": -0.5,
+      "mean_bits": 1009644749,
+      "target_bits": 3148739789,
+      "nearest_one_plane_coefficient": 0.0107421875,
+      "nearest_q2_s4": [
+        1,
+        11
+      ],
+      "absorbed_bits": 3148873728,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_up.weight",
+      "row": 30,
+      "weight_nz_k": 0,
+      "weight_trit": 1,
+      "zero_weight_amax_guard_k": 16,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": 0.5,
+      "mean_bits": 1010541773,
+      "target_bits": 1002153165,
+      "nearest_one_plane_coefficient": 0.01171875,
+      "nearest_q2_s4": [
+        12,
+        1
+      ],
+      "absorbed_bits": 1002438656,
+      "different": true
+    },
+    {
+      "tensor": "blk.0.ffn_up.weight",
+      "row": 31,
+      "weight_nz_k": 0,
+      "weight_trit": -1,
+      "zero_weight_amax_guard_k": 19,
+      "activation": {
+        "nz_q4_positive_code": 1,
+        "nz_s4": 56,
+        "guard_q4_positive_code": 7,
+        "guard_s4": 126,
+        "g4": 1.0,
+        "other_q4": 0
+      },
+      "original_contraction": -0.5,
+      "mean_bits": 1010079539,
+      "target_bits": 3149174579,
+      "nearest_one_plane_coefficient": 0.0107421875,
+      "nearest_q2_s4": [
+        1,
+        11
+      ],
+      "absorbed_bits": 3148873728,
+      "different": true
+    }
+  ],
+  "rounding_noncommutation": {
+    "K": 5120,
+    "mean": 1.5,
+    "first_terms": 4096,
+    "first_value": 2048.0,
+    "last_value": 0.5,
+    "before_scale_bits": 1258291200,
+    "original_bits": 1262485504,
+    "absorbed_bits": 1262485505,
+    "grouping_scope": "4096 equal exact terms; one half-ulp term alone in final 128-K stage"
+  },
+  "scope": "Actual fixed model rows plus constructed legal q4/s4/g4 interface operands. Not saved model activations, native GPU acceptance or a final-observer/TPS claim."
+}

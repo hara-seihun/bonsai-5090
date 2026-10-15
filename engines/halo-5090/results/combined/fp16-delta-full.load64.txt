@@ -1,0 +1,2 @@
+{"concurrency": 64, "arrival_rate": 0, "requests": 192, "stream": true, "think": false, "max_tokens": 512, "completion_tokens": 79481, "wall_s": 23.199171543121338, "aggregate_tok_s": 3426.027513623282, "per_stream_tok_s_median": 76.54321987074557, "per_stream_tok_s_mean": 80.91880106479584, "ttft_s_median": 0.067413330078125, "ttft_s_p90": 5.154902458190918, "latency_s_median": 6.2282105684280396, "usd_per_m": 0.05594428705097138}
+sample: Crisp morning air bites, Maples bleed fire on the St. Leaves crunch underfoot.

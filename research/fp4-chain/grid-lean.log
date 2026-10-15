@@ -1,0 +1,1 @@
+GridContract.lean:20:49: warning: `Int.ofNat_zero_le` has been deprecated: Use `Int.natCast_nonneg` instead

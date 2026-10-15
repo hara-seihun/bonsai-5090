@@ -1,0 +1,53 @@
+{
+  "scope": "same-item scoped panel, not full quality gate",
+  "reference": "results/binary-5090/three-digits-native-panels/tasks-four-b32",
+  "candidate": "results/binary-5090/three-digits-native-panels/tasks-three-b32",
+  "reference_timing": {
+    "completion_tokens": 21207,
+    "seconds": 35.96381094120443,
+    "http_tok_s": 589.6761062021582
+  },
+  "candidate_timing": {
+    "completion_tokens": 20519,
+    "seconds": 35.20193020720035,
+    "http_tok_s": 582.8941731099438
+  },
+  "http_ratio": 0.988498884352134,
+  "benchmarks": {
+    "gsm8k": {
+      "paired": {
+        "accuracy": {
+          "n": 32,
+          "reference_correct": 29,
+          "candidate_correct": 29,
+          "gains": 0,
+          "losses": 0
+        }
+      },
+      "aggregate_only": {},
+      "reference_truncated": 1,
+      "candidate_truncated": 1
+    },
+    "humaneval_plus": {
+      "paired": {
+        "base": {
+          "n": 32,
+          "reference_correct": 32,
+          "candidate_correct": 32,
+          "gains": 0,
+          "losses": 0
+        },
+        "plus": {
+          "n": 32,
+          "reference_correct": 32,
+          "candidate_correct": 32,
+          "gains": 0,
+          "losses": 0
+        }
+      },
+      "aggregate_only": {},
+      "reference_truncated": 0,
+      "candidate_truncated": 0
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "exit": 0,
+  "stdout": "{\"status\":\"wide_scale_observation\",\"activation_scale_codes\":\"unsigned_finite0..126\",\"candidate_prefix_errors\":[0,0,0,0],\"mx_prefix_errors_vs_scalar\":[0,0,0,0],\"candidate_q8_errors_vs_mx\":0,\"candidate_scale_errors_vs_mx\":0,\"candidate_q8_errors_vs_scalar\":0,\"mx_q8_errors_vs_scalar\":0,\"candidate_scale_errors_vs_scalar\":0,\"mx_scale_errors_vs_scalar\":0}\n",
+  "stderr": "",
+  "wall_s": 2.509920835494995,
+  "mutex": "Local\\BonsaiGPU",
+  "mutex_wait_result": 0,
+  "hashes": {
+    "native_fp16_k16_wide_scale.cu": "853a28d14ae3fb4299185c376af7e396d43ef596ed8e22bc9aed803f732b15df",
+    "native_fp16_k16_wide_scale.exe": "f7d5b20cfe1977eb1fa85224a041098c3b380a541192bd34a6128cc379fa69f5",
+    "build.log": "28860bebc2b35dfa69be91ade5eb7dec787f09aac9418beddf61269b4fb1f072"
+  }
+}

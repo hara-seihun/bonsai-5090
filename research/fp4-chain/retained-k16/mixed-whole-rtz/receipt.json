@@ -1,0 +1,13 @@
+{
+  "exit": 0,
+  "stdout": "{\"status\":\"mixed_whole_observation\",\"domain_errors\":0,\"prefix_errors\":[0,0,0],\"q8_errors\":0,\"scale_errors\":0,\"K\":128,\"group_scales\":8,\"logical_cases\":16384}\n{\"status\":\"pass\",\"timings_ms\":[0.014136,0.001862],\"ranges_ms\":[[0.014107,0.014201],[0.001852,0.001868]],\"registers\":[44,37],\"local_bytes\":[0,0],\"shared_bytes\":[512,512],\"scope\":\"opaque per16 GU carriers from four data-scale MXFP4 instructions meet only in final joint observer; eight independent source scales; FP64 exact grouping and explicit RTZ per source K64 update; conventional g/u recovered inside final observer only; complete packed producers/placement/observer/collectiveQ8/stores timed; encoded64 vs native128 logical endpoints per warp; four instructions per warp on both routes; generated plus adversarial matrix, no learned/model acceptance\"}\n",
+  "stderr": "",
+  "wall_s": 2.213846445083618,
+  "mutex": "Local\\BonsaiGPU",
+  "mutex_wait_result": 0,
+  "hashes": {
+    "native_mixed_whole_rtz.cu": "0f753af41ed46e418d0e3296c1a71572eebcbba7d81f84b077e9a2bd3789f048",
+    "native_mixed_whole_rtz.exe": "a01f806f2a09391f3bdc799bc30a2f78ef9ea755812867fa01b55948b6839dc5",
+    "build.log": "95141b5e075e587c5ede8d22788bf8d42666dc5fa72c9f47b81f77de8e94ad7f"
+  }
+}

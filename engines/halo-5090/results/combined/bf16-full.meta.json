@@ -1,0 +1,19 @@
+{
+  "args": {
+    "tag": "bf16-full",
+    "env": [
+      "H5_STATE=bf16"
+    ],
+    "gsm": 1319,
+    "loads": "",
+    "rates": "",
+    "prefill": 512,
+    "slots": 64,
+    "ctx": 4096,
+    "tokens": 512,
+    "port": 8000
+  },
+  "environment": {
+    "H5_STATE": "bf16"
+  }
+}

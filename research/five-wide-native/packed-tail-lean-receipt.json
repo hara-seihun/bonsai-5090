@@ -1,0 +1,7 @@
+{
+  "compiler": "Lean (version 4.33.0, x86_64-unknown-linux-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+  "source_sha256": "d26095bffc4c58502bb52f0cd787d36f3ca4cbf376701c4a2edbfb6e0c36b543",
+  "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "state": "compiled",
+  "scope": "Paired bit-coordinate inverse/injectivity and arbitrary final-observer composition; native CUDA/F32/layout separate."
+}

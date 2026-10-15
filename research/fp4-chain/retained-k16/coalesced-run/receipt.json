@@ -1,0 +1,13 @@
+{
+  "exit": 0,
+  "stdout": "{\"status\":\"coalesced_native_observation\",\"K\":192,\"M\":256,\"N\":64,\"domain_errors\":0,\"gate_errors\":0,\"up_errors\":0,\"silu_errors\":0,\"physical_carrier_errors\":0,\"q8_errors\":[0,0],\"scale_errors\":[0,0],\"physical_carrier_word_checks\":16384,\"prefix_word_checks_per_native_arm\":49152}\n{\"status\":\"pass\",\"timings_ms\":{\"encoded_C_run\":{\"median\":0.003264,\"min\":0.003261,\"max\":0.003340},\"native_MXFP4_GU\":{\"median\":0.002745,\"min\":0.002738,\"max\":0.002933},\"scalar_GU\":{\"median\":0.019367,\"min\":0.019152,\"max\":0.019414},\"cached_same_input_final_replay\":{\"median\":0.001080,\"min\":0.001077,\"max\":0.001307}},\"registers\":[44,44,36],\"local_bytes\":[0,0,0],\"shared_bytes\":[264,256,264],\"preparation_ms\":[82.776400,3.383900,13.746000],\"scope\":\"K192 independent products, twelve identical scale bytes per activation column, distinct columns may have different E4M3 codes; six C-consuming labeled MXFP4 instructions preserve g+5376u until final fused observer; both native arms have six MXFP4 instructions per128 logical outputs; scale-run equality check is timed; no learned/full-model acceptance; final replay is same-input only\"}\n",
+  "stderr": "",
+  "wall_s": 2.337792158126831,
+  "mutex": "Local\\BonsaiGPU",
+  "mutex_wait_result": 0,
+  "hashes": {
+    "native_coalesced_run.cu": "61d3fb771bd097092feb1b0e81047ce0d5c8208b37d3c60e96f7abbf37388481",
+    "native_coalesced_run.exe": "5b985a49ffd103f83ca04874a80a1fdfd1dda75be7e488883566820ada82e88c",
+    "build.log": "32a3ad325fb3463836e102b773ccb92fc8be74ea27c42c92d36b5af5da0a75f8"
+  }
+}

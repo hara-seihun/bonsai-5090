@@ -1,0 +1,13 @@
+{
+  "source_base": "4a40eb11130c8576177bd172512b42b996cf8559",
+  "reference_source": "1a07bfa5f4144274c8f1c9963821dd9d9a51854b",
+  "protocol": "tools/quality_gate.py --quick --limit32; greedy thinking-off ctx8192 max4096;32GSM+first32HE+ scoped panel",
+  "wrapper_baseline": "tools/binary/panel.py snapshot in binary-qgate.tar, before metrics extension",
+  "input_sha256": {
+    "tools/quality_gate.py": "7d060e205704fbc14ab76d1c68d4b5c3e084102bf6b5896bf0be71415df0d2b0",
+    "tools/qgate/gate.py": "a79bc7314de60f31146ec7659a58b1a71a3740bd9ba54e65c68de6ce9a90f51b",
+    "tools/qgate/humaneval.py": "cddc9fab251ddb29804f4a91f1c75352ec92dd831247c8138cf455be4ebe7f21",
+    "tools/qgate/data/MANIFEST.json": "0330533de253a6b29421216609c18cb4afe5a7e9bc16cb0c574af8b0b4d15c58"
+  },
+  "harness_tar_sha256": "7b671e1aacd5cb244f833e21d8c010ab2787eb5fb9d1b9181534674048c3c4e1"
+}

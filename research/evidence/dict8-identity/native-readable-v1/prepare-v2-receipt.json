@@ -1,0 +1,25 @@
+{
+  "command": [
+    "C:\\work\\models\\experiments\\bonsai-quality-20261013\\gu-dict8-identity-build-v1\\cache_tool.exe",
+    "prepare",
+    "C:\\work\\models\\models\\Ternary-Bonsai-2-27B-PTQ1_0.gguf",
+    "C:\\work\\models\\experiments\\bonsai-quality-20261013\\gu-dict8-identity-build-v1\\cache\\weights.d8",
+    "8",
+    "3221225472",
+    "21474836480"
+  ],
+  "state": "prepared",
+  "gpu_work": false,
+  "native_engine_execution": false,
+  "budget_bytes": 3221225472,
+  "headroom_bytes": 21474836480,
+  "free_before": 1578730074112,
+  "exit_code": 0,
+  "seconds": 15.70703439999943,
+  "stdout": "{\"ok\":true,\"mode\":\"prepare\",\"file_bytes\":2317355136,\"payload_bytes\":2317352960,\"header_bytes\":2176,\"model_source_open_ns\":22200,\"preflight_model_hash_ns\":3701463600,\"model_allocation_ns\":19400,\"model_read_copy_ns\":0,\"model_protection_ns\":0,\"model_parse_ns\":20138800,\"model_source_read_bytes\":0,\"model_copied_bytes\":0,\"model_allocated_bytes\":0,\"model_identity_bytes\":5946648928,\"model_identity_scans\":1,\"model_mapped_bytes\":5946648928,\"model_admission_ns\":67900,\"model_storage\":1,\"encode_ns\":8709281600,\"write_flush_publish_ns\":969701000,\"one_time_payload_hash_ns\":860567000,\"compare_ns\":0,\"checked_original_words\":0,\"recurring_model_bytes\":5946648928,\"recurring_model_hash_ns\":0,\"recurring_header_open_ns\":5143800,\"recurring_read_bytes\":2317352960,\"recurring_read_ns\":267494000,\"recurring_payload_hash_ns\":836863900,\"recurring_allocation_ns\":155673600,\"recurring_finish_ns\":38373800,\"checked_layers\":64,\"gpu_work\":false,\"device_upload_ns\":null,\"native_cached_startup_ns\":null}\n",
+  "stderr": "",
+  "cache_sha256": "e3818647e0ae3fd06fb01e35083f3b99883cc5aaca12f003aa42a45f94b7825c",
+  "cache_bytes": 2317355136,
+  "custody_full_file_hash_s": 1.3349376000005577,
+  "free_after": 1576412606464
+}

@@ -1,0 +1,33 @@
+Welcome to vast.ai. If authentication fails, try again after a few seconds, and double check your ssh key.
+Have fun!
+Welcome to vast.ai. If authentication fails, try again after a few seconds, and double check your ssh key.
+Have fun!
+Welcome to vast.ai. If authentication fails, try again after a few seconds, and double check your ssh key.
+Have fun!
+job.log 117 bytes
+warm-metrics-before.json 1613 bytes
+request.json 386 bytes
+warm-response.json 2875 bytes
+rounds.txt 3570 bytes
+process.json 65 bytes
+server.log 2579 bytes
+diagnostic.json 81 bytes
+health.json 1122 bytes
+command.json 1219 bytes
+traced-metrics-after.json 1657 bytes
+control-response.json 3138 bytes
+control-metrics-after.json 1646 bytes
+capture-stop.json 25 bytes
+trace.sqlite 9773056 bytes
+warm-timing.json 42 bytes
+export.log 8245 bytes
+control-timing.json 42 bytes
+traced-timing.json 41 bytes
+warm-metrics-after.json 1644 bytes
+remote-exit.txt 2 bytes
+capture-start.json 27 bytes
+traced-response.json 3139 bytes
+control-metrics-before.json 1644 bytes
+traced-metrics-before.json 1647 bytes
+remote-identity.txt 147 bytes
+trace.nsys-rep 3561477 bytes

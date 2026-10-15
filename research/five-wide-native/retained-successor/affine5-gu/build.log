@@ -1,0 +1,10 @@
+C:/work\models\experiments\bonsai-quality-20261013\five-wide-native\affine5-gu\affine5_gu.cu(25): error: identifier "obs" is undefined
+   for(int k=0;k<4;k++){int row=g+(k/2)*8,col=2*t+k%2,pos=wi*128+row*8+col,r=(z.role[row]>>(2*col))&3,key=d[k]+7560;int value;if(TAG){value=(key>=0&&key<NT)?int(obs[key]):-128;}else{int c=(key>=0&&key<NL)?int(obs[2*STEP+key]):-128;value=c==-128?-128:c*(r-1);}out[pos]=value;if(states)states[pos]=d[k];}}
+                                                                                                                                                                 ^
+
+C:/work\models\experiments\bonsai-quality-20261013\five-wide-native\affine5-gu\affine5_gu.cu(25): error: identifier "obs" is undefined
+   for(int k=0;k<4;k++){int row=g+(k/2)*8,col=2*t+k%2,pos=wi*128+row*8+col,r=(z.role[row]>>(2*col))&3,key=d[k]+7560;int value;if(TAG){value=(key>=0&&key<NT)?int(obs[key]):-128;}else{int c=(key>=0&&key<NL)?int(obs[2*STEP+key]):-128;value=c==-128?-128:c*(r-1);}out[pos]=value;if(states)states[pos]=d[k];}}
+                                                                                                                                                                                                                 ^
+
+2 errors detected in the compilation of "C:/work/models/experiments/bonsai-quality-20261013/five-wide-native/affine5-gu/affine5_gu.cu".
+affine5_gu.cu

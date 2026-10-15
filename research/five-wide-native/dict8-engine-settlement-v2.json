@@ -1,0 +1,21 @@
+{
+  "state": "CPU_staged_not_run",
+  "source_commit": "3fdbad4547e51455b82d5e7e3f5d6194081449cb",
+  "private_ref": "agent/gu-dict8-startup",
+  "writer_id": "00000000-0000-0000-0000-000000000000",
+  "bundle_sha256": "34efd001a2077926a580b575fae8488da4d5a317cf0808f58587a4de67bb8926",
+  "readable_manifest_sha256": "2c92587a66420431d313f07a7fdf34ff38b1c6cd47c745ed78d0523660f0d809",
+  "candidate_dll_sha256": "4098ba03c9d8b53e0672e9f6800d1461c453bce46e80923c46e389edbc415dfa",
+  "plan_sha256": "29ad08e111d352a09f6384ce1740f6ed6c2b43a3bc164adacb83aafa132fdb5f",
+  "driver_sha256": "e615692d4ba12d515ab989e257e11a988d1a4b5294b8613889e54b4eb7329281",
+  "native_archive_sha256": "e72a27de31d11ec9edcb000fd42ec8a91a341c375168f7e7dbfa01b0e3322710",
+  "original_window_archive_sha256": "531626a25dd76c2df807c51f23b0b04aff85af9cf26792443e97b40405256026",
+  "CPU_lifecycle_regression": "original source-order rejected; successor order accepted; identical upload body",
+  "shared_headers_identical": 69,
+  "GPU_execution": false,
+  "GPU_successor_reserved": false,
+  "source_bound_authorization": null,
+  "numerical_acceptance": null,
+  "setup_fit": null,
+  "matched_AB_TPS": null
+}

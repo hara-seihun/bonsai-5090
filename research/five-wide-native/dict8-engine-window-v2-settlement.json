@@ -1,0 +1,56 @@
+{
+  "state": "settled_no_adoption",
+  "source_commit": "3fdbad4547e51455b82d5e7e3f5d6194081449cb",
+  "candidate_dll_sha256": "4098ba03c9d8b53e0672e9f6800d1461c453bce46e80923c46e389edbc415dfa",
+  "plan_sha256": "29ad08e111d352a09f6384ce1740f6ed6c2b43a3bc164adacb83aafa132fdb5f",
+  "driver_sha256": "e615692d4ba12d515ab989e257e11a988d1a4b5294b8613889e54b4eb7329281",
+  "authorization_operation_id": "00000000-0000-0000-0000-000000000000",
+  "START_operation_id": "00000000-0000-0000-0000-000000000000",
+  "driver_job_id": "00000000-0000-0000-0000-000000000000",
+  "local_transport_exit": 143,
+  "native_matrix": "matrix_completed",
+  "readback_job_id": "00000000-0000-0000-0000-000000000000",
+  "run_count": 1,
+  "numerical_acceptance": "strict saved five-decode corpus and all endpoints passed",
+  "ordinary": {
+    "serving": 6764.610944,
+    "candidate": 4236.037906,
+    "delta_percent": -37.379430375707955
+  },
+  "deterministic": {
+    "serving": 6549.839344,
+    "candidate": 4094.571609,
+    "delta_percent": -37.485923028771005
+  },
+  "setup": {
+    "enabled": 1,
+    "prepared_layers": 64,
+    "prepared_weight_bytes": 2317352960,
+    "dictionary_bytes": 26244,
+    "retained_native_weight_bytes": 2852126720,
+    "retained_fp16_scale_bytes": 178257920,
+    "retained_mean_bytes": 8912896,
+    "total_weight_bytes": 9425849988,
+    "encode_ns": 13655572500,
+    "upload_ns": 561633200
+  },
+  "engine_create_s": 24.629316200000176,
+  "runtime_custody": {
+    "bytes": 112165400,
+    "sha256": "9a534da504d9109755a986e37515eaa1b6340fc1bb77a6b7c5586ea2615f1ab3",
+    "state": "lossless_export_verified",
+    "logical_files": 47,
+    "unique_objects": 31,
+    "GPU_replay": false,
+    "export_job_id": "00000000-0000-0000-0000-000000000000",
+    "driver_job_id": "00000000-0000-0000-0000-000000000000",
+    "transport_exit": 143,
+    "native_state": "matrix_completed"
+  },
+  "physical_return_observed_at": 1792035852.2813988,
+  "active_native_children": [],
+  "queued_successors": [],
+  "held_mutex": false,
+  "production_unchanged": true,
+  "adoption": false
+}

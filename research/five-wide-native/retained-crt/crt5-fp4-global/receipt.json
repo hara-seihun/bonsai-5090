@@ -1,0 +1,17 @@
+{
+  "source_sha256": "d4db7f35963d6335e198ad3998c31ed25183b9c9816754e0bc839c7af4716055",
+  "exit": 0,
+  "stdout": "{\"full_pairs\":184528125,\"full_errors\":0,\"first_error\":4294967295,\"native_fingerprint\":44361825457853400,\"chain_errors\":0,\"native_us\":4.235200,\"direct_us\":3.906880,\"observer_max_probes\":21,\"weight_producer_bytes\":972,\"activation_producer_bytes\":3037500,\"observer_bytes\":257}\n",
+  "stderr": "",
+  "wall_s": 0.3716433048248291,
+  "hashes": {
+    "build.cmd": "936534f4f1d662dc19dd55c9136a1594d582cc8b2978bf18d5744a9023382bad",
+    "build.log": "f7c5031eb1fe01521dbd5141e15130127b0661b4c071bdbc34f95025d6fe176a",
+    "crt5.cu": "8172c3da5750d79a00d400adfa1f19e0cb169315b101c0227e5b215288ed5bd7",
+    "crt5.exe": "1a62b7e9482e793201bc519c61afadd0ab041d5f053737b78486958911acc3a9",
+    "mixed-activation-encoding.bin": "288fa7f506a631874739a2f85eb7584d9b0b7858adc1bc7d5bb9a21d3e14fded",
+    "mixed-final-observer.bin": "17d58cac62965aa60c3718747e87269097fe3176a064496ec4064346be9ff543",
+    "mixed-small-observer.bin": "c8bf9a852841e2113e385a398b15b79a9a1df371a1f218097437bd06807eee63",
+    "mixed-weight-encoding.bin": "ef08ed87da155e33a20723c78f6737e80548da2b7e64a3a009e565b55e4e2a31"
+  }
+}

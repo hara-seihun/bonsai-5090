@@ -1,0 +1,9 @@
+{
+  "gpu_work": false,
+  "native_execution": false,
+  "symbol": "_ZN2h516k_row_scale_meanEPK6__halfPfP6float4ii",
+  "image_sha256": "a836fd6818df9bc92a8df71d2f9e92fc97b9a64195fab4142d9101fb20785e7c",
+  "tool_sha256": "70310d1ae8005e5d9910b5fcc65c14a355a5229b0f1ec6123a2f3f78d9a8361a",
+  "sass_sha256": "2a29c3211cc7f42e552feb1a95ee58ecf6f31a1c5887f077bf3d29ff26a76a44",
+  "returncode": 0
+}

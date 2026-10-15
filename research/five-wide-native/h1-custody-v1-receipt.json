@@ -1,0 +1,21 @@
+{
+  "state": "immutable_retained",
+  "package": "~/work/five-wide-native/h1-custody-v1.tar.zst",
+  "package_sha256": "edcd9b3a226cc253b6de90d284c42c3456f4f381467e2e7341217d354bf94acc",
+  "package_bytes": 447397500,
+  "manifest_sha256": "505635b9fa575285b3ea00510477de4b6e4c61504fcac3a24b9731978607d006",
+  "logical_files": 2366,
+  "unique_objects": 2094,
+  "logical_bytes": 1382499471,
+  "unique_bytes": 620300218,
+  "source_commit": "95fce9015b13e65954793c415c12153e8fa8bc0f",
+  "native_zip_sha256": "d22353338b7846296dbd4ed4b9d1cafd3531cd62b98ff6ccf85d9673c7a4883e",
+  "cost_zip_sha256": "7f0aaa8bdf65583ab82f151143f8317e4589d25ca5027f928df65153290381a2",
+  "gpu_work": false,
+  "saved_file_custody_gaps": [],
+  "never_serialized": [
+    "GU/first-butterfly/q4/s4/g4 tensor dumps",
+    "warmup full logits"
+  ],
+  "lean_receipt_scope": "Original successful compile reported in conversation; blank stdout retained; no separate persisted version/exit receipt."
+}

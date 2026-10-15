@@ -1,0 +1,366 @@
+{
+  "state": "compiled_source_only_zero_GPU_guards",
+  "compiler": "CUDA13.1.115/sm120a/deviceO3/actualhostO1/defaultcontraction/no-fastmath",
+  "phases": [
+    {
+      "state": "compiled_phase",
+      "index": 0,
+      "elapsed_seconds": 0.2642044579843059,
+      "command_SHA256": "cdcdae94c66d41dab9854deeb3c5e3c8b0e855417aba39d3b8827f6470551ff8",
+      "log_SHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "GPU_execution": false
+    },
+    {
+      "state": "compiled_phase",
+      "index": 1,
+      "elapsed_seconds": 3.119207058043685,
+      "command_SHA256": "f57576c002114cd3e49e7782d25622ff3ec3a8f4dbcf200b37fdb855b9ff16b8",
+      "log_SHA256": "4266a17e58abe298babbb45d7a338bfbae79e00cf4a2ce6eaf3cafa8cbb0acb7",
+      "GPU_execution": false
+    },
+    {
+      "state": "compiled_phase",
+      "index": 2,
+      "elapsed_seconds": 0.3143194050062448,
+      "command_SHA256": "2a2816992f03b3f5a8c5539bce436be344ec3c25a0c0e3374f7581822b03c102",
+      "log_SHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "GPU_execution": false
+    },
+    {
+      "state": "compiled_phase",
+      "index": 3,
+      "elapsed_seconds": 16.694661648012698,
+      "command_SHA256": "ab748f4a1e90455ad74255d73cfdb3f2aaece7619c53fbcc1c7e3eb79653b22d",
+      "log_SHA256": "4266a17e58abe298babbb45d7a338bfbae79e00cf4a2ce6eaf3cafa8cbb0acb7",
+      "GPU_execution": false
+    },
+    {
+      "state": "compiled_phase",
+      "index": 4,
+      "elapsed_seconds": 13.738883084035479,
+      "command_SHA256": "c141cdcc2315210b94df9133746e029119b6c3538410a02dc701f0d33cfde086",
+      "log_SHA256": "eed15d23193c3d79ff1da26ad11a3d9f93fb119b25c83696719d38661096f934",
+      "GPU_execution": false
+    },
+    {
+      "state": "compiled_phase",
+      "index": 5,
+      "elapsed_seconds": 0.11400377796962857,
+      "command_SHA256": "54e79c3fa6342248757715a5b28fd216872ce102a1c5dedb98341f613284e8ba",
+      "log_SHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "GPU_execution": false
+    },
+    {
+      "state": "compiled_phase",
+      "index": 6,
+      "elapsed_seconds": 6.174353740003426,
+      "command_SHA256": "15c911d867286e64ac493fd7fa957242419a4b24358c43cde6587c676d843108",
+      "log_SHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "GPU_execution": false
+    },
+    {
+      "state": "compiled_phase",
+      "index": 7,
+      "elapsed_seconds": 0.007762282039038837,
+      "command_SHA256": "1ce897e81a52fe2a98b612206e16ebc68dd7d95b5805c8affd243a6ae7b0d6fb",
+      "log_SHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "GPU_execution": false
+    },
+    {
+      "state": "compiled_phase",
+      "index": 8,
+      "elapsed_seconds": 0.0036991810193285346,
+      "command_SHA256": "40335b6305165c25422ee77fbc210f041cca75af566733c0e37a2d9f3092392a",
+      "log_SHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "GPU_execution": false
+    },
+    {
+      "state": "compiled_phase",
+      "index": 9,
+      "elapsed_seconds": 0.015724739991128445,
+      "command_SHA256": "1fd9a1ad3eb5aafdc18c2bee92dc34ebb564efcd4d9faa2960b3212b36684daf",
+      "log_SHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "GPU_execution": false
+    },
+    {
+      "state": "compiled_phase",
+      "index": 10,
+      "elapsed_seconds": 0.11411965097067878,
+      "command_SHA256": "16cc1e55454181d01ca9fbd04afcbdad88593b6c8d71b48637ad1321799b3ff5",
+      "log_SHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "GPU_execution": false,
+      "binary_SHA256": "3775d5cf6bf590bf6bb76fd455aa0f345c1ef5f96df2e2558c6b5154852d2df2"
+    }
+  ],
+  "sum_seconds": 40.56093902507564,
+  "maximum_phase_seconds": 16.694661648012698,
+  "binary_SHA256": "3775d5cf6bf590bf6bb76fd455aa0f345c1ef5f96df2e2558c6b5154852d2df2",
+  "cubin_SHA256": "6b55da0b7be7493f43c69050f1d20df57604550fa74e655b3a74e8ed9de743ce",
+  "SASS_SHA256": "35284a884e263792c87fe1f7e82b82922f96aacc796cade696490ae2bcfc2bbf",
+  "source_closure_SHA256": "96a79cf6f2fd6b4c34c18b4a8149995b2e7361bad6e2f95d2efad2d63ee6f879",
+  "resources": {
+    "_ZN8paired2313strongest_fw8ENS_4ArgsE": {
+      "registers_per_thread": 131,
+      "stack_frame_bytes": 0,
+      "ptxas_spill_store_bytes": 0,
+      "ptxas_spill_load_bytes": 0,
+      "static_shared_bytes": 0,
+      "dynamic_shared_source_bytes": 74112
+    },
+    "_ZN8paired239candidateENS_4ArgsE": {
+      "registers_per_thread": 255,
+      "stack_frame_bytes": 16,
+      "ptxas_spill_store_bytes": 28,
+      "ptxas_spill_load_bytes": 28,
+      "static_shared_bytes": 0,
+      "dynamic_shared_source_bytes": 74112
+    }
+  },
+  "kernels": {
+    "_ZN8paired2313strongest_fw8ENS_4ArgsE": {
+      "static_SASS_instructions": 2440,
+      "opcodes": {
+        "ACQBULK": 2,
+        "BAR.SYNC.DEFER_BLOCKING": 1,
+        "BRA": 110,
+        "BRA.U.ANY": 32,
+        "BREAK.RELIABLE": 32,
+        "BSSY": 11,
+        "BSSY.RECONVERGENT": 37,
+        "BSSY.RELIABLE": 32,
+        "BSYNC": 11,
+        "BSYNC.RECONVERGENT": 37,
+        "BSYNC.RELIABLE": 32,
+        "CALL.ABS.NOINC": 32,
+        "CS2R": 62,
+        "ELECT": 32,
+        "EXIT": 7,
+        "FENCE.VIEW.ASYNC.S": 1,
+        "FFMA": 128,
+        "HADD2.F32": 4,
+        "IADD": 135,
+        "IADD.64": 66,
+        "IMAD": 13,
+        "IMAD.SHL.U32": 93,
+        "IMAD.WIDE.U32": 26,
+        "ISETP.GE.U32.AND": 15,
+        "ISETP.GE.U32.OR": 7,
+        "ISETP.GT.U32.AND": 1,
+        "ISETP.NE.AND": 38,
+        "ISETP.NE.U32.AND": 32,
+        "LDC": 4,
+        "LDC.64": 34,
+        "LDCU": 2,
+        "LDCU.128": 17,
+        "LDCU.64": 29,
+        "LDG.E": 34,
+        "LDS": 16,
+        "LDS.128": 1,
+        "LDS.64": 9,
+        "LDSM.16.M88.4": 8,
+        "LEA": 17,
+        "LEA.HI": 1,
+        "LEA.HI.X": 10,
+        "LEPC": 32,
+        "LOP3.LUT": 144,
+        "MOV": 286,
+        "MOV.64": 2,
+        "NOP": 12,
+        "OMMA.SF.16864.F32.E2M1.E2M1.UE4M3.4X": 32,
+        "P2R": 27,
+        "PLOP3.LUT": 96,
+        "PREEXIT": 1,
+        "R2UR": 13,
+        "R2UR.BROADCAST": 128,
+        "S2R": 8,
+        "S2UR": 32,
+        "SHF.L.U32": 6,
+        "SHF.L.U64.HI": 54,
+        "SHF.R.U32.HI": 29,
+        "STG.E": 128,
+        "STS": 2,
+        "SYNCS.ARRIVE.TRANS64": 6,
+        "SYNCS.ARRIVE.TRANS64.A1T0": 1,
+        "SYNCS.EXCH.64": 16,
+        "SYNCS.PHASECHK.TRANS64.TRYWAIT": 12,
+        "UBLKCP.S.G": 32,
+        "UBLKPF.L2": 5,
+        "UIADD3": 19,
+        "UIADD3.64": 4,
+        "UIMAD.WIDE.U32": 5,
+        "ULEA": 8,
+        "ULEA.HI.X": 5,
+        "UMOV": 36,
+        "UPRMT": 14,
+        "USHF.L.U32": 7,
+        "USHF.L.U64.HI": 1,
+        "USHF.R.U32.HI": 15,
+        "VIMNMX.U32": 2,
+        "WARPSYNC.ALL": 1,
+        "YIELD": 8
+      },
+      "static_local_load_sites": 0,
+      "static_local_store_sites": 0,
+      "static_shared_load_sites": 34,
+      "static_barrier_sites": 37
+    },
+    "_ZN8paired239candidateENS_4ArgsE": {
+      "static_SASS_instructions": 3160,
+      "opcodes": {
+        "ACQBULK": 2,
+        "BAR.SYNC.DEFER_BLOCKING": 1,
+        "BRA": 125,
+        "BRA.U.ANY": 32,
+        "BREAK.RELIABLE": 32,
+        "BSSY": 11,
+        "BSSY.RECONVERGENT": 45,
+        "BSSY.RELIABLE": 32,
+        "BSYNC": 11,
+        "BSYNC.RECONVERGENT": 45,
+        "BSYNC.RELIABLE": 32,
+        "CALL.ABS.NOINC": 32,
+        "CS2R": 92,
+        "ELECT": 32,
+        "EXIT": 7,
+        "FENCE.VIEW.ASYNC.S": 1,
+        "FFMA": 256,
+        "HADD2.F32": 8,
+        "IADD": 143,
+        "IADD.64": 98,
+        "IMAD": 20,
+        "IMAD.SHL.U32": 168,
+        "IMAD.WIDE.U32": 42,
+        "ISETP.GE.U32.AND": 36,
+        "ISETP.GT.U32.AND": 1,
+        "ISETP.NE.AND": 46,
+        "ISETP.NE.U32.AND": 32,
+        "LDC": 4,
+        "LDC.64": 34,
+        "LDCU": 2,
+        "LDCU.128": 33,
+        "LDCU.64": 37,
+        "LDG.E": 66,
+        "LDL": 1,
+        "LDL.LU": 6,
+        "LDS": 16,
+        "LDS.128": 2,
+        "LDS.64": 10,
+        "LDSM.16.M88.4": 16,
+        "LEA": 18,
+        "LEA.HI.X": 10,
+        "LEPC": 32,
+        "LOP3.LUT": 207,
+        "MOV": 304,
+        "MOV.64": 2,
+        "NOP": 10,
+        "OMMA.SF.16864.F32.E2M1.E2M1.UE4M3.4X": 64,
+        "P2R": 34,
+        "PLOP3.LUT": 96,
+        "PREEXIT": 1,
+        "R2UR": 13,
+        "R2UR.BROADCAST": 128,
+        "S2R": 19,
+        "S2UR": 32,
+        "SHF.L.U32": 6,
+        "SHF.L.U64.HI": 70,
+        "SHF.R.U32.HI": 49,
+        "STG.E": 256,
+        "STL": 7,
+        "STS": 2,
+        "SYNCS.ARRIVE.TRANS64": 6,
+        "SYNCS.ARRIVE.TRANS64.A1T0": 1,
+        "SYNCS.EXCH.64": 16,
+        "SYNCS.PHASECHK.TRANS64.TRYWAIT": 12,
+        "UBLKCP.S.G": 32,
+        "UBLKPF.L2": 5,
+        "UIADD3": 14,
+        "UIADD3.64": 4,
+        "UIMAD.WIDE.U32": 5,
+        "ULEA": 8,
+        "ULEA.HI.X": 5,
+        "UMOV": 35,
+        "UPRMT": 14,
+        "USHF.L.U32": 7,
+        "USHF.L.U64.HI": 1,
+        "USHF.R.U32.HI": 15,
+        "VIMNMX.U32": 2,
+        "WARPSYNC.ALL": 1,
+        "YIELD": 8
+      },
+      "static_local_load_sites": 7,
+      "static_local_store_sites": 7,
+      "static_shared_load_sites": 44,
+      "static_barrier_sites": 37
+    }
+  },
+  "guards": [
+    {
+      "argv": [],
+      "exit": 2,
+      "observation": {
+        "state": "authorization_required_or_invalid_arguments",
+        "GPU_calls": 0
+      },
+      "log_SHA256": "fe5570f30e7096c5886232147f6bb26ae12b7c1e8ce3c7c71348700df02ce8f5"
+    },
+    {
+      "argv": [
+        "--describe-native23"
+      ],
+      "exit": 0,
+      "observation": {
+        "state": "source_ABI_only",
+        "GPU_calls": 0,
+        "row_view_bytes": 96,
+        "borrow_bytes": 72,
+        "borrow_handle_bytes": 16,
+        "FFN_route_bytes": 64,
+        "GDN_route_bytes": 32,
+        "route_union_bytes": 72
+      },
+      "log_SHA256": "3a787e82f4922a17d53553ea899e9c2f2b7f90de0427895265fdcce790c1adef"
+    },
+    {
+      "argv": [
+        "--serve-native23"
+      ],
+      "exit": 2,
+      "observation": {
+        "state": "authorization_required_or_invalid_arguments",
+        "GPU_calls": 0
+      },
+      "log_SHA256": "fe5570f30e7096c5886232147f6bb26ae12b7c1e8ce3c7c71348700df02ce8f5"
+    },
+    {
+      "argv": [
+        "--authorized-live-GPU-context"
+      ],
+      "exit": 2,
+      "observation": {
+        "state": "authorization_required_or_invalid_arguments",
+        "GPU_calls": 0
+      },
+      "log_SHA256": "fe5570f30e7096c5886232147f6bb26ae12b7c1e8ce3c7c71348700df02ce8f5"
+    },
+    {
+      "argv": [
+        "--serve-native21"
+      ],
+      "exit": 2,
+      "observation": {
+        "state": "authorization_required_or_invalid_arguments",
+        "GPU_calls": 0
+      },
+      "log_SHA256": "fe5570f30e7096c5886232147f6bb26ae12b7c1e8ce3c7c71348700df02ce8f5"
+    }
+  ],
+  "GPU_execution": false,
+  "unsets": [
+    "native CUDA words",
+    "native time",
+    "occupancy",
+    "dynamic executed SASS counts",
+    "physical allocation/residency",
+    "cache-effective traffic"
+  ]
+}

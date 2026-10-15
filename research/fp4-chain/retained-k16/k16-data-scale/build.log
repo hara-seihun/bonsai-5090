@@ -1,0 +1,53 @@
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z6regionILi1ELb0EEvPKhS1_S1_PKjS3_PfPy' for 'sm_120a'
+ptxas info    : Function properties for _Z6regionILi1ELb0EEvPKhS1_S1_PKjS3_PfPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 24 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6regionILi0ELb0EEvPKhS1_S1_PKjS3_PfPy' for 'sm_120a'
+ptxas info    : Function properties for _Z6regionILi0ELb0EEvPKhS1_S1_PKjS3_PfPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 42 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z12fused_regionILi1ELb0EEvPKhS1_S1_PKjS3_PaPfPy' for 'sm_120a'
+ptxas info    : Function properties for _Z12fused_regionILi1ELb0EEvPKhS1_S1_PKjS3_PaPfPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 34 registers, used 1 barriers, 256 bytes smem
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z12fused_regionILi0ELb0EEvPKhS1_S1_PKjS3_PaPfPy' for 'sm_120a'
+ptxas info    : Function properties for _Z12fused_regionILi0ELb0EEvPKhS1_S1_PKjS3_PaPfPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 40 registers, used 1 barriers, 256 bytes smem
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6regionILi1ELb1EEvPKhS1_S1_PKjS3_PfPy' for 'sm_120a'
+ptxas info    : Function properties for _Z6regionILi1ELb1EEvPKhS1_S1_PKjS3_PfPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 40 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6regionILi0ELb1EEvPKhS1_S1_PKjS3_PfPy' for 'sm_120a'
+ptxas info    : Function properties for _Z6regionILi0ELb1EEvPKhS1_S1_PKjS3_PfPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 44 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z10data_scalePKhS0_S0_PaPfPy' for 'sm_120a'
+ptxas info    : Function properties for _Z10data_scalePKhS0_S0_PaPfPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 44 registers, used 1 barriers, 512 bytes smem
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z5quantPKfPaPf' for 'sm_120a'
+ptxas info    : Function properties for _Z5quantPKfPaPf
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 19 registers, used 1 barriers, 20 bytes smem
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6replayPKfPf' for 'sm_120a'
+ptxas info    : Function properties for _Z6replayPKfPf
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 10 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6directPKhS0_S0_Pf' for 'sm_120a'
+ptxas info    : Function properties for _Z6directPKhS0_S0_Pf
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 39 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+native_k16_data_scale.cu
+tmpxft_00000fec_00000000-10_native_k16_data_scale.cudafe1.cpp

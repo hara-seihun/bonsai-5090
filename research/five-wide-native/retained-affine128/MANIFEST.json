@@ -1,0 +1,82 @@
+{
+  "affine5-groups128/affine5-lean-receipt.json": {
+    "sha256": "de2ccbc8427812f695d8564b6ffeb8cee505ae8a2b95a75fded33b35d4f91e54",
+    "bytes": 506,
+    "object": "objects/de2ccbc8427812f695d8564b6ffeb8cee505ae8a2b95a75fded33b35d4f91e54"
+  },
+  "affine5-groups128/affine5_groups128.cu": {
+    "sha256": "d45cc54b50b6e794941e7575ad85e46606788f84d2163e5573440e2837f5efdb",
+    "bytes": 9381,
+    "object": "objects/d45cc54b50b6e794941e7575ad85e46606788f84d2163e5573440e2837f5efdb"
+  },
+  "affine5-groups128/affine5_groups128.exe": {
+    "sha256": "3beed2562b6880ab804d3f01f1aa1b77bd1547cfd74fc824cce4b49807b447b0",
+    "bytes": 279552,
+    "object": "objects/3beed2562b6880ab804d3f01f1aa1b77bd1547cfd74fc824cce4b49807b447b0"
+  },
+  "affine5-groups128/AffineFive.lean": {
+    "sha256": "54abd4b2e31ebc0d1d66532c84c5923d481ad8d4f55981e53f216259de005627",
+    "bytes": 1933,
+    "object": "objects/54abd4b2e31ebc0d1d66532c84c5923d481ad8d4f55981e53f216259de005627"
+  },
+  "affine5-groups128/AffineFive128.lean": {
+    "sha256": "8222f511a6b182db4791a9f857f862bee9d3f2e4da4458f134e80102e2475783",
+    "bytes": 1703,
+    "object": "objects/8222f511a6b182db4791a9f857f862bee9d3f2e4da4458f134e80102e2475783"
+  },
+  "affine5-groups128/build.cmd": {
+    "sha256": "0d067e5318d728a51c5ea2a797d0f25460848f7bf38293dd74b91fe1afb3fcfa",
+    "bytes": 518,
+    "object": "objects/0d067e5318d728a51c5ea2a797d0f25460848f7bf38293dd74b91fe1afb3fcfa"
+  },
+  "affine5-groups128/build.log": {
+    "sha256": "8e0b288ed698e49cec86d3e7485ded6acf3d28dd73313b4668fad6fc194c37b6",
+    "bytes": 1389,
+    "object": "objects/8e0b288ed698e49cec86d3e7485ded6acf3d28dd73313b4668fad6fc194c37b6"
+  },
+  "affine5-groups128/groups-inputs.bin": {
+    "sha256": "0ff8a8430953bcf502101724700346cf7e67320bab3a81c1a16d3eb4d74f0e36",
+    "bytes": 1966080,
+    "object": "objects/0ff8a8430953bcf502101724700346cf7e67320bab3a81c1a16d3eb4d74f0e36"
+  },
+  "affine5-groups128/groups-native-f32.bin": {
+    "sha256": "bf84fe08451d5f760fb144e2e659604b9ba3e5de788606ee8bb774ba6841fe11",
+    "bytes": 4194304,
+    "object": "objects/bf84fe08451d5f760fb144e2e659604b9ba3e5de788606ee8bb774ba6841fe11"
+  },
+  "affine5-groups128/groups-native-q8.bin": {
+    "sha256": "097922f818274dc16fe4c0b65e35f0089963d46c4ed8587820da179dec08ef20",
+    "bytes": 1048576,
+    "object": "objects/097922f818274dc16fe4c0b65e35f0089963d46c4ed8587820da179dec08ef20"
+  },
+  "affine5-groups128/groups-native-words.bin": {
+    "sha256": "57ebf84017d1b7d3fb9123f7e83e7e19db27750a81b508f13aaddc2d3081f2f6",
+    "bytes": 4194304,
+    "object": "objects/57ebf84017d1b7d3fb9123f7e83e7e19db27750a81b508f13aaddc2d3081f2f6"
+  },
+  "affine5-groups128/groups-producer.bin": {
+    "sha256": "41be2e061baed0947a45cca66028899127eeb2f5216ab2f8846c87292ae3e21b",
+    "bytes": 1944,
+    "object": "objects/41be2e061baed0947a45cca66028899127eeb2f5216ab2f8846c87292ae3e21b"
+  },
+  "affine5-groups128/groups-up64-producer.bin": {
+    "sha256": "df52bf534643ca84991a2440360c6f2a5e0542a13e394af8d91f759d0f93fcca",
+    "bytes": 1944,
+    "object": "objects/df52bf534643ca84991a2440360c6f2a5e0542a13e394af8d91f759d0f93fcca"
+  },
+  "affine5-groups128/receipt.json": {
+    "sha256": "704ff4ff8dfcbd3e0f3185fc4bd72191254c9e93cac860f999f1021249430d6a",
+    "bytes": 1484,
+    "object": "objects/704ff4ff8dfcbd3e0f3185fc4bd72191254c9e93cac860f999f1021249430d6a"
+  },
+  "affine5-groups128/sass-result.json": {
+    "sha256": "2495473de6dfcf06b5e782aa4d7ab8d72c3e68c3836cc55d4623bf3cd83e453c",
+    "bytes": 114,
+    "object": "objects/2495473de6dfcf06b5e782aa4d7ab8d72c3e68c3836cc55d4623bf3cd83e453c"
+  },
+  "affine5-groups128/sass.txt": {
+    "sha256": "3cd3de04a0ba7500cca3e9c4cf5d931160d3d7c6b0f2a4fc658ec85605da822f",
+    "bytes": 852313,
+    "object": "objects/3cd3de04a0ba7500cca3e9c4cf5d931160d3d7c6b0f2a4fc658ec85605da822f"
+  }
+}

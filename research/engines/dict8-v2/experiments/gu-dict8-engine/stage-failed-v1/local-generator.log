@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "~/bonsai/quality-campaign/gpu_host.py", line 8, in <module>
+    source=open(sys.argv[1],'rb').read() if len(sys.argv)>1 else sys.stdin.buffer.read()
+           ~~~~^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'experiments/gu-dict8-engine/stage-v1.py'

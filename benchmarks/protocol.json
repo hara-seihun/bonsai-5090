@@ -1,0 +1,222 @@
+{
+  "whitepaper20": {
+    "benchmarks": [
+      {
+        "name": "GSM8K",
+        "evalscope_id": "gsm8k",
+        "category": "math",
+        "published_bonsai_percent": 96.06,
+        "item_count": 1319,
+        "completions_per_item": 1,
+        "max_output_tokens": 16384,
+        "metric": "numeric_accuracy",
+        "notes": "Zero-shot CoT; boxed answer; count from current EvalScope metadata",
+        "vision_required": false,
+        "judge_fallback_required": true,
+        "simulator_required": false,
+        "current_evalscope_dataset_id": "AI-ModelScope/gsm8k",
+        "dataset_revision_used_by_prism": null,
+        "measured_ours": null,
+        "published_qwen36_fp16_percent": 95.3,
+        "item_count_basis": "selected_reproduction_scope; not a recovered publisher count",
+        "publisher_item_count": null,
+        "run_task_occurrences": 1319
+      },
+      {
+        "name": "MATH-500",
+        "evalscope_id": "math_500",
+        "category": "math",
+        "published_bonsai_percent": 99.2,
+        "item_count": 500,
+        "completions_per_item": 1,
+        "max_output_tokens": 81920,
+        "metric": "numeric_accuracy",
+        "notes": "Zero-shot CoT; boxed answer",
+        "vision_required": false,
+        "judge_fallback_required": false,
+        "simulator_required": false,
+        "current_evalscope_dataset_id": "AI-ModelScope/MATH-500",
+        "dataset_revision_used_by_prism": null,
+        "measured_ours": null,
+        "judge_required": true,
+        "published_qwen36_fp16_percent": 99.4,
+        "item_count_basis": "selected_reproduction_scope; not a recovered publisher count",
+        "publisher_item_count": null,
+        "run_task_occurrences": 500
+      },
+      {
+        "name": "HumanEval+",
+        "evalscope_id": "humaneval_plus",
+        "category": "coding",
+        "published_bonsai_percent": 93.9,
+        "item_count": 164,
+        "completions_per_item": 1,
+        "max_output_tokens": 30000,
+        "metric": "pass_at_1",
+        "notes": "EvalPlus extended tests; sandbox",
+        "vision_required": false,
+        "judge_fallback_required": false,
+        "simulator_required": false,
+        "current_evalscope_dataset_id": "evalscope/humanevalplus",
+        "dataset_revision_used_by_prism": null,
+        "measured_ours": null,
+        "published_qwen36_fp16_percent": 95.12,
+        "item_count_basis": "selected_reproduction_scope; not a recovered publisher count",
+        "publisher_item_count": null,
+        "run_task_occurrences": 164
+      },
+      {
+        "name": "MBPP+",
+        "evalscope_id": "mbpp_plus",
+        "category": "coding",
+        "published_bonsai_percent": 81.22,
+        "item_count": 378,
+        "completions_per_item": 1,
+        "max_output_tokens": 20480,
+        "metric": "pass_at_1",
+        "notes": "EvalPlus extended tests; sandbox",
+        "vision_required": false,
+        "judge_fallback_required": false,
+        "simulator_required": false,
+        "current_evalscope_dataset_id": "evalscope/mbppplus",
+        "dataset_revision_used_by_prism": null,
+        "measured_ours": null,
+        "published_qwen36_fp16_percent": 83.33,
+        "item_count_basis": "selected_reproduction_scope; not a recovered publisher count",
+        "publisher_item_count": null,
+        "run_task_occurrences": 378
+      },
+      {
+        "name": "IFEval",
+        "evalscope_id": "ifeval",
+        "category": "instruction_following",
+        "published_bonsai_percent": 85.03,
+        "item_count": 541,
+        "completions_per_item": 1,
+        "max_output_tokens": 20480,
+        "metric": "prompt_level_strict",
+        "notes": "Count from current EvalScope metadata",
+        "vision_required": false,
+        "judge_fallback_required": false,
+        "simulator_required": false,
+        "current_evalscope_dataset_id": "opencompass/ifeval",
+        "dataset_revision_used_by_prism": null,
+        "measured_ours": null,
+        "published_qwen36_fp16_percent": 88.91,
+        "item_count_basis": "selected_reproduction_scope; not a recovered publisher count",
+        "publisher_item_count": null,
+        "run_task_occurrences": 541
+      },
+      {
+        "name": "IFBench",
+        "evalscope_id": "ifbench",
+        "category": "instruction_following",
+        "published_bonsai_percent": 58.5,
+        "item_count": 300,
+        "completions_per_item": 1,
+        "max_output_tokens": 20480,
+        "metric": "prompt_level_loose",
+        "notes": "Original whitepaper Appendix B.5 and Tables 13/14: prompt-loose, 58.50%; selected current dataset has300 tasks. Publisher dataset revision and checker seed unknown.",
+        "vision_required": false,
+        "judge_fallback_required": false,
+        "simulator_required": false,
+        "current_evalscope_dataset_id": "allenai/IFBench_test",
+        "dataset_revision_used_by_prism": null,
+        "measured_ours": null,
+        "published_qwen36_fp16_percent": 68.03,
+        "item_count_basis": "selected_reproduction_scope; not a recovered publisher count",
+        "publisher_item_count": null,
+        "run_task_occurrences": 300
+      },
+      {
+        "name": "tau2-Bench",
+        "evalscope_id": "tau2_bench",
+        "category": "agentic_tool_calling",
+        "published_bonsai_percent": 73.61,
+        "item_count": 114,
+        "completions_per_item": 1,
+        "max_output_tokens": 20480,
+        "metric": "task_success",
+        "notes": "Original paper Appendix B.5: AA-style single-pass; historical domain, simulator checkpoint and harness revision unknown. Selected reproduction:114 telecom tasks, one pass, default dual-control,100 steps, exact non-reasoning Qwen3-235B-A22B-Instruct-2507. Current retained AA reference uses the same simulator and114 telecom tasks with three repeats; this is not recovered publisher history.",
+        "vision_required": false,
+        "judge_fallback_required": false,
+        "simulator_required": true,
+        "current_evalscope_dataset_id": "evalscope/tau2-bench-data",
+        "dataset_revision_used_by_prism": null,
+        "measured_ours": null,
+        "published_qwen36_fp16_percent": 82.9,
+        "item_count_basis": "selected_reproduction_scope; not a recovered publisher count",
+        "publisher_item_count": null,
+        "selected_run": {
+          "domains": [
+            "telecom"
+          ],
+          "repeats": 1,
+          "max_steps": 100,
+          "control": "default_dual_control",
+          "simulator_model": "Qwen3-235B-A22B-Instruct-2507",
+          "simulator_reasoning": false,
+          "source_pin": {
+            "path": "campaign://tau2_bench-shards/partition.json",
+            "sha256": "65232930cec1916143078ad21dc69c92d8f50e8191575c770d4521b1d95823d2"
+          }
+        },
+        "publisher_domains": null,
+        "publisher_simulator": null,
+        "current_aa_reference": {
+          "tasks": 114,
+          "domains": [
+            "telecom"
+          ],
+          "repeats": 3,
+          "simulator_model": "Qwen3-235B-A22B-Instruct-2507",
+          "simulator_reasoning": false,
+          "source": {
+            "path": "campaign://sources/aa-tau2-methodology.txt",
+            "sha256": "6e6c5babfa0805ce3e1f01bd30912d540a7e5b1986dfc02ebd3803190ff5c97b"
+          }
+        },
+        "run_task_occurrences": 114
+      }
+    ]
+  },
+  "protocol": "original-whitepaper15-temp07",
+  "suite_identity": {
+    "name": "original_prismml_15",
+    "source": {
+      "path": "campaign://sources/original-whitepaper.pdf",
+      "sha256": "06451897df438a42d0f067a019db4e18969aa37aded7781a219f3b1fba54608b"
+    },
+    "text_source": {
+      "path": "campaign://sources/original-whitepaper.txt",
+      "sha256": "0f247a12d14320eb346f3294e696b484f8239754ff9eda4d46682f95e3389a21"
+    },
+    "locations": [
+      "Appendix B.1-B.5",
+      "Table 13",
+      "Table 14"
+    ],
+    "benchmark_count": 15,
+    "storage_key": "whitepaper20",
+    "storage_key_role": "Existing consumer lookup key; suite identity and cardinality are original15",
+    "published_reference": {
+      "model": "Qwen3.6-27B",
+      "weight_format": "FP16",
+      "thinking": true,
+      "temperature": 1.0,
+      "score_field": "published_qwen36_fp16_percent"
+    },
+    "published_subject": {
+      "model": "Ternary Bonsai 27B",
+      "base_model": "Qwen3.6-27B",
+      "thinking": true,
+      "temperature": 0.7
+    },
+    "current_subject": {
+      "model": "Ternary Bonsai2 27B",
+      "base_model": "Qwen3.8-27B"
+    },
+    "publisher_harness_revision": null,
+    "count_semantics": "item_count and run_task_occurrences describe selected local reproduction scope; multi-turn model/tool call counts remain variable"
+  }
+}

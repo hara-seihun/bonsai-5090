@@ -1,0 +1,38 @@
+{
+  "source": "a27c2e76f40d2ce5e53006c8ea7890a26fc08dcf",
+  "base": "4528b818af17369a372a65a059c23ec68c00dc87",
+  "api": "700d50aaee9f34af2bc7cbfcf26dc824bf4e5172",
+  "branch": "binary-batchpair-bonsai-5090",
+  "private_repository": "~/projects/halo-5090",
+  "command": "make -j2 PROFILE=release NVCC=/usr/local/cuda-13.1/bin/nvcc build/engine.o build/batch_map.o",
+  "configuration": [
+    "/usr/local/cuda-13.1/bin/nvcc",
+    "-O3 -std=c++17 -gencode arch=compute_120a,code=sm_120a  -Xcompiler -fPIC,-O3 --expt-relaxed-constexpr  ",
+    "-O2 -std=c++17 -DCPPHTTPLIB_OPENSSL_SUPPORT -I/workspace/h5-llama/include -I/workspace/h5-llama/ggml/include -I/workspace/h5-llama/tools/mtmd -I/workspace/h5-llama/vendor/cpp-httplib -I/workspace/h5-llama/vendor",
+    "/workspace/h5-llama/build"
+  ],
+  "nvcc": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2025 NVIDIA Corporation\nBuilt on Tue_Dec_16_07:23:41_PM_PST_2025\nCuda compilation tools, release 13.1, V13.1.115\nBuild cuda_13.1.r13.1/compiler.37061995_0\n",
+  "host_compiler": "g++ (Ubuntu 15.2.0-16ubuntu1) 15.2.0\nCopyright (C) 2025 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+  "inputs": {
+    "src/engine.cu": "b189701403216d97bc10af3439dbcfa86245c4112a357bcfd33c824f033a6bf4",
+    "Makefile": "c9f28e5425eae7e9785b577128b4767e119fbb0b2dc73e12881517fc5372a4ac",
+    "experiments/binary-batch-map/batch_map.cu": "4fea4a942c0b860a02676811f5a7dad6d9a53b0bbb59d98d0e14e1619dc4e27d",
+    "experiments/binary-batch-map/batch_map.cuh": "afde2f9128fdb97c52f23066430d0ee673f1053e8f8b90aacb04554815343e95",
+    "experiments/binary-bitserial/bitserial.cuh": "d5106885abd4e5e767fb56fc9694ee79c965fa161621c6f0480543310a167692"
+  },
+  "objects": {
+    "engine.o": {
+      "sha256": "b060eaf0dc0a56328c00b94ba0e0d4bdfb8d72e668e5e90863045ef3eb03bff5",
+      "bytes": 855960
+    },
+    "batch_map.o": {
+      "sha256": "51d06fc9a1e44ea4bce710575e25bcba88dc0660f0297fc39a934468bc709aa4",
+      "bytes": 576920
+    }
+  },
+  "compiled": true,
+  "linked": false,
+  "gpu_touched": false,
+  "measurement_owner": "00000000-0000-0000-0000-000000000000",
+  "unchanged_objects": "Parent owns reuse of validated cached kernel/FP4/draft and other objects; these artifacts are not a complete binary."
+}

@@ -1,0 +1,13 @@
+{
+  "exit": 2,
+  "stdout": "{\"status\":\"target_collision\",\"cases\":531441,\"fragment_agreement_checks\":68024448,\"layout_control\":41,\"final_states\":26076,\"target_collision_boundaries\":3094,\"probe_ms\":0.113120,\"collision\":{\"bits\":834666496,\"targets\":[74,114],\"inputs\":[[8,8,8,26],[26,26,26,20]]},\"registers\":26,\"local_bytes\":0,\"shared_bytes\":0,\"scope\":\"native nonuniform K8: four copies of each of two independent pair products; one MMA, RNA conversion, 1/4 normalization; final target is three independent two-term ternary dot sums; finite 2,5,7 q5 family only, no global bound/model/HTTP claim\"}\n",
+  "stderr": "",
+  "wall_s": 1.4382946491241455,
+  "mutex": "Local\\BonsaiGPU",
+  "mutex_wait_result": 0,
+  "hashes": {
+    "native_k2.cu": "4884ead545a1e26e9d4b124b57a66cc5cac42fe8c7e7d6fc68c172f18ee815ee",
+    "native_k2.exe": "c39b8d50b0aff744887702c99309576cf5bc63328d7736eb3ae29b9cd998f52b",
+    "build.log": "284216cd2eedca056fffb875ac762cf15bbf1ea9c298dd93f61fed3d2dab2637"
+  }
+}

@@ -1,0 +1,225 @@
+{
+ "schema": "halo-quality-gate-v1",
+ "mode": "quick",
+ "limit": 32,
+ "server": "http://127.0.0.1:8088",
+ "model": "Bonsai-27B-Q1_0",
+ "server_models": {
+  "object": "list",
+  "data": [
+   {
+    "id": "Bonsai-27B-Q1_0",
+    "object": "model",
+    "owned_by": "halo-5090"
+   }
+  ]
+ },
+ "gate": {
+  "commit": null,
+  "dirty": false
+ },
+ "data_manifest_sha256": "0330533de253a6b29421216609c18cb4afe5a7e9bc16cb0c574af8b0b4d15c58",
+ "decoding": {
+  "temperature": 0,
+  "sampling": null,
+  "enable_thinking": false,
+  "max_tokens": {
+   "gsm8k": 4096,
+   "humaneval_plus": 4096
+  },
+  "concurrency": 32
+ },
+ "started_at": "2026-10-10T23:07:29Z",
+ "benchmarks": {
+  "gsm8k": {
+   "n": 32,
+   "item_ids_sha256": "bc472576e17ff48d5e6964f0c7cc39610ea40a644c5e15fef6150d62254fb848",
+   "metrics": {
+    "accuracy": {
+     "score": 0.90625,
+     "se": 0.05152697639950359,
+     "n": 32,
+     "correct": 29
+    }
+   },
+   "gated": [
+    "accuracy"
+   ],
+   "max_tokens": 4096,
+   "truncated": 1,
+   "completion_tokens": 15413,
+   "prompt_tokens": 2901,
+   "scoring_s": 0.0,
+   "generation_s": 28.503756292164326,
+   "generation_tok_per_s": 540.7,
+   "generation_timing": {
+    "schema": "qgate-generation-timing-v1",
+    "provenance": {
+     "source": "generate",
+     "clock": "monotonic",
+     "elapsed_scope": "new requests and response writes"
+    },
+    "session": {
+     "status": "measured",
+     "generated_item_ids": [
+      "gsm8k/686",
+      "gsm8k/106",
+      "gsm8k/1020",
+      "gsm8k/569",
+      "gsm8k/367",
+      "gsm8k/658",
+      "gsm8k/206",
+      "gsm8k/512",
+      "gsm8k/725",
+      "gsm8k/520",
+      "gsm8k/947",
+      "gsm8k/296",
+      "gsm8k/1087",
+      "gsm8k/64",
+      "gsm8k/921",
+      "gsm8k/845",
+      "gsm8k/535",
+      "gsm8k/563",
+      "gsm8k/674",
+      "gsm8k/1048",
+      "gsm8k/141",
+      "gsm8k/459",
+      "gsm8k/223",
+      "gsm8k/1288",
+      "gsm8k/682",
+      "gsm8k/936",
+      "gsm8k/1150",
+      "gsm8k/1078",
+      "gsm8k/1075",
+      "gsm8k/138",
+      "gsm8k/21",
+      "gsm8k/819"
+     ],
+     "reused_item_ids": [],
+     "generated_n": 32,
+     "reused_n": 0,
+     "completion_tokens": 15413,
+     "prompt_tokens": 2901,
+     "generation_s": 28.503756292164326,
+     "generation_tok_per_s": 540.7
+    },
+    "whole_run": {
+     "status": "measured",
+     "generation_s": 28.503756292164326,
+     "generation_tok_per_s": 540.7
+    }
+   }
+  },
+  "humaneval_plus": {
+   "n": 32,
+   "item_ids_sha256": "9b276ca94dbf1ed7028d14996d102252bfdd34ed97167264c4b66802ad8bd8e3",
+   "metrics": {
+    "base": {
+     "score": 1.0,
+     "se": 0.0,
+     "n": 32,
+     "correct": 32
+    },
+    "plus": {
+     "score": 1.0,
+     "se": 0.0,
+     "n": 32,
+     "correct": 32
+    }
+   },
+   "gated": [
+    "plus"
+   ],
+   "max_tokens": 4096,
+   "truncated": 0,
+   "completion_tokens": 5106,
+   "prompt_tokens": 4267,
+   "scoring_s": 2.78,
+   "generation_s": 6.698173915036023,
+   "generation_tok_per_s": 762.3,
+   "generation_timing": {
+    "schema": "qgate-generation-timing-v1",
+    "provenance": {
+     "source": "generate",
+     "clock": "monotonic",
+     "elapsed_scope": "new requests and response writes"
+    },
+    "session": {
+     "status": "measured",
+     "generated_item_ids": [
+      "HumanEval/0",
+      "HumanEval/1",
+      "HumanEval/2",
+      "HumanEval/3",
+      "HumanEval/4",
+      "HumanEval/5",
+      "HumanEval/6",
+      "HumanEval/7",
+      "HumanEval/8",
+      "HumanEval/9",
+      "HumanEval/10",
+      "HumanEval/11",
+      "HumanEval/12",
+      "HumanEval/13",
+      "HumanEval/14",
+      "HumanEval/15",
+      "HumanEval/16",
+      "HumanEval/17",
+      "HumanEval/18",
+      "HumanEval/19",
+      "HumanEval/20",
+      "HumanEval/21",
+      "HumanEval/22",
+      "HumanEval/23",
+      "HumanEval/24",
+      "HumanEval/25",
+      "HumanEval/26",
+      "HumanEval/27",
+      "HumanEval/28",
+      "HumanEval/29",
+      "HumanEval/30",
+      "HumanEval/31"
+     ],
+     "reused_item_ids": [],
+     "generated_n": 32,
+     "reused_n": 0,
+     "completion_tokens": 5106,
+     "prompt_tokens": 4267,
+     "generation_s": 6.698173915036023,
+     "generation_tok_per_s": 762.3
+    },
+    "whole_run": {
+     "status": "measured",
+     "generation_s": 6.698173915036023,
+     "generation_tok_per_s": 762.3
+    }
+   }
+  }
+ },
+ "wall_s": 38.0,
+ "completion_tokens": 20519,
+ "generation_s": 35.20193020720035,
+ "generation_tok_per_s": 582.9,
+ "generation_timing": {
+  "schema": "qgate-generation-timing-v1",
+  "provenance": {
+   "source": "benchmark timing aggregation"
+  },
+  "session": {
+   "status": "measured",
+   "generated_n": 64,
+   "reused_n": 0,
+   "completion_tokens": 20519,
+   "prompt_tokens": 7168,
+   "generation_s": 35.20193020720035,
+   "generation_tok_per_s": 582.9
+  },
+  "whole_run": {
+   "status": "measured",
+   "generation_s": 35.20193020720035,
+   "generation_tok_per_s": 582.9
+  }
+ },
+ "wall_scope": "current invocation including scoring; excludes prior invocations",
+ "whole_run_wall_s": 38.0
+}

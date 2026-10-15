@@ -1,0 +1,28 @@
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z9normalizePKfPaPfi' for 'sm_120a'
+ptxas info    : Function properties for _Z9normalizePKfPaPfi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 21 registers, used 1 barriers, 16 bytes smem
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z7fp4_ref4ArgsPfS0_' for 'sm_120a'
+ptxas info    : Function properties for _Z7fp4_ref4ArgsPfS0_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 48 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z10dp4a_fused4ArgsPfiPyPKi' for 'sm_120a'
+ptxas info    : Function properties for _Z10dp4a_fused4ArgsPfiPyPKi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 64 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z12folded_fused4ArgsPfi' for 'sm_120a'
+ptxas info    : Function properties for _Z12folded_fused4ArgsPfi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 108 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6finish4ArgsPKiPfi' for 'sm_120a'
+ptxas info    : Function properties for _Z6finish4ArgsPKiPfi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 88 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+fullk_rounding.cu
+tmpxft_00006fb0_00000000-10_fullk_rounding.cudafe1.cpp

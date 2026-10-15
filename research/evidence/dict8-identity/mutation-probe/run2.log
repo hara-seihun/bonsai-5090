@@ -1,0 +1,43 @@
+[
+ {
+  "path": "C:\\work\\models\\experiments\\bonsai-quality-20261013\\dict8-identity-mutation-probe-v1\\adm.bin",
+  "filetype": 1,
+  "vol_ok": true,
+  "fs": "NTFS",
+  "vol_flags": "0x3e72eff",
+  "std_ok": true,
+  "eof": 65536,
+  "links": 1,
+  "delete_pending": 0,
+  "directory": 0,
+  "tag_ok": true,
+  "attrs": "0x20",
+  "reparse_tag": "0x0",
+  "remote_info_ok": false,
+  "remote_info_err": 87,
+  "final_path": "\\\\?\\C:\\work\\models\\experiments\\bonsai-quality-20261013\\dict8-identity-mutation-probe-v1\\adm.bin",
+  "volume_root": "\\\\?\\C:\\",
+  "drive_type": 3,
+  "final_path_guid": "\\\\?\\Volume{00000000-0000-0000-0000-000000000000}\\work\\models\\experiments\\bonsai-quality-20261013\\dict8-identity-mutation-probe-v1\\adm.bin"
+ },
+ {
+  "symlink_create": false,
+  "err": 1314
+ },
+ {
+  "path": "\\\\localhost\\C$\\Windows\\win.ini",
+  "open_err": 5
+ },
+ {
+  "path": "\\\\127.0.0.1\\C$\\Windows\\win.ini",
+  "open_err": 5
+ },
+ {
+  "drive": "C:\\",
+  "type": 3
+ },
+ {
+  "drive": "D:\\",
+  "type": 3
+ }
+]

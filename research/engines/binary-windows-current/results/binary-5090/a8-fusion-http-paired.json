@@ -1,0 +1,51 @@
+{
+  "scope": "same-item scoped panel, not full quality gate",
+  "reference": "results/binary-5090/tasks-composed-final/tasks-modern-packed1-a8-plain",
+  "candidate": "results/binary-5090/tasks-composed-final/tasks-modern-packed1-a8-fused-plain",
+  "reference_timing": {
+    "completion_tokens": 20614,
+    "seconds": 113.49925800785422,
+    "http_tok_s": 181.62233270787988
+  },
+  "candidate_timing": {
+    "completion_tokens": 21019,
+    "seconds": 102.95137476082891,
+    "http_tok_s": 204.1643450495946
+  },
+  "http_ratio": 1.1241147605893331,
+  "benchmarks": {
+    "gsm8k": {
+      "paired": {
+        "accuracy": {
+          "n": 32,
+          "reference_correct": 29,
+          "candidate_correct": 29,
+          "gains": 0,
+          "losses": 0
+        }
+      },
+      "reference_truncated": 1,
+      "candidate_truncated": 1
+    },
+    "humaneval_plus": {
+      "paired": {
+        "plus": {
+          "n": 32,
+          "reference_correct": 32,
+          "candidate_correct": 32,
+          "gains": 0,
+          "losses": 0
+        },
+        "base": {
+          "n": 32,
+          "reference_correct": 32,
+          "candidate_correct": 32,
+          "gains": 0,
+          "losses": 0
+        }
+      },
+      "reference_truncated": 0,
+      "candidate_truncated": 0
+    }
+  }
+}

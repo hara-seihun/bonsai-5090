@@ -1,0 +1,65 @@
+{
+  "source": "0ffcaea",
+  "scope": "Official BF16 trained weights, synthetic four raw targettap rows, pruned65536, native run including four ingestedrows/host outputs, reset excluded; 2warm+8timed per mode",
+  "gate_exit": 0,
+  "activation_contract": "K5120 and K25600 first/residual/padding/sticky pass",
+  "modes": [
+    {
+      "precision": "bf16",
+      "median_ms": 2.403822,
+      "speedup_vs_bf16": 1.0,
+      "matched_proposals": 4,
+      "base_relative_rms": 0.0027007071491483097,
+      "base_cosine": 0.9999963727490983,
+      "native_ids": [
+        256,
+        471,
+        2972,
+        48401
+      ]
+    },
+    {
+      "precision": "nvfp4-a1",
+      "median_ms": 1.231374,
+      "speedup_vs_bf16": 1.952146139190855,
+      "matched_proposals": 0,
+      "base_relative_rms": 0.30366614185676366,
+      "base_cosine": 0.9683055561978662,
+      "native_ids": [
+        12,
+        2972,
+        48401,
+        286
+      ]
+    },
+    {
+      "precision": "nvfp4-a2",
+      "median_ms": 2.015746,
+      "speedup_vs_bf16": 1.1925222721513524,
+      "matched_proposals": 3,
+      "base_relative_rms": 0.26246276578440614,
+      "base_cosine": 0.9738907234035907,
+      "native_ids": [
+        256,
+        471,
+        2972,
+        248046
+      ]
+    },
+    {
+      "precision": "nvfp4-head-a2",
+      "median_ms": 2.253051,
+      "speedup_vs_bf16": 1.0669185917229569,
+      "matched_proposals": 4,
+      "base_relative_rms": 0.0430239006875607,
+      "base_cosine": 0.9999254148669143,
+      "native_ids": [
+        256,
+        471,
+        2972,
+        48401
+      ]
+    }
+  ],
+  "selection": "Explicit S1 task/acceptance controls pending; BF16 remains default"
+}

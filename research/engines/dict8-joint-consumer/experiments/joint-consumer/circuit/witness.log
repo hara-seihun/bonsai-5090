@@ -1,0 +1,30 @@
+PASS: 6561 compact-tail states; 72 raw-pair slot cases; 128 raw-pair validity cases.
+PASS: 32 raw codes -> 27 native triples; 27 canonical roundtrips; 5 reserved host errors; 216 single-slot roundtrips; 256 spreads; 28672 exhaustive two-slot patterns.
+t0,t1,t2,code5_decimal,code5_hex
+0,0,0,24,18
+0,0,2,19,13
+0,0,A,18,12
+0,2,0,26,1A
+0,2,2,16,10
+0,2,A,17,11
+0,A,0,30,1E
+0,A,2,20,14
+0,A,A,21,15
+2,0,0,25,19
+2,0,2,11,0B
+2,0,A,10,0A
+2,2,0,27,1B
+2,2,2,8,08
+2,2,A,9,09
+2,A,0,6,06
+2,A,2,4,04
+2,A,A,5,05
+A,0,0,29,1D
+A,0,2,15,0F
+A,0,A,14,0E
+A,2,0,2,02
+A,2,2,0,00
+A,2,A,1,01
+A,A,0,31,1F
+A,A,2,12,0C
+A,A,A,13,0D

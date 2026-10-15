@@ -1,0 +1,300 @@
+{
+  "job": "binary-native-sf-small",
+  "exit": 0,
+  "records": 390,
+  "gpu_window_limit_seconds": 55,
+  "lock": "/tmp/binary-gpu.lock",
+  "source_and_object_sha256": {
+    "experiments/binary-native-sf/bench.cu": "186977b7f24c74446a84f9569f51cfe34956893e2261e35c941619183a84b495",
+    "experiments/binary-native-sf/native.cu": "878ee062e658a8a8907268d0966cef0dbf45c656b10e4699b72751e13ca0f168",
+    "experiments/binary-native-sf/native.cuh": "0d68d5698cf8a2027fc02aef072e87833b52944c140f21937efaed8fe8120e66",
+    "experiments/binary-native-sf/build/native.o": "2d06f884d4eca46fb418f4d23fa25c841564a80bc1d65957ed710638b0484037",
+    "experiments/binary-native-sf/build/pair-control.o": "ca3facbf1e1521225101be7615a3dc6fd3ecaaccaa41f78f23a9fe8c7bc92ee8",
+    "experiments/binary-native-sf/build/bitserial.o": "69911490f26fc710deeef8dea49decbe3f70e764f9c4c7ed1d7be1776d93f304",
+    "src/kernels.cu": "dd4f37461a7670b0167751ebbfe668c4acc4e082a3faf84f988af6a9415a45c3",
+    "src/kernels.cuh": "961a92632bf26b29a47eef1af411b09d370300087a58795c96c750aca5a84abd",
+    "src/prep_chunk.cuh": "456484471822ad328448b53b04bf412d27a4a6fde2f62b2feee799012deab87c",
+    "src/fp4.cu": "c080036935e65f7f9ccb41cf76567a4058cf7c6017e18277d07c9a82dd4b17f5",
+    "src/fp4_ops.cuh": "1dfa009cd680d1b0227ab5bebf0d650ebab4fba5a33896c2fae452512d37bf39",
+    "/workspace/binary/modern/halo/build/kernels.o": "1f52e6d721df757b7d34983341ac547819c409a09a2ba9098e4be86a732fd6cd"
+  },
+  "plans": [
+    {
+      "kind": "down",
+      "r": 1,
+      "route": "native_sf1",
+      "cfg": 2,
+      "splits": 16,
+      "inclusive_warm_us": 34.432003,
+      "relative_rms_ordered": 0.0290182225,
+      "scale_relative_rms": 0.0282824863,
+      "cache": "warm"
+    },
+    {
+      "kind": "down",
+      "r": 1,
+      "route": "native_sf1",
+      "cfg": 2,
+      "splits": 16,
+      "inclusive_cold_us": 40.959999,
+      "relative_rms_ordered": 0.0290182225,
+      "scale_relative_rms": 0.0282824863,
+      "cache": "cold"
+    },
+    {
+      "kind": "down",
+      "r": 1,
+      "route": "native_sf2",
+      "cfg": 2,
+      "splits": 16,
+      "inclusive_warm_us": 36.096001,
+      "relative_rms_ordered": 9.39866592e-08,
+      "scale_relative_rms": 0,
+      "cache": "warm"
+    },
+    {
+      "kind": "down",
+      "r": 1,
+      "route": "native_sf2",
+      "cfg": 2,
+      "splits": 8,
+      "inclusive_cold_us": 43.007999,
+      "relative_rms_ordered": 7.88158056e-08,
+      "scale_relative_rms": 0,
+      "cache": "cold"
+    },
+    {
+      "kind": "down",
+      "r": 8,
+      "route": "native_sf1",
+      "cfg": 3,
+      "splits": 8,
+      "inclusive_warm_us": 38.144001,
+      "relative_rms_ordered": 0.0284392015,
+      "scale_relative_rms": 0.0282824863,
+      "cache": "warm"
+    },
+    {
+      "kind": "down",
+      "r": 8,
+      "route": "native_sf1",
+      "cfg": 1,
+      "splits": 16,
+      "inclusive_cold_us": 43.007999,
+      "relative_rms_ordered": 0.0284392021,
+      "scale_relative_rms": 0.0282824863,
+      "cache": "cold"
+    },
+    {
+      "kind": "down",
+      "r": 8,
+      "route": "native_sf2",
+      "cfg": 2,
+      "splits": 16,
+      "inclusive_warm_us": 39.712002,
+      "relative_rms_ordered": 9.38039023e-08,
+      "scale_relative_rms": 0,
+      "cache": "warm"
+    },
+    {
+      "kind": "down",
+      "r": 8,
+      "route": "native_sf2",
+      "cfg": 2,
+      "splits": 16,
+      "inclusive_cold_us": 43.040001,
+      "relative_rms_ordered": 9.38039023e-08,
+      "scale_relative_rms": 0,
+      "cache": "cold"
+    },
+    {
+      "kind": "gu",
+      "r": 1,
+      "route": "native_sf1",
+      "cfg": 1,
+      "splits": 4,
+      "inclusive_warm_us": 40.192001,
+      "relative_rms_ordered": 0.0278250834,
+      "scale_relative_rms": 0.0277993651,
+      "cache": "warm"
+    },
+    {
+      "kind": "gu",
+      "r": 1,
+      "route": "native_sf1",
+      "cfg": 2,
+      "splits": 8,
+      "inclusive_cold_us": 52.992001,
+      "relative_rms_ordered": 0.0278250827,
+      "scale_relative_rms": 0.0277993651,
+      "cache": "cold"
+    },
+    {
+      "kind": "gu",
+      "r": 1,
+      "route": "native_sf2",
+      "cfg": 2,
+      "splits": 1,
+      "inclusive_warm_us": 43.040001,
+      "relative_rms_ordered": 7.21650434e-10,
+      "scale_relative_rms": 0,
+      "cache": "warm"
+    },
+    {
+      "kind": "gu",
+      "r": 1,
+      "route": "native_sf2",
+      "cfg": 2,
+      "splits": 1,
+      "inclusive_cold_us": 53.248001,
+      "relative_rms_ordered": 7.21650434e-10,
+      "scale_relative_rms": 0,
+      "cache": "cold"
+    },
+    {
+      "kind": "gu",
+      "r": 8,
+      "route": "native_sf1",
+      "cfg": 3,
+      "splits": 1,
+      "inclusive_warm_us": 44.32,
+      "relative_rms_ordered": 0.027828319,
+      "scale_relative_rms": 0.0277993651,
+      "cache": "warm"
+    },
+    {
+      "kind": "gu",
+      "r": 8,
+      "route": "native_sf1",
+      "cfg": 2,
+      "splits": 1,
+      "inclusive_cold_us": 51.199997,
+      "relative_rms_ordered": 0.027828319,
+      "scale_relative_rms": 0.0277993651,
+      "cache": "cold"
+    },
+    {
+      "kind": "gu",
+      "r": 8,
+      "route": "native_sf2",
+      "cfg": 2,
+      "splits": 1,
+      "inclusive_warm_us": 47.168003,
+      "relative_rms_ordered": 5.80279705e-10,
+      "scale_relative_rms": 0,
+      "cache": "warm"
+    },
+    {
+      "kind": "gu",
+      "r": 8,
+      "route": "native_sf2",
+      "cfg": 2,
+      "splits": 1,
+      "inclusive_cold_us": 51.199997,
+      "relative_rms_ordered": 5.80279705e-10,
+      "scale_relative_rms": 0,
+      "cache": "cold"
+    },
+    {
+      "kind": "head",
+      "r": 1,
+      "route": "native_sf1",
+      "cfg": 2,
+      "splits": 1,
+      "inclusive_warm_us": 130.528,
+      "relative_rms_ordered": 0.0272164819,
+      "scale_relative_rms": 0.0267314086,
+      "cache": "warm"
+    },
+    {
+      "kind": "head",
+      "r": 1,
+      "route": "native_sf1",
+      "cfg": 2,
+      "splits": 1,
+      "inclusive_cold_us": 139.007996,
+      "relative_rms_ordered": 0.0272164819,
+      "scale_relative_rms": 0.0267314086,
+      "cache": "cold"
+    },
+    {
+      "kind": "head",
+      "r": 1,
+      "route": "native_sf2",
+      "cfg": 2,
+      "splits": 1,
+      "inclusive_warm_us": 142.848007,
+      "relative_rms_ordered": 8.34745395e-10,
+      "scale_relative_rms": 0,
+      "cache": "warm"
+    },
+    {
+      "kind": "head",
+      "r": 1,
+      "route": "native_sf2",
+      "cfg": 2,
+      "splits": 1,
+      "inclusive_cold_us": 147.456009,
+      "relative_rms_ordered": 8.34745395e-10,
+      "scale_relative_rms": 0,
+      "cache": "cold"
+    },
+    {
+      "kind": "head",
+      "r": 8,
+      "route": "native_sf1",
+      "cfg": 2,
+      "splits": 1,
+      "inclusive_warm_us": 135.968002,
+      "relative_rms_ordered": 0.0267038065,
+      "scale_relative_rms": 0.0267314086,
+      "cache": "warm"
+    },
+    {
+      "kind": "head",
+      "r": 8,
+      "route": "native_sf1",
+      "cfg": 2,
+      "splits": 1,
+      "inclusive_cold_us": 143.360001,
+      "relative_rms_ordered": 0.0267038065,
+      "scale_relative_rms": 0.0267314086,
+      "cache": "cold"
+    },
+    {
+      "kind": "head",
+      "r": 8,
+      "route": "native_sf2",
+      "cfg": 2,
+      "splits": 1,
+      "inclusive_warm_us": 148.128006,
+      "relative_rms_ordered": 1.05131064e-09,
+      "scale_relative_rms": 0,
+      "cache": "warm"
+    },
+    {
+      "kind": "head",
+      "r": 8,
+      "route": "native_sf2",
+      "cfg": 2,
+      "splits": 1,
+      "inclusive_cold_us": 155.392014,
+      "relative_rms_ordered": 1.05131064e-09,
+      "scale_relative_rms": 0,
+      "cache": "cold"
+    }
+  ],
+  "scale_status": "Every prepared row Valid in all six cases; required statuses inspected after stream completion",
+  "sf2_scale_error": 0,
+  "numeric_envelopes": {
+    "native_sf1": {
+      "max_projection_relative_rms": 0.0290182241,
+      "max_native_scalar_sample_absolute": 3.28740555e-07
+    },
+    "native_sf2": {
+      "max_projection_relative_rms": 9.39866592e-08,
+      "max_native_scalar_sample_absolute": 4.00564993e-07
+    }
+  },
+  "decision": "R1 broad SF route loses DP4A in every geometry. R8 GU/down SF routes lose joint-pair. R8 full head SF1/SF2 cold positive at cfg2/split1; SF1 requires parent whole-model quality decision."
+}

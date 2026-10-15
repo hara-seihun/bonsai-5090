@@ -1,0 +1,3 @@
+'BinaryComposition.affine_dot' depends on axioms: [propext]
+'BinaryComposition.whole_observer' depends on axioms: [propext, Quot.sound]
+'BinaryComposition.scale_coordinates_required' depends on axioms: [propext]

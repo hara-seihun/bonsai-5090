@@ -1,0 +1,8 @@
+{
+  "dictionary_codes": 6561,
+  "original_native_words": 40960,
+  "fixture_bytes": 66560,
+  "mismatches": 0,
+  "GPU_execution": false,
+  "command": "g++ -std=c++17 -O3 -Isrc experiments/gu-dict8-engine/check.cpp; check actual block0 first32gate/up rows \u00d7K5120 against independent packed fixture"
+}

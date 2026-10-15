@@ -1,0 +1,7 @@
+{
+  "state": "CPU_fixture_compile_failed_then_repaired",
+  "operation_id": "00000000-0000-0000-0000-000000000000",
+  "error": "dict8 has not been declared in host fixture",
+  "repair": "namespace dict8=h5::dict8;",
+  "native_model_execution": false
+}

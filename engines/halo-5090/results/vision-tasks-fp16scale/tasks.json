@@ -1,0 +1,52 @@
+[
+  [
+    "inventory",
+    "How many bolts are listed?",
+    "37"
+  ],
+  [
+    "inventory",
+    "What is the code for washers?",
+    "m3"
+  ],
+  [
+    "inventory",
+    "How many nuts are listed?",
+    "16"
+  ],
+  [
+    "inventory",
+    "What is the total count of all three items?",
+    "77"
+  ],
+  [
+    "chart",
+    "Which month has the most units sold?",
+    "may"
+  ],
+  [
+    "chart",
+    "How many units were sold in June?",
+    "24"
+  ],
+  [
+    "chart",
+    "How many more units were sold in May than April?",
+    "13"
+  ],
+  [
+    "layout",
+    "What color is the circle?",
+    "blue"
+  ],
+  [
+    "layout",
+    "What shape is below the other two shapes?",
+    "triangle"
+  ],
+  [
+    "layout",
+    "Is the red square left or right of the blue circle?",
+    "left"
+  ]
+]

@@ -1,0 +1,63 @@
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z8producerILb1EEv4ArgsPi' for 'sm_120a'
+ptxas info    : Function properties for _Z8producerILb1EEv4ArgsPi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 40 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z13packed_regionILb1ELb0EEv4ArgsPfPy' for 'sm_120a'
+ptxas info    : Function properties for _Z13packed_regionILb1ELb0EEv4ArgsPfPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 64 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z13packed_regionILb1ELb1EEv4ArgsPfPy' for 'sm_120a'
+ptxas info    : Function properties for _Z13packed_regionILb1ELb1EEv4ArgsPfPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 56 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z13packed_regionILb0ELb0EEv4ArgsPfPy' for 'sm_120a'
+ptxas info    : Function properties for _Z13packed_regionILb0ELb0EEv4ArgsPfPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 72 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z8producerILb0EEv4ArgsPi' for 'sm_120a'
+ptxas info    : Function properties for _Z8producerILb0EEv4ArgsPi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 38 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z12lookup_fused4ArgsPf' for 'sm_120a'
+ptxas info    : Function properties for _Z12lookup_fused4ArgsPf
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 52 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z9make_dot4Pa' for 'sm_120a'
+ptxas info    : Function properties for _Z9make_dot4Pa
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 16 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z9normalizePKfPaPfi' for 'sm_120a'
+ptxas info    : Function properties for _Z9normalizePKfPaPfi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 21 registers, used 1 barriers, 16 bytes smem
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z7fp4_ref4ArgsPf' for 'sm_120a'
+ptxas info    : Function properties for _Z7fp4_ref4ArgsPf
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 44 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z10dp4a_fused4ArgsPfiPyPKi' for 'sm_120a'
+ptxas info    : Function properties for _Z10dp4a_fused4ArgsPfiPyPKi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 64 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z17compressed_finish4ArgsPKyPf' for 'sm_120a'
+ptxas info    : Function properties for _Z17compressed_finish4ArgsPKyPf
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 40 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6finish4ArgsPKiPfi' for 'sm_120a'
+ptxas info    : Function properties for _Z6finish4ArgsPKiPfi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 90 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+fullk_collective.cu
+tmpxft_0000154c_00000000-10_fullk_collective.cudafe1.cpp

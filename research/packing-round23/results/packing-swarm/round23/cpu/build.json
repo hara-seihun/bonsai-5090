@@ -1,0 +1,29 @@
+{
+  "state": "shortened_CPU_binaries_built",
+  "prerequisite": "9c4ed70089114706200215bf60910dbed2c35c95",
+  "compiler": "g++ (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+  "flags": [
+    "-std=c++20",
+    "-O3",
+    "-march=native",
+    "-ffp-contract=off",
+    "-fopenmp",
+    "-Wall",
+    "-Wextra"
+  ],
+  "source_sha256": {
+    "method/packing-swarm/tools/round23/cpu/check.cpp": "c57d0f2ea1d6688d4ddad81173a6f941781ebc80be9289c8947a0fe022d2baf9",
+    "method/packing-swarm/tools/round23/cpu/scoped.hpp": "e1446ec1fbd2d42edefeb0f3f0228337da3b0bab138bec0a989500034aba3896",
+    "method/packing-swarm/tools/round23/cpu/replay.py": "83b954c3e61cd541dad31daeb52868f272734893ddf4f2504ee7e8f189cab376",
+    "method/packing-swarm/tools/round17/native/packed.hpp": "c2cf6772b71cf25e00f2c1b1ff6a8b3a477b51dd38eb3502ba77067c4a915d22",
+    "method/packing-swarm/tools/round17/native/model.hpp": "5a56a194a8ab7a7e49191eb543f312d87f1d4a360bd340867e4517f3513944a9",
+    "method/packing-swarm/tools/round18/grammar.hpp": "6ce336375d0e30720f01a77dbc810603216b70efa7c0fcbd631656b17c84bb9d"
+  },
+  "binaries": {
+    "ordinary": "c7e411df633388c7c03138e453ac50efb470d525ed240672926efc49cb8ccb44",
+    "ubsan": "2cfcd45794e330012511a368ed51eabcf79a5201977f0e53826107ee6082c27c"
+  },
+  "round20_receipt_sha256": "f55c88ab82fab71b96ce3891a2194088ccabb33a03f2b08083d4e99855e9fa52",
+  "round22_receipt_sha256": "5cfb8a2455c1f86e6f9770b7c717817ea18a51a3f9d9d892cc7e5743d4eb8bb2",
+  "custody_sha256": "e8785ec999459b747ecbc9b3e33f178013967572525f18931c3156d36d02403b"
+}

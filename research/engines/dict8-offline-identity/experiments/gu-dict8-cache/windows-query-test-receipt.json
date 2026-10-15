@@ -1,0 +1,11 @@
+{
+  "extracted_storage_facts_sha256": "a41cd77513ffe8d772f25c4a63450eb4ab6ce86218e08b3914335f14e207b9e8",
+  "mocked_win32_caller_cases": 14,
+  "stale_error_cleared": true,
+  "guid_buffer_growth": true,
+  "missing_root_rejected": true,
+  "same_handle_queries": true,
+  "query_failure_errors": true,
+  "proof": "Generated actual Windows storage_facts caller, injected Win32 functions compiled on Linux; not live remote/reparse-volume evidence",
+  "gpu_work": false
+}

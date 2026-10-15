@@ -1,0 +1,219 @@
+{
+  "state": "completed_same_retained_generations",
+  "count": 1319,
+  "before_correct": 1276.0,
+  "after_correct": 1283.0,
+  "before_accuracy": 0.9673995451099318,
+  "after_accuracy": 0.9727065959059894,
+  "delta_correct": 7.0,
+  "changed": [
+    {
+      "source_id": 814,
+      "shard": 0,
+      "local_index": 38,
+      "before": 0.0,
+      "after": 1.0,
+      "judge_keys": [
+        "6e1a5e5312f9621d3e56f967f4715d99699e5f36bd4f2690a4553cd58a4f4fbe"
+      ]
+    },
+    {
+      "source_id": 906,
+      "shard": 2,
+      "local_index": 5,
+      "before": 0.0,
+      "after": 1.0,
+      "judge_keys": [
+        "4e380329330c8d7e599cf3a67a55c353adbbff44020f8efb9bb30dd35c605511"
+      ]
+    },
+    {
+      "source_id": 1042,
+      "shard": 8,
+      "local_index": 12,
+      "before": 0.0,
+      "after": 1.0,
+      "judge_keys": [
+        "bbba17511d6a0fc89c5593bf39aa740c63840e0853c6e0e86ece46f28ea2eb85"
+      ]
+    },
+    {
+      "source_id": 952,
+      "shard": 10,
+      "local_index": 36,
+      "before": 0.0,
+      "after": 1.0,
+      "judge_keys": [
+        "55c9770d62689efb6fcf67473e0c733f4e4ff25a0b3e38d2a24d674c86d6754c"
+      ]
+    },
+    {
+      "source_id": 823,
+      "shard": 16,
+      "local_index": 60,
+      "before": 0.0,
+      "after": 1.0,
+      "judge_keys": [
+        "e906632d15a383d6fde2d885f512bc4e4868869faee24d36ac9e01d0aafd1d15"
+      ]
+    },
+    {
+      "source_id": 454,
+      "shard": 18,
+      "local_index": 1,
+      "before": 0.0,
+      "after": 1.0,
+      "judge_keys": [
+        "7802b32b8840b3335557f9b5e51aebe8c48880d55c8724202a08b8a2171048f8"
+      ]
+    },
+    {
+      "source_id": 1001,
+      "shard": 18,
+      "local_index": 37,
+      "before": 0.0,
+      "after": 1.0,
+      "judge_keys": [
+        "1060032797dc6aadc0cce3b61131b82ddd4abe5830b885b7080037f55bf2eafb"
+      ]
+    }
+  ],
+  "gemini_receipts": 50,
+  "original_judge_requests": 43,
+  "explicit_parse_recovery_requests": 7,
+  "own_estimated_gemini_usd": 0.3643425,
+  "shared_ledger_estimated_usd_at_finish": 1.7483833350000055,
+  "budget_usd": 5,
+  "generation_replays": 0,
+  "gpu_claims": 0,
+  "protected_files_unchanged": 1415,
+  "shards": [
+    {
+      "shard": 0,
+      "count": 64,
+      "before": 61.0,
+      "after": 62.0
+    },
+    {
+      "shard": 1,
+      "count": 64,
+      "before": 61.0,
+      "after": 61.0
+    },
+    {
+      "shard": 2,
+      "count": 64,
+      "before": 62.0,
+      "after": 63.0
+    },
+    {
+      "shard": 3,
+      "count": 64,
+      "before": 62.0,
+      "after": 62.0
+    },
+    {
+      "shard": 4,
+      "count": 64,
+      "before": 61.0,
+      "after": 61.0
+    },
+    {
+      "shard": 5,
+      "count": 64,
+      "before": 64.0,
+      "after": 64.0
+    },
+    {
+      "shard": 6,
+      "count": 64,
+      "before": 62.0,
+      "after": 62.0
+    },
+    {
+      "shard": 7,
+      "count": 64,
+      "before": 63.0,
+      "after": 63.0
+    },
+    {
+      "shard": 8,
+      "count": 64,
+      "before": 63.0,
+      "after": 64.0
+    },
+    {
+      "shard": 9,
+      "count": 64,
+      "before": 60.0,
+      "after": 60.0
+    },
+    {
+      "shard": 10,
+      "count": 64,
+      "before": 61.0,
+      "after": 62.0
+    },
+    {
+      "shard": 11,
+      "count": 64,
+      "before": 62.0,
+      "after": 62.0
+    },
+    {
+      "shard": 12,
+      "count": 64,
+      "before": 64.0,
+      "after": 64.0
+    },
+    {
+      "shard": 13,
+      "count": 64,
+      "before": 64.0,
+      "after": 64.0
+    },
+    {
+      "shard": 14,
+      "count": 64,
+      "before": 63.0,
+      "after": 63.0
+    },
+    {
+      "shard": 15,
+      "count": 64,
+      "before": 64.0,
+      "after": 64.0
+    },
+    {
+      "shard": 16,
+      "count": 64,
+      "before": 60.0,
+      "after": 61.0
+    },
+    {
+      "shard": 17,
+      "count": 64,
+      "before": 60.0,
+      "after": 60.0
+    },
+    {
+      "shard": 18,
+      "count": 64,
+      "before": 58.0,
+      "after": 60.0
+    },
+    {
+      "shard": 19,
+      "count": 64,
+      "before": 63.0,
+      "after": 63.0
+    },
+    {
+      "shard": 20,
+      "count": 39,
+      "before": 38.0,
+      "after": 38.0
+    }
+  ],
+  "publication_status": "diagnostic_only_not_canonical"
+}

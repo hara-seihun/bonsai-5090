@@ -1,0 +1,31 @@
+{
+  "model": "~/data/bonsai1/Bonsai-27B-Q1_0.gguf",
+  "tensor_count": 851,
+  "q1_block_bytes": 18,
+  "q1_block_values": 128,
+  "q1_sign_bytes": 3361669120,
+  "q1_fp16_scale_bytes": 420208640,
+  "embedding_matrix_bytes": 178790400,
+  "one_embedding_row_bytes": 720,
+  "bandwidth_bytes_second": 1790000000000.0,
+  "measured_tokens_second": 203.378236,
+  "all_binary_weights_including_scales": {
+    "bytes_per_token": 3781877760,
+    "weight_stream_floor_ms": 2.11278087150838,
+    "roof_tokens_second": 473.3098512417281,
+    "measured_percent_of_roof": 42.969364670191695
+  },
+  "all_tensor_payload": {
+    "bytes_per_token": 3792459776,
+    "weight_stream_floor_ms": 2.1186926122905025,
+    "roof_tokens_second": 471.98918531126964,
+    "measured_percent_of_roof": 43.089596611387435
+  },
+  "decode_stream_tensor_payload": {
+    "bytes_per_token": 3613670096,
+    "weight_stream_floor_ms": 2.0188101094972066,
+    "roof_tokens_second": 495.34128806649096,
+    "measured_percent_of_roof": 41.05820388885087
+  },
+  "scope": "Batch1 one complete weight stream/token; 1.79TB/s is decimal advertised bandwidth. Embedding reads one selected row, not its entire matrix. Includes original scales; excludes activation/KV/state/partial/output traffic and dependency/compute latency. Those boundaries must be priced by each fusion receipt. Speculative/batched multi-token weight reuse has a different roof."
+}

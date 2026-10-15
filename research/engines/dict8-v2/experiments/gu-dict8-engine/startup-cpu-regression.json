@@ -1,0 +1,14 @@
+{
+  "state": "CPU_lifecycle_pass",
+  "GPU_execution": false,
+  "native_model_execution": false,
+  "old_engine_sha256": "892aafb8da7ba1df6ccf964954dc6d769be7ddf1d78de3ce0ec835ce7a278824",
+  "successor_engine_sha256": "b8df101abcad7eea679574e303b41db77e11580d8b5f0657b4a80a675677c66a",
+  "old_source_order_rejected": true,
+  "successor_source_order_accepted": true,
+  "consumer_body_unchanged": true,
+  "fixture": "actual extracted source upload body and constructor create/upload ordering; host CUDA stubs inject an invalid-stream sentinel, not a claim to reproduce the hardware AV address",
+  "compile_exit": 0,
+  "run_exit": 0,
+  "output": "old source order rejected; successor creates stream before dictionary upload; one upload; GPU execution=false\n"
+}

@@ -1,0 +1,280 @@
+{
+  "scope": "CPU-only pinned real test payloads and official extraction/scoring, recorded answers; no Bonsai quality claim",
+  "no_gpu": true,
+  "no_inference": true,
+  "fixture_sha256": "afe4bfd589da65d1929c54676ed7d0e6528e15a60c3981542272c746b288e18e",
+  "phase": "after",
+  "controls": [
+    {
+      "benchmark": "humaneval_plus",
+      "arm": "positive",
+      "task_id": "HumanEval/0",
+      "source_record_sha256": "548faa4f7cd46ceceb767cc838992fec94855b6a3b5842a69d5901e8c0756591",
+      "augmented_test_sha256": "ba0d1d1bc2482e5cea04c630b925cd79bae20410cd16ff12220241b887843cff",
+      "answer_sha256": "ecdad7aa9b7c4f8ee14f522004312bdd17ab6fb5e224f294cee4f67aec95d5b9",
+      "score": {
+        "value": {
+          "acc": true
+        },
+        "status": "success",
+        "judge_summary": null,
+        "extracted_prediction": "\n\n    sorted_numbers = sorted(numbers)\n    for i in range(len(sorted_numbers) - 1):\n        if sorted_numbers[i + 1] - sorted_numbers[i] < threshold:\n            return True\n    return False\n\n",
+        "prediction": "\n\n    sorted_numbers = sorted(numbers)\n    for i in range(len(sorted_numbers) - 1):\n        if sorted_numbers[i + 1] - sorted_numbers[i] < threshold:\n            return True\n    return False\n\n",
+        "explanation": null,
+        "metadata": {
+          "task_id": "HumanEval/0",
+          "timeout": 300,
+          "execution_result": {
+            "status": "success",
+            "output": "",
+            "error": null,
+            "metadata": {
+              "image": "sha256:2bc6e12e80ef465f66303dff12c9f9db59d3de6eb870803af1c61b607b38a399",
+              "network": "none",
+              "host_mounts": [],
+              "exit_code": 0,
+              "tests_completed": true,
+              "cleanup_returncode": 0
+            }
+          }
+        },
+        "main_score_name": "acc"
+      }
+    },
+    {
+      "benchmark": "humaneval_plus",
+      "arm": "negative_augmented",
+      "task_id": "HumanEval/0",
+      "source_record_sha256": "548faa4f7cd46ceceb767cc838992fec94855b6a3b5842a69d5901e8c0756591",
+      "augmented_test_sha256": "ba0d1d1bc2482e5cea04c630b925cd79bae20410cd16ff12220241b887843cff",
+      "answer_sha256": "09ac94aeda5b25475b15de80e4b9ee7f35ff6e9c03a5f62bd3912ce52d6b3f1a",
+      "score": {
+        "value": {
+          "acc": false
+        },
+        "status": "success",
+        "judge_summary": null,
+        "extracted_prediction": "\n    return False\n",
+        "prediction": "\n    return False\n",
+        "explanation": null,
+        "metadata": {
+          "task_id": "HumanEval/0",
+          "timeout": 300,
+          "execution_result": {
+            "status": "error",
+            "output": "",
+            "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 6, in <module>\n  File \"<stdin>\", line 4, in _observe\n  File \"<stdin>\", line 47, in <module>\n  File \"<stdin>\", line 45, in check\n  File \"<stdin>\", line 38, in assertion\nAssertionError\n",
+            "metadata": {
+              "image": "sha256:2bc6e12e80ef465f66303dff12c9f9db59d3de6eb870803af1c61b607b38a399",
+              "network": "none",
+              "host_mounts": [],
+              "exit_code": 1,
+              "cleanup_returncode": 0
+            }
+          }
+        },
+        "main_score_name": "acc"
+      }
+    },
+    {
+      "benchmark": "humaneval_plus",
+      "arm": "premature_exit",
+      "task_id": "HumanEval/0",
+      "source_record_sha256": "548faa4f7cd46ceceb767cc838992fec94855b6a3b5842a69d5901e8c0756591",
+      "augmented_test_sha256": "ba0d1d1bc2482e5cea04c630b925cd79bae20410cd16ff12220241b887843cff",
+      "answer_sha256": "df890900548649df5506b767cdcfea51005353e081b8ce42855aa3e1c91729a0",
+      "score": {
+        "value": {
+          "acc": false
+        },
+        "status": "success",
+        "judge_summary": null,
+        "extracted_prediction": "\nimport sys\nsys.exit(0)\n",
+        "prediction": "\nimport sys\nsys.exit(0)\n",
+        "explanation": null,
+        "metadata": {
+          "task_id": "HumanEval/0",
+          "timeout": 300,
+          "execution_result": {
+            "status": "error",
+            "output": "",
+            "error": "Code exited before the complete test program returned",
+            "metadata": {
+              "image": "sha256:2bc6e12e80ef465f66303dff12c9f9db59d3de6eb870803af1c61b607b38a399",
+              "network": "none",
+              "host_mounts": [],
+              "exit_code": 0,
+              "premature_exit": true,
+              "cleanup_returncode": 0
+            }
+          }
+        },
+        "main_score_name": "acc"
+      }
+    },
+    {
+      "benchmark": "mbpp_plus",
+      "arm": "positive",
+      "task_id": 2,
+      "source_record_sha256": "04012a3dfd74ecdb8a781f2d6d2c8a60e97deba60af35ba60a7d33dc30ace8db",
+      "augmented_test_sha256": "5e8a269d251516fa9f96bb6276e62840b1644a442a58e94a12c2234ec38172e8",
+      "answer_sha256": "67898a7a95c894d2e2984e1090b96d69256841aab85455d68da66dbf618bd023",
+      "score": {
+        "value": {
+          "acc": true
+        },
+        "status": "success",
+        "judge_summary": null,
+        "extracted_prediction": "def similar_elements(test_tup1, test_tup2):\n  return tuple(set(test_tup1) & set(test_tup2))\n",
+        "prediction": "\ndef similar_elements(test_tup1, test_tup2):\n  return tuple(set(test_tup1) & set(test_tup2))\n",
+        "explanation": null,
+        "metadata": {
+          "task_id": 2,
+          "timeout": 20,
+          "execution_result": {
+            "status": "success",
+            "output": "",
+            "error": null,
+            "metadata": {
+              "image": "sha256:2bc6e12e80ef465f66303dff12c9f9db59d3de6eb870803af1c61b607b38a399",
+              "network": "none",
+              "host_mounts": [],
+              "exit_code": 0,
+              "tests_completed": true,
+              "cleanup_returncode": 0
+            }
+          },
+          "test_scope": "original base tests plus pinned augmented test payload"
+        },
+        "main_score_name": "acc"
+      }
+    },
+    {
+      "benchmark": "mbpp_plus",
+      "arm": "negative_augmented",
+      "task_id": 2,
+      "source_record_sha256": "04012a3dfd74ecdb8a781f2d6d2c8a60e97deba60af35ba60a7d33dc30ace8db",
+      "augmented_test_sha256": "5e8a269d251516fa9f96bb6276e62840b1644a442a58e94a12c2234ec38172e8",
+      "answer_sha256": "aa8570362108fd3a76c4462e940c5e97dba2175b61a14bfb1610325df6a6637b",
+      "score": {
+        "value": {
+          "acc": false
+        },
+        "status": "success",
+        "judge_summary": null,
+        "extracted_prediction": "def similar_elements(a,b):\n return {((3,4,5,6),(5,7,4,10)):(4,5),((1,2,3,4),(5,4,3,7)):(3,4),((11,12,14,13),(17,15,14,13)):(13,14)}.get((tuple(a),tuple(b)), (999999,))\n",
+        "prediction": "def similar_elements(a,b):\n return {((3,4,5,6),(5,7,4,10)):(4,5),((1,2,3,4),(5,4,3,7)):(3,4),((11,12,14,13),(17,15,14,13)):(13,14)}.get((tuple(a),tuple(b)), (999999,))\n",
+        "explanation": null,
+        "metadata": {
+          "task_id": 2,
+          "timeout": 20,
+          "execution_result": {
+            "status": "error",
+            "output": "",
+            "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 6, in <module>\n  File \"<stdin>\", line 4, in _observe\n  File \"<stdin>\", line 36, in <module>\n  File \"<stdin>\", line 28, in assertion\n  File \"/usr/local/lib/python3.11/site-packages/numpy/_core/numeric.py\", line 2365, in allclose\n    res = all(isclose(a, b, rtol=rtol, atol=atol, equal_nan=equal_nan))\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/numpy/_core/numeric.py\", line 2496, in isclose\n    result = (less_equal(abs(x - y), atol + rtol * abs(y))\n                         ^^^^^^^^^^\nTypeError: bad operand type for abs(): 'set'\n",
+            "metadata": {
+              "image": "sha256:2bc6e12e80ef465f66303dff12c9f9db59d3de6eb870803af1c61b607b38a399",
+              "network": "none",
+              "host_mounts": [],
+              "exit_code": 1,
+              "cleanup_returncode": 0
+            }
+          },
+          "test_scope": "original base tests plus pinned augmented test payload"
+        },
+        "main_score_name": "acc"
+      }
+    },
+    {
+      "benchmark": "mbpp_plus",
+      "arm": "premature_exit",
+      "task_id": 2,
+      "source_record_sha256": "04012a3dfd74ecdb8a781f2d6d2c8a60e97deba60af35ba60a7d33dc30ace8db",
+      "augmented_test_sha256": "5e8a269d251516fa9f96bb6276e62840b1644a442a58e94a12c2234ec38172e8",
+      "answer_sha256": "df890900548649df5506b767cdcfea51005353e081b8ce42855aa3e1c91729a0",
+      "score": {
+        "value": {
+          "acc": false
+        },
+        "status": "success",
+        "judge_summary": null,
+        "extracted_prediction": "",
+        "prediction": "\nimport sys\nsys.exit(0)\n",
+        "explanation": null,
+        "metadata": {
+          "task_id": 2,
+          "timeout": 20,
+          "execution_result": {
+            "status": "error",
+            "output": "",
+            "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 6, in <module>\n  File \"<stdin>\", line 4, in _observe\n  File \"<stdin>\", line 3, in <module>\nNameError: name 'similar_elements' is not defined\n",
+            "metadata": {
+              "image": "sha256:2bc6e12e80ef465f66303dff12c9f9db59d3de6eb870803af1c61b607b38a399",
+              "network": "none",
+              "host_mounts": [],
+              "exit_code": 1,
+              "cleanup_returncode": 0
+            }
+          },
+          "test_scope": "original base tests plus pinned augmented test payload"
+        },
+        "main_score_name": "acc"
+      }
+    }
+  ],
+  "transport_controls": [
+    {
+      "benchmark": "humaneval_plus",
+      "case": "transport_error",
+      "outcome": "explicit_scoring_error",
+      "error": "Unscorable code execution result: {'status': 'transport_error', 'error': 'injected absent container state', 'metadata': {}}"
+    },
+    {
+      "benchmark": "humaneval_plus",
+      "case": "foreign_transport_exception",
+      "outcome": "explicit_scoring_error",
+      "error": "Code execution transport failed: injected transport loss"
+    },
+    {
+      "case": "program_exit_125",
+      "execution_result": {
+        "status": "error",
+        "output": "",
+        "error": "",
+        "metadata": {
+          "image": "sha256:2bc6e12e80ef465f66303dff12c9f9db59d3de6eb870803af1c61b607b38a399",
+          "network": "none",
+          "host_mounts": [],
+          "exit_code": 125,
+          "cleanup_returncode": 0
+        }
+      }
+    },
+    {
+      "case": "program_timeout",
+      "execution_result": {
+        "status": "timeout",
+        "error": "Official scorer execution exceeded timeout",
+        "output": "",
+        "metadata": {
+          "image": "sha256:2bc6e12e80ef465f66303dff12c9f9db59d3de6eb870803af1c61b607b38a399",
+          "network": "none",
+          "host_mounts": [],
+          "cleanup_returncode": 0
+        }
+      }
+    },
+    {
+      "benchmark": "mbpp_plus",
+      "case": "transport_error",
+      "outcome": "explicit_scoring_error",
+      "error": "Unscorable code execution result: {'status': 'transport_error', 'error': 'injected absent container state', 'metadata': {}}"
+    },
+    {
+      "benchmark": "mbpp_plus",
+      "case": "foreign_transport_exception",
+      "outcome": "explicit_scoring_error",
+      "error": "Code execution transport failed: injected transport loss"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z6nativeILi2ELi0ELb0EEvPKjPjPK5EntryiPy' for 'sm_120a'
+ptxas info    : Function properties for _Z6nativeILi2ELi0ELb0EEvPKjPjPK5EntryiPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 18 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6nativeILi1ELi0ELb0EEvPKjPjPK5EntryiPy' for 'sm_120a'
+ptxas info    : Function properties for _Z6nativeILi1ELi0ELb0EEvPKjPjPK5EntryiPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 22 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6nativeILi0ELi0ELb0EEvPKjPjPK5EntryiPy' for 'sm_120a'
+ptxas info    : Function properties for _Z6nativeILi0ELi0ELb0EEvPKjPjPK5EntryiPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 20 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6nativeILi2ELi3ELb1EEvPKjPjPK5EntryiPy' for 'sm_120a'
+ptxas info    : Function properties for _Z6nativeILi2ELi3ELb1EEvPKjPjPK5EntryiPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 22 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6nativeILi2ELi2ELb1EEvPKjPjPK5EntryiPy' for 'sm_120a'
+ptxas info    : Function properties for _Z6nativeILi2ELi2ELb1EEvPKjPjPK5EntryiPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 22 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6nativeILi2ELi1ELb1EEvPKjPjPK5EntryiPy' for 'sm_120a'
+ptxas info    : Function properties for _Z6nativeILi2ELi1ELb1EEvPKjPjPK5EntryiPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 22 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6nativeILi2ELi0ELb1EEvPKjPjPK5EntryiPy' for 'sm_120a'
+ptxas info    : Function properties for _Z6nativeILi2ELi0ELb1EEvPKjPjPK5EntryiPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 22 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6nativeILi1ELi3ELb1EEvPKjPjPK5EntryiPy' for 'sm_120a'
+ptxas info    : Function properties for _Z6nativeILi1ELi3ELb1EEvPKjPjPK5EntryiPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 24 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6nativeILi1ELi2ELb1EEvPKjPjPK5EntryiPy' for 'sm_120a'
+ptxas info    : Function properties for _Z6nativeILi1ELi2ELb1EEvPKjPjPK5EntryiPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 24 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6nativeILi1ELi1ELb1EEvPKjPjPK5EntryiPy' for 'sm_120a'
+ptxas info    : Function properties for _Z6nativeILi1ELi1ELb1EEvPKjPjPK5EntryiPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 24 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6nativeILi1ELi0ELb1EEvPKjPjPK5EntryiPy' for 'sm_120a'
+ptxas info    : Function properties for _Z6nativeILi1ELi0ELb1EEvPKjPjPK5EntryiPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 24 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6nativeILi0ELi3ELb1EEvPKjPjPK5EntryiPy' for 'sm_120a'
+ptxas info    : Function properties for _Z6nativeILi0ELi3ELb1EEvPKjPjPK5EntryiPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 22 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6nativeILi0ELi2ELb1EEvPKjPjPK5EntryiPy' for 'sm_120a'
+ptxas info    : Function properties for _Z6nativeILi0ELi2ELb1EEvPKjPjPK5EntryiPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 22 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6nativeILi0ELi1ELb1EEvPKjPjPK5EntryiPy' for 'sm_120a'
+ptxas info    : Function properties for _Z6nativeILi0ELi1ELb1EEvPKjPjPK5EntryiPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 22 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6nativeILi0ELi0ELb1EEvPKjPjPK5EntryiPy' for 'sm_120a'
+ptxas info    : Function properties for _Z6nativeILi0ELi0ELb1EEvPKjPjPK5EntryiPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 22 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z7comparePKjS0_Py' for 'sm_120a'
+ptxas info    : Function properties for _Z7comparePKjS0_Py
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 10 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6lookupPKjPjS0_' for 'sm_120a'
+ptxas info    : Function properties for _Z6lookupPKjPjS0_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 12 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6directPKjPj' for 'sm_120a'
+ptxas info    : Function properties for _Z6directPKjPj
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 17 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+native_mixed_readout.cu
+tmpxft_0000227c_00000000-10_native_mixed_readout.cudafe1.cpp

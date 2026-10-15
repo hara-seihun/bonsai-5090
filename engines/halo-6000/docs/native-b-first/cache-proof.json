@@ -1,0 +1,1 @@
+{"source":"/workspace/models/gguf/Qwen3.6-35B-A3B-ternary-v1-PTQ1_0.gguf","cache":"/workspace/models/halo6000-cache/halo6000-317d2b887854b482.bin","cache_version":1,"geometry_valid":true,"payload_checksums_valid":true,"trits_scales_q8_f32_verified":true,"tensors":733,"cache_tensor_bytes":10103327232,"cache_file_bytes":10103393280,"seconds":234.758}

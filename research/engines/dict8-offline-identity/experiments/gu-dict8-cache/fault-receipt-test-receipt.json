@@ -1,0 +1,14 @@
+{
+  "gpu_work": false,
+  "native_execution": false,
+  "injected_process_scenarios": [
+    "cpp-failure",
+    "cpp-timeout",
+    "launch-error",
+    "bad-cli-json",
+    "pass"
+  ],
+  "failure_receipt_and_streams_retained": true,
+  "existing_receipt_not_overwritten": true,
+  "owned_fixture_cleanup": true
+}

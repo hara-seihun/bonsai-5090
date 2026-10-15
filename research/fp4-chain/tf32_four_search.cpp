@@ -1,0 +1,11 @@
+#include <algorithm>
+#include <array>
+#include <bit>
+#include <chrono>
+#include <cmath>
+#include <cstdint>
+#include <iostream>
+#include <vector>
+struct S{uint32_t b;int t;};float cvt(float x){auto u=std::bit_cast<uint32_t>(x);return std::bit_cast<float>((u+4096u)&0xffffe000u);}
+int main(){auto start=std::chrono::steady_clock::now();int primes[6][4]={{2,5,7,11},{2,7,11,13},{3,5,7,11},{2,11,13,17},{2,3,7,11},{5,7,11,13}};int tries=0;for(auto &ps:primes)for(int q0=5;q0<=8;q0++)for(int q1=5;q1<=8;q1++)for(int q2=5;q2<=8;q2++)for(int q3=5;q3<=8;q3++){int qs[4]={q0,q1,q2,q3};double range=0;for(int j=0;j<4;j++)range+=qs[j]*std::log2(ps[j]);int shift=int(range)/2;std::array<float,81> v;int digits[81][4];for(int i=0;i<81;i++){int n=i;double x=1;for(int j=3;j>=0;j--){int d=n%3;n/=3;digits[i][j]=d-1;x*=std::pow(double(ps[j]),d==2?0:d==0?1:qs[j]);}v[i]=float(std::ldexp(x,-shift));}int prod[81][81];for(int a=0;a<81;a++)for(int b=0;b<81;b++){int t=0;for(int j=0;j<4;j++)t=3*t+digits[a][j]*digits[b][j]+1;prod[a][b]=t;}std::vector<S> states;for(int i=0;i<81;i++)states.push_back({std::bit_cast<uint32_t>(v[i]),i});bool bad=false;int stage;uint32_t witness=0;int a=0,b=0;for(stage=2;stage<=4;stage++){std::vector<S> next;next.reserve(states.size()*81);for(auto s:states)for(int i=0;i<81;i++)next.push_back({std::bit_cast<uint32_t>(cvt(std::bit_cast<float>(s.b))*cvt(v[i])),prod[s.t][i]});std::sort(next.begin(),next.end(),[](auto a,auto b){return a.b<b.b||(a.b==b.b&&a.t<b.t);});for(size_t i=1;i<next.size();i++)if(next[i].b==next[i-1].b&&next[i].t!=next[i-1].t){bad=true;witness=next[i].b;a=next[i-1].t;b=next[i].t;break;}if(bad)break;next.erase(std::unique(next.begin(),next.end(),[](auto a,auto b){return a.b==b.b;}),next.end());states=std::move(next);}tries++;std::cout<<"{\"p\":["<<ps[0]<<","<<ps[1]<<","<<ps[2]<<","<<ps[3]<<"],\"q\":["<<q0<<","<<q1<<","<<q2<<","<<q3<<"],\"shift\":"<<shift<<",\"status\":\""<<(bad?"collision":"sat")<<"\",\"stage\":"<<(stage>4?4:stage)<<",\"states\":"<<states.size()<<",\"bits\":"<<witness<<",\"targets\":["<<a<<","<<b<<"]}"<<std::endl;if(!bad){std::cerr<<"SAT after "<<tries<<" candidates\n";return 0;}if(std::chrono::duration<double>(std::chrono::steady_clock::now()-start).count()>45){std::cerr<<"bounded search after "<<tries<<" candidates\n";return 0;}}
+std::cerr<<"searched "<<tries<<" candidates\n";}

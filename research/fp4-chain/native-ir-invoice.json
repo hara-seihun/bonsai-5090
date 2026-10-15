@@ -1,0 +1,692 @@
+{
+  "final-readout": {
+    "ptx_sha256": "297d467aab130577b5683b7ee6fce77a29541902a9e829cf1f8adbf8a72a0a9f",
+    "ptx_mma_static_total": 15,
+    "sass": {
+      "state": "unset",
+      "reason": "CUDA compiler bundle lacks nvdisasm; PTX is not SASS"
+    },
+    "receipt": {
+      "exit": 0,
+      "stdout": "{\"status\":\"pass\",\"device\":\"NVIDIA GeForce RTX 5090\",\"cases\":531441,\"accumulator_paths\":4,\"lane_checks\":68024448,\"missing\":0,\"mismatches\":0,\"dictionary_bytes\":149520,\"labels_bytes\":108,\"input_bytes\":2125764,\"output_bytes\":2125764,\"rounds\":7,\"repetitions_per_round\":10,\"timings_ms\":{\"native_final_observer\":{\"median\":0.105085,\"min\":0.104995,\"max\":0.105194},\"warp_direct\":{\"median\":0.076240,\"min\":0.076150,\"max\":0.076406},\"lane_direct\":{\"median\":0.008874,\"min\":0.007158,\"max\":0.010518}},\"registers\":[18,24,24],\"local_bytes_per_thread\":[0,0,0],\"shared_bytes_per_block\":[0,0,0],\"scope\":\"shuffled exhaustive ternary four-factor source codes to final three-trit code; producer lookup, RNA conversion, three MMAs, three 1/8 normalizations, final binary-search observer and output included; warm resident timing, uniform K8, no independent-K/model/HTTP claim\"}\n",
+      "stderr": "",
+      "wall_s": 0.17103290557861328,
+      "mutex": "Local\\BonsaiGPU",
+      "mutex_wait_result": 0,
+      "hashes": {
+        "native_readout.cu": "8d2dd3d3cd5607d9a169ecd3180dae8597b0ba6dfd37a67645b183992679c5a8",
+        "native_readout.exe": "cc869ba08af8e919f313d740a88fcad2cd2f1bc9f96701a5f35afa7d86471002",
+        "native-prime-observer.bin": "93a78c169f3d8876f65f90c72e1459f7597f8dbe968d5f10f62d4b452ea42116",
+        "build.log": "0983f03ab433e67739bfe10861066f8838098e93990d97eb9ab743bd30501d4e"
+      }
+    },
+    "ptx_entries": [
+      {
+        "entry": "_Z7comparePKiS0_Py(",
+        "mma_static_count": 0,
+        "tf32_rna_static_count": 0
+      },
+      {
+        "entry": "_Z6directILb0EEvPK6uchar4Pi(",
+        "mma_static_count": 0,
+        "tf32_rna_static_count": 0
+      },
+      {
+        "entry": "_Z6nativeILi0ELb1EEvPK6uchar4PiPK5EntryiPy(",
+        "mma_static_count": 3,
+        "tf32_rna_static_count": 6
+      },
+      {
+        "entry": "_Z6nativeILi1ELb1EEvPK6uchar4PiPK5EntryiPy(",
+        "mma_static_count": 3,
+        "tf32_rna_static_count": 6
+      },
+      {
+        "entry": "_Z6nativeILi2ELb1EEvPK6uchar4PiPK5EntryiPy(",
+        "mma_static_count": 3,
+        "tf32_rna_static_count": 6
+      },
+      {
+        "entry": "_Z6nativeILi3ELb1EEvPK6uchar4PiPK5EntryiPy(",
+        "mma_static_count": 3,
+        "tf32_rna_static_count": 6
+      },
+      {
+        "entry": "_Z6nativeILi0ELb0EEvPK6uchar4PiPK5EntryiPy(",
+        "mma_static_count": 3,
+        "tf32_rna_static_count": 6
+      },
+      {
+        "entry": "_Z6directILb1EEvPK6uchar4Pi(",
+        "mma_static_count": 0,
+        "tf32_rna_static_count": 0
+      }
+    ]
+  },
+  "independent-k2": {
+    "ptx_sha256": "a4c063b27afa9fa2c97359522386cd685815d9f558f61e7d6032129b21edd44f",
+    "ptx_mma_static_total": 2,
+    "sass": {
+      "state": "unset",
+      "reason": "CUDA compiler bundle lacks nvdisasm; PTX is not SASS"
+    },
+    "receipt": {
+      "exit": 2,
+      "stdout": "{\"status\":\"target_collision\",\"cases\":531441,\"fragment_agreement_checks\":68024448,\"layout_control\":41,\"final_states\":26076,\"target_collision_boundaries\":3094,\"probe_ms\":0.113120,\"collision\":{\"bits\":834666496,\"targets\":[74,114],\"inputs\":[[8,8,8,26],[26,26,26,20]]},\"registers\":26,\"local_bytes\":0,\"shared_bytes\":0,\"scope\":\"native nonuniform K8: four copies of each of two independent pair products; one MMA, RNA conversion, 1/4 normalization; final target is three independent two-term ternary dot sums; finite 2,5,7 q5 family only, no global bound/model/HTTP claim\"}\n",
+      "stderr": "",
+      "wall_s": 1.4382946491241455,
+      "mutex": "Local\\BonsaiGPU",
+      "mutex_wait_result": 0,
+      "hashes": {
+        "native_k2.cu": "4884ead545a1e26e9d4b124b57a66cc5cac42fe8c7e7d6fc68c172f18ee815ee",
+        "native_k2.exe": "c39b8d50b0aff744887702c99309576cf5bc63328d7736eb3ae29b9cd998f52b",
+        "build.log": "284216cd2eedca056fffb875ac762cf15bbf1ea9c298dd93f61fed3d2dab2637"
+      }
+    },
+    "ptx_entries": [
+      {
+        "entry": "_Z6layoutPy(",
+        "mma_static_count": 1,
+        "tf32_rna_static_count": 2
+      },
+      {
+        "entry": "_Z5probeP4CasePy(",
+        "mma_static_count": 1,
+        "tf32_rna_static_count": 2
+      }
+    ]
+  },
+  "independent-k2-joint": {
+    "ptx_sha256": "fd1721f4a898fd0689990ca62425f52191f111d9b7176c078e8b8cf83ab573af",
+    "ptx_mma_static_total": 10,
+    "sass": {
+      "state": "unset",
+      "reason": "CUDA compiler bundle lacks nvdisasm; PTX is not SASS"
+    },
+    "receipt": {
+      "exit": 0,
+      "stdout": "{\"status\":\"pass\",\"device\":\"NVIDIA GeForce RTX 5090\",\"cases\":531441,\"accumulator_paths\":4,\"lane_checks\":68024448,\"missing\":0,\"mismatches\":0,\"dictionary_bytes\":149520,\"labels_bytes\":108,\"input_bytes\":2125764,\"output_bytes\":2125764,\"rounds\":7,\"repetitions_per_round\":10,\"timings_ms\":{\"native_final_observer\":{\"median\":0.147901,\"min\":0.147750,\"max\":0.150419},\"warp_direct\":{\"median\":0.072102,\"min\":0.071984,\"max\":0.072186},\"lane_direct\":{\"median\":0.007450,\"min\":0.007005,\"max\":0.010381}},\"registers\":[22,24,24],\"local_bytes_per_thread\":[0,0,0],\"shared_bytes_per_block\":[0,0,0],\"scope\":\"shuffled exhaustive two independent ternary pairs to final three-component two-term dot sum; producer lookup, two independent pair MMAs, RNA conversions, 1/8 normalization, power-of-two padding relabels, joint final observation of two float carriers and output included; warm resident timing; three independent two-term ternary sums, no single-MMA K-compression/model/HTTP claim\"}\n",
+      "stderr": "",
+      "wall_s": 0.1752784252166748,
+      "mutex": "Local\\BonsaiGPU",
+      "mutex_wait_result": 0,
+      "hashes": {
+        "native_k2_readout.cu": "1988f35fa2dfd868ece120c7c087574bb941092ba36c17e1c7eb2dee54ffac2f",
+        "native_k2_readout.exe": "63bd5b67b3f0d2b95c487c5447c87bcebeca24321e13bc3ebc0c843914ec1eec",
+        "native-prime-observer.bin": "93a78c169f3d8876f65f90c72e1459f7597f8dbe968d5f10f62d4b452ea42116",
+        "build.log": "11ba6fe51721e6c9cad887a23382b5b7f6edf35d440cfed8525d69e792892613"
+      }
+    },
+    "ptx_entries": [
+      {
+        "entry": "_Z7comparePKiS0_Py(",
+        "mma_static_count": 0,
+        "tf32_rna_static_count": 0
+      },
+      {
+        "entry": "_Z6directILb0EEvPK6uchar4Pi(",
+        "mma_static_count": 0,
+        "tf32_rna_static_count": 0
+      },
+      {
+        "entry": "_Z6nativeILi0ELb1EEvPK6uchar4PiPK5EntryiPy(",
+        "mma_static_count": 2,
+        "tf32_rna_static_count": 6
+      },
+      {
+        "entry": "_Z6nativeILi1ELb1EEvPK6uchar4PiPK5EntryiPy(",
+        "mma_static_count": 2,
+        "tf32_rna_static_count": 6
+      },
+      {
+        "entry": "_Z6nativeILi2ELb1EEvPK6uchar4PiPK5EntryiPy(",
+        "mma_static_count": 2,
+        "tf32_rna_static_count": 6
+      },
+      {
+        "entry": "_Z6nativeILi3ELb1EEvPK6uchar4PiPK5EntryiPy(",
+        "mma_static_count": 2,
+        "tf32_rna_static_count": 6
+      },
+      {
+        "entry": "_Z6nativeILi0ELb0EEvPK6uchar4PiPK5EntryiPy(",
+        "mma_static_count": 2,
+        "tf32_rna_static_count": 6
+      },
+      {
+        "entry": "_Z6directILb1EEvPK6uchar4Pi(",
+        "mma_static_count": 0,
+        "tf32_rna_static_count": 0
+      }
+    ]
+  },
+  "full-tile-joint": {
+    "hashes": {
+      "native_tile_join.cu": "9f0307a60f0614e77163ce82539bc6fe3936a2d23f00dbe47ec4cbe051189fe1",
+      "native_tile_join.ptx": "da10b7e085e438953d520bac5b46b9df4076176719a8adf3535c69d8d9c62c22",
+      "build.log": "0b81f8612e2c361a08f449ae1064672cc1d440af6a071f58a14563e62c9ca2d7",
+      "receipt.json": "43117eb64ba6a1c46c5ca723d2c8e69471fab9e0ae754f0767f5557bb344f984"
+    },
+    "ptx_entries": [
+      {
+        "entry": "_Z6directPK6uchar2S1_Pi(",
+        "mma": 0,
+        "rna": 0,
+        "global_loads": 2,
+        "global_stores": 1,
+        "constant_loads": 0,
+        "ptx_lines": 136
+      },
+      {
+        "entry": "_Z7comparePKiS0_Py(",
+        "mma": 0,
+        "rna": 0,
+        "global_loads": 2,
+        "global_stores": 0,
+        "constant_loads": 0,
+        "ptx_lines": 27
+      },
+      {
+        "entry": "_Z6nativeILb1EEvPK6uchar2S2_PiPK5EntryiPy(",
+        "mma": 2,
+        "rna": 14,
+        "global_loads": 35,
+        "global_stores": 8,
+        "constant_loads": 6,
+        "ptx_lines": 1009
+      },
+      {
+        "entry": "_Z6nativeILb0EEvPK6uchar2S2_PiPK5EntryiPy(",
+        "mma": 2,
+        "rna": 14,
+        "global_loads": 27,
+        "global_stores": 8,
+        "constant_loads": 6,
+        "ptx_lines": 553
+      }
+    ],
+    "sass": {
+      "state": "unset",
+      "reason": "nvdisasm absent; inventory retained"
+    }
+  },
+  "full-tile-hash": {
+    "hashes": {
+      "native_tile_hash.cu": "51c747b012a49f7945f0e0f10a4dd06982ac18b1f0875878bca6c07466be5aaa",
+      "native_tile_hash.ptx": "58f66aa67039db43b0277dae386b7594a5bdfccab31047959e3f5f7213e10586",
+      "build.log": "8800f3235e11515609ccc1a1e1ff961644a1fe62b9f8ff33e0ac8e33cdc99497",
+      "receipt.json": "220b2da22753c40f85a1b03b7c1ade0d8d1e30251895a4d8d8873dde8cf06e7d",
+      "native-pair-image.bin": "83450831d4b02f40db18e2e713824efce4dcbb79e6d84ee30e867811f08ad645",
+      "native-pair-hash.bin": "cbb38564dcc2273e9e67e7401fee54467abb1b3fc23aecafb6182c852b8782da"
+    },
+    "ptx_entries": [
+      {
+        "entry": "_Z7projectP5Entry(",
+        "mma": 1,
+        "rna": 7,
+        "global_loads": 0,
+        "global_stores": 8,
+        "constant_loads": 3,
+        "ptx_lines": 295
+      },
+      {
+        "entry": "_Z6directPK6uchar2S1_Pi(",
+        "mma": 0,
+        "rna": 0,
+        "global_loads": 2,
+        "global_stores": 1,
+        "constant_loads": 0,
+        "ptx_lines": 136
+      },
+      {
+        "entry": "_Z7comparePKiS0_Py(",
+        "mma": 0,
+        "rna": 0,
+        "global_loads": 2,
+        "global_stores": 0,
+        "constant_loads": 0,
+        "ptx_lines": 27
+      },
+      {
+        "entry": "_Z6nativeILb1EEvPK6uchar2S2_PiPK5EntryiPy(",
+        "mma": 2,
+        "rna": 14,
+        "global_loads": 27,
+        "global_stores": 8,
+        "constant_loads": 6,
+        "ptx_lines": 1049
+      },
+      {
+        "entry": "_Z6nativeILb0EEvPK6uchar2S2_PiPK5EntryiPy(",
+        "mma": 2,
+        "rna": 14,
+        "global_loads": 19,
+        "global_stores": 8,
+        "constant_loads": 6,
+        "ptx_lines": 589
+      }
+    ],
+    "sass": {
+      "state": "unset",
+      "reason": "nvdisasm absent; inventory retained"
+    }
+  },
+  "full-tile-graph": {
+    "hashes": {
+      "native_tile_graph.cu": "b38fd994f8bce05d18cdc56c6c777f617358cb6969b2473308b3f175d900034e",
+      "native_tile_graph.ptx": "a1856a9166b36214e25b73f186bef1779a2cef053d8d4b5ea1f5be5127082c74",
+      "build.log": "253dfa802c6c855ba81932c9bc7cd9442ae0e656b48e71d5be80a84dbaeec822",
+      "receipt.json": "18fb2aee5864f836d04a7d532da9013d2b257ab67a9248fba6db1573f8129113",
+      "native-pair-image.bin": "83450831d4b02f40db18e2e713824efce4dcbb79e6d84ee30e867811f08ad645",
+      "native-pair-hash.bin": "cbb38564dcc2273e9e67e7401fee54467abb1b3fc23aecafb6182c852b8782da"
+    },
+    "ptx_entries": [
+      {
+        "entry": "_Z7projectP5Entry(",
+        "mma": 1,
+        "rna": 7,
+        "global_loads": 0,
+        "global_stores": 8,
+        "constant_loads": 3,
+        "ptx_lines": 295
+      },
+      {
+        "entry": "_Z6directPK6uchar2S1_Pi(",
+        "mma": 0,
+        "rna": 0,
+        "global_loads": 2,
+        "global_stores": 1,
+        "constant_loads": 0,
+        "ptx_lines": 136
+      },
+      {
+        "entry": "_Z7comparePKiS0_Py(",
+        "mma": 0,
+        "rna": 0,
+        "global_loads": 2,
+        "global_stores": 0,
+        "constant_loads": 0,
+        "ptx_lines": 27
+      },
+      {
+        "entry": "_Z6nativeILb1ELb0EEvPK6uchar2S2_PiPK5EntryiPy(",
+        "mma": 2,
+        "rna": 14,
+        "global_loads": 35,
+        "global_stores": 8,
+        "constant_loads": 6,
+        "ptx_lines": 1009
+      },
+      {
+        "entry": "_Z6nativeILb1ELb1EEvPK6uchar2S2_PiPK5EntryiPy(",
+        "mma": 2,
+        "rna": 14,
+        "global_loads": 27,
+        "global_stores": 8,
+        "constant_loads": 6,
+        "ptx_lines": 1049
+      },
+      {
+        "entry": "_Z6nativeILb0ELb0EEvPK6uchar2S2_PiPK5EntryiPy(",
+        "mma": 2,
+        "rna": 14,
+        "global_loads": 27,
+        "global_stores": 8,
+        "constant_loads": 6,
+        "ptx_lines": 553
+      },
+      {
+        "entry": "_Z6nativeILb0ELb1EEvPK6uchar2S2_PiPK5EntryiPy(",
+        "mma": 2,
+        "rna": 14,
+        "global_loads": 19,
+        "global_stores": 8,
+        "constant_loads": 6,
+        "ptx_lines": 589
+      }
+    ],
+    "sass": {
+      "state": "unset",
+      "reason": "nvdisasm absent; inventory retained"
+    }
+  },
+  "full-tile-compact": {
+    "hashes": {
+      "native_tile_compact.cu": "c6efada805c215a18092f406bddded3c2728068f7a9991cdd9b5ed14bb5e4d20",
+      "native_tile_compact.ptx": "e34219b49738c8734bcd77b25c67e34d89570d18a190f01a3b55bb782f4a52c1",
+      "build.log": "059d02399ba66688b195d755774e374370b42011511c7a8d2855f765ead3ddf5",
+      "receipt.json": "673cd2489a6a340440618b399e158a92fd5ba43aa75794924fce69fb353d193a",
+      "native-pair-image.bin": "83450831d4b02f40db18e2e713824efce4dcbb79e6d84ee30e867811f08ad645",
+      "native-pair-hash.bin": "cbb38564dcc2273e9e67e7401fee54467abb1b3fc23aecafb6182c852b8782da",
+      "native-pair-compact.bin": "0eeda7e7361f1709293357f9069f618f2e7243707e53bf7617ac5a93fc94d7c9"
+    },
+    "ptx_entries": [
+      {
+        "entry": "_Z7projectP5Entry(",
+        "mma": 1,
+        "rna": 7,
+        "global_loads": 0,
+        "global_stores": 8,
+        "constant_loads": 3,
+        "ptx_lines": 295
+      },
+      {
+        "entry": "_Z6directPK6uchar2S1_Pi(",
+        "mma": 0,
+        "rna": 0,
+        "global_loads": 2,
+        "global_stores": 1,
+        "constant_loads": 0,
+        "ptx_lines": 136
+      },
+      {
+        "entry": "_Z7comparePKiS0_Py(",
+        "mma": 0,
+        "rna": 0,
+        "global_loads": 2,
+        "global_stores": 0,
+        "constant_loads": 0,
+        "ptx_lines": 27
+      },
+      {
+        "entry": "_Z6nativeILb1ELi2EEvPK6uchar2S2_PiPK5EntryiPy(",
+        "mma": 2,
+        "rna": 14,
+        "global_loads": 35,
+        "global_stores": 8,
+        "constant_loads": 6,
+        "ptx_lines": 1009
+      },
+      {
+        "entry": "_Z6nativeILb1ELi1EEvPK6uchar2S2_PiPK5EntryiPy(",
+        "mma": 2,
+        "rna": 14,
+        "global_loads": 27,
+        "global_stores": 8,
+        "constant_loads": 6,
+        "ptx_lines": 909
+      },
+      {
+        "entry": "_Z6nativeILb1ELi0EEvPK6uchar2S2_PiPK5EntryiPy(",
+        "mma": 2,
+        "rna": 14,
+        "global_loads": 27,
+        "global_stores": 8,
+        "constant_loads": 6,
+        "ptx_lines": 1049
+      },
+      {
+        "entry": "_Z6nativeILb0ELi2EEvPK6uchar2S2_PiPK5EntryiPy(",
+        "mma": 2,
+        "rna": 14,
+        "global_loads": 27,
+        "global_stores": 8,
+        "constant_loads": 6,
+        "ptx_lines": 553
+      },
+      {
+        "entry": "_Z6nativeILb0ELi1EEvPK6uchar2S2_PiPK5EntryiPy(",
+        "mma": 2,
+        "rna": 14,
+        "global_loads": 19,
+        "global_stores": 8,
+        "constant_loads": 6,
+        "ptx_lines": 447
+      },
+      {
+        "entry": "_Z6nativeILb0ELi0EEvPK6uchar2S2_PiPK5EntryiPy(",
+        "mma": 2,
+        "rna": 14,
+        "global_loads": 19,
+        "global_stores": 8,
+        "constant_loads": 6,
+        "ptx_lines": 589
+      }
+    ],
+    "sass": {
+      "state": "unset",
+      "reason": "nvdisasm absent; inventory retained"
+    }
+  },
+  "full-tile-prepared": {
+    "hashes": {
+      "native_tile_prepared.cu": "addc2684796f9924adda81e7db24def116f455a2d5c3f64c1cc04d7a40746846",
+      "native_tile_prepared.ptx": "27e6002a0a79ba3b411475d58b9262b175c56a4897bdb2e8f58bc1513ffa5adc",
+      "build.log": "d741e1ad5a17b32fa896d0c9761aa2509495a33d90f501513f6726428f05ab1c",
+      "receipt.json": "7bc40c2f60df23c9d980d567a75bf2796ab05c422721108f7467fb4a268b8e15",
+      "native-pair-image.bin": "83450831d4b02f40db18e2e713824efce4dcbb79e6d84ee30e867811f08ad645",
+      "native-pair-hash.bin": "cbb38564dcc2273e9e67e7401fee54467abb1b3fc23aecafb6182c852b8782da",
+      "native-pair-compact.bin": "0eeda7e7361f1709293357f9069f618f2e7243707e53bf7617ac5a93fc94d7c9"
+    },
+    "ptx_entries": [
+      {
+        "entry": "_Z7projectP5Entry(",
+        "mma": 1,
+        "rna": 7,
+        "global_loads": 0,
+        "global_stores": 8,
+        "constant_loads": 3,
+        "ptx_lines": 295
+      },
+      {
+        "entry": "_Z6directPK6uchar2S1_Pi(",
+        "mma": 0,
+        "rna": 0,
+        "global_loads": 2,
+        "global_stores": 1,
+        "constant_loads": 0,
+        "ptx_lines": 136
+      },
+      {
+        "entry": "_Z7comparePKiS0_Py(",
+        "mma": 0,
+        "rna": 0,
+        "global_loads": 2,
+        "global_stores": 0,
+        "constant_loads": 0,
+        "ptx_lines": 27
+      },
+      {
+        "entry": "_Z6nativeILb1ELi2EEvPK6uchar2S2_PiPK5EntryiPy(",
+        "mma": 2,
+        "rna": 14,
+        "global_loads": 35,
+        "global_stores": 8,
+        "constant_loads": 6,
+        "ptx_lines": 1009
+      },
+      {
+        "entry": "_Z6nativeILb1ELi3EEvPK6uchar2S2_PiPK5EntryiPy(",
+        "mma": 2,
+        "rna": 8,
+        "global_loads": 33,
+        "global_stores": 8,
+        "constant_loads": 0,
+        "ptx_lines": 891
+      },
+      {
+        "entry": "_Z6nativeILb1ELi1EEvPK6uchar2S2_PiPK5EntryiPy(",
+        "mma": 2,
+        "rna": 14,
+        "global_loads": 27,
+        "global_stores": 8,
+        "constant_loads": 6,
+        "ptx_lines": 909
+      },
+      {
+        "entry": "_Z6nativeILb1ELi0EEvPK6uchar2S2_PiPK5EntryiPy(",
+        "mma": 2,
+        "rna": 14,
+        "global_loads": 27,
+        "global_stores": 8,
+        "constant_loads": 6,
+        "ptx_lines": 1049
+      },
+      {
+        "entry": "_Z6nativeILb0ELi2EEvPK6uchar2S2_PiPK5EntryiPy(",
+        "mma": 2,
+        "rna": 14,
+        "global_loads": 27,
+        "global_stores": 8,
+        "constant_loads": 6,
+        "ptx_lines": 553
+      },
+      {
+        "entry": "_Z6nativeILb0ELi3EEvPK6uchar2S2_PiPK5EntryiPy(",
+        "mma": 2,
+        "rna": 8,
+        "global_loads": 25,
+        "global_stores": 8,
+        "constant_loads": 0,
+        "ptx_lines": 429
+      },
+      {
+        "entry": "_Z6nativeILb0ELi1EEvPK6uchar2S2_PiPK5EntryiPy(",
+        "mma": 2,
+        "rna": 14,
+        "global_loads": 19,
+        "global_stores": 8,
+        "constant_loads": 6,
+        "ptx_lines": 447
+      },
+      {
+        "entry": "_Z6nativeILb0ELi0EEvPK6uchar2S2_PiPK5EntryiPy(",
+        "mma": 2,
+        "rna": 14,
+        "global_loads": 19,
+        "global_stores": 8,
+        "constant_loads": 6,
+        "ptx_lines": 589
+      }
+    ],
+    "sass": {
+      "state": "unset",
+      "reason": "nvdisasm absent; inventory retained"
+    }
+  },
+  "full-tile-control": {
+    "hashes": {
+      "native_tile_control.cu": "ccb614c7177a94284d3a61e16e50330ef792faf99d7e26bd5cc35fde6befe5f8",
+      "native_tile_control.ptx": "228663f5e9cd8336882b89004388abbe49ea55a95a1cf5dd40556c9dffb24e50",
+      "build.log": "fe2a317a829c5ea5a04f60addeb3f3a100a501de3f5f1b07a6da377715704abf",
+      "receipt.json": "9d46828d8ae114c8ae757a0402ec1f766d25e76b44705a195960248b4a807abf",
+      "native-pair-image.bin": "83450831d4b02f40db18e2e713824efce4dcbb79e6d84ee30e867811f08ad645",
+      "native-pair-hash.bin": "cbb38564dcc2273e9e67e7401fee54467abb1b3fc23aecafb6182c852b8782da",
+      "native-pair-compact.bin": "0eeda7e7361f1709293357f9069f618f2e7243707e53bf7617ac5a93fc94d7c9"
+    },
+    "ptx_entries": [
+      {
+        "entry": "_Z7projectP5Entry(",
+        "mma": 1,
+        "rna": 7,
+        "global_loads": 0,
+        "global_stores": 8,
+        "constant_loads": 3,
+        "ptx_lines": 295
+      },
+      {
+        "entry": "_Z6directPK6uchar2S1_Pi(",
+        "mma": 0,
+        "rna": 0,
+        "global_loads": 2,
+        "global_stores": 1,
+        "constant_loads": 0,
+        "ptx_lines": 136
+      },
+      {
+        "entry": "_Z11pair_lookupPK6uchar2S1_Pi(",
+        "mma": 0,
+        "rna": 0,
+        "global_loads": 4,
+        "global_stores": 1,
+        "constant_loads": 0,
+        "ptx_lines": 55
+      },
+      {
+        "entry": "_Z7comparePKiS0_Py(",
+        "mma": 0,
+        "rna": 0,
+        "global_loads": 2,
+        "global_stores": 0,
+        "constant_loads": 0,
+        "ptx_lines": 27
+      },
+      {
+        "entry": "_Z6nativeILb1ELi2EEvPK6uchar2S2_PiPK5EntryiPy(",
+        "mma": 2,
+        "rna": 14,
+        "global_loads": 35,
+        "global_stores": 8,
+        "constant_loads": 6,
+        "ptx_lines": 1009
+      },
+      {
+        "entry": "_Z6nativeILb1ELi3EEvPK6uchar2S2_PiPK5EntryiPy(",
+        "mma": 2,
+        "rna": 8,
+        "global_loads": 33,
+        "global_stores": 8,
+        "constant_loads": 0,
+        "ptx_lines": 891
+      },
+      {
+        "entry": "_Z6nativeILb1ELi1EEvPK6uchar2S2_PiPK5EntryiPy(",
+        "mma": 2,
+        "rna": 14,
+        "global_loads": 27,
+        "global_stores": 8,
+        "constant_loads": 6,
+        "ptx_lines": 909
+      },
+      {
+        "entry": "_Z6nativeILb1ELi0EEvPK6uchar2S2_PiPK5EntryiPy(",
+        "mma": 2,
+        "rna": 14,
+        "global_loads": 27,
+        "global_stores": 8,
+        "constant_loads": 6,
+        "ptx_lines": 1049
+      },
+      {
+        "entry": "_Z6nativeILb0ELi2EEvPK6uchar2S2_PiPK5EntryiPy(",
+        "mma": 2,
+        "rna": 14,
+        "global_loads": 27,
+        "global_stores": 8,
+        "constant_loads": 6,
+        "ptx_lines": 553
+      },
+      {
+        "entry": "_Z6nativeILb0ELi3EEvPK6uchar2S2_PiPK5EntryiPy(",
+        "mma": 2,
+        "rna": 8,
+        "global_loads": 25,
+        "global_stores": 8,
+        "constant_loads": 0,
+        "ptx_lines": 429
+      },
+      {
+        "entry": "_Z6nativeILb0ELi1EEvPK6uchar2S2_PiPK5EntryiPy(",
+        "mma": 2,
+        "rna": 14,
+        "global_loads": 19,
+        "global_stores": 8,
+        "constant_loads": 6,
+        "ptx_lines": 447
+      },
+      {
+        "entry": "_Z6nativeILb0ELi0EEvPK6uchar2S2_PiPK5EntryiPy(",
+        "mma": 2,
+        "rna": 14,
+        "global_loads": 19,
+        "global_stores": 8,
+        "constant_loads": 6,
+        "ptx_lines": 589
+      }
+    ],
+    "sass": {
+      "state": "unset",
+      "reason": "nvdisasm absent; inventory retained"
+    }
+  }
+}

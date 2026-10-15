@@ -1,0 +1,82 @@
+{
+  "state": "measured_not_adopted",
+  "source_commit": "d7926585e",
+  "dll_sha256": "3572a8e6aecd89bf96b26b755440ac1e6b5ded7a49b602fe710ff8279f2e3512",
+  "baseline_median_tps": 6777.352952,
+  "mixed_median_tps": 3973.086607,
+  "plain_median_tps": 4012.525034,
+  "mixed_loss_percent": 41.377014962345434,
+  "plain_loss_percent": 40.79510005722955,
+  "boundary": {
+    "tail-mixed": {
+      "state": "observed",
+      "mode": "tail-mixed",
+      "compared_words": 71303168,
+      "different_words": 0,
+      "max_abs": 0.0,
+      "nonfinite_differences": 0,
+      "dll_sha256": "3572a8e6aecd89bf96b26b755440ac1e6b5ded7a49b602fe710ff8279f2e3512",
+      "tail": {
+        "q4_bytes": 35651584,
+        "q4_different": 0,
+        "s4_bytes": 4456448,
+        "s4_different": 0,
+        "g4_words": 4096,
+        "g4_different": 0
+      },
+      "accepted": true
+    },
+    "tail-plain": {
+      "state": "observed",
+      "mode": "tail-plain",
+      "compared_words": 71303168,
+      "different_words": 0,
+      "max_abs": 0.0,
+      "nonfinite_differences": 0,
+      "dll_sha256": "3572a8e6aecd89bf96b26b755440ac1e6b5ded7a49b602fe710ff8279f2e3512",
+      "tail": {
+        "q4_bytes": 35651584,
+        "q4_different": 0,
+        "s4_bytes": 4456448,
+        "s4_different": 0,
+        "g4_words": 4096,
+        "g4_different": 0
+      },
+      "accepted": true
+    }
+  },
+  "whole_model_logits_acceptance": "unset",
+  "gpu_release_observed": true,
+  "producer_config": {
+    "index": 13,
+    "FW": 8,
+    "WG": 2,
+    "TOKW": 32,
+    "PIPE": 0,
+    "threads": 288,
+    "rows": 64
+  },
+  "producer_resources": {
+    "mixed": {
+      "registers": 142,
+      "spill_bytes": 0
+    },
+    "plain": {
+      "registers": 131,
+      "spill_bytes": 0
+    }
+  },
+  "consumer_resources": {
+    "mixed": {
+      "registers": 48,
+      "shared_bytes": 4096,
+      "spill_bytes": 0
+    },
+    "plain": {
+      "registers": 54,
+      "shared_bytes": 4096,
+      "spill_bytes": 0
+    }
+  },
+  "source_bundle_sha256": "c4bb515593c5f8e8b85c809aaa41d229b5deb2b778956cc7a49267ed44344ebc"
+}

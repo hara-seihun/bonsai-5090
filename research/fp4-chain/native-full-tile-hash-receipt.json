@@ -1,0 +1,16 @@
+{
+  "exit": 0,
+  "stdout": "{\"kind\":\"observer_projection\",\"native_image_inputs\":729,\"states\":240,\"max_probe\":3,\"hash_bytes\":16384}\n{\"status\":\"pass\",\"device\":\"NVIDIA GeForce RTX 5090\",\"cases\":531441,\"distinct_outputs_per_full_tile\":128,\"mma_per_tile\":2,\"missing\":0,\"mismatches\":0,\"dictionary_bytes\":16384,\"labels_bytes\":108,\"input_bytes\":2916,\"output_bytes\":2125764,\"timings_ms\":{\"native_tile_hash_joint_observer\":{\"median\":0.008214,\"min\":0.006739,\"max\":0.008893},\"lane_direct\":{\"median\":0.008019,\"min\":0.005008,\"max\":0.010570}},\"registers\":[24,24],\"local_bytes_per_thread\":[0,0],\"shared_bytes_per_block\":[0,0],\"scope\":\"all 27^4 ternary source tuples as shuffled 729x729 Cartesian pair matrix; 128 independent output cells per full tile; two TF32 MMAs with uniform K replication in each pair, 1/8 normalization, RNA padding, two reachable-pair exact-key hash lookups and final three-component dot-sum join; all producers and output included; no single-MMA K compression/model/HTTP claim\"}\n",
+  "stderr": "",
+  "wall_s": 1.6563482284545898,
+  "mutex": "Local\\BonsaiGPU",
+  "mutex_wait_result": 0,
+  "hashes": {
+    "native_tile_hash.cu": "51c747b012a49f7945f0e0f10a4dd06982ac18b1f0875878bca6c07466be5aaa",
+    "native_tile_hash.exe": "a5b5560690213dfc8826e458e64430dc6249e5579fe26c85fef503004b82ad05",
+    "native-prime-observer.bin": "93a78c169f3d8876f65f90c72e1459f7597f8dbe968d5f10f62d4b452ea42116",
+    "native-pair-image.bin": "83450831d4b02f40db18e2e713824efce4dcbb79e6d84ee30e867811f08ad645",
+    "native-pair-hash.bin": "cbb38564dcc2273e9e67e7401fee54467abb1b3fc23aecafb6182c852b8782da",
+    "build.log": "8800f3235e11515609ccc1a1e1ff961644a1fe62b9f8ff33e0ac8e33cdc99497"
+  }
+}

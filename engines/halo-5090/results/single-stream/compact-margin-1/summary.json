@@ -1,0 +1,54 @@
+{
+  "command": [
+    "./h5-server",
+    "/root/models/Ternary-Bonsai-2-27B-PTQ1_0.gguf",
+    "/root/models/model.safetensors",
+    "--slots",
+    "1",
+    "--ctx",
+    "4096",
+    "--port",
+    "8010"
+  ],
+  "environment": {
+    "H5_DRAFT_MARGIN": "1",
+    "H5_COMPACT": "dense5"
+  },
+  "requests": 16,
+  "tokens": 6611,
+  "request_wall_s": 14.892173051834106,
+  "end_to_end_tok_s": 443.92446804033045,
+  "weighted_decode_tok_s": 447.60387034607953,
+  "median_decode_tok_s": 452.134955577456,
+  "median_ttft_s": 0.009416699409484863,
+  "metrics_before": {
+    "uptime_s": 0.9501881679752842,
+    "requests": 1,
+    "active": 0,
+    "generated_tokens": 256,
+    "steps": 107,
+    "busy_s": 0.9053159630000001,
+    "verify_s": 0.768337519,
+    "draft_s": 0.136366588,
+    "verify_rounds": 106,
+    "accepted_drafts": 154,
+    "proposed_drafts": 742,
+    "graphs_captured": 13,
+    "graph_replays": 169
+  },
+  "metrics_after": {
+    "uptime_s": 15.849377373000607,
+    "requests": 17,
+    "active": 0,
+    "generated_tokens": 6873,
+    "steps": 1969,
+    "busy_s": 15.772781075000001,
+    "verify_s": 13.313783557,
+    "draft_s": 2.4493537190000003,
+    "verify_rounds": 1952,
+    "accepted_drafts": 4937,
+    "proposed_drafts": 13664,
+    "graphs_captured": 33,
+    "graph_replays": 3817
+  }
+}

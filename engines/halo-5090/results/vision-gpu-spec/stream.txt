@@ -1,0 +1,16 @@
+data: {"id":"h5-6ac54495-5","object":"chat.completion.chunk","created":1791313045,"model":"ternary-bonsai-2-27b","choices":[{"index":0,"delta":{"role":"assistant","content":""},"finish_reason":null}]}
+
+data: {"id":"h5-6ac54495-5","object":"chat.completion.chunk","created":1791313045,"model":"ternary-bonsai-2-27b","choices":[{"index":0,"delta":{"content":"The"},"finish_reason":null}]}
+
+data: {"id":"h5-6ac54495-5","object":"chat.completion.chunk","created":1791313045,"model":"ternary-bonsai-2-27b","choices":[{"index":0,"delta":{"content":" first image is"},"finish_reason":null}]}
+
+data: {"id":"h5-6ac54495-5","object":"chat.completion.chunk","created":1791313045,"model":"ternary-bonsai-2-27b","choices":[{"index":0,"delta":{"content":" red, and the second image is blue"},"finish_reason":null}]}
+
+data: {"id":"h5-6ac54495-5","object":"chat.completion.chunk","created":1791313045,"model":"ternary-bonsai-2-27b","choices":[{"index":0,"delta":{"content":"."},"finish_reason":null}]}
+
+data: {"id":"h5-6ac54495-5","object":"chat.completion.chunk","created":1791313045,"model":"ternary-bonsai-2-27b","choices":[{"index":0,"delta":{},"finish_reason":"stop"}]}
+
+data: {"id":"h5-6ac54495-5","object":"chat.completion.chunk","created":1791313045,"model":"ternary-bonsai-2-27b","choices":[],"usage":{"prompt_tokens":61,"completion_tokens":13,"total_tokens":74}}
+
+data: [DONE]
+

@@ -1,0 +1,36 @@
+ptxas info    : 516 bytes gmem
+ptxas info    : Compiling entry function '_ZN10sparse_fp47consumeILi8ELi2ELi32EEEvPKhS2_S2_N9bitserial7CarrierEiiiPfiffN10signed_fp412WeightLayoutENS_6DigitsE' for 'sm_120a'
+ptxas info    : Function properties for _ZN10sparse_fp47consumeILi8ELi2ELi32EEEvPKhS2_S2_N9bitserial7CarrierEiiiPfiffN10signed_fp412WeightLayoutENS_6DigitsE
+    368 bytes stack frame, 860 bytes spill stores, 1032 bytes spill loads
+ptxas info    : Used 96 registers, used 1 barriers, 368 bytes cumulative stack size
+ptxas info    : Compile time = 1729.670 ms
+ptxas info    : Compiling entry function '_ZN10sparse_fp47consumeILi8ELi1ELi32EEEvPKhS2_S2_N9bitserial7CarrierEiiiPfiffN10signed_fp412WeightLayoutENS_6DigitsE' for 'sm_120a'
+ptxas info    : Function properties for _ZN10sparse_fp47consumeILi8ELi1ELi32EEEvPKhS2_S2_N9bitserial7CarrierEiiiPfiffN10signed_fp412WeightLayoutENS_6DigitsE
+    144 bytes stack frame, 276 bytes spill stores, 296 bytes spill loads
+ptxas info    : Used 96 registers, used 1 barriers, 144 bytes cumulative stack size
+ptxas info    : Compile time = 733.297 ms
+ptxas info    : Compiling entry function '_ZN10sparse_fp47consumeILi4ELi2ELi32EEEvPKhS2_S2_N9bitserial7CarrierEiiiPfiffN10signed_fp412WeightLayoutENS_6DigitsE' for 'sm_120a'
+ptxas info    : Function properties for _ZN10sparse_fp47consumeILi4ELi2ELi32EEEvPKhS2_S2_N9bitserial7CarrierEiiiPfiffN10signed_fp412WeightLayoutENS_6DigitsE
+    48 bytes stack frame, 28 bytes spill stores, 40 bytes spill loads
+ptxas info    : Used 168 registers, used 1 barriers, 48 bytes cumulative stack size
+ptxas info    : Compile time = 1685.878 ms
+ptxas info    : Compiling entry function '_ZN10sparse_fp47consumeILi4ELi2ELi16EEEvPKhS2_S2_N9bitserial7CarrierEiiiPfiffN10signed_fp412WeightLayoutENS_6DigitsE' for 'sm_120a'
+ptxas info    : Function properties for _ZN10sparse_fp47consumeILi4ELi2ELi16EEEvPKhS2_S2_N9bitserial7CarrierEiiiPfiffN10signed_fp412WeightLayoutENS_6DigitsE
+    16 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 150 registers, used 1 barriers, 16 bytes cumulative stack size
+ptxas info    : Compile time = 657.944 ms
+ptxas info    : Compiling entry function '_ZN10sparse_fp47consumeILi4ELi2ELi8EEEvPKhS2_S2_N9bitserial7CarrierEiiiPfiffN10signed_fp412WeightLayoutENS_6DigitsE' for 'sm_120a'
+ptxas info    : Function properties for _ZN10sparse_fp47consumeILi4ELi2ELi8EEEvPKhS2_S2_N9bitserial7CarrierEiiiPfiffN10signed_fp412WeightLayoutENS_6DigitsE
+    64 bytes stack frame, 44 bytes spill stores, 76 bytes spill loads
+ptxas info    : Used 96 registers, used 1 barriers, 64 bytes cumulative stack size
+ptxas info    : Compile time = 336.244 ms
+ptxas info    : Compiling entry function '_ZN10sparse_fp44foldEPKfPfiiiiff' for 'sm_120a'
+ptxas info    : Function properties for _ZN10sparse_fp44foldEPKfPfiiiiff
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 40 registers, used 0 barriers
+ptxas info    : Compile time = 8.696 ms
+ptxas info    : Compiling entry function '_ZN10sparse_fp44packEN9bitserial7CarrierENS_6DigitsEii' for 'sm_120a'
+ptxas info    : Function properties for _ZN10sparse_fp44packEN9bitserial7CarrierENS_6DigitsEii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 60 registers, used 0 barriers
+ptxas info    : Compile time = 14.122 ms

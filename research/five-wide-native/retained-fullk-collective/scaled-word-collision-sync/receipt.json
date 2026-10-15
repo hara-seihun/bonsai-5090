@@ -1,0 +1,14 @@
+{
+  "source_sha256": "34406e14c7791d9c97557a120818ddb72df3fd31cbd9c31216abb8f7ed2f03dc",
+  "exit": 0,
+  "stdout": "{\"state\":\"native_target_collision\",\"carrier_bits\":[1269301248,1269301248],\"gate\":[0,0.0009765625],\"up\":[43008,43008],\"y\":[0,21.0102539],\"q8_scale\":[0,0.165435076],\"q8\":[0,127],\"activation_scale_codes\":[126,1],\"weight_scale\":1,\"scope\":\"single scalar FP32 g+512u carrier across two independently scaled16K blocks; rest of K5120 and127 block features zero\"}\n",
+  "stderr": "",
+  "wall_s": 0.14103484153747559,
+  "hashes": {
+    "build.cmd": "318d65304b3f0260c1642c20e6ab9cf73f590e4c6efd333f132237032890c038",
+    "build.log": "dca55f291fae00ed562046d5689612dd81a74dad152256d82c3e5f0e05644cf9",
+    "scaled-word-collision.bin": "280765fa08f1faa938dc49c56239ae0fd7b30b95cbd915fba02ba7387b6c9ba5",
+    "scaled_word_collision_sync.cu": "f2ac59b602aa95acc19d1b8cf4526dba8caf80357df10762e81edfade478b5c4",
+    "scaled_word_collision_sync.exe": "7e6a8619056a4bf416fe07dab0f4396e2c635d236f89aa2bb23210ef915b54fe"
+  }
+}

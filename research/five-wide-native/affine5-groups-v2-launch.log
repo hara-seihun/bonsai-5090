@@ -1,0 +1,27 @@
+BUILD 0 ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z11dp4a_directPK4TilePKyPaPji' for 'sm_120a'
+ptxas info    : Function properties for _Z11dp4a_directPK4TilePKyPaPji
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 40 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z11folded_tilePK4TilePKyPaPji' for 'sm_120a'
+ptxas info    : Function properties for _Z11folded_tilePK4TilePKyPaPji
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 39 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6directPK4TilePaPjPii' for 'sm_120a'
+ptxas info    : Function properties for _Z6directPK4TilePaPjPii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 39 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6nativePK4TilePKyPaPjPii' for 'sm_120a'
+ptxas info    : Function properties for _Z6nativePK4TilePKyPaPjPii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 36 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+affine5_groups.cu
+tmpxft_0000ab44_00000000-10_affine5_groups.cudafe1.cpp
+ 
+MUTEX 0
+RELEASED
+RECEIPT {"source_sha256": "56cd06cbd64e36f1f3c9e3c6d060da6049e52bcbc565d4045ef5336f4ba73f60", "exit": 0, "stdout": "{\"state\":\"matched\",\"sampled_outputs\":1048576,\"word_errors\":0,\"f32_errors\":[0,0,0,0],\"q8_errors\":[0,0,0,0],\"native_us\":6.077760,\"direct_us\":12.244801,\"folded_tile_us\":5.449280,\"dp4a_us\":7.477760,\"source_bytes_per_tile\":240,\"native_producer_bytes\":1944,\"native_mmas_per_tile\":2,\"distinct_outputs_per_tile\":128}\n", "stderr": "", "wall_s": 0.1791675090789795, "hashes": {"affine5_groups.cu": "126d1d0e42f553671fd852fffbd9ea5b61540a5c55f51e3f68341a3add029dad", "affine5_groups.exe": "17352cfb1dad73e8fbc683f3a9f34d9f373fa552b1b4fd47f70b69fee6d22290", "build.cmd": "c60643a4c2a6a5feb204cf4880650bfcd93ba03b17e18ceaa3d0c0247efd624a", "build.log": "b7a03f116f1b5b3f5159c81d7419da3274855cf8570071a1e666caae5b9e08ca", "groups-inputs.bin": "0ff8a8430953bcf502101724700346cf7e67320bab3a81c1a16d3eb4d74f0e36", "groups-native-f32.bin": "bf84fe08451d5f760fb144e2e659604b9ba3e5de788606ee8bb774ba6841fe11", "groups-native-q8.bin": "097922f818274dc16fe4c0b65e35f0089963d46c4ed8587820da179dec08ef20", "groups-native-words.bin": "670634ce30f70435c439a2304eae333a89e8b2cddabd528754489f8f647ee356", "groups-producer.bin": "9c42443b93e3767d592eb0ac45a726dd3220087ff8ea1c8c9de924465233f642"}}

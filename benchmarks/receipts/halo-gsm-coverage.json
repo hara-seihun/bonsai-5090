@@ -1,0 +1,309 @@
+{
+  "engine": "halo",
+  "benchmark": "gsm8k",
+  "expected": 1319,
+  "covered": 1319,
+  "correct": 1276,
+  "accuracy": 0.9673995451099318,
+  "state": "full",
+  "diagnostics": {
+    "reasoning_closed": 1310,
+    "finish_stop": 1310,
+    "reasoning_unclosed": 9,
+    "finish_length": 9
+  },
+  "shards": [
+    {
+      "shard": 0,
+      "state": "completed",
+      "count": 64,
+      "correct": 61,
+      "accuracy": 0.953125,
+      "judge_strategy": "auto",
+      "diagnostics": {
+        "reasoning_closed": 63,
+        "finish_stop": 63,
+        "reasoning_unclosed": 1,
+        "finish_length": 1
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-halo-gsm8k-shard000--gsm8k.json"
+    },
+    {
+      "shard": 1,
+      "state": "completed",
+      "count": 64,
+      "correct": 61,
+      "accuracy": 0.953125,
+      "judge_strategy": "auto",
+      "diagnostics": {
+        "reasoning_closed": 63,
+        "finish_stop": 63,
+        "reasoning_unclosed": 1,
+        "finish_length": 1
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-halo-gsm8k-shard001--gsm8k.json"
+    },
+    {
+      "shard": 2,
+      "state": "completed",
+      "count": 64,
+      "correct": 62,
+      "accuracy": 0.96875,
+      "judge_strategy": "auto",
+      "diagnostics": {
+        "reasoning_unclosed": 1,
+        "finish_length": 1,
+        "reasoning_closed": 63,
+        "finish_stop": 63
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-halo-gsm8k-shard002--gsm8k.json"
+    },
+    {
+      "shard": 3,
+      "state": "completed",
+      "count": 64,
+      "correct": 62,
+      "accuracy": 0.96875,
+      "judge_strategy": "auto",
+      "diagnostics": {
+        "reasoning_closed": 63,
+        "finish_stop": 63,
+        "reasoning_unclosed": 1,
+        "finish_length": 1
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-halo-gsm8k-shard003--gsm8k.json"
+    },
+    {
+      "shard": 4,
+      "state": "completed",
+      "count": 64,
+      "correct": 61,
+      "accuracy": 0.953125,
+      "judge_strategy": "auto",
+      "diagnostics": {
+        "reasoning_closed": 64,
+        "finish_stop": 64
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-halo-gsm8k-shard004--gsm8k.json"
+    },
+    {
+      "shard": 5,
+      "state": "completed",
+      "count": 64,
+      "correct": 64,
+      "accuracy": 1.0,
+      "judge_strategy": "auto",
+      "diagnostics": {
+        "reasoning_closed": 64,
+        "finish_stop": 64
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-halo-gsm8k-shard005--gsm8k.json"
+    },
+    {
+      "shard": 6,
+      "state": "completed",
+      "count": 64,
+      "correct": 62,
+      "accuracy": 0.96875,
+      "judge_strategy": "auto",
+      "diagnostics": {
+        "reasoning_closed": 64,
+        "finish_stop": 64
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-halo-gsm8k-shard006--gsm8k.json"
+    },
+    {
+      "shard": 7,
+      "state": "completed",
+      "count": 64,
+      "correct": 63,
+      "accuracy": 0.984375,
+      "judge_strategy": "auto",
+      "diagnostics": {
+        "reasoning_closed": 64,
+        "finish_stop": 64
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-halo-gsm8k-shard007--gsm8k.json"
+    },
+    {
+      "shard": 8,
+      "state": "completed",
+      "count": 64,
+      "correct": 63,
+      "accuracy": 0.984375,
+      "judge_strategy": "auto",
+      "diagnostics": {
+        "reasoning_closed": 64,
+        "finish_stop": 64
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-halo-gsm8k-shard008--gsm8k.json"
+    },
+    {
+      "shard": 9,
+      "state": "completed",
+      "count": 64,
+      "correct": 60,
+      "accuracy": 0.9375,
+      "judge_strategy": "auto",
+      "diagnostics": {
+        "reasoning_closed": 63,
+        "finish_stop": 63,
+        "reasoning_unclosed": 1,
+        "finish_length": 1
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-halo-gsm8k-shard009--gsm8k.json"
+    },
+    {
+      "shard": 10,
+      "state": "completed",
+      "count": 64,
+      "correct": 61,
+      "accuracy": 0.953125,
+      "judge_strategy": "auto",
+      "diagnostics": {
+        "reasoning_closed": 64,
+        "finish_stop": 64
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-halo-gsm8k-shard010--gsm8k.json"
+    },
+    {
+      "shard": 11,
+      "state": "completed",
+      "count": 64,
+      "correct": 62,
+      "accuracy": 0.96875,
+      "judge_strategy": "auto",
+      "diagnostics": {
+        "reasoning_closed": 63,
+        "finish_stop": 63,
+        "reasoning_unclosed": 1,
+        "finish_length": 1
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-halo-gsm8k-shard011--gsm8k.json"
+    },
+    {
+      "shard": 12,
+      "state": "completed",
+      "count": 64,
+      "correct": 64,
+      "accuracy": 1.0,
+      "judge_strategy": "auto",
+      "diagnostics": {
+        "reasoning_closed": 64,
+        "finish_stop": 64
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-halo-gsm8k-shard012--gsm8k.json"
+    },
+    {
+      "shard": 13,
+      "state": "completed",
+      "count": 64,
+      "correct": 64,
+      "accuracy": 1.0,
+      "judge_strategy": "auto",
+      "diagnostics": {
+        "reasoning_closed": 64,
+        "finish_stop": 64
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-halo-gsm8k-shard013--gsm8k.json"
+    },
+    {
+      "shard": 14,
+      "state": "completed",
+      "count": 64,
+      "correct": 63,
+      "accuracy": 0.984375,
+      "judge_strategy": "auto",
+      "diagnostics": {
+        "reasoning_closed": 64,
+        "finish_stop": 64
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-halo-gsm8k-shard014--gsm8k.json"
+    },
+    {
+      "shard": 15,
+      "state": "completed",
+      "count": 64,
+      "correct": 64,
+      "accuracy": 1.0,
+      "judge_strategy": "auto",
+      "diagnostics": {
+        "reasoning_closed": 64,
+        "finish_stop": 64
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-halo-gsm8k-shard015--gsm8k.json"
+    },
+    {
+      "shard": 16,
+      "state": "completed",
+      "count": 64,
+      "correct": 60,
+      "accuracy": 0.9375,
+      "judge_strategy": "auto",
+      "diagnostics": {
+        "reasoning_closed": 64,
+        "finish_stop": 64
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-halo-gsm8k-shard016--gsm8k.json"
+    },
+    {
+      "shard": 17,
+      "state": "completed",
+      "count": 64,
+      "correct": 60,
+      "accuracy": 0.9375,
+      "judge_strategy": "auto",
+      "diagnostics": {
+        "reasoning_closed": 62,
+        "finish_stop": 62,
+        "reasoning_unclosed": 2,
+        "finish_length": 2
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-halo-gsm8k-shard017--gsm8k.json"
+    },
+    {
+      "shard": 18,
+      "state": "completed",
+      "count": 64,
+      "correct": 58,
+      "accuracy": 0.90625,
+      "judge_strategy": "auto",
+      "diagnostics": {
+        "reasoning_closed": 64,
+        "finish_stop": 64
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-halo-gsm8k-shard018--gsm8k.json"
+    },
+    {
+      "shard": 19,
+      "state": "completed",
+      "count": 64,
+      "correct": 63,
+      "accuracy": 0.984375,
+      "judge_strategy": "auto",
+      "diagnostics": {
+        "reasoning_closed": 63,
+        "finish_stop": 63,
+        "reasoning_unclosed": 1,
+        "finish_length": 1
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-halo-gsm8k-shard019--gsm8k.json"
+    },
+    {
+      "shard": 20,
+      "state": "completed",
+      "count": 39,
+      "correct": 38,
+      "accuracy": 0.9743589743589743,
+      "judge_strategy": "auto",
+      "diagnostics": {
+        "reasoning_closed": 39,
+        "finish_stop": 39
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-halo-gsm8k-shard020--gsm8k.json"
+    }
+  ],
+  "excluded": "all overlapping subset screens and other engine/profile cohorts",
+  "published_original_percent": 96.06,
+  "checkpoint_comparison": "original Qwen3.6 Bonsai versus present Qwen3.8 Bonsai2; native control uses same Bonsai2 weights"
+}

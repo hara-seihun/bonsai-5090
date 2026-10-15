@@ -1,0 +1,53 @@
+{
+  "scope": "same-item scoped panel, not full quality gate",
+  "reference": "results/binary-5090/dspark-live/tasks-old-hybrid-dspark4-b1",
+  "candidate": "results/binary-5090/dspark-live/tasks-live-hybrid-dspark4-b1",
+  "reference_timing": {
+    "completion_tokens": 21074,
+    "seconds": 83.93558130785823,
+    "http_tok_s": 251.07349793295597
+  },
+  "candidate_timing": {
+    "completion_tokens": 21074,
+    "seconds": 70.49841206241399,
+    "http_tok_s": 298.92871886735077
+  },
+  "http_ratio": 1.1906024384428402,
+  "benchmarks": {
+    "gsm8k": {
+      "paired": {
+        "accuracy": {
+          "n": 32,
+          "reference_correct": 29,
+          "candidate_correct": 29,
+          "gains": 0,
+          "losses": 0
+        }
+      },
+      "aggregate_only": {},
+      "reference_truncated": 1,
+      "candidate_truncated": 1
+    },
+    "humaneval_plus": {
+      "paired": {
+        "plus": {
+          "n": 32,
+          "reference_correct": 32,
+          "candidate_correct": 32,
+          "gains": 0,
+          "losses": 0
+        },
+        "base": {
+          "n": 32,
+          "reference_correct": 32,
+          "candidate_correct": 32,
+          "gains": 0,
+          "losses": 0
+        }
+      },
+      "aggregate_only": {},
+      "reference_truncated": 0,
+      "candidate_truncated": 0
+    }
+  }
+}

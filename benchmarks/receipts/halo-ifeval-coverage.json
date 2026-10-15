@@ -1,0 +1,156 @@
+{
+  "engine": "halo",
+  "benchmark": "ifeval",
+  "cohort": "original15-temp07-c28672-s8",
+  "expected": 541,
+  "covered": 541,
+  "correct": 500,
+  "accuracy": 0.9242144177449169,
+  "state": "full",
+  "primary_metric": "prompt_level_strict",
+  "diagnostics": {
+    "reasoning_closed": 527,
+    "finish_stop": 527,
+    "reasoning_unclosed": 14,
+    "finish_length": 14
+  },
+  "shards": [
+    {
+      "shard": 0,
+      "state": "completed",
+      "count": 64,
+      "correct": 55,
+      "accuracy": 0.859375,
+      "judge_strategy": "rule",
+      "diagnostics": {
+        "reasoning_closed": 61,
+        "finish_stop": 61,
+        "reasoning_unclosed": 3,
+        "finish_length": 3
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-c28672-s8-halo-ifeval-shard000--ifeval.json"
+    },
+    {
+      "shard": 1,
+      "state": "completed",
+      "count": 64,
+      "correct": 61,
+      "accuracy": 0.953125,
+      "judge_strategy": "rule",
+      "diagnostics": {
+        "reasoning_closed": 63,
+        "finish_stop": 63,
+        "reasoning_unclosed": 1,
+        "finish_length": 1
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-c28672-s8-halo-ifeval-shard001--ifeval.json"
+    },
+    {
+      "shard": 2,
+      "state": "completed",
+      "count": 64,
+      "correct": 58,
+      "accuracy": 0.90625,
+      "judge_strategy": "rule",
+      "diagnostics": {
+        "reasoning_closed": 64,
+        "finish_stop": 64
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-c28672-s8-halo-ifeval-shard002--ifeval.json"
+    },
+    {
+      "shard": 3,
+      "state": "completed",
+      "count": 64,
+      "correct": 62,
+      "accuracy": 0.96875,
+      "judge_strategy": "rule",
+      "diagnostics": {
+        "reasoning_closed": 63,
+        "finish_stop": 63,
+        "reasoning_unclosed": 1,
+        "finish_length": 1
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-c28672-s8-halo-ifeval-shard003--ifeval.json"
+    },
+    {
+      "shard": 4,
+      "state": "completed",
+      "count": 64,
+      "correct": 59,
+      "accuracy": 0.921875,
+      "judge_strategy": "rule",
+      "diagnostics": {
+        "reasoning_closed": 62,
+        "finish_stop": 62,
+        "reasoning_unclosed": 2,
+        "finish_length": 2
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-c28672-s8-halo-ifeval-shard004--ifeval.json"
+    },
+    {
+      "shard": 5,
+      "state": "completed",
+      "count": 64,
+      "correct": 60,
+      "accuracy": 0.9375,
+      "judge_strategy": "rule",
+      "diagnostics": {
+        "reasoning_closed": 62,
+        "finish_stop": 62,
+        "reasoning_unclosed": 2,
+        "finish_length": 2
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-c28672-s8-halo-ifeval-shard005--ifeval.json"
+    },
+    {
+      "shard": 6,
+      "state": "completed",
+      "count": 64,
+      "correct": 60,
+      "accuracy": 0.9375,
+      "judge_strategy": "rule",
+      "diagnostics": {
+        "reasoning_closed": 63,
+        "finish_stop": 63,
+        "reasoning_unclosed": 1,
+        "finish_length": 1
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-c28672-s8-halo-ifeval-shard006--ifeval.json"
+    },
+    {
+      "shard": 7,
+      "state": "completed",
+      "count": 64,
+      "correct": 59,
+      "accuracy": 0.921875,
+      "judge_strategy": "rule",
+      "diagnostics": {
+        "reasoning_closed": 61,
+        "finish_stop": 61,
+        "reasoning_unclosed": 3,
+        "finish_length": 3
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-c28672-s8-halo-ifeval-shard007--ifeval.json"
+    },
+    {
+      "shard": 8,
+      "state": "completed",
+      "count": 29,
+      "correct": 26,
+      "accuracy": 0.896551724137931,
+      "judge_strategy": "rule",
+      "diagnostics": {
+        "reasoning_closed": 28,
+        "finish_stop": 28,
+        "reasoning_unclosed": 1,
+        "finish_length": 1
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-c28672-s8-halo-ifeval-shard008--ifeval.json"
+    }
+  ],
+  "partition": "campaign://ifeval-shards/partition.json",
+  "excluded": "all overlapping subset screens and other engine/profile cohorts",
+  "published_original_percent": 85.03,
+  "checkpoint_comparison": "original Qwen3.6 Bonsai versus present Qwen3.8 Bonsai2; native control uses same Bonsai2 weights"
+}

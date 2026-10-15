@@ -1,0 +1,16 @@
+{
+  "GPU_execution": false,
+  "actual_fixed_rows": 32,
+  "K": 5120,
+  "dictionary_warp_loads_per_40stage_consumer": 1280,
+  "predicted_shared_bank_rounds_histogram": {
+    "2": 31,
+    "3": 676,
+    "4": 450,
+    "5": 104,
+    "6": 17,
+    "7": 2
+  },
+  "average_distinct_address_rounds": 3.5359375,
+  "scope": "4B/32-bank address model including equal-address broadcast. No measured GPU bank/latency or cache-traffic claim."
+}

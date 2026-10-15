@@ -1,0 +1,20 @@
+#pragma once
+#include "compact.hpp"
+namespace h5 {
+__device__ __forceinline__ void dense5_registers(const uint8_t* chunk, int lane, const uint32_t* book, unsigned* regs) {
+  uint32_t labels[7];
+#pragma unroll
+  for(int p=0;p<6;p++) labels[p]=*(const uint32_t*)(chunk+p*128+lane*4);
+  labels[6]=*(const uint16_t*)(chunk+768+lane*2);
+  uint32_t expanded[26];
+#pragma unroll
+  for(int b=0;b<26;b++) expanded[b]=book[(labels[b/4]>>(8*(b%4)))&255];
+#pragma unroll
+  for(int w=0;w<16;w++) {
+    const int b=(8*w)/5, sh=((8*w)%5)*4;
+    uint32_t v=(expanded[b]>>sh)|(expanded[b+1]<<(20-sh));
+    if(sh>=12) v|=expanded[b+2]<<(40-sh);
+    regs[w]=v;
+  }
+}
+}

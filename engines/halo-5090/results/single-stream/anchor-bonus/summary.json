@@ -1,0 +1,56 @@
+{
+  "command": [
+    "/root/halo-anchor-draft/h5-server",
+    "/root/models/Ternary-Bonsai-2-27B-PTQ1_0.gguf",
+    "/root/models/model.safetensors",
+    "--slots",
+    "1",
+    "--ctx",
+    "4096",
+    "--port",
+    "8010"
+  ],
+  "environment": {
+    "H5_LOAD_THREADS": "4",
+    "H5_DF_LAYOUT": "bonus"
+  },
+  "requests": 16,
+  "tokens": 6382,
+  "request_wall_s": 17.436002492904663,
+  "end_to_end_tok_s": 366.0242651718515,
+  "weighted_decode_tok_s": 368.5916268950275,
+  "median_decode_tok_s": 367.1419328824644,
+  "median_ttft_s": 0.009698152542114258,
+  "metrics_before": {
+    "uptime_s": 1.1316773729631677,
+    "requests": 1,
+    "active": 0,
+    "generated_tokens": 256,
+    "steps": 129,
+    "busy_s": 1.0990799653809518,
+    "graphs_captured": 12,
+    "graph_replays": 215,
+    "verify_s": 0.931632253,
+    "draft_s": 0.166458013,
+    "verification_rounds": 128,
+    "decode_emitted_tokens": 255,
+    "draft_query_count": 8,
+    "draft_proposal_count": 7
+  },
+  "metrics_after": {
+    "uptime_s": 18.57428705005441,
+    "requests": 17,
+    "active": 0,
+    "generated_tokens": 6646,
+    "steps": 2259,
+    "busy_s": 18.509767613140866,
+    "graphs_captured": 33,
+    "graph_replays": 4398,
+    "verify_s": 15.640185982,
+    "draft_s": 2.85756118,
+    "verification_rounds": 2242,
+    "decode_emitted_tokens": 6629,
+    "draft_query_count": 8,
+    "draft_proposal_count": 7
+  }
+}

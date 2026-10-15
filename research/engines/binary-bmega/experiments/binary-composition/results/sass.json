@@ -1,0 +1,67 @@
+[
+  {
+    "function": "_ZN11composition6pairedILi8EEEvPKjPK6__halfN9bitserial7CarrierES7_Pfiiii",
+    "sass_sha256": "6ea5f37f00a3fce009bb800bf373f54d20bceab8178f583188438f9cc4a781c6",
+    "instructions": {
+      "IDP.4A.S8.S8": 512,
+      "MUFU.EX2": 8,
+      "MUFU.RCP": 17,
+      "FFMA": 132,
+      "IMMA": 0,
+      "STG": 48,
+      "LDG": 14
+    }
+  },
+  {
+    "function": "_ZN11composition6pairedILi4EEEvPKjPK6__halfN9bitserial7CarrierES7_Pfiiii",
+    "sass_sha256": "bac3eedda683b71f1a61f0dba43816f62c7cb30cc63b888449f6895d7580189e",
+    "instructions": {
+      "IDP.4A.S8.S8": 256,
+      "MUFU.EX2": 4,
+      "MUFU.RCP": 9,
+      "FFMA": 72,
+      "IMMA": 0,
+      "STG": 24,
+      "LDG": 14
+    }
+  },
+  {
+    "function": "_ZN11composition6pairedILi1EEEvPKjPK6__halfN9bitserial7CarrierES7_Pfiiii",
+    "sass_sha256": "16e8c4cbe10be5d1072c3ba10aa46779b831e37b84dadbce7330616e20e36f39",
+    "instructions": {
+      "IDP.4A.S8.S8": 64,
+      "MUFU.EX2": 1,
+      "MUFU.RCP": 3,
+      "FFMA": 27,
+      "IMMA": 0,
+      "STG": 6,
+      "LDG": 14
+    }
+  },
+  {
+    "function": "_ZN11composition10activationEPKfPfi",
+    "sass_sha256": "474c53c5dae971c0194ef92c4fad620fabaef91730c34b168b8ba94920076508",
+    "instructions": {
+      "IDP.4A.S8.S8": 0,
+      "MUFU.EX2": 1,
+      "MUFU.RCP": 2,
+      "FFMA": 17,
+      "IMMA": 0,
+      "STG": 1,
+      "LDG": 2
+    }
+  },
+  {
+    "function": "_ZN11composition8finalizeEPKfiiN9bitserial7CarrierE",
+    "sass_sha256": "21c163e399fcec7fbc42315fc19057e5eb04fb1c8e44a660b2b89543e7f294e2",
+    "instructions": {
+      "IDP.4A.S8.S8": 0,
+      "MUFU.EX2": 1,
+      "MUFU.RCP": 3,
+      "FFMA": 25,
+      "IMMA": 0,
+      "STG": 4,
+      "LDG": 30
+    }
+  }
+]

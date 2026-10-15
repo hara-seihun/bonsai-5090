@@ -1,0 +1,80 @@
+NVIDIA GeForce RTX 5090, 595.58.03
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2025 NVIDIA Corporation
+Built on Tue_Dec_16_07:23:41_PM_PST_2025
+Cuda compilation tools, release 13.1, V13.1.115
+Build cuda_13.1.r13.1/compiler.37061995_0
+acf65c91ca9870e13f1aeeef9cee152820cc89fcf40c2ed86fe492e9da6bcb90  /workspace/binary/down-classes/down_classes.cu
+150d12a779ef1aed2578750680b649a7ed28a9719f1e5a35782272946ae24eeb  /workspace/binary/down-classes/down_classes
+6338cae34a734c6914922c12af9958d558b6a7d25e8cabdeef3446bd04f390a8  /workspace/binary/digits-ragged/halo/build/bitserial.o
+ce6d9656fce4a645a7ae7587d7b6628e6680aa1f2c815dfa0a98de5521710c09  /workspace/binary/digits-ragged/halo/build/gguf.o
+		Function : _Z17nibble_projectionILi4EEvPKhPK6__halfN9bitserial7CarrierEPfiii
+        /*0700*/                   IDP.4A.S8.S8 R39, R24.reuse, R31, RZ ;                 /* 0x0000001f18277226 */
+        /*0710*/                   IDP.4A.S8.S8 R40, R24, R32, RZ ;                       /* 0x0000002018287226 */
+        /*0720*/                   IDP.4A.S8.S8 R41, R24.reuse, R33, RZ ;                 /* 0x0000002118297226 */
+        /*0730*/                   REDUX.SUM.S32 UR19, R39 ;                              /* 0x00000000271373c4 */
+        /*0740*/                   REDUX.SUM.S32 UR22, R40 ;                              /* 0x00000000281673c4 */
+        /*0750*/                   REDUX.SUM.S32 UR23, R41 ;                              /* 0x00000000291773c4 */
+        /*0760*/                   IDP.4A.S8.S8 R42, R24, R34, RZ ;                       /* 0x00000022182a7226 */
+        /*0770*/                   REDUX.SUM.S32 UR24, R42 ;                              /* 0x000000002a1873c4 */
+        /*0ac0*/                   IDP.4A.S8.S8 R36, R28.reuse, R31, RZ ;                 /* 0x0000001f1c247226 */
+        /*0ad0*/                   IDP.4A.S8.S8 R37, R28, R32, RZ ;                       /* 0x000000201c257226 */
+        /*0ae0*/                   IDP.4A.S8.S8 R29, R28.reuse, R33, RZ ;                 /* 0x000000211c1d7226 */
+        /*0af0*/                   REDUX.SUM.S32 UR19, R36 ;                              /* 0x00000000241373c4 */
+        /*0b00*/                   REDUX.SUM.S32 UR22, R37 ;                              /* 0x00000000251673c4 */
+        /*0b10*/                   REDUX.SUM.S32 UR23, R29 ;                              /* 0x000000001d1773c4 */
+        /*0b20*/                   IDP.4A.S8.S8 R38, R28, R34, RZ ;                       /* 0x000000221c267226 */
+        /*0b30*/                   REDUX.SUM.S32 UR24, R38 ;                              /* 0x00000000261873c4 */
+        /*0e90*/                   IDP.4A.S8.S8 R35, R26.reuse, R31, RZ ;                 /* 0x0000001f1a237226 */
+        /*0ea0*/                   IDP.4A.S8.S8 R36, R26, R32, RZ ;                       /* 0x000000201a247226 */
+        /*0eb0*/                   IDP.4A.S8.S8 R37, R26.reuse, R33, RZ ;                 /* 0x000000211a257226 */
+        /*0ec0*/                   REDUX.SUM.S32 UR19, R35 ;                              /* 0x00000000231373c4 */
+        /*0ed0*/                   REDUX.SUM.S32 UR22, R36 ;                              /* 0x00000000241673c4 */
+        /*0ee0*/                   REDUX.SUM.S32 UR23, R37 ;                              /* 0x00000000251773c4 */
+        /*0ef0*/                   IDP.4A.S8.S8 R38, R26, R34, RZ ;                       /* 0x000000221a267226 */
+        /*0f00*/                   REDUX.SUM.S32 UR24, R38 ;                              /* 0x00000000261873c4 */
+        /*1270*/                   IDP.4A.S8.S8 R31, R28.reuse, R31, RZ ;                 /* 0x0000001f1c1f7226 */
+        /*1280*/                   IDP.4A.S8.S8 R32, R28, R32, RZ ;                       /* 0x000000201c207226 */
+        /*1290*/                   IDP.4A.S8.S8 R33, R28.reuse, R33, RZ ;                 /* 0x000000211c217226 */
+        /*12a0*/                   REDUX.SUM.S32 UR4, R31 ;                               /* 0x000000001f0473c4 */
+        /*12b0*/                   REDUX.SUM.S32 UR5, R32 ;                               /* 0x00000000200573c4 */
+        /*12c0*/                   REDUX.SUM.S32 UR6, R33 ;                               /* 0x00000000210673c4 */
+        /*12d0*/                   IDP.4A.S8.S8 R34, R28, R34, RZ ;                       /* 0x000000221c227226 */
+        /*12e0*/                   REDUX.SUM.S32 UR7, R34 ;                               /* 0x00000000220773c4 */
+		Function : _Z17nibble_projectionILi1EEvPKhPK6__halfN9bitserial7CarrierEPfiii
+        /*05c0*/                   IDP.4A.S8.S8 R17, R16, R11, RZ ;                       /* 0x0000000b10117226 */
+        /*05f0*/                   IDP.4A.S8.S8 R33, R16, R33, RZ ;                       /* 0x0000002110217226 */
+        /*0610*/                   IDP.4A.S8.S8 R31, R16, R11, RZ ;                       /* 0x0000000b101f7226 */
+        /*0620*/                   REDUX.SUM.S32 UR4, R33 ;                               /* 0x00000000210473c4 */
+        /*0640*/                   REDUX.SUM.S32 UR5, R17 ;                               /* 0x00000000110573c4 */
+        /*0660*/                   REDUX.SUM.S32 UR9, R31 ;                               /* 0x000000001f0973c4 */
+        /*0670*/                   IDP.4A.S8.S8 R16, R16, R11, RZ ;                       /* 0x0000000b10107226 */
+        /*0680*/                   REDUX.SUM.S32 UR14, R16 ;                              /* 0x00000000100e73c4 */
+        /*02d0*/                   REDUX.SUM.S32 UR6, R19 ;                               /* 0x00000000130673c4 */
+		Function : _Z16class_projectionPKhPK6__halfN9bitserial7CarrierEPfiii
+        /*0490*/                   MATCH.ANY R33, R34 ;                                   /* 0x00000000222173a1 */
+        /*04b0*/                   REDUX.OR UR4, R33 ;                                    /* 0x00000000210473c4 */
+        /*04e0*/                   REDUX.SUM.S32 UR4, R32 ;                               /* 0x00000000200473c4 */
+        /*05b0*/                   ATOMS.ADD RZ, [R34], R31 ;                             /* 0x0000001f22ff738c */
+        /*0610*/                   MATCH.ANY R33, R34 ;                                   /* 0x00000000222173a1 */
+        /*0620*/                   REDUX.OR UR4, R33 ;                                    /* 0x00000000210473c4 */
+        /*0650*/                   REDUX.SUM.S32 UR4, R32 ;                               /* 0x00000000200473c4 */
+        /*0720*/                   ATOMS.ADD RZ, [R34], R31 ;                             /* 0x0000001f22ff738c */
+        /*0780*/                   MATCH.ANY R33, R34 ;                                   /* 0x00000000222173a1 */
+        /*0790*/                   REDUX.OR UR4, R33 ;                                    /* 0x00000000210473c4 */
+        /*07c0*/                   REDUX.SUM.S32 UR4, R32 ;                               /* 0x00000000200473c4 */
+        /*0890*/                   ATOMS.ADD RZ, [R34], R31 ;                             /* 0x0000001f22ff738c */
+        /*08f0*/                   MATCH.ANY R31, R26 ;                                   /* 0x000000001a1f73a1 */
+        /*0900*/                   REDUX.OR UR4, R31 ;                                    /* 0x000000001f0473c4 */
+        /*0930*/                   REDUX.SUM.S32 UR4, R32 ;                               /* 0x00000000200473c4 */
+        /*09b0*/                   ATOMS.ADD RZ, [R25], R24 ;                             /* 0x0000001819ff738c */
+        /*0bb0*/                   REDUX.SUM.S32 UR4, R35 ;                               /* 0x00000000230473c4 */
+        /*0bc0*/                   REDUX.SUM.S32 UR5, R32 ;                               /* 0x00000000200573c4 */
+        /*0bd0*/                   REDUX.SUM.S32 UR6, R37 ;                               /* 0x00000000250673c4 */
+        /*0be0*/                   REDUX.SUM.S32 UR7, R36 ;                               /* 0x00000000240773c4 */
+        /*1030*/                   MATCH.ANY R33, R34 ;                                   /* 0x00000000222173a1 */
+        /*10a0*/                   REDUX.SUM.S32 UR79, R32 ;                              /* 0x00000000204f73c4 */
+        /*1130*/                   MATCH.ANY R33, R34 ;                                   /* 0x00000000222173a1 */
+        /*11a0*/                   REDUX.SUM.S32 UR79, R32 ;                              /* 0x00000000204f73c4 */
+        /*1230*/                   MATCH.ANY R33, R34 ;                                   /* 0x00000000222173a1 */
+        /*12a0*/                   REDUX.SUM.S32 UR79, R32 ;                              /* 0x00000000204f73c4 */

@@ -1,0 +1,60 @@
+{
+  "gpu_work": false,
+  "native_model_execution": false,
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "falsify.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.07399797439575195,
+      "stdout": "{\"state\": \"route-specific-falsifier\", \"gpu_work\": false, \"native_execution\": false, \"input_custody_sha256\": \"d0a9652b8573d25b7c6bb75e19b234cbad8c9ce21773016ba02e9fa1d65065cd\", \"source_engine_sha256\": \"e2ae33c409fc8a4fe668f8c5cbf51009f65ea76745741fd5d3135c329a5b18c4\", \"source_fp4_sha256\": \"0754bd730848620791da50c9aaadd6ba0a8f431434a75428b916969464164f52\", \"model_sha256\": \"53107f530aa52eb00912263ab1ee29bd199261c87cd7b4ad4ca1318c1fe33ee3\", \"rows_examined\": 64, \"one_plane_exact_rows\": 0, \"power_of_two_residual_odd_bound_failed_rows\": 64, \"rounding_noncommutation\": {\"K\": 5120, \"mean\": 1.5, \"first_terms\": 4096, \"first_value\": 2048.0, \"last_value\": 0.5, \"before_scale_bits\": 1258291200, \"original_bits\": 1262485504, \"absorbed_bits\": 1262485505, \"grouping_scope\": \"4096 equal exact terms; one half-ulp term alone in final 128-K stage\"}, \"scope\": \"Actual fixed model rows plus constructed legal q4/s4/g4 interface operands. Not saved model activations, native GPU acceptance or a final-observer/TPS claim.\"}\n{\"tensor\": \"blk.0.ffn_gate.weight\", \"row\": 0, \"weight_nz_k\": 0, \"weight_trit\": -1, \"zero_weight_amax_guard_k\": 17, \"activation\": {\"nz_q4_positive_code\": 1, \"nz_s4\": 56, \"guard_q4_positive_code\": 7, \"guard_s4\": 126, \"g4\": 1.0, \"other_q4\": 0}, \"original_contraction\": -0.5, \"mean_bits\": 1011352371, \"target_bits\": 3150447411, \"nearest_one_plane_coefficient\": 0.0126953125, \"nearest_q2_s4\": [1, 13], \"absorbed_bits\": 3150970880, \"different\": true}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lean",
+        "Absorption.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 4.723120212554932,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "g++",
+        "-std=c++17",
+        "-O3",
+        "-frounding-math",
+        "-ffp-contract=off",
+        "rounding.cpp",
+        "-o",
+        "~/work/five-wide-native/gu-scale-absorb-rounding"
+      ],
+      "exit_code": 0,
+      "seconds": 0.09598708152770996,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "~/work/five-wide-native/gu-scale-absorb-rounding"
+      ],
+      "exit_code": 0,
+      "seconds": 0.0007581710815429688,
+      "stdout": "{\"K\":5120,\"original_bits\":1262485504,\"absorbed_bits\":1262485505,\"actual_row_mu_bits\":1011352371,\"target_bits\":3150447411,\"nearest_bits\":3150446592}\n",
+      "stderr": ""
+    }
+  ],
+  "lean_version": "Lean (version 4.33.0, x86_64-unknown-linux-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+  "host_compiler": "g++ (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+  "sources": {
+    "Absorption.lean": "45b7b1239d1ba06315741e62e903cf047f2e811fc85af03c4a49b2a12c1c5813",
+    "rounding.cpp": "106ae76e9a33a406aa4ac9d0891b969c7a439a8625da530534ded34eb3d7f403",
+    "falsify.py": "0df552e85504d4c9b341ec8eba4761a50891faf163cf3fb102aff74da5688746",
+    "collect_cpu.py": "2e6c1daffecccc253b26db3833c59788055ba803e37c2febf632c5662483ed36",
+    "collect_row_mean.py": "3334aa3b57b0e82b569c249f8cb3480c7cbf017754bbe04a9899dd11b17c7e79"
+  }
+}

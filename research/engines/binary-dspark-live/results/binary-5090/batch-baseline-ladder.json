@@ -1,0 +1,857 @@
+{
+  "scope": "fresh64request quick32+32 ladder; not full gate",
+  "rows": [
+    {
+      "path": "results/binary-5090/tasks-batch-baselines/tasks-modern-packed1-hybrid-plain-b16",
+      "receipt": {
+        "status": "complete",
+        "exit_code": 0
+      },
+      "decoding": {
+        "temperature": 0,
+        "sampling": null,
+        "enable_thinking": false,
+        "max_tokens": {
+          "gsm8k": 4096,
+          "humaneval_plus": 4096
+        },
+        "concurrency": 16
+      },
+      "manifest_sha256": "0330533de253a6b29421216609c18cb4afe5a7e9bc16cb0c574af8b0b4d15c58",
+      "tokens": 20337,
+      "generation_seconds": 39.173311659134924,
+      "http_tokens_second": 519.1544737642206,
+      "benchmarks": {
+        "gsm8k": {
+          "metrics": {
+            "accuracy": {
+              "score": 0.90625,
+              "se": 0.05152697639950359,
+              "n": 32,
+              "correct": 29
+            }
+          },
+          "truncated": 1,
+          "completion_tokens": 15320,
+          "generation_s": 31.091841589659452,
+          "http_tokens_second": 492.73375962056673
+        },
+        "humaneval_plus": {
+          "metrics": {
+            "base": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            },
+            "plus": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            }
+          },
+          "truncated": 0,
+          "completion_tokens": 5017,
+          "generation_s": 8.081470069475472,
+          "http_tokens_second": 620.8028931456067
+        }
+      },
+      "native_counters": {
+        "accepted_drafts": 0,
+        "proposed_drafts": 0,
+        "verify_rounds": 0,
+        "generated_tokens": 20400,
+        "lookup_proposed": 0,
+        "lookup_accepted": 0,
+        "lookup_rounds": 0,
+        "verify_s": 39.144021799,
+        "draft_s": 9.8824e-05,
+        "busy_s": 39.167705463000004,
+        "acceptance_fraction": null,
+        "emitted_per_verify_round": null
+      }
+    },
+    {
+      "path": "results/binary-5090/tasks-batch-baselines/tasks-modern-packed1-hybrid-plain-b2",
+      "receipt": {
+        "status": "complete",
+        "exit_code": 0
+      },
+      "decoding": {
+        "temperature": 0,
+        "sampling": null,
+        "enable_thinking": false,
+        "max_tokens": {
+          "gsm8k": 4096,
+          "humaneval_plus": 4096
+        },
+        "concurrency": 2
+      },
+      "manifest_sha256": "0330533de253a6b29421216609c18cb4afe5a7e9bc16cb0c574af8b0b4d15c58",
+      "tokens": 21159,
+      "generation_seconds": 72.96490843687207,
+      "http_tokens_second": 289.988714483297,
+      "benchmarks": {
+        "gsm8k": {
+          "metrics": {
+            "accuracy": {
+              "score": 0.90625,
+              "se": 0.05152697639950359,
+              "n": 32,
+              "correct": 29
+            }
+          },
+          "truncated": 1,
+          "completion_tokens": 16065,
+          "generation_s": 54.94898425415158,
+          "http_tokens_second": 292.36209218528427
+        },
+        "humaneval_plus": {
+          "metrics": {
+            "base": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            },
+            "plus": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            }
+          },
+          "truncated": 0,
+          "completion_tokens": 5094,
+          "generation_s": 18.015924182720482,
+          "http_tokens_second": 282.74985775560606
+        }
+      },
+      "native_counters": {
+        "accepted_drafts": 0,
+        "proposed_drafts": 0,
+        "verify_rounds": 0,
+        "generated_tokens": 21222,
+        "lookup_proposed": 0,
+        "lookup_accepted": 0,
+        "lookup_rounds": 0,
+        "verify_s": 72.93805154100001,
+        "draft_s": 0.000227738,
+        "busy_s": 72.960692656,
+        "acceptance_fraction": null,
+        "emitted_per_verify_round": null
+      }
+    },
+    {
+      "path": "results/binary-5090/tasks-batch-baselines/tasks-modern-packed1-hybrid-plain-b32",
+      "receipt": {
+        "status": "complete",
+        "exit_code": 0
+      },
+      "decoding": {
+        "temperature": 0,
+        "sampling": null,
+        "enable_thinking": false,
+        "max_tokens": {
+          "gsm8k": 4096,
+          "humaneval_plus": 4096
+        },
+        "concurrency": 32
+      },
+      "manifest_sha256": "0330533de253a6b29421216609c18cb4afe5a7e9bc16cb0c574af8b0b4d15c58",
+      "tokens": 20914,
+      "generation_seconds": 38.94110944215208,
+      "http_tokens_second": 537.0673896969533,
+      "benchmarks": {
+        "gsm8k": {
+          "metrics": {
+            "accuracy": {
+              "score": 0.90625,
+              "se": 0.05152697639950359,
+              "n": 32,
+              "correct": 29
+            }
+          },
+          "truncated": 1,
+          "completion_tokens": 15906,
+          "generation_s": 30.965124756097794,
+          "http_tokens_second": 513.6746622300534
+        },
+        "humaneval_plus": {
+          "metrics": {
+            "base": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            },
+            "plus": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            }
+          },
+          "truncated": 0,
+          "completion_tokens": 5008,
+          "generation_s": 7.975984686054289,
+          "http_tokens_second": 627.884856493807
+        }
+      },
+      "native_counters": {
+        "accepted_drafts": 0,
+        "proposed_drafts": 0,
+        "verify_rounds": 0,
+        "generated_tokens": 20977,
+        "lookup_proposed": 0,
+        "lookup_accepted": 0,
+        "lookup_rounds": 0,
+        "verify_s": 38.908472199,
+        "draft_s": 0.00010888,
+        "busy_s": 38.935046656000004,
+        "acceptance_fraction": null,
+        "emitted_per_verify_round": null
+      }
+    },
+    {
+      "path": "results/binary-5090/tasks-batch-baselines/tasks-modern-packed1-hybrid-plain-b4",
+      "receipt": {
+        "status": "complete",
+        "exit_code": 0
+      },
+      "decoding": {
+        "temperature": 0,
+        "sampling": null,
+        "enable_thinking": false,
+        "max_tokens": {
+          "gsm8k": 4096,
+          "humaneval_plus": 4096
+        },
+        "concurrency": 4
+      },
+      "manifest_sha256": "0330533de253a6b29421216609c18cb4afe5a7e9bc16cb0c574af8b0b4d15c58",
+      "tokens": 21990,
+      "generation_seconds": 52.63890005275607,
+      "http_tokens_second": 417.7518902933202,
+      "benchmarks": {
+        "gsm8k": {
+          "metrics": {
+            "accuracy": {
+              "score": 0.90625,
+              "se": 0.05152697639950359,
+              "n": 32,
+              "correct": 29
+            }
+          },
+          "truncated": 1,
+          "completion_tokens": 16862,
+          "generation_s": 41.09833368845284,
+          "http_tokens_second": 410.284274000569
+        },
+        "humaneval_plus": {
+          "metrics": {
+            "base": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            },
+            "plus": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            }
+          },
+          "truncated": 0,
+          "completion_tokens": 5128,
+          "generation_s": 11.540566364303231,
+          "http_tokens_second": 444.34560992272463
+        }
+      },
+      "native_counters": {
+        "accepted_drafts": 0,
+        "proposed_drafts": 0,
+        "verify_rounds": 0,
+        "generated_tokens": 22053,
+        "lookup_proposed": 0,
+        "lookup_accepted": 0,
+        "lookup_rounds": 0,
+        "verify_s": 52.612779222,
+        "draft_s": 0.000151853,
+        "busy_s": 52.634271581,
+        "acceptance_fraction": null,
+        "emitted_per_verify_round": null
+      }
+    },
+    {
+      "path": "results/binary-5090/tasks-batch-baselines/tasks-modern-packed1-hybrid-plain-b5",
+      "receipt": {
+        "status": "complete",
+        "exit_code": 0
+      },
+      "decoding": {
+        "temperature": 0,
+        "sampling": null,
+        "enable_thinking": false,
+        "max_tokens": {
+          "gsm8k": 4096,
+          "humaneval_plus": 4096
+        },
+        "concurrency": 5
+      },
+      "manifest_sha256": "0330533de253a6b29421216609c18cb4afe5a7e9bc16cb0c574af8b0b4d15c58",
+      "tokens": 19848,
+      "generation_seconds": 41.847600686363876,
+      "http_tokens_second": 474.2924247618218,
+      "benchmarks": {
+        "gsm8k": {
+          "metrics": {
+            "accuracy": {
+              "score": 0.9375,
+              "se": 0.0427908248050911,
+              "n": 32,
+              "correct": 30
+            }
+          },
+          "truncated": 0,
+          "completion_tokens": 14720,
+          "generation_s": 31.22741531766951,
+          "http_tokens_second": 471.38067144708367
+        },
+        "humaneval_plus": {
+          "metrics": {
+            "base": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            },
+            "plus": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            }
+          },
+          "truncated": 0,
+          "completion_tokens": 5128,
+          "generation_s": 10.620185368694365,
+          "http_tokens_second": 482.85409547709537
+        }
+      },
+      "native_counters": {
+        "accepted_drafts": 0,
+        "proposed_drafts": 0,
+        "verify_rounds": 0,
+        "generated_tokens": 19912,
+        "lookup_proposed": 0,
+        "lookup_accepted": 0,
+        "lookup_rounds": 0,
+        "verify_s": 41.82191331,
+        "draft_s": 0.000114711,
+        "busy_s": 41.843169372000006,
+        "acceptance_fraction": null,
+        "emitted_per_verify_round": null
+      }
+    },
+    {
+      "path": "results/binary-5090/tasks-batch-baselines/tasks-modern-packed1-hybrid-plain-b8",
+      "receipt": {
+        "status": "complete",
+        "exit_code": 0
+      },
+      "decoding": {
+        "temperature": 0,
+        "sampling": null,
+        "enable_thinking": false,
+        "max_tokens": {
+          "gsm8k": 4096,
+          "humaneval_plus": 4096
+        },
+        "concurrency": 8
+      },
+      "manifest_sha256": "0330533de253a6b29421216609c18cb4afe5a7e9bc16cb0c574af8b0b4d15c58",
+      "tokens": 20853,
+      "generation_seconds": 42.9448879500851,
+      "http_tokens_second": 485.5758390669797,
+      "benchmarks": {
+        "gsm8k": {
+          "metrics": {
+            "accuracy": {
+              "score": 0.90625,
+              "se": 0.05152697639950359,
+              "n": 32,
+              "correct": 29
+            }
+          },
+          "truncated": 1,
+          "completion_tokens": 15751,
+          "generation_s": 33.97277754265815,
+          "http_tokens_second": 463.6359208552244
+        },
+        "humaneval_plus": {
+          "metrics": {
+            "base": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            },
+            "plus": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            }
+          },
+          "truncated": 0,
+          "completion_tokens": 5102,
+          "generation_s": 8.972110407426953,
+          "http_tokens_second": 568.6510495654016
+        }
+      },
+      "native_counters": {
+        "accepted_drafts": 0,
+        "proposed_drafts": 0,
+        "verify_rounds": 0,
+        "generated_tokens": 20916,
+        "lookup_proposed": 0,
+        "lookup_accepted": 0,
+        "lookup_rounds": 0,
+        "verify_s": 42.918103237000004,
+        "draft_s": 0.00012065700000000001,
+        "busy_s": 42.940113280000006,
+        "acceptance_fraction": null,
+        "emitted_per_verify_round": null
+      }
+    },
+    {
+      "path": "results/binary-5090/tasks-batch-baselines/tasks-modern-packed1-plain-b16",
+      "receipt": {
+        "status": "complete",
+        "exit_code": 0
+      },
+      "decoding": {
+        "temperature": 0,
+        "sampling": null,
+        "enable_thinking": false,
+        "max_tokens": {
+          "gsm8k": 4096,
+          "humaneval_plus": 4096
+        },
+        "concurrency": 16
+      },
+      "manifest_sha256": "0330533de253a6b29421216609c18cb4afe5a7e9bc16cb0c574af8b0b4d15c58",
+      "tokens": 20387,
+      "generation_seconds": 56.60539349168539,
+      "http_tokens_second": 360.1600261465295,
+      "benchmarks": {
+        "gsm8k": {
+          "metrics": {
+            "accuracy": {
+              "score": 0.90625,
+              "se": 0.05152697639950359,
+              "n": 32,
+              "correct": 29
+            }
+          },
+          "truncated": 1,
+          "completion_tokens": 15362,
+          "generation_s": 41.76616862323135,
+          "http_tokens_second": 367.80965327653456
+        },
+        "humaneval_plus": {
+          "metrics": {
+            "base": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            },
+            "plus": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            }
+          },
+          "truncated": 0,
+          "completion_tokens": 5025,
+          "generation_s": 14.839224868454039,
+          "http_tokens_second": 338.6295473345373
+        }
+      },
+      "native_counters": {
+        "accepted_drafts": 0,
+        "proposed_drafts": 0,
+        "verify_rounds": 0,
+        "generated_tokens": 20450,
+        "lookup_proposed": 0,
+        "lookup_accepted": 0,
+        "lookup_rounds": 0,
+        "verify_s": 56.577784031,
+        "draft_s": 0.000122478,
+        "busy_s": 56.60007052,
+        "acceptance_fraction": null,
+        "emitted_per_verify_round": null
+      }
+    },
+    {
+      "path": "results/binary-5090/tasks-batch-baselines/tasks-modern-packed1-plain-b2",
+      "receipt": {
+        "status": "complete",
+        "exit_code": 0
+      },
+      "decoding": {
+        "temperature": 0,
+        "sampling": null,
+        "enable_thinking": false,
+        "max_tokens": {
+          "gsm8k": 4096,
+          "humaneval_plus": 4096
+        },
+        "concurrency": 2
+      },
+      "manifest_sha256": "0330533de253a6b29421216609c18cb4afe5a7e9bc16cb0c574af8b0b4d15c58",
+      "tokens": 20387,
+      "generation_seconds": 75.55921040475368,
+      "http_tokens_second": 269.8148894197204,
+      "benchmarks": {
+        "gsm8k": {
+          "metrics": {
+            "accuracy": {
+              "score": 0.90625,
+              "se": 0.05152697639950359,
+              "n": 32,
+              "correct": 29
+            }
+          },
+          "truncated": 1,
+          "completion_tokens": 15362,
+          "generation_s": 54.39551883749664,
+          "http_tokens_second": 282.41296945605126
+        },
+        "humaneval_plus": {
+          "metrics": {
+            "base": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            },
+            "plus": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            }
+          },
+          "truncated": 0,
+          "completion_tokens": 5025,
+          "generation_s": 21.163691567257047,
+          "http_tokens_second": 237.43494768059847
+        }
+      },
+      "native_counters": {
+        "accepted_drafts": 0,
+        "proposed_drafts": 0,
+        "verify_rounds": 0,
+        "generated_tokens": 20450,
+        "lookup_proposed": 0,
+        "lookup_accepted": 0,
+        "lookup_rounds": 0,
+        "verify_s": 75.53293189700001,
+        "draft_s": 0.000224569,
+        "busy_s": 75.554901531,
+        "acceptance_fraction": null,
+        "emitted_per_verify_round": null
+      }
+    },
+    {
+      "path": "results/binary-5090/tasks-batch-baselines/tasks-modern-packed1-plain-b32",
+      "receipt": {
+        "status": "complete",
+        "exit_code": 0
+      },
+      "decoding": {
+        "temperature": 0,
+        "sampling": null,
+        "enable_thinking": false,
+        "max_tokens": {
+          "gsm8k": 4096,
+          "humaneval_plus": 4096
+        },
+        "concurrency": 32
+      },
+      "manifest_sha256": "0330533de253a6b29421216609c18cb4afe5a7e9bc16cb0c574af8b0b4d15c58",
+      "tokens": 20387,
+      "generation_seconds": 56.24276895914227,
+      "http_tokens_second": 362.48215330241294,
+      "benchmarks": {
+        "gsm8k": {
+          "metrics": {
+            "accuracy": {
+              "score": 0.90625,
+              "se": 0.05152697639950359,
+              "n": 32,
+              "correct": 29
+            }
+          },
+          "truncated": 1,
+          "completion_tokens": 15362,
+          "generation_s": 41.36751472298056,
+          "http_tokens_second": 371.35419187911896
+        },
+        "humaneval_plus": {
+          "metrics": {
+            "base": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            },
+            "plus": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            }
+          },
+          "truncated": 0,
+          "completion_tokens": 5025,
+          "generation_s": 14.875254236161709,
+          "http_tokens_second": 337.809352379621
+        }
+      },
+      "native_counters": {
+        "accepted_drafts": 0,
+        "proposed_drafts": 0,
+        "verify_rounds": 0,
+        "generated_tokens": 20450,
+        "lookup_proposed": 0,
+        "lookup_accepted": 0,
+        "lookup_rounds": 0,
+        "verify_s": 56.210964147000006,
+        "draft_s": 0.000105581,
+        "busy_s": 56.236978300000004,
+        "acceptance_fraction": null,
+        "emitted_per_verify_round": null
+      }
+    },
+    {
+      "path": "results/binary-5090/tasks-batch-baselines/tasks-modern-packed1-plain-b4",
+      "receipt": {
+        "status": "complete",
+        "exit_code": 0
+      },
+      "decoding": {
+        "temperature": 0,
+        "sampling": null,
+        "enable_thinking": false,
+        "max_tokens": {
+          "gsm8k": 4096,
+          "humaneval_plus": 4096
+        },
+        "concurrency": 4
+      },
+      "manifest_sha256": "0330533de253a6b29421216609c18cb4afe5a7e9bc16cb0c574af8b0b4d15c58",
+      "tokens": 20387,
+      "generation_seconds": 63.22325283382088,
+      "http_tokens_second": 322.4604727881717,
+      "benchmarks": {
+        "gsm8k": {
+          "metrics": {
+            "accuracy": {
+              "score": 0.90625,
+              "se": 0.05152697639950359,
+              "n": 32,
+              "correct": 29
+            }
+          },
+          "truncated": 1,
+          "completion_tokens": 15362,
+          "generation_s": 46.27148246578872,
+          "http_tokens_second": 331.9971434102645
+        },
+        "humaneval_plus": {
+          "metrics": {
+            "base": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            },
+            "plus": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            }
+          },
+          "truncated": 0,
+          "completion_tokens": 5025,
+          "generation_s": 16.951770368032157,
+          "http_tokens_second": 296.4292159995396
+        }
+      },
+      "native_counters": {
+        "accepted_drafts": 0,
+        "proposed_drafts": 0,
+        "verify_rounds": 0,
+        "generated_tokens": 20450,
+        "lookup_proposed": 0,
+        "lookup_accepted": 0,
+        "lookup_rounds": 0,
+        "verify_s": 63.196014610000006,
+        "draft_s": 0.000162775,
+        "busy_s": 63.218975079,
+        "acceptance_fraction": null,
+        "emitted_per_verify_round": null
+      }
+    },
+    {
+      "path": "results/binary-5090/tasks-batch-baselines/tasks-modern-packed1-plain-b5",
+      "receipt": {
+        "status": "complete",
+        "exit_code": 0
+      },
+      "decoding": {
+        "temperature": 0,
+        "sampling": null,
+        "enable_thinking": false,
+        "max_tokens": {
+          "gsm8k": 4096,
+          "humaneval_plus": 4096
+        },
+        "concurrency": 5
+      },
+      "manifest_sha256": "0330533de253a6b29421216609c18cb4afe5a7e9bc16cb0c574af8b0b4d15c58",
+      "tokens": 20387,
+      "generation_seconds": 61.358393537811935,
+      "http_tokens_second": 332.2609805199116,
+      "benchmarks": {
+        "gsm8k": {
+          "metrics": {
+            "accuracy": {
+              "score": 0.90625,
+              "se": 0.05152697639950359,
+              "n": 32,
+              "correct": 29
+            }
+          },
+          "truncated": 1,
+          "completion_tokens": 15362,
+          "generation_s": 45.11855723243207,
+          "http_tokens_second": 340.4807454471861
+        },
+        "humaneval_plus": {
+          "metrics": {
+            "base": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            },
+            "plus": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            }
+          },
+          "truncated": 0,
+          "completion_tokens": 5025,
+          "generation_s": 16.239836305379868,
+          "http_tokens_second": 309.4243011757045
+        }
+      },
+      "native_counters": {
+        "accepted_drafts": 0,
+        "proposed_drafts": 0,
+        "verify_rounds": 0,
+        "generated_tokens": 20450,
+        "lookup_proposed": 0,
+        "lookup_accepted": 0,
+        "lookup_rounds": 0,
+        "verify_s": 61.331675186000005,
+        "draft_s": 0.00014137900000000002,
+        "busy_s": 61.353811958,
+        "acceptance_fraction": null,
+        "emitted_per_verify_round": null
+      }
+    },
+    {
+      "path": "results/binary-5090/tasks-batch-baselines/tasks-modern-packed1-plain-b8",
+      "receipt": {
+        "status": "complete",
+        "exit_code": 0
+      },
+      "decoding": {
+        "temperature": 0,
+        "sampling": null,
+        "enable_thinking": false,
+        "max_tokens": {
+          "gsm8k": 4096,
+          "humaneval_plus": 4096
+        },
+        "concurrency": 8
+      },
+      "manifest_sha256": "0330533de253a6b29421216609c18cb4afe5a7e9bc16cb0c574af8b0b4d15c58",
+      "tokens": 20387,
+      "generation_seconds": 57.294337486848235,
+      "http_tokens_second": 355.82923015175425,
+      "benchmarks": {
+        "gsm8k": {
+          "metrics": {
+            "accuracy": {
+              "score": 0.90625,
+              "se": 0.05152697639950359,
+              "n": 32,
+              "correct": 29
+            }
+          },
+          "truncated": 1,
+          "completion_tokens": 15362,
+          "generation_s": 42.26684642396867,
+          "http_tokens_second": 363.4527129350374
+        },
+        "humaneval_plus": {
+          "metrics": {
+            "base": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            },
+            "plus": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            }
+          },
+          "truncated": 0,
+          "completion_tokens": 5025,
+          "generation_s": 15.027491062879562,
+          "http_tokens_second": 334.3871561110156
+        }
+      },
+      "native_counters": {
+        "accepted_drafts": 0,
+        "proposed_drafts": 0,
+        "verify_rounds": 0,
+        "generated_tokens": 20450,
+        "lookup_proposed": 0,
+        "lookup_accepted": 0,
+        "lookup_rounds": 0,
+        "verify_s": 57.267826247,
+        "draft_s": 0.000123041,
+        "busy_s": 57.289496594000006,
+        "acceptance_fraction": null,
+        "emitted_per_verify_round": null
+      }
+    }
+  ]
+}

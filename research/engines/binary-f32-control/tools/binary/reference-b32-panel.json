@@ -1,0 +1,10 @@
+{
+  "command": ["/workspace/binary/llama/build/bin/llama-server", "-m", "/workspace/binary/models/Bonsai-27B-Q1_0.gguf", "-ngl", "99", "-fa", "1", "-ctk", "f16", "-ctv", "f16", "-c", "262144", "-np", "32", "--host", "127.0.0.1", "--port", "8088", "--reasoning", "off"],
+  "env": {},
+  "url": "http://127.0.0.1:8088",
+  "out": "/workspace/binary/results/tasks-reference-b32",
+  "gate_args": ["--quick", "--limit", "32", "--concurrency", "32"],
+  "startup_seconds": 120,
+  "run_seconds": 1800,
+  "metrics_path": null
+}

@@ -1,0 +1,14 @@
+{
+  "exit": 0,
+  "stdout": "{\"status\":\"pass\",\"cases\":54675,\"validation_checks\":54675,\"missing\":0,\"mismatches\":0,\"resident_label_bytes\":5688,\"source_oracle_fp4_bytes\":60,\"native_dense_bytes\":90504,\"source_lookup_bytes\":218700,\"coordinate_axis_bytes\":936,\"output_bytes\":218700,\"preparation_ms\":{\"labels_observer_allocation_transfer_context\":91.722900,\"control_table_validation\":0.334800,\"graphs_warmup\":3.045300},\"timings_ms\":{\"prepared_tile_one_MMA_C_fused\":{\"median\":0.001983,\"min\":0.001981,\"max\":0.001984,\"registers\":18,\"local_bytes\":0,\"shared_bytes\":0},\"direct_Q8\":{\"median\":0.001856,\"min\":0.001831,\"max\":0.001865,\"registers\":20,\"local_bytes\":0,\"shared_bytes\":0},\"full_map_lookup\":{\"median\":0.001493,\"min\":0.001488,\"max\":0.001511,\"registers\":12,\"local_bytes\":0,\"shared_bytes\":0}},\"scope\":\"one nonuniform-K MMA/128 distinct outputs plus final exact-bit observer; 936B coordinate axes+5688B cached-global prepared labels (row3 fields+padding, column2 fields); exact float-bit checked dense final observer; dynamic cached-global producer/ISA composition/int index/readout/output charged; scale1 finite GU-down-Q8 only; no learned-model or speedup claim\"}\n",
+  "stderr": "",
+  "wall_s": 1.826643705368042,
+  "mutex": "Local\\BonsaiGPU",
+  "mutex_wait_result": 0,
+  "hashes": {
+    "native_affine_prepared.cu": "8bfd82c5836cc3401d72662ea15789b3fe1855b80a38aa821d3e5ffc9abb165e",
+    "native_affine_prepared.exe": "c23bff675fd704dd7397c3ef7e88eb0a917ebbf46ba6119451d49497e2bed0bc",
+    "affine-observer.bin": "fab9aff7e926c4402c12f3111796064dbb5b353080b93c8c56964f19b035af8d",
+    "build.log": "139cfe3fc922f4890f1d0d685006be9d4bc6b5befec4e936b6675fcbc818c65f"
+  }
+}

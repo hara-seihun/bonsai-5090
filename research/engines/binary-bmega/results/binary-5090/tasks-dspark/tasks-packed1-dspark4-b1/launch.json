@@ -1,0 +1,42 @@
+{
+  "command": [
+    "/workspace/binary/composed/halo/h5-server",
+    "/workspace/binary/models/Bonsai-27B-Q1_0.gguf",
+    "/workspace/binary/models/Bonsai-27B-dspark-bf16.gguf",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "8088",
+    "--slots",
+    "1",
+    "--ctx",
+    "8192",
+    "--prefill",
+    "16",
+    "--draft-proposals",
+    "4"
+  ],
+  "env": {
+    "H5_DRAFTER": "dspark-bf16",
+    "H5_STATE": "f16",
+    "H5_KV": "f16",
+    "H5_DRAFT_MARGIN": "0",
+    "H5_DETERMINISTIC_GEMM": "1",
+    "H5_ORDERED_PREP": "off",
+    "H5_WEIGHTS": "packed1",
+    "H5_ACT": "f32",
+    "H5_CHUNK": "8"
+  },
+  "url": "http://127.0.0.1:8088",
+  "out": "/workspace/binary/results/dspark/tasks-packed1-dspark4-b1",
+  "gate_args": [
+    "--quick",
+    "--limit",
+    "32",
+    "--concurrency",
+    "1"
+  ],
+  "startup_seconds": 180,
+  "run_seconds": 1800,
+  "metrics_path": "/metrics"
+}

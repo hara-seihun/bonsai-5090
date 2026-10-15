@@ -1,0 +1,25 @@
+{
+  "tasks-binary1-sf1-plain-b32": {
+    "stages": {
+      "admitted": 145,
+      "evicted": 113
+    },
+    "maximum_reported_cache": 32,
+    "cuda_out_of_memory_lines": 0
+  },
+  "tasks-binary1-sf-off-plain-b32": {
+    "stages": {
+      "admitted": 143,
+      "evicted": 111
+    },
+    "maximum_reported_cache": 32,
+    "cuda_out_of_memory_lines": 0
+  },
+  "tasks-binary1-sf2-plain-b32": {
+    "stages": {
+      "eager-memory-admission": 143
+    },
+    "maximum_reported_cache": 0,
+    "cuda_out_of_memory_lines": 0
+  }
+}

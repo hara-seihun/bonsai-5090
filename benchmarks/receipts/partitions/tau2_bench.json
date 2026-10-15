@@ -1,0 +1,356 @@
+{
+  "benchmark": "tau2_bench",
+  "domains": [
+    "telecom"
+  ],
+  "seed": 20261014,
+  "source_pin": {
+    "repo_id": "sierra-research/tau2-bench",
+    "hub": "github",
+    "revision": "f8de30c298689cbe0117d76a378e7315a17e5bd8",
+    "snapshot_path": "baseline://quality-campaign/assets/tau2/f8de30c298689cbe0117d76a378e7315a17e5bd8",
+    "files_sha256": {
+      "tau2/domains/airline/db.json": "1af9fea6e03ca7ca15a22bb3fcaf3e351393e3fc9070b6777947da8996f7531b",
+      "tau2/domains/airline/policy.md": "10dc0525421521208be39cee235bba84a16e2bcba9899eb93d92cd81d2f62fc4",
+      "tau2/domains/airline/tasks.json": "40d692b3fca780f46b56d48b447fd8db79a653f216667b8ed7c1a88380544532",
+      "tau2/domains/mock/db.json": "8661f80b4c693bb15ef2fe6781d24a5765240d61fc74387c770133953f9113ea",
+      "tau2/domains/mock/policy.md": "50ccbefac7c9ba77ce54131d61cfc6882f74b88ace66771115f9d867ec098203",
+      "tau2/domains/mock/policy_solo.md": "2608375977bdeedd9cf34ab437b213403c8e97e9929d5094338355a994ac0c86",
+      "tau2/domains/mock/tasks.json": "c3e3597b222ff5a2a7dd4af73dd782eafcd7eabc0f0345e053186b2cacf9159c",
+      "tau2/domains/retail/db.json": "413a65160adbdb5fde0ffc0015c49b6d70250b10c18128de169b597af7766765",
+      "tau2/domains/retail/policy.md": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467",
+      "tau2/domains/retail/tasks.json": "76e1fa649a359bef2d2fd30eae834b99d261d84e2e5d364856f6632fdf778dfd",
+      "tau2/domains/telecom/db.toml": "562d647ef9d7df8df91eafd8ee76036e707c8f9e32aaedc4a7fde06975aea2c0",
+      "tau2/domains/telecom/main_policy.md": "95943844a0cf11fdf0e2842b483b81d9f9338aa53235712ed131db075d086ed7",
+      "tau2/domains/telecom/main_policy_solo.md": "781296ae5419169cb64aac0c4fa2aa6129c78f3c1592f64abd80df6fbabb7042",
+      "tau2/domains/telecom/tasks.json": "192a2c143b3b512c37c3775fdf6c5040c33717388620c38b140c731dc6153cd7",
+      "tau2/domains/telecom/tasks_full.json": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4",
+      "tau2/domains/telecom/tasks_small.json": "c8ea6f75adc18a8ad363974292cbd26b6e8b0e348ec87d265a4188e0088a8f24",
+      "tau2/domains/telecom/tech_support_manual.md": "015a3ee49ec8c199c5e1a059c922081937b92cf3a5ea74fedbc4357816f389ba",
+      "tau2/domains/telecom/tech_support_workflow.md": "64f3ccd13875d14f358b21b9af221dab09e0e7bf5690d0e4322fb91855a43a4d",
+      "tau2/domains/telecom/tech_support_workflow_solo.md": "b174d1f9705b5d7df49468daf99560a5633f86d23e10499a1166a7753706a412",
+      "tau2/domains/telecom/user_db.toml": "4886107ea0c16f8e16d74bef91cfb557de61822afe9361f5a9b241806aea2e4c",
+      "tau2/domains/telecom/workflows/dot_2_pdf.py": "d805e103bbb546cf9ab7df0c4b1ca71f4878770e0fd10bd16ea4d626dea4b378",
+      "tau2/domains/telecom/workflows/tech_support_path1_no_service.dot": "d593247f1b5de4ebdcdeeb8d168b49fbf65eaabd235e6ec5cd09b097245ff163",
+      "tau2/domains/telecom/workflows/tech_support_path1_no_service.pdf": "6a7db2e788aff847d0418d778e29e9dc4c62a9e2617b6c5cf04d1c9b001e5584",
+      "tau2/domains/telecom/workflows/tech_support_path1_no_service.png": "910f61fd0454b7b5398d3427ab210347f0d60f616c8950ef983c6a28e9f0dec0",
+      "tau2/domains/telecom/workflows/tech_support_path2_mobile_data.dot": "61565fe4d77ff886559dc9a53b99af1a3af00f7d2349ea1a4055c47a81bc571b",
+      "tau2/domains/telecom/workflows/tech_support_path2_mobile_data.pdf": "ee40aa5414b8b39125f729ca51c7cb8a0d820b31bf65c6f58eaa9fe3a9ae5cb7",
+      "tau2/domains/telecom/workflows/tech_support_path2_mobile_data.png": "cf6bf13aba2975cf1f0d69a9274ef458f977bb8cb7e73f31939ad413304c7ddf",
+      "tau2/domains/telecom/workflows/tech_support_path3_mms.dot": "f3dcf3c4418dcc593cc14eedb09f0d031fda07d4524260bd0387dc7dacb566bb",
+      "tau2/domains/telecom/workflows/tech_support_path3_mms.pdf": "2593f669da761a8f015ef79e9a34fd40bb4fa85a8091816dca2e66de420413be",
+      "tau2/domains/telecom/workflows/tech_support_path3_mms.png": "25564d13c2d52a3b3805fe18b37d274c39d6b6fc9c8d94a71553862d9181c41e",
+      "tau2/user_simulator/simulation_guidelines.md": "05f4f48e5beefcb527d81fdee6271ce0e997fa4721e8d3ae4db0e820fb0a9013",
+      "tau2/user_simulator/simulation_guidelines_tools.md": "7b0cdb574909a15bb16e75296eb7a0c6b371fbe385a1b23a2fc8ea3751ee4b3b"
+    },
+    "publisher_revision_unknown": true,
+    "adapter_layout_validated": true
+  },
+  "source_sha256": "192a2c143b3b512c37c3775fdf6c5040c33717388620c38b140c731dc6153cd7",
+  "total": 114,
+  "window_size": 5,
+  "windows": [
+    {
+      "shard": 0,
+      "count": 5,
+      "indices": [
+        77,
+        70,
+        26,
+        88,
+        76
+      ],
+      "dataset_snapshot": "campaign://tau2_bench-shards/000",
+      "pin_sha256": "6c16f712ca65c0f664a3084546530ba9343b9453f94055f95c1e755733799d56"
+    },
+    {
+      "shard": 1,
+      "count": 5,
+      "indices": [
+        11,
+        29,
+        16,
+        96,
+        2
+      ],
+      "dataset_snapshot": "campaign://tau2_bench-shards/001",
+      "pin_sha256": "6e40cdbc5d9ad943fa69daef74f3b6ad253cf21624c3e1c4dacab0119dec2d15"
+    },
+    {
+      "shard": 2,
+      "count": 5,
+      "indices": [
+        73,
+        20,
+        4,
+        97,
+        99
+      ],
+      "dataset_snapshot": "campaign://tau2_bench-shards/002",
+      "pin_sha256": "903a7a5df5be44b25b1d7a592fca2af896da4da45168d3d6cdee13f1b9773345"
+    },
+    {
+      "shard": 3,
+      "count": 5,
+      "indices": [
+        89,
+        10,
+        37,
+        21,
+        36
+      ],
+      "dataset_snapshot": "campaign://tau2_bench-shards/003",
+      "pin_sha256": "062f81b37d0e2d940c6562ba1f701eb24879f07566ec1c8dea5db731b16b590b"
+    },
+    {
+      "shard": 4,
+      "count": 5,
+      "indices": [
+        82,
+        32,
+        28,
+        41,
+        85
+      ],
+      "dataset_snapshot": "campaign://tau2_bench-shards/004",
+      "pin_sha256": "f58d23cd0b9de3482131d5c06b178622ea7a5df04dd3976755c0f230015757c6"
+    },
+    {
+      "shard": 5,
+      "count": 5,
+      "indices": [
+        83,
+        106,
+        109,
+        90,
+        78
+      ],
+      "dataset_snapshot": "campaign://tau2_bench-shards/005",
+      "pin_sha256": "a4e40bdaf6b95f35e9b085cef541ff9cf58ad719006acf6fe6514cd55dc70f6c"
+    },
+    {
+      "shard": 6,
+      "count": 5,
+      "indices": [
+        38,
+        111,
+        68,
+        31,
+        91
+      ],
+      "dataset_snapshot": "campaign://tau2_bench-shards/006",
+      "pin_sha256": "47bf008ce5ed97b401f45f276a492e6479182de9ae857498d8a0e5ae094a231c"
+    },
+    {
+      "shard": 7,
+      "count": 5,
+      "indices": [
+        52,
+        60,
+        63,
+        94,
+        43
+      ],
+      "dataset_snapshot": "campaign://tau2_bench-shards/007",
+      "pin_sha256": "f5ef4a34cd388c76ea367a90c67b5086e59fedb74a170397e58a886c3d2ddda1"
+    },
+    {
+      "shard": 8,
+      "count": 5,
+      "indices": [
+        66,
+        79,
+        18,
+        0,
+        13
+      ],
+      "dataset_snapshot": "campaign://tau2_bench-shards/008",
+      "pin_sha256": "79a9b487bc67d9b13a0e75c921eb8e1bc9bc8c04c91eb46324dac7893f39dade"
+    },
+    {
+      "shard": 9,
+      "count": 5,
+      "indices": [
+        49,
+        59,
+        44,
+        104,
+        3
+      ],
+      "dataset_snapshot": "campaign://tau2_bench-shards/009",
+      "pin_sha256": "d46abe6ec3d1b162d0471580791d599627d6a58a4b81d14e84da6241655c0889"
+    },
+    {
+      "shard": 10,
+      "count": 5,
+      "indices": [
+        23,
+        17,
+        71,
+        46,
+        58
+      ],
+      "dataset_snapshot": "campaign://tau2_bench-shards/010",
+      "pin_sha256": "e775a23c8326fc9628fb468e3f091ba3f5126f82055997e29ce8ff42161e1277"
+    },
+    {
+      "shard": 11,
+      "count": 5,
+      "indices": [
+        102,
+        53,
+        105,
+        113,
+        8
+      ],
+      "dataset_snapshot": "campaign://tau2_bench-shards/011",
+      "pin_sha256": "97b0d5b3d10162b53a6150f6dd0684947dd4ec7facc1667fe1d22571ef57f394"
+    },
+    {
+      "shard": 12,
+      "count": 5,
+      "indices": [
+        5,
+        24,
+        62,
+        92,
+        15
+      ],
+      "dataset_snapshot": "campaign://tau2_bench-shards/012",
+      "pin_sha256": "7a8c93afa561fcdb93a4c0588780e4b1da55ea70117ad398aa87f83c6f38b762"
+    },
+    {
+      "shard": 13,
+      "count": 5,
+      "indices": [
+        50,
+        35,
+        47,
+        6,
+        1
+      ],
+      "dataset_snapshot": "campaign://tau2_bench-shards/013",
+      "pin_sha256": "4ec240d90f35eb1dc5a0ea100fa3f319d447e923eb79debc095d5917be527c1a"
+    },
+    {
+      "shard": 14,
+      "count": 5,
+      "indices": [
+        12,
+        48,
+        14,
+        27,
+        107
+      ],
+      "dataset_snapshot": "campaign://tau2_bench-shards/014",
+      "pin_sha256": "da51322e7f88d6b9cb1a4c6146f3140f97ae8ef039ebcd459f4800832e0378bb"
+    },
+    {
+      "shard": 15,
+      "count": 5,
+      "indices": [
+        9,
+        25,
+        72,
+        54,
+        33
+      ],
+      "dataset_snapshot": "campaign://tau2_bench-shards/015",
+      "pin_sha256": "4dda70e4306c1baee1c3b725cd074e594b6885987157a9b04f7aacfd59827a0a"
+    },
+    {
+      "shard": 16,
+      "count": 5,
+      "indices": [
+        87,
+        51,
+        110,
+        74,
+        80
+      ],
+      "dataset_snapshot": "campaign://tau2_bench-shards/016",
+      "pin_sha256": "c95149c0d253113285afa2e0f3d5eeb6bc6817ff18ca9f0f6821ccddfefbef21"
+    },
+    {
+      "shard": 17,
+      "count": 5,
+      "indices": [
+        64,
+        84,
+        100,
+        57,
+        7
+      ],
+      "dataset_snapshot": "campaign://tau2_bench-shards/017",
+      "pin_sha256": "90c14ebd34d5ea74c756a556f2f4aec2d3e794c1710491586a9c0e5c7948fc90"
+    },
+    {
+      "shard": 18,
+      "count": 5,
+      "indices": [
+        30,
+        34,
+        95,
+        56,
+        39
+      ],
+      "dataset_snapshot": "campaign://tau2_bench-shards/018",
+      "pin_sha256": "301dd01467f93f54a706b3929d892705c0f34cf1c7c04730e986295f8ffa1700"
+    },
+    {
+      "shard": 19,
+      "count": 5,
+      "indices": [
+        55,
+        112,
+        108,
+        101,
+        67
+      ],
+      "dataset_snapshot": "campaign://tau2_bench-shards/019",
+      "pin_sha256": "8cbd3ac8a7b99b900cdf7f5025461b151f1c25e5f260d239b9d0ba775511615f"
+    },
+    {
+      "shard": 20,
+      "count": 5,
+      "indices": [
+        40,
+        45,
+        81,
+        42,
+        65
+      ],
+      "dataset_snapshot": "campaign://tau2_bench-shards/020",
+      "pin_sha256": "631628ce942a85ee7f905aba115e82db71c2681eec74557c3c5dc8b8248a6001"
+    },
+    {
+      "shard": 21,
+      "count": 5,
+      "indices": [
+        75,
+        61,
+        103,
+        19,
+        98
+      ],
+      "dataset_snapshot": "campaign://tau2_bench-shards/021",
+      "pin_sha256": "3e673fe90279950ca8ee450f5b1959fbbdeef817dc1413ba92c0c5cfcaecb3f1"
+    },
+    {
+      "shard": 22,
+      "count": 4,
+      "indices": [
+        86,
+        22,
+        69,
+        93
+      ],
+      "dataset_snapshot": "campaign://tau2_bench-shards/022",
+      "pin_sha256": "5390a52c31aa40c7a23809ab1e37f6fca2a1d66e3b8ad94ab5707718ce74978f"
+    }
+  ],
+  "pilot_shards": [
+    0
+  ],
+  "remaining_requires": "Five completed tasks costed and extrapolated against the remaining shared USD5 budget; no replay of pilot tasks"
+}

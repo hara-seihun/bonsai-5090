@@ -1,0 +1,37 @@
+BUILD 0 ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z8producerILb0EEv4ArgsPi' for 'sm_120a'
+ptxas info    : Function properties for _Z8producerILb0EEv4ArgsPi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 40 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z9normalizePKfPaPfi' for 'sm_120a'
+ptxas info    : Function properties for _Z9normalizePKfPaPfi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 21 registers, used 1 barriers, 16 bytes smem
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z7fp4_ref4ArgsPf' for 'sm_120a'
+ptxas info    : Function properties for _Z7fp4_ref4ArgsPf
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 42 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z10dp4a_fused4ArgsPfiPyPKi' for 'sm_120a'
+ptxas info    : Function properties for _Z10dp4a_fused4ArgsPfiPyPKi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 64 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z12folded_fused4ArgsPfi' for 'sm_120a'
+ptxas info    : Function properties for _Z12folded_fused4ArgsPfi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 108 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6finish4ArgsPKiPfi' for 'sm_120a'
+ptxas info    : Function properties for _Z6finish4ArgsPKiPfi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 88 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+fullk_trace.cu
+tmpxft_00009428_00000000-10_fullk_trace.cudafe1.cpp
+ 
+MUTEX 0
+RELEASED
+RECEIPT {"source_sha256": "dab992487233d6257d897334631ca219638f5d98377761e27baead6480147e74", "exit": 0, "stdout": "{\"state\":\"observed\",\"M\":512,\"N\":64,\"K\":5120,\"scale_context\":0,\"physical_errors\":0,\"f32_errors\":[4,3,3,3,3,0],\"q8_errors\":[0,0,0,0,0,0],\"q8_scale_errors\":[0,0,0,0,0,0],\"carrier_bytes\":41943040}\n", "stderr": "", "wall_s": 0.1728956699371338, "hashes": {"build.cmd": "0c77e64e043cd915aa0b3d80376c54111617e1879e524753e2b2f3e03f54014d", "build.log": "c409574f6507cdf3c24042d49bfdfc911f843fa81a00c98986ede378b3e79986", "fullk-ag.bin": "440b01573ba5bdd7d6ab536117a3e31c1051d573f6d4a660a26836f8957f4e85", "fullk-arm0-f32.bin": "5d73b6eb8b213710daa460fe1e188f8a7e2048b3580d0928a427440d9e9720a9", "fullk-arm0-q8.bin": "8eb7fc2a18966e207381f7b78495cf801949d5160fbcacf33b8fa73b29d4dde0", "fullk-arm0-scale.bin": "67af17c919f8756ed22e9716327705a8a1ed95bdb3604b2e95e86842b19eb7cf", "fullk-arm1-f32.bin": "064a8e4a2f59f867af97132b4d6632c7dc927125c7d53241cdece492a09a4af7", "fullk-arm1-q8.bin": "8eb7fc2a18966e207381f7b78495cf801949d5160fbcacf33b8fa73b29d4dde0", "fullk-arm1-scale.bin": "67af17c919f8756ed22e9716327705a8a1ed95bdb3604b2e95e86842b19eb7cf", "fullk-arm2-f32.bin": "064a8e4a2f59f867af97132b4d6632c7dc927125c7d53241cdece492a09a4af7", "fullk-arm2-q8.bin": "8eb7fc2a18966e207381f7b78495cf801949d5160fbcacf33b8fa73b29d4dde0", "fullk-arm2-scale.bin": "67af17c919f8756ed22e9716327705a8a1ed95bdb3604b2e95e86842b19eb7cf", "fullk-arm3-f32.bin": "064a8e4a2f59f867af97132b4d6632c7dc927125c7d53241cdece492a09a4af7", "fullk-arm3-q8.bin": "8eb7fc2a18966e207381f7b78495cf801949d5160fbcacf33b8fa73b29d4dde0", "fullk-arm3-scale.bin": "67af17c919f8756ed22e9716327705a8a1ed95bdb3604b2e95e86842b19eb7cf", "fullk-arm4-f32.bin": "064a8e4a2f59f867af97132b4d6632c7dc927125c7d53241cdece492a09a4af7", "fullk-arm4-q8.bin": "8eb7fc2a18966e207381f7b78495cf801949d5160fbcacf33b8fa73b29d4dde0", "fullk-arm4-scale.bin": "67af17c919f8756ed22e9716327705a8a1ed95bdb3604b2e95e86842b19eb7cf", "fullk-arm5-f32.bin": "f53c2fb1d0c11ec5dbed25bdb6395e8f6a5df399e1dcc1e51e5e137b020b51d9", "fullk-arm5-q8.bin": "8eb7fc2a18966e207381f7b78495cf801949d5160fbcacf33b8fa73b29d4dde0", "fullk-arm5-scale.bin": "67af17c919f8756ed22e9716327705a8a1ed95bdb3604b2e95e86842b19eb7cf", "fullk-as.bin": "a6a7cb8d2a2525ef3554af2c8f5c728ec8c54cfab652d41543c10cad58644116", "fullk-gs.bin": "d5e2cbf0653634532a060e8b0b35cc2f59dfecfd53d4d1276466dc0d183dfdbc", "fullk-raw-fp4.bin": "6e67a2d273b981d8fcd7dfc1b058d77d742d43e3c36569f1fecd59d2f2d0c2d6", "fullk-us.bin": "97cae5d1c737b72d34adb928198625413dde540e8d1a7ea9a2b2988f7f7f02ce", "fullk-weights.bin": "a874ff00f1366fb37b7bc13901c7205551bbfea637a97d178a0584297da0993e", "fullk_trace.cu": "04c51724a9c65b485b910466b145e8ad6d6a80b768f7db9562a30a707e7755dd", "fullk_trace.exe": "2e13c54aed759a19798cd301f130fec0ad19a8ccf62581ec71a6ca268f5f91cc"}}

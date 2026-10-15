@@ -1,0 +1,191 @@
+{
+  "root": "~/data/binary-5090/whole-map",
+  "model_sha256": "17ef842e47450caeb8eaa3ebfbbab5d2f2278b62b79be107985fb69a2f819aa0",
+  "total_bytes": 159059186,
+  "files": {
+    "adapter-build.log": {
+      "bytes": 837,
+      "sha256": "5d796d715e2507d056717a51e312086be5cf382d1955ab0178f961f2984b6848"
+    },
+    "levels-31.log": {
+      "bytes": 502,
+      "sha256": "2d6cdd3ea990d365f0cc5441855b122beb883b63b4db4549ff533116ecacb213"
+    },
+    "fixed-build.log": {
+      "bytes": 328,
+      "sha256": "44110993282aa8efe0e8ff59100d9923fbd9268dd6812544a49586fec08fff9a"
+    },
+    "base.logits": {
+      "bytes": 31784972,
+      "sha256": "482670c3381c046ad71a6956e148faa5b9413debce2dd96d65a57cff87fd8dcb"
+    },
+    "fixed-32-1-three.log": {
+      "bytes": 1443,
+      "sha256": "103419947f50b2b92252d9743e5c47746a95be9fe99d91134fdb2ff9ae4f7040"
+    },
+    "base.capture": {
+      "bytes": 22528916,
+      "sha256": "85818f1557a59b9d207302b29cf546bb8bdb86cc9132716589639bbc914db9b4"
+    },
+    "levels-255.log": {
+      "bytes": 505,
+      "sha256": "9f5978c7d35dee5b864dfcdaf41edc004a1aeaf60ae287b4783fbb714d765578"
+    },
+    "drop-0.01.log": {
+      "bytes": 502,
+      "sha256": "7e33be5b00aaba3acb04d8dd7d73275fd6ca88d3f4732dacab70142e73dc047b"
+    },
+    "f16-capture.capture": {
+      "bytes": 22528916,
+      "sha256": "202c17f79cc629ea05d58ae4a32531f2d8b4d35f0003f84bd0bfd1694610880f"
+    },
+    "fixed-16-0-four.log": {
+      "bytes": 1447,
+      "sha256": "700a300c82d57eadc0aabd767b5556828919c45642f31ede96c7b8195e382ec9"
+    },
+    "f16-levels-63.log": {
+      "bytes": 503,
+      "sha256": "635ff1390aec326f5f53934ace4ed503e36ba99356ad4b7b8cfb475f50576991"
+    },
+    "f16-baseline.log": {
+      "bytes": 503,
+      "sha256": "5a25709e70373367f305e7e83152babf3fd8180adbd92fbaea0531dd72de1dae"
+    },
+    "f16-levels-31.log": {
+      "bytes": 503,
+      "sha256": "65898de1ca6b76ac666adc5324c40441203945ca33c63599b9451a917ac3b6b4"
+    },
+    "base.log": {
+      "bytes": 434,
+      "sha256": "2acf82af287818935b47f91ec21083423c5a0601e05d3547f0f42857943797d2"
+    },
+    "fixed-16-2-three.log": {
+      "bytes": 1444,
+      "sha256": "695f4678092a38c8786b07f5b73355c8f4d2be33f727fecc9f8340dde5919254"
+    },
+    "build-f16.log": {
+      "bytes": 265,
+      "sha256": "4b21cddd70e28f70a9af4535aad80cda8d99f0455ac39b7e7716b2550b2914d2"
+    },
+    "engine-three-wiki.log": {
+      "bytes": 897,
+      "sha256": "4abf705584a52f23b3fd6d498c5fc2617aa375012fdec92fdaabd11193a2eb14"
+    },
+    "f16-levels-255.log": {
+      "bytes": 505,
+      "sha256": "270efbd39cbe73a97601f091b316c0a63522e10678037a9c5f87fb142ab4ab1f"
+    },
+    "fixed-16-1-three.log": {
+      "bytes": 1445,
+      "sha256": "58b6dc9370d58370f5e1b854fbe31674974ae3f3cecbc921fa30af002697aa20"
+    },
+    "fixed-32-3-four.log": {
+      "bytes": 1438,
+      "sha256": "0458ef0e32463c68bd0faad9715c23b2cde8dff9ea02955f15daf5fd16649368"
+    },
+    "fixed-16-3-four.log": {
+      "bytes": 1445,
+      "sha256": "248bd3285049a16d6f15da1e0ebf7a0b3527903f4cf81aa8f46b05e8206fff25"
+    },
+    "measured-binaries.tar.zst": {
+      "bytes": 42919259,
+      "sha256": "73eb89b8c9eb67c4aa4787be94e149c617300f7385ba1ef976890edb1906d3bc"
+    },
+    "f16-levels-127.log": {
+      "bytes": 503,
+      "sha256": "ebb9df4af12c88cb063c89024de7fe35cb92d22d901410b5d28d0d2368f5e297"
+    },
+    "f16-capture.log": {
+      "bytes": 501,
+      "sha256": "1be1aa646db89585823b4da7baf628481c126ce6987d4fc8d00235eb0a3f841f"
+    },
+    "engine-four-wiki.log": {
+      "bytes": 897,
+      "sha256": "bc3c5e306a2ae424b1f606dd8262794141033b57a0b5958987db9ce3e5766cdf"
+    },
+    "base.tokens": {
+      "bytes": 128,
+      "sha256": "148af05a954794d759bce14b4b8e9b6c401a4211b635ea244621b4b579eae30a"
+    },
+    "baseline.log": {
+      "bytes": 503,
+      "sha256": "7af78acc42f698d044f44396aefd6681623806317e53a6a037bb1c672f2e4c2b"
+    },
+    "fixed-32-2-three.log": {
+      "bytes": 1437,
+      "sha256": "1c559b9aff56a83901495f9cea908062f3057a09636fab4a921515c0041492af"
+    },
+    "f16-drop-0.01.log": {
+      "bytes": 504,
+      "sha256": "92303f40872e47e593e3088e5560b8452699372fd9d69fcc0ec1f7fbda9df8a4"
+    },
+    "fixed-32-0-four.log": {
+      "bytes": 1446,
+      "sha256": "515cff8224bb6e83ee78872df959c17e168730f0b4b58fd5be426c02ec3aa486"
+    },
+    "levels-63.log": {
+      "bytes": 503,
+      "sha256": "e2e23d4a05b1f92c4e1097676bc78d27b86525b665b3bc6a70ed8e2a219d9afe"
+    },
+    "levels-127.log": {
+      "bytes": 504,
+      "sha256": "316eec1b6fbeb8bced25944e4a5bc1d1ba43d9bdbc9a26ad8e0b73c400c788cd"
+    },
+    "bin/signed_digits.o": {
+      "bytes": 531904,
+      "sha256": "1e34948c19906f64ffd2ad56847da49ef73492f70a1db29d2e90c8f77ade1d09"
+    },
+    "bin/sparse_digits.o": {
+      "bytes": 2761184,
+      "sha256": "f02aaecaf2de0fd887613fcbc8720da260d686165280b7256004db2c447d10e6"
+    },
+    "bin/fixed.o": {
+      "bytes": 12384,
+      "sha256": "069349eeb08d28a0a45c009afc32e3e69f2419ad790154354784fc0e11ad93b0"
+    },
+    "bin/adapter.o": {
+      "bytes": 6576,
+      "sha256": "1817da260053ed9eac281f8153a55dc7813396b9b4e2cbadf3489c5fb992d8aa"
+    },
+    "bin/capture.o": {
+      "bytes": 56008,
+      "sha256": "95b58c4ba442ce3b7a43e9d62123fd58b2beb0e43fb219295378f96e24b9c20b"
+    },
+    "bin/whole_ffn.o": {
+      "bytes": 368792,
+      "sha256": "21e4ba34c634c3024b44c55e79b99e5726f7ac9623398ceefdb03256bd955f23"
+    },
+    "row-fibers/packets.bin.zst": {
+      "bytes": 35538403,
+      "sha256": "4791711556915429bbdeb809b668d82a953f122c5611c33edac4de1b167fac56"
+    }
+  },
+  "archives": {
+    "measured-binaries.tar.zst": {
+      "restored_members": {
+        "bin/fixed-three": {
+          "bytes": 20907176,
+          "sha256": "cd659a4c760bc1bfe2561c7bc7824de942b133d982d8a585133347912ce0a61f"
+        },
+        "bin/three-h5": {
+          "bytes": 20990144,
+          "sha256": "a2cbd9a932c762919f927e5e9a1b2cd0390d6e40a68ef55316a2fbad1f6ffe97"
+        },
+        "bin/fixed-four": {
+          "bytes": 20386880,
+          "sha256": "96c837044c943978db5df0c7c4d7e1037518a4534552d5e431d3774290da3a54"
+        },
+        "bin/capture": {
+          "bytes": 20426656,
+          "sha256": "f0da79ef97a46ffa43ff1023b4b377e5f46708adaaaf98d7f2bd4187d6f69fe3"
+        }
+      },
+      "verification": "every restored member SHA matched before removing duplicate uncompressed files"
+    },
+    "row-fibers/packets.bin.zst": {
+      "restored_bytes": 98670264,
+      "restored_sha256": "204e785caecae308fdbc6ba6690a0df81d953311133564616d1c6aff0c7e3df2",
+      "verification": "restored bytes and SHA matched before removing duplicate uncompressed file"
+    }
+  }
+}

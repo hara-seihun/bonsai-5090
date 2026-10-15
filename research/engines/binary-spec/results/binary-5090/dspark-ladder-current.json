@@ -1,0 +1,431 @@
+{
+  "scope": "fresh64request quick32+32 ladder; not full gate",
+  "rows": [
+    {
+      "path": "results/binary-5090/tasks-dspark/tasks-hybrid-dspark4-b1",
+      "receipt": {
+        "status": "complete",
+        "exit_code": 0
+      },
+      "decoding": {
+        "temperature": 0,
+        "sampling": null,
+        "enable_thinking": false,
+        "max_tokens": {
+          "gsm8k": 4096,
+          "humaneval_plus": 4096
+        },
+        "concurrency": 1
+      },
+      "manifest_sha256": "0330533de253a6b29421216609c18cb4afe5a7e9bc16cb0c574af8b0b4d15c58",
+      "tokens": 21114,
+      "generation_seconds": 92.64203735161573,
+      "http_tokens_second": 227.9094955550625,
+      "benchmarks": {
+        "gsm8k": {
+          "metrics": {
+            "accuracy": {
+              "score": 0.9375,
+              "se": 0.0427908248050911,
+              "n": 32,
+              "correct": 30
+            }
+          },
+          "truncated": 1,
+          "completion_tokens": 16124,
+          "generation_s": 73.46295284386724,
+          "http_tokens_second": 219.48477941349245
+        },
+        "humaneval_plus": {
+          "metrics": {
+            "base": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            },
+            "plus": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            }
+          },
+          "truncated": 0,
+          "completion_tokens": 4990,
+          "generation_s": 19.179084507748485,
+          "http_tokens_second": 260.1792592333594
+        }
+      },
+      "native_counters": {
+        "accepted_drafts": 15733,
+        "proposed_drafts": 21648,
+        "verify_rounds": 5412,
+        "generated_tokens": 21177,
+        "lookup_proposed": 0,
+        "lookup_accepted": 0,
+        "lookup_rounds": 0,
+        "verify_s": 43.594702599,
+        "draft_s": 48.994794351,
+        "busy_s": 92.60096661200001,
+        "acceptance_fraction": 0.7267645971914265,
+        "emitted_per_verify_round": 3.912971175166297
+      }
+    },
+    {
+      "path": "results/binary-5090/tasks-dspark/tasks-hybrid-dspark4-b16",
+      "receipt": {
+        "status": "complete",
+        "exit_code": 0
+      },
+      "decoding": {
+        "temperature": 0,
+        "sampling": null,
+        "enable_thinking": false,
+        "max_tokens": {
+          "gsm8k": 4096,
+          "humaneval_plus": 4096
+        },
+        "concurrency": 16
+      },
+      "manifest_sha256": "0330533de253a6b29421216609c18cb4afe5a7e9bc16cb0c574af8b0b4d15c58",
+      "tokens": 21879,
+      "generation_seconds": 61.898908557370305,
+      "http_tokens_second": 353.46342140623847,
+      "benchmarks": {
+        "gsm8k": {
+          "metrics": {
+            "accuracy": {
+              "score": 0.90625,
+              "se": 0.05152697639950359,
+              "n": 32,
+              "correct": 29
+            }
+          },
+          "truncated": 1,
+          "completion_tokens": 16776,
+          "generation_s": 48.629133963026106,
+          "http_tokens_second": 344.9783829741898
+        },
+        "humaneval_plus": {
+          "metrics": {
+            "base": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            },
+            "plus": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            }
+          },
+          "truncated": 0,
+          "completion_tokens": 5103,
+          "generation_s": 13.269774594344199,
+          "http_tokens_second": 384.55815234231517
+        }
+      },
+      "native_counters": {
+        "accepted_drafts": 3616,
+        "proposed_drafts": 5612,
+        "verify_rounds": 18265,
+        "generated_tokens": 21942,
+        "lookup_proposed": 0,
+        "lookup_accepted": 0,
+        "lookup_rounds": 0,
+        "verify_s": 28.188066794,
+        "draft_s": 33.681921184000004,
+        "busy_s": 61.89374577900001,
+        "acceptance_fraction": 0.6443335709194583,
+        "emitted_per_verify_round": 1.2013139885026005
+      }
+    },
+    {
+      "path": "results/binary-5090/tasks-dspark/tasks-hybrid-dspark4-b32",
+      "receipt": {
+        "status": "complete",
+        "exit_code": 0
+      },
+      "decoding": {
+        "temperature": 0,
+        "sampling": null,
+        "enable_thinking": false,
+        "max_tokens": {
+          "gsm8k": 4096,
+          "humaneval_plus": 4096
+        },
+        "concurrency": 32
+      },
+      "manifest_sha256": "0330533de253a6b29421216609c18cb4afe5a7e9bc16cb0c574af8b0b4d15c58",
+      "tokens": 20540,
+      "generation_seconds": 57.84702750109136,
+      "http_tokens_second": 355.0744245175344,
+      "benchmarks": {
+        "gsm8k": {
+          "metrics": {
+            "accuracy": {
+              "score": 0.90625,
+              "se": 0.05152697639950359,
+              "n": 32,
+              "correct": 29
+            }
+          },
+          "truncated": 1,
+          "completion_tokens": 15551,
+          "generation_s": 45.65250393003225,
+          "http_tokens_second": 340.63848992453313
+        },
+        "humaneval_plus": {
+          "metrics": {
+            "base": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            },
+            "plus": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            }
+          },
+          "truncated": 0,
+          "completion_tokens": 4989,
+          "generation_s": 12.194523571059108,
+          "http_tokens_second": 409.11807426739017
+        }
+      },
+      "native_counters": {
+        "accepted_drafts": 2792,
+        "proposed_drafts": 4940,
+        "verify_rounds": 17750,
+        "generated_tokens": 20603,
+        "lookup_proposed": 0,
+        "lookup_accepted": 0,
+        "lookup_rounds": 0,
+        "verify_s": 28.580038144000003,
+        "draft_s": 29.234721633000003,
+        "busy_s": 57.841161191000005,
+        "acceptance_fraction": 0.5651821862348179,
+        "emitted_per_verify_round": 1.1607323943661971
+      }
+    },
+    {
+      "path": "results/binary-5090/tasks-dspark/tasks-hybrid-dspark4-b8",
+      "receipt": {
+        "status": "complete",
+        "exit_code": 0
+      },
+      "decoding": {
+        "temperature": 0,
+        "sampling": null,
+        "enable_thinking": false,
+        "max_tokens": {
+          "gsm8k": 4096,
+          "humaneval_plus": 4096
+        },
+        "concurrency": 8
+      },
+      "manifest_sha256": "0330533de253a6b29421216609c18cb4afe5a7e9bc16cb0c574af8b0b4d15c58",
+      "tokens": 22940,
+      "generation_seconds": 77.49985645804554,
+      "http_tokens_second": 296.00054823867373,
+      "benchmarks": {
+        "gsm8k": {
+          "metrics": {
+            "accuracy": {
+              "score": 0.90625,
+              "se": 0.05152697639950359,
+              "n": 32,
+              "correct": 29
+            }
+          },
+          "truncated": 1,
+          "completion_tokens": 17818,
+          "generation_s": 61.82425902783871,
+          "http_tokens_second": 288.2040202370525
+        },
+        "humaneval_plus": {
+          "metrics": {
+            "base": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            },
+            "plus": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            }
+          },
+          "truncated": 0,
+          "completion_tokens": 5122,
+          "generation_s": 15.675597430206835,
+          "http_tokens_second": 326.74990684118484
+        }
+      },
+      "native_counters": {
+        "accepted_drafts": 4060,
+        "proposed_drafts": 7028,
+        "verify_rounds": 18885,
+        "generated_tokens": 23003,
+        "lookup_proposed": 0,
+        "lookup_accepted": 0,
+        "lookup_rounds": 0,
+        "verify_s": 34.115692245000005,
+        "draft_s": 43.355775728000005,
+        "busy_s": 77.49565493700001,
+        "acceptance_fraction": 0.5776892430278885,
+        "emitted_per_verify_round": 1.2180566587238548
+      }
+    },
+    {
+      "path": "results/binary-5090/tasks-dspark/tasks-joint-dspark4-b1",
+      "receipt": {
+        "status": "complete",
+        "exit_code": 0
+      },
+      "decoding": {
+        "temperature": 0,
+        "sampling": null,
+        "enable_thinking": false,
+        "max_tokens": {
+          "gsm8k": 4096,
+          "humaneval_plus": 4096
+        },
+        "concurrency": 1
+      },
+      "manifest_sha256": "0330533de253a6b29421216609c18cb4afe5a7e9bc16cb0c574af8b0b4d15c58",
+      "tokens": 22927,
+      "generation_seconds": 113.10571924597025,
+      "http_tokens_second": 202.70416167144305,
+      "benchmarks": {
+        "gsm8k": {
+          "metrics": {
+            "accuracy": {
+              "score": 0.90625,
+              "se": 0.05152697639950359,
+              "n": 32,
+              "correct": 29
+            }
+          },
+          "truncated": 1,
+          "completion_tokens": 17798,
+          "generation_s": 91.4375678487122,
+          "http_tokens_second": 194.64647210922797
+        },
+        "humaneval_plus": {
+          "metrics": {
+            "base": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            },
+            "plus": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            }
+          },
+          "truncated": 0,
+          "completion_tokens": 5129,
+          "generation_s": 21.668151397258043,
+          "http_tokens_second": 236.70685634257845
+        }
+      },
+      "native_counters": {
+        "accepted_drafts": 17036,
+        "proposed_drafts": 23672,
+        "verify_rounds": 5918,
+        "generated_tokens": 22990,
+        "lookup_proposed": 0,
+        "lookup_accepted": 0,
+        "lookup_rounds": 0,
+        "verify_s": 57.838083486,
+        "draft_s": 55.215017492,
+        "busy_s": 113.06576754000001,
+        "acceptance_fraction": 0.7196688070294018,
+        "emitted_per_verify_round": 3.8847583643122676
+      }
+    },
+    {
+      "path": "results/binary-5090/tasks-dspark/tasks-packed1-dspark4-b1",
+      "receipt": {
+        "status": "complete",
+        "exit_code": 0
+      },
+      "decoding": {
+        "temperature": 0,
+        "sampling": null,
+        "enable_thinking": false,
+        "max_tokens": {
+          "gsm8k": 4096,
+          "humaneval_plus": 4096
+        },
+        "concurrency": 1
+      },
+      "manifest_sha256": "0330533de253a6b29421216609c18cb4afe5a7e9bc16cb0c574af8b0b4d15c58",
+      "tokens": 20391,
+      "generation_seconds": 105.5707914289087,
+      "http_tokens_second": 193.15001549203393,
+      "benchmarks": {
+        "gsm8k": {
+          "metrics": {
+            "accuracy": {
+              "score": 0.90625,
+              "se": 0.05152697639950359,
+              "n": 32,
+              "correct": 29
+            }
+          },
+          "truncated": 1,
+          "completion_tokens": 15366,
+          "generation_s": 80.80852577555925,
+          "http_tokens_second": 190.1532029266086
+        },
+        "humaneval_plus": {
+          "metrics": {
+            "base": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            },
+            "plus": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            }
+          },
+          "truncated": 0,
+          "completion_tokens": 5025,
+          "generation_s": 24.76226565334946,
+          "http_tokens_second": 202.92973471594652
+        }
+      },
+      "native_counters": {
+        "accepted_drafts": 15227,
+        "proposed_drafts": 20764,
+        "verify_rounds": 5191,
+        "generated_tokens": 20454,
+        "lookup_proposed": 0,
+        "lookup_accepted": 0,
+        "lookup_rounds": 0,
+        "verify_s": 58.656269136000006,
+        "draft_s": 46.86225289,
+        "busy_s": 105.529963816,
+        "acceptance_fraction": 0.7333365440184936,
+        "emitted_per_verify_round": 3.9402812560200347
+      }
+    }
+  ]
+}

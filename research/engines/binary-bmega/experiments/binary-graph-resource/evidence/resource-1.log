@@ -1,0 +1,11 @@
+replay_config slots=64 ctx=4608 rowcap=520 events=117 steps=53 prefills=1
+target: binary Q1_0, original FP16 K128 scales
+
+weights 3.80 GB in 0.7 s
+state f16, KV f16: 75.5 MB state + 302.0 MB KV per slot
+packed target activation: f32 for prepared R=1, a8 for prepared R>1; A8 uses K128 max/127 nearest-even codes, original FP16 weight scales
+A8 projection: exact FP4 digit planes on original packed1 weights, GU/down/head tiles16..32; other families and smaller tails DP4A, F32 unchanged
+ready: 64 slots x 4608 ctx, 520 rows; GPU free 2.35 / 33.67 GB, load 0.7 s
+pretune: 0 shapes x buckets <= 520 rows in 0.0 s
+h5_step: a8_fp4::project(plan, m.w1, m.s1, carrier, a8_digits, out + (size_t)row * ldo, ldo, packed_partials, packed_partial_capacity, 1.f, add ? 1.f : 0.f, st): out of memory
+target step failed: -9

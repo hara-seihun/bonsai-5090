@@ -1,0 +1,505 @@
+{
+  "status": "checked_structural_lean",
+  "theorem_count": 64,
+  "inherited_theorem_count": 70,
+  "total_audited_theorems": 134,
+  "printed_axioms": {
+    "Packing20.admitted_release_needs_all_drains": [],
+    "Packing20.persistent_has_no_release_step": [],
+    "Packing20.admitted_release_retains_exact_identity": [],
+    "Packing20.unreconciled_cannot_release": [],
+    "Packing20.release_identity": [],
+    "Packing20.failed_pointer_ticket_domain": [],
+    "Packing20.uncertain_pointer_ticket_domain": [],
+    "Packing20.successful_pointer_erased": [],
+    "Packing20.persistent_not_dead": [],
+    "Packing20.dead_has_completed_images": [],
+    "Packing20.dead_all_dependencies_drained": [],
+    "Packing20.dead_releases_whole_allocation": [],
+    "Packing20.reconcile_identity": [],
+    "Packing20.reconcile_failed_keeps_pointer": [],
+    "Packing20.bounded_step": [],
+    "Packing20.concat3_original_slices": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing20.input3_merged_continuation": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing20.concat2_original_slices": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing20.ffn2_original_silu_down_residual": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing20.attention3_merged_continuation": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing20.immutable_source_domain": [],
+    "Packing20.full_source_shape_preserved": [],
+    "Packing20.shared_source_observers": [],
+    "Packing20.projections_preserve_old_source": [],
+    "Packing20.view_address_inside_whole_backing": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing20.view_address_matches_full_row": [
+      "propext"
+    ],
+    "Packing20.native_view_is_full_row_slice": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing20.byte_view_decodes_same_word": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing20.full_candidate_control_reconstruction": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing20.gdn_full_native_extents": [],
+    "Packing20.attention_full_native_extents": [],
+    "Packing20.ffn_full_native_extents": [],
+    "Packing20.view_release_requires_every_observation": [],
+    "Packing20.undrained_view_cannot_release": [],
+    "Packing20.view_release_keeps_backing_identity": [],
+    "Packing20.failed_view_release_retains_pointer": [],
+    "Packing20.uncertain_view_release_retains_pointer": [],
+    "Packing20.immutable_view_observation": [],
+    "Packing21.compact_index_div_mod": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing21.copied_rows_same_complete_coordinates": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing21.copied_subview_same_complete_coordinates": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing21.strided_input_is_whole_row_slice": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing21.every_read_inside_readable_span": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing21.final_coordinate_requires_full_span": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing21.readable_span_inside_whole_allocation": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing21.readable_span_bytes": [
+      "propext"
+    ],
+    "Packing21.explicit_rowmap_preserves_dictionary": [],
+    "Packing21.ffn_shared_ldx_complete_dictionary": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing21.ffn_shared_ldx_reconstructs_full_merged": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing21.ffn_borrowed_complete_silu_quant_down_residual": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing21.gdn_gz_ld_complete_dictionary": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing21.gdn_complete_head_coordinates": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing21.gdn_borrowed_full_opaque_preparation": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing21.concrete_readable_spans": [],
+    "Packing21.full_ffn_literal_coordinate_coverage": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Packing21.full_gdn_head_coordinate_coverage": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Packing21.gdn_new_stride_retains_row_gap": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing21.all_required_observations_present": [
+      "propext"
+    ],
+    "Packing21.borrow_release_needs_every_required_observation": [
+      "propext"
+    ],
+    "Packing21.pending_borrow_cannot_release": [
+      "propext"
+    ],
+    "Packing21.changed_identity_cannot_release": [],
+    "Packing21.changed_source_cannot_release": [],
+    "Packing21.borrow_release_needs_completed_images_and_drains": [],
+    "Packing21.borrow_release_only_exact_whole_allocation": [],
+    "Packing21.interior_handle_cannot_release": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing21.borrow_release_retains_exact_backing": [],
+    "Packing21.failed_borrow_retains_original_and_interior_pointer": [],
+    "Packing21.uncertain_borrow_retains_original_and_interior_pointer": [],
+    "Packing21.successful_whole_release_unsets_borrow_pointer": [],
+    "Packing21.immutable_borrow_preserves_full_source_identity": [],
+    "Packing22.equal_complete_tile": [],
+    "Packing22.group_bound": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing22.group_reconstruction": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Packing22.group_unique": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Packing22.feature_bound": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing22.feature_unique": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Packing22.feature_reconstruction": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Packing22.token_bound": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing22.token_unique": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Packing22.token_reconstruction": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Packing22.lane_dictionary": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Packing22.literal_m_to_group_feature": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing22.output_address_unique": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing22.whole_feature_tile_reconstruction": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Packing22.whole_token_tile_reconstruction": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing22.complete_reader_coordinate_reconstruction": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Packing22.concrete_whole_shapes": [],
+    "Packing22.merged_gdn_tail": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Packing22.concrete_batch_tiles": [],
+    "Packing22.full_stride_not_tail_stride": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing22.shared_geometry": [],
+    "Packing22.globals_once_per_cta": [
+      "propext"
+    ],
+    "Packing22.live_global_scale_dictionary": [
+      "propext"
+    ],
+    "Packing22.padded_global_scale_defined_zero": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing22.actual_shared_allocation": [],
+    "Packing22.barrier_dictionary_unique": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing22.globals_dictionary_unique": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Packing22.global_scale_bounds": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Packing22.shared_segment_bound": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing22.shared_segments_disjoint": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing22.shared_stage_unique": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing22.shared_byte_reconstruction": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing22.ring_barrier_globals_disjoint": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Packing22.swizzle_complete_involution": [
+      "propext"
+    ],
+    "Packing22.swizzled_row_chunk_unique": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing22.binary_weight_byte_bound": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing22.binary_weight_byte_unique": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Packing22.binary_weight_byte_reconstruction": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing22.original_w128_scale_address": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Packing22.original_w128_scale_unique": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Packing22.same_padded_q_dictionary": [
+      "propext"
+    ],
+    "Packing22.token_half_preserves_swizzle": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing22.padded_q_complete_rows": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing22.staged_once_per_cta": [
+      "propext"
+    ],
+    "Packing22.equal_boundary_producer_dictionary": [],
+    "Packing22.tail_transaction_bytes": [],
+    "Packing22.full_transaction_bytes": [],
+    "Packing22.valid_staged_bytes_fit_capacity": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing22.tail_only_three_weight_groups_staged": [
+      "propext"
+    ],
+    "Packing22.live_weight_group_staged": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing22.every_staged_read_same_word": [
+      "propext"
+    ],
+    "Packing22.ascending_fold_successor": [],
+    "Packing22.forty_preserved_k128": [],
+    "Packing22.fold_dictionary_congruence": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing22.payload_dictionary_preserves_ordered_fold": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing22.paired_fold_two_independent_ordered_accumulators": [
+      "propext"
+    ],
+    "Packing22.primary_then_innovation_literal_order": [],
+    "Packing22.complete_paired_fold_and_output_dictionary": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing22.paired_release_observation_domain_nonempty": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Packing22.paired_release_needs_every_complete_pass_observation": [],
+    "Packing22.missing_pass_coordinate_cannot_release": [],
+    "Packing22.undrained_manifest_entry_cannot_release": [],
+    "Packing22.paired_release_requires_exact_whole_backing": [],
+    "Packing22.paired_uncertain_release_retains_backing": []
+  },
+  "compiler": {
+    "path": "~/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+    "version": "Lean (version 4.33.0, x86_64-unknown-linux-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+    "sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+    "Std_sha256": "bd7dd991679db475b373dde6a810bec0c216fa058b4401bf206ca3fdfefad077"
+  },
+  "stages": {
+    "version": {
+      "command": [
+        "~/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "--version"
+      ],
+      "elapsed_seconds": 0.027082750981207937,
+      "timeout_seconds": 2,
+      "exit_code": 0,
+      "status": "succeeded"
+    },
+    "NativeJoin": {
+      "command": [
+        "~/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "--root=~/work/clones/packing-mma-round22/archive/packing-swarm/round22/proof/run-1791755681998052945",
+        "-o",
+        "~/work/clones/packing-mma-round22/archive/packing-swarm/round22/proof/run-1791755681998052945/NativeJoin.olean",
+        "~/work/clones/packing-mma-round22/archive/packing-swarm/round22/proof/run-1791755681998052945/NativeJoin.lean"
+      ],
+      "elapsed_seconds": 1.9756822930066846,
+      "timeout_seconds": 12,
+      "exit_code": 0,
+      "status": "succeeded"
+    },
+    "StridedPrep": {
+      "command": [
+        "~/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "--root=~/work/clones/packing-mma-round22/archive/packing-swarm/round22/proof/run-1791755681998052945",
+        "-o",
+        "~/work/clones/packing-mma-round22/archive/packing-swarm/round22/proof/run-1791755681998052945/StridedPrep.olean",
+        "~/work/clones/packing-mma-round22/archive/packing-swarm/round22/proof/run-1791755681998052945/StridedPrep.lean"
+      ],
+      "elapsed_seconds": 0.5732559500029311,
+      "timeout_seconds": 12,
+      "exit_code": 0,
+      "status": "succeeded"
+    },
+    "PairedTile": {
+      "command": [
+        "~/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "--root=~/work/clones/packing-mma-round22/archive/packing-swarm/round22/proof/run-1791755681998052945",
+        "-o",
+        "~/work/clones/packing-mma-round22/archive/packing-swarm/round22/proof/run-1791755681998052945/PairedTile.olean",
+        "~/work/clones/packing-mma-round22/archive/packing-swarm/round22/proof/run-1791755681998052945/PairedTile.lean"
+      ],
+      "elapsed_seconds": 2.1743556130095385,
+      "timeout_seconds": 12,
+      "exit_code": 0,
+      "status": "succeeded"
+    },
+    "audit": {
+      "command": [
+        "~/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean",
+        "--root=~/work/clones/packing-mma-round22/archive/packing-swarm/round22/proof/run-1791755681998052945",
+        "~/work/clones/packing-mma-round22/archive/packing-swarm/round22/proof/run-1791755681998052945/Audit.lean"
+      ],
+      "elapsed_seconds": 0.31193551199976355,
+      "timeout_seconds": 12,
+      "exit_code": 0,
+      "status": "succeeded"
+    }
+  },
+  "source_sha256": {
+    "method/packing-swarm/tools/round22/proof/STATE.md": "381fc7cefdaf85eff409eed43cf0a3a8479e86ecd0dbf4804550bd2ccbf06fb5",
+    "method/packing-swarm/tools/round22/proof/PairedTile.lean": "78633b6e9f116f39b49a1b565b45634f7417b7912265a30e9b16cc322aec2539",
+    "method/packing-swarm/tools/round22/proof/replay.py": "22e144001aa98df471665cdc96ad3cbd61f3d20a3a3d95f8706a46d1086928a2"
+  },
+  "inherited_source_sha256": {
+    "method/packing-swarm/tools/round20/proof/NativeJoin.lean": "690225f0ecc3227b02402037e9509905a12c94b80ded54aec03266bdb919cda6",
+    "method/packing-swarm/tools/round21/proof/StridedPrep.lean": "2d108cf1021ea91978bdb3638bdf28a054cd9c20508882f2ccc6e87f5fdd0cfb"
+  },
+  "source_contract_sha256": {
+    "method/packing-swarm/tools/round22/native/paired.cuh": "1ffd584b4aee14f71b9034d2dab8be652dce0b24a4d31bca0d34ced0005fef27",
+    "method/packing-swarm/tools/round22/native/generate.py": "f914a42cc31708703b7dda7345509234424a3cfc3f9fb824d0f1ddf352c7682a",
+    "method/packing-swarm/tools/round22/native/binding.hpp": "b9d9510826e786b6e9bb712acf17e3a95aa8e03b0031de8f2d4280e92a4527e3",
+    "method/packing-swarm/tools/round22/native/generation.hpp": "0c43cfc3d5d2ab324407837f9b0d30e924cad298b4a1aa52bd5f542fa3ccda63",
+    "method/packing-swarm/tools/round22/native/views.cuh": "f374641c196fa791f0a7a06e6afa31c1b209f5c6058584062bb52a7a34327055",
+    "method/packing-swarm/tools/round22/native/stage.cuh": "2e4691640f2e9c924b6e8fd249c65cd74617bf68a6ede891438d45d6600357a8",
+    "method/packing-swarm/tools/round22/native/session.cuh": "8f6193f741e9a75a2802f1b471df666fded9b0772cdc08e1b6fec4b4b8ef348f"
+  },
+  "external_source_contract_sha256": {
+    "~/work/packing-mma-round12/method/packing-swarm/tools/round11/residual/literal.cuh": "3b2acd76da6d40fe2a98ac5a9ff8c09297427d171c2702913887abfba7951b18"
+  },
+  "artifact_sha256": {
+    "archive/packing-swarm/round22/proof/run-1791755681998052945/NativeJoin.lean": "690225f0ecc3227b02402037e9509905a12c94b80ded54aec03266bdb919cda6",
+    "archive/packing-swarm/round22/proof/run-1791755681998052945/StridedPrep.json": "23fd8b669a7369e25d706f6984d8f4df197b432acdec9d471a88113626a1e687",
+    "archive/packing-swarm/round22/proof/run-1791755681998052945/NativeJoin.json": "5fb945a7ff068a43d68cce7bee5523ee55fa7abb68f4bdf7aa2e91a4c8b355f6",
+    "archive/packing-swarm/round22/proof/run-1791755681998052945/StridedPrep.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "archive/packing-swarm/round22/proof/run-1791755681998052945/NativeJoin.olean": "916b0fd7e3fcb1cf0a519ca38e9ed8e74d1b20ed3d831c6ee7cff2d2f53c4b45",
+    "archive/packing-swarm/round22/proof/run-1791755681998052945/audit.log": "b8ca9005239fc7108dba6e8f15c3aa8f76441d730362abfffe804fe678331ee0",
+    "archive/packing-swarm/round22/proof/run-1791755681998052945/PairedTile.olean": "f846caa2b3ca1d4abc4a8947801e231b5793e7897795d093ff44252ff4b42629",
+    "archive/packing-swarm/round22/proof/run-1791755681998052945/Audit.lean": "d4ff4e22f492a4f77629489d3d55ee1856ae6980c81f07d17b4c482b7f441d56",
+    "archive/packing-swarm/round22/proof/run-1791755681998052945/NativeJoin.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "archive/packing-swarm/round22/proof/run-1791755681998052945/version.json": "13286337a389d13a61ce3b7ce805670c48a1197a365583d8c7f03cba7bbb9baa",
+    "archive/packing-swarm/round22/proof/run-1791755681998052945/PairedTile.lean": "78633b6e9f116f39b49a1b565b45634f7417b7912265a30e9b16cc322aec2539",
+    "archive/packing-swarm/round22/proof/run-1791755681998052945/version.log": "64f534c7cd1d0dbe701f44b4da6679d120b63f0f9f3bfab60540a07af143f1f2",
+    "archive/packing-swarm/round22/proof/run-1791755681998052945/StridedPrep.olean": "a1ca6bdfd3a66d8fa4ebb66569cea6b1f494e32dfccc74c701e2026e8ef9ec69",
+    "archive/packing-swarm/round22/proof/run-1791755681998052945/StridedPrep.lean": "2d108cf1021ea91978bdb3638bdf28a054cd9c20508882f2ccc6e87f5fdd0cfb",
+    "archive/packing-swarm/round22/proof/run-1791755681998052945/audit.json": "12bef6fc43307b52aaa5bf66288f6736e99cda7ddf1f1fe67542b574279a9632",
+    "archive/packing-swarm/round22/proof/run-1791755681998052945/PairedTile.json": "43fce96698b813025bb04bb53f366355fb1cda663134f84bf28f82e4abe3fb71",
+    "archive/packing-swarm/round22/proof/run-1791755681998052945/PairedTile.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "scope": "definitions-only equal 8group256feature/32token paired shared dictionary; candidateFW4WG2/controlFW8WG1 group reconstruction and uniqueness; full output addresses at native stride with complete merged16480/14336/34816 and B1/8/32 including3group tail; shared stage9216 and ring73856 plus256 globals=74112; staged-once event dictionary; swizzle reconstruction; ascending40 K128 folds with two independent opaque accumulators; exact primary-first literal MODE1 additions; complete per-pass output/status/owner and exact manifest drain requirement before inherited whole release",
+  "primitive_semantics": "arbitrary opaque MMA/FMA/mul/add word functions; dictionaries and load events are mathematical contracts, not CUDA execution traces",
+  "Cpp_CUDA_refinement": "unset",
+  "native_word_refinement": "unset",
+  "native_fault_refinement": "unset",
+  "native_execution": false,
+  "native_time": "unset",
+  "physical_capacity": "unset",
+  "cache_occupancy_granularity_residency": "unset",
+  "controller_refinement": "unset",
+  "packing_bound": "unchanged",
+  "symmetry_narrowing": false,
+  "model_task_HTTP": "unset"
+}

@@ -1,0 +1,38 @@
+{
+  "state": "cpu_staged_gpu_unrun",
+  "generation": "C:\\work\\models\\experiments\\bonsai-quality-20261013\\fullk-h1-tail-v3",
+  "dll_sha256": "398a9d2bb38ec8613af6663dd782a282727da04b5f255f43e4c10780f1c6d768",
+  "bench_sha256": "3fd47ff37205bdd50738194ef92c13c21d24fc77a9d1be1197b69128a2173b12",
+  "source_hashes": {
+    "engine.cu": "2c1cef9e49dac2d1a6950e9b02e0c8f51c12daf8d4fce35f2d117f7507f5cf7a",
+    "fullk_gu.cuh": "d9739183ae3f79b54f153615b1822fae996631dbba0b4189c220e2d5c327edf8",
+    "fullk_profile.h": "617b15eeb2c57b17c95e58eec90816f22c234c1a2b825b2e6c6c47743f186df2",
+    "fp4.cu": "773717634efc0baacf890bac81abc0129842331416846acb919983068380c53a",
+    "fullk_ring.cu": "0bac128941479515e1aa6f1690857a2acd8f136ef07fa7485b5a22d5c3967331",
+    "fullk_tail.cu": "77a292dabb72c76963cbeab8a61a76a155ae4e8cbb7e6a4b4464fd0c966f5141"
+  },
+  "file_hashes": {
+    "run-h1-v3-strict-tail-mixed.py": "084ef39ca0f24d0d8ad2fcb7eae4269bf682178e8596cff5935e89f67bc80331",
+    "run-h1-v3-timing-ordinary-h1-plain.py": "6c7796c481dea48ef43e4ea0fa5b9e5d342d6e8aae0eedd4eca68aff3d2147ba",
+    "driver.py": "95491795dccfc766e68a6b1a3e04921412e695ccfdfa4f64eff6d221eac40292",
+    "strict-worker.py": "ed6dd51de4bcc6785008ebe55f989c602aa5f5d089ca12e50fe189088b1e38be",
+    "run-h1-v3-timing-deterministic-h1-plain.py": "7829908c91bf98fb9dd06e965e22aa053c94a37ea6d82dc1b40b051691d919d7",
+    "run-h1-v3-timing-ordinary-h1-mixed.py": "95de4e8511ac91516ffeb8bca25d8b00b5c16e092e4ccd00bea81af8dc54f8e6",
+    "run-h1-v3-strict-h1-plain.py": "a34634c1f3468150eeb437f027c3d4e04a1d498f1e8a079024150305ff8df540",
+    "run-h1-v3-strict-serving-reference.py": "206724830b90e37c52a483c42e721afe6ef384f1a42fab40c57599c18bae13e1",
+    "cpu-contract.log": "7f5cbe1b41b57bd415a60ddbb0553041f88ef5245b83d85e261c5f672495cf84",
+    "begin-h1-window-v3.py": "b869decec27c1ece7f285afc1b4f2cf6ebb37e43007261573e5a36f947f7fd5b",
+    "run-h1-v3-timing-deterministic-h1-mixed.py": "554a8215a48eeb55975844b2407a158fdd1494de18fdbd69fbe508d874b7629a",
+    "h1_graph_contract.py": "113f11e9ad875a32b69386588d4c0f14644b30d8a84c3762208041b51d5a5af5",
+    "run-h1-v3-strict-h1-mixed.py": "eadf82378830ff2ae21ca9fc0455d2391e782f446ee970b5f603639c9445b2a6",
+    "run-h1-v3-strict-tail-plain.py": "12d2d21b0e9703392436caeba477556710023613aacaecc0b6b7216740194486",
+    "h1-test-plan-v3.json": "29c6cbf3eee9fc3430d41221dbf81525f4844845e0680e5734b74e845da4a85e",
+    "run-h1-v3-strict-serving-repeat.py": "14156781aa5bb26941837c47910bd65cee3935565b1221976337d5876fcd0bbd"
+  },
+  "predecessors": "fullk-h1-tail-v1/v2 unchanged",
+  "gpu_window_created": false,
+  "native_dll_loaded": false,
+  "native_cpu_contract_passed": true,
+  "python_isolated": 1,
+  "cpu_test_sha256": "c71111a0d2962602f19d1e6694b1320da973abbd401273d37d9648bd742449e0"
+}

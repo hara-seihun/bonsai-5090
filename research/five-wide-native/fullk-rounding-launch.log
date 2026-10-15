@@ -1,0 +1,32 @@
+BUILD 0 ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z9normalizePKfPaPfi' for 'sm_120a'
+ptxas info    : Function properties for _Z9normalizePKfPaPfi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 21 registers, used 1 barriers, 16 bytes smem
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z7fp4_ref4ArgsPfS0_' for 'sm_120a'
+ptxas info    : Function properties for _Z7fp4_ref4ArgsPfS0_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 48 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z10dp4a_fused4ArgsPfiPyPKi' for 'sm_120a'
+ptxas info    : Function properties for _Z10dp4a_fused4ArgsPfiPyPKi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 64 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z12folded_fused4ArgsPfi' for 'sm_120a'
+ptxas info    : Function properties for _Z12folded_fused4ArgsPfi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 108 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6finish4ArgsPKiPfi' for 'sm_120a'
+ptxas info    : Function properties for _Z6finish4ArgsPKiPfi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 88 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+fullk_rounding.cu
+tmpxft_00006fb0_00000000-10_fullk_rounding.cudafe1.cpp
+ 
+MUTEX 0
+RELEASED
+RECEIPT {"source_sha256": "8a625631b1fa82846bbf301e217b0da70406b6d13070428d60104a54cfdfe0da", "exit": 0, "stdout": "{\"state\":\"observed\",\"cases\":3,\"K\":5120,\"per_case_native64_steps\":80}\n", "stderr": "", "wall_s": 0.1594836711883545, "hashes": {"build.cmd": "880138cfa6602d9005bc09a8a2931678e1e0d7cae5b226422c7345a9fd14e271", "build.log": "90b0ec04f3d324cc6fb1f84540782be5eed1f337817fb5294629a8dbe033340b", "fullk_rounding.cu": "59798f14c5bd6a80b023ca9211e059b14bbb1919fa2f2af38e188bbd94357cef", "fullk_rounding.exe": "22047e8af229989a44256039c0a37932d514a27743740c09b821cbe75c4a7379", "native-fp4-rounding-trace.bin": "9750cacd4ae4ac0662636fe739e159672373e0bb67068b30f9f5f837ea7c2181"}}

@@ -1,0 +1,63 @@
+{
+  "scope": "fresh measured panels; exact benchmark counts and mode are recorded per row",
+  "rows": [
+    {
+      "path": "results/binary-5090/digits-b64/tasks-gsm256-dp4a-pf32-b64-ctx4608",
+      "receipt": {
+        "status": "complete",
+        "exit_code": 0
+      },
+      "mode": "selected",
+      "decoding": {
+        "temperature": 0,
+        "sampling": null,
+        "enable_thinking": false,
+        "max_tokens": {
+          "gsm8k": 4096
+        },
+        "concurrency": 64
+      },
+      "manifest_sha256": "0330533de253a6b29421216609c18cb4afe5a7e9bc16cb0c574af8b0b4d15c58",
+      "tokens": 149194,
+      "generation_seconds": 135.1988377617672,
+      "http_tokens_second": 1103.5154034600027,
+      "benchmarks": {
+        "gsm8k": {
+          "n": 256,
+          "metrics": {
+            "accuracy": {
+              "score": 0.92578125,
+              "se": 0.016382909247859002,
+              "n": 256,
+              "correct": 237
+            },
+            "accuracy_fresh32": {
+              "score": 0.9375,
+              "se": 0.0427908248050911,
+              "n": 32,
+              "correct": 30
+            }
+          },
+          "truncated": 13,
+          "completion_tokens": 149194,
+          "generation_s": 135.1988377617672,
+          "http_tokens_second": 1103.5154034600027
+        }
+      },
+      "native_counters": {
+        "accepted_drafts": 0,
+        "proposed_drafts": 0,
+        "verify_rounds": 0,
+        "generated_tokens": 149437,
+        "lookup_proposed": 0,
+        "lookup_accepted": 0,
+        "lookup_rounds": 0,
+        "verify_s": 134.99959787400002,
+        "draft_s": 0.000155651,
+        "busy_s": 135.19312341900002,
+        "acceptance_fraction": null,
+        "emitted_per_verify_round": null
+      }
+    }
+  ]
+}

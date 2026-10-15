@@ -1,0 +1,19 @@
+{
+  "mixed-gu-composition": {
+    "build.log": "3c2031de776655886de0350cb490cf6b4a7bd82e46214a07abf773d663909517",
+    "mixed-observer-mode0.bin": "fc212d67a4f6b4b2a4da4d5cde75319c06a7ff09272c48787b68bbe866ed413a",
+    "mixed-observer-mode1.bin": "aaa0c26acd7d99bf603fc2766558e523cfe70d6979e43131ebf096602843a2c1",
+    "mixed-observer-mode2.bin": "386b2d57310938d91c38f8be8cb2b6a9d3b1b532923659f2b52e11c626227615",
+    "native-mixed-image.bin": "80ff0a31a1c4a36b6fef0ec32b77deae02e14d61f5756347aaad88fb1b26d297",
+    "native_mixed_gu.cu": "046d9ecc3c46a4018bfd770b51f164dfc0971fc444390ea08ed3b161a16c8209",
+    "receipt.json": "0ad0bf73b3380a55473e7babcf11a1101daeb39e653a36a9725844c445214f59"
+  },
+  "mixed-gu-readout": {
+    "build.log": "854f327c40e65938703ff9a7a5b8a1b0337aadcc3035ad9f135595787158de8a",
+    "mixed-observer-mode0.bin": "fc212d67a4f6b4b2a4da4d5cde75319c06a7ff09272c48787b68bbe866ed413a",
+    "mixed-observer-mode1.bin": "aaa0c26acd7d99bf603fc2766558e523cfe70d6979e43131ebf096602843a2c1",
+    "mixed-observer-mode2.bin": "386b2d57310938d91c38f8be8cb2b6a9d3b1b532923659f2b52e11c626227615",
+    "native_mixed_readout.cu": "94e7c9d931c98db4c62ef6f890dea82b3739528a6388458f6b7d085fd8f7b197",
+    "receipt.json": "f2703147cbe81c9890ec26a5f6612af8a5ab4af8ac4494eb2732d0816f0f420c"
+  }
+}

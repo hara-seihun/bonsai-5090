@@ -1,0 +1,6 @@
+23e52ee5f9db10b7259cc9a0148794fd9aa3b5752df7780a0189193d153d5ab3  batch_mma.o
+c643ff7bfc311f90769c4c2ab795fd67ff15afafad76f5258b49bc9d2e403db8  bench
+f0be8d5d7e78425599091028bb6394fdc1d9e63ad56d1a7c00d724f6030621eb  experiments/binary-batch-mma/batch_mma.cu
+64b9e066bfeb7a6b31306a641d4d2316191a81bb7545fcbe8fddcd4c7d2b3fc6  experiments/binary-bitserial/bitserial.cu
+24
+NVIDIA GeForce RTX 5090, GPU-00000000-0000-0000-0000-000000000000, 595.58.03

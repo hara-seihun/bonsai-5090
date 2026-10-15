@@ -1,0 +1,48 @@
+{
+  "scope": "same-item scoped panel, not full quality gate",
+  "reference": "results/binary-5090/whole-ffn-steady/tasks-gsm256-materialized-b32",
+  "candidate": "results/binary-5090/whole-ffn-steady/tasks-gsm256-compound-b32",
+  "reference_timing": {
+    "completion_tokens": 146937,
+    "seconds": 118.75519067887217,
+    "http_tok_s": 1237.3101264881525
+  },
+  "candidate_timing": {
+    "completion_tokens": 144545,
+    "seconds": 112.3861655825749,
+    "http_tok_s": 1286.145845894143
+  },
+  "http_ratio": 1.0394692634938667,
+  "benchmarks": {
+    "gsm8k": {
+      "paired": {
+        "accuracy": {
+          "n": 256,
+          "reference_correct": 240,
+          "candidate_correct": 239,
+          "gains": 4,
+          "losses": 5
+        }
+      },
+      "aggregate_only": {
+        "accuracy_fresh32": {
+          "scope": "summary metric only; no per-item gain/loss claim",
+          "reference": {
+            "score": 0.90625,
+            "se": 0.05152697639950359,
+            "n": 32,
+            "correct": 29
+          },
+          "candidate": {
+            "score": 0.90625,
+            "se": 0.05152697639950359,
+            "n": 32,
+            "correct": 29
+          }
+        }
+      },
+      "reference_truncated": 11,
+      "candidate_truncated": 12
+    }
+  }
+}

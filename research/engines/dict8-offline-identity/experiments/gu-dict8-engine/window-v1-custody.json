@@ -1,0 +1,11 @@
+{
+  "state": "lossless_original_window_preserved",
+  "archive_sha256": "531626a25dd76c2df807c51f23b0b04aff85af9cf26792443e97b40405256026",
+  "archive_bytes": 112149572,
+  "logical_files": 24,
+  "unique_objects": 18,
+  "original_export_job_id": "00000000-0000-0000-0000-000000000000",
+  "original_export_transport": "cancelled physical SSH child cessation; remote archive completed independently",
+  "read_only_recovery_job_id": "00000000-0000-0000-0000-000000000000",
+  "export_replayed": false
+}

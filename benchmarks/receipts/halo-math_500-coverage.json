@@ -1,0 +1,350 @@
+{
+  "engine": "halo",
+  "benchmark": "math_500",
+  "cohort": "original15-temp07-c92160-s2",
+  "expected": 500,
+  "covered": 500,
+  "correct": 494,
+  "accuracy": 0.988,
+  "state": "full",
+  "primary_metric": "accuracy",
+  "diagnostics": {
+    "reasoning_closed": 499,
+    "finish_stop": 499,
+    "reasoning_unclosed": 1,
+    "finish_length": 1
+  },
+  "shards": [
+    {
+      "shard": 0,
+      "state": "completed",
+      "count": 20,
+      "correct": 20,
+      "accuracy": 1.0,
+      "judge_strategy": "llm",
+      "diagnostics": {
+        "reasoning_closed": 20,
+        "finish_stop": 20
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-c92160-s2-halo-math_500-shard000--math_500.json"
+    },
+    {
+      "shard": 1,
+      "state": "completed",
+      "count": 20,
+      "correct": 20,
+      "accuracy": 1.0,
+      "judge_strategy": "llm",
+      "diagnostics": {
+        "reasoning_closed": 20,
+        "finish_stop": 20
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-c92160-s2-halo-math_500-shard001--math_500.json"
+    },
+    {
+      "shard": 2,
+      "state": "completed",
+      "count": 20,
+      "correct": 19,
+      "accuracy": 0.95,
+      "judge_strategy": "llm",
+      "diagnostics": {
+        "reasoning_closed": 20,
+        "finish_stop": 20
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-c92160-s2-halo-math_500-shard002--math_500.json"
+    },
+    {
+      "shard": 3,
+      "state": "completed",
+      "count": 20,
+      "correct": 20,
+      "accuracy": 1.0,
+      "judge_strategy": "llm",
+      "diagnostics": {
+        "reasoning_closed": 20,
+        "finish_stop": 20
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-c92160-s2-halo-math_500-shard003--math_500.json"
+    },
+    {
+      "shard": 4,
+      "state": "completed",
+      "count": 20,
+      "correct": 20,
+      "accuracy": 1.0,
+      "judge_strategy": "llm",
+      "diagnostics": {
+        "reasoning_closed": 20,
+        "finish_stop": 20
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-c92160-s2-halo-math_500-shard004--math_500.json"
+    },
+    {
+      "shard": 5,
+      "state": "completed",
+      "count": 20,
+      "correct": 20,
+      "accuracy": 1.0,
+      "judge_strategy": "llm",
+      "diagnostics": {
+        "reasoning_closed": 20,
+        "finish_stop": 20
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-c92160-s2-halo-math_500-shard005--math_500.json"
+    },
+    {
+      "shard": 6,
+      "state": "completed",
+      "count": 20,
+      "correct": 20,
+      "accuracy": 1.0,
+      "judge_strategy": "llm",
+      "diagnostics": {
+        "reasoning_closed": 20,
+        "finish_stop": 20
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-c92160-s2-halo-math_500-shard006--math_500.json"
+    },
+    {
+      "shard": 7,
+      "state": "completed",
+      "count": 20,
+      "correct": 20,
+      "accuracy": 1.0,
+      "judge_strategy": "llm",
+      "diagnostics": {
+        "reasoning_closed": 20,
+        "finish_stop": 20
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-c92160-s2-halo-math_500-shard007--math_500.json"
+    },
+    {
+      "shard": 8,
+      "state": "completed",
+      "count": 20,
+      "correct": 20,
+      "accuracy": 1.0,
+      "judge_strategy": "llm",
+      "diagnostics": {
+        "reasoning_closed": 20,
+        "finish_stop": 20
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-c92160-s2-halo-math_500-shard008--math_500.json"
+    },
+    {
+      "shard": 9,
+      "state": "completed",
+      "count": 20,
+      "correct": 20,
+      "accuracy": 1.0,
+      "judge_strategy": "llm",
+      "diagnostics": {
+        "reasoning_closed": 20,
+        "finish_stop": 20
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-c92160-s2-halo-math_500-shard009--math_500.json"
+    },
+    {
+      "shard": 10,
+      "state": "completed",
+      "count": 20,
+      "correct": 19,
+      "accuracy": 0.95,
+      "judge_strategy": "llm",
+      "diagnostics": {
+        "reasoning_closed": 20,
+        "finish_stop": 20
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-c92160-s2-halo-math_500-shard010--math_500.json"
+    },
+    {
+      "shard": 11,
+      "state": "completed",
+      "count": 20,
+      "correct": 20,
+      "accuracy": 1.0,
+      "judge_strategy": "llm",
+      "diagnostics": {
+        "reasoning_closed": 20,
+        "finish_stop": 20
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-c92160-s2-halo-math_500-shard011--math_500.json"
+    },
+    {
+      "shard": 12,
+      "state": "completed",
+      "count": 20,
+      "correct": 20,
+      "accuracy": 1.0,
+      "judge_strategy": "llm",
+      "diagnostics": {
+        "reasoning_closed": 20,
+        "finish_stop": 20
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-c92160-s2-halo-math_500-shard012--math_500.json"
+    },
+    {
+      "shard": 13,
+      "state": "completed",
+      "count": 20,
+      "correct": 20,
+      "accuracy": 1.0,
+      "judge_strategy": "llm",
+      "diagnostics": {
+        "reasoning_closed": 20,
+        "finish_stop": 20
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-c92160-s2-halo-math_500-shard013--math_500.json"
+    },
+    {
+      "shard": 14,
+      "state": "completed",
+      "count": 20,
+      "correct": 19,
+      "accuracy": 0.95,
+      "judge_strategy": "llm",
+      "diagnostics": {
+        "reasoning_closed": 19,
+        "finish_stop": 19,
+        "reasoning_unclosed": 1,
+        "finish_length": 1
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-c92160-s2-halo-math_500-shard014--math_500.json"
+    },
+    {
+      "shard": 15,
+      "state": "completed",
+      "count": 20,
+      "correct": 20,
+      "accuracy": 1.0,
+      "judge_strategy": "llm",
+      "diagnostics": {
+        "reasoning_closed": 20,
+        "finish_stop": 20
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-c92160-s2-halo-math_500-shard015--math_500.json"
+    },
+    {
+      "shard": 16,
+      "state": "completed",
+      "count": 20,
+      "correct": 20,
+      "accuracy": 1.0,
+      "judge_strategy": "llm",
+      "diagnostics": {
+        "reasoning_closed": 20,
+        "finish_stop": 20
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-c92160-s2-halo-math_500-shard016--math_500.json"
+    },
+    {
+      "shard": 17,
+      "state": "completed",
+      "count": 20,
+      "correct": 18,
+      "accuracy": 0.9,
+      "judge_strategy": "llm",
+      "diagnostics": {
+        "reasoning_closed": 20,
+        "finish_stop": 20
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-c92160-s2-halo-math_500-shard017--math_500.json"
+    },
+    {
+      "shard": 18,
+      "state": "completed",
+      "count": 20,
+      "correct": 20,
+      "accuracy": 1.0,
+      "judge_strategy": "llm",
+      "diagnostics": {
+        "reasoning_closed": 20,
+        "finish_stop": 20
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-c92160-s2-halo-math_500-shard018--math_500.json"
+    },
+    {
+      "shard": 19,
+      "state": "completed",
+      "count": 20,
+      "correct": 20,
+      "accuracy": 1.0,
+      "judge_strategy": "llm",
+      "diagnostics": {
+        "reasoning_closed": 20,
+        "finish_stop": 20
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-c92160-s2-halo-math_500-shard019--math_500.json"
+    },
+    {
+      "shard": 20,
+      "state": "completed",
+      "count": 20,
+      "correct": 20,
+      "accuracy": 1.0,
+      "judge_strategy": "llm",
+      "diagnostics": {
+        "reasoning_closed": 20,
+        "finish_stop": 20
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-c92160-s2-halo-math_500-shard020--math_500.json"
+    },
+    {
+      "shard": 21,
+      "state": "completed",
+      "count": 20,
+      "correct": 20,
+      "accuracy": 1.0,
+      "judge_strategy": "llm",
+      "diagnostics": {
+        "reasoning_closed": 20,
+        "finish_stop": 20
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-c92160-s2-halo-math_500-shard021--math_500.json"
+    },
+    {
+      "shard": 22,
+      "state": "completed",
+      "count": 20,
+      "correct": 19,
+      "accuracy": 0.95,
+      "judge_strategy": "llm",
+      "diagnostics": {
+        "reasoning_closed": 20,
+        "finish_stop": 20
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-c92160-s2-halo-math_500-shard022--math_500.json"
+    },
+    {
+      "shard": 23,
+      "state": "completed",
+      "count": 20,
+      "correct": 20,
+      "accuracy": 1.0,
+      "judge_strategy": "llm",
+      "diagnostics": {
+        "reasoning_closed": 20,
+        "finish_stop": 20
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-c92160-s2-halo-math_500-shard023--math_500.json"
+    },
+    {
+      "shard": 24,
+      "state": "completed",
+      "count": 20,
+      "correct": 20,
+      "accuracy": 1.0,
+      "judge_strategy": "llm",
+      "diagnostics": {
+        "reasoning_closed": 20,
+        "finish_stop": 20
+      },
+      "status_file": "campaign://quality-campaign/status/original15-temp07-c92160-s2-halo-math_500-shard024--math_500.json"
+    }
+  ],
+  "partition": "campaign://math_500-shards/partition.json",
+  "excluded": "all overlapping subset screens and other engine/profile cohorts",
+  "published_original_percent": 99.2,
+  "checkpoint_comparison": "original Qwen3.6 Bonsai versus present Qwen3.8 Bonsai2; native control uses same Bonsai2 weights"
+}

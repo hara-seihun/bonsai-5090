@@ -1,0 +1,26 @@
+{
+  "state": "CPU-source-layout-compiler-closure; full-engine-merit-unset",
+  "GPU_execution": false,
+  "serving_mutation": false,
+  "GPU_owner": "PrismML",
+  "source_parent": "768a66c0a6aa8cf571139e05ec4dab0f48efcfc2",
+  "proof_scope": "Exact pair coordinate and composition conditional on unchanged native operand instruction stream; no RN/RTZ assumption",
+  "Lean_version": "Lean (version 4.33.0, x86_64-unknown-linux-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+  "CPU_actual_rows": {
+    "gpu_work": false,
+    "native_model_execution": false,
+    "model_sha256": "53107f530aa52eb00912263ab1ee29bd199261c87cd7b4ad4ca1318c1fe33ee3",
+    "dictionary_entries": 6561,
+    "dictionary_bytes": 26244,
+    "dictionary_sha256": "c852b5dcceec90e78b2a19dca75dd896062ed3ff606d6b51adb475e610cb7b6a",
+    "K": 5120,
+    "rows": 32,
+    "original_native_words": 40960,
+    "mismatches": 0,
+    "packed_bytes": 66560,
+    "packed_sha256": "1e9716ff2c3ca95bbec54ccb276be55ca1159a21c89b89aaeee3e00ffcdd8b60",
+    "rounding_assumption": "none; exact separate operand words and original per-output native MMA/scale/mean/SiLU order retained",
+    "GPU_acceptance": false
+  },
+  "next": "Reduce recurring lookup/address cost against complete model target; original scalar means and observer stay unchanged. No GPU/window requested."
+}

@@ -1,0 +1,53 @@
+{
+  "models": [
+    {
+      "name": "/workspace/binary/models/Bonsai-27B-Q1_0.gguf",
+      "model": "/workspace/binary/models/Bonsai-27B-Q1_0.gguf",
+      "modified_at": "",
+      "size": "",
+      "digest": "",
+      "type": "model",
+      "description": "",
+      "tags": [
+        ""
+      ],
+      "capabilities": [
+        "completion"
+      ],
+      "parameters": "",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "",
+        "families": [
+          ""
+        ],
+        "parameter_size": "",
+        "quantization_level": ""
+      }
+    }
+  ],
+  "object": "list",
+  "data": [
+    {
+      "id": "/workspace/binary/models/Bonsai-27B-Q1_0.gguf",
+      "aliases": [
+        "/workspace/binary/models/Bonsai-27B-Q1_0.gguf"
+      ],
+      "tags": [],
+      "object": "model",
+      "created": 1791659667,
+      "owned_by": "llamacpp",
+      "meta": {
+        "vocab_type": true,
+        "n_vocab": 248320,
+        "n_ctx": 8192,
+        "n_ctx_train": 262144,
+        "n_embd": 5120,
+        "n_params": 26895998464,
+        "size": 3792459776,
+        "ftype": "Q1_0"
+      }
+    }
+  ]
+}

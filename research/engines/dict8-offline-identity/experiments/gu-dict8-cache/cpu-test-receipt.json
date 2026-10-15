@@ -1,0 +1,23 @@
+{
+  "header_mutations": 6,
+  "sha256_known_vector": true,
+  "actual_engine_branch_stub_uploads": 2,
+  "startup_encode_ns": 0,
+  "unchanged_unset_branch": true,
+  "independent_fixture_bytes": 66560,
+  "gpu_work": false,
+  "native_cached_startup_ns": null,
+  "engine_sha256": "6445a05870929ae76b314ae96f39c9ce3f426bb8a0ddf71616ffe53b7abe183b",
+  "source_branch_sha256": "f4baf5e2c9c0a3a14ac54d653577b9c2d06a256c41e589331f52db3e463df7ce",
+  "compile_command": [
+    "g++",
+    "-std=c++17",
+    "-O2",
+    "-I~/work/clones/dict8-model-identity/src",
+    "/tmp/dict8-cache-test-om6nkj5w/test.cpp",
+    "~/work/clones/dict8-model-identity/src/gguf.cpp",
+    "-lcrypto",
+    "-o",
+    "/tmp/dict8-cache-test-om6nkj5w/test"
+  ]
+}

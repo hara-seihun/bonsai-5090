@@ -1,0 +1,1 @@
+{"GPU_execution": false, "native_model_execution": false, "warmup_contract": true, "old_capture_prefix_rejected": true, "every_endpoint_field_mutation_rejected": true, "isolated_imports": "stdlib-only worker; pure function extraction executed", "handback_fabricated": false}

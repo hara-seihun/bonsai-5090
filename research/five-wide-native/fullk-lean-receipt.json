@@ -1,0 +1,8 @@
+{
+  "compiler": "Lean (version 4.33.0, x86_64-unknown-linux-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+  "source_sha256": "b5c967390e8e72f8f0da41ef94e1b11a8d8dab27525d03bd081d36b8225b8201",
+  "exit": 0,
+  "stdout": "",
+  "stderr": "",
+  "scope": "Integer/code, conditional ordered-observer composition and generic collision consequence; CUDA/RZ/F32 conformance empirical."
+}

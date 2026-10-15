@@ -1,0 +1,16 @@
+{
+  "exit": 0,
+  "stdout": "{\"status\":\"pass\",\"cases\":18225,\"validation_checks\":6998400,\"missing\":0,\"mismatches\":0,\"producer_bytes\":1872,\"native_hash_bytes_each\":1048576,\"source_lookup_bytes\":72900,\"input_bytes\":72900,\"output_bytes\":72900,\"states\":[18144,18144,17125],\"max_probes\":[12,11,14],\"timings_ms\":{\"two_MMA_joint\":{\"median\":0.003304,\"min\":0.003271,\"max\":0.003339,\"registers\":20,\"local_bytes\":0,\"shared_bytes\":0},\"two_MMA_FP32_composed\":{\"median\":0.003520,\"min\":0.003507,\"max\":0.003537,\"registers\":22,\"local_bytes\":0,\"shared_bytes\":0},\"three_MMA_composed\":{\"median\":0.003547,\"min\":0.003514,\"max\":0.003740,\"registers\":18,\"local_bytes\":0,\"shared_bytes\":0},\"direct_SiLU\":{\"median\":0.001450,\"min\":0.001431,\"max\":0.001704,\"registers\":17,\"local_bytes\":0,\"shared_bytes\":0},\"full_map_lookup\":{\"median\":0.001347,\"min\":0.001345,\"max\":0.001349,\"registers\":12,\"local_bytes\":0,\"shared_bytes\":0}},\"scope\":\"1872B static numerical-label producer plus exact-key final joint readout; dynamic producer/normalization/ISA composition/observer/output all charged; no intermediate logical recovery; scale1 two-term GU suffix only, no real-model quality/TPS\"}\n",
+  "stderr": "",
+  "wall_s": 1.8172073364257812,
+  "mutex": "Local\\BonsaiGPU",
+  "mutex_wait_result": 0,
+  "hashes": {
+    "native_mixed_readout.cu": "94e7c9d931c98db4c62ef6f890dea82b3739528a6388458f6b7d085fd8f7b197",
+    "native_mixed_readout.exe": "abb79f5cee258d42bab3d3de774d0ef66806be67f46292ba9f6e77788f073bd4",
+    "mixed-observer-mode0.bin": "fc212d67a4f6b4b2a4da4d5cde75319c06a7ff09272c48787b68bbe866ed413a",
+    "mixed-observer-mode1.bin": "aaa0c26acd7d99bf603fc2766558e523cfe70d6979e43131ebf096602843a2c1",
+    "mixed-observer-mode2.bin": "386b2d57310938d91c38f8be8cb2b6a9d3b1b532923659f2b52e11c626227615",
+    "build.log": "854f327c40e65938703ff9a7a5b8a1b0337aadcc3035ad9f135595787158de8a"
+  }
+}

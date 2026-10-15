@@ -1,0 +1,227 @@
+[
+  {
+    "fixture": "red",
+    "greedy_match": false,
+    "acceptance": 0.17794486215538846,
+    "ordinary": {
+      "id": "h5-6ac54930-7",
+      "object": "chat.completion",
+      "created": 1791314224,
+      "model": "ternary-bonsai-2-27b",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "The image features a single, prominent geometric shape centered within the frame. This shape is a perfect square, characterized by four equal sides and four right angles. The square is filled with a solid, uniform color that is a vibrant and intense shade of red. There are no gradients, patterns, or variations in tone within the square itself; it presents as a flat, monochromatic block of color.\n\nThe arrangement of the elements is simple and symmetrical. The red square is positioned in the exact center of the image, creating a balanced composition. It occupies a significant portion of the visual space, leaving a consistent margin around all four of"
+          },
+          "finish_reason": "length"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 50,
+        "completion_tokens": 128,
+        "total_tokens": 178
+      },
+      "timings": {
+        "image_tokens": 16,
+        "image_encode_s": 0.003475574,
+        "native_prefill_s": 0.011606468935497105,
+        "vision_speculation": false,
+        "proposed_drafts": 0,
+        "accepted_drafts": 0,
+        "verify_s": 0.7513469350524247,
+        "draft_s": 0.0,
+        "ttft_s": 0.01891174807678908,
+        "total_s": 0.7709561070660129,
+        "decode_tok_per_s": 168.87301723889377
+      },
+      "client_wall_s": 0.8199904259527102
+    },
+    "speculative": {
+      "id": "h5-6ac54931-8",
+      "object": "chat.completion",
+      "created": 1791314225,
+      "model": "ternary-bonsai-2-27b",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "The image features a single, prominent geometric shape centered on a plain background. The shape is a perfect square, characterized by four equal sides and four right angles. It is filled with a solid, uniform color that is a vibrant, saturated red, resembling a bright crimson or pure red hue. There are no gradients, patterns, or variations in tone within the square; it is a flat, monochromatic block of color.\n\nThe arrangement of the elements is simple and symmetrical. The red square is positioned in the exact center of the frame, leaving equal margins of empty space on all four sides. This central placement gives the composition a"
+          },
+          "finish_reason": "length"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 50,
+        "completion_tokens": 128,
+        "total_tokens": 178
+      },
+      "timings": {
+        "image_tokens": 16,
+        "image_encode_s": 0.003739471,
+        "native_prefill_s": 0.011560422950424254,
+        "vision_speculation": true,
+        "proposed_drafts": 399,
+        "accepted_drafts": 71,
+        "verify_s": 0.37512993800919503,
+        "draft_s": 0.07481353380717337,
+        "ttft_s": 0.01791850896552205,
+        "total_s": 0.46816560602746904,
+        "decode_tok_per_s": 282.0673377545992
+      },
+      "client_wall_s": 0.47017968900036067
+    }
+  },
+  {
+    "fixture": "green-large",
+    "greedy_match": false,
+    "acceptance": 0.27906976744186046,
+    "ordinary": {
+      "id": "h5-6ac54931-9",
+      "object": "chat.completion",
+      "created": 1791314225,
+      "model": "ternary-bonsai-2-27b",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "# Drawing a Green Circle with Python and Pillow\n\n## Step-by-Step Explanation\n\n1. **Import the necessary modules** \u2013 `Image` and `ImageDraw` from the `Pillow` library.\n2. **Create a new image** \u2013 A white (RGB) image with a square canvas (e.g., 500\u00d7500 pixels).\n3. **Get a drawing context** \u2013 Use `ImageDraw.Draw()` to create an object that can draw shapes onto the image.\n4. **Draw the circle** \u2013 Use `draw.ellipse()` with a bounding box that defines the circle's"
+          },
+          "finish_reason": "length"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 290,
+        "completion_tokens": 128,
+        "total_tokens": 418
+      },
+      "timings": {
+        "image_tokens": 256,
+        "image_encode_s": 0.021265744,
+        "native_prefill_s": 0.053001747000962496,
+        "vision_speculation": false,
+        "proposed_drafts": 0,
+        "accepted_drafts": 0,
+        "verify_s": 0.7517432464519516,
+        "draft_s": 0.0,
+        "ttft_s": 0.08172879903577268,
+        "total_s": 0.8339464330347255,
+        "decode_tok_per_s": 168.8341169627204
+      },
+      "client_wall_s": 0.8351603830233216
+    },
+    "speculative": {
+      "id": "h5-6ac54932-10",
+      "object": "chat.completion",
+      "created": 1791314226,
+      "model": "ternary-bonsai-2-27b",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "# Drawing a Green Circle with Python and Pillow\n\n## Step-by-Step Explanation\n\n1. **Create a blank canvas** \u2013 We use `Image.new()` to make a white image of a specific size (e.g., 500\u00d7500 pixels).\n2. **Get a drawing tool** \u2013 `ImageDraw.Draw()` gives us an object that can draw shapes onto the image.\n3. **Draw the circle** \u2013 `draw.ellipse()` draws an ellipse. When the bounding box is a perfect square (same width and height), the result is a circle. We pass a list of four coordinates:"
+          },
+          "finish_reason": "length"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 290,
+        "completion_tokens": 128,
+        "total_tokens": 418
+      },
+      "timings": {
+        "image_tokens": 256,
+        "image_encode_s": 0.025868426,
+        "native_prefill_s": 0.052204697974957526,
+        "vision_speculation": true,
+        "proposed_drafts": 301,
+        "accepted_drafts": 84,
+        "verify_s": 0.28459432045929134,
+        "draft_s": 0.05564485548529774,
+        "ttft_s": 0.0851874949876219,
+        "total_s": 0.42562093504238874,
+        "decode_tok_per_s": 373.0538338994225
+      },
+      "client_wall_s": 0.4270507820183411
+    }
+  },
+  {
+    "fixture": "blue",
+    "greedy_match": false,
+    "acceptance": 0.18045112781954886,
+    "ordinary": {
+      "id": "h5-6ac54932-11",
+      "object": "chat.completion",
+      "created": 1791314226,
+      "model": "ternary-bonsai-2-27b",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "The image features a simple, solid blue square positioned in the center of a white background. The square is perfectly symmetrical, with all four sides of equal length and four right angles, creating a clean and geometric appearance. The blue color is uniform throughout the shape, with no gradients, patterns, or variations in tone.\n\nThe square stands out clearly against the plain white backdrop, which provides a high-contrast setting that emphasizes the shape's form and color. There are no additional elements, text, or decorative features present in the image, keeping the focus entirely on the central blue square.\n\nOverall, the composition is minimal and straightforward,"
+          },
+          "finish_reason": "length"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 1582,
+        "completion_tokens": 128,
+        "total_tokens": 1710
+      },
+      "timings": {
+        "image_tokens": 16,
+        "image_encode_s": 0.008221389,
+        "native_prefill_s": 0.26363352418411523,
+        "vision_speculation": false,
+        "proposed_drafts": 0,
+        "accepted_drafts": 0,
+        "verify_s": 0.7594306309474632,
+        "draft_s": 0.0,
+        "ttft_s": 0.2807254979852587,
+        "total_s": 1.040733056026511,
+        "decode_tok_per_s": 167.1036013474837
+      },
+      "client_wall_s": 1.0426764839794487
+    },
+    "speculative": {
+      "id": "h5-6ac54934-12",
+      "object": "chat.completion",
+      "created": 1791314228,
+      "model": "ternary-bonsai-2-27b",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "The image features a single, prominent geometric shape centered against a plain white background. The shape is a perfect square, characterized by four equal sides and four right angles. Its edges are sharp and well-defined, creating a clean and precise visual boundary that separates the colored area from the surrounding white space.\n\nThe square is filled with a solid, uniform color of vibrant blue. This hue is intense and saturated, appearing as a pure, unadulterated blue without any gradients, patterns, or variations in tone. The color is consistent throughout the entire interior of the square, giving it a flat and two-dimensional appearance.\n\nOverall, the"
+          },
+          "finish_reason": "length"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 1582,
+        "completion_tokens": 128,
+        "total_tokens": 1710
+      },
+      "timings": {
+        "image_tokens": 16,
+        "image_encode_s": 0.011000523,
+        "native_prefill_s": 0.26362326613161713,
+        "vision_speculation": true,
+        "proposed_drafts": 399,
+        "accepted_drafts": 72,
+        "verify_s": 0.39478762401267886,
+        "draft_s": 0.07195440283976495,
+        "ttft_s": 0.2821154169505462,
+        "total_s": 0.7493473410140723,
+        "decode_tok_per_s": 271.8136185889831
+      },
+      "client_wall_s": 0.7512505099875852
+    }
+  }
+]

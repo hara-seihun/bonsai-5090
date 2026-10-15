@@ -1,0 +1,45 @@
+{
+  "schema": "gsm.native-extraction-trigger.v1",
+  "state": "complete",
+  "count": 1319,
+  "classification": {
+    "parsed_correct": 1276,
+    "parsed_but_wrong": 34,
+    "native_extraction_parse_failure": 9
+  },
+  "native_empty_extraction_count": 9,
+  "output_fragment_validity_disagreements": [],
+  "rule_correct": 1276.0,
+  "broad_recall_correct": 1283.0,
+  "parse_failure_only_correct": 1276.0,
+  "missing_existing_judge": [],
+  "triggered_ids": [
+    675,
+    1074,
+    301,
+    1176,
+    1038,
+    380,
+    85,
+    894,
+    1088
+  ],
+  "broad_only_upgrades": [
+    814,
+    906,
+    1042,
+    952,
+    823,
+    454,
+    1001
+  ],
+  "new_paid_calls": 0,
+  "generation_replay": 0,
+  "publisher_extractor": "unknown; this view uses the installed native Math-Verify-backed GSM extractor, not an assertion of exact historical extractor parity",
+  "source_pins": {
+    "campaign://intake-mcqaime/gsm-regrade/delivery.json": "0353f364ea12746a2b40d764fd8abe8fbcb82e8175e5db454f0c30559a253995",
+    "campaign://intake-mcqaime/gsm-regrade/inputs.json": "9df1868173b9464f2c5f0d7ff7c60f9a64142e01c191b290873686db10091eb8",
+    "campaign://intake-mcqaime/gsm-regrade/occurrence-results.json": "dd019c8926376341b62f72605dbbec13f9e860f1cbbde6142a2153d5a7b8c5f0",
+    "campaign://quality-campaign/venv/lib/python3.12/site-packages/evalscope/metrics/math/parser.py": "ec13cc2035f65b40867487cd1af249b88e3029a3378855dd27ad2eda7d7d52d1"
+  }
+}

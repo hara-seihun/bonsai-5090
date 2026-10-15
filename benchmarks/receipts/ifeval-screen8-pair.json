@@ -1,0 +1,55 @@
+{
+  "scope": "matched8-item screen, not full541",
+  "language_detection_seed": 0,
+  "halo": {
+    "metrics": {
+      "prompt_level_strict": {
+        "num": 8,
+        "score": 1.0
+      },
+      "inst_level_strict": {
+        "num": 13,
+        "score": 1.0
+      },
+      "prompt_level_loose": {
+        "num": 8,
+        "score": 1.0
+      },
+      "inst_level_loose": {
+        "num": 13,
+        "score": 1.0
+      }
+    },
+    "finish_reasons": {
+      "stop": 8
+    },
+    "reasoning_closed": 8,
+    "profile": "original15-temp07-c28672-s8-halo-ifeval-subset8"
+  },
+  "reference": {
+    "metrics": {
+      "prompt_level_strict": {
+        "num": 8,
+        "score": 0.875
+      },
+      "inst_level_strict": {
+        "num": 13,
+        "score": 0.9231
+      },
+      "prompt_level_loose": {
+        "num": 8,
+        "score": 0.875
+      },
+      "inst_level_loose": {
+        "num": 13,
+        "score": 0.9231
+      }
+    },
+    "finish_reasons": {
+      "stop": 8
+    },
+    "reasoning_closed": 8,
+    "profile": "original15-temp07-c28672-s8-reference-ifeval-subset8"
+  },
+  "matched_requests_seeds_template": true
+}

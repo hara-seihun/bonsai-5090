@@ -1,0 +1,13 @@
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z7observePK4LanePfPaS2_' for 'sm_120a'
+ptxas info    : Function properties for _Z7observePK4LanePfPaS2_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 21 registers, used 1 barriers, 16 bytes smem
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z5probeP4Lanei' for 'sm_120a'
+ptxas info    : Function properties for _Z5probeP4Lanei
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 17 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+scaled_word_fixed_weights.cu
+tmpxft_00000b78_00000000-10_scaled_word_fixed_weights.cudafe1.cpp

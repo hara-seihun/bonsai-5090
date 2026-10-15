@@ -1,0 +1,42 @@
+Additional native-engine source exports
+Copyright 2026 Hara Renia Seihun
+
+Original engine code is covered by the repository's root LICENSE. This notice
+supplements the root NOTICE; upstream notices in vendored source remain intact.
+
+PrismML llama.cpp fork
+  https://github.com/PrismML-Eng/llama.cpp
+  API/build dependency pin: 1a07bfa5f4144274c8f1c9963821dd9d9a51854b.
+  MIT, derived from ggml-org/llama.cpp. Full license in licenses/llama.cpp-MIT.txt.
+  Externally acquired, not bundled. Used for vocabulary/chat templates;
+  halo-5090 optionally uses libmtmd/ggml for image encoding. Comparative fork
+  performance is not native-engine performance. PTQ1_0 is PrismML's format.
+
+cpp-httplib
+  Copyright (c) 2017 yhirose; MIT.
+  Source and full license: bonsai-halo/vendor/cpp-httplib/.
+  The CUDA builds instead consume this dependency from external llama.cpp.
+
+nlohmann/json
+  Copyright (c) 2013-2025 Niels Lohmann; MIT.
+  Source/header notices: bonsai-halo/vendor/nlohmann/json.hpp.
+  Full primary license: licenses/nlohmann-json-MIT.txt.
+  Embedded third-party notices, including Abseil-derived portions, are preserved
+  in the header; this summary does not replace them.
+
+Qwen, PrismML and IncoAI models
+  Language/model inputs are not redistributed. Bonsai2 is PrismML's ternary
+  fine-tune of Qwen3.8-27B. DFlash2 checkpoint is incoai/Qwen3.8-27B-DFlash2;
+  HIP MTP is from Qwen/Qwen3.8-27B. Halo6000 uses a custom ternary preparation
+  of Qwen3.6-35B-A3B. Follow each source model/checkpoint's distribution terms.
+  Source DFlash semantics reference https://github.com/z-lab/dflash.
+
+Benchmark material and tools
+  GSM8K: OpenAI, Cobbe et al. (2021), MIT; root NOTICE records attribution.
+  Math-Verify: Hugging Face, Apache-2.0, externally installed scorer.
+  Other evaluation datasets and scorers are fetched separately by harnesses;
+  their own licenses and usage conditions apply. Retained generated responses
+  and synthetic fixture/task receipts do not redistribute complete datasets.
+
+No third-party model/kernel authorship is claimed. Keeping a benchmark result
+here does not imply ownership of the model, comparator, dataset or underlying ISA.

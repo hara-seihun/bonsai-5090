@@ -1,0 +1,117 @@
+{
+  "state": "passed",
+  "gpu_work": false,
+  "native_engine_execution": false,
+  "tests": [
+    {
+      "name": "fault-cpp",
+      "command": [
+        "C:\\work\\models\\experiments\\bonsai-quality-20261013\\gu-dict8-identity-build-v2\\fault_test.exe",
+        "C:\\work\\models\\models\\Ternary-Bonsai-2-27B-PTQ1_0.gguf",
+        "C:\\work\\models\\experiments\\bonsai-quality-20261013\\gu-dict8-identity-build-v2\\cache\\weights.d8"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"header_mutations\":6,\"shared_model_identity_scans\":1,\"truncated_and_extra\":true,\"payload_corrupt\":true,\"digest_table_corrupt\":true,\"digest_table_layer_swap\":true,\"terminal_states\":true,\"out_of_order_and_incomplete\":true,\"unset_empty_missing\":true,\"gpu_work\":false}\n",
+      "stderr": "",
+      "seconds": 8.113687899998695
+    },
+    {
+      "name": "existing-no-overwrite",
+      "command": [
+        "C:\\work\\models\\experiments\\bonsai-quality-20261013\\gu-dict8-identity-build-v2\\cache_tool.exe",
+        "prepare",
+        "C:\\work\\models\\models\\Ternary-Bonsai-2-27B-PTQ1_0.gguf",
+        "C:\\work\\models\\experiments\\bonsai-quality-20261013\\gu-dict8-identity-build-v2\\cache\\weights.d8",
+        "8",
+        "3221225472",
+        "21474836480"
+      ],
+      "exit_code": 14,
+      "stdout": "{\"ok\":false,\"error\":\"Exists\",\"code\":14,\"gpu_work\":false}\n",
+      "stderr": "",
+      "seconds": 0.00686419999874488,
+      "expected_error": "Exists",
+      "result": {
+        "ok": false,
+        "error": "Exists",
+        "code": 14,
+        "gpu_work": false
+      }
+    },
+    {
+      "name": "insufficient-budget",
+      "command": [
+        "C:\\work\\models\\experiments\\bonsai-quality-20261013\\gu-dict8-identity-build-v2\\cache_tool.exe",
+        "prepare",
+        "C:\\work\\models\\models\\Ternary-Bonsai-2-27B-PTQ1_0.gguf",
+        "C:\\work\\models\\experiments\\bonsai-quality-20261013\\gu-dict8-identity-build-v2\\cache\\not-published.d8",
+        "8",
+        "1",
+        "21474836480"
+      ],
+      "exit_code": 13,
+      "stdout": "{\"ok\":false,\"error\":\"Budget\",\"code\":13,\"gpu_work\":false}\n",
+      "stderr": "",
+      "seconds": 0.005598900001132279,
+      "expected_error": "Budget",
+      "result": {
+        "ok": false,
+        "error": "Budget",
+        "code": 13,
+        "gpu_work": false
+      }
+    },
+    {
+      "name": "staged-not-recomputed",
+      "command": [
+        "C:\\work\\models\\experiments\\bonsai-quality-20261013\\gu-dict8-identity-build-v2\\cache_tool.exe",
+        "prepare",
+        "C:\\work\\models\\models\\Ternary-Bonsai-2-27B-PTQ1_0.gguf",
+        "C:\\work\\models\\experiments\\bonsai-quality-20261013\\gu-dict8-identity-build-v2\\cache\\stale-test.d8",
+        "8",
+        "3221225472",
+        "21474836480"
+      ],
+      "exit_code": 19,
+      "stdout": "{\"ok\":false,\"error\":\"Staged\",\"code\":19,\"gpu_work\":false}\n",
+      "stderr": "",
+      "seconds": 0.005202300000746618,
+      "expected_error": "Staged",
+      "result": {
+        "ok": false,
+        "error": "Staged",
+        "code": 19,
+        "gpu_work": false
+      }
+    },
+    {
+      "name": "model-rejected-before-unsafe-parse",
+      "command": [
+        "C:\\work\\models\\experiments\\bonsai-quality-20261013\\gu-dict8-identity-build-v2\\cache_tool.exe",
+        "verify",
+        "C:\\work\\models\\experiments\\bonsai-quality-20261013\\gu-dict8-identity-build-v2\\cache\\malformed-model.bin",
+        "C:\\work\\models\\experiments\\bonsai-quality-20261013\\gu-dict8-identity-build-v2\\cache\\weights.d8",
+        "8",
+        "3221225472",
+        "21474836480"
+      ],
+      "exit_code": 7,
+      "stdout": "{\"ok\":false,\"error\":\"ModelIdentity\",\"code\":7,\"gpu_work\":false}\n",
+      "stderr": "",
+      "seconds": 0.00567859999864595,
+      "expected_error": "ModelIdentity",
+      "result": {
+        "ok": false,
+        "error": "ModelIdentity",
+        "code": 7,
+        "gpu_work": false
+      }
+    }
+  ],
+  "fault_storage_ceiling_bytes": 3221225472,
+  "headroom_bytes": 21474836480,
+  "fault_cpp_exit": 0,
+  "fault_cpp_stdout": "{\"header_mutations\":6,\"shared_model_identity_scans\":1,\"truncated_and_extra\":true,\"payload_corrupt\":true,\"digest_table_corrupt\":true,\"digest_table_layer_swap\":true,\"terminal_states\":true,\"out_of_order_and_incomplete\":true,\"unset_empty_missing\":true,\"gpu_work\":false}\n",
+  "fault_cpp_stderr": "",
+  "fault_cpp_s": 8.113687899998695
+}

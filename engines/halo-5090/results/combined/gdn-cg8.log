@@ -1,0 +1,56 @@
+
+weights 7.15 GB in 6.1 s
+state f16, KV fp8: 75.5 MB state + 138.4 MB KV per slot
+ready: 64 slots x 4160 ctx, 512 rows; GPU free 9.69 / 33.67 GB, load 6.1 s
+dflash2 drafter loaded in 3.1 s (NVFP4), GPU free 6.80 GB
+phase breakdown over 4 steps (ms/step):
+  d_gemm          156.666   29.9%
+  head            124.775   23.8%
+  d_topk           72.127   13.8%
+  gemm_in          64.916   12.4%
+  d_ingest         30.823    5.9%
+  gemm_down        27.242    5.2%
+  gemm_out         12.989    2.5%
+  gemm_gu           9.071    1.7%
+  ab                6.385    1.2%
+  gdn               5.222    1.0%
+  attn              4.735    0.9%
+  d_head            3.372    0.6%
+  prep              3.224    0.6%
+  conv              0.787    0.2%
+  d_attn            0.587    0.1%
+  attn_comb         0.541    0.1%
+  d_prep            0.266    0.1%
+  attn_pre          0.165    0.0%
+  d_headgemm        0.164    0.0%
+  d_conv            0.104    0.0%
+  embed             0.033    0.0%
+  d_layers          0.022    0.0%
+  d_select          0.010    0.0%
+  total           524.226
+phase breakdown over 30 steps (ms/step):
+  gemm_gu           6.533   19.4%
+  gdn               6.046   18.0%
+  attn              4.835   14.4%
+  prep              3.322    9.9%
+  gemm_down         2.975    8.9%
+  gemm_in           2.947    8.8%
+  gemm_out          1.359    4.0%
+  d_gemm            0.986    2.9%
+  conv              0.836    2.5%
+  head              0.789    2.3%
+  d_topk            0.728    2.2%
+  d_attn            0.588    1.7%
+  attn_comb         0.540    1.6%
+  d_prep            0.270    0.8%
+  ab                0.199    0.6%
+  attn_pre          0.164    0.5%
+  d_ingest          0.164    0.5%
+  d_headgemm        0.164    0.5%
+  d_conv            0.104    0.3%
+  embed             0.022    0.1%
+  d_layers          0.021    0.1%
+  d_head            0.011    0.0%
+  d_select          0.009    0.0%
+  total            33.611
+specbench: streams 64 ctx 4000 rows/step 512 forced tokens/step 6: step 67.52 ms (verify 61.38, draft 6.14) -> 5687 tok/s, 88.9 tok/s/stream, $0.0337/M

@@ -1,0 +1,2 @@
+name, driver_version, power.limit [W]
+NVIDIA GeForce RTX 5090, 595.58.03, 500.00 W

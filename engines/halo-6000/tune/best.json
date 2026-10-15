@@ -1,0 +1,191 @@
+{
+ "tok_s": 347.2390247843967,
+ "grid_vector": [
+  376,
+  -188,
+  376,
+  -188,
+  188,
+  752,
+  1504,
+  94
+ ],
+ "config": {
+  "body": {
+   "qkv_lanes": 16,
+   "z_lanes": 8,
+   "ab_lanes": 32,
+   "out_lanes": 16,
+   "router_rows": 2,
+   "select_body": 1,
+   "head_lanes": 16,
+   "head_contiguous": 0,
+   "pf_proj": 1,
+   "pf_down": 0,
+   "pf_next": 0,
+   "pf_shared": 0,
+   "mma_proj": 0,
+   "mma_out": 0,
+   "mma_head": 1,
+   "proj_rows": 1,
+   "out_rows": 1,
+   "router_mrows": 1,
+   "down_rows": 1,
+   "load_nc": 0,
+   "router_bf16": 0,
+   "l2_router": 0,
+   "l2_state": 0,
+   "l2_ratio": 100,
+   "fuse_norm": 1,
+   "fuse_select": 1
+  },
+  "boundaries": [
+   "in_norm",
+   "gdn_proj",
+   "select",
+   "down",
+   "attn_proj",
+   "final_norm",
+   "head",
+   "arg_part",
+   "arg_finish"
+  ],
+  "min_blocks": {
+   "0x1": 4,
+   "0x2000": 4,
+   "0x80000": 2,
+   "0x100000": 3,
+   "0x200000": 4,
+   "0x400000": 2,
+   "0x7ca80": 1,
+   "0xabc": 2
+  },
+  "grids": {
+   "0x1": 376,
+   "0xabc": -188,
+   "0x2000": 376,
+   "0x7ca80": -188,
+   "0x80000": 188,
+   "0x100000": 752,
+   "0x200000": 1504,
+   "0x400000": 94
+  },
+  "rotation": [
+   false,
+   false
+  ],
+  "rows": 0
+ },
+ "describe": {
+  "compile_key": "c0178480e882",
+  "body": {
+   "qkv_lanes": 16,
+   "z_lanes": 8,
+   "ab_lanes": 32,
+   "out_lanes": 16,
+   "router_rows": 2,
+   "select_body": 1,
+   "head_lanes": 16,
+   "head_contiguous": 0,
+   "pf_proj": 1,
+   "pf_down": 0,
+   "pf_next": 0,
+   "pf_shared": 0,
+   "mma_proj": 0,
+   "mma_out": 0,
+   "mma_head": 1,
+   "proj_rows": 1,
+   "out_rows": 1,
+   "router_mrows": 1,
+   "down_rows": 1,
+   "load_nc": 0,
+   "router_bf16": 0,
+   "l2_router": 0,
+   "l2_state": 0,
+   "l2_ratio": 100,
+   "fuse_norm": 1,
+   "fuse_select": 1
+  },
+  "boundaries": [
+   "in_norm",
+   "gdn_proj",
+   "select",
+   "down",
+   "attn_proj",
+   "final_norm",
+   "head",
+   "arg_part",
+   "arg_finish"
+  ],
+  "segments": 85,
+  "barriers": 250,
+  "classes": {
+   "0x1": {
+    "coop": false,
+    "count": 1,
+    "min_blocks": 4,
+    "grid": 376
+   },
+   "0xabc": {
+    "coop": true,
+    "count": 30,
+    "min_blocks": 2,
+    "grid": -188
+   },
+   "0x2000": {
+    "coop": false,
+    "count": 40,
+    "min_blocks": 4,
+    "grid": 376
+   },
+   "0x7ca80": {
+    "coop": true,
+    "count": 10,
+    "min_blocks": 1,
+    "grid": -188
+   },
+   "0x80000": {
+    "coop": false,
+    "count": 1,
+    "min_blocks": 2,
+    "grid": 188
+   },
+   "0x100000": {
+    "coop": false,
+    "count": 1,
+    "min_blocks": 3,
+    "grid": 752
+   },
+   "0x200000": {
+    "coop": false,
+    "count": 1,
+    "min_blocks": 4,
+    "grid": 1504
+   },
+   "0x400000": {
+    "coop": false,
+    "count": 1,
+    "min_blocks": 2,
+    "grid": 94
+   }
+  }
+ },
+ "guard": {
+  "bad_logits": 0,
+  "bad_tokens": 0,
+  "exact": true,
+  "first_bad_step": -1,
+  "maxabs": 0.0,
+  "state": {
+   "conv": true,
+   "exact": true,
+   "first_conv_layer": -1,
+   "first_gdn_layer": -1,
+   "first_kv_layer": -1,
+   "gdn": true,
+   "key": true,
+   "positions": true,
+   "value": true
+  }
+ }
+}

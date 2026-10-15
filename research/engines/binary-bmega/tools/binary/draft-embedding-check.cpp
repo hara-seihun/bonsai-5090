@@ -1,0 +1,8 @@
+#include "gguf.h"
+#include <cmath>
+#include <cstring>
+#include <cstdio>
+using namespace h5;
+float half(const uint8_t*p){_Float16 h;memcpy(&h,p,2);return(float)h;}
+void decode(const GTensor&t,int row,float*v){int K=t.ne[0];for(int kb=0;kb<K/128;kb++){const uint8_t*b=t.data+((size_t)row*(K/128)+kb)*(t.type==41?18:28);int z[128],e=0;if(t.type==41){for(int i=0;i<128;i++)z[i]=((b[2+i/8]>>(i%8))&1)?1:-1;}else{for(int st=0;st<2;st++){int off=st?16:0,c=st?8:16;for(int n=0;n<5;n++)for(int m=0;m<c;m++){unsigned q=b[off+m];for(int j=0;j<n;j++)q=(q*3)&255;z[e++]=int((q*3)>>8)-1;}}for(int n=0;n<4;n++)for(int m=0;m<2;m++){unsigned q=b[24+m];for(int j=0;j<n;j++)q=(q*3)&255;z[e++]=int((q*3)>>8)-1;}}float s=half(b+(t.type==41?0:26));for(int i=0;i<128;i++)v[kb*128+i]=z[i]*s;}}
+int main(int argc,char**argv){if(argc!=3)return 2;Gguf a,b;a.open(argv[1]);b.open(argv[2]);auto&A=a.t("token_embd.weight");auto&B=b.t("token_embd.weight");if(A.type!=41||B.type!=143||A.ne!=B.ne)return 3;auto&ws=b.kv.at("prism.hadamard.sign_widths").ints;auto&vs=b.kv.at("prism.hadamard.sign_values").ints;int off=0;for(auto w:ws){if(w==5120)break;off+=w;}float x[5120],y[5120];for(int row:{0,1,2,198,220,248044,248045,248070}){decode(A,row,x);decode(B,row,y);for(int k=0;k<5120;k+=1024){for(int len=1;len<1024;len*=2)for(int i=0;i<1024;i++)if(!(i&len)){float u=y[k+i],v=y[k+i+len];y[k+i]=u+v;y[k+i+len]=u-v;}for(int i=0;i<1024;i++)y[k+i]*=.03125f*vs[off+k+i];}double xx=0,yy=0,xy=0,err=0;for(int i=0;i<5120;i++){xx+=double(x[i])*x[i];yy+=double(y[i])*y[i];xy+=double(x[i])*y[i];err+=double(x[i]-y[i])*(x[i]-y[i]);}printf("token %d binary_rms %.9g ternary_primal_rms %.9g cosine %.9g rel_rms %.9g\n",row,sqrt(xx/5120),sqrt(yy/5120),xy/sqrt(xx*yy),sqrt(err/yy));}}

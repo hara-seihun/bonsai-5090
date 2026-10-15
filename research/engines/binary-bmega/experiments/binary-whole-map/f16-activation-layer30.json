@@ -1,0 +1,208 @@
+{
+  "layer": 30,
+  "positions": [
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153,
+    154,
+    155,
+    156,
+    157,
+    158
+  ],
+  "rows": 32,
+  "input_contract": "actual postnorm A8 max/127 with original K128 scales, one-row pureA8 engine, F16 recurrent state/F16 KV",
+  "observer": "complete trained 5120-output down projection, no residual/next-layer/logit substitution",
+  "gate_negative_fraction": 0.7782126034007353,
+  "hidden_zero_fraction_exact": 0.0,
+  "next_a8_zero_fraction": 0.049973431755514705,
+  "next_a8_nonzero_negative_fraction": 0.4762609145220588,
+  "negative_gate_hidden_energy_fraction": 0.44840714477064614,
+  "input_a8_norm_relative_rms": 0.007484513663765185,
+  "h_f32_fibres": {
+    "unique_min": 32,
+    "unique_mean": 32.0,
+    "unique_max": 32,
+    "empirical_entropy_mean_bits": 5.0
+  },
+  "next_a8_fibres": {
+    "unique_min": 15,
+    "unique_mean": 25.13608685661765,
+    "unique_max": 32,
+    "empirical_entropy_mean_bits": 4.524914166386619
+  },
+  "candidates": [
+    {
+      "carrier": "signed scalar code plus dynamic K128 maximum",
+      "half_range": 63,
+      "state_count": 127,
+      "packed_bits": 7,
+      "max_code_abs": 63,
+      "zero_fraction": 0.0890664493336397,
+      "down_nse_vs_a8": 0.0009420048837506292,
+      "hidden_nse_vs_a8": 0.001177425694590111,
+      "fibres": {
+        "unique_min": 11,
+        "unique_mean": 20.846622242647058,
+        "unique_max": 31,
+        "empirical_entropy_mean_bits": 4.168718908317654
+      }
+    },
+    {
+      "carrier": "signed scalar code plus dynamic K128 maximum",
+      "half_range": 31,
+      "state_count": 63,
+      "packed_bits": 6,
+      "max_code_abs": 31,
+      "zero_fraction": 0.15663954790900736,
+      "down_nse_vs_a8": 0.0028183482335783134,
+      "hidden_nse_vs_a8": 0.0035220610723434975,
+      "fibres": {
+        "unique_min": 7,
+        "unique_mean": 15.7216796875,
+        "unique_max": 27,
+        "empirical_entropy_mean_bits": 3.6444614971314677
+      }
+    },
+    {
+      "carrier": "signed scalar code plus dynamic K128 maximum",
+      "half_range": 15,
+      "state_count": 31,
+      "packed_bits": 5,
+      "max_code_abs": 15,
+      "zero_fraction": 0.2687719008501838,
+      "down_nse_vs_a8": 0.010608128400504409,
+      "hidden_nse_vs_a8": 0.013265440551859848,
+      "fibres": {
+        "unique_min": 4,
+        "unique_mean": 10.726734834558824,
+        "unique_max": 20,
+        "empirical_entropy_mean_bits": 2.94928815709953
+      }
+    },
+    {
+      "carrier": "signed scalar code plus dynamic K128 maximum",
+      "half_range": 7,
+      "state_count": 15,
+      "packed_bits": 4,
+      "max_code_abs": 7,
+      "zero_fraction": 0.44875380572150736,
+      "down_nse_vs_a8": 0.041247548438791276,
+      "hidden_nse_vs_a8": 0.05163962577865551,
+      "fibres": {
+        "unique_min": 2,
+        "unique_mean": 6.719439338235294,
+        "unique_max": 13,
+        "empirical_entropy_mean_bits": 2.117355401331064
+      }
+    },
+    {
+      "carrier": "signed scalar code plus dynamic K128 maximum",
+      "half_range": 3,
+      "state_count": 7,
+      "packed_bits": 3,
+      "max_code_abs": 3,
+      "zero_fraction": 0.7064316693474265,
+      "down_nse_vs_a8": 0.15429551864047977,
+      "hidden_nse_vs_a8": 0.19028593427990806,
+      "fibres": {
+        "unique_min": 1,
+        "unique_mean": 3.879538143382353,
+        "unique_max": 7,
+        "empirical_entropy_mean_bits": 1.1863473257601544
+      }
+    },
+    {
+      "carrier": "signed scalar code plus dynamic K128 maximum",
+      "half_range": 1,
+      "state_count": 3,
+      "packed_bits": 2,
+      "max_code_abs": 1,
+      "zero_fraction": 0.9523979635799632,
+      "down_nse_vs_a8": 0.510665496271512,
+      "hidden_nse_vs_a8": 0.5415951761093529,
+      "fibres": {
+        "unique_min": 1,
+        "unique_mean": 1.8493221507352942,
+        "unique_max": 3,
+        "empirical_entropy_mean_bits": 0.2490514586973754
+      }
+    },
+    {
+      "carrier": "a8 code with threshold erasure; original block scale retained",
+      "threshold_max_fraction": 0.001,
+      "discarded_fraction": 0.01567526424632353,
+      "down_nse_vs_a8": 0.0
+    },
+    {
+      "carrier": "a8 code with threshold erasure; original block scale retained",
+      "threshold_max_fraction": 0.003,
+      "discarded_fraction": 0.03974286247702206,
+      "down_nse_vs_a8": 0.0
+    },
+    {
+      "carrier": "a8 code with threshold erasure; original block scale retained",
+      "threshold_max_fraction": 0.01,
+      "discarded_fraction": 0.10747213924632353,
+      "down_nse_vs_a8": 0.00020943232086740557
+    },
+    {
+      "carrier": "a8 code with threshold erasure; original block scale retained",
+      "threshold_max_fraction": 0.03,
+      "discarded_fraction": 0.24943273207720587,
+      "down_nse_vs_a8": 0.003068684453407754
+    },
+    {
+      "carrier": "a8 code with threshold erasure; original block scale retained",
+      "threshold_max_fraction": 0.1,
+      "discarded_fraction": 0.5475122788373161,
+      "down_nse_vs_a8": 0.044198568023331275
+    }
+  ],
+  "scale_blind_collision": {
+    "neuron": 0,
+    "rows": [
+      18,
+      27
+    ],
+    "positions": [
+      145,
+      154
+    ],
+    "shared_q": -24,
+    "scales": [
+      0.0066978479735553265,
+      0.0029506615828722715
+    ],
+    "effective_hidden_values": [
+      -0.16074834764003754,
+      -0.07081587612628937
+    ],
+    "single_coordinate_down_delta_l2": 0.05566828325390816
+  },
+  "seconds": 1.588860161980847
+}

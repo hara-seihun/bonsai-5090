@@ -1,0 +1,6302 @@
+{
+  "scope": "whole-model-diagnostics",
+  "logits_available": true,
+  "logits_status": "Compared actual full-vocabulary rows.",
+  "schedule_source": {
+    "oracle": "declared",
+    "candidate": "declared"
+  },
+  "frames": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      4,
+      1
+    ],
+    [
+      5,
+      1
+    ],
+    [
+      6,
+      1
+    ],
+    [
+      7,
+      1
+    ],
+    [
+      8,
+      1
+    ],
+    [
+      9,
+      1
+    ],
+    [
+      10,
+      1
+    ],
+    [
+      11,
+      1
+    ],
+    [
+      12,
+      1
+    ],
+    [
+      13,
+      1
+    ],
+    [
+      14,
+      1
+    ],
+    [
+      15,
+      1
+    ]
+  ],
+  "initial_reset_validation": null,
+  "oracle": "/workspace/ternary-bench/oracle/hybrid-final-debug-step",
+  "candidate": "/workspace/halo-6000/docs/hybrid-forward-b/forward",
+  "oracle_model": "/workspace/models/gguf/Qwen3.6-35B-A3B-ablate-nonexpert-q8-down-q2-PTQ1_0.gguf",
+  "candidate_model": "/workspace/models/gguf/Qwen3.6-35B-A3B-ablate-nonexpert-q8-down-q2-PTQ1_0.gguf",
+  "missing_candidate_phases": [
+    [
+      0,
+      1,
+      "a_softplus-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "alpha-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "attn_norm-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "attn_output-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "attn_post_norm-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "attn_residual-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "beta-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "beta_sigmoid-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "conv_input-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "conv_output_raw-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "conv_output_silu-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "conv_state_last-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "conv_state_update-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "conv_states-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "conv_states_reshaped-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "ffn_gate-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "ffn_moe_argsort-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "ffn_moe_down-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "ffn_moe_gate-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "ffn_moe_logits-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "ffn_moe_out-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "ffn_moe_probs-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "ffn_moe_swiglu-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "ffn_moe_topk-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "ffn_moe_up-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "ffn_moe_weighted-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "ffn_moe_weights-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "ffn_moe_weights_norm-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "ffn_moe_weights_sum-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "ffn_moe_weights_sum_clamped-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "ffn_out-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "ffn_shexp-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "ffn_shexp_gated-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "ffn_swiglu-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "ffn_up-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "final_output-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "gate-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "k_conv-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "k_conv_predelta-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "l_out-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "linear_attn_out-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "linear_attn_qkv_mixed-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "model.input_embed",
+      0
+    ],
+    [
+      0,
+      1,
+      "new_state-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "norm-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "norm-0",
+      1
+    ],
+    [
+      0,
+      1,
+      "norm-0",
+      2
+    ],
+    [
+      0,
+      1,
+      "q_conv-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "q_conv_predelta-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "qkv_mixed_transposed-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "shared_expert_gate-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "shared_expert_gate_sigmoid-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "state_predelta-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "v_conv_predelta-0",
+      0
+    ],
+    [
+      0,
+      1,
+      "z-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "a_softplus-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "alpha-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "attn_norm-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "attn_output-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "attn_post_norm-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "attn_residual-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "beta-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "beta_sigmoid-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "conv_input-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "conv_output_raw-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "conv_output_silu-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "conv_state_last-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "conv_state_update-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "conv_states-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "conv_states_reshaped-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "ffn_gate-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "ffn_moe_argsort-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "ffn_moe_down-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "ffn_moe_gate-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "ffn_moe_logits-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "ffn_moe_out-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "ffn_moe_probs-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "ffn_moe_swiglu-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "ffn_moe_topk-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "ffn_moe_up-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "ffn_moe_weighted-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "ffn_moe_weights-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "ffn_moe_weights_norm-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "ffn_moe_weights_sum-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "ffn_moe_weights_sum_clamped-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "ffn_out-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "ffn_shexp-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "ffn_shexp_gated-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "ffn_swiglu-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "ffn_up-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "final_output-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "gate-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "k_conv-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "k_conv_predelta-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "l_out-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "linear_attn_out-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "linear_attn_qkv_mixed-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "model.input_embed",
+      0
+    ],
+    [
+      1,
+      1,
+      "new_state-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "norm-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "norm-0",
+      1
+    ],
+    [
+      1,
+      1,
+      "norm-0",
+      2
+    ],
+    [
+      1,
+      1,
+      "q_conv-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "q_conv_predelta-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "qkv_mixed_transposed-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "shared_expert_gate-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "shared_expert_gate_sigmoid-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "state_predelta-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "v_conv_predelta-0",
+      0
+    ],
+    [
+      1,
+      1,
+      "z-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "a_softplus-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "alpha-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "attn_norm-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "attn_output-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "attn_post_norm-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "attn_residual-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "beta-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "beta_sigmoid-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "conv_input-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "conv_output_raw-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "conv_output_silu-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "conv_state_last-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "conv_state_update-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "conv_states-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "conv_states_reshaped-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "ffn_gate-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "ffn_moe_argsort-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "ffn_moe_down-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "ffn_moe_gate-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "ffn_moe_logits-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "ffn_moe_out-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "ffn_moe_probs-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "ffn_moe_swiglu-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "ffn_moe_topk-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "ffn_moe_up-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "ffn_moe_weighted-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "ffn_moe_weights-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "ffn_moe_weights_norm-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "ffn_moe_weights_sum-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "ffn_moe_weights_sum_clamped-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "ffn_out-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "ffn_shexp-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "ffn_shexp_gated-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "ffn_swiglu-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "ffn_up-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "final_output-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "gate-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "k_conv-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "k_conv_predelta-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "l_out-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "linear_attn_out-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "linear_attn_qkv_mixed-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "model.input_embed",
+      0
+    ],
+    [
+      2,
+      1,
+      "new_state-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "norm-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "norm-0",
+      1
+    ],
+    [
+      2,
+      1,
+      "norm-0",
+      2
+    ],
+    [
+      2,
+      1,
+      "q_conv-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "q_conv_predelta-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "qkv_mixed_transposed-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "shared_expert_gate-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "shared_expert_gate_sigmoid-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "state_predelta-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "v_conv_predelta-0",
+      0
+    ],
+    [
+      2,
+      1,
+      "z-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "a_softplus-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "alpha-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "attn_norm-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "attn_output-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "attn_post_norm-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "attn_residual-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "beta-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "beta_sigmoid-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "conv_input-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "conv_output_raw-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "conv_output_silu-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "conv_state_last-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "conv_state_update-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "conv_states-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "conv_states_reshaped-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "ffn_gate-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "ffn_moe_argsort-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "ffn_moe_down-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "ffn_moe_gate-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "ffn_moe_logits-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "ffn_moe_out-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "ffn_moe_probs-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "ffn_moe_swiglu-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "ffn_moe_topk-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "ffn_moe_up-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "ffn_moe_weighted-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "ffn_moe_weights-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "ffn_moe_weights_norm-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "ffn_moe_weights_sum-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "ffn_moe_weights_sum_clamped-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "ffn_out-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "ffn_shexp-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "ffn_shexp_gated-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "ffn_swiglu-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "ffn_up-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "final_output-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "gate-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "k_conv-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "k_conv_predelta-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "l_out-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "linear_attn_out-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "linear_attn_qkv_mixed-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "model.input_embed",
+      0
+    ],
+    [
+      3,
+      1,
+      "new_state-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "norm-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "norm-0",
+      1
+    ],
+    [
+      3,
+      1,
+      "norm-0",
+      2
+    ],
+    [
+      3,
+      1,
+      "q_conv-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "q_conv_predelta-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "qkv_mixed_transposed-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "shared_expert_gate-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "shared_expert_gate_sigmoid-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "state_predelta-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "v_conv_predelta-0",
+      0
+    ],
+    [
+      3,
+      1,
+      "z-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "a_softplus-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "alpha-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "attn_norm-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "attn_output-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "attn_post_norm-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "attn_residual-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "beta-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "beta_sigmoid-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "conv_input-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "conv_output_raw-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "conv_output_silu-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "conv_state_last-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "conv_state_update-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "conv_states-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "conv_states_reshaped-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "ffn_gate-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "ffn_moe_argsort-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "ffn_moe_down-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "ffn_moe_gate-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "ffn_moe_logits-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "ffn_moe_out-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "ffn_moe_probs-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "ffn_moe_swiglu-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "ffn_moe_topk-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "ffn_moe_up-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "ffn_moe_weighted-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "ffn_moe_weights-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "ffn_moe_weights_norm-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "ffn_moe_weights_sum-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "ffn_moe_weights_sum_clamped-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "ffn_out-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "ffn_shexp-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "ffn_shexp_gated-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "ffn_swiglu-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "ffn_up-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "final_output-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "gate-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "k_conv-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "k_conv_predelta-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "l_out-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "linear_attn_out-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "linear_attn_qkv_mixed-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "model.input_embed",
+      0
+    ],
+    [
+      4,
+      1,
+      "new_state-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "norm-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "norm-0",
+      1
+    ],
+    [
+      4,
+      1,
+      "norm-0",
+      2
+    ],
+    [
+      4,
+      1,
+      "q_conv-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "q_conv_predelta-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "qkv_mixed_transposed-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "shared_expert_gate-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "shared_expert_gate_sigmoid-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "state_predelta-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "v_conv_predelta-0",
+      0
+    ],
+    [
+      4,
+      1,
+      "z-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "a_softplus-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "alpha-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "attn_norm-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "attn_output-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "attn_post_norm-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "attn_residual-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "beta-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "beta_sigmoid-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "conv_input-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "conv_output_raw-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "conv_output_silu-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "conv_state_last-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "conv_state_update-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "conv_states-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "conv_states_reshaped-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "ffn_gate-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "ffn_moe_argsort-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "ffn_moe_down-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "ffn_moe_gate-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "ffn_moe_logits-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "ffn_moe_out-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "ffn_moe_probs-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "ffn_moe_swiglu-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "ffn_moe_topk-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "ffn_moe_up-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "ffn_moe_weighted-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "ffn_moe_weights-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "ffn_moe_weights_norm-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "ffn_moe_weights_sum-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "ffn_moe_weights_sum_clamped-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "ffn_out-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "ffn_shexp-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "ffn_shexp_gated-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "ffn_swiglu-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "ffn_up-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "final_output-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "gate-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "k_conv-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "k_conv_predelta-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "l_out-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "linear_attn_out-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "linear_attn_qkv_mixed-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "model.input_embed",
+      0
+    ],
+    [
+      5,
+      1,
+      "new_state-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "norm-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "norm-0",
+      1
+    ],
+    [
+      5,
+      1,
+      "norm-0",
+      2
+    ],
+    [
+      5,
+      1,
+      "q_conv-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "q_conv_predelta-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "qkv_mixed_transposed-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "shared_expert_gate-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "shared_expert_gate_sigmoid-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "state_predelta-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "v_conv_predelta-0",
+      0
+    ],
+    [
+      5,
+      1,
+      "z-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "a_softplus-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "alpha-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "attn_norm-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "attn_output-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "attn_post_norm-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "attn_residual-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "beta-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "beta_sigmoid-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "conv_input-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "conv_output_raw-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "conv_output_silu-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "conv_state_last-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "conv_state_update-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "conv_states-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "conv_states_reshaped-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "ffn_gate-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "ffn_moe_argsort-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "ffn_moe_down-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "ffn_moe_gate-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "ffn_moe_logits-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "ffn_moe_out-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "ffn_moe_probs-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "ffn_moe_swiglu-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "ffn_moe_topk-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "ffn_moe_up-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "ffn_moe_weighted-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "ffn_moe_weights-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "ffn_moe_weights_norm-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "ffn_moe_weights_sum-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "ffn_moe_weights_sum_clamped-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "ffn_out-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "ffn_shexp-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "ffn_shexp_gated-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "ffn_swiglu-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "ffn_up-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "final_output-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "gate-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "k_conv-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "k_conv_predelta-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "l_out-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "linear_attn_out-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "linear_attn_qkv_mixed-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "model.input_embed",
+      0
+    ],
+    [
+      6,
+      1,
+      "new_state-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "norm-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "norm-0",
+      1
+    ],
+    [
+      6,
+      1,
+      "norm-0",
+      2
+    ],
+    [
+      6,
+      1,
+      "q_conv-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "q_conv_predelta-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "qkv_mixed_transposed-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "shared_expert_gate-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "shared_expert_gate_sigmoid-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "state_predelta-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "v_conv_predelta-0",
+      0
+    ],
+    [
+      6,
+      1,
+      "z-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "a_softplus-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "alpha-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "attn_norm-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "attn_output-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "attn_post_norm-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "attn_residual-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "beta-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "beta_sigmoid-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "conv_input-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "conv_output_raw-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "conv_output_silu-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "conv_state_last-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "conv_state_update-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "conv_states-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "conv_states_reshaped-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "ffn_gate-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "ffn_moe_argsort-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "ffn_moe_down-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "ffn_moe_gate-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "ffn_moe_logits-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "ffn_moe_out-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "ffn_moe_probs-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "ffn_moe_swiglu-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "ffn_moe_topk-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "ffn_moe_up-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "ffn_moe_weighted-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "ffn_moe_weights-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "ffn_moe_weights_norm-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "ffn_moe_weights_sum-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "ffn_moe_weights_sum_clamped-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "ffn_out-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "ffn_shexp-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "ffn_shexp_gated-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "ffn_swiglu-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "ffn_up-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "final_output-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "gate-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "k_conv-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "k_conv_predelta-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "l_out-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "linear_attn_out-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "linear_attn_qkv_mixed-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "model.input_embed",
+      0
+    ],
+    [
+      7,
+      1,
+      "new_state-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "norm-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "norm-0",
+      1
+    ],
+    [
+      7,
+      1,
+      "norm-0",
+      2
+    ],
+    [
+      7,
+      1,
+      "q_conv-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "q_conv_predelta-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "qkv_mixed_transposed-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "shared_expert_gate-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "shared_expert_gate_sigmoid-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "state_predelta-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "v_conv_predelta-0",
+      0
+    ],
+    [
+      7,
+      1,
+      "z-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "a_softplus-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "alpha-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "attn_norm-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "attn_output-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "attn_post_norm-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "attn_residual-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "beta-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "beta_sigmoid-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "conv_input-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "conv_output_raw-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "conv_output_silu-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "conv_state_last-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "conv_state_update-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "conv_states-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "conv_states_reshaped-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "ffn_gate-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "ffn_moe_argsort-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "ffn_moe_down-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "ffn_moe_gate-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "ffn_moe_logits-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "ffn_moe_out-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "ffn_moe_probs-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "ffn_moe_swiglu-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "ffn_moe_topk-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "ffn_moe_up-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "ffn_moe_weighted-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "ffn_moe_weights-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "ffn_moe_weights_norm-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "ffn_moe_weights_sum-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "ffn_moe_weights_sum_clamped-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "ffn_out-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "ffn_shexp-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "ffn_shexp_gated-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "ffn_swiglu-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "ffn_up-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "final_output-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "gate-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "k_conv-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "k_conv_predelta-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "l_out-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "linear_attn_out-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "linear_attn_qkv_mixed-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "model.input_embed",
+      0
+    ],
+    [
+      8,
+      1,
+      "new_state-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "norm-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "norm-0",
+      1
+    ],
+    [
+      8,
+      1,
+      "norm-0",
+      2
+    ],
+    [
+      8,
+      1,
+      "q_conv-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "q_conv_predelta-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "qkv_mixed_transposed-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "shared_expert_gate-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "shared_expert_gate_sigmoid-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "state_predelta-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "v_conv_predelta-0",
+      0
+    ],
+    [
+      8,
+      1,
+      "z-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "a_softplus-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "alpha-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "attn_norm-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "attn_output-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "attn_post_norm-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "attn_residual-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "beta-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "beta_sigmoid-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "conv_input-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "conv_output_raw-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "conv_output_silu-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "conv_state_last-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "conv_state_update-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "conv_states-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "conv_states_reshaped-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "ffn_gate-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "ffn_moe_argsort-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "ffn_moe_down-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "ffn_moe_gate-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "ffn_moe_logits-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "ffn_moe_out-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "ffn_moe_probs-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "ffn_moe_swiglu-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "ffn_moe_topk-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "ffn_moe_up-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "ffn_moe_weighted-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "ffn_moe_weights-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "ffn_moe_weights_norm-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "ffn_moe_weights_sum-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "ffn_moe_weights_sum_clamped-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "ffn_out-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "ffn_shexp-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "ffn_shexp_gated-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "ffn_swiglu-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "ffn_up-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "final_output-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "gate-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "k_conv-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "k_conv_predelta-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "l_out-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "linear_attn_out-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "linear_attn_qkv_mixed-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "model.input_embed",
+      0
+    ],
+    [
+      9,
+      1,
+      "new_state-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "norm-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "norm-0",
+      1
+    ],
+    [
+      9,
+      1,
+      "norm-0",
+      2
+    ],
+    [
+      9,
+      1,
+      "q_conv-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "q_conv_predelta-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "qkv_mixed_transposed-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "shared_expert_gate-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "shared_expert_gate_sigmoid-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "state_predelta-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "v_conv_predelta-0",
+      0
+    ],
+    [
+      9,
+      1,
+      "z-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "a_softplus-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "alpha-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "attn_norm-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "attn_output-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "attn_post_norm-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "attn_residual-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "beta-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "beta_sigmoid-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "conv_input-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "conv_output_raw-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "conv_output_silu-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "conv_state_last-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "conv_state_update-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "conv_states-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "conv_states_reshaped-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "ffn_gate-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "ffn_moe_argsort-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "ffn_moe_down-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "ffn_moe_gate-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "ffn_moe_logits-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "ffn_moe_out-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "ffn_moe_probs-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "ffn_moe_swiglu-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "ffn_moe_topk-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "ffn_moe_up-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "ffn_moe_weighted-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "ffn_moe_weights-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "ffn_moe_weights_norm-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "ffn_moe_weights_sum-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "ffn_moe_weights_sum_clamped-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "ffn_out-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "ffn_shexp-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "ffn_shexp_gated-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "ffn_swiglu-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "ffn_up-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "final_output-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "gate-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "k_conv-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "k_conv_predelta-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "l_out-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "linear_attn_out-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "linear_attn_qkv_mixed-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "model.input_embed",
+      0
+    ],
+    [
+      10,
+      1,
+      "new_state-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "norm-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "norm-0",
+      1
+    ],
+    [
+      10,
+      1,
+      "norm-0",
+      2
+    ],
+    [
+      10,
+      1,
+      "q_conv-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "q_conv_predelta-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "qkv_mixed_transposed-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "shared_expert_gate-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "shared_expert_gate_sigmoid-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "state_predelta-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "v_conv_predelta-0",
+      0
+    ],
+    [
+      10,
+      1,
+      "z-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "a_softplus-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "alpha-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "attn_norm-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "attn_output-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "attn_post_norm-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "attn_residual-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "beta-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "beta_sigmoid-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "conv_input-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "conv_output_raw-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "conv_output_silu-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "conv_state_last-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "conv_state_update-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "conv_states-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "conv_states_reshaped-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "ffn_gate-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "ffn_moe_argsort-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "ffn_moe_down-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "ffn_moe_gate-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "ffn_moe_logits-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "ffn_moe_out-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "ffn_moe_probs-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "ffn_moe_swiglu-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "ffn_moe_topk-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "ffn_moe_up-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "ffn_moe_weighted-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "ffn_moe_weights-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "ffn_moe_weights_norm-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "ffn_moe_weights_sum-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "ffn_moe_weights_sum_clamped-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "ffn_out-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "ffn_shexp-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "ffn_shexp_gated-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "ffn_swiglu-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "ffn_up-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "final_output-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "gate-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "k_conv-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "k_conv_predelta-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "l_out-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "linear_attn_out-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "linear_attn_qkv_mixed-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "model.input_embed",
+      0
+    ],
+    [
+      11,
+      1,
+      "new_state-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "norm-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "norm-0",
+      1
+    ],
+    [
+      11,
+      1,
+      "norm-0",
+      2
+    ],
+    [
+      11,
+      1,
+      "q_conv-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "q_conv_predelta-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "qkv_mixed_transposed-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "shared_expert_gate-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "shared_expert_gate_sigmoid-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "state_predelta-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "v_conv_predelta-0",
+      0
+    ],
+    [
+      11,
+      1,
+      "z-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "a_softplus-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "alpha-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "attn_norm-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "attn_output-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "attn_post_norm-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "attn_residual-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "beta-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "beta_sigmoid-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "conv_input-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "conv_output_raw-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "conv_output_silu-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "conv_state_last-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "conv_state_update-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "conv_states-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "conv_states_reshaped-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "ffn_gate-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "ffn_moe_argsort-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "ffn_moe_down-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "ffn_moe_gate-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "ffn_moe_logits-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "ffn_moe_out-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "ffn_moe_probs-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "ffn_moe_swiglu-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "ffn_moe_topk-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "ffn_moe_up-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "ffn_moe_weighted-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "ffn_moe_weights-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "ffn_moe_weights_norm-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "ffn_moe_weights_sum-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "ffn_moe_weights_sum_clamped-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "ffn_out-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "ffn_shexp-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "ffn_shexp_gated-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "ffn_swiglu-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "ffn_up-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "final_output-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "gate-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "k_conv-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "k_conv_predelta-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "l_out-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "linear_attn_out-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "linear_attn_qkv_mixed-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "model.input_embed",
+      0
+    ],
+    [
+      12,
+      1,
+      "new_state-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "norm-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "norm-0",
+      1
+    ],
+    [
+      12,
+      1,
+      "norm-0",
+      2
+    ],
+    [
+      12,
+      1,
+      "q_conv-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "q_conv_predelta-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "qkv_mixed_transposed-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "shared_expert_gate-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "shared_expert_gate_sigmoid-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "state_predelta-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "v_conv_predelta-0",
+      0
+    ],
+    [
+      12,
+      1,
+      "z-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "a_softplus-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "alpha-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "attn_norm-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "attn_output-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "attn_post_norm-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "attn_residual-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "beta-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "beta_sigmoid-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "conv_input-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "conv_output_raw-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "conv_output_silu-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "conv_state_last-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "conv_state_update-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "conv_states-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "conv_states_reshaped-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "ffn_gate-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "ffn_moe_argsort-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "ffn_moe_down-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "ffn_moe_gate-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "ffn_moe_logits-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "ffn_moe_out-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "ffn_moe_probs-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "ffn_moe_swiglu-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "ffn_moe_topk-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "ffn_moe_up-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "ffn_moe_weighted-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "ffn_moe_weights-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "ffn_moe_weights_norm-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "ffn_moe_weights_sum-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "ffn_moe_weights_sum_clamped-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "ffn_out-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "ffn_shexp-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "ffn_shexp_gated-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "ffn_swiglu-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "ffn_up-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "final_output-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "gate-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "k_conv-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "k_conv_predelta-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "l_out-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "linear_attn_out-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "linear_attn_qkv_mixed-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "model.input_embed",
+      0
+    ],
+    [
+      13,
+      1,
+      "new_state-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "norm-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "norm-0",
+      1
+    ],
+    [
+      13,
+      1,
+      "norm-0",
+      2
+    ],
+    [
+      13,
+      1,
+      "q_conv-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "q_conv_predelta-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "qkv_mixed_transposed-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "shared_expert_gate-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "shared_expert_gate_sigmoid-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "state_predelta-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "v_conv_predelta-0",
+      0
+    ],
+    [
+      13,
+      1,
+      "z-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "a_softplus-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "alpha-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "attn_norm-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "attn_output-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "attn_post_norm-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "attn_residual-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "beta-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "beta_sigmoid-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "conv_input-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "conv_output_raw-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "conv_output_silu-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "conv_state_last-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "conv_state_update-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "conv_states-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "conv_states_reshaped-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "ffn_gate-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "ffn_moe_argsort-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "ffn_moe_down-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "ffn_moe_gate-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "ffn_moe_logits-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "ffn_moe_out-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "ffn_moe_probs-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "ffn_moe_swiglu-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "ffn_moe_topk-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "ffn_moe_up-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "ffn_moe_weighted-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "ffn_moe_weights-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "ffn_moe_weights_norm-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "ffn_moe_weights_sum-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "ffn_moe_weights_sum_clamped-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "ffn_out-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "ffn_shexp-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "ffn_shexp_gated-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "ffn_swiglu-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "ffn_up-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "final_output-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "gate-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "k_conv-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "k_conv_predelta-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "l_out-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "linear_attn_out-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "linear_attn_qkv_mixed-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "model.input_embed",
+      0
+    ],
+    [
+      14,
+      1,
+      "new_state-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "norm-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "norm-0",
+      1
+    ],
+    [
+      14,
+      1,
+      "norm-0",
+      2
+    ],
+    [
+      14,
+      1,
+      "q_conv-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "q_conv_predelta-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "qkv_mixed_transposed-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "shared_expert_gate-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "shared_expert_gate_sigmoid-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "state_predelta-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "v_conv_predelta-0",
+      0
+    ],
+    [
+      14,
+      1,
+      "z-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "a_softplus-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "alpha-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "attn_norm-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "attn_output-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "attn_post_norm-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "attn_residual-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "beta-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "beta_sigmoid-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "conv_input-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "conv_output_raw-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "conv_output_silu-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "conv_state_last-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "conv_state_update-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "conv_states-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "conv_states_reshaped-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "ffn_gate-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "ffn_moe_argsort-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "ffn_moe_down-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "ffn_moe_gate-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "ffn_moe_logits-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "ffn_moe_out-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "ffn_moe_probs-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "ffn_moe_swiglu-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "ffn_moe_topk-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "ffn_moe_up-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "ffn_moe_weighted-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "ffn_moe_weights-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "ffn_moe_weights_norm-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "ffn_moe_weights_sum-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "ffn_moe_weights_sum_clamped-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "ffn_out-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "ffn_shexp-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "ffn_shexp_gated-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "ffn_swiglu-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "ffn_up-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "final_output-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "gate-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "k_conv-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "k_conv_predelta-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "l_out-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "linear_attn_out-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "linear_attn_qkv_mixed-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "model.input_embed",
+      0
+    ],
+    [
+      15,
+      1,
+      "new_state-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "norm-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "norm-0",
+      1
+    ],
+    [
+      15,
+      1,
+      "norm-0",
+      2
+    ],
+    [
+      15,
+      1,
+      "q_conv-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "q_conv_predelta-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "qkv_mixed_transposed-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "shared_expert_gate-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "shared_expert_gate_sigmoid-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "state_predelta-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "v_conv_predelta-0",
+      0
+    ],
+    [
+      15,
+      1,
+      "z-0",
+      0
+    ]
+  ],
+  "extra_candidate_phases": [],
+  "phase_comparisons": [
+    {
+      "position": 0,
+      "batch": 1,
+      "name": "h_nextn",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.05351110175251961,
+      "rms": 0.016225879420871125,
+      "relative_l2": 0.016225935776074868
+    },
+    {
+      "position": 0,
+      "batch": 1,
+      "name": "l_out-39",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.02032550796866417,
+      "rms": 0.006182272627195726,
+      "relative_l2": 0.016287601374607604
+    },
+    {
+      "position": 0,
+      "batch": 1,
+      "name": "result_norm",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.05351110175251961,
+      "rms": 0.016225879420871125,
+      "relative_l2": 0.016225935776074868
+    },
+    {
+      "position": 1,
+      "batch": 1,
+      "name": "h_nextn",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.025854870676994324,
+      "rms": 0.007853483394189663,
+      "relative_l2": 0.007853498754606794
+    },
+    {
+      "position": 1,
+      "batch": 1,
+      "name": "l_out-39",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.012609630823135376,
+      "rms": 0.004002058816266547,
+      "relative_l2": 0.008145610298543713
+    },
+    {
+      "position": 1,
+      "batch": 1,
+      "name": "result_norm",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.025854870676994324,
+      "rms": 0.007853483394189663,
+      "relative_l2": 0.007853498754606794
+    },
+    {
+      "position": 2,
+      "batch": 1,
+      "name": "h_nextn",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.05522000789642334,
+      "rms": 0.015625268845604397,
+      "relative_l2": 0.01562535999425697
+    },
+    {
+      "position": 2,
+      "batch": 1,
+      "name": "l_out-39",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.01581403613090515,
+      "rms": 0.004576709116035499,
+      "relative_l2": 0.015636841562568216
+    },
+    {
+      "position": 2,
+      "batch": 1,
+      "name": "result_norm",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.05522000789642334,
+      "rms": 0.015625268845604397,
+      "relative_l2": 0.01562535999425697
+    },
+    {
+      "position": 3,
+      "batch": 1,
+      "name": "h_nextn",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.04450958967208862,
+      "rms": 0.014020150326702346,
+      "relative_l2": 0.014020337295168326
+    },
+    {
+      "position": 3,
+      "batch": 1,
+      "name": "l_out-39",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.009071499109268188,
+      "rms": 0.0027530390668818547,
+      "relative_l2": 0.014235277299291756
+    },
+    {
+      "position": 3,
+      "batch": 1,
+      "name": "result_norm",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.04450958967208862,
+      "rms": 0.014020150326702346,
+      "relative_l2": 0.014020337295168326
+    },
+    {
+      "position": 4,
+      "batch": 1,
+      "name": "h_nextn",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.04978978633880615,
+      "rms": 0.015221173560062194,
+      "relative_l2": 0.015221211029074498
+    },
+    {
+      "position": 4,
+      "batch": 1,
+      "name": "l_out-39",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.023215293884277344,
+      "rms": 0.006753619402964469,
+      "relative_l2": 0.015336583635310513
+    },
+    {
+      "position": 4,
+      "batch": 1,
+      "name": "result_norm",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.04978978633880615,
+      "rms": 0.015221173560062194,
+      "relative_l2": 0.015221211029074498
+    },
+    {
+      "position": 5,
+      "batch": 1,
+      "name": "h_nextn",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.10084867477416992,
+      "rms": 0.027615967672525443,
+      "relative_l2": 0.02761602634157754
+    },
+    {
+      "position": 5,
+      "batch": 1,
+      "name": "l_out-39",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.05594980716705322,
+      "rms": 0.01415077048613916,
+      "relative_l2": 0.028780189002190006
+    },
+    {
+      "position": 5,
+      "batch": 1,
+      "name": "result_norm",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.10084867477416992,
+      "rms": 0.027615967672525443,
+      "relative_l2": 0.02761602634157754
+    },
+    {
+      "position": 6,
+      "batch": 1,
+      "name": "h_nextn",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.09208501875400543,
+      "rms": 0.02507988032856363,
+      "relative_l2": 0.02507994629431185
+    },
+    {
+      "position": 6,
+      "batch": 1,
+      "name": "l_out-39",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.040415287017822266,
+      "rms": 0.010999120347182626,
+      "relative_l2": 0.025266382334682706
+    },
+    {
+      "position": 6,
+      "batch": 1,
+      "name": "result_norm",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.09208501875400543,
+      "rms": 0.02507988032856363,
+      "relative_l2": 0.02507994629431185
+    },
+    {
+      "position": 7,
+      "batch": 1,
+      "name": "h_nextn",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.09915751218795776,
+      "rms": 0.02476848683088586,
+      "relative_l2": 0.024768543626248456
+    },
+    {
+      "position": 7,
+      "batch": 1,
+      "name": "l_out-39",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.04653489589691162,
+      "rms": 0.011699545114105243,
+      "relative_l2": 0.025152381612889744
+    },
+    {
+      "position": 7,
+      "batch": 1,
+      "name": "result_norm",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.09915751218795776,
+      "rms": 0.02476848683088586,
+      "relative_l2": 0.024768543626248456
+    },
+    {
+      "position": 8,
+      "batch": 1,
+      "name": "h_nextn",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.07630956172943115,
+      "rms": 0.023374434566159914,
+      "relative_l2": 0.023374604414735968
+    },
+    {
+      "position": 8,
+      "batch": 1,
+      "name": "l_out-39",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.022267401218414307,
+      "rms": 0.006310113939105857,
+      "relative_l2": 0.023953066610374923
+    },
+    {
+      "position": 8,
+      "batch": 1,
+      "name": "result_norm",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.07630956172943115,
+      "rms": 0.023374434566159914,
+      "relative_l2": 0.023374604414735968
+    },
+    {
+      "position": 9,
+      "batch": 1,
+      "name": "h_nextn",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.14017194509506226,
+      "rms": 0.036696940714529204,
+      "relative_l2": 0.036697037235769336
+    },
+    {
+      "position": 9,
+      "batch": 1,
+      "name": "l_out-39",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.05964004993438721,
+      "rms": 0.0159371389951688,
+      "relative_l2": 0.036792130539409475
+    },
+    {
+      "position": 9,
+      "batch": 1,
+      "name": "result_norm",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.14017194509506226,
+      "rms": 0.036696940714529204,
+      "relative_l2": 0.036697037235769336
+    },
+    {
+      "position": 10,
+      "batch": 1,
+      "name": "h_nextn",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.10901594161987305,
+      "rms": 0.028101117432638566,
+      "relative_l2": 0.028101193713682297
+    },
+    {
+      "position": 10,
+      "batch": 1,
+      "name": "l_out-39",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.04607844352722168,
+      "rms": 0.01208301071244037,
+      "relative_l2": 0.028110929237189754
+    },
+    {
+      "position": 10,
+      "batch": 1,
+      "name": "result_norm",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.10901594161987305,
+      "rms": 0.028101117432638566,
+      "relative_l2": 0.028101193713682297
+    },
+    {
+      "position": 11,
+      "batch": 1,
+      "name": "h_nextn",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.05096888542175293,
+      "rms": 0.017706589973953708,
+      "relative_l2": 0.01770663654628343
+    },
+    {
+      "position": 11,
+      "batch": 1,
+      "name": "l_out-39",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.02359682321548462,
+      "rms": 0.007885753139933832,
+      "relative_l2": 0.018106420529174425
+    },
+    {
+      "position": 11,
+      "batch": 1,
+      "name": "result_norm",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.05096888542175293,
+      "rms": 0.017706589973953708,
+      "relative_l2": 0.01770663654628343
+    },
+    {
+      "position": 12,
+      "batch": 1,
+      "name": "h_nextn",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.06170743703842163,
+      "rms": 0.01580219128860434,
+      "relative_l2": 0.015802246172268056
+    },
+    {
+      "position": 12,
+      "batch": 1,
+      "name": "l_out-39",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.023913443088531494,
+      "rms": 0.006009468833705804,
+      "relative_l2": 0.015868336108905687
+    },
+    {
+      "position": 12,
+      "batch": 1,
+      "name": "result_norm",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.06170743703842163,
+      "rms": 0.01580219128860434,
+      "relative_l2": 0.015802246172268056
+    },
+    {
+      "position": 13,
+      "batch": 1,
+      "name": "h_nextn",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.06736016273498535,
+      "rms": 0.019347443393338885,
+      "relative_l2": 0.019347551362315876
+    },
+    {
+      "position": 13,
+      "batch": 1,
+      "name": "l_out-39",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.020396173000335693,
+      "rms": 0.005812616431410022,
+      "relative_l2": 0.01936197345320894
+    },
+    {
+      "position": 13,
+      "batch": 1,
+      "name": "result_norm",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.06736016273498535,
+      "rms": 0.019347443393338885,
+      "relative_l2": 0.019347551362315876
+    },
+    {
+      "position": 14,
+      "batch": 1,
+      "name": "h_nextn",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.05672335624694824,
+      "rms": 0.01765571046875185,
+      "relative_l2": 0.01765577923137928
+    },
+    {
+      "position": 14,
+      "batch": 1,
+      "name": "l_out-39",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.023674368858337402,
+      "rms": 0.006585539079673126,
+      "relative_l2": 0.018379927534548382
+    },
+    {
+      "position": 14,
+      "batch": 1,
+      "name": "result_norm",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.05672335624694824,
+      "rms": 0.01765571046875185,
+      "relative_l2": 0.01765577923137928
+    },
+    {
+      "position": 15,
+      "batch": 1,
+      "name": "h_nextn",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.054563045501708984,
+      "rms": 0.01491647015809412,
+      "relative_l2": 0.014916549627760234
+    },
+    {
+      "position": 15,
+      "batch": 1,
+      "name": "l_out-39",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.017073482275009155,
+      "rms": 0.004619363988363738,
+      "relative_l2": 0.015066327123632922
+    },
+    {
+      "position": 15,
+      "batch": 1,
+      "name": "result_norm",
+      "occurrence": 0,
+      "reference_dtype": "f32",
+      "candidate_dtype": "f32",
+      "dtype_match": true,
+      "shape_match": true,
+      "finite": true,
+      "elements": 2048,
+      "max_abs": 0.054563045501708984,
+      "rms": 0.01491647015809412,
+      "relative_l2": 0.014916549627760234
+    }
+  ],
+  "logit_comparisons": [
+    {
+      "position": 0,
+      "shape_match": true,
+      "finite": true,
+      "elements": 248320,
+      "max_abs": 0.19485902786254883,
+      "rms": 0.03916456840027113,
+      "relative_l2": 0.013693860146603494,
+      "mean_kld": 0.0007902608118900958,
+      "top1_agreement": true
+    },
+    {
+      "position": 1,
+      "shape_match": true,
+      "finite": true,
+      "elements": 248320,
+      "max_abs": 0.1249237060546875,
+      "rms": 0.02330292167586606,
+      "relative_l2": 0.00877375757377148,
+      "mean_kld": 0.00024164317268382825,
+      "top1_agreement": true
+    },
+    {
+      "position": 2,
+      "shape_match": true,
+      "finite": true,
+      "elements": 248320,
+      "max_abs": 0.1760503053665161,
+      "rms": 0.03572604914985035,
+      "relative_l2": 0.009965583164205045,
+      "mean_kld": 0.0005865091447616953,
+      "top1_agreement": true
+    },
+    {
+      "position": 3,
+      "shape_match": true,
+      "finite": true,
+      "elements": 248320,
+      "max_abs": 0.19144392013549805,
+      "rms": 0.04127119407662059,
+      "relative_l2": 0.013327641078600816,
+      "mean_kld": 0.0005835198640755788,
+      "top1_agreement": true
+    },
+    {
+      "position": 4,
+      "shape_match": true,
+      "finite": true,
+      "elements": 248320,
+      "max_abs": 0.16463756561279297,
+      "rms": 0.03647052774325025,
+      "relative_l2": 0.013707771862690767,
+      "mean_kld": 0.00025320437080066874,
+      "top1_agreement": true
+    },
+    {
+      "position": 5,
+      "shape_match": true,
+      "finite": true,
+      "elements": 248320,
+      "max_abs": 0.30113470554351807,
+      "rms": 0.05933058160631891,
+      "relative_l2": 0.017671550939840193,
+      "mean_kld": 0.0019142013843780857,
+      "top1_agreement": true
+    },
+    {
+      "position": 6,
+      "shape_match": true,
+      "finite": true,
+      "elements": 248320,
+      "max_abs": 0.3075055480003357,
+      "rms": 0.057325460897168175,
+      "relative_l2": 0.01837605622966088,
+      "mean_kld": 0.0015222319730275524,
+      "top1_agreement": true
+    },
+    {
+      "position": 7,
+      "shape_match": true,
+      "finite": true,
+      "elements": 248320,
+      "max_abs": 0.3176612854003906,
+      "rms": 0.05925997456861173,
+      "relative_l2": 0.016684232555744666,
+      "mean_kld": 4.081804585883061e-05,
+      "top1_agreement": true
+    },
+    {
+      "position": 8,
+      "shape_match": true,
+      "finite": true,
+      "elements": 248320,
+      "max_abs": 0.2917938232421875,
+      "rms": 0.05410052083277287,
+      "relative_l2": 0.01766333162014382,
+      "mean_kld": 9.110256101746342e-06,
+      "top1_agreement": true
+    },
+    {
+      "position": 9,
+      "shape_match": true,
+      "finite": true,
+      "elements": 248320,
+      "max_abs": 0.4113426208496094,
+      "rms": 0.0765331977018974,
+      "relative_l2": 0.029709258513473745,
+      "mean_kld": 0.00285425463447569,
+      "top1_agreement": true
+    },
+    {
+      "position": 10,
+      "shape_match": true,
+      "finite": true,
+      "elements": 248320,
+      "max_abs": 0.4388536214828491,
+      "rms": 0.06517342402466043,
+      "relative_l2": 0.02799325595941971,
+      "mean_kld": 0.0007640414988645892,
+      "top1_agreement": true
+    },
+    {
+      "position": 11,
+      "shape_match": true,
+      "finite": true,
+      "elements": 248320,
+      "max_abs": 0.24229538440704346,
+      "rms": 0.04004745629782904,
+      "relative_l2": 0.01254879949945181,
+      "mean_kld": 0.0007418034695606727,
+      "top1_agreement": true
+    },
+    {
+      "position": 12,
+      "shape_match": true,
+      "finite": true,
+      "elements": 248320,
+      "max_abs": 0.22134733200073242,
+      "rms": 0.034506114276710374,
+      "relative_l2": 0.010542864055238969,
+      "mean_kld": 0.0006519573575787384,
+      "top1_agreement": true
+    },
+    {
+      "position": 13,
+      "shape_match": true,
+      "finite": true,
+      "elements": 248320,
+      "max_abs": 0.22557663917541504,
+      "rms": 0.04222842087422072,
+      "relative_l2": 0.016166777664407633,
+      "mean_kld": 0.0004940077096548807,
+      "top1_agreement": true
+    },
+    {
+      "position": 14,
+      "shape_match": true,
+      "finite": true,
+      "elements": 248320,
+      "max_abs": 0.20206785202026367,
+      "rms": 0.038354699927081654,
+      "relative_l2": 0.015687924042408572,
+      "mean_kld": 0.0017764351441212222,
+      "top1_agreement": true
+    },
+    {
+      "position": 15,
+      "shape_match": true,
+      "finite": true,
+      "elements": 248320,
+      "max_abs": 0.19262027740478516,
+      "rms": 0.03586062330332119,
+      "relative_l2": 0.01506122426230691,
+      "mean_kld": 0.0004762928580417587,
+      "top1_agreement": true
+    }
+  ],
+  "oracle_argmax_tokens": [
+    2,
+    220,
+    11,
+    752,
+    198,
+    198,
+    410,
+    211388,
+    455,
+    369,
+    264,
+    11745,
+    11745,
+    7300,
+    12069,
+    321
+  ],
+  "candidate_argmax_tokens": [
+    2,
+    220,
+    11,
+    752,
+    198,
+    198,
+    410,
+    211388,
+    455,
+    369,
+    264,
+    11745,
+    11745,
+    7300,
+    12069,
+    321
+  ],
+  "oracle_token_digest": "fd545ca8761402dcb28b35fa7232cd66ce3c870b14430d156dc4a3e20827d759",
+  "candidate_token_digest": "fd545ca8761402dcb28b35fa7232cd66ce3c870b14430d156dc4a3e20827d759",
+  "note": "Teacher-forced argmax digest, not a free-running greedy continuation. Phase acceptance tolerances are caller-owned."
+}

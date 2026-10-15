@@ -1,0 +1,72 @@
+#!/usr/bin/env python3
+"""Own a server's lifetime while running a declared paired task panel.
+
+Run under flock /tmp/binary-gpu.lock. Commands and environment are explicit JSON.
+A quick 32+32 panel is a scoped task panel, not the full quality gate.
+"""
+import argparse
+import json
+import os
+from pathlib import Path
+import subprocess
+import sys
+import time
+import urllib.error
+import urllib.request
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument('--config', type=Path, required=True)
+    a = ap.parse_args()
+    config = json.loads(a.config.read_text())
+    required = {'command', 'env', 'url', 'out', 'gate_args', 'startup_seconds', 'run_seconds', 'metrics_path'}
+    if set(config) != required:
+        raise ValueError('CONFIG_FIELDS_MISMATCH')
+    if not isinstance(config['command'], list) or not config['command']:
+        raise ValueError('SERVER_COMMAND_REQUIRED')
+    out = Path(config['out'])
+    out.mkdir(parents=True, exist_ok=True)
+    (out / 'launch.json').write_text(json.dumps(config, indent=2) + '\n')
+    gate = Path(__file__).resolve().parents[1] / 'quality_gate.py'
+    with (out / 'server.log').open('w') as log:
+        server = subprocess.Popen(config['command'], env={**os.environ, **config['env']}, stdout=log, stderr=subprocess.STDOUT)
+        try:
+            deadline = time.monotonic() + config['startup_seconds']
+            while True:
+                if server.poll() is not None:
+                    raise RuntimeError(f'SERVER_EXIT_BEFORE_READY:{server.returncode}')
+                try:
+                    with urllib.request.urlopen(config['url'] + '/v1/models', timeout=2) as response:
+                        models = json.load(response)
+                    if not models.get('data'):
+                        raise ValueError('MODEL_LIST_EMPTY')
+                    break
+                except (urllib.error.URLError, TimeoutError):
+                    if time.monotonic() >= deadline:
+                        raise TimeoutError('SERVER_START_TIMEOUT')
+                    time.sleep(0.2)
+            (out / 'models.json').write_text(json.dumps(models, indent=2) + '\n')
+            def metrics(name):
+                if config['metrics_path'] is None:
+                    return
+                with urllib.request.urlopen(config['url'] + config['metrics_path'], timeout=10) as response:
+                    data = json.load(response)
+                (out / f'metrics-{name}.json').write_text(json.dumps(data, indent=2) + '\n')
+            metrics('before')
+            result = subprocess.run([sys.executable, str(gate), '--server', config['url'], '--out', str(out), *config['gate_args']], timeout=config['run_seconds'])
+            metrics('after')
+            (out / 'run-receipt.json').write_text(json.dumps({'status': 'complete' if result.returncode == 0 else 'failed', 'exit_code': result.returncode}) + '\n')
+            return result.returncode
+        finally:
+            if server.poll() is None:
+                server.terminate()
+                try:
+                    server.wait(timeout=10)
+                except subprocess.TimeoutExpired:
+                    server.kill()
+                    server.wait(timeout=10)
+
+
+if __name__ == '__main__':
+    sys.exit(main())

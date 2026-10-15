@@ -1,0 +1,39 @@
+C:/work\models\experiments\bonsai-quality-20261013\fp4-fibre-search\affine-gu-context\native_affine_context.cu(11): warning #177-D: variable "DS" was declared but never referenced
+  constexpr int N=54675, DS=11313;
+                         ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z6nativeILb0EEvPjPK6float4PK6float2Py' for 'sm_120a'
+ptxas info    : Function properties for _Z6nativeILb0EEvPjPK6float4PK6float2Py
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 21 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6nativeILb1EEvPjPK6float4PK6float2Py' for 'sm_120a'
+ptxas info    : Function properties for _Z6nativeILb1EEvPjPK6float4PK6float2Py
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 25 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z7comparePKjS0_Py' for 'sm_120a'
+ptxas info    : Function properties for _Z7comparePKjS0_Py
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 10 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6lookupPjPKj' for 'sm_120a'
+ptxas info    : Function properties for _Z6lookupPjPKj
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 12 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6directPj' for 'sm_120a'
+ptxas info    : Function properties for _Z6directPj
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 20 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z7preparePj' for 'sm_120a'
+ptxas info    : Function properties for _Z7preparePj
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 18 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+native_affine_context.cu
+tmpxft_00007a10_00000000-10_native_affine_context.cudafe1.cpp

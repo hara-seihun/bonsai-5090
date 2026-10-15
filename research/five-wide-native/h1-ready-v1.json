@@ -1,0 +1,21 @@
+{
+  "state": "cpu_ready_gpu_unrun",
+  "source_commit": "5079ef7d6d065a939b8640c1b93a286e57fd1b3b",
+  "source_branch": "agent/fullk-h1-tail",
+  "private_source_owner": "~/projects/halo-5090",
+  "parent_source_commit": "d7926585e8c84ee0ffacd84a4b15249951f752e9",
+  "dll_sha256": "398a9d2bb38ec8613af6663dd782a282727da04b5f255f43e4c10780f1c6d768",
+  "incremental_bundle_sha256": "1d0afe97aa699cd015bafdf0b7da59813b4e3afe066c04069d5ce6d3229b8c9f",
+  "bundle_prerequisite": "d7926585e8c84ee0ffacd84a4b15249951f752e9, retained in fullk-packed-tail-v3.bundle and private source owner",
+  "gpu_window_bound_seconds": 240,
+  "native_subprocess_bound_seconds": 50,
+  "gpu_authority": "explicit PrismML between-shard handback required",
+  "strict_reference_profile": {"H5_DETERMINISTIC_GEMM": "1", "H5_DOWN_CLEAR": "0"},
+  "strict_candidate_profile": {"H5_DETERMINISTIC_GEMM": "1", "H5_DOWN_CLEAR": "0"},
+  "ordinary_tps_baseline": 6777.352952,
+  "deterministic_tps_baseline": 6583.070035,
+  "tests": "h1-test-plan-v1.json; scripts run-h1-v1-*; begin-h1-window-v1.py only after explicit handback",
+  "gpu_observations": null,
+  "serving_mutation": false,
+  "managed_writer": "released after private push"
+}

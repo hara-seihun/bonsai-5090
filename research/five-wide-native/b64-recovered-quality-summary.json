@@ -1,0 +1,158 @@
+{
+  "scope": "retained B64\u00d7512 timing-output screen, nonthinking greedy, 3 passes; first 8 warmup outputs plus initial prefill prediction were not captured; decoded only to first EOG; reused GSM64, not published benchmark",
+  "jobs": [
+    {
+      "job": "b64-wf0-a1",
+      "tps": 6635.443954,
+      "samples": [
+        6635.443954,
+        6643.455392,
+        6633.68597
+      ],
+      "quality": [
+        {
+          "pass_id": 0,
+          "correct": 58,
+          "total": 64,
+          "ended": 64
+        },
+        {
+          "pass_id": 1,
+          "correct": 58,
+          "total": 64,
+          "ended": 64
+        },
+        {
+          "pass_id": 2,
+          "correct": 60,
+          "total": 64,
+          "ended": 64
+        }
+      ],
+      "status": "measured"
+    },
+    {
+      "job": "b64-dense5-b1",
+      "tps": 6186.335101,
+      "samples": [
+        6187.205449,
+        6186.335101,
+        6180.785175
+      ],
+      "quality": [
+        {
+          "pass_id": 0,
+          "correct": 59,
+          "total": 64,
+          "ended": 64
+        },
+        {
+          "pass_id": 1,
+          "correct": 57,
+          "total": 64,
+          "ended": 64
+        },
+        {
+          "pass_id": 2,
+          "correct": 58,
+          "total": 64,
+          "ended": 64
+        }
+      ],
+      "status": "measured"
+    },
+    {
+      "job": "b64-dense5-b2",
+      "tps": 6201.719168,
+      "samples": [
+        6201.719168,
+        6205.923206,
+        6201.028612
+      ],
+      "quality": [
+        {
+          "pass_id": 0,
+          "correct": 58,
+          "total": 64,
+          "ended": 64
+        },
+        {
+          "pass_id": 1,
+          "correct": 59,
+          "total": 64,
+          "ended": 64
+        },
+        {
+          "pass_id": 2,
+          "correct": 59,
+          "total": 64,
+          "ended": 64
+        }
+      ],
+      "status": "measured"
+    },
+    {
+      "job": "b64-wf0-a2",
+      "tps": 6624.701999,
+      "samples": [
+        6620.303129,
+        6624.722893,
+        6624.701999
+      ],
+      "quality": [
+        {
+          "pass_id": 0,
+          "correct": 58,
+          "total": 64,
+          "ended": 64
+        },
+        {
+          "pass_id": 1,
+          "correct": 57,
+          "total": 64,
+          "ended": 64
+        },
+        {
+          "pass_id": 2,
+          "correct": 59,
+          "total": 64,
+          "ended": 64
+        }
+      ],
+      "status": "measured"
+    }
+  ],
+  "pairs": [
+    {
+      "a": "b64-wf0-a1",
+      "b": "b64-dense5-b1",
+      "text_differences": 122,
+      "prediction_differences": 11,
+      "total": 192
+    },
+    {
+      "a": "b64-wf0-a2",
+      "b": "b64-dense5-b2",
+      "text_differences": 115,
+      "prediction_differences": 11,
+      "total": 192
+    },
+    {
+      "a": "b64-wf0-a1",
+      "b": "b64-wf0-a2",
+      "text_differences": 124,
+      "prediction_differences": 6,
+      "total": 192
+    },
+    {
+      "a": "b64-dense5-b1",
+      "b": "b64-dense5-b2",
+      "text_differences": 123,
+      "prediction_differences": 11,
+      "total": 192
+    }
+  ],
+  "wf0_arm_mean": 6630.0729765,
+  "dense5_arm_mean": 6194.0271345,
+  "dense5_throughput_change_percent": -6.576787971196463
+}

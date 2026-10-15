@@ -1,0 +1,15 @@
+{
+  "source_sha256": "1b7781054dddea5b4b81614b8c5ac66fb45a5090d6736732498032b64231192e",
+  "exit": 0,
+  "stdout": "{\"state\":\"native_target_collision\",\"carrier_bits\":[1269301248,1269301248],\"carrier_values\":[22020096,22020096],\"gate\":[0,0.0009765625],\"up\":[43008,43008],\"y\":[0,21.0102539],\"block_q8_scale\":[0,0.165435076],\"block_q8_first_byte\":[0,127],\"activation_scale_codes\":[126,1],\"weight_scale\":1,\"same_weight_matrix\":true,\"varying_input\":\"one raw FP4 activation0 versus0.5; another zero-weighted activation6 keeps the16K scale unchanged\",\"padding\":\"rest of K5120 and127 features zero\"}\n",
+  "stderr": "",
+  "wall_s": 0.1159830093383789,
+  "hashes": {
+    "build.cmd": "de03c83c3e4a93f51f4a1177192a0e0e3a8d62fbea649c3a7babba128a715f84",
+    "build.log": "bfec9f2f182480907059e073e5d88fa7c63b0b33f62e82174fa4bc626d1dc185",
+    "scaled-word-all-lanes.bin": "568d767b7cc5f7c4ea7ed667f9d73dcabc973f12167860dd21e3816f78bc5f89",
+    "scaled-word-blockq8.bin": "61a1fc57d6d87f1a097e702f46a0fa92f99e8f652582e9c9d7f4b272100cdf6b",
+    "scaled_word_fixed_weights_sync.cu": "cfd36d0fc347c4095fd75d38051907e50d5767ea54e56cf5b19dcff3eba3b069",
+    "scaled_word_fixed_weights_sync.exe": "a0e5247f8b300da6732c85b4fa6011662eaffef4ae30f549a5eea042c24ba5ae"
+  }
+}

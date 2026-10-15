@@ -1,0 +1,22 @@
+{
+  "affine-observer.bin": {
+    "sha256": "fab9aff7e926c4402c12f3111796064dbb5b353080b93c8c56964f19b035af8d",
+    "bytes": 25380
+  },
+  "build.log": {
+    "sha256": "da0fd3119c454d0dc6804f79cf7d0107f672d6adfd8f9a9c4fddfd9571ae4398",
+    "bytes": 403
+  },
+  "native-affine-image.bin": {
+    "sha256": "4ff372a2d30ffaab016ab518450b77fcc1f9725ffd3d35bb28db0e93e66c6db0",
+    "bytes": 656100
+  },
+  "native_affine_gu.cu": {
+    "sha256": "37effbd723acf25b85e5588ef825223837baa7aeb600042051febf8bfbf37cb7",
+    "bytes": 3779
+  },
+  "receipt.json": {
+    "sha256": "4a631cf448f6733d55a0ed54dc14499d05fb3ea33f9bd3d99ab626c50c94fb9d",
+    "bytes": 1106
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "gpu_work": false,
+  "native_model_execution": false,
+  "source_fixed_rows_sha256": {
+    "gate": "7cca876c3f51b15c97cd2e12214e7231f70a1c9820730892378b6ebb883460d5",
+    "up": "a2f44ab9afeaf93a142788d59082ce166cfa7e5d3a3cd9eabd3ba1668de7fd7e"
+  },
+  "source_model_sha256": "53107f530aa52eb00912263ab1ee29bd199261c87cd7b4ad4ca1318c1fe33ee3",
+  "K": 5120,
+  "logical_rows": 32,
+  "lane_operand_words": 40960,
+  "word_mismatches": 0,
+  "joint_payload_bytes": 66560,
+  "joint_payload_sha256": "392dfbf681ed26687cbcc9e51f00a6c534f3503b3a0041d92f235422ad5f9dbc",
+  "rounding_assumption": "none; original separate operand bits, source MMA call order and mean epilogue retained",
+  "scope": "CPU serialized-source/layout proof plus matched compiler probe; no native GPU acceptance or full observer/timing observation."
+}

@@ -1,0 +1,13 @@
+{
+  "source": "431b9e0",
+  "native_api_source": "4e7a1b78f886c147887476c6db31ee18e7fdf48e",
+  "native_object_sha256": "2d06f884d4eca46fb418f4d23fa25c841564a80bc1d65957ed710638b0484037",
+  "engine_object_sha256": "b2acea55213d42a20d327c1578a2255bcc9416f8904c8dbce5ec3878c4a69c2d",
+  "scope": "Wiki256 next-token predictions after prefix128 and fixed reference-continuation chat64; explicit SFoff/SF1R32/SF2R32; chunks32/64; not generated task scores",
+  "precision": "target fp4, original binary1 sign payload, residual two activation planes, joint-r16 for eligible ordinary route, F16state/F16KV, deterministic GEMM; original FP16 weight scales retained for non-R32/small projections",
+  "static_preparation": "E4M3 native weight blockscale and FP32 row factor for N>=5120, typed nonfinite-scale status rejection; one sign payload, no dense weight residency",
+  "dynamic_scope": "native SF only actual R32 and tile64-aligned activation origin; chunk64 controls exercise original route and intentionally match all modes",
+  "job": "binary-5090-native-sf-build-quality",
+  "status": "completed exit0",
+  "command": "flock -w 600 /tmp/binary-gpu.lock timeout 600 bash tools/binary/native-sf-keyholes.sh /workspace/binary/native-sf-engine/halo /workspace/binary/results/keyholes-native-sf"
+}

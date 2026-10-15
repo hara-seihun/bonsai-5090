@@ -1,0 +1,31 @@
+{
+  "state": "single_scan_cpu_successor_complete_no_adoption",
+  "source_commit": "9387d08aed0127afb523db5517a58ba5f43f308d",
+  "private_ref": "agent/dict8-model-identity",
+  "delivery": "dict8-identity-result/DELIVERY.json",
+  "delivery_sha256": "be6c4fe1a837742804fdac2fb52ad6575e381c449007a2083c8650e9e5b5538f",
+  "package_manifest_sha256": "3feed491dcbc3bf0bcbaadde0c33589f0d4ed9079e2d31f99eccb89a6323daa3",
+  "parent_check": "dict8-identity-parent-check.json",
+  "predecessor": "dict8-cache-settlement.json",
+  "predecessor_sha256": "17b38d5730fa6f082cec2c633e440c6946b0bbd0a35ba777a728a0393d70226d",
+  "model_identity_scans": 1,
+  "reader_model_identity_scans": 0,
+  "windows_model_copy_bytes": 0,
+  "windows_contract": "retained same-handle admitted local NTFS mapping through unmap; external file/mapped writers excluded; process-memory/admin/kernel/raw-volume writers outside contract",
+  "linux_contract": "private protected anonymous snapshot before hash/parse; full copy/allocation recur and real-model Linux costs are unset",
+  "native_cached_startup": null,
+  "device_upload": null,
+  "gpu_residency": null,
+  "native_numerics": null,
+  "throughput": null,
+  "gpu_work": false,
+  "serving_mutation": false,
+  "original_v2_replayed": false,
+  "profile_window_used": false,
+  "writer": {
+    "path": "~/work/clones/dict8-model-identity",
+    "state": "released-reclaimable",
+    "reservation_id": "00000000-0000-0000-0000-000000000000",
+    "release_receipt": "writer-release.txt"
+  }
+}

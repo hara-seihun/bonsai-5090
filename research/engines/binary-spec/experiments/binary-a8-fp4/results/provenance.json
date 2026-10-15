@@ -1,0 +1,30 @@
+{
+  "gpu": "RTX5090",
+  "power_limit_w": 500,
+  "cuda": "13.1.115",
+  "compile_flags": "-O3 -std=c++17 -gencode arch=compute_120a,code=sm_120a -Isrc",
+  "kjob": "binary-a8-fp4-round",
+  "exit": 0,
+  "gpu_lock": "/tmp/binary-gpu.lock",
+  "exclusive_limit_seconds": 45,
+  "finished_at": "2026-10-10T21:45:58Z",
+  "model_sha256": "17ef842e47450caeb8eaa3ebfbbab5d2f2278b62b79be107985fb69a2f819aa0",
+  "input": "synthetic projection-coordinate F32; original trained signs/FP16 scales",
+  "source_commit_before_experiment": "8b361023d31c332d552e300b581764c78a3628f1",
+  "sha256": {
+    "digits.cu": "3f5251278a5b77c575c27ec284899d777457bfbbff38e0185c76654f49d9975d",
+    "digits.cuh": "d522e688b5766745d284ce782dba31343c231da1be41c137f73af8eb3278bf5c",
+    "bench.cu": "fd49f1c0d75f945027173b7bd0d6a65ba5c230439879e050cd4bd6209eee0595",
+    "build/digits.o": "74748dda3c4613a6ff032cc292fdd8c4a6113f9fb62565bc9c842f459e1e63d6",
+    "build/bench": "bbc28669e4dbff04fc2ef1cceafa646a16ebde908f97bb9d722c966f2cebae46"
+  },
+  "reused_kernels_object_sha256": "1f52e6d721df757b7d34983341ac547819c409a09a2ba9098e4be86a732fd6cd",
+  "a8_source_sha256": "64b9e066bfeb7a6b31306a641d4d2316191a81bb7545fcbe8fddcd4c7d2b3fc6",
+  "fp4_ops_sha256": "1dfa009cd680d1b0227ab5bebf0d650ebab4fba5a33896c2fae452512d37bf39",
+  "headers": "digits.cuh comments added after compile; declarations unchanged",
+  "samples": {
+    "discarded": 2,
+    "median": 7,
+    "eviction_bytes": 134217728
+  }
+}

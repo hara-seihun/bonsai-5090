@@ -1,0 +1,13 @@
+{
+  "exit": 0,
+  "stdout": "{\"status\":\"mixed_whole_observation\",\"domain_errors\":0,\"prefix_errors\":[0,0,0],\"q8_errors\":0,\"scale_errors\":0,\"K\":128,\"group_scales\":8,\"logical_cases\":16384}\n{\"certified_inverse_cases\":14581,\"source_refinement_cases\":1803,\"instrumented_only_during_capture\":true}\n{\"status\":\"pass\",\"timings_ms\":[0.014360,0.001857],\"ranges_ms\":[[0.014348,0.014410],[0.001854,0.001867]],\"registers\":[48,37],\"local_bytes\":[96,0],\"shared_bytes\":[256,256],\"scope\":\"full K64 sum/difference weight coordinates carried in P/Q C through two64-K updates; G/U exist only in final inverse observer; same native geometry/work as GU control; generated plus adversarial tape; final integer-lattice certificate chooses exact inverse or charged scalar source refinement; capture counters excluded from timed specialization; no universal native law or learned acceptance\"}\n{\"preparation_ms\":[103.405100,2.486700,8.739800],\"input_bytes\":[16384,4096,512],\"capture_only_trace_bytes\":393216,\"timed_global_intermediate_bytes\":0}\n",
+  "stderr": "",
+  "wall_s": 2.3478031158447266,
+  "mutex": "Local\\BonsaiGPU",
+  "mutex_wait_result": 0,
+  "hashes": {
+    "native_mixed_shear_certified.cu": "50778882dcecf4b23ae6e7ff08b58efa7aa8c2679eee46aeb4c4060d03984cb8",
+    "native_mixed_shear_certified.exe": "ae70f257ba42db72c3a8d0be1d9d28b8eb6271a8badddc078ecfe54d992cca6d",
+    "build.log": "e2b21cd051c5a8290f7ad3241c6fe7b01ccd175f614517b698a6b620b6d7c71e"
+  }
+}

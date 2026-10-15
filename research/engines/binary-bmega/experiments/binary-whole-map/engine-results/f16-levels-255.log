@@ -1,0 +1,7 @@
+target: binary Q1_0, original FP16 K128 scales
+
+weights 3.80 GB in 0.5 s
+state f16, KV f16: 75.5 MB state + 33.6 MB KV per slot
+packed target activation: a8; A8 uses K128 max/127 nearest-even codes, original FP16 weight scales
+ready: 1 slots x 512 ctx, 1 rows; GPU free 28.47 / 33.67 GB, load 0.5 s
+{"mode":"levels:255","prefix":128,"scored":256,"ppl":19.19753712,"ref_ppl":19.1780276,"kl_ref":0.0004787127367,"top1_agreement":250,"seconds":3.348861,"capture_layers":[0,30,61],"observations_per_step":64}

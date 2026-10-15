@@ -1,0 +1,9 @@
+target: binary Q1_0, original FP16 K128 scales
+
+weights 3.80 GB in 0.7 s
+state f16, KV f16: 75.5 MB state + 29.4 MB KV per slot
+packed target activation: f32 for prepared R=1, a8 for prepared R>1; A8 uses K128 max/127 nearest-even codes, original FP16 weight scales
+A8 projection: exact FP4 digit planes on original packed1 weights, GU/down/head tiles16..32; other families and smaller tails DP4A, F32 unchanged
+ready: 2 slots x 448 ctx, 512 rows; GPU free 27.96 / 33.67 GB, load 0.7 s
+prefill: 256 rows  KLD mean 0.00053069158460941016 max 0.0037297052261629632  cos 0.99983318405160304  top1 251/256  ref_ppl 19.178027602673943 got_ppl 19.199563025054452 max_logit_error 3.4258214235305786
+decode: 256 rows  KLD mean 0.00022484061468418292 max 0.0015427101704236059  cos 0.99994022322065335  top1 252/256  ref_ppl 19.178027602673943 got_ppl 19.174658451147398 max_logit_error 2.1918282508850098

@@ -1,0 +1,42 @@
+{
+  "status": "ok",
+  "context_length": 8192,
+  "sampling": {
+    "route": "greedy-speculative-target-verification",
+    "request_slots": 1,
+    "speculative_sampling_slots": 0,
+    "penalty_history": "generated-tokens",
+    "noise": "seed-position-token-gumbel",
+    "draft_temperature_scale": 1.0
+  },
+  "head_rows": "demand",
+  "serving": {
+    "route": "fifo",
+    "prefill_quantum": null,
+    "aging_s": null,
+    "request_slots": 1,
+    "physical_slots": 1,
+    "prefix_enabled": false,
+    "prefix_reserved": false,
+    "prefix_template_slot": -1,
+    "prefix_match": "strict-token-prefix-text-only"
+  },
+  "vision": false,
+  "vision_language_backend": "halo-native",
+  "drafter": "dspark-bf16",
+  "draft_proposals": 4,
+  "draft_query_rows": 4,
+  "verifier_rows": 5,
+  "checkpoint_length_extrapolation": false,
+  "bonus_policy": "greedy",
+  "commitment_policy": {
+    "mode": "fixed",
+    "minimum": 4,
+    "maximum": 4,
+    "confidence_gap_threshold": null,
+    "confidence_signal": null,
+    "feedback_growth": null,
+    "target_regret_observed": false,
+    "selection_timing": "before-target-verification"
+  }
+}

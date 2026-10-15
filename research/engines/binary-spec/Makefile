@@ -1,0 +1,206 @@
+NVCC ?= /usr/local/cuda/bin/nvcc
+ARCH ?= sm_120a
+# Explicit gencode: CUDA 13's -arch=sm_120a also emits plain compute_120 PTX, which rejects sm_120a-only instructions.
+ARCH_FLAGS ?= -gencode arch=compute_$(patsubst sm_%,%,$(ARCH)),code=$(ARCH)
+LLAMA ?= /workspace/h5-llama
+LLAMA_BUILD ?= $(LLAMA)/build
+DEFS ?=
+NVCC_HOST_CXX ?=
+BUILD ?= build
+REPLAY ?= profile-replay
+SPEC_REPLAY ?= spec-replay
+H5_BINARY ?= h5
+SERVER_BINARY ?= h5-server
+PROFILE ?= release
+ifeq ($(filter $(PROFILE),release lineinfo),)
+$(error PROFILE must be release or lineinfo)
+endif
+FLAGS = -O3 -std=c++17 $(ARCH_FLAGS) $(if $(filter lineinfo,$(PROFILE)),-lineinfo) -Xcompiler -fPIC,-O3 --expt-relaxed-constexpr $(if $(NVCC_HOST_CXX),-ccbin $(NVCC_HOST_CXX)) $(DEFS)
+SERVER_FLAGS = -O2 -std=c++17 -DCPPHTTPLIB_OPENSSL_SUPPORT -I$(LLAMA)/include -I$(LLAMA)/ggml/include -I$(LLAMA)/tools/mtmd -I$(LLAMA)/vendor/cpp-httplib -I$(LLAMA)/vendor
+ENGINE_LIBS = -lcublas
+LIBSRC = src/engine.cu src/dspark_native.cu src/dspark_kernels.cu src/dspark_quant.cu src/packed1.cu experiments/binary-bitserial/bitserial.cu experiments/binary-a8-fp4/digits.cu experiments/binary-whole-map/signed_digits.cu experiments/binary-whole-map/whole_ffn.cu experiments/binary-native-sf/native.cu experiments/binary-composition/composition.cu experiments/binary-fp4-pair/pair.cu src/graph_memory.cu src/kernels.cu src/fp4.cu src/sk.cu src/draft.cu src/sampling_gpu.cu src/f02-producer.cu src/f02-continuation.cu src/gguf.cpp
+ENGINE_OBJECTS = $(addprefix $(BUILD)/,engine.o dspark_native.o dspark_kernels.o dspark_quant.o packed1.o bitserial.o digits.o signed_digits.o whole_ffn.o native_sf.o composition.o fp4_pair.o graph_memory.o kernels.o fp4.o sk.o draft.o sampling_gpu.o f02-producer.o f02-continuation.o gguf.o)
+.PHONY: all clean FORCE sk-bench lowbit-check drafter-exact-test gemm-profile draft-contract-test head-demand-test integrated-single f02-contract-test f07-contract-test f07-native-compile
+all: $(H5_BINARY) $(SERVER_BINARY) refdump
+integrated-single:
+	@defs="$$(python3 tools/selected_build_defines.py results/integrated/selected-preset.json)" || exit; $(MAKE) DEFS="$$defs" "$(SERVER_BINARY)"
+FORCE:
+# A flag change must invalidate objects even when the same directory is reused.
+# Separate BUILD/REPLAY paths allow causal variants to coexist.
+$(BUILD)/compile-config: FORCE
+	@mkdir -p $(BUILD); printf '%s\n' '$(NVCC)' '$(FLAGS)' '$(SERVER_FLAGS)' '$(LLAMA_BUILD)' > $@.tmp; if ! cmp -s $@.tmp $@; then mv $@.tmp $@; fi; rm -f $@.tmp
+$(BUILD)/%.o: src/%.cu src/draft_lz.cuh src/tail_prep.cuh src/smlit.cuh src/model.h src/kernels.cuh src/profile_trace.h src/pdl_clock.cuh src/draft_contract.h
+	@mkdir -p $(BUILD); $(NVCC) $(FLAGS) -c -o $@ $<
+$(ENGINE_OBJECTS) $(BUILD)/main.o: src/state_format.h src/q8_scale.h
+$(ENGINE_OBJECTS) $(BUILD)/profile_replay.o $(BUILD)/spec_replay.o: src/pf_chain.h
+$(BUILD)/bitserial.o: experiments/binary-bitserial/bitserial.cu experiments/binary-bitserial/bitserial.cuh $(BUILD)/compile-config
+	@mkdir -p $(BUILD); $(NVCC) $(FLAGS) -c -o $@ $<
+$(BUILD)/digits.o: experiments/binary-a8-fp4/digits.cu experiments/binary-a8-fp4/digits.cuh experiments/binary-bitserial/bitserial.cuh src/fp4_ops.cuh $(BUILD)/compile-config
+	@mkdir -p $(BUILD); $(NVCC) $(FLAGS) -c -o $@ $<
+$(BUILD)/signed_digits.o: experiments/binary-whole-map/signed_digits.cu experiments/binary-whole-map/signed_digits.cuh experiments/binary-bitserial/bitserial.cuh src/fp4_ops.cuh $(BUILD)/compile-config
+	@mkdir -p $(BUILD); $(NVCC) $(FLAGS) -c -o $@ $<
+$(BUILD)/whole_ffn.o: experiments/binary-whole-map/whole_ffn.cu experiments/binary-whole-map/whole_ffn.cuh experiments/binary-whole-map/signed_digits.cuh src/fp4_ops.cuh $(BUILD)/compile-config
+	@mkdir -p $(BUILD); $(NVCC) $(FLAGS) -c -o $@ $<
+$(BUILD)/native_sf.o: experiments/binary-native-sf/native.cu experiments/binary-native-sf/native.cuh src/fp4_ops.cuh $(BUILD)/compile-config
+	@mkdir -p $(BUILD); $(NVCC) $(FLAGS) -c -o $@ $<
+$(BUILD)/composition.o: experiments/binary-composition/composition.cu experiments/binary-composition/composition.cuh experiments/binary-bitserial/bitserial.cuh $(BUILD)/compile-config
+	@mkdir -p $(BUILD); $(NVCC) $(FLAGS) -c -o $@ $<
+$(BUILD)/fp4_pair.o: experiments/binary-fp4-pair/pair.cu experiments/binary-fp4-pair/pair.cuh $(BUILD)/compile-config
+	@mkdir -p $(BUILD); $(NVCC) $(FLAGS) -c -o $@ $<
+$(BUILD)/dspark_native.o: src/dspark_native.cuh src/dspark_kernels.cuh src/dspark_quant.cuh src/gguf.h
+$(BUILD)/dspark_kernels.o: src/dspark_kernels.cuh
+$(BUILD)/dspark_quant.o: src/dspark_quant.cuh $(BUILD)/compile-config
+$(BUILD)/engine.o: src/dspark_native.cuh experiments/binary-a8-fp4/digits.cuh experiments/binary-whole-map/whole_ffn.cuh experiments/binary-whole-map/signed_digits.cuh experiments/binary-native-sf/native.cuh experiments/binary-composition/composition.cuh experiments/binary-bitserial/bitserial.cuh experiments/binary-fp4-pair/pair.cuh
+$(BUILD)/packed1.o $(BUILD)/engine.o: src/packed1.cuh
+$(BUILD)/engine.o: src/gdn_diagnostic.h src/gdn_single.h src/draft_probe.h src/ternary_operands.h src/gguf.h src/compact.hpp src/graph_probe.h src/graph_memory.h src/scale_carrier.cuh src/head_demand.h src/serving_policy.h src/f02.cuh src/f02_route.h src/f07.cuh src/f07_contract.h
+$(BUILD)/engine.o $(BUILD)/draft.o $(BUILD)/sampling_gpu.o: src/sampling_gpu.cuh src/sampling_contract.h src/sampling_noise.h
+$(BUILD)/graph_memory.o: src/graph_memory.cu src/graph_memory.h
+$(BUILD)/sk.o: src/compact.cuh src/fp4_ops.cuh src/sk.h
+$(BUILD)/f02-producer.o: src/fp4_ops.cuh
+$(BUILD)/fp4.o: src/fp4_ops.cuh src/compact.cuh src/compact.hpp src/scale_carrier.cuh src/f07.cuh src/f07_contract.h
+$(BUILD)/kernels.o: src/kernels.cu src/gdn_single.cuh src/gdn_verify.cuh src/gdn_verify_fused.cuh src/gdn_single.h src/tail_prep.cuh src/smlit.cuh src/prep_chunk.cuh src/attn.cu src/mega.cu src/state_fusion.cuh src/model.h src/kernels.cuh src/profile_trace.h src/pdl_clock.cuh src/draft_contract.h
+	@mkdir -p $(BUILD); $(NVCC) $(FLAGS) -c -o $@ $<
+$(BUILD)/gguf.o: src/gguf.cpp src/gguf.h
+	@mkdir -p $(BUILD); $(NVCC) $(FLAGS) -c -o $@ $<
+$(BUILD)/main.o: src/main.cpp src/two_path_runner.h src/two_path_policy.h src/head_demand.h
+	@mkdir -p $(BUILD); g++ -O2 -std=c++17 -I$(LLAMA)/include -I$(LLAMA)/ggml/include -c -o $@ $<
+$(H5_BINARY): $(ENGINE_OBJECTS) $(BUILD)/main.o
+	@mkdir -p $(dir $@); $(NVCC) $(ARCH_FLAGS) -o $@ $^ $(ENGINE_LIBS) -L$(LLAMA_BUILD)/bin -lllama -Xlinker -rpath,$(LLAMA_BUILD)/bin -Xcompiler -pthread
+$(BUILD)/server.o: src/server.cpp src/dspark_native.cuh src/vision.h src/chat.h src/two_path_policy.h src/commit_policy.h src/profile_trace.h src/draft_contract.h src/head_demand.h src/serving_policy.h src/prompt_lookup.h src/sampling.h src/sampling_contract.h src/sampling_noise.h src/relax_policy.h src/lz_penalty.h
+	@mkdir -p $(BUILD); g++ $(SERVER_FLAGS) $(DEFS) -I$(dir $(NVCC))/../include -c -o $@ $<
+$(BUILD)/vision.o: src/vision.cpp src/vision.h src/model.h
+	@mkdir -p $(BUILD); g++ $(SERVER_FLAGS) -c -o $@ $<
+$(BUILD)/httplib.o: $(LLAMA)/vendor/cpp-httplib/httplib.cpp
+	@mkdir -p $(BUILD); g++ $(SERVER_FLAGS) -c -o $@ $<
+$(SERVER_BINARY): $(ENGINE_OBJECTS) $(BUILD)/server.o $(BUILD)/vision.o $(BUILD)/httplib.o
+	@mkdir -p $(dir $@); $(NVCC) $(ARCH_FLAGS) -o $@ $^ $(ENGINE_LIBS) -L$(LLAMA_BUILD)/bin -lmtmd -lllama -lggml -lggml-base -lssl -lcrypto -Xlinker -rpath,$(LLAMA_BUILD)/bin -Xcompiler -pthread
+$(BUILD)/profile_replay.o: tools/profile_replay.cpp src/smlit.cuh src/profile_trace.h src/graph_probe.h src/head_demand.h
+	@mkdir -p $(BUILD); $(NVCC) $(FLAGS) -Isrc -c -o $@ $<
+$(REPLAY): $(ENGINE_OBJECTS) $(BUILD)/profile_replay.o
+	@mkdir -p $(dir $@); $(NVCC) $(ARCH_FLAGS) -o $@ $^ $(ENGINE_LIBS) -Xcompiler -pthread
+$(BUILD)/spec_replay.o: tools/spec_replay.cpp src/smlit.cuh src/head_demand.h
+	@mkdir -p $(BUILD); $(NVCC) $(FLAGS) -Isrc -c -o $@ $<
+$(SPEC_REPLAY): $(ENGINE_OBJECTS) $(BUILD)/spec_replay.o
+	@mkdir -p $(dir $@); $(NVCC) $(ARCH_FLAGS) -o $@ $^ $(ENGINE_LIBS) -Xcompiler -pthread
+GDN_DRIFT ?= gdn-state-drift
+.PHONY: gdn-diagnostic-contract-test gdn-diagnostic-logits-test gdn-diagnostic-native-compile
+$(BUILD)/gdn_diagnostic_build.h: FORCE
+	@mkdir -p $(BUILD); python3 -c 'import json, subprocess, sys; source=subprocess.check_output(["git", "describe", "--always", "--dirty"],text=True).strip(); print("#define H5_GDN_DIAGNOSTIC_SOURCE " + json.dumps(source)); print("#define H5_GDN_DIAGNOSTIC_FLAGS " + json.dumps(sys.argv[1]))' '$(FLAGS)' > $@.tmp; if ! cmp -s $@.tmp $@; then mv $@.tmp $@; fi; rm -f $@.tmp
+$(BUILD)/gdn_state_drift.o: tools/gdn_state_drift.cpp tools/gdn_diagnostic_input.h tools/gdn_diagnostic_logits.h src/gdn_diagnostic.h src/state_format.h $(BUILD)/gdn_diagnostic_build.h
+	@mkdir -p $(BUILD); g++ -O2 -std=c++17 -Wall -Wextra -Werror -Isrc -Itools -include $(BUILD)/gdn_diagnostic_build.h -c -o $@ $<
+$(GDN_DRIFT): $(ENGINE_OBJECTS) $(BUILD)/gdn_state_drift.o
+	@mkdir -p $(dir $@); $(NVCC) $(ARCH_FLAGS) -o $@ $^ $(ENGINE_LIBS) -Xcompiler -pthread
+$(BUILD)/gdn-state-drift-input: tools/gdn_state_drift.cpp tools/gdn_diagnostic_input.h tools/gdn_diagnostic_logits.h src/gdn_diagnostic.h src/state_format.h $(BUILD)/gdn_diagnostic_build.h
+	@mkdir -p $(BUILD); g++ -O2 -std=c++17 -Wall -Wextra -Werror -DH5_GDN_DIAGNOSTIC_CPU_ONLY -Isrc -Itools -include $(BUILD)/gdn_diagnostic_build.h -o $@ $<
+gdn-diagnostic-contract-test: bench/gdn_diagnostic_contract.cpp tools/gdn_diagnostic_input.h src/gdn_diagnostic.h src/state_format.h
+	@mkdir -p $(BUILD); g++ -O2 -std=c++17 -Wall -Wextra -Werror -Isrc -Itools $< -o $(BUILD)/gdn-diagnostic-contract-test && $(BUILD)/gdn-diagnostic-contract-test
+gdn-diagnostic-logits-test: bench/gdn_diagnostic_logits.cpp tools/gdn_diagnostic_logits.h
+	@mkdir -p $(BUILD); g++ -O2 -std=c++17 -Wall -Wextra -Werror -Itools $< -o $(BUILD)/gdn-diagnostic-logits-test && $(BUILD)/gdn-diagnostic-logits-test
+gdn-diagnostic-native-compile: $(BUILD)/engine.o $(BUILD)/gdn_state_drift.o
+TAIL_PROBE ?= tail-probe
+$(BUILD)/tail_probe.o: tools/tail_probe.cpp
+	@mkdir -p $(BUILD); g++ -O2 -std=c++17 -c -o $@ $<
+$(TAIL_PROBE): $(ENGINE_OBJECTS) $(BUILD)/tail_probe.o
+	@mkdir -p $(dir $@); $(NVCC) $(ARCH_FLAGS) -o $@ $^ $(ENGINE_LIBS) -Xcompiler -pthread
+$(BUILD)/dspark_native_contract.o: bench/dspark_native_contract.cpp src/dspark_native.cuh
+	@mkdir -p $(BUILD); $(NVCC) $(FLAGS) -Isrc -I$(LLAMA)/include -I$(LLAMA)/ggml/include -I$(LLAMA)/src -c -o $@ $<
+dspark-native-contract: $(BUILD)/dspark_native_contract.o $(BUILD)/dspark_native.o $(BUILD)/dspark_kernels.o $(BUILD)/dspark_quant.o $(BUILD)/gguf.o $(BUILD)/kernels.o $(BUILD)/fp4.o
+	$(NVCC) $(ARCH_FLAGS) -o $@ $^ $(ENGINE_LIBS) -L$(LLAMA_BUILD)/bin -lllama -Xlinker -rpath,$(LLAMA_BUILD)/bin -Xcompiler -pthread
+refdump: tools/refdump.cpp
+	g++ -O2 -std=c++17 -I$(LLAMA)/include -I$(LLAMA)/ggml/include -o $@ $< -L$(LLAMA_BUILD)/bin -lllama -Wl,-rpath,$(LLAMA_BUILD)/bin
+$(BUILD)/vision_check.o: tools/vision_check.cpp src/vision.h src/model.h
+	@mkdir -p $(BUILD); g++ $(SERVER_FLAGS) -Isrc -c -o $@ $<
+h5-vision-check: $(ENGINE_OBJECTS) $(BUILD)/vision_check.o $(BUILD)/vision.o $(BUILD)/httplib.o
+	$(NVCC) $(ARCH_FLAGS) -o $@ $^ $(ENGINE_LIBS) -L$(LLAMA_BUILD)/bin -lmtmd -lllama -lggml -lggml-base -lssl -lcrypto -Xlinker -rpath,$(LLAMA_BUILD)/bin -Xcompiler -pthread
+sampling-gpu-test: bench/sampling_gpu_test.cu $(BUILD)/sampling_gpu.o src/sampling.h src/sampling_gpu.cuh src/sampling_contract.h src/sampling_noise.h
+	$(NVCC) $(FLAGS) -Isrc -I$(LLAMA)/vendor -o $(BUILD)/sampling-gpu-test $< $(BUILD)/sampling_gpu.o
+	$(BUILD)/sampling-gpu-test
+sampling-test: bench/sampling_test.cpp src/sampling.h src/sampling_contract.h src/sampling_noise.h
+	@mkdir -p $(BUILD); g++ -O2 -std=c++17 -Isrc -I$(LLAMA)/vendor $< -o $(BUILD)/sampling-test && $(BUILD)/sampling-test
+prompt-lookup-test: bench/prompt_lookup_test.cpp src/prompt_lookup.h
+	@mkdir -p $(BUILD); g++ -O2 -std=c++17 -Isrc $< -o $(BUILD)/prompt-lookup-test && $(BUILD)/prompt-lookup-test
+relax-policy-test: bench/relax_policy_test.cpp src/relax_policy.h src/draft_contract.h
+	@mkdir -p $(BUILD); g++ -O2 -std=c++17 -Wall -Isrc $< -o $(BUILD)/relax-policy-test && $(BUILD)/relax-policy-test
+
+lz-penalty-test: bench/lz_penalty_test.cpp bench/lz_penalty_vectors.h src/lz_penalty.h
+	@mkdir -p $(BUILD); g++ -O2 -std=c++17 -Wall -Isrc -Ibench $< -o $(BUILD)/lz-penalty-test && $(BUILD)/lz-penalty-test
+
+draft-lz-test: bench/draft_lz_test.cu src/draft_lz.cuh src/lz_penalty.h src/kernels.cuh
+	@mkdir -p $(BUILD); $(NVCC) -O2 -std=c++17 $(ARCH_FLAGS) -Isrc $< -o $(BUILD)/draft-lz-test && $(BUILD)/draft-lz-test
+check-chat:
+	@mkdir -p $(BUILD); g++ -O2 -std=c++17 -Isrc -I$(LLAMA)/vendor tools/check_chat.cpp -o $(BUILD)/check-chat && $(BUILD)/check-chat
+drafter-exact-test: bench/drafter_exact.cu $(BUILD)/kernels.o $(BUILD)/draft.o
+	$(NVCC) $(FLAGS) -I src -o $@ $^
+selector-two-test: bench/selector_two.cu $(BUILD)/draft.o
+	$(NVCC) $(FLAGS) -I src -o $@ $^
+graph-memory-test: bench/graph_memory.cu $(BUILD)/graph_memory.o
+	$(NVCC) $(FLAGS) -Isrc -o $@ $^
+pdl-gdn-order: bench/pdl_gdn_order.cu $(BUILD)/kernels.o
+	$(NVCC) $(FLAGS) -I src -o $@ $^
+state-fusion-test: bench/state_fusion.cu $(BUILD)/kernels.o
+	$(NVCC) $(FLAGS) -Isrc -o $@ $^
+gdn-q8: bench/gdn_q8.cu $(BUILD)/kernels.o
+	$(NVCC) $(FLAGS) -Isrc -o $@ $^
+gdn-single-bench: bench/gdn_single.cu bench/gdn_fused_causal.cuh $(BUILD)/kernels.o
+	$(NVCC) $(FLAGS) -Isrc -o $@ bench/gdn_single.cu $(BUILD)/kernels.o
+two-path-policy-test: bench/two_path_policy.cpp src/two_path_policy.h
+	g++ -O2 -std=c++17 -I src -o $@ $<
+	./$@
+draft-contract-test: bench/draft_contract.cpp src/draft_contract.h
+	@mkdir -p $(BUILD); g++ -O2 -std=c++17 -Wall -Wextra -Werror -I src $< -o $(BUILD)/draft-contract-test && $(BUILD)/draft-contract-test
+head-demand-test: bench/head_demand.cpp src/head_demand.h
+	@mkdir -p $(BUILD); g++ -O2 -std=c++17 -Wall -Wextra -Werror -I src $< -o $(BUILD)/head-demand-test && $(BUILD)/head-demand-test
+f02-contract-test: bench/f02_contract.cpp src/f02_route.h
+	@mkdir -p $(BUILD); g++ -O2 -std=c++17 -Wall -Wextra -Werror -I src $< -o $(BUILD)/f02-contract-test && $(BUILD)/f02-contract-test
+f07-contract-test: bench/f07_contract.cpp src/f07_contract.h
+	@mkdir -p $(BUILD); g++ -O2 -std=c++17 -Wall -Wextra -Werror -I src $< -o $(BUILD)/f07-contract-test && $(BUILD)/f07-contract-test
+$(BUILD)/f07_native_compile.o: bench/f07_native_compile.cu src/fp4.cu src/f07.cuh src/f07_contract.h src/kernels.cuh src/model.h src/compact.cuh src/compact.hpp src/scale_carrier.cuh src/pdl_clock.cuh $(BUILD)/compile-config
+	@mkdir -p $(BUILD); $(NVCC) $(FLAGS) -Xptxas=-v -c -o $@ $<
+f07-native-compile: $(BUILD)/f07_native_compile.o
+.PHONY: pf-chain-contract-test gemm-release-native-compile
+pf-chain-contract-test: bench/pf_chain_contract.cpp src/pf_chain.h
+	@mkdir -p $(BUILD); g++ -O2 -std=c++17 -Wall -Wextra -Werror -I src $< -o $(BUILD)/pf-chain-contract-test && $(BUILD)/pf-chain-contract-test
+$(BUILD)/gemm_release_native_compile.o: bench/gemm_release_native_compile.cu src/fp4.cu src/fp4_ops.cuh src/kernels.cuh src/tail_prep.cuh src/smlit.cuh src/model.h src/compact.cuh src/compact.hpp src/scale_carrier.cuh src/f07.cuh src/f07_contract.h src/warp_microscope.cuh src/pdl_clock.cuh $(BUILD)/compile-config
+	@mkdir -p $(BUILD); $(NVCC) $(FLAGS) -Xptxas=-v -c -o $@ $<
+gemm-release-native-compile: $(BUILD)/gemm_release_native_compile.o
+prep-bench: tools/prep_bench.cu src/kernels.cu src/prep_chunk.cuh src/attn.cu src/mega.cu src/state_fusion.cuh src/kernels.cuh src/model.h src/pdl_clock.cuh $(BUILD)/compile-config
+	$(NVCC) $(FLAGS) -Xptxas=-v -o $@ $<
+prep-rms-bench: tools/prep_rms_bench.cu src/kernels.cu src/prep_chunk.cuh src/attn.cu src/mega.cu src/state_fusion.cuh src/kernels.cuh src/model.h src/pdl_clock.cuh $(BUILD)/compile-config
+	$(NVCC) $(FLAGS) -Xptxas=-v -o $@ $<
+prep-row-bench: tools/prep_row_bench.cu src/kernels.cu src/prep_chunk.cuh src/attn.cu src/mega.cu src/state_fusion.cuh src/kernels.cuh src/model.h src/pdl_clock.cuh $(BUILD)/compile-config
+	$(NVCC) $(FLAGS) -Xptxas=-v -o $@ $<
+GEMM_BUILD ?= build-gemm-ring
+GEMM_DEFS ?= -DH5_PROFILE_GEMM
+$(GEMM_BUILD)/compile-config: FORCE
+	@mkdir -p $(GEMM_BUILD); printf '%s\n' '$(NVCC)' '$(FLAGS)' '$(GEMM_DEFS)' > $@.tmp; if ! cmp -s $@.tmp $@; then mv $@.tmp $@; fi; rm -f $@.tmp
+$(GEMM_BUILD)/fp4.o: src/fp4.cu src/fp4_ops.cuh src/tail_prep.cuh src/smlit.cuh src/compact.cuh src/compact.hpp src/kernels.cuh src/model.h src/pdl_clock.cuh src/f07.cuh src/f07_contract.h $(GEMM_BUILD)/compile-config
+	@mkdir -p $(GEMM_BUILD); $(NVCC) $(FLAGS) $(GEMM_DEFS) -Xptxas=-v -c -o $@ $<
+$(GEMM_BUILD)/gemm-residency: bench/gemm_residency.cu $(GEMM_BUILD)/fp4.o
+	$(NVCC) $(FLAGS) -I src -o $@ $^
+$(GEMM_BUILD)/profile-replay: tools/profile_replay.cpp $(filter-out $(BUILD)/fp4.o,$(ENGINE_OBJECTS)) $(GEMM_BUILD)/fp4.o
+	$(NVCC) $(FLAGS) -I src -o $@ $^ $(ENGINE_LIBS)
+gemm-profile: $(GEMM_BUILD)/gemm-residency $(GEMM_BUILD)/profile-replay
+$(ENGINE_OBJECTS) $(BUILD)/main.o $(BUILD)/server.o $(BUILD)/vision.o $(BUILD)/httplib.o $(BUILD)/profile_replay.o $(BUILD)/vision_check.o: $(BUILD)/compile-config
+clean:
+	rm -rf $(BUILD) $(H5_BINARY) $(SERVER_BINARY) dspark-native-contract h5-vision-check $(REPLAY) $(GDN_DRIFT) graph-memory-test refdump two-path-policy-test selector-two-test prep-bench prep-rms-bench prep-row-bench pdl-gdn-order state-fusion-test gdn-q8 gdn-single-bench
+lowbit-check: bench/lowbit_check.cu $(BUILD)/fp4.o
+	$(NVCC) $(FLAGS) -Isrc -o $@ $^
+batch-gemm: bench/batch_gemm.cu $(BUILD)/fp4.o
+	$(NVCC) $(FLAGS) -Isrc -o $@ $^
+$(BUILD)/fp4.o $(BUILD)/engine.o: src/deterministic_gemm.cuh
+ordered-prep-bench: bench/ordered_prep.cu $(BUILD)/fp4.o $(BUILD)/kernels.o
+	$(NVCC) $(FLAGS) -Isrc -o $@ $^
+deterministic-gemm: bench/deterministic_gemm.cu $(BUILD)/fp4.o src/deterministic_gemm.cuh
+	$(NVCC) $(FLAGS) -Isrc -o $@ bench/deterministic_gemm.cu $(BUILD)/fp4.o
+.PHONY: ternary-operands-test
+ternary-operands-test: bench/ternary_operands_test.cpp src/ternary_operands.h
+	g++ -O2 -std=c++17 -Isrc -o $@ $<
+	./$@
+ternary-expanded-check: bench/ternary_expanded_check.cu $(BUILD)/fp4.o src/ternary_operands.h
+	$(NVCC) $(FLAGS) -Isrc -o $@ bench/ternary_expanded_check.cu $(BUILD)/fp4.o
+batch-profile: tools/batch_profile.cu $(ENGINE_OBJECTS)
+	$(NVCC) $(FLAGS) -Isrc -o $@ $^ $(ENGINE_LIBS) -Xcompiler -pthread
+sk-bench: bench/sk_bench.cu $(BUILD)/fp4.o $(BUILD)/sk.o
+	$(NVCC) $(FLAGS) -Isrc -o $@ $^
+fuse-gu-test: bench/fuse_gu_test.cu $(BUILD)/kernels.o $(BUILD)/fp4.o
+	$(NVCC) $(FLAGS) -Isrc -o $@ $^

@@ -1,0 +1,17 @@
+{
+  "exit": 0,
+  "stdout": "{\"domain\":\"all9 gate weight pairs x9 up weight pairs x225 independent full E2M1 activation pairs\",\"cases\":18225,\"fragment_mismatch_checks\":6998400,\"fragment_mismatches\":0,\"producer_bytes\":1872,\"map\":\"SiLU(a0*g0+a1*g1)*(a0*u0+a1*u1), explicit F32 arithmetic and __expf; no real-model scale/quality claim\"}\n{\"carrier\":\"two_MMA_joint\",\"state\":\"fibre_consistent\",\"physical_states\":18144,\"target_collision_boundaries\":0,\"witness\":{\"key\":0,\"targets\":[0,0],\"inputs\":[0,0]}}\n{\"carrier\":\"two_MMA_then_native_FP32_mantissa_product_with_exponent_roles\",\"state\":\"fibre_consistent\",\"physical_states\":18144,\"target_collision_boundaries\":0,\"witness\":{\"key\":0,\"targets\":[0,0],\"inputs\":[0,0]}}\n{\"carrier\":\"three_MMA_mantissa_product_with_exponent_roles\",\"state\":\"fibre_consistent\",\"physical_states\":17125,\"target_collision_boundaries\":0,\"witness\":{\"key\":0,\"targets\":[0,0],\"inputs\":[0,0]}}\n",
+  "stderr": "",
+  "wall_s": 1.524484395980835,
+  "mutex": "Local\\BonsaiGPU",
+  "mutex_wait_result": 0,
+  "hashes": {
+    "native_mixed_gu.cu": "046d9ecc3c46a4018bfd770b51f164dfc0971fc444390ea08ed3b161a16c8209",
+    "native_mixed_gu.exe": "3b6a47c8fd89472a1ce753e46d18fa4c7684d09add0d33a554b6270b8d282ad7",
+    "native-mixed-image.bin": "80ff0a31a1c4a36b6fef0ec32b77deae02e14d61f5756347aaad88fb1b26d297",
+    "mixed-observer-mode0.bin": "fc212d67a4f6b4b2a4da4d5cde75319c06a7ff09272c48787b68bbe866ed413a",
+    "mixed-observer-mode1.bin": "aaa0c26acd7d99bf603fc2766558e523cfe70d6979e43131ebf096602843a2c1",
+    "mixed-observer-mode2.bin": "386b2d57310938d91c38f8be8cb2b6a9d3b1b532923659f2b52e11c626227615",
+    "build.log": "3c2031de776655886de0350cb490cf6b4a7bd82e46214a07abf773d663909517"
+  }
+}

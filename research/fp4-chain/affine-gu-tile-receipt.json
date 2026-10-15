@@ -1,0 +1,14 @@
+{
+  "exit": 0,
+  "stdout": "{\"status\":\"pass\",\"cases\":54675,\"validation_checks\":54675,\"missing\":0,\"mismatches\":0,\"producer_bytes\":2448,\"native_dense_bytes\":90504,\"source_lookup_bytes\":218700,\"coordinate_axis_bytes\":936,\"output_bytes\":218700,\"timings_ms\":{\"tile_one_MMA_C_fused\":{\"median\":0.002739,\"min\":0.002730,\"max\":0.002774,\"registers\":20,\"local_bytes\":0,\"shared_bytes\":0},\"direct_Q8\":{\"median\":0.001837,\"min\":0.001829,\"max\":0.002073,\"registers\":20,\"local_bytes\":0,\"shared_bytes\":0},\"full_map_lookup\":{\"median\":0.001472,\"min\":0.001470,\"max\":0.001702,\"registers\":12,\"local_bytes\":0,\"shared_bytes\":0}},\"scope\":\"one nonuniform-K MMA/128 distinct outputs plus final exact-bit observer; 936B coordinate axes+2448B producer; exact float-bit checked dense final observer; dynamic producer/ISA composition/int index/readout/output charged; scale1 finite GU-down-Q8 only; no learned-model or speedup claim\"}\n",
+  "stderr": "",
+  "wall_s": 1.6258139610290527,
+  "mutex": "Local\\BonsaiGPU",
+  "mutex_wait_result": 0,
+  "hashes": {
+    "native_affine_tile.cu": "4bc00606cf5d3e95ee5d55cfe479bd2ab95df2096017382cc314d537d34148db",
+    "native_affine_tile.exe": "45cdfcf2adea0a4eec1c784c0aa8bab5959a4ea391a175575c289e5e462b9dd0",
+    "affine-observer.bin": "fab9aff7e926c4402c12f3111796064dbb5b353080b93c8c56964f19b035af8d",
+    "build.log": "65a586148da65cd326f9769ed8d5582e9e54125eb648566d166bb877f71d5732"
+  }
+}

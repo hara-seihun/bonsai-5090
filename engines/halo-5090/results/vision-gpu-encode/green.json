@@ -1,0 +1,12 @@
+{
+  "prompt_rows": 284,
+  "image_tokens": 256,
+  "next_rope_pos": 44,
+  "encode_s": 0.199313533,
+  "first_visual_rope": [
+    4,
+    4,
+    4,
+    0
+  ]
+}

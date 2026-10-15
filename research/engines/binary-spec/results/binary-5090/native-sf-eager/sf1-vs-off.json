@@ -1,0 +1,53 @@
+{
+  "scope": "same-item scoped panel, not full quality gate",
+  "reference": "results/binary-5090/native-sf-eager/tasks-binary1-sf-off-plain-b32",
+  "candidate": "results/binary-5090/native-sf-eager/tasks-binary1-sf1-plain-b32",
+  "reference_timing": {
+    "completion_tokens": 20585,
+    "seconds": 44.52354404237121,
+    "http_tok_s": 462.33965518131504
+  },
+  "candidate_timing": {
+    "completion_tokens": 20761,
+    "seconds": 44.65944831352681,
+    "http_tok_s": 464.8736333294951
+  },
+  "http_ratio": 1.0054807718087393,
+  "benchmarks": {
+    "gsm8k": {
+      "paired": {
+        "accuracy": {
+          "n": 32,
+          "reference_correct": 29,
+          "candidate_correct": 29,
+          "gains": 0,
+          "losses": 0
+        }
+      },
+      "aggregate_only": {},
+      "reference_truncated": 1,
+      "candidate_truncated": 1
+    },
+    "humaneval_plus": {
+      "paired": {
+        "base": {
+          "n": 32,
+          "reference_correct": 32,
+          "candidate_correct": 32,
+          "gains": 0,
+          "losses": 0
+        },
+        "plus": {
+          "n": 32,
+          "reference_correct": 32,
+          "candidate_correct": 32,
+          "gains": 0,
+          "losses": 0
+        }
+      },
+      "aggregate_only": {},
+      "reference_truncated": 0,
+      "candidate_truncated": 0
+    }
+  }
+}

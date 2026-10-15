@@ -1,0 +1,51 @@
+[
+  {
+    "symbol": "_ZN10sparse_fp47consumeILi8ELi2ELi32EEEvPKhS2_S2_N9bitserial7CarrierEiiiPfiffN10signed_fp412WeightLayoutENS_6DigitsE",
+    "instructions": 35347,
+    "native_fp4_OMMA": 64,
+    "global_u16": 1984,
+    "raw_q_s8": 508
+  },
+  {
+    "symbol": "_ZN10sparse_fp47consumeILi8ELi1ELi32EEEvPKhS2_S2_N9bitserial7CarrierEiiiPfiffN10signed_fp412WeightLayoutENS_6DigitsE",
+    "instructions": 18745,
+    "native_fp4_OMMA": 32,
+    "global_u16": 992,
+    "raw_q_s8": 252
+  },
+  {
+    "symbol": "_ZN10sparse_fp47consumeILi4ELi2ELi32EEEvPKhS2_S2_N9bitserial7CarrierEiiiPfiffN10signed_fp412WeightLayoutENS_6DigitsE",
+    "instructions": 34711,
+    "native_fp4_OMMA": 64,
+    "global_u16": 1984,
+    "raw_q_s8": 508
+  },
+  {
+    "symbol": "_ZN10sparse_fp47consumeILi4ELi2ELi16EEEvPKhS2_S2_N9bitserial7CarrierEiiiPfiffN10signed_fp412WeightLayoutENS_6DigitsE",
+    "instructions": 18378,
+    "native_fp4_OMMA": 32,
+    "global_u16": 992,
+    "raw_q_s8": 252
+  },
+  {
+    "symbol": "_ZN10sparse_fp47consumeILi4ELi2ELi8EEEvPKhS2_S2_N9bitserial7CarrierEiiiPfiffN10signed_fp412WeightLayoutENS_6DigitsE",
+    "instructions": 10264,
+    "native_fp4_OMMA": 16,
+    "global_u16": 496,
+    "raw_q_s8": 124
+  },
+  {
+    "symbol": "_ZN10sparse_fp44foldEPKfPfiiiiff",
+    "instructions": 306,
+    "native_fp4_OMMA": 0,
+    "global_u16": 0,
+    "raw_q_s8": 0
+  },
+  {
+    "symbol": "_ZN10sparse_fp44packEN9bitserial7CarrierENS_6DigitsEii",
+    "instructions": 423,
+    "native_fp4_OMMA": 0,
+    "global_u16": 32,
+    "raw_q_s8": 1
+  }
+]

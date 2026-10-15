@@ -1,0 +1,89 @@
+{
+  "receipt": {
+    "state": "CPU_staged_not_run",
+    "gpu_work": false,
+    "native_model_execution": false,
+    "candidate_dll_sha256": "4098ba03c9d8b53e0672e9f6800d1461c453bce46e80923c46e389edbc415dfa",
+    "stage_payload_sha256": "da1348dbcb7ac18e15e1f93316bb9911d1bc66099d69b49f343c318eaa349473",
+    "plan_sha256": "29ad08e111d352a09f6384ce1740f6ed6c2b43a3bc164adacb83aafa132fdb5f",
+    "isolated_contract_exit": 0,
+    "isolated_contract_output": "{\"GPU_execution\": false, \"native_model_execution\": false, \"warmup_contract\": true, \"old_capture_prefix_rejected\": true, \"every_endpoint_field_mutation_rejected\": true, \"isolated_imports\": \"stdlib-only worker; pure function extraction executed\", \"handback_fabricated\": false}\n",
+    "PE_exports_verified_without_loading": true,
+    "handback_fabricated": false,
+    "runtime_receipt_exists": false,
+    "files": {
+      "strict-worker.py": "e338759716d5d8b6cd0ac3e99730a5b53884d1739a8e1f02bbbdf7ae4295d7ca",
+      "driver.py": "e615692d4ba12d515ab989e257e11a988d1a4b5294b8613889e54b4eb7329281",
+      "environment.json": "d3674f18b9d44db8f09a7e308b72fec3b9e756c30134824ab92865c1c80f2c6e",
+      "test_harness.py": "a6baf5d756e7b14538c77a2b2e033c1a5c478a568878b18e6ab4ac1fb5be8373"
+    }
+  },
+  "plan": {
+    "state": "CPU_staged_not_run",
+    "candidate_dll_sha256": "4098ba03c9d8b53e0672e9f6800d1461c453bce46e80923c46e389edbc415dfa",
+    "control_dll_sha256": "a836fd6818df9bc92a8df71d2f9e92fc97b9a64195fab4142d9101fb20785e7c",
+    "control_plan_sha256": "713c060b627ef9955d68edfef17e12d75f07093c68b74c3fd8ecf4d19b3507bd",
+    "bench_sha256": "3fd47ff37205bdd50738194ef92c13c21d24fc77a9d1be1197b69128a2173b12",
+    "files": {
+      "strict-worker.py": "e338759716d5d8b6cd0ac3e99730a5b53884d1739a8e1f02bbbdf7ae4295d7ca",
+      "driver.py": "e615692d4ba12d515ab989e257e11a988d1a4b5294b8613889e54b4eb7329281",
+      "environment.json": "d3674f18b9d44db8f09a7e308b72fec3b9e756c30134824ab92865c1c80f2c6e",
+      "test_harness.py": "a6baf5d756e7b14538c77a2b2e033c1a5c478a568878b18e6ab4ac1fb5be8373"
+    },
+    "immutable_inputs": {
+      "C:/work/models/experiments/bonsai-quality-20261013/custom-wide256/build/quality_custom.dll": "a836fd6818df9bc92a8df71d2f9e92fc97b9a64195fab4142d9101fb20785e7c",
+      "C:/work/models/experiments/bonsai-quality-20261013/custom/frozen-production-plan.txt": "713c060b627ef9955d68edfef17e12d75f07093c68b74c3fd8ecf4d19b3507bd",
+      "C:/work/models/experiments/bonsai-quality-20261013/custom-wide256/build/quality_length_bench.exe": "3fd47ff37205bdd50738194ef92c13c21d24fc77a9d1be1197b69128a2173b12",
+      "C:/work/models/experiments/bonsai-quality-20261013/gu-dict8-engine-build-v2/build/quality_length_bench.exe": "3fd47ff37205bdd50738194ef92c13c21d24fc77a9d1be1197b69128a2173b12",
+      "C:/work/models/experiments/bonsai-quality-20261013/gu-dict8-engine-build-v2/build/quality_custom.dll": "4098ba03c9d8b53e0672e9f6800d1461c453bce46e80923c46e389edbc415dfa",
+      "C:/work/models/models/Ternary-Bonsai-2-27B-PTQ1_0.gguf": "53107f530aa52eb00912263ab1ee29bd199261c87cd7b4ad4ca1318c1fe33ee3"
+    },
+    "source_identity": {
+      "frozen_engine_sha256": "e2ae33c409fc8a4fe668f8c5cbf51009f65ea76745741fd5d3135c329a5b18c4",
+      "candidate_engine_sha256": "b8df101abcad7eea679574e303b41db77e11580d8b5f0657b4a80a675677c66a",
+      "GPU_execution": false,
+      "opt_in": "H5_GU_DICT8=1",
+      "control": "Unchanged frozen installed DLL; private source starts with exact frozen engine, not H1 derivative.",
+      "dictionary_kernel_sha256": "043509429b79c58c3a4647e23b6b1738c7b7a9d025f2f889b65577d1708f86d3",
+      "codec_sha256": "47e34a43add40b9c83fba0ab3e03e98df2c178a2d632edd22a3e83b74b4eb9bc",
+      "source_parent": "745cc824d467b0668242d8fc140b43b9573cf64f"
+    },
+    "window_bound_s": 240,
+    "child_bound_s": 50,
+    "strict": {
+      "warmups": 3,
+      "cached_observations": 2,
+      "rows": 64,
+      "vocab": 248320,
+      "complete_logit_bytes": 127139840,
+      "teacher_forcing": true,
+      "reference_repeat": true,
+      "H5_DETERMINISTIC_GEMM": "1",
+      "H5_DOWN_CLEAR": "0",
+      "complete_endpoints": [
+        "rounded gate/up after activation scales/row means",
+        "SiLU",
+        "q4",
+        "s4",
+        "g4"
+      ]
+    },
+    "matched_AB": {
+      "profiles": [
+        "ordinary",
+        "deterministic"
+      ],
+      "arms": [
+        "unchanged frozen serving",
+        "private dict8"
+      ],
+      "passes": 3,
+      "streams": 64,
+      "tokens_per_stream": 128,
+      "warmup_tokens_per_stream": 8
+    },
+    "GPU_acceptance": false,
+    "GPU_request": false,
+    "handoff": "Successor has no authorization or GPU reservation. MATH500 has priority. Requires fresh8614 all-current-and-queued-reservations clearance plus separate original-operation authorization; latestbe61783f FIM ladder and earlier0142faa9 holds grant no execution to this lane. No handback file is fabricated."
+  }
+}

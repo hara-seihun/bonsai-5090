@@ -1,0 +1,13 @@
+{
+  "exit": 0,
+  "stdout": "{\"status\":\"observed\",\"source_K\":128,\"native_K\":64,\"source_groups_per_native_instruction\":4,\"rules\":[\"sequential_groups\",\"pairwise_groups_plus_C\",\"exact_double_groups_plus_C\",\"sequential_halves\",\"sequential_scaled_products\"],\"nonzero_word_differences\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],\"checks_per_rule_component_instruction\":16384,\"layout\":\"instruction then component then rule; native C for instruction2 comes from instruction1\",\"scope\":\"one generated matrix, all127 finite E4M3 codes in an explicit repeated permutation, fully occupied native K64, source reduction semantics observation only; no performance or global IEEE theorem\"}\n",
+  "stderr": "",
+  "wall_s": 1.8991467952728271,
+  "mutex": "Local\\BonsaiGPU",
+  "mutex_wait_result": 0,
+  "hashes": {
+    "native_mixed_k64_semantics.cu": "48fc4d5d3dd4d56494e0ea0cf4c4793fef258dc851852a342c123af7aea0aea1",
+    "native_mixed_k64_semantics.exe": "6521cd406ffbff2f4a494bc155fee349ae008f3e1e0be085fe7772bbae7ccd7a",
+    "build.log": "02e0b4c1c5889e21c06356d76c00d430fb8ba84758cbf77c41fcb8c3180f5c2a"
+  }
+}

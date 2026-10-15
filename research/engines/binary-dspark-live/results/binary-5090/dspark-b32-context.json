@@ -1,0 +1,7 @@
+{
+  "scope": "same64prompt reference panel",
+  "maximum_prompt_tokens": 208,
+  "maximum_output_tokens": 4096,
+  "explicit_dspark_b32_context": 4608,
+  "all_prompt_plus_caps_fit": true
+}

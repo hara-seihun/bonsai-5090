@@ -1,0 +1,23 @@
+{
+  "actual_export_sha256": "e2b677d540b27ba6974355ddbf0b164e9af2a4a3a457484f72ac18ed5f01854b",
+  "ordered_sentinel_fields": 14,
+  "null_pointer_bad_count_unset_owner_errors": true,
+  "error_does_not_write_output": true,
+  "gpu_work": false,
+  "native_dll_loaded": false,
+  "proof": "Actual exported identity stats body compiled against CPU sentinel owner; no actual Engine construction",
+  "compile_command": [
+    "cl",
+    "/nologo",
+    "/O2",
+    "/EHsc",
+    "/std:c++17",
+    "/DNOMINMAX",
+    "/D_CRT_SECURE_NO_WARNINGS",
+    "/IC:\\work\\models\\experiments\\bonsai-quality-20261013\\gu-dict8-identity-build-v2\\src",
+    "C:\\work\\AppData\\Local\\Temp\\dict8-identity-abi-_1qckhn3\\abi.cpp",
+    "/Fe:C:\\work\\AppData\\Local\\Temp\\dict8-identity-abi-_1qckhn3\\abi.exe",
+    "/link",
+    "bcrypt.lib"
+  ]
+}

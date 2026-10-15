@@ -1,0 +1,27 @@
+BUILD 0 ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z6nativeILb0EEvPK4TilePKyPKaPaPii' for 'sm_120a'
+ptxas info    : Function properties for _Z6nativeILb0EEvPK4TilePKyPKaPaPii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 31 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6nativeILb1EEvPK4TilePKyPKaPaPii' for 'sm_120a'
+ptxas info    : Function properties for _Z6nativeILb1EEvPK4TilePKyPKaPaPii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 34 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6directPK4TilePaPii' for 'sm_120a'
+ptxas info    : Function properties for _Z6directPK4TilePaPii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 29 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z9maketablePai' for 'sm_120a'
+ptxas info    : Function properties for _Z9maketablePai
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 19 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+affine5_gu.cu
+tmpxft_0000a898_00000000-10_affine5_gu.cudafe1.cpp
+ 
+MUTEX 0
+RELEASED
+RECEIPT {"source_sha256": "cbae8d88b9bd3d25988407fc570be587e635048e86db39a0cbd681fb8fcddb2b", "exit": 1, "stdout": "{\"state\":\"mismatch\",\"word_errors\":1023613,\"q8_errors\":459339,\"one_mma_errors\":416230}\n", "stderr": "", "wall_s": 0.16451501846313477, "hashes": {"affine5-inputs.bin": "e4d3e2d0c850104e1f8407235a6edf378eb1f82058614459703f2c46e7abef1c", "affine5-native-q8.bin": "c08ebf2704ec15ecabb0c7e5e28530cbc79301b0b0b8be120b8090032b5998fa", "affine5-native-words.bin": "4a8e5cc2b5cb5695a45abb8b6f622b73b5f430010f7068ccc77b5601a6dc8ba7", "affine5-q8-observer.bin": "a10b344e20d59db43b0f26df89501a6d2f81584b78986f0e3e920045a7b2275b", "affine5-weight-producer.bin": "adcef813ee291c05d4d8ec652df266283fb6e148a9c73d64d83ae5a1f7f48e78", "affine5_gu.cu": "3975b726c1aa5d07d8cf02ec8eab72eeb18313d45d54af9fd1bbade4d3ab4c20", "affine5_gu.exe": "d0c3b1395ce7f58a67cc94da8b43203515a8f412b5b0c8cb6e11760ed912bfa5", "build.cmd": "20ec073fc562991d2293b7cd10a71deb2a1acf0802f6b1970497b2a6e24eca90", "build.log": "e6390dab33c000818f7424f18b73bd1a50fd088371605909a2fa040a601ccff8"}}

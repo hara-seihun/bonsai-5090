@@ -1,0 +1,724 @@
+{
+  "input": "~/data/bonsai1/Bonsai-27B-dspark-bf16.gguf.download",
+  "header_end": 5814,
+  "tensor_count": 79,
+  "metadata_count": 27,
+  "metadata": {
+    "general.architecture": "dspark",
+    "general.type": "model",
+    "general.name": "Bonsai-27B-dspark",
+    "general.size_label": "3.6B",
+    "dspark.block_count": 6,
+    "dspark.context_length": 4096,
+    "dspark.embedding_length": 5120,
+    "dspark.feed_forward_length": 5120,
+    "dspark.attention.head_count": 40,
+    "dspark.attention.head_count_kv": 4,
+    "dspark.rope.freq_base": 10000000.0,
+    "dspark.attention.layer_norm_rms_epsilon": 9.999999974752427e-07,
+    "dspark.attention.key_length": 128,
+    "dspark.attention.value_length": 128,
+    "general.file_type": 32,
+    "dspark.dspark.block_size": 4,
+    "dspark.dspark.mask_token_id": 248319,
+    "dspark.dspark.target_layers": [
+      1,
+      16,
+      31,
+      46,
+      61
+    ],
+    "dspark.dspark.markov_rank": 256,
+    "dspark.dspark.confidence_head": true,
+    "dspark.dspark.confidence_head_with_markov": true,
+    "dspark.dspark.log_snr_conditioning": true,
+    "dspark.dspark.min_log_snr": -9.0,
+    "dspark.dspark.max_log_snr": 9.0,
+    "general.quantization_version": 2,
+    "dspark.vocab_size": 248320
+  },
+  "tensors": [
+    {
+      "name": "dspark.confidence_head.bias",
+      "shape_ggml": [
+        1
+      ],
+      "type": 0,
+      "offset": 0
+    },
+    {
+      "name": "dspark.confidence_head.weight",
+      "shape_ggml": [
+        5376,
+        1
+      ],
+      "type": 30,
+      "offset": 32
+    },
+    {
+      "name": "token_embd.weight",
+      "shape_ggml": [
+        5120,
+        248320
+      ],
+      "type": 30,
+      "offset": 10784
+    },
+    {
+      "name": "dspark.fc.weight",
+      "shape_ggml": [
+        25600,
+        5120
+      ],
+      "type": 30,
+      "offset": 2542807584
+    },
+    {
+      "name": "dspark.hidden_norm.weight",
+      "shape_ggml": [
+        5120
+      ],
+      "type": 0,
+      "offset": 2804951584
+    },
+    {
+      "name": "blk.0.attn_norm.weight",
+      "shape_ggml": [
+        5120
+      ],
+      "type": 0,
+      "offset": 2804972064
+    },
+    {
+      "name": "blk.0.ffn_down.weight",
+      "shape_ggml": [
+        5120,
+        5120
+      ],
+      "type": 30,
+      "offset": 2804992544
+    },
+    {
+      "name": "blk.0.ffn_gate.weight",
+      "shape_ggml": [
+        5120,
+        5120
+      ],
+      "type": 30,
+      "offset": 2857421344
+    },
+    {
+      "name": "blk.0.ffn_up.weight",
+      "shape_ggml": [
+        5120,
+        5120
+      ],
+      "type": 30,
+      "offset": 2909850144
+    },
+    {
+      "name": "blk.0.ffn_norm.weight",
+      "shape_ggml": [
+        5120
+      ],
+      "type": 0,
+      "offset": 2962278944
+    },
+    {
+      "name": "blk.0.attn_k_norm.weight",
+      "shape_ggml": [
+        128
+      ],
+      "type": 0,
+      "offset": 2962299424
+    },
+    {
+      "name": "blk.0.attn_k.weight",
+      "shape_ggml": [
+        5120,
+        512
+      ],
+      "type": 30,
+      "offset": 2962299936
+    },
+    {
+      "name": "blk.0.attn_output.weight",
+      "shape_ggml": [
+        5120,
+        5120
+      ],
+      "type": 30,
+      "offset": 2967542816
+    },
+    {
+      "name": "blk.0.attn_q_norm.weight",
+      "shape_ggml": [
+        128
+      ],
+      "type": 0,
+      "offset": 3019971616
+    },
+    {
+      "name": "blk.0.attn_q.weight",
+      "shape_ggml": [
+        5120,
+        5120
+      ],
+      "type": 30,
+      "offset": 3019972128
+    },
+    {
+      "name": "blk.0.attn_v.weight",
+      "shape_ggml": [
+        5120,
+        512
+      ],
+      "type": 30,
+      "offset": 3072400928
+    },
+    {
+      "name": "blk.1.attn_norm.weight",
+      "shape_ggml": [
+        5120
+      ],
+      "type": 0,
+      "offset": 3077643808
+    },
+    {
+      "name": "blk.1.ffn_down.weight",
+      "shape_ggml": [
+        5120,
+        5120
+      ],
+      "type": 30,
+      "offset": 3077664288
+    },
+    {
+      "name": "blk.1.ffn_gate.weight",
+      "shape_ggml": [
+        5120,
+        5120
+      ],
+      "type": 30,
+      "offset": 3130093088
+    },
+    {
+      "name": "blk.1.ffn_up.weight",
+      "shape_ggml": [
+        5120,
+        5120
+      ],
+      "type": 30,
+      "offset": 3182521888
+    },
+    {
+      "name": "blk.1.ffn_norm.weight",
+      "shape_ggml": [
+        5120
+      ],
+      "type": 0,
+      "offset": 3234950688
+    },
+    {
+      "name": "blk.1.attn_k_norm.weight",
+      "shape_ggml": [
+        128
+      ],
+      "type": 0,
+      "offset": 3234971168
+    },
+    {
+      "name": "blk.1.attn_k.weight",
+      "shape_ggml": [
+        5120,
+        512
+      ],
+      "type": 30,
+      "offset": 3234971680
+    },
+    {
+      "name": "blk.1.attn_output.weight",
+      "shape_ggml": [
+        5120,
+        5120
+      ],
+      "type": 30,
+      "offset": 3240214560
+    },
+    {
+      "name": "blk.1.attn_q_norm.weight",
+      "shape_ggml": [
+        128
+      ],
+      "type": 0,
+      "offset": 3292643360
+    },
+    {
+      "name": "blk.1.attn_q.weight",
+      "shape_ggml": [
+        5120,
+        5120
+      ],
+      "type": 30,
+      "offset": 3292643872
+    },
+    {
+      "name": "blk.1.attn_v.weight",
+      "shape_ggml": [
+        5120,
+        512
+      ],
+      "type": 30,
+      "offset": 3345072672
+    },
+    {
+      "name": "blk.2.attn_norm.weight",
+      "shape_ggml": [
+        5120
+      ],
+      "type": 0,
+      "offset": 3350315552
+    },
+    {
+      "name": "blk.2.ffn_down.weight",
+      "shape_ggml": [
+        5120,
+        5120
+      ],
+      "type": 30,
+      "offset": 3350336032
+    },
+    {
+      "name": "blk.2.ffn_gate.weight",
+      "shape_ggml": [
+        5120,
+        5120
+      ],
+      "type": 30,
+      "offset": 3402764832
+    },
+    {
+      "name": "blk.2.ffn_up.weight",
+      "shape_ggml": [
+        5120,
+        5120
+      ],
+      "type": 30,
+      "offset": 3455193632
+    },
+    {
+      "name": "blk.2.ffn_norm.weight",
+      "shape_ggml": [
+        5120
+      ],
+      "type": 0,
+      "offset": 3507622432
+    },
+    {
+      "name": "blk.2.attn_k_norm.weight",
+      "shape_ggml": [
+        128
+      ],
+      "type": 0,
+      "offset": 3507642912
+    },
+    {
+      "name": "blk.2.attn_k.weight",
+      "shape_ggml": [
+        5120,
+        512
+      ],
+      "type": 30,
+      "offset": 3507643424
+    },
+    {
+      "name": "blk.2.attn_output.weight",
+      "shape_ggml": [
+        5120,
+        5120
+      ],
+      "type": 30,
+      "offset": 3512886304
+    },
+    {
+      "name": "blk.2.attn_q_norm.weight",
+      "shape_ggml": [
+        128
+      ],
+      "type": 0,
+      "offset": 3565315104
+    },
+    {
+      "name": "blk.2.attn_q.weight",
+      "shape_ggml": [
+        5120,
+        5120
+      ],
+      "type": 30,
+      "offset": 3565315616
+    },
+    {
+      "name": "blk.2.attn_v.weight",
+      "shape_ggml": [
+        5120,
+        512
+      ],
+      "type": 30,
+      "offset": 3617744416
+    },
+    {
+      "name": "blk.3.attn_norm.weight",
+      "shape_ggml": [
+        5120
+      ],
+      "type": 0,
+      "offset": 3622987296
+    },
+    {
+      "name": "blk.3.ffn_down.weight",
+      "shape_ggml": [
+        5120,
+        5120
+      ],
+      "type": 30,
+      "offset": 3623007776
+    },
+    {
+      "name": "blk.3.ffn_gate.weight",
+      "shape_ggml": [
+        5120,
+        5120
+      ],
+      "type": 30,
+      "offset": 3675436576
+    },
+    {
+      "name": "blk.3.ffn_up.weight",
+      "shape_ggml": [
+        5120,
+        5120
+      ],
+      "type": 30,
+      "offset": 3727865376
+    },
+    {
+      "name": "blk.3.ffn_norm.weight",
+      "shape_ggml": [
+        5120
+      ],
+      "type": 0,
+      "offset": 3780294176
+    },
+    {
+      "name": "blk.3.attn_k_norm.weight",
+      "shape_ggml": [
+        128
+      ],
+      "type": 0,
+      "offset": 3780314656
+    },
+    {
+      "name": "blk.3.attn_k.weight",
+      "shape_ggml": [
+        5120,
+        512
+      ],
+      "type": 30,
+      "offset": 3780315168
+    },
+    {
+      "name": "blk.3.attn_output.weight",
+      "shape_ggml": [
+        5120,
+        5120
+      ],
+      "type": 30,
+      "offset": 3785558048
+    },
+    {
+      "name": "blk.3.attn_q_norm.weight",
+      "shape_ggml": [
+        128
+      ],
+      "type": 0,
+      "offset": 3837986848
+    },
+    {
+      "name": "blk.3.attn_q.weight",
+      "shape_ggml": [
+        5120,
+        5120
+      ],
+      "type": 30,
+      "offset": 3837987360
+    },
+    {
+      "name": "blk.3.attn_v.weight",
+      "shape_ggml": [
+        5120,
+        512
+      ],
+      "type": 30,
+      "offset": 3890416160
+    },
+    {
+      "name": "blk.4.attn_norm.weight",
+      "shape_ggml": [
+        5120
+      ],
+      "type": 0,
+      "offset": 3895659040
+    },
+    {
+      "name": "blk.4.ffn_down.weight",
+      "shape_ggml": [
+        5120,
+        5120
+      ],
+      "type": 30,
+      "offset": 3895679520
+    },
+    {
+      "name": "blk.4.ffn_gate.weight",
+      "shape_ggml": [
+        5120,
+        5120
+      ],
+      "type": 30,
+      "offset": 3948108320
+    },
+    {
+      "name": "blk.4.ffn_up.weight",
+      "shape_ggml": [
+        5120,
+        5120
+      ],
+      "type": 30,
+      "offset": 4000537120
+    },
+    {
+      "name": "blk.4.ffn_norm.weight",
+      "shape_ggml": [
+        5120
+      ],
+      "type": 0,
+      "offset": 4052965920
+    },
+    {
+      "name": "blk.4.attn_k_norm.weight",
+      "shape_ggml": [
+        128
+      ],
+      "type": 0,
+      "offset": 4052986400
+    },
+    {
+      "name": "blk.4.attn_k.weight",
+      "shape_ggml": [
+        5120,
+        512
+      ],
+      "type": 30,
+      "offset": 4052986912
+    },
+    {
+      "name": "blk.4.attn_output.weight",
+      "shape_ggml": [
+        5120,
+        5120
+      ],
+      "type": 30,
+      "offset": 4058229792
+    },
+    {
+      "name": "blk.4.attn_q_norm.weight",
+      "shape_ggml": [
+        128
+      ],
+      "type": 0,
+      "offset": 4110658592
+    },
+    {
+      "name": "blk.4.attn_q.weight",
+      "shape_ggml": [
+        5120,
+        5120
+      ],
+      "type": 30,
+      "offset": 4110659104
+    },
+    {
+      "name": "blk.4.attn_v.weight",
+      "shape_ggml": [
+        5120,
+        512
+      ],
+      "type": 30,
+      "offset": 4163087904
+    },
+    {
+      "name": "blk.5.attn_norm.weight",
+      "shape_ggml": [
+        5120
+      ],
+      "type": 0,
+      "offset": 4168330784
+    },
+    {
+      "name": "blk.5.ffn_down.weight",
+      "shape_ggml": [
+        5120,
+        5120
+      ],
+      "type": 30,
+      "offset": 4168351264
+    },
+    {
+      "name": "blk.5.ffn_gate.weight",
+      "shape_ggml": [
+        5120,
+        5120
+      ],
+      "type": 30,
+      "offset": 4220780064
+    },
+    {
+      "name": "blk.5.ffn_up.weight",
+      "shape_ggml": [
+        5120,
+        5120
+      ],
+      "type": 30,
+      "offset": 4273208864
+    },
+    {
+      "name": "blk.5.ffn_norm.weight",
+      "shape_ggml": [
+        5120
+      ],
+      "type": 0,
+      "offset": 4325637664
+    },
+    {
+      "name": "blk.5.attn_k_norm.weight",
+      "shape_ggml": [
+        128
+      ],
+      "type": 0,
+      "offset": 4325658144
+    },
+    {
+      "name": "blk.5.attn_k.weight",
+      "shape_ggml": [
+        5120,
+        512
+      ],
+      "type": 30,
+      "offset": 4325658656
+    },
+    {
+      "name": "blk.5.attn_output.weight",
+      "shape_ggml": [
+        5120,
+        5120
+      ],
+      "type": 30,
+      "offset": 4330901536
+    },
+    {
+      "name": "blk.5.attn_q_norm.weight",
+      "shape_ggml": [
+        128
+      ],
+      "type": 0,
+      "offset": 4383330336
+    },
+    {
+      "name": "blk.5.attn_q.weight",
+      "shape_ggml": [
+        5120,
+        5120
+      ],
+      "type": 30,
+      "offset": 4383330848
+    },
+    {
+      "name": "blk.5.attn_v.weight",
+      "shape_ggml": [
+        5120,
+        512
+      ],
+      "type": 30,
+      "offset": 4435759648
+    },
+    {
+      "name": "output.weight",
+      "shape_ggml": [
+        5120,
+        248320
+      ],
+      "type": 30,
+      "offset": 4441002528
+    },
+    {
+      "name": "dspark.log_snr_fc1.bias",
+      "shape_ggml": [
+        5120
+      ],
+      "type": 0,
+      "offset": 6983799328
+    },
+    {
+      "name": "dspark.log_snr_fc1.weight",
+      "shape_ggml": [
+        128,
+        5120
+      ],
+      "type": 30,
+      "offset": 6983819808
+    },
+    {
+      "name": "dspark.log_snr_fc2.bias",
+      "shape_ggml": [
+        5120
+      ],
+      "type": 0,
+      "offset": 6985130528
+    },
+    {
+      "name": "dspark.log_snr_fc2.weight",
+      "shape_ggml": [
+        5120,
+        5120
+      ],
+      "type": 30,
+      "offset": 6985151008
+    },
+    {
+      "name": "dspark.markov_head_a.weight",
+      "shape_ggml": [
+        256,
+        248320
+      ],
+      "type": 30,
+      "offset": 7037579808
+    },
+    {
+      "name": "dspark.markov_head_b.weight",
+      "shape_ggml": [
+        256,
+        248320
+      ],
+      "type": 30,
+      "offset": 7164719648
+    },
+    {
+      "name": "output_norm.weight",
+      "shape_ggml": [
+        5120
+      ],
+      "type": 0,
+      "offset": 7291859488
+    }
+  ]
+}

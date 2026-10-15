@@ -1,0 +1,53 @@
+BUILD 0 C:/work\models\experiments\bonsai-quality-20261013\five-wide-native\affine5-gu-folded\affine5_gu_folded.cu(8): warning #177-D: variable "NW" was declared but never referenced
+  constexpr int NW=59049,NL=15121,STEP=16320,NT=47761;
+                ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z6nativeILb0EEvPK4TilePKyPKaPaPii' for 'sm_120a'
+ptxas info    : Function properties for _Z6nativeILb0EEvPK4TilePKyPKaPaPii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 30 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6nativeILb1EEvPK4TilePKyPKaPaPii' for 'sm_120a'
+ptxas info    : Function properties for _Z6nativeILb1EEvPK4TilePKyPKaPaPii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 34 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z11folded_tilePK4TilePKyPKaPai' for 'sm_120a'
+ptxas info    : Function properties for _Z11folded_tilePK4TilePKyPKaPai
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 28 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z11folded_simtPK4TilePKyPKaPai' for 'sm_120a'
+ptxas info    : Function properties for _Z11folded_simtPK4TilePKyPKaPai
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 23 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z13dp4a_observerPK4TilePKyPKaPai' for 'sm_120a'
+ptxas info    : Function properties for _Z13dp4a_observerPK4TilePKyPKaPai
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 23 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z12dp4a_controlPK4TilePKyPai' for 'sm_120a'
+ptxas info    : Function properties for _Z12dp4a_controlPK4TilePKyPai
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 23 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6directPK4TilePaPii' for 'sm_120a'
+ptxas info    : Function properties for _Z6directPK4TilePaPii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 29 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z9maketablePai' for 'sm_120a'
+ptxas info    : Function properties for _Z9maketablePai
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 19 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+affine5_gu_folded.cu
+tmpxft_000062cc_00000000-10_affine5_gu_folded.cudafe1.cpp
+ 
+MUTEX 0
+RELEASED
+RECEIPT {"source_sha256": "0a02196d800928c63ba1117c25b90d5a408e543a3f35e647e34d09bddfbe158a", "exit": 0, "stdout": "{\"state\":\"native_match\",\"sampled_outputs\":1048576,\"word_errors\":0,\"q8_errors\":0,\"one_mma_errors\":0,\"native_two_mma_us\":4.194240,\"native_one_mma_us\":2.984640,\"direct_us\":7.047680,\"dp4a_us\":4.930240,\"dp4a_errors\":0,\"weight_producer_bytes\":1944,\"producer_errors\":0,\"dp4a_observer_us\":4.685120,\"dp4a_observer_errors\":0,\"observer_bytes\":47761,\"folded_simt_us\":5.298240,\"folded_tile_us\":3.251520,\"folded_simt_errors\":0,\"folded_tile_errors\":0,\"logical_outputs_per_warp\":128,\"input_bytes_per_tile\":96}\n", "stderr": "", "wall_s": 0.1814866065979004, "hashes": {"affine5-inputs.bin": "e4d3e2d0c850104e1f8407235a6edf378eb1f82058614459703f2c46e7abef1c", "affine5-native-q8.bin": "cfa9d83858ab0e33e67752e84baa7a2c582913a9f926d75fb5e6aa4c5a0a5410", "affine5-native-words.bin": "56e1d0027f3aa378d3c21e4db13c58bfa11fc2379024a5f828501f76e8aa3f92", "affine5-q8-observer.bin": "a10b344e20d59db43b0f26df89501a6d2f81584b78986f0e3e920045a7b2275b", "affine5-weight-producer.bin": "9c42443b93e3767d592eb0ac45a726dd3220087ff8ea1c8c9de924465233f642", "affine5_gu_folded.cu": "e095c35af692ac5209f49fd51ca5fe6cce72e80d5d2a4944495aa133302518dc", "affine5_gu_folded.exe": "908be6ace13fafe22e60f39c4e9d19e58ea88dd1c8eeddc04179a996b1ba805d", "build.cmd": "f8d7221c3aaecee2bf3c091431bf5410e2fac5bf1ef7781eb6d4826006feeade", "build.log": "03e68ccee9de8b7bf46e58f7a0212e1ecfb06d6a4d0151d2c1fdd9c272655f78"}}

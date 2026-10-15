@@ -1,0 +1,358 @@
+{
+  "schema": "benchmark.export.sources.v1",
+  "source_root_identity": "bonsai-prism-benchmarks",
+  "programme12_commit": "08dadac9f891c4ccdad2ed5db853d8001a1c68ac",
+  "adaptations": [
+    "Evidence host paths replaced with campaign://, baseline://, installed:// coordinates; numerical observations unchanged",
+    "Portable harness uses relative paths, explicit IFEval langdetect seed0, caller Docker context and selected seven-task scope",
+    "GSM future-run judge I/O adapter is portable single-stage; historical adjudications retained separately",
+    "Code control receipts omit host container/process inventory; no change to scoring outcomes"
+  ],
+  "files": [
+    {
+      "export": ".gitignore",
+      "sha256": "0b076b425ff7cb4ee2d56c33e47298bb62e23165c2a39c0016e7d4451a7f6638",
+      "bytes": 48,
+      "source": "synthesized export projection/documentation; see receipt embedded source hashes where present"
+    },
+    {
+      "export": "NOTICE",
+      "sha256": "b783b304a812ef90950bce67ff0c83fa4a2a2160e0af61aeb5b226e0e2161a8f",
+      "bytes": 2011,
+      "source": "synthesized export projection/documentation; see receipt embedded source hashes where present"
+    },
+    {
+      "export": "README.md",
+      "sha256": "8e9b34066a0c28a8d40e89e36651dfc9a390f973d3032bc5fbf9d5280e0f07db",
+      "bytes": 13185,
+      "source": "synthesized export projection/documentation; see receipt embedded source hashes where present"
+    },
+    {
+      "export": "assets/chat_template.jinja",
+      "sha256": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041",
+      "bytes": 8952,
+      "source": "quality-campaign/assets/chat_template.jinja",
+      "source_sha256": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041",
+      "transformed": false
+    },
+    {
+      "export": "assets/qwen3coder_tool_parser.reference.py",
+      "sha256": "f1ef95f6cf76354b6d7f5bc19e65976ae315981315c22f07874c9eff9720de84",
+      "bytes": 31613,
+      "source": "quality-campaign/assets/qwen3coder_tool_parser.reference.py",
+      "source_sha256": "f1ef95f6cf76354b6d7f5bc19e65976ae315981315c22f07874c9eff9720de84",
+      "transformed": false
+    },
+    {
+      "export": "assets/sandbox.lock.json",
+      "sha256": "af805034f86708fde33161ec8341c291db63e36d8de9f148dc81898b18bb732c",
+      "bytes": 327,
+      "source": "quality-campaign/assets/sandbox.lock.json",
+      "source_sha256": "af805034f86708fde33161ec8341c291db63e36d8de9f148dc81898b18bb732c",
+      "transformed": false
+    },
+    {
+      "export": "assets/tool-parser-source.json",
+      "sha256": "4ba48e80bdaab88ccf43ff6aa8c8cd3c6f8f0d2c190a92d487a90d345c93149d",
+      "bytes": 226,
+      "source": "quality-campaign/assets/tool-parser-source.json",
+      "source_sha256": "4ba48e80bdaab88ccf43ff6aa8c8cd3c6f8f0d2c190a92d487a90d345c93149d",
+      "transformed": false
+    },
+    {
+      "export": "datasets-original15.lock.json",
+      "sha256": "b37452b3b8fb3dff2a1970b84e0982cea3f44c8d3d4b86eecb17a56d04971172",
+      "bytes": 9164,
+      "source": "datasets-original15.lock.json",
+      "source_sha256": "2541cbd6d6c080645ffb4aff621f4994eac237acb58bf48b251e11bd17cc6bfd",
+      "transformed": true
+    },
+    {
+      "export": "fetch_assets.py",
+      "sha256": "5631ed6afea666ab3417db646aef17b17ef8c69496e99b7be32122e561eb84f0",
+      "bytes": 1892,
+      "source": "synthesized export projection/documentation; see receipt embedded source hashes where present"
+    },
+    {
+      "export": "harness/campaign.py",
+      "sha256": "931b3c66a79b6df505ef924a02faf95e5a0665130a44fe1a74cde74d611bb1de",
+      "bytes": 17401,
+      "source": "activation-successor3/eval/campaign.py",
+      "source_sha256": "d1a1e9f5b354bba072ab1b89ab3dd6966b21b362ec6bdfc6a785f7b4ed3414aa",
+      "transformed": true
+    },
+    {
+      "export": "harness/code_scoring.py",
+      "sha256": "f31ea69268a31fea546e911df8cd596616564bfbe6dd450c1f244838e017f6f5",
+      "bytes": 2195,
+      "source": "eval/code_scoring.py",
+      "source_sha256": "f31ea69268a31fea546e911df8cd596616564bfbe6dd450c1f244838e017f6f5",
+      "transformed": false
+    },
+    {
+      "export": "harness/docker_backend.py",
+      "sha256": "d9b4736b4178982cb9a6567bb3d72babd4fc873f466484f26a6bac7ae110a61f",
+      "bytes": 14953,
+      "source": "activation-successor3/eval/docker_backend.py",
+      "source_sha256": "3f3549ec92e24d46a7b3d683afe635b0ccd2aa96af5cd517e533974afad266d6",
+      "transformed": true
+    },
+    {
+      "export": "harness/extract_template.py",
+      "sha256": "6fa030ad7b31b98307a072073f286e7d07201098e5e474dd897099c6ac1aafee",
+      "bytes": 2051,
+      "source": "eval/extract_template.py",
+      "source_sha256": "6fa030ad7b31b98307a072073f286e7d07201098e5e474dd897099c6ac1aafee",
+      "transformed": false
+    },
+    {
+      "export": "harness/judge_policy.py",
+      "sha256": "95cee895a19d7663f924eca4b82431fb6003763332ccb65114f15c3d3be2d0c7",
+      "bytes": 1926,
+      "source": "activation-successor3/eval/judge_policy.py",
+      "source_sha256": "e17b39a4115e57b678a09723ce15e4347eecf56135c49a29534651395cf3fea3",
+      "transformed": true,
+      "adaptation": "native GSM trigger preserved; account gateway/cache/adoption and staged recoveries removed; caller-supplied judge endpoint"
+    },
+    {
+      "export": "harness/qwen_tools.py",
+      "sha256": "d6e4a3818a9c259d31aa386259741a1c202cf76612c27f032cfe7f99552ce0b2",
+      "bytes": 2928,
+      "source": "eval/qwen_tools.py",
+      "source_sha256": "af25c1e5cd3e486a94e7b0e6f2a52a4913a75fedec790e52b206906b5fcb46ae",
+      "transformed": true
+    },
+    {
+      "export": "harness/shard_loading.py",
+      "sha256": "ae31d280c02b388042fc772bc94270f25a2bc2e8e2779e0f3069ed5b46bf3690",
+      "bytes": 2186,
+      "source": "eval/shard_loading.py",
+      "source_sha256": "ae31d280c02b388042fc772bc94270f25a2bc2e8e2779e0f3069ed5b46bf3690",
+      "transformed": false
+    },
+    {
+      "export": "harness/template_proxy.py",
+      "sha256": "6b7d08873d96f63ab7bb23d8aab881c101fc35306a211c6105d7b4d4d0589573",
+      "bytes": 9670,
+      "source": "eval/template_proxy.py",
+      "source_sha256": "6db99da7afa2c58a7bac59307941b6c38da0eaff364797d47260ac6551ae2a03",
+      "transformed": true
+    },
+    {
+      "export": "prepare_shards.py",
+      "sha256": "93cd49e4c0292055a0530999582885bb570d269446659f94e238ea20a67541d6",
+      "bytes": 5622,
+      "source": "prepare-shards.py",
+      "source_sha256": "5d40b6bba990c1326e579362289a23c9ec459a56e3a141b419920957989328be",
+      "transformed": true
+    },
+    {
+      "export": "protocol.json",
+      "sha256": "e3796e6bda8b22fa202f591d5bb0a7e32f9af2c49aa5329e0a2267a1382bc471",
+      "bytes": 8677,
+      "source": "activation-successor3/research/bonsai-quality/published-suite.json",
+      "source_sha256": "d2c3a12690746d34d155912c0ce0a77858bf3149ff7192a3c5391f7cebd6eb4d",
+      "transformed": true
+    },
+    {
+      "export": "receipts/canonical-scores.json",
+      "sha256": "47567b3adda38b3789969495b76e4cb6ab5e8a0efdf372e500fa60adbb3a85d5",
+      "bytes": 1356,
+      "source": "synthesized export projection/documentation; see receipt embedded source hashes where present"
+    },
+    {
+      "export": "receipts/code-e2e-fixture-after.json",
+      "sha256": "9f2747bd99092fbe6a21708d341b1d5d5baa840fe37832c78904fc00ccffdc8f",
+      "bytes": 11558,
+      "source": "code-e2e-fixture-after.json",
+      "source_sha256": "50004994775b1137d74eb993ba12c1a9306f519695b1dd7b0be96d3bc577ebcb",
+      "transformed": true
+    },
+    {
+      "export": "receipts/code-e2e-fixture-before.json",
+      "sha256": "3c3084d033d5a6a91234a789b3a873f9e2f11694ee9e93d8d58747c8f5cd998e",
+      "bytes": 8273,
+      "source": "code-e2e-fixture-before.json",
+      "source_sha256": "3c3084d033d5a6a91234a789b3a873f9e2f11694ee9e93d8d58747c8f5cd998e",
+      "transformed": false
+    },
+    {
+      "export": "receipts/gsm-broad-recall-diagnostic.json",
+      "sha256": "f54816dfbeff3f3b8bf005cf1c5a7a12af394987f594781f08c245e644a210e2",
+      "bytes": 4158,
+      "source": "intake-mcqaime/gsm-regrade/result.json",
+      "source_sha256": "8d10d7a39daa85c645554f53e90692a780659b3f8ddcc32de695582b1aea4349",
+      "transformed": true
+    },
+    {
+      "export": "receipts/gsm-gold-disagreement-check.json",
+      "sha256": "707ae88c56215bb47a5834d4e5da25c68a470be577b79c8de307de3e725eb875",
+      "bytes": 1032,
+      "source": "gsm-gold-disagreement-check.json",
+      "source_sha256": "707ae88c56215bb47a5834d4e5da25c68a470be577b79c8de307de3e725eb875",
+      "transformed": false
+    },
+    {
+      "export": "receipts/gsm-native-trigger-result.json",
+      "sha256": "acde4270ef4412123913a49e5b3cd402e0e7ebd1580df33f3cd83e3200429cc9",
+      "bytes": 1430,
+      "source": "intake-mcqaime/trigger-audit/gsm-native-trigger-result.json",
+      "source_sha256": "2fc479b60f7337cfe2cfee3f0bb8e4a3fdc29e17e9a1b5e7099f8b3ef0c740cf",
+      "transformed": true
+    },
+    {
+      "export": "receipts/gsm-native-trigger-rows.json",
+      "sha256": "5e2eca251a0e51b63b5812cc7b28edd2024e46d0d111b7119711af610f625e5f",
+      "bytes": 1083617,
+      "source": "intake-mcqaime/trigger-audit/gsm-native-trigger-rows.json",
+      "source_sha256": "66c46c0f4eaf4db53ee9ff0403efb730f83e57bf12c58f810101ee7535c90ac5",
+      "transformed": true
+    },
+    {
+      "export": "receipts/halo-gsm-coverage.json",
+      "sha256": "2ad1a279d60e780769bcad3c3dd0af4265e2a94c95b763109d8df8762cb52c0e",
+      "bytes": 8529,
+      "source": "halo-gsm-coverage.json",
+      "source_sha256": "def2c0948ad0942d3cf24a82e0690129d44cc48bbdd47d5adc63d1c451153c69",
+      "transformed": true
+    },
+    {
+      "export": "receipts/halo-ifeval-coverage.json",
+      "sha256": "4a042d15521306c9473fed561958f50b4a5d702419f48afedabc6c2989e2e974",
+      "bytes": 4508,
+      "source": "halo-ifeval-coverage.json",
+      "source_sha256": "1c682aa180ff11f5bead33553ad09af40432d7f8fd69d4f9f52c446b9582e379",
+      "transformed": true
+    },
+    {
+      "export": "receipts/halo-math_500-coverage.json",
+      "sha256": "301a54f133b2fa6bad64feaf95f66d5a10d0af7f57de9d47372cf7a93c6d1e8f",
+      "bytes": 9928,
+      "source": "halo-math_500-coverage.json",
+      "source_sha256": "8430e5e386ff0f99c94b8fdd8fe5549605f82133bc9bf402eb8f83c2057fd9a8",
+      "transformed": true
+    },
+    {
+      "export": "receipts/humaneval-plus-partial.json",
+      "sha256": "ff76704dcd5a6727ea3732f4da8e5ce0ebfb0a899501659d128767070ac23315",
+      "bytes": 3210,
+      "source": "synthesized export projection/documentation; see receipt embedded source hashes where present"
+    },
+    {
+      "export": "receipts/ifeval-native-screen-failure.json",
+      "sha256": "7e8f608bae137ca1fcac88db172d48ce8dbb8a886b183dc0e4b3461f05b583ca",
+      "bytes": 680,
+      "source": "ifeval-native-screen-failure.json",
+      "source_sha256": "7e8f608bae137ca1fcac88db172d48ce8dbb8a886b183dc0e4b3461f05b583ca",
+      "transformed": false
+    },
+    {
+      "export": "receipts/ifeval-screen8-pair.json",
+      "sha256": "384c922881beaf8c0765cf2314722ed8417e749a9fa3de851d563d63a3d46de0",
+      "bytes": 1128,
+      "source": "ifeval-screen8-pair.json",
+      "source_sha256": "384c922881beaf8c0765cf2314722ed8417e749a9fa3de851d563d63a3d46de0",
+      "transformed": false
+    },
+    {
+      "export": "receipts/math-screen10-pair.json",
+      "sha256": "11ad4c6f0d2008e09f3c12371298f50f2146c70ea61a06aefb94d431da46b093",
+      "bytes": 2249,
+      "source": "math-screen10-pair.json",
+      "source_sha256": "11ad4c6f0d2008e09f3c12371298f50f2146c70ea61a06aefb94d431da46b093",
+      "transformed": false
+    },
+    {
+      "export": "receipts/offline-replay-check.json",
+      "source": "synthesized export projection/documentation; see receipt embedded source hashes where present",
+      "sha256": "fee0bce7e65157dae83378776491a9c41192789777a167d62ee4df9d02f12f01",
+      "bytes": 940
+    },
+    {
+      "export": "receipts/partitions/gsm.json",
+      "sha256": "5d71821f71a73808898b1757665fb204aa1f5c2f4c42720233682551c6680fc3",
+      "bytes": 12154,
+      "source": "gsm-shards/partition.json",
+      "source_sha256": "fff02c430232cdc4ceb73430203a13399e49e19b44305b87b650a271349e2e84",
+      "transformed": true
+    },
+    {
+      "export": "receipts/partitions/humaneval_plus.json",
+      "sha256": "e3d3692bc7c786567edc48bd4a90595e1a28ed006079ea103ac470b8166b6d40",
+      "bytes": 4482,
+      "source": "humaneval_plus-shards/partition.json",
+      "source_sha256": "63dc9fe51ebd7ca0c948b2d70fb0663f66c0146a26779ca5d271adaa6ce6aea3",
+      "transformed": true
+    },
+    {
+      "export": "receipts/partitions/ifbench.json",
+      "sha256": "d7b901b41c19a755ff790320fa685b3fd9c59bbdc7fb8ef5e478df036e76cacb",
+      "bytes": 5892,
+      "source": "ifbench-shards/partition.json",
+      "source_sha256": "e227495d0c5c1ff2cfd4f4b9f9143ff8560b646371821107362aefaa1e50cf27",
+      "transformed": true
+    },
+    {
+      "export": "receipts/partitions/ifeval.json",
+      "sha256": "0125201f4774b32ed6e2f952200d196da00d784a31cdd41c5f77de35baf0e68a",
+      "bytes": 9862,
+      "source": "ifeval-shards/partition.json",
+      "source_sha256": "d274edbf321e81c9ba7a4dd34519f13b914648e5ad223329fb86151fe63d881e",
+      "transformed": true
+    },
+    {
+      "export": "receipts/partitions/math_500.json",
+      "sha256": "0116bb2c1960fbbed074b7e7523bae357abb5e788d98543b3342223354249084",
+      "bytes": 13033,
+      "source": "math_500-shards/partition.json",
+      "source_sha256": "1eeef09ff4cc389fd4661364f0e27877a8ccc393ea1a0749b6b48987d4cbfb89",
+      "transformed": true
+    },
+    {
+      "export": "receipts/partitions/mbpp_plus.json",
+      "sha256": "daac4dd35b0e144baf76fde84451442d3634205ec891a09b2b58b02daa14109e",
+      "bytes": 8512,
+      "source": "mbpp_plus-shards/partition.json",
+      "source_sha256": "b846d003c5371421810559349167cbefd11d29dec410ebf1420e8a988cfc0417",
+      "transformed": true
+    },
+    {
+      "export": "receipts/partitions/tau2_bench.json",
+      "sha256": "214ca8c9a924d7bb91623eaa5738cc488d4547c433ee2179f6d1040866be8695",
+      "bytes": 11173,
+      "source": "tau2_bench-shards/partition.json",
+      "source_sha256": "65232930cec1916143078ad21dc69c92d8f50e8191575c770d4521b1d95823d2",
+      "transformed": true
+    },
+    {
+      "export": "receipts/programme12-prism15-excerpt.md",
+      "sha256": "59f2a37b7d713798df46cb4ff72d72bb183957a0b590d023411c54fea0f46983",
+      "bytes": 4075,
+      "source": "synthesized export projection/documentation; see receipt embedded source hashes where present"
+    },
+    {
+      "export": "receipts/programme12-source.json",
+      "sha256": "684bcc94116d3a60845933dffe622cc2e2ccd2e8cb426b7186c55e1044610c56",
+      "bytes": 472,
+      "source": "synthesized export projection/documentation; see receipt embedded source hashes where present"
+    },
+    {
+      "export": "receipts/tau2-partial.json",
+      "sha256": "719f9a447c3758e48dcb5d40a5143d0b897511c3d3149aa4a51e14d22c9bd670",
+      "bytes": 2076,
+      "source": "synthesized export projection/documentation; see receipt embedded source hashes where present"
+    },
+    {
+      "export": "replay.py",
+      "sha256": "48ab3b2f768054a34dc19efeed804f6885786757e2d443f4f6a55f9db3f8454c",
+      "bytes": 4852,
+      "source": "synthesized export projection/documentation; see receipt embedded source hashes where present"
+    },
+    {
+      "export": "requirements.txt",
+      "sha256": "e8a58aebf6d0b10e60b4a94e57f37094acdf7b317a52aaa670eb8ca118467cc6",
+      "bytes": 228,
+      "source": "synthesized export projection/documentation; see receipt embedded source hashes where present"
+    }
+  ]
+}

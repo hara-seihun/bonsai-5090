@@ -1,0 +1,14 @@
+{
+  "exit": 0,
+  "stdout": "{\"status\":\"pass\",\"sampled_cases\":1048576,\"native_mma_count\":2,\"all_fragment_checks\":134217728,\"physical_word_errors\":0,\"observer_domain_errors\":0,\"observer_target_errors\":0,\"context_joint_states\":1048575,\"context_target_collisions\":0,\"scope\":\"two serial nonuniform-K MMAs retain four doubled partial GU sums in one float; independent common activation scale per two-term group, dyadic gate/up scales and down role only at final analytic observation; deterministic sampled inputs, not exhaustive or actual full-K\"}\n",
+  "stderr": "",
+  "wall_s": 1.5543043613433838,
+  "mutex": "Local\\BonsaiGPU",
+  "mutex_wait_result": 0,
+  "hashes": {
+    "native_affine_groups.cu": "2f9a8d1017d8f20102d84d5cd6d9537de9773ed1a68d201bc6daecf8d72a3551",
+    "native_affine_groups.exe": "43c70fdde970246b78d427069e92b676d9fc9b29e244ca4caa30164e6d1bd43d",
+    "native-affine-groups-image.bin": "1dc5098f808a1ab7f4c68ca248cefd4b13fb35bdc2e774b39bf9747043d55407",
+    "build.log": "4ab1d60b6b115ddcda2aec15bcb35779f7d1b4b9781d82aa6082adbd4d28b9be"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "state": "complete_reconstruction_and_typed_refusals",
+  "GPU_execution": false,
+  "generator_SHA256": "3bf84b8c74f3dcb962e76f6484b851c4cc830ebda6869e55b5e4c240fd9930e6",
+  "test_SHA256": "167ea2a329190c7b064dc446523427ed8896beed03623542d99d66c8ce5e26d1",
+  "inherited_SHA256": "56f52e46d7c613ff33317e406b900a4d663dcb50e9f689bae28cbd0fe5e8e662",
+  "native_source_SHA256": "57b25310fb66ad9e16cde88c4412e57c777820d931d003ddda19ea7e9099d13f",
+  "compiler_source_closure_SHA256": "96a79cf6f2fd6b4c34c18b4a8149995b2e7361bad6e2f95d2efad2d63ee6f879",
+  "historical_source_snapshot_count": 39,
+  "complete_JSON_bytes": 24916274,
+  "complete_JSON_SHA256": "6bf03c4c385dba502fef619e0bbe9d0e53c6c3de15c36064b29b4561e9c8b4ee",
+  "regions": 9,
+  "full64_row_cases": 8,
+  "full64_family_records": 1024,
+  "independent_stream_configurations": 24,
+  "typed_refusal_witnesses": [
+    {
+      "state": "expected_typed_error",
+      "error": "inherited_invoice_mismatch"
+    },
+    {
+      "state": "expected_typed_error",
+      "error": "lifecycle_change_requires_repricing"
+    },
+    {
+      "state": "expected_typed_error",
+      "error": "source_dictionary_mismatch"
+    }
+  ],
+  "comparison": "All inherited sections equal exact pinned22 content; all current full64 totals sum their1024 source request records."
+}

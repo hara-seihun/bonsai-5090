@@ -1,0 +1,88 @@
+[
+  {
+    "id": "h5-6ac53752-0",
+    "object": "chat.completion",
+    "created": 1791309650,
+    "model": "ternary-bonsai-2-27b",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "red"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 43,
+      "completion_tokens": 1,
+      "total_tokens": 44
+    },
+    "timings": {
+      "image_tokens": 16,
+      "image_encode_s": 0.409257927,
+      "ttft_s": 0.43350671604275703,
+      "total_s": 0.439912675996311,
+      "decode_tok_per_s": 0.0
+    },
+    "expected": "red"
+  },
+  {
+    "id": "h5-6ac53752-1",
+    "object": "chat.completion",
+    "created": 1791309650,
+    "model": "ternary-bonsai-2-27b",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "blue"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 43,
+      "completion_tokens": 1,
+      "total_tokens": 44
+    },
+    "timings": {
+      "image_tokens": 16,
+      "image_encode_s": 0.326492483,
+      "ttft_s": 0.3392081670463085,
+      "total_s": 0.34561524202581495,
+      "decode_tok_per_s": 0.0
+    },
+    "expected": "blue"
+  },
+  {
+    "id": "h5-6ac53753-3",
+    "object": "chat.completion",
+    "created": 1791309651,
+    "model": "ternary-bonsai-2-27b",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "OK"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 16,
+      "completion_tokens": 1,
+      "total_tokens": 17
+    },
+    "timings": {
+      "image_tokens": 0,
+      "image_encode_s": 0.0,
+      "ttft_s": 0.00825953099410981,
+      "total_s": 0.01708458096254617,
+      "decode_tok_per_s": 0.0
+    }
+  }
+]

@@ -1,0 +1,134 @@
+{
+  "0": {
+    "input": {
+      "rows": 32,
+      "k": 5120,
+      "nonzero_third_fraction": 0.16461181640625,
+      "third_counts_per_row_K128": {
+        "min": 1,
+        "mean": 21.0703125,
+        "p50": 20.0,
+        "p95": 42.0,
+        "max": 58
+      },
+      "one_row_third_zero_group_fraction": 0.0,
+      "R32_union_third_support_mean": 125.5,
+      "zero_third_K64_tile_fractions": {
+        "8": 0.0,
+        "16": 0.0,
+        "32": 0.0
+      },
+      "source_scalar_codes": 255,
+      "scope": "actual32-row capture; regrouped for support union, not a model-produced simultaneous batch; hidden codes recomputed with original float32 producer formula"
+    },
+    "hidden": {
+      "rows": 32,
+      "k": 17408,
+      "nonzero_third_fraction": 0.06654986213235294,
+      "third_counts_per_row_K128": {
+        "min": 1,
+        "mean": 8.518382352941176,
+        "p50": 7.0,
+        "p95": 20.0,
+        "max": 32
+      },
+      "one_row_third_zero_group_fraction": 0.0,
+      "R32_union_third_support_mean": 105.33823529411765,
+      "zero_third_K64_tile_fractions": {
+        "8": 0.0,
+        "16": 0.0,
+        "32": 0.0
+      },
+      "source_scalar_codes": 255,
+      "scope": "actual32-row capture; regrouped for support union, not a model-produced simultaneous batch; hidden codes recomputed with original float32 producer formula"
+    }
+  },
+  "30": {
+    "input": {
+      "rows": 32,
+      "k": 5120,
+      "nonzero_third_fraction": 0.22615966796875,
+      "third_counts_per_row_K128": {
+        "min": 1,
+        "mean": 28.9484375,
+        "p50": 29.0,
+        "p95": 45.0,
+        "max": 57
+      },
+      "one_row_third_zero_group_fraction": 0.0,
+      "R32_union_third_support_mean": 127.075,
+      "zero_third_K64_tile_fractions": {
+        "8": 0.0,
+        "16": 0.0,
+        "32": 0.0
+      },
+      "source_scalar_codes": 255,
+      "scope": "actual32-row capture; regrouped for support union, not a model-produced simultaneous batch; hidden codes recomputed with original float32 producer formula"
+    },
+    "hidden": {
+      "rows": 32,
+      "k": 17408,
+      "nonzero_third_fraction": 0.08675788430606618,
+      "third_counts_per_row_K128": {
+        "min": 1,
+        "mean": 11.105009191176471,
+        "p50": 9.0,
+        "p95": 27.0,
+        "max": 44
+      },
+      "one_row_third_zero_group_fraction": 0.0,
+      "R32_union_third_support_mean": 112.2279411764706,
+      "zero_third_K64_tile_fractions": {
+        "8": 0.0,
+        "16": 0.0,
+        "32": 0.0
+      },
+      "source_scalar_codes": 255,
+      "scope": "actual32-row capture; regrouped for support union, not a model-produced simultaneous batch; hidden codes recomputed with original float32 producer formula"
+    }
+  },
+  "61": {
+    "input": {
+      "rows": 32,
+      "k": 5120,
+      "nonzero_third_fraction": 0.209307861328125,
+      "third_counts_per_row_K128": {
+        "min": 1,
+        "mean": 26.79140625,
+        "p50": 27.0,
+        "p95": 44.049999999999955,
+        "max": 59
+      },
+      "one_row_third_zero_group_fraction": 0.0,
+      "R32_union_third_support_mean": 127.225,
+      "zero_third_K64_tile_fractions": {
+        "8": 0.0,
+        "16": 0.0,
+        "32": 0.0
+      },
+      "source_scalar_codes": 255,
+      "scope": "actual32-row capture; regrouped for support union, not a model-produced simultaneous batch; hidden codes recomputed with original float32 producer formula"
+    },
+    "hidden": {
+      "rows": 32,
+      "k": 17408,
+      "nonzero_third_fraction": 0.05722225413602941,
+      "third_counts_per_row_K128": {
+        "min": 1,
+        "mean": 7.3244485294117645,
+        "p50": 5.0,
+        "p95": 22.0,
+        "max": 40
+      },
+      "one_row_third_zero_group_fraction": 0.0,
+      "R32_union_third_support_mean": 78.88235294117646,
+      "zero_third_K64_tile_fractions": {
+        "8": 0.0,
+        "16": 0.0,
+        "32": 0.0
+      },
+      "source_scalar_codes": 255,
+      "scope": "actual32-row capture; regrouped for support union, not a model-produced simultaneous batch; hidden codes recomputed with original float32 producer formula"
+    }
+  }
+}

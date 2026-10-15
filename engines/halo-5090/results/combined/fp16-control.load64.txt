@@ -1,0 +1,2 @@
+{"concurrency": 64, "requests": 192, "stream": true, "think": false, "max_tokens": 512, "completion_tokens": 78076, "wall_s": 23.12134289741516, "aggregate_tok_s": 3376.793482385855, "per_stream_tok_s_median": 74.95967083118649, "per_stream_tok_s_mean": 79.35925318685727, "ttft_s_median": 0.06807565689086914, "ttft_s_p90": 5.240988731384277, "latency_s_median": 6.288613677024841, "usd_per_m": 0.056759961089253706}
+sample: Crimson maple leaves drift on the St. Lawrence wind cold air bites the bone

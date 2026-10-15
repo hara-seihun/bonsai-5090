@@ -1,0 +1,1 @@
+R512 fused producer; every tileR1..16 at first0,16,496: 6936 outputs bit-exact, originalscale+alpha/beta; zero valid; nonfinite/scale-range statuses+NaN; persistenterror; oddoffset/emptycarrier rejected

@@ -1,0 +1,32 @@
+{
+  "source": "952efb353dcc769e32862386c13c153eb98075ad",
+  "scope": "Native same-root aggregate Wiki/chat quality, hybrid original A8, chunk32/F16state/KV; compound row scope16..32; geometry changes, not a bitwise full-logit assertion",
+  "records": {
+    "wiki256": {
+      "routes": {
+        "off": [
+          "prefill: 256 rows  KLD mean 0.00053069158460941016 max 0.0037297052261629632  cos 0.99983318405160304  top1 251/256  ref_ppl 19.178027602673943 got_ppl 19.199563025054452 max_logit_error 3.4258214235305786",
+          "decode: 256 rows  KLD mean 0.00022484061468418292 max 0.0015427101704236059  cos 0.99994022322065335  top1 252/256  ref_ppl 19.178027602673943 got_ppl 19.174658451147398 max_logit_error 2.1918282508850098"
+        ],
+        "three-direct-r16": [
+          "prefill: 256 rows  KLD mean 0.00053719723795981743 max 0.0060727998509954705  cos 0.99987511610469892  top1 250/256  ref_ppl 19.178027602673943 got_ppl 19.174917717742094 max_logit_error 2.8747719526290894",
+          "decode: 256 rows  KLD mean 0.00020854582563290981 max 0.0014159785759617677  cos 0.99994539709250407  top1 251/256  ref_ppl 19.178027602673943 got_ppl 19.177877864605293 max_logit_error 1.9276118278503418"
+        ]
+      },
+      "all_printed_quality_metrics_identical": false
+    },
+    "chat64": {
+      "routes": {
+        "off": [
+          "prefill: 64 rows  KLD mean 0.00038020418272075111 max 0.0026863466849122225  cos 0.99995510733539628  top1 64/64  ref_ppl 1.5011042850339305 got_ppl 1.4993421607919653 max_logit_error 0.24725008010864258",
+          "decode: 64 rows  KLD mean 0.0001180570248433076 max 0.00077385442476509282  cos 0.99998381719215357  top1 64/64  ref_ppl 1.5011042850339305 got_ppl 1.4999385262790379 max_logit_error 0.19644069671630859"
+        ],
+        "three-direct-r16": [
+          "prefill: 64 rows  KLD mean 0.0003193100171340032 max 0.0022858024090749258  cos 0.99995654382653276  top1 63/64  ref_ppl 1.5011042850339305 got_ppl 1.5021383834993629 max_logit_error 0.25445818901062012",
+          "decode: 64 rows  KLD mean 0.0001180570248433076 max 0.00077385442476509282  cos 0.99998381719215357  top1 64/64  ref_ppl 1.5011042850339305 got_ppl 1.4999385262790379 max_logit_error 0.19644069671630859"
+        ]
+      },
+      "all_printed_quality_metrics_identical": false
+    }
+  }
+}

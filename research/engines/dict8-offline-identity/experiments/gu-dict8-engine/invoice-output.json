@@ -1,0 +1,103 @@
+{
+  "GPU_execution": false,
+  "native_model_execution": false,
+  "shape": {
+    "layers": 64,
+    "R": 64,
+    "N": 34816,
+    "FF": 17408,
+    "K": 5120,
+    "CTAs": 136,
+    "consumer_warps_per_CTA": 8,
+    "K128_stages": 40,
+    "MMA_sites_per_warp_stage": 32
+  },
+  "resident_requested_bytes": {
+    "original_GU_WF0_weights_per_layer": 44564480,
+    "prepared_dict8_per_layer": 36208640,
+    "original_FP16_scales_per_layer": 2785280,
+    "original_row_means_per_layer": 139264,
+    "shared_global_dictionary": 26244,
+    "added_prepared_all_layers": 2317352960,
+    "added_with_dictionary": 2317379204,
+    "retained_original_GU_weights_all_layers": 2852126720,
+    "retained_original_FP16_scales_all_layers": 178257920,
+    "retained_original_means_all_layers": 8912896,
+    "total_GU_related_original_plus_prepared_plus_dictionary": 5356676740,
+    "strict_only_extra_buffers": 22909232,
+    "allocator_granularity_and_complete_VRAM": "unset until authorized native observation; cudaMalloc request bytes are exact, not physical allocation telemetry"
+  },
+  "native_geometry": {
+    "SW": 16384,
+    "reserved_not_transferred_FP16_scale_hole": 1024,
+    "SA": 2048,
+    "SAS": 256,
+    "stage_bytes": 19712,
+    "ring_stages": 4,
+    "dynamic_shared_bytes": 78912,
+    "linked_static_shared_bytes": 1024,
+    "weight_TMA_bytes_per_layer_step": 89128960,
+    "weight_TMA_padding_bytes": 0,
+    "activation_TMA_bytes_per_layer_step": 11141120,
+    "activation_scale_TMA_bytes_per_layer_step": 1392640,
+    "per_block_weight_scale_TMA_bytes": 0,
+    "source_mean_operations": "original epilogue means retained; physical load reuse unmeasured"
+  },
+  "candidate_geometry": {
+    "SW": 13312,
+    "reserved_not_transferred_FP16_scale_hole": 1024,
+    "SA": 2048,
+    "SAS": 256,
+    "stage_bytes": 16640,
+    "ring_stages": 4,
+    "dynamic_shared_bytes": 66624,
+    "linked_static_shared_bytes": 1024,
+    "weight_TMA_bytes_per_layer_step": 72417280,
+    "weight_TMA_padding_bytes": 0,
+    "activation_TMA_bytes_per_layer_step": 11141120,
+    "activation_scale_TMA_bytes_per_layer_step": 1392640,
+    "per_block_weight_scale_TMA_bytes": 0,
+    "source_mean_operations": "original epilogue means retained; physical load reuse unmeasured"
+  },
+  "lookup_interface": {
+    "sites_per_warp_stage": 32,
+    "logical_lane_words_per_layer_step": 44564480,
+    "logical_lane_bytes_per_layer_step": 178257920,
+    "logical_lane_bytes_all_layers_128steps": 1460288880640,
+    "DRAM_bytes_cache_latency": "unset; instruction-interface bytes are not DRAM traffic"
+  },
+  "setup": {
+    "original_payload": "retained and prepared by unchanged frozen tmat; no saving in load-time original preparation",
+    "incremental_operations": {
+      "logical_GU_weight_keys_per_layer": 22282240,
+      "native_word_nibble_decodes_per_layer": 178257920,
+      "dictionary_constructed_words": 6561,
+      "dictionary_constructed_digits": 52488
+    },
+    "incremental_nibble_decodes_all_layers": 11408506880,
+    "extra_host_working_vector_per_layer": 36208640,
+    "extra_host_dictionary": 26244,
+    "prepared_upload_requested_bytes": 2317352960,
+    "dictionary_upload_requested_bytes": 26244,
+    "timing_status": "unset; strict worker records complete qc_create wall time and exact engine encode/upload ns before any numerical acceptance",
+    "repetition": "once per engine creation, never per decode"
+  },
+  "complete_consumer": {
+    "original_Q4_S4_G4_activation_formats": true,
+    "original_separate_rounded_gate_up_order": true,
+    "original_AG_then_row_mean_then_SiLU": true,
+    "original_sign_Hadamard1024_FP4_observer": true,
+    "unchanged_non_GU_projections": true,
+    "GU_SiLU_output_write_plus_single_observer_read_lower_bound_per_layer_step": 8912896,
+    "observer_Q4_output_bytes_per_layer_step": 557056,
+    "observer_S4_output_bytes_per_layer_step": 69632,
+    "observer_G4_output_bytes_per_layer_step": 256,
+    "scope": "source interface invoice; no dynamic instruction/cycle/occupancy/whole-model TPS claim"
+  },
+  "benchmarks": {
+    "historical_ordinary_TPS": 6777.352952,
+    "historical_deterministic_TPS": 6583.070035,
+    "current_matched_control_and_candidate_TPS": null,
+    "policy": "fresh matched unchanged frozen control ordinary and deterministic medians independently; no speedup from bytes or static resource counts"
+  }
+}

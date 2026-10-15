@@ -1,0 +1,12 @@
+BUILD 0 ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z5probeP7Witness' for 'sm_120a'
+ptxas info    : Function properties for _Z5probeP7Witness
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 29 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+scaled_word_collision_clobber.cu
+tmpxft_00009e08_00000000-10_scaled_word_collision_clobber.cudafe1.cpp
+ 
+MUTEX 0
+RELEASED
+RECEIPT {"source_sha256": "108f7a9dfb4481c8f28202c692228f3f8f41e9f41393b6499718c7be5eb0a83c", "exit": 1, "stdout": "{\"state\":\"unexpected\",\"carrier_bits\":[2016966712,1269301248],\"gate\":[4.39213763e-05,0.0009765625],\"up\":[3.85230093e-27,43008],\"y\":[8.46010337e-32,21.0102539],\"q8_scale\":[6.66149894e-34,0.165435076],\"q8\":[127,127],\"activation_scale_codes\":[126,1],\"weight_scale\":1,\"scope\":\"single scalar FP32 g+512u carrier across two independently scaled16K blocks; rest of K5120 and127 block features zero\"}\n", "stderr": "", "wall_s": 0.13542747497558594, "hashes": {"build.cmd": "7d3be59c6c02b6a815aea9d78d05d3aad84ad9ac3d899d73abb77a58b7bd90da", "build.log": "774a511c2b3016cdaf7fe3cd52c9f1221c9b4eb8039abf4e74b13fc28c322af3", "scaled-word-collision.bin": "980d0c56b11a67077a06d563d733a2475cdcccc8674f7cb3e56c4badbce1783c", "scaled_word_collision_clobber.cu": "1ca0c9f6cfb71f5fad198ca3391c9eaef7a2be95b5c44457d404ffcb1c7977ab", "scaled_word_collision_clobber.exe": "c2fa8011cf1e0f58e5c4c9c6592e62c1423f47c304114219aa25748d495b2ffb"}}

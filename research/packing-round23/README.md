@@ -1,0 +1,7 @@
+# Packed readers: Round23
+
+Source snapshot of private commit `044871c1d2308a8e46a1b3bc8b70f776ffafcb88`, branch `research/mma-round23-20261011`; prerequisite Round22 commit `031d82a54b3a61a40ffabcd28cc8f526f5bb0109`. Source/proof/invoice paths are retained under `method/packing-swarm/tools/round23/`; the owning [source README](method/packing-swarm/tools/round23/README.md) and [report](results/packing-swarm/ROUND-23.md) describe the contract. Inherited material is also exported in [Round22](../packing-round22/).
+
+The q-group serialized readers halve lexical weight-fragment lifetime at equal256-feature×32-row boundaries, keeping forty ascending per-output folds, unequal scales, full-stride views and the continuation. Eighteen saved-tape CPU/UBSan cases and159 Lean audits are recorded. The candidate compiles at255 registers/28B spill diagnostics against strengthened FW8 131/zero. Shorter source lifetime does not establish lower native cost: dynamic spill traffic, occupancy and GPU timing are unset. No winning nominee, native/full-model quality, HTTP gain or adoption is claimed.
+
+All source and small CPU/compiler/proof/invoice receipts are included. Trained tape payloads, binaries, compiler expansions, generated build/dependency trees and Git bundles/history are excluded. The finite Lean statements can be rebuilt from the included sources; model-tape CPU replay requires separately supplied pinned inputs. [Build and reproduction boundaries](../BUILD.md#packing-round23).

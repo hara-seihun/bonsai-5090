@@ -1,0 +1,92 @@
+BUILD 0 ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z13packed_regionILb1ELb0EEv4ArgsPfPy' for 'sm_120a'
+ptxas info    : Function properties for _Z13packed_regionILb1ELb0EEv4ArgsPfPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 64 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z8producerILb1EEv4ArgsPi' for 'sm_120a'
+ptxas info    : Function properties for _Z8producerILb1EEv4ArgsPi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 40 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z8fused_q8ILb0EEv4ArgsPfPaS1_' for 'sm_120a'
+ptxas info    : Function properties for _Z8fused_q8ILb0EEv4ArgsPfPaS1_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 40 registers, used 1 barriers, 544 bytes smem
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z8fused_q8ILb1EEv4ArgsPfPaS1_' for 'sm_120a'
+ptxas info    : Function properties for _Z8fused_q8ILb1EEv4ArgsPfPaS1_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 40 registers, used 1 barriers, 544 bytes smem
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z7fp4_refILb1EEv4ArgsPf' for 'sm_120a'
+ptxas info    : Function properties for _Z7fp4_refILb1EEv4ArgsPf
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 48 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z14rolling_regionILb1ELb0EEv4ArgsPfPy' for 'sm_120a'
+ptxas info    : Function properties for _Z14rolling_regionILb1ELb0EEv4ArgsPfPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 64 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z13packed_regionILb1ELb1EEv4ArgsPfPy' for 'sm_120a'
+ptxas info    : Function properties for _Z13packed_regionILb1ELb1EEv4ArgsPfPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 56 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z13packed_regionILb0ELb0EEv4ArgsPfPy' for 'sm_120a'
+ptxas info    : Function properties for _Z13packed_regionILb0ELb0EEv4ArgsPfPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 72 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z7fp4_refILb0EEv4ArgsPf' for 'sm_120a'
+ptxas info    : Function properties for _Z7fp4_refILb0EEv4ArgsPf
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 48 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z8producerILb0EEv4ArgsPi' for 'sm_120a'
+ptxas info    : Function properties for _Z8producerILb0EEv4ArgsPi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 38 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z12lookup_fused4ArgsPf' for 'sm_120a'
+ptxas info    : Function properties for _Z12lookup_fused4ArgsPf
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 52 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z9make_dot4Pa' for 'sm_120a'
+ptxas info    : Function properties for _Z9make_dot4Pa
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 16 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z9normalizePKfPaPfi' for 'sm_120a'
+ptxas info    : Function properties for _Z9normalizePKfPaPfi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 21 registers, used 1 barriers, 16 bytes smem
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z10dp4a_fused4ArgsPfiPyPKi' for 'sm_120a'
+ptxas info    : Function properties for _Z10dp4a_fused4ArgsPfiPyPKi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 64 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z14observer_casesPKyPKfPjii' for 'sm_120a'
+ptxas info    : Function properties for _Z14observer_casesPKyPKfPjii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 12 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z17compressed_finish4ArgsPKyPf' for 'sm_120a'
+ptxas info    : Function properties for _Z17compressed_finish4ArgsPKyPf
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 40 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6finish4ArgsPKiPfi' for 'sm_120a'
+ptxas info    : Function properties for _Z6finish4ArgsPKiPfi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 90 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+fullk_coop.cu
+tmpxft_000086a8_00000000-10_fullk_coop.cudafe1.cpp
+ 
+MUTEX 0
+RELEASED
+RECEIPT {"source_sha256": "8c81ee70fa77b9382ea4a567ac4593306e716f6ecfaeacd232cdc55033e2d647", "exit": 0, "stdout": "{\"state\":\"observed\",\"M\":17408,\"N\":64,\"K\":5120,\"scale_context\":0,\"physical_errors\":0,\"carrier_bytes\":1426063360,\"compressed_carrier_bytes\":356515840,\"f32_errors\":[229,216,219,0,0,0,0,0,0,0,0,0,0,0],\"q8_errors\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0],\"q8_scale_errors\":[8,7,8,0,0,0,0,0,0,0,0,0,0,0]}\n{\"state\":\"whole_k_label_observed\",\"labels\":1114112,\"label_errors\":0,\"trace_bytes\":0,\"state_bytes_per_output\":8}\n{\"state\":\"fused_labels_observed\",\"labels\":1114112,\"label_errors\":0}\n{\"state\":\"resources\",\"opaque_blocks_per_sm\":3,\"plain_blocks_per_sm\":3}\n{\"state\":\"observer_cases\",\"zero_gate\":25472,\"exp_zero\":544266,\"exp_infinite\":543897,\"ordinary_division\":477}\n{\"state\":\"measured\",\"native_trace_us\":2238.568115,\"folded_trace_us\":3127.439941,\"folded_fused_us\":1036.751953,\"dp4a_fused_us\":22739.705078,\"native_compressed_us\":1020.807983,\"native_rolling_us\":776.127991,\"fp4_reference_us\":449.743988,\"lookup_us\":27252.912109,\"native_plain_streamed_us\":774.583984,\"native_fast_observer_reference_us\":449.656006,\"fused_opaque_us\":308.880005,\"fused_plain_us\":308.312012}\n", "stderr": "", "wall_s": 2.601119041442871, "hashes": {"build.cmd": "63af6d310bc09148146731e723331cfbc394465cfe7d87a043b117a268540e54", "build.log": "1df980f2dc0dd048b807c5d262262864c3978542ef0062c8d6c38958da4782f2", "fullk-ag.bin": "59685a34526bb6d37eca95ee1af5e45c2eca9af4885e15be79edac957a384582", "fullk-arm0-f32.bin": "fa6213a5e3ceb8d817c61488bf9c5996152d25ad38d3bbe5d1e5b3de90bd4de3", "fullk-arm0-q8.bin": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e", "fullk-arm0-scale.bin": "301bd878de8dc81a51dc197f4bc8a2754aa8d632937877d0f856b3cb99a65704", "fullk-arm1-f32.bin": "2a6721d1a4fee1d98809f2d22bd2f4b63027ba1c1bf276133ebd557c87deb14c", "fullk-arm1-q8.bin": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e", "fullk-arm1-scale.bin": "8915e345f2b5c14a469c647d5af88c45d3a8ffe8a0c98ec6ecb8fd5584128f93", "fullk-arm10-f32.bin": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0", "fullk-arm10-q8.bin": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e", "fullk-arm10-scale.bin": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505", "fullk-arm11-f32.bin": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0", "fullk-arm11-q8.bin": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e", "fullk-arm11-scale.bin": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505", "fullk-arm12-f32.bin": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0", "fullk-arm12-q8.bin": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e", "fullk-arm12-scale.bin": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505", "fullk-arm13-f32.bin": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0", "fullk-arm13-q8.bin": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e", "fullk-arm13-scale.bin": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505", "fullk-arm2-f32.bin": "b52289246247d73ebe2f7f1750c6917270df1dfe058fdbf1ddf3da91f83af7c5", "fullk-arm2-q8.bin": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e", "fullk-arm2-scale.bin": "18ea52d53ad0f898fd6e24fabed1f0eccc7909104d2a2bb6cd2eb27c78ae59c5", "fullk-arm3-f32.bin": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0", "fullk-arm3-q8.bin": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e", "fullk-arm3-scale.bin": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505", "fullk-arm4-f32.bin": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0", "fullk-arm4-q8.bin": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e", "fullk-arm4-scale.bin": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505", "fullk-arm5-f32.bin": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0", "fullk-arm5-q8.bin": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e", "fullk-arm5-scale.bin": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505", "fullk-arm6-f32.bin": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0", "fullk-arm6-q8.bin": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e", "fullk-arm6-scale.bin": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505", "fullk-arm7-f32.bin": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0", "fullk-arm7-q8.bin": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e", "fullk-arm7-scale.bin": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505", "fullk-arm8-f32.bin": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0", "fullk-arm8-q8.bin": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e", "fullk-arm8-scale.bin": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505", "fullk-arm9-f32.bin": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0", "fullk-arm9-q8.bin": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e", "fullk-arm9-scale.bin": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505", "fullk-as.bin": "2ff0480f9e5599f420d98a2c5d68a7fbe6c8672429e60d7aced0895c022817a5", "fullk-fused-final-labels.bin": "ae497ef9fd8094e36776c46879f7c4eee8a763b3497064f42b803b20619a0446", "fullk-gs.bin": "7468c988d5df866bd95ae393bfbe47a1fbfe46e69217e7c0354ddb4d36ef4cd0", "fullk-native-final-labels.bin": "ae497ef9fd8094e36776c46879f7c4eee8a763b3497064f42b803b20619a0446", "fullk-prices.json": "c0d54b692b72340bcc8e287c897a3e26a4ad169846c05097cb34664bd63bd3ce", "fullk-raw-fp4.bin": "5511af4c364e127ff8a9fdb921850ee1f8360bfcd811a3424bbfa90ccc81148a", "fullk-reference-final-labels.bin": "ae497ef9fd8094e36776c46879f7c4eee8a763b3497064f42b803b20619a0446", "fullk-us.bin": "61506f9ed18ccceb35468f1f148885ed6154eeb95819c040efee27a717905839", "fullk-weights.bin": "3bbaed9b6041dd09d567cb818345c446eb80f91e36ad069ecc0785a767df4a79", "fullk_coop.cu": "3dcfaa6fa04e90e626a355a2cdc1d5584cac499ffe8e2495c26539b3580b20d3", "fullk_coop.exe": "19921668b5089b02bd3ab162d5ad8d5ae2aaf649c14ac3477464b4c83e723c61"}}

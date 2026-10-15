@@ -1,0 +1,35 @@
+{
+  "selected": "frozen GU R64 cfg13 FW8/WG2/TOK32",
+  "entries": [
+    {
+      "version": 4,
+      "function": "Function _ZN2h518fullk_ring_backend12k_fullk_ringILi8ELi32ELi0ELb0EEEvPKhS3_PKfiiS3_iPfiS5_PKj:",
+      "resources": "REG:131 STACK:0 SHARED:1024 LOCAL:0 CONSTANT[0]:976 TEXTURE:0 SURFACE:0 SAMPLER:0"
+    },
+    {
+      "version": 4,
+      "function": "Function _ZN2h518fullk_ring_backend12k_fullk_ringILi8ELi32ELi0ELb1EEEvPKhS3_PKfiiS3_iPfiS5_PKj:",
+      "resources": "REG:142 STACK:0 SHARED:1024 LOCAL:0 CONSTANT[0]:976 TEXTURE:0 SURFACE:0 SAMPLER:0"
+    },
+    {
+      "version": 5,
+      "function": "Function _ZN2h518fullk_ring_backend12k_fullk_ringILi8ELi32ELi0ELb0EEEvPKhS3_PKfiiS3_iPfiS5_PKj:",
+      "resources": "REG:129 STACK:0 SHARED:1024 LOCAL:0 CONSTANT[0]:976 TEXTURE:0 SURFACE:0 SAMPLER:0"
+    },
+    {
+      "version": 5,
+      "function": "Function _ZN2h518fullk_ring_backend12k_fullk_ringILi8ELi32ELi0ELb1EEEvPKhS3_PKfiiS3_iPfiS5_PKj:",
+      "resources": "REG:139 STACK:0 SHARED:1024 LOCAL:0 CONSTANT[0]:976 TEXTURE:0 SURFACE:0 SAMPLER:0"
+    },
+    {
+      "version": 6,
+      "function": "Function _ZN2h518fullk_ring_backend12k_fullk_ringILi8ELi32ELi0ELb0EEEvPKhS3_PKfiiS3_iPfiS5_PKj:",
+      "resources": "REG:128 STACK:0 SHARED:1024 LOCAL:0 CONSTANT[0]:976 TEXTURE:0 SURFACE:0 SAMPLER:0"
+    },
+    {
+      "version": 6,
+      "function": "Function _ZN2h518fullk_ring_backend12k_fullk_ringILi8ELi32ELi0ELb1EEEvPKhS3_PKfiiS3_iPfiS5_PKj:",
+      "resources": "REG:140 STACK:0 SHARED:1024 LOCAL:0 CONSTANT[0]:976 TEXTURE:0 SURFACE:0 SAMPLER:0"
+    }
+  ]
+}

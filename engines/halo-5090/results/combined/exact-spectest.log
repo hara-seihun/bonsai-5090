@@ -1,0 +1,5 @@
+
+weights 7.55 GB in 6.4 s
+state f32, KV fp8: 151.0 MB state + 136.3 MB KV per slot
+ready: 1 slots x 4096 ctx, 512 rows; GPU free 24.23 / 33.67 GB, load 6.4 s
+spectest: 100 tokens, 36 steps, 1.78 accepted drafts/step, matches greedy for 100/100 tokens

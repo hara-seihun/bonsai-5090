@@ -1,0 +1,22 @@
+{
+  "fp4_tf32": {
+    "started_epoch": 1791938745.8050122,
+    "elapsed_s": 0.1439988613128662,
+    "exit": 0,
+    "stdout": "{\"device\":\"NVIDIA GeForce RTX 5090\",\"logical_triples\":729,\"output_checks\":93312,\"mismatches\":0,\"scope\":\"uniform FP4 K64 then TF32 K8; no intermediate decoding; numerical validation only, not independent K accumulation or speedup\"}\n",
+    "stderr": "",
+    "source_sha256": "9a04b6c6b2ee9bf08f3d6077fbf71e96f4803489f56778ddc9c200118282902c",
+    "binary_sha256": "33246cf7642baa2f05d6ebb490a442ee53b649f5780148e67a6041a4788e1e17"
+  },
+  "three_tf32": {
+    "exit": 0,
+    "stdout": "{\"device\":\"NVIDIA GeForce RTX 5090\",\"cases\":531441,\"lane_checks\":17006112,\"mismatches\":0,\"host_mismatches\":0,\"decoder_collisions\":0,\"final_states\":18690,\"input_shift\":15,\"probe_ms\":0.29686,\"scope\":\"three TF32 MMAs carry three independent four-factor ternary chains; explicit rna conversion and power-of-two normalizations, uniform K8, final-only observer; no independent K proof or speedup\"}\n",
+    "stderr": "",
+    "wall_s": 1.561089038848877,
+    "hashes": {
+      "native_prime.cu": "a1e41f6eb9d294d039e476b3cb505e1e8454f7a1a905e81d174c6c87aa15ec93",
+      "native_prime.exe": "47071c67fd70c5de32b9c5b9a346de4c408f4e8cd3e7e46fa0bf58d1252ded96",
+      "native-prime-observer.bin": "93a78c169f3d8876f65f90c72e1459f7597f8dbe968d5f10f62d4b452ea42116"
+    }
+  }
+}

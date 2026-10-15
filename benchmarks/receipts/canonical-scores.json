@@ -1,0 +1,56 @@
+{
+  "schema": "bonsai.original15.scores.v1",
+  "checkpoint_sha256": "53107f530aa52eb00912263ab1ee29bd199261c87cd7b4ad4ca1318c1fe33ee3",
+  "results": [
+    {
+      "benchmark": "gsm8k",
+      "correct": 1276,
+      "count": 1319,
+      "percent": 96.73995451099317,
+      "state": "full",
+      "metric": "native_parse_failure_only",
+      "receipt": "gsm-native-trigger-result.json"
+    },
+    {
+      "benchmark": "math_500",
+      "correct": 494,
+      "count": 500,
+      "percent": 98.8,
+      "state": "full",
+      "metric": "gemini_accuracy",
+      "receipt": "halo-math_500-coverage.json"
+    },
+    {
+      "benchmark": "ifeval",
+      "correct": 500,
+      "count": 541,
+      "percent": 92.42144177449168,
+      "state": "full",
+      "metric": "prompt_level_strict",
+      "receipt": "halo-ifeval-coverage.json"
+    }
+  ],
+  "diagnostics": [
+    {
+      "benchmark": "gsm8k",
+      "correct": 1283,
+      "count": 1319,
+      "percent": 97.27065959059894,
+      "policy": "broad_rule_miss_diagnostic",
+      "canonical": false,
+      "receipt": "gsm-broad-recall-diagnostic.json"
+    }
+  ],
+  "partials": [
+    {
+      "benchmark": "tau2_bench",
+      "receipt": "tau2-partial.json",
+      "full_score": null
+    },
+    {
+      "benchmark": "humaneval_plus",
+      "receipt": "humaneval-plus-partial.json",
+      "full_score": null
+    }
+  ]
+}

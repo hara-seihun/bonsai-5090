@@ -1,0 +1,14 @@
+{
+  "source_sha256": "4587e58a7b1dc5e2b07b160052a40f84198c0926f5bb1d28acb9f0c17be0a774",
+  "exit": 0,
+  "stdout": "{\"state\":\"native_target_collision\",\"carrier_bits\":[1269301248,1269301248],\"carrier_values\":[22020096,22020096],\"gate\":[0,0.0009765625],\"up\":[43008,43008],\"activation_scale_codes\":[126,1],\"weight_scale\":1,\"padding\":\"rest of K5120 and127 features zero\"}\n",
+  "stderr": "",
+  "wall_s": 0.13541793823242188,
+  "hashes": {
+    "build.cmd": "550bbe71219ca54ab9256a82ef6faf51b3ead0ef517545dfce8b65e6df3b2856",
+    "build.log": "e1bca7120005607dae879518a38c4eff8686ec80cf8edd4e3dbd2150569f4d00",
+    "scaled-word-all-lanes.bin": "568d767b7cc5f7c4ea7ed667f9d73dcabc973f12167860dd21e3816f78bc5f89",
+    "scaled_word_collision_v2.cu": "b1059b867dbf3b5d7132445d3c7cfe7479e085443b37f5e8a0d2c7f3fd8d6653",
+    "scaled_word_collision_v2.exe": "d838b2fac645ce1b9ea00e34818de9b241b0ae8669e7a335ffc7d31b8d1970ce"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "instance": null,
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "power_limit_w": 500,
+  "nvcc": "13.1.115",
+  "flags": "-O3 -std=c++17 -gencode arch=compute_120a,code=sm_120a -I../../src --expt-relaxed-constexpr",
+  "gpu_round": "binary-native-sf-controlled-r32",
+  "round_exit": 0,
+  "records": 147,
+  "gpu_window_limit_seconds": 55,
+  "lock": "/tmp/binary-gpu.lock",
+  "model": "/workspace/binary/models/Bonsai-27B-Q1_0.gguf",
+  "model_sha256_from_campaign": "17ef842e47450caeb8eaa3ebfbbab5d2f2278b62b79be107985fb69a2f819aa0",
+  "measured_source_sha256": {
+    "native.cu": "0341b8234bcb8d0b5b8f4a80f64ce18eb006e30257cf795bd321435ca56ac8a3",
+    "native.cuh": "e1a89ca80484c845ff3ac610c64b9e06103b73bb6197625dd099a0be3daba491",
+    "bench.cu": "efdb56f958f89ccc3fdbde30bd04af043779ba854947e1f5642194d23efbb457",
+    "pair-control.cu": "8a4b766e594f01a9a741cf8d95b0d555e7c025778445137aa4393d96d52dac32",
+    "src/kernels.cu": "dd4f37461a7670b0167751ebbfe668c4acc4e082a3faf84f988af6a9415a45c3",
+    "src/kernels.cuh": "961a92632bf26b29a47eef1af411b09d370300087a58795c96c750aca5a84abd",
+    "src/prep_chunk.cuh": "456484471822ad328448b53b04bf412d27a4a6fde2f62b2feee799012deab87c",
+    "src/fp4.cu": "c080036935e65f7f9ccb41cf76567a4058cf7c6017e18277d07c9a82dd4b17f5",
+    "src/fp4_ops.cuh": "1dfa009cd680d1b0227ab5bebf0d650ebab4fba5a33896c2fae452512d37bf39"
+  },
+  "measured_object_sha256": {
+    "native.o": "cd488d8017200e6fc8b296dca87799df83460bdb49eddda6ee935a3ff96e6b76",
+    "bench": "200fddce12070cb56e176b6b183c32b7f9b30d5640a0229ae882746e4a5c589e",
+    "bitserial.o": "69911490f26fc710deeef8dea49decbe3f70e764f9c4c7ed1d7be1776d93f304",
+    "/workspace/binary/modern/halo/build/kernels.o": "1f52e6d721df757b7d34983341ac547819c409a09a2ba9098e4be86a732fd6cd"
+  },
+  "final_api_compile": "binary-native-sf-api-build",
+  "final_api_compile_exit": 0,
+  "final_source_sha256": {
+    "native.cu": "878ee062e658a8a8907268d0966cef0dbf45c656b10e4699b72751e13ca0f168",
+    "native.cuh": "0d68d5698cf8a2027fc02aef072e87833b52944c140f21937efaed8fe8120e66",
+    "bench.cu": "f94aa94697fe4a6563ff314b11448f07f93d330b602742bb1f0ef7659a76cb6f"
+  },
+  "final_native_object": "~/data/binary-5090/native-sf/native.o",
+  "final_native_object_sha256": "2d06f884d4eca46fb418f4d23fa25c841564a80bc1d65957ed710638b0484037",
+  "api_revision_note": "Final API adds required per-row typed NonFinite/Valid prepare status and explicit configure before capture. Finite-weight transform and joint tensor kernel body unchanged. Final API compiled; device measurements precede host/load-contract changes.",
+  "independent_native_scalar_sample_max_absolute": 6.17827027e-7,
+  "sf2_max_projection_relative_rms": 9.36123797e-8,
+  "sf2_scale_relative_rms_and_max_relative": 0,
+  "sf1_max_projection_relative_rms": 0.0285490167,
+  "sf1_max_scale_relative_error": 0.0588235294
+}

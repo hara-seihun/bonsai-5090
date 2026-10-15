@@ -1,0 +1,22 @@
+BUILD 0 ptxas info    : 1767 bytes gmem
+ptxas info    : Compiling entry function '_Z10exhaustivePKjS0_PKyPyPjS3_y' for 'sm_120a'
+ptxas info    : Function properties for _Z10exhaustivePKjS0_PKyPyPjS3_y
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 32 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z10arithmeticPK5uint2Pfi' for 'sm_120a'
+ptxas info    : Function properties for _Z10arithmeticPK5uint2Pfi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 23 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z5mixedPK5uint2PKjS3_PKyPfi' for 'sm_120a'
+ptxas info    : Function properties for _Z5mixedPK5uint2PKjS3_PKyPfi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 32 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+crt5.cu
+tmpxft_0000a9b4_00000000-10_crt5.cudafe1.cpp
+ 
+MUTEX 0
+RELEASED
+RECEIPT {"source_sha256": "5700ea3ba0719b964a0cad9e9f54c62c564bceb228d79634a460d4dc9a6982fc", "exit": 0, "stdout": "{\"full_pairs\":184528125,\"full_errors\":0,\"first_error\":4294967295,\"native_fingerprint\":44361825457853400,\"chain_errors\":0,\"native_us\":5.312000,\"direct_us\":2.872960,\"observer_max_probes\":21,\"weight_producer_bytes\":972,\"activation_producer_bytes\":4194304,\"observer_bytes\":257,\"serial_mmas_per_warp\":6,\"control_bit_images_bytes\":1510,\"source\":\"five raw E2M1 nibbles plus three dense5 weight bytes\"}\n", "stderr": "", "wall_s": 0.3804600238800049, "hashes": {"build.cmd": "9fe2972aea08b4b7af28fd1a6017c5faae7ba257140aa2941dad3017e8de2d3f", "build.log": "927775717ae1acbe0318f47abc556a253cfd5c746296b52f3192e1c7bb18d9c5", "crt5.cu": "366bf1f24c6b9eaf2eb5ec881a44694f992bfe8b15c26ab4af83b7cf950f08f8", "crt5.exe": "c81bd3ea0c048bb931b59cf3329bce28a59ca4714c06274e4b52a1ea94a05c65", "mixed-activation-encoding.bin": "288fa7f506a631874739a2f85eb7584d9b0b7858adc1bc7d5bb9a21d3e14fded", "mixed-final-observer.bin": "17d58cac62965aa60c3718747e87269097fe3176a064496ec4064346be9ff543", "mixed-small-observer.bin": "c8bf9a852841e2113e385a398b15b79a9a1df371a1f218097437bd06807eee63", "mixed-weight-encoding.bin": "ef08ed87da155e33a20723c78f6737e80548da2b7e64a3a009e565b55e4e2a31", "raw-fp4-producer.bin": "ff6f9d4d60099b31c6afce817ae30a71f8504b0a393a2f58d43fec347901ba07"}}

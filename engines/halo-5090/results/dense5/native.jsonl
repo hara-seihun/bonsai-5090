@@ -1,0 +1,71 @@
+{"stage":"hardware","device":"NVIDIA GeForce RTX 5090","sm":120,"layer":10,"precision":"unchanged E2M1 A16 / FP16 W128 / FP32 accumulation"}
+{"stage":"native_register_certificate","legal_packets":243,"register_checks":3888,"passed":true}
+{"stage":"preparation","seconds":2.955942,"candidate_total_bpw":1.750,"control_total_bpw":2.125,"table_shared_bytes_per_cta":1024,"permanent_expansion":false}
+{"stage":"native_correctness","arm":"literal2bit","rows":1,"phase":"same_geometry_GU_SiLU","values":17408,"bit_mismatches":0,"max_abs":0}
+{"stage":"native_correctness","arm":"literal2bit","rows":1,"phase":"same_geometry_down_KS1","values":5120,"bit_mismatches":0,"max_abs":0}
+{"stage":"tuning","arm":"literal2bit","rows":1,"gu":"fw8 wg2 tok16 ks1","down":"fw16 wg1 tok16 ks16","splitK":16}
+{"stage":"native_correctness","arm":"dense5_native","rows":1,"phase":"same_geometry_GU_SiLU","values":17408,"bit_mismatches":0,"max_abs":0}
+{"stage":"native_correctness","arm":"dense5_native","rows":1,"phase":"same_geometry_down_KS1","values":5120,"bit_mismatches":0,"max_abs":0}
+{"stage":"tuning","arm":"dense5_native","rows":1,"gu":"fw4 wg2 tok32 ks1","down":"fw16 wg1 tok16 ks16","splitK":16}
+{"stage":"sample","arm":"literal2bit","rows":1,"cache_perturbed":false,"round":0,"repetitions":6,"chain_us":38.944000}
+{"stage":"sample","arm":"dense5_native","rows":1,"cache_perturbed":false,"round":0,"repetitions":6,"chain_us":44.080001}
+{"stage":"sample","arm":"dense5_native","rows":1,"cache_perturbed":false,"round":1,"repetitions":6,"chain_us":42.549333}
+{"stage":"sample","arm":"literal2bit","rows":1,"cache_perturbed":false,"round":1,"repetitions":6,"chain_us":39.040000}
+{"stage":"sample","arm":"literal2bit","rows":1,"cache_perturbed":false,"round":2,"repetitions":6,"chain_us":35.301334}
+{"stage":"sample","arm":"dense5_native","rows":1,"cache_perturbed":false,"round":2,"repetitions":6,"chain_us":44.213333}
+{"stage":"sample","arm":"dense5_native","rows":1,"cache_perturbed":false,"round":3,"repetitions":6,"chain_us":42.192000}
+{"stage":"sample","arm":"literal2bit","rows":1,"cache_perturbed":false,"round":3,"repetitions":6,"chain_us":38.778667}
+{"stage":"sample","arm":"literal2bit","rows":1,"cache_perturbed":false,"round":4,"repetitions":6,"chain_us":35.130667}
+{"stage":"sample","arm":"dense5_native","rows":1,"cache_perturbed":false,"round":4,"repetitions":6,"chain_us":44.554667}
+{"stage":"sample","arm":"dense5_native","rows":1,"cache_perturbed":false,"round":5,"repetitions":6,"chain_us":41.866668}
+{"stage":"sample","arm":"literal2bit","rows":1,"cache_perturbed":false,"round":5,"repetitions":6,"chain_us":38.933334}
+{"stage":"summary","arm":"literal2bit","rows":1,"cache_perturbed":false,"chain_us":38.856000,"ratio_to_current_baseline":1.000000,"adopted":false,"scope":"complete normalized input to FFN contribution; common RMSNorm/residual omitted"}
+{"stage":"summary","arm":"dense5_native","rows":1,"cache_perturbed":false,"chain_us":43.314667,"ratio_to_current_baseline":1.114748,"adopted":false,"scope":"complete normalized input to FFN contribution; common RMSNorm/residual omitted"}
+{"stage":"sample","arm":"literal2bit","rows":1,"cache_perturbed":true,"round":0,"repetitions":6,"chain_us":65.530668}
+{"stage":"sample","arm":"dense5_native","rows":1,"cache_perturbed":true,"round":0,"repetitions":6,"chain_us":62.127999}
+{"stage":"sample","arm":"dense5_native","rows":1,"cache_perturbed":true,"round":1,"repetitions":6,"chain_us":62.453332}
+{"stage":"sample","arm":"literal2bit","rows":1,"cache_perturbed":true,"round":1,"repetitions":6,"chain_us":65.872002}
+{"stage":"sample","arm":"literal2bit","rows":1,"cache_perturbed":true,"round":2,"repetitions":6,"chain_us":65.546669}
+{"stage":"sample","arm":"dense5_native","rows":1,"cache_perturbed":true,"round":2,"repetitions":6,"chain_us":62.810666}
+{"stage":"sample","arm":"dense5_native","rows":1,"cache_perturbed":true,"round":3,"repetitions":6,"chain_us":62.453332}
+{"stage":"sample","arm":"literal2bit","rows":1,"cache_perturbed":true,"round":3,"repetitions":6,"chain_us":65.536001}
+{"stage":"sample","arm":"literal2bit","rows":1,"cache_perturbed":true,"round":4,"repetitions":6,"chain_us":65.440002}
+{"stage":"sample","arm":"dense5_native","rows":1,"cache_perturbed":true,"round":4,"repetitions":6,"chain_us":62.794665}
+{"stage":"sample","arm":"dense5_native","rows":1,"cache_perturbed":true,"round":5,"repetitions":6,"chain_us":63.141332}
+{"stage":"sample","arm":"literal2bit","rows":1,"cache_perturbed":true,"round":5,"repetitions":6,"chain_us":65.200001}
+{"stage":"summary","arm":"literal2bit","rows":1,"cache_perturbed":true,"chain_us":65.533334,"ratio_to_current_baseline":1.000000,"adopted":false,"scope":"complete normalized input to FFN contribution; common RMSNorm/residual omitted"}
+{"stage":"summary","arm":"dense5_native","rows":1,"cache_perturbed":true,"chain_us":62.623998,"ratio_to_current_baseline":0.955605,"adopted":false,"scope":"complete normalized input to FFN contribution; common RMSNorm/residual omitted"}
+{"stage":"native_correctness","arm":"literal2bit","rows":8,"phase":"same_geometry_GU_SiLU","values":139264,"bit_mismatches":0,"max_abs":0}
+{"stage":"native_correctness","arm":"literal2bit","rows":8,"phase":"same_geometry_down_KS1","values":40960,"bit_mismatches":0,"max_abs":0}
+{"stage":"tuning","arm":"literal2bit","rows":8,"gu":"fw8 wg2 tok16 ks1","down":"fw8 wg2 tok16 ks16","splitK":16}
+{"stage":"native_correctness","arm":"dense5_native","rows":8,"phase":"same_geometry_GU_SiLU","values":139264,"bit_mismatches":0,"max_abs":0}
+{"stage":"native_correctness","arm":"dense5_native","rows":8,"phase":"same_geometry_down_KS1","values":40960,"bit_mismatches":0,"max_abs":0}
+{"stage":"tuning","arm":"dense5_native","rows":8,"gu":"fw4 wg2 tok32 ks1","down":"fw16 wg1 tok16 ks16","splitK":16}
+{"stage":"sample","arm":"literal2bit","rows":8,"cache_perturbed":false,"round":0,"repetitions":6,"chain_us":40.911999}
+{"stage":"sample","arm":"dense5_native","rows":8,"cache_perturbed":false,"round":0,"repetitions":6,"chain_us":46.224001}
+{"stage":"sample","arm":"dense5_native","rows":8,"cache_perturbed":false,"round":1,"repetitions":6,"chain_us":43.893335}
+{"stage":"sample","arm":"literal2bit","rows":8,"cache_perturbed":false,"round":1,"repetitions":6,"chain_us":39.802668}
+{"stage":"sample","arm":"literal2bit","rows":8,"cache_perturbed":false,"round":2,"repetitions":6,"chain_us":36.282667}
+{"stage":"sample","arm":"dense5_native","rows":8,"cache_perturbed":false,"round":2,"repetitions":6,"chain_us":45.141335}
+{"stage":"sample","arm":"dense5_native","rows":8,"cache_perturbed":false,"round":3,"repetitions":6,"chain_us":43.696000}
+{"stage":"sample","arm":"literal2bit","rows":8,"cache_perturbed":false,"round":3,"repetitions":6,"chain_us":39.509333}
+{"stage":"sample","arm":"literal2bit","rows":8,"cache_perturbed":false,"round":4,"repetitions":6,"chain_us":36.538667}
+{"stage":"sample","arm":"dense5_native","rows":8,"cache_perturbed":false,"round":4,"repetitions":6,"chain_us":46.042667}
+{"stage":"sample","arm":"dense5_native","rows":8,"cache_perturbed":false,"round":5,"repetitions":6,"chain_us":43.466667}
+{"stage":"sample","arm":"literal2bit","rows":8,"cache_perturbed":false,"round":5,"repetitions":6,"chain_us":39.578667}
+{"stage":"summary","arm":"literal2bit","rows":8,"cache_perturbed":false,"chain_us":39.544000,"ratio_to_current_baseline":1.000000,"adopted":false,"scope":"complete normalized input to FFN contribution; common RMSNorm/residual omitted"}
+{"stage":"summary","arm":"dense5_native","rows":8,"cache_perturbed":false,"chain_us":44.517335,"ratio_to_current_baseline":1.125767,"adopted":false,"scope":"complete normalized input to FFN contribution; common RMSNorm/residual omitted"}
+{"stage":"sample","arm":"literal2bit","rows":8,"cache_perturbed":true,"round":0,"repetitions":6,"chain_us":66.874668}
+{"stage":"sample","arm":"dense5_native","rows":8,"cache_perturbed":true,"round":0,"repetitions":6,"chain_us":63.813332}
+{"stage":"sample","arm":"dense5_native","rows":8,"cache_perturbed":true,"round":1,"repetitions":6,"chain_us":63.823999}
+{"stage":"sample","arm":"literal2bit","rows":8,"cache_perturbed":true,"round":1,"repetitions":6,"chain_us":66.896000}
+{"stage":"sample","arm":"literal2bit","rows":8,"cache_perturbed":true,"round":2,"repetitions":6,"chain_us":66.197332}
+{"stage":"sample","arm":"dense5_native","rows":8,"cache_perturbed":true,"round":2,"repetitions":6,"chain_us":63.818666}
+{"stage":"sample","arm":"dense5_native","rows":8,"cache_perturbed":true,"round":3,"repetitions":6,"chain_us":63.813332}
+{"stage":"sample","arm":"literal2bit","rows":8,"cache_perturbed":true,"round":3,"repetitions":6,"chain_us":67.232000}
+{"stage":"sample","arm":"literal2bit","rows":8,"cache_perturbed":true,"round":4,"repetitions":6,"chain_us":66.202666}
+{"stage":"sample","arm":"dense5_native","rows":8,"cache_perturbed":true,"round":4,"repetitions":6,"chain_us":63.818665}
+{"stage":"sample","arm":"dense5_native","rows":8,"cache_perturbed":true,"round":5,"repetitions":6,"chain_us":63.813332}
+{"stage":"sample","arm":"literal2bit","rows":8,"cache_perturbed":true,"round":5,"repetitions":6,"chain_us":66.554667}
+{"stage":"summary","arm":"literal2bit","rows":8,"cache_perturbed":true,"chain_us":66.714668,"ratio_to_current_baseline":1.000000,"adopted":false,"scope":"complete normalized input to FFN contribution; common RMSNorm/residual omitted"}
+{"stage":"summary","arm":"dense5_native","rows":8,"cache_perturbed":true,"chain_us":63.815999,"ratio_to_current_baseline":0.956551,"adopted":false,"scope":"complete normalized input to FFN contribution; common RMSNorm/residual omitted"}

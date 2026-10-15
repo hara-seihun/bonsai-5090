@@ -1,0 +1,27 @@
+{
+  "state": "CPU_and_compiler_complete",
+  "private_commit": "3dc21a76b8e99401e3eea0b7e561feb3bbb27554",
+  "private_ref": "agent/joint-consumer-search",
+  "durable_git": "~/projects/halo-5090",
+  "bundle_prerequisite": "3fdbad4547e51455b82d5e7e3f5d6194081449cb",
+  "independent_readable_build_inputs": "source/src plus source/experiments/joint-consumer; CUDA13.1 SDK external",
+  "lead": "source/experiments/joint-consumer/shared8_compact.cu",
+  "literal_alternative": "source/experiments/joint-consumer/literal3.cu",
+  "reproduction": "admit a fresh writable checkout at the private commit, then python3 experiments/joint-consumer/reproduce.py; readonly publication is evidence, not a mutable build directory",
+  "original_bash": {
+    "jobId": "00000000-0000-0000-0000-000000000000",
+    "observed_state": "completed",
+    "exitCode": 0,
+    "resubmitted": false
+  },
+  "gpu_execution": false,
+  "native_model_execution": false,
+  "serving_mutation": false,
+  "cache_owner_mutation": false,
+  "profile_owner_mutation": false,
+  "limits": [
+    "ordinary/cached native startup, allocation/residency, DRAM/cache/bank latency, exact native endpoints, model/HTTP/tasks and speedup remain unset",
+    "same-build Linux K-loop counts137/272 are separate from historical timeline160/297 counts",
+    "no native window or adoption authorized by this delivery"
+  ]
+}

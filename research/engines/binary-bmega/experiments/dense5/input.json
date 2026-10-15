@@ -1,0 +1,13 @@
+{
+  "source": "~/work/ffn-label/data/cap/L10.npz",
+  "source_sha256": "809b623edafcc41d1f45f79ecae75fd1fae0f8e6f6953f33b1c9f434b922dafb",
+  "layer": 10,
+  "capture_field": "n, seq>0, first8",
+  "shape": [
+    8,
+    5120
+  ],
+  "dtype": "little-endian float32",
+  "input_sha256": "f927b50494fe7b525768a940abba7cf4ed7824b39e0b3e6d140d6f4f6bcf5f15",
+  "scope": "previously captured real normalized FFN inputs; not newly blind trajectories; 512 timing rows repeat this8-row prefix"
+}

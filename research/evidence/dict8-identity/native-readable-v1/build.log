@@ -1,0 +1,126 @@
+cache_tool.cpp
+gguf.cpp
+Generating Code...
+fault_test.cpp
+gguf.cpp
+Generating Code...
+{"gpu_work": false, "injected_admission_faults": 28, "fixture_model_bytes": 256, "actual_bootstrap_model_hash_scans": 1, "reader_additional_model_hash_scans": 0, "source_mutation_or_write_denial": true, "retained_reader_lifetime": true, "stale_and_substituted_capabilities": true, "unforgeable_api_static_asserts": true, "hash_before_unsafe_parse": true, "cache_failure_before_device_boundary": true, "payload_and_header_faults": true, "terminal_order_failures": true, "disabled_original_path": true, "native_cached_startup_ns": null, "proof": "Actual generated Engine bootstrap and model selector, production ExactModel/Reader algorithm with isolated tiny fixture binding and reduced cache geometry; no actual native Engine execution", "platform": "nt", "engine_sha256": "0634d3ce63ec1397a43fcd26e9e935085d601169367fdf555c455986fd47117b", "bootstrap_sha256": "6377fd6415b6c63673d3d7dad1a6087c5da041a1078567a10af1f2eefdf0e42d", "model_source_sha256": "4509361a01d780bf1a92fbb48a64c5d2f9e56f68aab892b741af1f9d12482dcc", "reader_source_sha256": "80cc62ffbea0d81e7a3390af371d245e064f024c7b0ca98943e596f19c398b5c", "common_source_sha256": "06158e15585fc1db7c37df24d14907a0968e122fd4492bc2dd2d3436d115daa6", "fixture_model_sha256": "401386ae1f4447045d48a5ef2573a124122c389670bac03786e7adec14e6d811", "fixture_table_sha256": "b5e62657edc10d71d78b5f159016c65335ecb27d09199e0433d3e7b3f06ba304", "fixture_test_sha256": "b999c48264f24ed6a5e90e24b88b431cae7743eb094c26e56ca555bb7a00b9ae", "compile_command": ["cl", "/nologo", "/O2", "/EHsc", "/std:c++17", "/DNOMINMAX", "/D_CRT_SECURE_NO_WARNINGS", "/IC:\\work\\AppData\\Local\\Temp\\dict8-identity-test-yt3qch81\\fixture", "C:\\work\\AppData\\Local\\Temp\\dict8-identity-test-yt3qch81\\identity_test.cpp", "C:\\work\\AppData\\Local\\Temp\\dict8-identity-test-yt3qch81\\fixture\\gguf.cpp", "/Fe:C:\\work\\AppData\\Local\\Temp\\dict8-identity-test-yt3qch81\\identity_test.exe", "/link", "bcrypt.lib"]}
+-- The CXX compiler identification is MSVC 19.44.35229.0
+-- The CUDA compiler identification is NVIDIA 13.0.88 with host compiler MSVC 19.44.35229.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/work/models/tools/msvc/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Detecting CUDA compiler ABI info
+-- Detecting CUDA compiler ABI info - done
+-- Check for working CUDA compiler: C:/work/models/tools/cuda/bin/nvcc.exe - skipped
+-- Detecting CUDA compile features
+-- Detecting CUDA compile features - done
+-- Found CUDAToolkit: C:/work/models/tools/cuda/include;C:/work/models/tools/cuda/include/cccl (found version "13.0.88")
+-- Configuring done (3.7s)
+-- Generating done (0.0s)
+-- Build files have been written to: C:/work/models/experiments/bonsai-quality-20261013/gu-dict8-identity-build-v1/build
+[1/4] Building CUDA object CMakeFiles\quality_custom.dir\src\dict8.cu.obj
+C:/work\models\experiments\bonsai-quality-20261013\gu-dict8-identity-build-v1\src\dict8.cu(288): warning #177-D: variable "book" was declared but never referenced
+    uint32_t* book = nullptr;
+              ^
+          detected during:
+            instantiation of "void h5::dict8_backend::gemm_fp4_body<FW,WG,TOKW,MODE,WF,PIPE,MICRO,CARRIER,DEGREE8,FUSE,TAIL,CAPTURE_PAIR>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *, const h5::dict8_backend::FuseArgs &, const h5::TailArgs &, const uint32_t *, float *) [with FW=8, WG=2, TOKW=32, MODE=3, WF=10, PIPE=4, MICRO=false, CARRIER=true, DEGREE8=false, FUSE=false, TAIL=0, CAPTURE_PAIR=true]" at line 800
+            instantiation of "void h5::dict8_backend::kernel<WF,CAPTURE_PAIR>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, int, float *, int, const float *, const uint32_t *, float *) [with WF=10, CAPTURE_PAIR=true]" at line 804
+            instantiation of "cudaError_t h5::dict8_backend::dispatch<WF,CHECK>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, int, float *, int, const float *, const uint32_t *, cudaStream_t, float *) [with WF=10, CHECK=true]" at line 812
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+C:/work\models\experiments\bonsai-quality-20261013\gu-dict8-identity-build-v1\src\dict8.cu(406): warning #177-D: variable "fregs" was declared but never referenced
+    FuseRegs<FW, FUSE ? FTPW : 1> fregs;
+                                  ^
+          detected during:
+            instantiation of "void h5::dict8_backend::gemm_fp4_body<FW,WG,TOKW,MODE,WF,PIPE,MICRO,CARRIER,DEGREE8,FUSE,TAIL,CAPTURE_PAIR>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *, const h5::dict8_backend::FuseArgs &, const h5::TailArgs &, const uint32_t *, float *) [with FW=8, WG=2, TOKW=32, MODE=3, WF=10, PIPE=4, MICRO=false, CARRIER=true, DEGREE8=false, FUSE=false, TAIL=0, CAPTURE_PAIR=true]" at line 800
+            instantiation of "void h5::dict8_backend::kernel<WF,CAPTURE_PAIR>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, int, float *, int, const float *, const uint32_t *, float *) [with WF=10, CAPTURE_PAIR=true]" at line 804
+            instantiation of "cudaError_t h5::dict8_backend::dispatch<WF,CHECK>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, int, float *, int, const float *, const uint32_t *, cudaStream_t, float *) [with WF=10, CHECK=true]" at line 812
+
+C:/work\models\experiments\bonsai-quality-20261013\gu-dict8-identity-build-v1\src\dict8.cu(288): warning #177-D: variable "book" was declared but never referenced
+    uint32_t* book = nullptr;
+              ^
+          detected during:
+            instantiation of "void h5::dict8_backend::gemm_fp4_body<FW,WG,TOKW,MODE,WF,PIPE,MICRO,CARRIER,DEGREE8,FUSE,TAIL,CAPTURE_PAIR>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *, const h5::dict8_backend::FuseArgs &, const h5::TailArgs &, const uint32_t *, float *) [with FW=8, WG=2, TOKW=32, MODE=3, WF=10, PIPE=4, MICRO=false, CARRIER=true, DEGREE8=false, FUSE=false, TAIL=0, CAPTURE_PAIR=false]" at line 800
+            instantiation of "void h5::dict8_backend::kernel<WF,CAPTURE_PAIR>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, int, float *, int, const float *, const uint32_t *, float *) [with WF=10, CAPTURE_PAIR=false]" at line 804
+            instantiation of "cudaError_t h5::dict8_backend::dispatch<WF,CHECK>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, int, float *, int, const float *, const uint32_t *, cudaStream_t, float *) [with WF=10, CHECK=false]" at line 813
+
+C:/work\models\experiments\bonsai-quality-20261013\gu-dict8-identity-build-v1\src\dict8.cu(406): warning #177-D: variable "fregs" was declared but never referenced
+    FuseRegs<FW, FUSE ? FTPW : 1> fregs;
+                                  ^
+          detected during:
+            instantiation of "void h5::dict8_backend::gemm_fp4_body<FW,WG,TOKW,MODE,WF,PIPE,MICRO,CARRIER,DEGREE8,FUSE,TAIL,CAPTURE_PAIR>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *, const h5::dict8_backend::FuseArgs &, const h5::TailArgs &, const uint32_t *, float *) [with FW=8, WG=2, TOKW=32, MODE=3, WF=10, PIPE=4, MICRO=false, CARRIER=true, DEGREE8=false, FUSE=false, TAIL=0, CAPTURE_PAIR=false]" at line 800
+            instantiation of "void h5::dict8_backend::kernel<WF,CAPTURE_PAIR>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, int, float *, int, const float *, const uint32_t *, float *) [with WF=10, CAPTURE_PAIR=false]" at line 804
+            instantiation of "cudaError_t h5::dict8_backend::dispatch<WF,CHECK>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, int, float *, int, const float *, const uint32_t *, cudaStream_t, float *) [with WF=10, CHECK=false]" at line 813
+
+C:/work\models\experiments\bonsai-quality-20261013\gu-dict8-identity-build-v1\src\dict8.cu(288): warning #177-D: variable "book" was declared but never referenced
+    uint32_t* book = nullptr;
+              ^
+          detected during:
+            instantiation of "void h5::dict8_backend::gemm_fp4_body<FW,WG,TOKW,MODE,WF,PIPE,MICRO,CARRIER,DEGREE8,FUSE,TAIL,CAPTURE_PAIR>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *, const h5::dict8_backend::FuseArgs &, const h5::TailArgs &, const uint32_t *, float *) [with FW=8, WG=2, TOKW=32, MODE=3, WF=0, PIPE=4, MICRO=false, CARRIER=true, DEGREE8=false, FUSE=false, TAIL=0, CAPTURE_PAIR=true]" at line 800
+            instantiation of "void h5::dict8_backend::kernel<WF,CAPTURE_PAIR>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, int, float *, int, const float *, const uint32_t *, float *) [with WF=0, CAPTURE_PAIR=true]" at line 804
+            instantiation of "cudaError_t h5::dict8_backend::dispatch<WF,CHECK>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, int, float *, int, const float *, const uint32_t *, cudaStream_t, float *) [with WF=0, CHECK=true]" at line 817
+
+C:/work\models\experiments\bonsai-quality-20261013\gu-dict8-identity-build-v1\src\dict8.cu(406): warning #177-D: variable "fregs" was declared but never referenced
+    FuseRegs<FW, FUSE ? FTPW : 1> fregs;
+                                  ^
+          detected during:
+            instantiation of "void h5::dict8_backend::gemm_fp4_body<FW,WG,TOKW,MODE,WF,PIPE,MICRO,CARRIER,DEGREE8,FUSE,TAIL,CAPTURE_PAIR>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *, const h5::dict8_backend::FuseArgs &, const h5::TailArgs &, const uint32_t *, float *) [with FW=8, WG=2, TOKW=32, MODE=3, WF=0, PIPE=4, MICRO=false, CARRIER=true, DEGREE8=false, FUSE=false, TAIL=0, CAPTURE_PAIR=true]" at line 800
+            instantiation of "void h5::dict8_backend::kernel<WF,CAPTURE_PAIR>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, int, float *, int, const float *, const uint32_t *, float *) [with WF=0, CAPTURE_PAIR=true]" at line 804
+            instantiation of "cudaError_t h5::dict8_backend::dispatch<WF,CHECK>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, int, float *, int, const float *, const uint32_t *, cudaStream_t, float *) [with WF=0, CHECK=true]" at line 817
+
+ptxas info    : 12 bytes gmem
+ptxas info    : Compiling entry function '_ZN2h513dict8_backend6kernelILi0ELb1EEEvPKhS3_PKfiiS3_iPfiS5_PKjS6_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h513dict8_backend6kernelILi0ELb1EEEvPKhS3_PKfiiS3_iPfiS5_PKjS6_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 126 registers, used 1 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_ZN2h513dict8_backend6kernelILi10ELb0EEEvPKhS3_PKfiiS3_iPfiS5_PKjS6_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h513dict8_backend6kernelILi10ELb0EEEvPKhS3_PKfiiS3_iPfiS5_PKjS6_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 132 registers, used 1 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_ZN2h513dict8_backend6kernelILi10ELb1EEEvPKhS3_PKfiiS3_iPfiS5_PKjS6_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h513dict8_backend6kernelILi10ELb1EEEvPKhS3_PKfiiS3_iPfiS5_PKjS6_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 132 registers, used 1 barriers
+ptxas info    : Compile time = 0.000 ms
+dict8.cu
+tmpxft_000033d8_00000000-10_dict8.cudafe1.cpp
+[2/4] Building CUDA object CMakeFiles\quality_custom.dir\src\dict8_checks.cu.obj
+ptxas info    : 4 bytes gmem
+ptxas info    : Compiling entry function '_ZN2h517dict8_quant_checkEPKhS1_S1_S1_PKfS3_Pj' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h517dict8_quant_checkEPKhS1_S1_S1_PKfS3_Pj
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 14 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_ZN2h516dict8_pair_checkEPKfS1_S1_S1_Pj' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h516dict8_pair_checkEPKfS1_S1_S1_Pj
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 18 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+dict8_checks.cu
+tmpxft_00005c90_00000000-10_dict8_checks.cudafe1.cpp
+[3/4] Building CUDA object CMakeFiles\quality_custom.dir\src\engine.cu.obj
+C:/work\models\experiments\bonsai-quality-20261013\gu-dict8-identity-build-v1\src\engine.cu(1863): warning #221-D: floating-point value does not fit in required floating-point type
+                float best_s = am / L[nl - 1], best_e = ((float)(1e+300));
+                                                         ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+C:/work\models\experiments\bonsai-quality-20261013\gu-dict8-identity-build-v1\src\engine.cu(981): warning #550-D: variable "t0" was set but never used
+      unsigned long long t0 = 0;
+                         ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+C:/work\models\experiments\bonsai-quality-20261013\gu-dict8-identity-build-v1\src\engine.cu(1863): warning #221-D: floating-point value does not fit in required floating-point type
+                float best_s = am / L[nl - 1], best_e = ((float)(1e+300));
+                                                         ^
+
+engine.cu
+tmpxft_00004884_00000000-10_engine.cudafe1.cpp
+[4/4] Linking CUDA shared library quality_custom.dll

@@ -1,0 +1,18 @@
+{
+  "source_sha256": "f66958fb3c1393f6bf775aa7bd972d09eadb00cb012d9378045a076e868884c2",
+  "exit": 0,
+  "stdout": "{\"state\":\"native_match\",\"sampled_outputs\":1048576,\"word_errors\":0,\"q8_errors\":0,\"one_mma_errors\":0,\"native_two_mma_us\":4.008960,\"native_one_mma_us\":2.984640,\"direct_us\":6.863040,\"dp4a_us\":4.930880,\"dp4a_errors\":0,\"weight_producer_bytes\":1944,\"producer_errors\":0,\"dp4a_observer_us\":4.689920,\"dp4a_observer_errors\":0,\"observer_bytes\":47761,\"logical_outputs_per_warp\":128,\"input_bytes_per_tile\":96}\n",
+  "stderr": "",
+  "wall_s": 0.17833757400512695,
+  "hashes": {
+    "affine5-inputs.bin": "e4d3e2d0c850104e1f8407235a6edf378eb1f82058614459703f2c46e7abef1c",
+    "affine5-native-q8.bin": "cfa9d83858ab0e33e67752e84baa7a2c582913a9f926d75fb5e6aa4c5a0a5410",
+    "affine5-native-words.bin": "56e1d0027f3aa378d3c21e4db13c58bfa11fc2379024a5f828501f76e8aa3f92",
+    "affine5-q8-observer.bin": "a10b344e20d59db43b0f26df89501a6d2f81584b78986f0e3e920045a7b2275b",
+    "affine5-weight-producer.bin": "9c42443b93e3767d592eb0ac45a726dd3220087ff8ea1c8c9de924465233f642",
+    "affine5_gu_packed.cu": "6a5474631532c4b0f8f96112471fce7bf226b71a2de807d5a89111f31802ca57",
+    "affine5_gu_packed.exe": "599943c2f854bcf86ee00ff8f3809f5b267d3e53db34344fe4a69b136ca32388",
+    "build.cmd": "510550913873274d6830c7fc706e57c4bdc4ccf64ace0fb5b766630c9cdcefcd",
+    "build.log": "59084212758c90d43811a33eeff79103e81fb3e6b45bf4eb434c38a7961d68f1"
+  }
+}

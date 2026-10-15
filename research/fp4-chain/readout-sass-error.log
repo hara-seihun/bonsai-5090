@@ -1,0 +1,14 @@
+
+Fatbin elf code:
+================
+arch = sm_120a
+code version = [1,8]
+host = windows
+compile_size = 64bit
+
+Resource usage:
+ Common:
+  GLOBAL:0
+
+	code for sm_120a
+cuobjdump fatal   : Could not find executable file 'nvdisasm'; you can try adding path to environment variables PATH or NVDISASM_PATH

@@ -1,0 +1,15 @@
+~/work/clones/binary-spec-5090/experiments/binary-batch-map/BatchMap.lean:37:26: warning: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+~/work/clones/binary-spec-5090/experiments/binary-batch-map/BatchMap.lean:37:29: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'BatchMap.lanes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BatchMap.step' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BatchMap.selected_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BatchMap.correction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BatchMap.inverse' depends on axioms: [propext, Quot.sound]

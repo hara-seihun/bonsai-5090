@@ -1,0 +1,21 @@
+{
+  "args": {
+    "tag": "draftwindow-256",
+    "env": [
+      "H5_WSCALE=e4m3",
+      "H5_DF_WINDOW=256"
+    ],
+    "gsm": 256,
+    "loads": "",
+    "rates": "",
+    "prefill": 512,
+    "slots": 64,
+    "ctx": 4096,
+    "tokens": 512,
+    "port": 8000
+  },
+  "environment": {
+    "H5_WSCALE": "e4m3",
+    "H5_DF_WINDOW": "256"
+  }
+}

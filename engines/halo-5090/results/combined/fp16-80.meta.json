@@ -1,0 +1,21 @@
+{
+  "args": {
+    "tag": "fp16-80",
+    "env": [
+      "H5_GDN_DELTA=1",
+      "H5_WSCALE=e4m3"
+    ],
+    "gsm": 1319,
+    "loads": "80",
+    "rates": "",
+    "prefill": 512,
+    "slots": 80,
+    "ctx": 4096,
+    "tokens": 512,
+    "port": 8000
+  },
+  "environment": {
+    "H5_GDN_DELTA": "1",
+    "H5_WSCALE": "e4m3"
+  }
+}

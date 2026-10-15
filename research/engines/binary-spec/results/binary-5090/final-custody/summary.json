@@ -1,0 +1,482 @@
+{
+  "status": "ok",
+  "protocol": "128-token WikiText prefix; positions128..255 teacher-forced; five repetitions after one warmup",
+  "arms": {
+    "reference": {
+      "state": "measured",
+      "median_tps": 195.7921868356064,
+      "mean_tps": 194.1880724196046,
+      "sample_tps": [
+        195.55770482971292,
+        187.95727054849175,
+        195.80721149862558,
+        195.7921868356064,
+        195.82598838558627
+      ],
+      "source": "reference-decodebench.json",
+      "vs_reference_ratio": 1.0
+    },
+    "int8": {
+      "state": "measured",
+      "median_tps": 38.55904350630968,
+      "mean_tps": 38.559016712015286,
+      "sample_tps": [
+        38.55686565225254,
+        38.5593909801381,
+        38.560975743657835,
+        38.55904350630968,
+        38.55880767771829
+      ],
+      "source": "int8-decodebench.json",
+      "wiki": {
+        "state": "measured",
+        "routes": {
+          "prefill": {
+            "tokens": 256,
+            "kl": 0.000513476019,
+            "max_kl": 0.006292112,
+            "top1_count": 248,
+            "top1_percent": 96.875,
+            "reference_ppl": 19.1780276,
+            "candidate_ppl": 19.1811952,
+            "ppl_relative_percent": 0.01651681844487829,
+            "max_logit_error": 2.07428455
+          },
+          "decode": {
+            "tokens": 256,
+            "kl": 0.000497666416,
+            "max_kl": 0.00459216509,
+            "top1_count": 251,
+            "top1_percent": 98.046875,
+            "reference_ppl": 19.1780276,
+            "candidate_ppl": 19.2087595,
+            "ppl_relative_percent": 0.16024536329273253,
+            "max_logit_error": 2.34907627
+          }
+        },
+        "source": "int8-wiki-quality.log"
+      },
+      "chat": {
+        "state": "measured",
+        "routes": {
+          "prefill": {
+            "tokens": 64,
+            "kl": 0.000221146041,
+            "max_kl": 0.00100962059,
+            "top1_count": 63,
+            "top1_percent": 98.4375,
+            "reference_ppl": 1.50110429,
+            "candidate_ppl": 1.50457327,
+            "ppl_relative_percent": 0.23109520258581817,
+            "max_logit_error": 0.249570847
+          },
+          "decode": {
+            "tokens": 64,
+            "kl": 0.000221146041,
+            "max_kl": 0.00100962059,
+            "top1_count": 63,
+            "top1_percent": 98.4375,
+            "reference_ppl": 1.50110429,
+            "candidate_ppl": 1.50457327,
+            "ppl_relative_percent": 0.23109520258581817,
+            "max_logit_error": 0.249570847
+          }
+        },
+        "source": "int8-chat-quality.log"
+      },
+      "vs_reference_ratio": 0.19693862216619057
+    },
+    "fp4": {
+      "state": "measured",
+      "median_tps": 165.91130391894484,
+      "mean_tps": 165.90987442256088,
+      "sample_tps": [
+        165.90646244098178,
+        165.89549876171972,
+        165.91406184919185,
+        165.91130391894484,
+        165.92204514196624
+      ],
+      "source": "fp4-decodebench.json",
+      "wiki": {
+        "state": "measured",
+        "routes": {
+          "prefill": {
+            "tokens": 256,
+            "kl": 0.0264006041,
+            "max_kl": 0.137313063,
+            "top1_count": 235,
+            "top1_percent": 91.796875,
+            "reference_ppl": 19.1780276,
+            "candidate_ppl": 19.8434434,
+            "ppl_relative_percent": 3.469677976686203,
+            "max_logit_error": 4.71988142
+          },
+          "decode": {
+            "tokens": 256,
+            "kl": 0.0240386204,
+            "max_kl": 0.138475885,
+            "top1_count": 237,
+            "top1_percent": 92.578125,
+            "reference_ppl": 19.1780276,
+            "candidate_ppl": 19.3727279,
+            "ppl_relative_percent": 1.0152258827701433,
+            "max_logit_error": 5.10968375
+          }
+        },
+        "source": "fp4-wiki-quality.log"
+      },
+      "chat": {
+        "state": "measured",
+        "routes": {
+          "prefill": {
+            "tokens": 64,
+            "kl": 0.0173971022,
+            "max_kl": 0.097066495,
+            "top1_count": 61,
+            "top1_percent": 95.3125,
+            "reference_ppl": 1.50110429,
+            "candidate_ppl": 1.5321569,
+            "ppl_relative_percent": 2.0686510728711527,
+            "max_logit_error": 1.91516972
+          },
+          "decode": {
+            "tokens": 64,
+            "kl": 0.0227881717,
+            "max_kl": 0.125404416,
+            "top1_count": 60,
+            "top1_percent": 93.75,
+            "reference_ppl": 1.50110429,
+            "candidate_ppl": 1.52678786,
+            "ppl_relative_percent": 1.7109783891164465,
+            "max_logit_error": 2.33282709
+          }
+        },
+        "source": "fp4-chat-quality.log"
+      },
+      "vs_reference_ratio": 0.8473847021191375
+    },
+    "packed1": {
+      "state": "measured",
+      "median_tps": 200.01136201262747,
+      "mean_tps": 199.9934344491598,
+      "sample_tps": [
+        200.0194532507108,
+        200.0293684353293,
+        200.01136201262747,
+        199.9611802210265,
+        199.94580832610487
+      ],
+      "source": "packed1-decodebench.json",
+      "wiki": {
+        "state": "measured",
+        "routes": {
+          "prefill": {
+            "tokens": 256,
+            "kl": 0.000149833116,
+            "max_kl": 0.00117108871,
+            "top1_count": 252,
+            "top1_percent": 98.4375,
+            "reference_ppl": 19.1780276,
+            "candidate_ppl": 19.1950303,
+            "ppl_relative_percent": 0.08865718808330758,
+            "max_logit_error": 0.83874321
+          },
+          "decode": {
+            "tokens": 256,
+            "kl": 0.000149910055,
+            "max_kl": 0.0011705299,
+            "top1_count": 252,
+            "top1_percent": 98.4375,
+            "reference_ppl": 19.1780276,
+            "candidate_ppl": 19.1950075,
+            "ppl_relative_percent": 0.0885383020305941,
+            "max_logit_error": 0.842390776
+          }
+        },
+        "source": "packed1-wiki-quality.log"
+      },
+      "chat": {
+        "state": "measured",
+        "routes": {
+          "prefill": {
+            "tokens": 64,
+            "kl": 0.000109564859,
+            "max_kl": 0.000845672236,
+            "top1_count": 64,
+            "top1_percent": 100.0,
+            "reference_ppl": 1.50110429,
+            "candidate_ppl": 1.49949477,
+            "ppl_relative_percent": -0.10722239691952629,
+            "max_logit_error": 0.169404984
+          },
+          "decode": {
+            "tokens": 64,
+            "kl": 0.000109642793,
+            "max_kl": 0.000850123054,
+            "top1_count": 64,
+            "top1_percent": 100.0,
+            "reference_ppl": 1.50110429,
+            "candidate_ppl": 1.49949112,
+            "ppl_relative_percent": -0.10746555124427903,
+            "max_logit_error": 0.169143677
+          }
+        },
+        "source": "packed1-chat-quality.log"
+      },
+      "vs_reference_ratio": 1.0215492520166989
+    },
+    "binary1": {
+      "state": "measured",
+      "median_tps": 201.99621824152257,
+      "mean_tps": 201.99753098580354,
+      "sample_tps": [
+        201.992379100545,
+        201.99842792166297,
+        201.99621824152257,
+        202.0129640895495,
+        201.98766557573768
+      ],
+      "source": "binary1-decodebench.json",
+      "wiki": {
+        "state": "measured",
+        "routes": {
+          "prefill": {
+            "tokens": 256,
+            "kl": 0.0241947928,
+            "max_kl": 0.160505232,
+            "top1_count": 235,
+            "top1_percent": 91.796875,
+            "reference_ppl": 19.1780276,
+            "candidate_ppl": 19.4850494,
+            "ppl_relative_percent": 1.6009039428017235,
+            "max_logit_error": 5.05343676
+          },
+          "decode": {
+            "tokens": 256,
+            "kl": 0.0262755044,
+            "max_kl": 0.301918776,
+            "top1_count": 240,
+            "top1_percent": 93.75,
+            "reference_ppl": 19.1780276,
+            "candidate_ppl": 19.6712011,
+            "ppl_relative_percent": 2.5715548558288726,
+            "max_logit_error": 4.75200582
+          }
+        },
+        "source": "binary1-wiki-quality.log"
+      },
+      "chat": {
+        "state": "measured",
+        "routes": {
+          "prefill": {
+            "tokens": 64,
+            "kl": 0.0209789405,
+            "max_kl": 0.188349402,
+            "top1_count": 60,
+            "top1_percent": 93.75,
+            "reference_ppl": 1.50110429,
+            "candidate_ppl": 1.53955159,
+            "ppl_relative_percent": 2.5612677450945087,
+            "max_logit_error": 1.82536012
+          },
+          "decode": {
+            "tokens": 64,
+            "kl": 0.0198484892,
+            "max_kl": 0.13174047,
+            "top1_count": 60,
+            "top1_percent": 93.75,
+            "reference_ppl": 1.50110429,
+            "candidate_ppl": 1.55156489,
+            "ppl_relative_percent": 3.3615652380821537,
+            "max_logit_error": 1.71993184
+          }
+        },
+        "source": "binary1-chat-quality.log"
+      },
+      "vs_reference_ratio": 1.0316868180808731
+    },
+    "binary1-two": {
+      "state": "measured",
+      "median_tps": 116.70373231894796,
+      "mean_tps": 116.70096718287422,
+      "sample_tps": [
+        116.70809145226735,
+        116.70373231894796,
+        116.6973202153317,
+        116.6860862424654,
+        116.70960568535868
+      ],
+      "source": "binary1-two-decodebench.json",
+      "wiki": {
+        "state": "measured",
+        "routes": {
+          "prefill": {
+            "tokens": 256,
+            "kl": 0.000388627257,
+            "max_kl": 0.00252070161,
+            "top1_count": 252,
+            "top1_percent": 98.4375,
+            "reference_ppl": 19.1780276,
+            "candidate_ppl": 19.2143955,
+            "ppl_relative_percent": 0.18963316123290497,
+            "max_logit_error": 2.01951575
+          },
+          "decode": {
+            "tokens": 256,
+            "kl": 0.000382902331,
+            "max_kl": 0.00212508166,
+            "top1_count": 249,
+            "top1_percent": 97.265625,
+            "reference_ppl": 19.1780276,
+            "candidate_ppl": 19.1847344,
+            "ppl_relative_percent": 0.034971270976802415,
+            "max_logit_error": 1.57318377
+          }
+        },
+        "source": "binary1-two-wiki-quality.log"
+      },
+      "chat": {
+        "state": "measured",
+        "routes": {
+          "prefill": {
+            "tokens": 64,
+            "kl": 0.000309141295,
+            "max_kl": 0.00216021637,
+            "top1_count": 63,
+            "top1_percent": 98.4375,
+            "reference_ppl": 1.50110429,
+            "candidate_ppl": 1.50070649,
+            "ppl_relative_percent": -0.026500490515557473,
+            "max_logit_error": 0.231739998
+          },
+          "decode": {
+            "tokens": 64,
+            "kl": 0.000300477793,
+            "max_kl": 0.00388818657,
+            "top1_count": 64,
+            "top1_percent": 100.0,
+            "reference_ppl": 1.50110429,
+            "candidate_ppl": 1.49988026,
+            "ppl_relative_percent": -0.08154196934577751,
+            "max_logit_error": 0.218039989
+          }
+        },
+        "source": "binary1-two-chat-quality.log"
+      },
+      "vs_reference_ratio": 0.5960591901296668
+    },
+    "packed1-f16": {
+      "state": "measured",
+      "median_tps": 203.61519196017707,
+      "mean_tps": 203.62692140183316,
+      "sample_tps": [
+        203.61222613135254,
+        203.6450463048744,
+        203.6566496051543,
+        203.61519196017707,
+        203.60549300760752
+      ],
+      "source": "packed1-f16-decodebench.json",
+      "wiki": {
+        "state": "measured",
+        "routes": {
+          "prefill": {
+            "tokens": 256,
+            "kl": 0.000150002168,
+            "max_kl": 0.00117124814,
+            "top1_count": 252,
+            "top1_percent": 98.4375,
+            "reference_ppl": 19.1780276,
+            "candidate_ppl": 19.1954362,
+            "ppl_relative_percent": 0.09077367267944503,
+            "max_logit_error": 0.824146271
+          },
+          "decode": {
+            "tokens": 256,
+            "kl": 0.000150178118,
+            "max_kl": 0.0011765705,
+            "top1_count": 252,
+            "top1_percent": 98.4375,
+            "reference_ppl": 19.1780276,
+            "candidate_ppl": 19.1951546,
+            "ppl_relative_percent": 0.08930532564255245,
+            "max_logit_error": 0.838723421
+          }
+        },
+        "source": "packed1-f16-wiki-quality.log"
+      },
+      "chat": {
+        "state": "measured",
+        "routes": {
+          "prefill": {
+            "tokens": 64,
+            "kl": 0.000109870202,
+            "max_kl": 0.000852712928,
+            "top1_count": 64,
+            "top1_percent": 100.0,
+            "reference_ppl": 1.50110429,
+            "candidate_ppl": 1.49949829,
+            "ppl_relative_percent": -0.10698790288581339,
+            "max_logit_error": 0.169337273
+          },
+          "decode": {
+            "tokens": 64,
+            "kl": 0.0001099772,
+            "max_kl": 0.000856514977,
+            "top1_count": 64,
+            "top1_percent": 100.0,
+            "reference_ppl": 1.50110429,
+            "candidate_ppl": 1.4995372,
+            "ppl_relative_percent": -0.1043958111664578,
+            "max_logit_error": 0.169623375
+          }
+        },
+        "source": "packed1-f16-chat-quality.log"
+      },
+      "vs_reference_ratio": 1.0399556552843405
+    },
+    "binary1-two-f16": {
+      "state": "not-measured",
+      "wiki": {
+        "state": "incomplete",
+        "routes": {},
+        "source": "binary1-two-f16-wiki-quality.log"
+      },
+      "chat": {
+        "state": "measured",
+        "routes": {
+          "prefill": {
+            "tokens": 64,
+            "kl": 0.000338695738,
+            "max_kl": 0.0019465034,
+            "top1_count": 63,
+            "top1_percent": 98.4375,
+            "reference_ppl": 1.50110429,
+            "candidate_ppl": 1.49989856,
+            "ppl_relative_percent": -0.0803228668409095,
+            "max_logit_error": 0.20212841
+          },
+          "decode": {
+            "tokens": 64,
+            "kl": 0.000311835702,
+            "max_kl": 0.00227225527,
+            "top1_count": 63,
+            "top1_percent": 98.4375,
+            "reference_ppl": 1.50110429,
+            "candidate_ppl": 1.50087744,
+            "ppl_relative_percent": -0.015112207826684099,
+            "max_logit_error": 0.253557205
+          }
+        },
+        "source": "binary1-two-f16-chat-quality.log"
+      }
+    },
+    "packed1-lut8": {
+      "state": "not-measured"
+    },
+    "packed1-acc4": {
+      "state": "not-measured"
+    }
+  }
+}

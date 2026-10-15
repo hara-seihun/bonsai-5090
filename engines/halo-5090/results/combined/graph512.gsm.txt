@@ -1,0 +1,1 @@
+{"n": 256, "correct": 240, "accuracy": 0.9375, "concurrency": 64, "tokens": 95652, "wall_s": 21.211363077163696, "aggregate_tok_s": 4509.469742799302, "per_request_decode_tok_s_median": 103.40751306136991}

@@ -1,0 +1,23 @@
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z11dp4a_directPK4TilePKyPaPji' for 'sm_120a'
+ptxas info    : Function properties for _Z11dp4a_directPK4TilePKyPaPji
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 40 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z11folded_tilePK4TilePKyPaPji' for 'sm_120a'
+ptxas info    : Function properties for _Z11folded_tilePK4TilePKyPaPji
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 39 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6directPK4TilePaPjPii' for 'sm_120a'
+ptxas info    : Function properties for _Z6directPK4TilePaPjPii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 39 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6nativePK4TilePKyPaPjPii' for 'sm_120a'
+ptxas info    : Function properties for _Z6nativePK4TilePKyPaPjPii
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 36 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+affine5_groups.cu
+tmpxft_0000ab44_00000000-10_affine5_groups.cudafe1.cpp

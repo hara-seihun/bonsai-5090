@@ -1,0 +1,10 @@
+replay_config slots=32 ctx=8192 rowcap=520 events=68 steps=36 prefills=1
+FP4 pair: joint WF8 projection R1..16, ordered two-pass R>16; unchanged quantized planes, changed FP32 association
+native SF1: E4M3 weight scale planes + row factor, one WF8 sign payload; target N>=5120 at aligned R32 only; other rows/small matrices original FP16 reader, original scales retained
+target: binary Q1_0, original FP16 K128 scales
+
+weights 4.01 GB in 0.6 s
+state f16, KV f16: 75.5 MB state + 536.9 MB KV per slot
+ready: 32 slots x 8192 ctx, 520 rows; GPU free 7.58 / 33.67 GB, load 0.6 s
+pretune: 33 shapes x buckets <= 520 rows in 2.1 s
+GraphResource stage=admitted shape=0,1,1,1,2,1,1,0,0 cache=1 observed_bytes=4194304 free_before=3933929472 free_after=3929735168 total=33670758400

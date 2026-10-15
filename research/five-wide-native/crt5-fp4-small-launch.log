@@ -1,0 +1,22 @@
+BUILD 0 ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z10exhaustivePKjS0_PKyPyPjS3_y' for 'sm_120a'
+ptxas info    : Function properties for _Z10exhaustivePKjS0_PKyPyPjS3_y
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 30 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z10arithmeticPKjPfi' for 'sm_120a'
+ptxas info    : Function properties for _Z10arithmeticPKjPfi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 22 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z5mixedPKjS0_S0_PKyPfi' for 'sm_120a'
+ptxas info    : Function properties for _Z5mixedPKjS0_S0_PKyPfi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 26 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+crt5.cu
+tmpxft_00008b28_00000000-10_crt5.cudafe1.cpp
+ 
+MUTEX 0
+RELEASED
+RECEIPT {"source_sha256": "ed932ea4bf436c9274457d3deb1e0a0ee9b6cb233365bee9d960890bb749be06", "exit": 0, "stdout": "{\"full_pairs\":184528125,\"full_errors\":0,\"first_error\":4294967295,\"native_fingerprint\":44361825457853400,\"chain_errors\":0,\"native_us\":5.057600,\"direct_us\":3.913280,\"observer_max_probes\":21,\"weight_producer_bytes\":972,\"activation_producer_bytes\":3037500,\"observer_bytes\":257}\n", "stderr": "", "wall_s": 0.3669877052307129, "hashes": {"build.cmd": "8b83d06dba713564e2087f2f234aac5400e8b285589daa89f6f9ac1d252a2f35", "build.log": "38a15828437fa006b7e5cfc93615fdcbcded9469bcc81d267d9a6a09547fcac0", "crt5.cu": "ed07c6d56f86bab82ba538a4ed963166c34f0f77f7908fc9083e9c3466469ae2", "crt5.exe": "6d69113b87588738a35816b694a0524683b9af2f3af53d88fb291ba1cdcd5d9a", "mixed-activation-encoding.bin": "288fa7f506a631874739a2f85eb7584d9b0b7858adc1bc7d5bb9a21d3e14fded", "mixed-final-observer.bin": "17d58cac62965aa60c3718747e87269097fe3176a064496ec4064346be9ff543", "mixed-small-observer.bin": "c8bf9a852841e2113e385a398b15b79a9a1df371a1f218097437bd06807eee63", "mixed-weight-encoding.bin": "ef08ed87da155e33a20723c78f6737e80548da2b7e64a3a009e565b55e4e2a31"}}

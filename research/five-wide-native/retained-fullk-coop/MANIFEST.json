@@ -1,0 +1,1142 @@
+{
+  "fullk-observer-17408/build.cmd": {
+    "sha256": "56ea6d9d80f33452875ffc73f27867f571fc54d4cbab096ee6feed53ecf59b74",
+    "bytes": 518,
+    "object": "objects/56ea6d9d80f33452875ffc73f27867f571fc54d4cbab096ee6feed53ecf59b74"
+  },
+  "fullk-observer-17408/build.log": {
+    "sha256": "ea5f552743bca9ce4e51959b6d5c4d277ddd2d2b662deb104269f7c12b4d141b",
+    "bytes": 4870,
+    "object": "objects/ea5f552743bca9ce4e51959b6d5c4d277ddd2d2b662deb104269f7c12b4d141b"
+  },
+  "fullk-observer-17408/fullk-ag.bin": {
+    "sha256": "59685a34526bb6d37eca95ee1af5e45c2eca9af4885e15be79edac957a384582",
+    "bytes": 256,
+    "object": "objects/59685a34526bb6d37eca95ee1af5e45c2eca9af4885e15be79edac957a384582"
+  },
+  "fullk-observer-17408/fullk-arm0-f32.bin": {
+    "sha256": "fa6213a5e3ceb8d817c61488bf9c5996152d25ad38d3bbe5d1e5b3de90bd4de3",
+    "bytes": 4456448,
+    "object": "objects/fa6213a5e3ceb8d817c61488bf9c5996152d25ad38d3bbe5d1e5b3de90bd4de3"
+  },
+  "fullk-observer-17408/fullk-arm0-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-observer-17408/fullk-arm0-scale.bin": {
+    "sha256": "301bd878de8dc81a51dc197f4bc8a2754aa8d632937877d0f856b3cb99a65704",
+    "bytes": 34816,
+    "object": "objects/301bd878de8dc81a51dc197f4bc8a2754aa8d632937877d0f856b3cb99a65704"
+  },
+  "fullk-observer-17408/fullk-arm1-f32.bin": {
+    "sha256": "2a6721d1a4fee1d98809f2d22bd2f4b63027ba1c1bf276133ebd557c87deb14c",
+    "bytes": 4456448,
+    "object": "objects/2a6721d1a4fee1d98809f2d22bd2f4b63027ba1c1bf276133ebd557c87deb14c"
+  },
+  "fullk-observer-17408/fullk-arm1-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-observer-17408/fullk-arm1-scale.bin": {
+    "sha256": "8915e345f2b5c14a469c647d5af88c45d3a8ffe8a0c98ec6ecb8fd5584128f93",
+    "bytes": 34816,
+    "object": "objects/8915e345f2b5c14a469c647d5af88c45d3a8ffe8a0c98ec6ecb8fd5584128f93"
+  },
+  "fullk-observer-17408/fullk-arm10-f32.bin": {
+    "sha256": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0",
+    "bytes": 4456448,
+    "object": "objects/bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0"
+  },
+  "fullk-observer-17408/fullk-arm10-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-observer-17408/fullk-arm10-scale.bin": {
+    "sha256": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505",
+    "bytes": 34816,
+    "object": "objects/b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505"
+  },
+  "fullk-observer-17408/fullk-arm11-f32.bin": {
+    "sha256": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0",
+    "bytes": 4456448,
+    "object": "objects/bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0"
+  },
+  "fullk-observer-17408/fullk-arm11-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-observer-17408/fullk-arm11-scale.bin": {
+    "sha256": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505",
+    "bytes": 34816,
+    "object": "objects/b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505"
+  },
+  "fullk-observer-17408/fullk-arm2-f32.bin": {
+    "sha256": "b52289246247d73ebe2f7f1750c6917270df1dfe058fdbf1ddf3da91f83af7c5",
+    "bytes": 4456448,
+    "object": "objects/b52289246247d73ebe2f7f1750c6917270df1dfe058fdbf1ddf3da91f83af7c5"
+  },
+  "fullk-observer-17408/fullk-arm2-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-observer-17408/fullk-arm2-scale.bin": {
+    "sha256": "18ea52d53ad0f898fd6e24fabed1f0eccc7909104d2a2bb6cd2eb27c78ae59c5",
+    "bytes": 34816,
+    "object": "objects/18ea52d53ad0f898fd6e24fabed1f0eccc7909104d2a2bb6cd2eb27c78ae59c5"
+  },
+  "fullk-observer-17408/fullk-arm3-f32.bin": {
+    "sha256": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0",
+    "bytes": 4456448,
+    "object": "objects/bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0"
+  },
+  "fullk-observer-17408/fullk-arm3-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-observer-17408/fullk-arm3-scale.bin": {
+    "sha256": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505",
+    "bytes": 34816,
+    "object": "objects/b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505"
+  },
+  "fullk-observer-17408/fullk-arm4-f32.bin": {
+    "sha256": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0",
+    "bytes": 4456448,
+    "object": "objects/bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0"
+  },
+  "fullk-observer-17408/fullk-arm4-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-observer-17408/fullk-arm4-scale.bin": {
+    "sha256": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505",
+    "bytes": 34816,
+    "object": "objects/b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505"
+  },
+  "fullk-observer-17408/fullk-arm5-f32.bin": {
+    "sha256": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0",
+    "bytes": 4456448,
+    "object": "objects/bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0"
+  },
+  "fullk-observer-17408/fullk-arm5-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-observer-17408/fullk-arm5-scale.bin": {
+    "sha256": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505",
+    "bytes": 34816,
+    "object": "objects/b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505"
+  },
+  "fullk-observer-17408/fullk-arm6-f32.bin": {
+    "sha256": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0",
+    "bytes": 4456448,
+    "object": "objects/bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0"
+  },
+  "fullk-observer-17408/fullk-arm6-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-observer-17408/fullk-arm6-scale.bin": {
+    "sha256": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505",
+    "bytes": 34816,
+    "object": "objects/b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505"
+  },
+  "fullk-observer-17408/fullk-arm7-f32.bin": {
+    "sha256": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0",
+    "bytes": 4456448,
+    "object": "objects/bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0"
+  },
+  "fullk-observer-17408/fullk-arm7-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-observer-17408/fullk-arm7-scale.bin": {
+    "sha256": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505",
+    "bytes": 34816,
+    "object": "objects/b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505"
+  },
+  "fullk-observer-17408/fullk-arm8-f32.bin": {
+    "sha256": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0",
+    "bytes": 4456448,
+    "object": "objects/bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0"
+  },
+  "fullk-observer-17408/fullk-arm8-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-observer-17408/fullk-arm8-scale.bin": {
+    "sha256": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505",
+    "bytes": 34816,
+    "object": "objects/b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505"
+  },
+  "fullk-observer-17408/fullk-arm9-f32.bin": {
+    "sha256": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0",
+    "bytes": 4456448,
+    "object": "objects/bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0"
+  },
+  "fullk-observer-17408/fullk-arm9-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-observer-17408/fullk-arm9-scale.bin": {
+    "sha256": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505",
+    "bytes": 34816,
+    "object": "objects/b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505"
+  },
+  "fullk-observer-17408/fullk-as.bin": {
+    "sha256": "2ff0480f9e5599f420d98a2c5d68a7fbe6c8672429e60d7aced0895c022817a5",
+    "bytes": 20480,
+    "object": "objects/2ff0480f9e5599f420d98a2c5d68a7fbe6c8672429e60d7aced0895c022817a5"
+  },
+  "fullk-observer-17408/fullk-gs.bin": {
+    "sha256": "7468c988d5df866bd95ae393bfbe47a1fbfe46e69217e7c0354ddb4d36ef4cd0",
+    "bytes": 1392640,
+    "object": "objects/7468c988d5df866bd95ae393bfbe47a1fbfe46e69217e7c0354ddb4d36ef4cd0"
+  },
+  "fullk-observer-17408/fullk-native-final-labels.bin": {
+    "sha256": "ae497ef9fd8094e36776c46879f7c4eee8a763b3497064f42b803b20619a0446",
+    "bytes": 8912896,
+    "object": "objects/ae497ef9fd8094e36776c46879f7c4eee8a763b3497064f42b803b20619a0446"
+  },
+  "fullk-observer-17408/fullk-prices.json": {
+    "sha256": "1446c2d762528cdf86d8b29b280c518ff4cebbcd0e46543a54c92d67b495e2b3",
+    "bytes": 1264,
+    "object": "objects/1446c2d762528cdf86d8b29b280c518ff4cebbcd0e46543a54c92d67b495e2b3"
+  },
+  "fullk-observer-17408/fullk-raw-fp4.bin": {
+    "sha256": "5511af4c364e127ff8a9fdb921850ee1f8360bfcd811a3424bbfa90ccc81148a",
+    "bytes": 163840,
+    "object": "objects/5511af4c364e127ff8a9fdb921850ee1f8360bfcd811a3424bbfa90ccc81148a"
+  },
+  "fullk-observer-17408/fullk-reference-final-labels.bin": {
+    "sha256": "ae497ef9fd8094e36776c46879f7c4eee8a763b3497064f42b803b20619a0446",
+    "bytes": 8912896,
+    "object": "objects/ae497ef9fd8094e36776c46879f7c4eee8a763b3497064f42b803b20619a0446"
+  },
+  "fullk-observer-17408/fullk-us.bin": {
+    "sha256": "61506f9ed18ccceb35468f1f148885ed6154eeb95819c040efee27a717905839",
+    "bytes": 1392640,
+    "object": "objects/61506f9ed18ccceb35468f1f148885ed6154eeb95819c040efee27a717905839"
+  },
+  "fullk-observer-17408/fullk-weights.bin": {
+    "sha256": "3bbaed9b6041dd09d567cb818345c446eb80f91e36ad069ecc0785a767df4a79",
+    "bytes": 35651584,
+    "object": "objects/3bbaed9b6041dd09d567cb818345c446eb80f91e36ad069ecc0785a767df4a79"
+  },
+  "fullk-observer-17408/fullk_observer.cu": {
+    "sha256": "efffb35ccf9ade093bf288cea4ca43cd15b4bc3b43671e62408ecb1bdd1d99b2",
+    "bytes": 26134,
+    "object": "objects/efffb35ccf9ade093bf288cea4ca43cd15b4bc3b43671e62408ecb1bdd1d99b2"
+  },
+  "fullk-observer-17408/fullk_observer.exe": {
+    "sha256": "14d994a14b0913333653d92448f201b7ab84a85f6ff03531863105eb7784c0c9",
+    "bytes": 518144,
+    "object": "objects/14d994a14b0913333653d92448f201b7ab84a85f6ff03531863105eb7784c0c9"
+  },
+  "fullk-observer-17408/receipt.json": {
+    "sha256": "63cb674b6fa79cb58ae3c2b4d0a2456e86ee8102dd70cc1fe9543f8be6dd1e58",
+    "bytes": 5763,
+    "object": "objects/63cb674b6fa79cb58ae3c2b4d0a2456e86ee8102dd70cc1fe9543f8be6dd1e58"
+  },
+  "fullk-observer-17408/sass-result.json": {
+    "sha256": "3b51101c56f683577e8f24b1dee3c68b5234df055969e08833e37d803ab65f69",
+    "bytes": 114,
+    "object": "objects/3b51101c56f683577e8f24b1dee3c68b5234df055969e08833e37d803ab65f69"
+  },
+  "fullk-observer-17408/sass.txt": {
+    "sha256": "868bf5fc16f8705ef836e7544e5af60ca50a69eca9cbada1dcdd6460d2272272",
+    "bytes": 3673048,
+    "object": "objects/868bf5fc16f8705ef836e7544e5af60ca50a69eca9cbada1dcdd6460d2272272"
+  },
+  "fullk-fused-17408/build.cmd": {
+    "sha256": "5a1da748e1e603248e36ed476f5e71df640cc39a1ca7cee14a3dfaef78367d7e",
+    "bytes": 506,
+    "object": "objects/5a1da748e1e603248e36ed476f5e71df640cc39a1ca7cee14a3dfaef78367d7e"
+  },
+  "fullk-fused-17408/build.log": {
+    "sha256": "75d23efd51948eb920db6a23dddd8b5f4b2a08edad2f3489d15836965b4c5044",
+    "bytes": 5540,
+    "object": "objects/75d23efd51948eb920db6a23dddd8b5f4b2a08edad2f3489d15836965b4c5044"
+  },
+  "fullk-fused-17408/fullk-ag.bin": {
+    "sha256": "59685a34526bb6d37eca95ee1af5e45c2eca9af4885e15be79edac957a384582",
+    "bytes": 256,
+    "object": "objects/59685a34526bb6d37eca95ee1af5e45c2eca9af4885e15be79edac957a384582"
+  },
+  "fullk-fused-17408/fullk-arm0-f32.bin": {
+    "sha256": "fa6213a5e3ceb8d817c61488bf9c5996152d25ad38d3bbe5d1e5b3de90bd4de3",
+    "bytes": 4456448,
+    "object": "objects/fa6213a5e3ceb8d817c61488bf9c5996152d25ad38d3bbe5d1e5b3de90bd4de3"
+  },
+  "fullk-fused-17408/fullk-arm0-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-fused-17408/fullk-arm0-scale.bin": {
+    "sha256": "301bd878de8dc81a51dc197f4bc8a2754aa8d632937877d0f856b3cb99a65704",
+    "bytes": 34816,
+    "object": "objects/301bd878de8dc81a51dc197f4bc8a2754aa8d632937877d0f856b3cb99a65704"
+  },
+  "fullk-fused-17408/fullk-arm1-f32.bin": {
+    "sha256": "2a6721d1a4fee1d98809f2d22bd2f4b63027ba1c1bf276133ebd557c87deb14c",
+    "bytes": 4456448,
+    "object": "objects/2a6721d1a4fee1d98809f2d22bd2f4b63027ba1c1bf276133ebd557c87deb14c"
+  },
+  "fullk-fused-17408/fullk-arm1-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-fused-17408/fullk-arm1-scale.bin": {
+    "sha256": "8915e345f2b5c14a469c647d5af88c45d3a8ffe8a0c98ec6ecb8fd5584128f93",
+    "bytes": 34816,
+    "object": "objects/8915e345f2b5c14a469c647d5af88c45d3a8ffe8a0c98ec6ecb8fd5584128f93"
+  },
+  "fullk-fused-17408/fullk-arm10-f32.bin": {
+    "sha256": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0",
+    "bytes": 4456448,
+    "object": "objects/bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0"
+  },
+  "fullk-fused-17408/fullk-arm10-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-fused-17408/fullk-arm10-scale.bin": {
+    "sha256": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505",
+    "bytes": 34816,
+    "object": "objects/b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505"
+  },
+  "fullk-fused-17408/fullk-arm11-f32.bin": {
+    "sha256": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0",
+    "bytes": 4456448,
+    "object": "objects/bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0"
+  },
+  "fullk-fused-17408/fullk-arm11-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-fused-17408/fullk-arm11-scale.bin": {
+    "sha256": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505",
+    "bytes": 34816,
+    "object": "objects/b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505"
+  },
+  "fullk-fused-17408/fullk-arm12-f32.bin": {
+    "sha256": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0",
+    "bytes": 4456448,
+    "object": "objects/bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0"
+  },
+  "fullk-fused-17408/fullk-arm12-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-fused-17408/fullk-arm12-scale.bin": {
+    "sha256": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505",
+    "bytes": 34816,
+    "object": "objects/b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505"
+  },
+  "fullk-fused-17408/fullk-arm13-f32.bin": {
+    "sha256": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0",
+    "bytes": 4456448,
+    "object": "objects/bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0"
+  },
+  "fullk-fused-17408/fullk-arm13-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-fused-17408/fullk-arm13-scale.bin": {
+    "sha256": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505",
+    "bytes": 34816,
+    "object": "objects/b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505"
+  },
+  "fullk-fused-17408/fullk-arm2-f32.bin": {
+    "sha256": "b52289246247d73ebe2f7f1750c6917270df1dfe058fdbf1ddf3da91f83af7c5",
+    "bytes": 4456448,
+    "object": "objects/b52289246247d73ebe2f7f1750c6917270df1dfe058fdbf1ddf3da91f83af7c5"
+  },
+  "fullk-fused-17408/fullk-arm2-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-fused-17408/fullk-arm2-scale.bin": {
+    "sha256": "18ea52d53ad0f898fd6e24fabed1f0eccc7909104d2a2bb6cd2eb27c78ae59c5",
+    "bytes": 34816,
+    "object": "objects/18ea52d53ad0f898fd6e24fabed1f0eccc7909104d2a2bb6cd2eb27c78ae59c5"
+  },
+  "fullk-fused-17408/fullk-arm3-f32.bin": {
+    "sha256": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0",
+    "bytes": 4456448,
+    "object": "objects/bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0"
+  },
+  "fullk-fused-17408/fullk-arm3-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-fused-17408/fullk-arm3-scale.bin": {
+    "sha256": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505",
+    "bytes": 34816,
+    "object": "objects/b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505"
+  },
+  "fullk-fused-17408/fullk-arm4-f32.bin": {
+    "sha256": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0",
+    "bytes": 4456448,
+    "object": "objects/bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0"
+  },
+  "fullk-fused-17408/fullk-arm4-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-fused-17408/fullk-arm4-scale.bin": {
+    "sha256": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505",
+    "bytes": 34816,
+    "object": "objects/b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505"
+  },
+  "fullk-fused-17408/fullk-arm5-f32.bin": {
+    "sha256": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0",
+    "bytes": 4456448,
+    "object": "objects/bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0"
+  },
+  "fullk-fused-17408/fullk-arm5-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-fused-17408/fullk-arm5-scale.bin": {
+    "sha256": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505",
+    "bytes": 34816,
+    "object": "objects/b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505"
+  },
+  "fullk-fused-17408/fullk-arm6-f32.bin": {
+    "sha256": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0",
+    "bytes": 4456448,
+    "object": "objects/bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0"
+  },
+  "fullk-fused-17408/fullk-arm6-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-fused-17408/fullk-arm6-scale.bin": {
+    "sha256": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505",
+    "bytes": 34816,
+    "object": "objects/b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505"
+  },
+  "fullk-fused-17408/fullk-arm7-f32.bin": {
+    "sha256": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0",
+    "bytes": 4456448,
+    "object": "objects/bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0"
+  },
+  "fullk-fused-17408/fullk-arm7-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-fused-17408/fullk-arm7-scale.bin": {
+    "sha256": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505",
+    "bytes": 34816,
+    "object": "objects/b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505"
+  },
+  "fullk-fused-17408/fullk-arm8-f32.bin": {
+    "sha256": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0",
+    "bytes": 4456448,
+    "object": "objects/bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0"
+  },
+  "fullk-fused-17408/fullk-arm8-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-fused-17408/fullk-arm8-scale.bin": {
+    "sha256": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505",
+    "bytes": 34816,
+    "object": "objects/b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505"
+  },
+  "fullk-fused-17408/fullk-arm9-f32.bin": {
+    "sha256": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0",
+    "bytes": 4456448,
+    "object": "objects/bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0"
+  },
+  "fullk-fused-17408/fullk-arm9-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-fused-17408/fullk-arm9-scale.bin": {
+    "sha256": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505",
+    "bytes": 34816,
+    "object": "objects/b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505"
+  },
+  "fullk-fused-17408/fullk-as.bin": {
+    "sha256": "2ff0480f9e5599f420d98a2c5d68a7fbe6c8672429e60d7aced0895c022817a5",
+    "bytes": 20480,
+    "object": "objects/2ff0480f9e5599f420d98a2c5d68a7fbe6c8672429e60d7aced0895c022817a5"
+  },
+  "fullk-fused-17408/fullk-gs.bin": {
+    "sha256": "7468c988d5df866bd95ae393bfbe47a1fbfe46e69217e7c0354ddb4d36ef4cd0",
+    "bytes": 1392640,
+    "object": "objects/7468c988d5df866bd95ae393bfbe47a1fbfe46e69217e7c0354ddb4d36ef4cd0"
+  },
+  "fullk-fused-17408/fullk-native-final-labels.bin": {
+    "sha256": "ae497ef9fd8094e36776c46879f7c4eee8a763b3497064f42b803b20619a0446",
+    "bytes": 8912896,
+    "object": "objects/ae497ef9fd8094e36776c46879f7c4eee8a763b3497064f42b803b20619a0446"
+  },
+  "fullk-fused-17408/fullk-prices.json": {
+    "sha256": "46a5b177858c349f669da070567ec7be30d62b7283c6119e602aaf001a6ae8a7",
+    "bytes": 1464,
+    "object": "objects/46a5b177858c349f669da070567ec7be30d62b7283c6119e602aaf001a6ae8a7"
+  },
+  "fullk-fused-17408/fullk-raw-fp4.bin": {
+    "sha256": "5511af4c364e127ff8a9fdb921850ee1f8360bfcd811a3424bbfa90ccc81148a",
+    "bytes": 163840,
+    "object": "objects/5511af4c364e127ff8a9fdb921850ee1f8360bfcd811a3424bbfa90ccc81148a"
+  },
+  "fullk-fused-17408/fullk-reference-final-labels.bin": {
+    "sha256": "ae497ef9fd8094e36776c46879f7c4eee8a763b3497064f42b803b20619a0446",
+    "bytes": 8912896,
+    "object": "objects/ae497ef9fd8094e36776c46879f7c4eee8a763b3497064f42b803b20619a0446"
+  },
+  "fullk-fused-17408/fullk-us.bin": {
+    "sha256": "61506f9ed18ccceb35468f1f148885ed6154eeb95819c040efee27a717905839",
+    "bytes": 1392640,
+    "object": "objects/61506f9ed18ccceb35468f1f148885ed6154eeb95819c040efee27a717905839"
+  },
+  "fullk-fused-17408/fullk-weights.bin": {
+    "sha256": "3bbaed9b6041dd09d567cb818345c446eb80f91e36ad069ecc0785a767df4a79",
+    "bytes": 35651584,
+    "object": "objects/3bbaed9b6041dd09d567cb818345c446eb80f91e36ad069ecc0785a767df4a79"
+  },
+  "fullk-fused-17408/fullk_fused.cu": {
+    "sha256": "177fba123a05d0ed9fff0d165def720c07634db37451e50fcc48b148bd88f94f",
+    "bytes": 28513,
+    "object": "objects/177fba123a05d0ed9fff0d165def720c07634db37451e50fcc48b148bd88f94f"
+  },
+  "fullk-fused-17408/fullk_fused.exe": {
+    "sha256": "bbf1f61f0473a51afeef4c02b562b557b0ed879c1672c12e842f9febd669cbd8",
+    "bytes": 553984,
+    "object": "objects/bbf1f61f0473a51afeef4c02b562b557b0ed879c1672c12e842f9febd669cbd8"
+  },
+  "fullk-fused-17408/receipt.json": {
+    "sha256": "e71b5fa1ab53e64c190e407e15a25e3143bb2b771feda6989de57df2ec70ba8b",
+    "bytes": 6405,
+    "object": "objects/e71b5fa1ab53e64c190e407e15a25e3143bb2b771feda6989de57df2ec70ba8b"
+  },
+  "fullk-fused-17408/sass-result.json": {
+    "sha256": "8ff0527c3b1711ef7ba42d1326c5982a359278b300130fadb95f65bc90733455",
+    "bytes": 114,
+    "object": "objects/8ff0527c3b1711ef7ba42d1326c5982a359278b300130fadb95f65bc90733455"
+  },
+  "fullk-fused-17408/sass.txt": {
+    "sha256": "336df7eb5ac028bd42109b7979007a67b9bbc15f2a4aed35623fa8454a6cce64",
+    "bytes": 4048548,
+    "object": "objects/336df7eb5ac028bd42109b7979007a67b9bbc15f2a4aed35623fa8454a6cce64"
+  },
+  "fullk-fused-occ-17408/build.cmd": {
+    "sha256": "cdc0b915c65f8e2572255a376bfe11a55a01ffa74ec9cdc5cb3d6da6c0249ee9",
+    "bytes": 522,
+    "object": "objects/cdc0b915c65f8e2572255a376bfe11a55a01ffa74ec9cdc5cb3d6da6c0249ee9"
+  },
+  "fullk-fused-occ-17408/build.log": {
+    "sha256": "7789ee0509bd1dab4f9f7f34f0e522835a37c79762ac2c71631dd09988d754c9",
+    "bytes": 5548,
+    "object": "objects/7789ee0509bd1dab4f9f7f34f0e522835a37c79762ac2c71631dd09988d754c9"
+  },
+  "fullk-fused-occ-17408/fullk-ag.bin": {
+    "sha256": "59685a34526bb6d37eca95ee1af5e45c2eca9af4885e15be79edac957a384582",
+    "bytes": 256,
+    "object": "objects/59685a34526bb6d37eca95ee1af5e45c2eca9af4885e15be79edac957a384582"
+  },
+  "fullk-fused-occ-17408/fullk-arm0-f32.bin": {
+    "sha256": "fa6213a5e3ceb8d817c61488bf9c5996152d25ad38d3bbe5d1e5b3de90bd4de3",
+    "bytes": 4456448,
+    "object": "objects/fa6213a5e3ceb8d817c61488bf9c5996152d25ad38d3bbe5d1e5b3de90bd4de3"
+  },
+  "fullk-fused-occ-17408/fullk-arm0-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-fused-occ-17408/fullk-arm0-scale.bin": {
+    "sha256": "301bd878de8dc81a51dc197f4bc8a2754aa8d632937877d0f856b3cb99a65704",
+    "bytes": 34816,
+    "object": "objects/301bd878de8dc81a51dc197f4bc8a2754aa8d632937877d0f856b3cb99a65704"
+  },
+  "fullk-fused-occ-17408/fullk-arm1-f32.bin": {
+    "sha256": "2a6721d1a4fee1d98809f2d22bd2f4b63027ba1c1bf276133ebd557c87deb14c",
+    "bytes": 4456448,
+    "object": "objects/2a6721d1a4fee1d98809f2d22bd2f4b63027ba1c1bf276133ebd557c87deb14c"
+  },
+  "fullk-fused-occ-17408/fullk-arm1-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-fused-occ-17408/fullk-arm1-scale.bin": {
+    "sha256": "8915e345f2b5c14a469c647d5af88c45d3a8ffe8a0c98ec6ecb8fd5584128f93",
+    "bytes": 34816,
+    "object": "objects/8915e345f2b5c14a469c647d5af88c45d3a8ffe8a0c98ec6ecb8fd5584128f93"
+  },
+  "fullk-fused-occ-17408/fullk-arm10-f32.bin": {
+    "sha256": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0",
+    "bytes": 4456448,
+    "object": "objects/bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0"
+  },
+  "fullk-fused-occ-17408/fullk-arm10-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-fused-occ-17408/fullk-arm10-scale.bin": {
+    "sha256": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505",
+    "bytes": 34816,
+    "object": "objects/b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505"
+  },
+  "fullk-fused-occ-17408/fullk-arm11-f32.bin": {
+    "sha256": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0",
+    "bytes": 4456448,
+    "object": "objects/bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0"
+  },
+  "fullk-fused-occ-17408/fullk-arm11-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-fused-occ-17408/fullk-arm11-scale.bin": {
+    "sha256": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505",
+    "bytes": 34816,
+    "object": "objects/b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505"
+  },
+  "fullk-fused-occ-17408/fullk-arm12-f32.bin": {
+    "sha256": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0",
+    "bytes": 4456448,
+    "object": "objects/bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0"
+  },
+  "fullk-fused-occ-17408/fullk-arm12-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-fused-occ-17408/fullk-arm12-scale.bin": {
+    "sha256": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505",
+    "bytes": 34816,
+    "object": "objects/b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505"
+  },
+  "fullk-fused-occ-17408/fullk-arm13-f32.bin": {
+    "sha256": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0",
+    "bytes": 4456448,
+    "object": "objects/bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0"
+  },
+  "fullk-fused-occ-17408/fullk-arm13-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-fused-occ-17408/fullk-arm13-scale.bin": {
+    "sha256": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505",
+    "bytes": 34816,
+    "object": "objects/b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505"
+  },
+  "fullk-fused-occ-17408/fullk-arm2-f32.bin": {
+    "sha256": "b52289246247d73ebe2f7f1750c6917270df1dfe058fdbf1ddf3da91f83af7c5",
+    "bytes": 4456448,
+    "object": "objects/b52289246247d73ebe2f7f1750c6917270df1dfe058fdbf1ddf3da91f83af7c5"
+  },
+  "fullk-fused-occ-17408/fullk-arm2-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-fused-occ-17408/fullk-arm2-scale.bin": {
+    "sha256": "18ea52d53ad0f898fd6e24fabed1f0eccc7909104d2a2bb6cd2eb27c78ae59c5",
+    "bytes": 34816,
+    "object": "objects/18ea52d53ad0f898fd6e24fabed1f0eccc7909104d2a2bb6cd2eb27c78ae59c5"
+  },
+  "fullk-fused-occ-17408/fullk-arm3-f32.bin": {
+    "sha256": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0",
+    "bytes": 4456448,
+    "object": "objects/bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0"
+  },
+  "fullk-fused-occ-17408/fullk-arm3-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-fused-occ-17408/fullk-arm3-scale.bin": {
+    "sha256": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505",
+    "bytes": 34816,
+    "object": "objects/b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505"
+  },
+  "fullk-fused-occ-17408/fullk-arm4-f32.bin": {
+    "sha256": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0",
+    "bytes": 4456448,
+    "object": "objects/bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0"
+  },
+  "fullk-fused-occ-17408/fullk-arm4-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-fused-occ-17408/fullk-arm4-scale.bin": {
+    "sha256": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505",
+    "bytes": 34816,
+    "object": "objects/b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505"
+  },
+  "fullk-fused-occ-17408/fullk-arm5-f32.bin": {
+    "sha256": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0",
+    "bytes": 4456448,
+    "object": "objects/bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0"
+  },
+  "fullk-fused-occ-17408/fullk-arm5-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-fused-occ-17408/fullk-arm5-scale.bin": {
+    "sha256": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505",
+    "bytes": 34816,
+    "object": "objects/b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505"
+  },
+  "fullk-fused-occ-17408/fullk-arm6-f32.bin": {
+    "sha256": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0",
+    "bytes": 4456448,
+    "object": "objects/bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0"
+  },
+  "fullk-fused-occ-17408/fullk-arm6-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-fused-occ-17408/fullk-arm6-scale.bin": {
+    "sha256": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505",
+    "bytes": 34816,
+    "object": "objects/b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505"
+  },
+  "fullk-fused-occ-17408/fullk-arm7-f32.bin": {
+    "sha256": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0",
+    "bytes": 4456448,
+    "object": "objects/bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0"
+  },
+  "fullk-fused-occ-17408/fullk-arm7-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-fused-occ-17408/fullk-arm7-scale.bin": {
+    "sha256": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505",
+    "bytes": 34816,
+    "object": "objects/b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505"
+  },
+  "fullk-fused-occ-17408/fullk-arm8-f32.bin": {
+    "sha256": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0",
+    "bytes": 4456448,
+    "object": "objects/bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0"
+  },
+  "fullk-fused-occ-17408/fullk-arm8-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-fused-occ-17408/fullk-arm8-scale.bin": {
+    "sha256": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505",
+    "bytes": 34816,
+    "object": "objects/b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505"
+  },
+  "fullk-fused-occ-17408/fullk-arm9-f32.bin": {
+    "sha256": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0",
+    "bytes": 4456448,
+    "object": "objects/bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0"
+  },
+  "fullk-fused-occ-17408/fullk-arm9-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-fused-occ-17408/fullk-arm9-scale.bin": {
+    "sha256": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505",
+    "bytes": 34816,
+    "object": "objects/b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505"
+  },
+  "fullk-fused-occ-17408/fullk-as.bin": {
+    "sha256": "2ff0480f9e5599f420d98a2c5d68a7fbe6c8672429e60d7aced0895c022817a5",
+    "bytes": 20480,
+    "object": "objects/2ff0480f9e5599f420d98a2c5d68a7fbe6c8672429e60d7aced0895c022817a5"
+  },
+  "fullk-fused-occ-17408/fullk-fused-final-labels.bin": {
+    "sha256": "ae497ef9fd8094e36776c46879f7c4eee8a763b3497064f42b803b20619a0446",
+    "bytes": 8912896,
+    "object": "objects/ae497ef9fd8094e36776c46879f7c4eee8a763b3497064f42b803b20619a0446"
+  },
+  "fullk-fused-occ-17408/fullk-gs.bin": {
+    "sha256": "7468c988d5df866bd95ae393bfbe47a1fbfe46e69217e7c0354ddb4d36ef4cd0",
+    "bytes": 1392640,
+    "object": "objects/7468c988d5df866bd95ae393bfbe47a1fbfe46e69217e7c0354ddb4d36ef4cd0"
+  },
+  "fullk-fused-occ-17408/fullk-native-final-labels.bin": {
+    "sha256": "ae497ef9fd8094e36776c46879f7c4eee8a763b3497064f42b803b20619a0446",
+    "bytes": 8912896,
+    "object": "objects/ae497ef9fd8094e36776c46879f7c4eee8a763b3497064f42b803b20619a0446"
+  },
+  "fullk-fused-occ-17408/fullk-prices.json": {
+    "sha256": "e488bd559451ccc763d6fb146498f091164a088e0863c66132dbc1ff772f9022",
+    "bytes": 1464,
+    "object": "objects/e488bd559451ccc763d6fb146498f091164a088e0863c66132dbc1ff772f9022"
+  },
+  "fullk-fused-occ-17408/fullk-raw-fp4.bin": {
+    "sha256": "5511af4c364e127ff8a9fdb921850ee1f8360bfcd811a3424bbfa90ccc81148a",
+    "bytes": 163840,
+    "object": "objects/5511af4c364e127ff8a9fdb921850ee1f8360bfcd811a3424bbfa90ccc81148a"
+  },
+  "fullk-fused-occ-17408/fullk-reference-final-labels.bin": {
+    "sha256": "ae497ef9fd8094e36776c46879f7c4eee8a763b3497064f42b803b20619a0446",
+    "bytes": 8912896,
+    "object": "objects/ae497ef9fd8094e36776c46879f7c4eee8a763b3497064f42b803b20619a0446"
+  },
+  "fullk-fused-occ-17408/fullk-us.bin": {
+    "sha256": "61506f9ed18ccceb35468f1f148885ed6154eeb95819c040efee27a717905839",
+    "bytes": 1392640,
+    "object": "objects/61506f9ed18ccceb35468f1f148885ed6154eeb95819c040efee27a717905839"
+  },
+  "fullk-fused-occ-17408/fullk-weights.bin": {
+    "sha256": "3bbaed9b6041dd09d567cb818345c446eb80f91e36ad069ecc0785a767df4a79",
+    "bytes": 35651584,
+    "object": "objects/3bbaed9b6041dd09d567cb818345c446eb80f91e36ad069ecc0785a767df4a79"
+  },
+  "fullk-fused-occ-17408/fullk_fused_occ.cu": {
+    "sha256": "9e6ee691bc678194e3f9c0ffbaaaba791706a115089ddb38e3cb523996526fdf",
+    "bytes": 29184,
+    "object": "objects/9e6ee691bc678194e3f9c0ffbaaaba791706a115089ddb38e3cb523996526fdf"
+  },
+  "fullk-fused-occ-17408/fullk_fused_occ.exe": {
+    "sha256": "d47f820d8c2847b3f62c8e4fd87333601fe8c3c83fdee95683dbf68aab335a85",
+    "bytes": 555008,
+    "object": "objects/d47f820d8c2847b3f62c8e4fd87333601fe8c3c83fdee95683dbf68aab335a85"
+  },
+  "fullk-fused-occ-17408/receipt.json": {
+    "sha256": "7c6db4c655bfc90ea4e7602d63c49a8980368598be9115888ced20d1f966cf55",
+    "bytes": 6676,
+    "object": "objects/7c6db4c655bfc90ea4e7602d63c49a8980368598be9115888ced20d1f966cf55"
+  },
+  "fullk-fused-occ-17408/sass-result.json": {
+    "sha256": "4098868bb3a78e85bbe14d6baa4105703440b445f14272e001827fe5e9b3e687",
+    "bytes": 114,
+    "object": "objects/4098868bb3a78e85bbe14d6baa4105703440b445f14272e001827fe5e9b3e687"
+  },
+  "fullk-fused-occ-17408/sass.txt": {
+    "sha256": "8deaae1c33b7d15718b755af21b9ae0bd8c7a4e1c42e8155d97139c7b3afd10b",
+    "bytes": 4046404,
+    "object": "objects/8deaae1c33b7d15718b755af21b9ae0bd8c7a4e1c42e8155d97139c7b3afd10b"
+  },
+  "fullk-coop-17408/build.cmd": {
+    "sha256": "63af6d310bc09148146731e723331cfbc394465cfe7d87a043b117a268540e54",
+    "bytes": 502,
+    "object": "objects/63af6d310bc09148146731e723331cfbc394465cfe7d87a043b117a268540e54"
+  },
+  "fullk-coop-17408/build.log": {
+    "sha256": "1df980f2dc0dd048b807c5d262262864c3978542ef0062c8d6c38958da4782f2",
+    "bytes": 5538,
+    "object": "objects/1df980f2dc0dd048b807c5d262262864c3978542ef0062c8d6c38958da4782f2"
+  },
+  "fullk-coop-17408/fullk-ag.bin": {
+    "sha256": "59685a34526bb6d37eca95ee1af5e45c2eca9af4885e15be79edac957a384582",
+    "bytes": 256,
+    "object": "objects/59685a34526bb6d37eca95ee1af5e45c2eca9af4885e15be79edac957a384582"
+  },
+  "fullk-coop-17408/fullk-arm0-f32.bin": {
+    "sha256": "fa6213a5e3ceb8d817c61488bf9c5996152d25ad38d3bbe5d1e5b3de90bd4de3",
+    "bytes": 4456448,
+    "object": "objects/fa6213a5e3ceb8d817c61488bf9c5996152d25ad38d3bbe5d1e5b3de90bd4de3"
+  },
+  "fullk-coop-17408/fullk-arm0-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-coop-17408/fullk-arm0-scale.bin": {
+    "sha256": "301bd878de8dc81a51dc197f4bc8a2754aa8d632937877d0f856b3cb99a65704",
+    "bytes": 34816,
+    "object": "objects/301bd878de8dc81a51dc197f4bc8a2754aa8d632937877d0f856b3cb99a65704"
+  },
+  "fullk-coop-17408/fullk-arm1-f32.bin": {
+    "sha256": "2a6721d1a4fee1d98809f2d22bd2f4b63027ba1c1bf276133ebd557c87deb14c",
+    "bytes": 4456448,
+    "object": "objects/2a6721d1a4fee1d98809f2d22bd2f4b63027ba1c1bf276133ebd557c87deb14c"
+  },
+  "fullk-coop-17408/fullk-arm1-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-coop-17408/fullk-arm1-scale.bin": {
+    "sha256": "8915e345f2b5c14a469c647d5af88c45d3a8ffe8a0c98ec6ecb8fd5584128f93",
+    "bytes": 34816,
+    "object": "objects/8915e345f2b5c14a469c647d5af88c45d3a8ffe8a0c98ec6ecb8fd5584128f93"
+  },
+  "fullk-coop-17408/fullk-arm10-f32.bin": {
+    "sha256": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0",
+    "bytes": 4456448,
+    "object": "objects/bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0"
+  },
+  "fullk-coop-17408/fullk-arm10-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-coop-17408/fullk-arm10-scale.bin": {
+    "sha256": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505",
+    "bytes": 34816,
+    "object": "objects/b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505"
+  },
+  "fullk-coop-17408/fullk-arm11-f32.bin": {
+    "sha256": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0",
+    "bytes": 4456448,
+    "object": "objects/bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0"
+  },
+  "fullk-coop-17408/fullk-arm11-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-coop-17408/fullk-arm11-scale.bin": {
+    "sha256": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505",
+    "bytes": 34816,
+    "object": "objects/b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505"
+  },
+  "fullk-coop-17408/fullk-arm12-f32.bin": {
+    "sha256": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0",
+    "bytes": 4456448,
+    "object": "objects/bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0"
+  },
+  "fullk-coop-17408/fullk-arm12-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-coop-17408/fullk-arm12-scale.bin": {
+    "sha256": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505",
+    "bytes": 34816,
+    "object": "objects/b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505"
+  },
+  "fullk-coop-17408/fullk-arm13-f32.bin": {
+    "sha256": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0",
+    "bytes": 4456448,
+    "object": "objects/bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0"
+  },
+  "fullk-coop-17408/fullk-arm13-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-coop-17408/fullk-arm13-scale.bin": {
+    "sha256": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505",
+    "bytes": 34816,
+    "object": "objects/b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505"
+  },
+  "fullk-coop-17408/fullk-arm2-f32.bin": {
+    "sha256": "b52289246247d73ebe2f7f1750c6917270df1dfe058fdbf1ddf3da91f83af7c5",
+    "bytes": 4456448,
+    "object": "objects/b52289246247d73ebe2f7f1750c6917270df1dfe058fdbf1ddf3da91f83af7c5"
+  },
+  "fullk-coop-17408/fullk-arm2-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-coop-17408/fullk-arm2-scale.bin": {
+    "sha256": "18ea52d53ad0f898fd6e24fabed1f0eccc7909104d2a2bb6cd2eb27c78ae59c5",
+    "bytes": 34816,
+    "object": "objects/18ea52d53ad0f898fd6e24fabed1f0eccc7909104d2a2bb6cd2eb27c78ae59c5"
+  },
+  "fullk-coop-17408/fullk-arm3-f32.bin": {
+    "sha256": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0",
+    "bytes": 4456448,
+    "object": "objects/bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0"
+  },
+  "fullk-coop-17408/fullk-arm3-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-coop-17408/fullk-arm3-scale.bin": {
+    "sha256": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505",
+    "bytes": 34816,
+    "object": "objects/b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505"
+  },
+  "fullk-coop-17408/fullk-arm4-f32.bin": {
+    "sha256": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0",
+    "bytes": 4456448,
+    "object": "objects/bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0"
+  },
+  "fullk-coop-17408/fullk-arm4-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-coop-17408/fullk-arm4-scale.bin": {
+    "sha256": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505",
+    "bytes": 34816,
+    "object": "objects/b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505"
+  },
+  "fullk-coop-17408/fullk-arm5-f32.bin": {
+    "sha256": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0",
+    "bytes": 4456448,
+    "object": "objects/bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0"
+  },
+  "fullk-coop-17408/fullk-arm5-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-coop-17408/fullk-arm5-scale.bin": {
+    "sha256": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505",
+    "bytes": 34816,
+    "object": "objects/b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505"
+  },
+  "fullk-coop-17408/fullk-arm6-f32.bin": {
+    "sha256": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0",
+    "bytes": 4456448,
+    "object": "objects/bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0"
+  },
+  "fullk-coop-17408/fullk-arm6-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-coop-17408/fullk-arm6-scale.bin": {
+    "sha256": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505",
+    "bytes": 34816,
+    "object": "objects/b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505"
+  },
+  "fullk-coop-17408/fullk-arm7-f32.bin": {
+    "sha256": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0",
+    "bytes": 4456448,
+    "object": "objects/bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0"
+  },
+  "fullk-coop-17408/fullk-arm7-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-coop-17408/fullk-arm7-scale.bin": {
+    "sha256": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505",
+    "bytes": 34816,
+    "object": "objects/b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505"
+  },
+  "fullk-coop-17408/fullk-arm8-f32.bin": {
+    "sha256": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0",
+    "bytes": 4456448,
+    "object": "objects/bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0"
+  },
+  "fullk-coop-17408/fullk-arm8-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-coop-17408/fullk-arm8-scale.bin": {
+    "sha256": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505",
+    "bytes": 34816,
+    "object": "objects/b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505"
+  },
+  "fullk-coop-17408/fullk-arm9-f32.bin": {
+    "sha256": "bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0",
+    "bytes": 4456448,
+    "object": "objects/bee3def6a9e2b2aedb8e8a8f7f2115f515596d09bdbb6a611ef823d40cc343f0"
+  },
+  "fullk-coop-17408/fullk-arm9-q8.bin": {
+    "sha256": "ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e",
+    "bytes": 1114112,
+    "object": "objects/ed7f8047de2d9f24271c976452002ecd91983f623de4b3779750dc5b0d92c61e"
+  },
+  "fullk-coop-17408/fullk-arm9-scale.bin": {
+    "sha256": "b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505",
+    "bytes": 34816,
+    "object": "objects/b38701f6616b033557c2af611ad60e70c102ec03174df9ed91b0608921a2b505"
+  },
+  "fullk-coop-17408/fullk-as.bin": {
+    "sha256": "2ff0480f9e5599f420d98a2c5d68a7fbe6c8672429e60d7aced0895c022817a5",
+    "bytes": 20480,
+    "object": "objects/2ff0480f9e5599f420d98a2c5d68a7fbe6c8672429e60d7aced0895c022817a5"
+  },
+  "fullk-coop-17408/fullk-fused-final-labels.bin": {
+    "sha256": "ae497ef9fd8094e36776c46879f7c4eee8a763b3497064f42b803b20619a0446",
+    "bytes": 8912896,
+    "object": "objects/ae497ef9fd8094e36776c46879f7c4eee8a763b3497064f42b803b20619a0446"
+  },
+  "fullk-coop-17408/fullk-gs.bin": {
+    "sha256": "7468c988d5df866bd95ae393bfbe47a1fbfe46e69217e7c0354ddb4d36ef4cd0",
+    "bytes": 1392640,
+    "object": "objects/7468c988d5df866bd95ae393bfbe47a1fbfe46e69217e7c0354ddb4d36ef4cd0"
+  },
+  "fullk-coop-17408/fullk-native-final-labels.bin": {
+    "sha256": "ae497ef9fd8094e36776c46879f7c4eee8a763b3497064f42b803b20619a0446",
+    "bytes": 8912896,
+    "object": "objects/ae497ef9fd8094e36776c46879f7c4eee8a763b3497064f42b803b20619a0446"
+  },
+  "fullk-coop-17408/fullk-prices.json": {
+    "sha256": "c0d54b692b72340bcc8e287c897a3e26a4ad169846c05097cb34664bd63bd3ce",
+    "bytes": 1464,
+    "object": "objects/c0d54b692b72340bcc8e287c897a3e26a4ad169846c05097cb34664bd63bd3ce"
+  },
+  "fullk-coop-17408/fullk-raw-fp4.bin": {
+    "sha256": "5511af4c364e127ff8a9fdb921850ee1f8360bfcd811a3424bbfa90ccc81148a",
+    "bytes": 163840,
+    "object": "objects/5511af4c364e127ff8a9fdb921850ee1f8360bfcd811a3424bbfa90ccc81148a"
+  },
+  "fullk-coop-17408/fullk-reference-final-labels.bin": {
+    "sha256": "ae497ef9fd8094e36776c46879f7c4eee8a763b3497064f42b803b20619a0446",
+    "bytes": 8912896,
+    "object": "objects/ae497ef9fd8094e36776c46879f7c4eee8a763b3497064f42b803b20619a0446"
+  },
+  "fullk-coop-17408/fullk-us.bin": {
+    "sha256": "61506f9ed18ccceb35468f1f148885ed6154eeb95819c040efee27a717905839",
+    "bytes": 1392640,
+    "object": "objects/61506f9ed18ccceb35468f1f148885ed6154eeb95819c040efee27a717905839"
+  },
+  "fullk-coop-17408/fullk-weights.bin": {
+    "sha256": "3bbaed9b6041dd09d567cb818345c446eb80f91e36ad069ecc0785a767df4a79",
+    "bytes": 35651584,
+    "object": "objects/3bbaed9b6041dd09d567cb818345c446eb80f91e36ad069ecc0785a767df4a79"
+  },
+  "fullk-coop-17408/fullk_coop.cu": {
+    "sha256": "3dcfaa6fa04e90e626a355a2cdc1d5584cac499ffe8e2495c26539b3580b20d3",
+    "bytes": 30469,
+    "object": "objects/3dcfaa6fa04e90e626a355a2cdc1d5584cac499ffe8e2495c26539b3580b20d3"
+  },
+  "fullk-coop-17408/fullk_coop.exe": {
+    "sha256": "19921668b5089b02bd3ab162d5ad8d5ae2aaf649c14ac3477464b4c83e723c61",
+    "bytes": 563712,
+    "object": "objects/19921668b5089b02bd3ab162d5ad8d5ae2aaf649c14ac3477464b4c83e723c61"
+  },
+  "fullk-coop-17408/receipt.json": {
+    "sha256": "c414fd1633d2336ba5bf101f72d9ae6e9b682c1ed8738a44fbe3b6572e2895c2",
+    "bytes": 6667,
+    "object": "objects/c414fd1633d2336ba5bf101f72d9ae6e9b682c1ed8738a44fbe3b6572e2895c2"
+  },
+  "fullk-coop-17408/sass-result.json": {
+    "sha256": "05819b39aac11641e38d7a4f84c95f3942ef87d95f2caf3a0625420f66cc6d3f",
+    "bytes": 114,
+    "object": "objects/05819b39aac11641e38d7a4f84c95f3942ef87d95f2caf3a0625420f66cc6d3f"
+  },
+  "fullk-coop-17408/sass.txt": {
+    "sha256": "09c5e4a6c0e2585ba9139f641a4c8dd51bce24c159127a2cb3aff351d24d028e",
+    "bytes": 4164324,
+    "object": "objects/09c5e4a6c0e2585ba9139f641a4c8dd51bce24c159127a2cb3aff351d24d028e"
+  }
+}

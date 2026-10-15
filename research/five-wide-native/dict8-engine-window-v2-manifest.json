@@ -1,0 +1,13 @@
+{
+  "DICT8-RESULT.md": "13a003f9a45fff2991e882bfc4f4a9d048f19d344a26755bf3cc8f2cdd739c98",
+  "dict8-engine-window-v2-result.json": "5c86ad4e9e651f74c954b0faff2ba928c41a23ac598aeb22e2d044582bd3e592",
+  "dict8-engine-window-v2-settlement.json": "e0d4f3c4097d9bee1124e43557f39d8a88ba79237680d0fa27f558f7811562d7",
+  "dict8-engine-window-v2-custody.zip": "9a534da504d9109755a986e37515eaa1b6340fc1bb77a6b7c5586ea2615f1ab3",
+  "dict8-engine-window-v2-custody-receipt.json": "b54b47d121ed537e29c21f26eba18b34ee1d0121e867dc4d38b885f1601193b1",
+  "dict8-engine-physical-handback-v2.json": "e1e60247cf1190899bd6f14daa946514c1365975a007c8596e1e145946ba81e9",
+  "dict8-engine-handback-v2.json": "5a5c8a2183340f057c951e3e5f494275ee2ae20d96009cbab7a4e2fb6c850637",
+  "dict8-engine-run-request-v2.json": "e83308f2760674bca63cbbe636a3dcd766a9769317a1a42e08b1056ce1ae5108",
+  "run-dict8-engine-window-v2.py": "c7752865e428cd2851e68c0fc5b9a2d557c1d6bacc4a76224dac922c20696c47",
+  "read-dict8-engine-window-v2.py": "23d72071b78fffdaa03b614deb4b2f2f07b7a0aa8844b9dfbb507f4e7d662e20",
+  "dict8-engine-window-v2-readback.log": "0a27f567328d35925944ed272d4e3598b49ad9e7dee14570cffa90c6387c5cd9"
+}

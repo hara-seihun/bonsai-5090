@@ -1,0 +1,5 @@
+
+weights 7.15 GB in 10.9 s
+state f16, KV fp8: 75.5 MB state + 137.4 MB KV per slot
+ready: 1 slots x 4128 ctx, 512 rows; GPU free 24.83 / 33.67 GB, load 10.9 s
+bench: streams 1 ctx 4000 tokens/step 1: step 6.51 ms, 154 tok/s aggregate, 153.7 tok/s/stream, $1.2472/M

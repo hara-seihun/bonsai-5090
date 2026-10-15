@@ -1,0 +1,7 @@
+{
+  "frozen_engine_sha256": "e2ae33c409fc8a4fe668f8c5cbf51009f65ea76745741fd5d3135c329a5b18c4",
+  "candidate_engine_sha256": "b8df101abcad7eea679574e303b41db77e11580d8b5f0657b4a80a675677c66a",
+  "GPU_execution": false,
+  "opt_in": "H5_GU_DICT8=1",
+  "control": "Unchanged frozen installed DLL; private source starts with exact frozen engine, not H1 derivative."
+}

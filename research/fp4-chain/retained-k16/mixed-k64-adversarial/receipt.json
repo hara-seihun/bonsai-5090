@@ -1,0 +1,13 @@
+{
+  "exit": 0,
+  "stdout": "{\"status\":\"observed\",\"source_K\":128,\"native_K\":64,\"source_groups_per_native_instruction\":4,\"rules\":[\"sequential_groups\",\"pairwise_groups_plus_C\",\"exact_double_groups_plus_C\",\"sequential_halves\",\"sequential_scaled_products\"],\"nonzero_word_differences\":[220,196,44,196,492,128,120,76,120,400,404,388,144,396,752,336,260,164,288,716],\"checks_per_rule_component_instruction\":16384,\"layout\":\"instruction then component then rule; native C for instruction2 comes from instruction1\",\"scope\":\"one generated matrix, generated plus32 rows/eight columns with large-small-cancellation and quarter-ULP source products, fully occupied native K64, source reduction semantics observation only; no performance or global IEEE theorem\"}\n",
+  "stderr": "",
+  "wall_s": 1.9186208248138428,
+  "mutex": "Local\\BonsaiGPU",
+  "mutex_wait_result": 0,
+  "hashes": {
+    "native_mixed_k64_adversarial.cu": "8790aa1eda0661d603e4fd8d217577a597a79d5c63b707fecac10e379051ab19",
+    "native_mixed_k64_adversarial.exe": "7802bd4413fca8c407b8b9e2c597fd27486cba499f30cd9db099cc059538e9ae",
+    "build.log": "94789aa3a4f67913ab96070bb32c12ffcde06ffefca4bb073cb925c83e6b157d"
+  }
+}

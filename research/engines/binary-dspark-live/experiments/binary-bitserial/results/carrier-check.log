@@ -1,0 +1,2 @@
+all R1..16 native maps and alpha/beta continuation bit-exact: 8704 outputs
+checked 8704 outputs; R512 producer, persistent nonfinite error, typed scale-range error/NaN, and zero-carrier path pass

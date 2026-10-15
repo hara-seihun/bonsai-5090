@@ -1,0 +1,17 @@
+{
+  "compiler": "Lean (version 4.33.0, x86_64-unknown-linux-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+  "proofs": {
+    "AffineFive.lean": {
+      "sha256": "7c3af431f755765e12627dd243c37253e804dd1fc94bbb8d685d086c128d09d6",
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "AffineFive128.lean": {
+      "sha256": "22bb18837f203be239bef3c740c88451a2c5abdd8964df5835512e059063fb23",
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  }
+}

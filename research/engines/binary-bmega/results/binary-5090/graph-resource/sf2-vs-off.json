@@ -1,0 +1,53 @@
+{
+  "scope": "same-item scoped panel, not full quality gate",
+  "reference": "results/binary-5090/graph-resource/tasks-binary1-sf-off-plain-b32",
+  "candidate": "results/binary-5090/graph-resource/tasks-binary1-sf2-plain-b32",
+  "reference_timing": {
+    "completion_tokens": 20430,
+    "seconds": 44.88473991770297,
+    "http_tok_s": 455.16583225075595
+  },
+  "candidate_timing": {
+    "completion_tokens": 20127,
+    "seconds": 44.870030242949724,
+    "http_tok_s": 448.5622115925025
+  },
+  "http_ratio": 0.9854918357434714,
+  "benchmarks": {
+    "gsm8k": {
+      "paired": {
+        "accuracy": {
+          "n": 32,
+          "reference_correct": 29,
+          "candidate_correct": 29,
+          "gains": 0,
+          "losses": 0
+        }
+      },
+      "aggregate_only": {},
+      "reference_truncated": 1,
+      "candidate_truncated": 1
+    },
+    "humaneval_plus": {
+      "paired": {
+        "plus": {
+          "n": 32,
+          "reference_correct": 32,
+          "candidate_correct": 32,
+          "gains": 0,
+          "losses": 0
+        },
+        "base": {
+          "n": 32,
+          "reference_correct": 32,
+          "candidate_correct": 32,
+          "gains": 0,
+          "losses": 0
+        }
+      },
+      "aggregate_only": {},
+      "reference_truncated": 0,
+      "candidate_truncated": 0
+    }
+  }
+}

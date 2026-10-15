@@ -1,0 +1,23 @@
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z11probe_scalePKhS0_P5uint2Py' for 'sm_120a'
+ptxas info    : Function properties for _Z11probe_scalePKhS0_P5uint2Py
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 39 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z5quantPKfPaPf' for 'sm_120a'
+ptxas info    : Function properties for _Z5quantPKfPaPf
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 19 registers, used 1 barriers, 20 bytes smem
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6replayPKfPf' for 'sm_120a'
+ptxas info    : Function properties for _Z6replayPKfPf
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 10 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6directPKhS0_S0_Pf' for 'sm_120a'
+ptxas info    : Function properties for _Z6directPKhS0_S0_Pf
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 39 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+native_k16_data_scale_probe.cu
+tmpxft_00009760_00000000-10_native_k16_data_scale_probe.cudafe1.cpp

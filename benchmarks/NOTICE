@@ -1,0 +1,33 @@
+Benchmark export notices
+
+This directory contains selected project-authored evaluation adapters and compact
+scientific receipts. Repository LICENSE/NOTICE govern project-authored material.
+Export source identities and modifications are recorded in source-manifest.json.
+
+External components are NOT relicensed by this export:
+
+* EvalScope (modelscope/evalscope), revision
+  78b061cb3d1e9cda9d86a001d65f58e2b19e95ab, Apache License 2.0.
+  Installed separately; no generated environment is bundled.
+* assets/qwen3coder_tool_parser.reference.py: original Qwen/vLLM-derived parser
+  reference bytes, Apache License 2.0; upstream copyright/license header retained.
+  Exact public URL and SHA256: assets/tool-parser-source.json.
+* assets/chat_template.jinja is extracted from the identified PrismML Bonsai2
+  GGUF. Its model-source terms remain applicable; weights are not bundled.
+* Dataset pins, benchmark identifiers and selected grading observations refer to
+  public GSM8K, MATH-500, IFEval, HumanEval+/EvalPlus, MBPP+, IFBench and Tau2.
+  Dataset payloads are not bundled. Consult each pinned upstream repository's
+  dataset card/LICENSE before downloading or redistributing its content.
+  Revision/file hashes are in datasets-original15.lock.json.
+* Sandbox base-image and numpy identities are metadata, not redistributed images.
+  Docker/Python/numpy and transitive dependency terms apply to local installations.
+* Original PrismML whitepaper scores are cited for scientific comparison.
+  The whitepaper itself is not redistributed here.
+
+Receipts include model-generated benchmark fragments and derived metrics solely
+as experimental evidence. They do not grant rights to upstream datasets/models.
+The programme12 excerpt is a selected, path-sanitized project research record;
+its exact commit/tree/blob identity is receipts/programme12-source.json.
+
+No model weights, executable binaries, dependency trees, account credentials,
+authentication state, private personal data or private work data are included.

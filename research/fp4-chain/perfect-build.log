@@ -1,0 +1,93 @@
+ptxas info    : 837 bytes gmem
+ptxas info    : Compiling entry function '_Z6nativeILb0ELi0EEvPK6uchar2S2_PiPK5EntryiPy' for 'sm_120a'
+ptxas info    : Function properties for _Z6nativeILb0ELi0EEvPK6uchar2S2_PiPK5EntryiPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 24 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6nativeILb0ELi1EEvPK6uchar2S2_PiPK5EntryiPy' for 'sm_120a'
+ptxas info    : Function properties for _Z6nativeILb0ELi1EEvPK6uchar2S2_PiPK5EntryiPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 24 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6nativeILb0ELi3EEvPK6uchar2S2_PiPK5EntryiPy' for 'sm_120a'
+ptxas info    : Function properties for _Z6nativeILb0ELi3EEvPK6uchar2S2_PiPK5EntryiPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 26 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6nativeILb0ELi4EEvPK6uchar2S2_PiPK5EntryiPy' for 'sm_120a'
+ptxas info    : Function properties for _Z6nativeILb0ELi4EEvPK6uchar2S2_PiPK5EntryiPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 26 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6nativeILb0ELi5EEvPK6uchar2S2_PiPK5EntryiPy' for 'sm_120a'
+ptxas info    : Function properties for _Z6nativeILb0ELi5EEvPK6uchar2S2_PiPK5EntryiPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 26 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6nativeILb0ELi6EEvPK6uchar2S2_PiPK5EntryiPy' for 'sm_120a'
+ptxas info    : Function properties for _Z6nativeILb0ELi6EEvPK6uchar2S2_PiPK5EntryiPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 26 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6nativeILb0ELi2EEvPK6uchar2S2_PiPK5EntryiPy' for 'sm_120a'
+ptxas info    : Function properties for _Z6nativeILb0ELi2EEvPK6uchar2S2_PiPK5EntryiPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 24 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6nativeILb1ELi0EEvPK6uchar2S2_PiPK5EntryiPy' for 'sm_120a'
+ptxas info    : Function properties for _Z6nativeILb1ELi0EEvPK6uchar2S2_PiPK5EntryiPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 35 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6nativeILb1ELi1EEvPK6uchar2S2_PiPK5EntryiPy' for 'sm_120a'
+ptxas info    : Function properties for _Z6nativeILb1ELi1EEvPK6uchar2S2_PiPK5EntryiPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 35 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6nativeILb1ELi3EEvPK6uchar2S2_PiPK5EntryiPy' for 'sm_120a'
+ptxas info    : Function properties for _Z6nativeILb1ELi3EEvPK6uchar2S2_PiPK5EntryiPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 35 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6nativeILb1ELi4EEvPK6uchar2S2_PiPK5EntryiPy' for 'sm_120a'
+ptxas info    : Function properties for _Z6nativeILb1ELi4EEvPK6uchar2S2_PiPK5EntryiPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 35 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6nativeILb1ELi5EEvPK6uchar2S2_PiPK5EntryiPy' for 'sm_120a'
+ptxas info    : Function properties for _Z6nativeILb1ELi5EEvPK6uchar2S2_PiPK5EntryiPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 35 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6nativeILb1ELi6EEvPK6uchar2S2_PiPK5EntryiPy' for 'sm_120a'
+ptxas info    : Function properties for _Z6nativeILb1ELi6EEvPK6uchar2S2_PiPK5EntryiPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 35 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6nativeILb1ELi2EEvPK6uchar2S2_PiPK5EntryiPy' for 'sm_120a'
+ptxas info    : Function properties for _Z6nativeILb1ELi2EEvPK6uchar2S2_PiPK5EntryiPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 35 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z7comparePKiS0_Py' for 'sm_120a'
+ptxas info    : Function properties for _Z7comparePKiS0_Py
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 10 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z11pair_lookupPK6uchar2S1_Pi' for 'sm_120a'
+ptxas info    : Function properties for _Z11pair_lookupPK6uchar2S1_Pi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 14 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6directPK6uchar2S1_Pi' for 'sm_120a'
+ptxas info    : Function properties for _Z6directPK6uchar2S1_Pi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 24 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z7projectP5Entry' for 'sm_120a'
+ptxas info    : Function properties for _Z7projectP5Entry
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 20 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+native_tile_perfect.cu
+tmpxft_00000344_00000000-10_native_tile_perfect.cudafe1.cpp

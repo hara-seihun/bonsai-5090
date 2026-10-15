@@ -1,0 +1,34 @@
+{
+  "processes": [],
+  "tools": {
+    "ncu": {
+      "exit": 1,
+      "stdout": "",
+      "stderr": "INFO: Could not find files for the given pattern(s).\n"
+    },
+    "nsys": {
+      "exit": 1,
+      "stdout": "",
+      "stderr": "INFO: Could not find files for the given pattern(s).\n"
+    },
+    "nvdisasm": {
+      "exit": 1,
+      "stdout": "",
+      "stderr": "INFO: Could not find files for the given pattern(s).\n"
+    },
+    "cuobjdump": {
+      "exit": 1,
+      "stdout": "",
+      "stderr": "INFO: Could not find files for the given pattern(s).\n"
+    },
+    "C:\\work\\models\\tools": [
+      "C:\\work\\models\\tools\\nsight_systems-windows-x86_64-2025.3.2.474-archive\\nsight-systems\\2025.3.2\\target-windows-x64\\nsys.exe",
+      "C:\\work\\models\\tools\\nsight_compute-windows-x86_64-2025.3.1.4-archive\\nsight-compute\\2025.3.1\\target\\windows-desktop-win7-x64\\ncu.exe",
+      "C:\\work\\models\\tools\\nsight_compute-windows-x86_64-2025.3.1.4-archive\\nsight-compute\\2025.3.1\\host\\target-windows-x64\\nsys.exe",
+      "C:\\work\\models\\tools\\cuda_nvdisasm-windows-x86_64-13.0.85-archive\\bin\\nvdisasm.exe",
+      "C:\\work\\models\\tools\\cuda_cuobjdump-windows-x86_64-13.0.85-archive\\bin\\cuobjdump.exe",
+      "C:\\work\\models\\tools\\cuda\\bin\\cuobjdump.exe"
+    ],
+    "C:\\Program Files\\NVIDIA Corporation": []
+  }
+}

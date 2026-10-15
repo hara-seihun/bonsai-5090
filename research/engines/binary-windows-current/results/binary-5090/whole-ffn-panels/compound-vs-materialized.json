@@ -1,0 +1,53 @@
+{
+  "scope": "same-item scoped panel, not full quality gate",
+  "reference": "results/binary-5090/whole-ffn-panels/tasks-materialized-b32",
+  "candidate": "results/binary-5090/whole-ffn-panels/tasks-compound-b32",
+  "reference_timing": {
+    "completion_tokens": 21522,
+    "seconds": 34.983151205815375,
+    "http_tok_s": 615.2104444045144
+  },
+  "candidate_timing": {
+    "completion_tokens": 20753,
+    "seconds": 34.97692655492574,
+    "http_tok_s": 593.3340074180243
+  },
+  "http_ratio": 0.9644407256322425,
+  "benchmarks": {
+    "gsm8k": {
+      "paired": {
+        "accuracy": {
+          "n": 32,
+          "reference_correct": 30,
+          "candidate_correct": 29,
+          "gains": 0,
+          "losses": 1
+        }
+      },
+      "aggregate_only": {},
+      "reference_truncated": 0,
+      "candidate_truncated": 1
+    },
+    "humaneval_plus": {
+      "paired": {
+        "plus": {
+          "n": 32,
+          "reference_correct": 32,
+          "candidate_correct": 32,
+          "gains": 0,
+          "losses": 0
+        },
+        "base": {
+          "n": 32,
+          "reference_correct": 32,
+          "candidate_correct": 32,
+          "gains": 0,
+          "losses": 0
+        }
+      },
+      "aggregate_only": {},
+      "reference_truncated": 0,
+      "candidate_truncated": 0
+    }
+  }
+}

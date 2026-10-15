@@ -1,0 +1,2 @@
+name, uuid, clocks.current.sm [MHz], clocks.current.memory [MHz], power.limit [W], power.draw [W], temperature.gpu
+NVIDIA GeForce RTX 5090, GPU-00000000-0000-0000-0000-000000000000, 2902 MHz, 13801 MHz, 500.00 W, 460.87 W, 57

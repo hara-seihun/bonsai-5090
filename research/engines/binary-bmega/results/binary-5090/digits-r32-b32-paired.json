@@ -1,0 +1,53 @@
+{
+  "scope": "same-item scoped panel, not full quality gate",
+  "reference": "results/binary-5090/digits/tasks-modern-packed1-dp4a-pf32-plain-b32",
+  "candidate": "results/binary-5090/digits/tasks-modern-packed1-digits-plain-b32",
+  "reference_timing": {
+    "completion_tokens": 21128,
+    "seconds": 37.942466389387846,
+    "http_tok_s": 556.8430840307552
+  },
+  "candidate_timing": {
+    "completion_tokens": 21548,
+    "seconds": 37.550312030129135,
+    "http_tok_s": 573.8434339163572
+  },
+  "http_ratio": 1.0305298752433873,
+  "benchmarks": {
+    "gsm8k": {
+      "paired": {
+        "accuracy": {
+          "n": 32,
+          "reference_correct": 29,
+          "candidate_correct": 29,
+          "gains": 0,
+          "losses": 0
+        }
+      },
+      "aggregate_only": {},
+      "reference_truncated": 1,
+      "candidate_truncated": 1
+    },
+    "humaneval_plus": {
+      "paired": {
+        "base": {
+          "n": 32,
+          "reference_correct": 32,
+          "candidate_correct": 32,
+          "gains": 0,
+          "losses": 0
+        },
+        "plus": {
+          "n": 32,
+          "reference_correct": 32,
+          "candidate_correct": 32,
+          "gains": 0,
+          "losses": 0
+        }
+      },
+      "aggregate_only": {},
+      "reference_truncated": 0,
+      "candidate_truncated": 0
+    }
+  }
+}

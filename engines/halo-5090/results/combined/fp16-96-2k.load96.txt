@@ -1,0 +1,2 @@
+{"concurrency": 96, "arrival_rate": 0, "requests": 288, "stream": true, "think": false, "max_tokens": 512, "completion_tokens": 119877, "wall_s": 33.46927309036255, "aggregate_tok_s": 3581.703124425445, "per_stream_tok_s_median": 54.02704781078273, "per_stream_tok_s_mean": 56.607459150564296, "ttft_s_median": 0.09414863586425781, "ttft_s_p90": 7.940821409225464, "latency_s_median": 9.02815306186676, "usd_per_m": 0.053512717276759963}
+sample: Crisp air bites the nose, Maples bleed along the St. Lawrence, Chin coats, breath in mist.

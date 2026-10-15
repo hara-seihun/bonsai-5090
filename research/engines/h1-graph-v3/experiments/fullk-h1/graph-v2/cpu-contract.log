@@ -1,0 +1,2 @@
+PASS: v1 two-visit failure, three-visit warmup, exact cached-observation counts, teacher forcing, untouched inputs, absent/mixed/preexisting-counter refusals
+PASS: generated successor Python parses; native GPU acceptance unset

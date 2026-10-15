@@ -1,0 +1,39 @@
+{
+  "state": "five_literal_question_arithmetic_checks_pass",
+  "changed_evidence_sha256": "f1cb35c5c5d8284e38d16eab222e8b2fa91cec3465a6a2164dc1fee738209f40",
+  "checks": [
+    {
+      "source_id": 814,
+      "literal_question_arithmetic": "17",
+      "retained_gold": "11",
+      "model_answer": "17"
+    },
+    {
+      "source_id": 1042,
+      "literal_question_arithmetic": "7/2",
+      "retained_gold": "3",
+      "model_answer": "3.50"
+    },
+    {
+      "source_id": 952,
+      "literal_question_arithmetic": "1800",
+      "retained_gold": "360",
+      "model_answer": "1800"
+    },
+    {
+      "source_id": 823,
+      "literal_question_arithmetic": "18",
+      "retained_gold": "14",
+      "model_answer": "18"
+    },
+    {
+      "source_id": 454,
+      "literal_question_arithmetic": "240",
+      "retained_gold": "150",
+      "model_answer": "240"
+    }
+  ],
+  "gold_edits": 0,
+  "new_inference_calls": 0,
+  "scope": "Independent arithmetic on the exact presented question text; retained corpus answers remain unchanged."
+}

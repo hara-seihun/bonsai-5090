@@ -1,0 +1,8 @@
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z5probeP4ItemPy' for 'sm_120a'
+ptxas info    : Function properties for _Z5probeP4ItemPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 36 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+native_affine_groups.cu
+tmpxft_00009670_00000000-10_native_affine_groups.cudafe1.cpp

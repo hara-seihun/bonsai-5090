@@ -1,0 +1,14 @@
+{
+  "exit": 0,
+  "stdout": "{\"status\":\"pass\",\"device\":\"NVIDIA GeForce RTX 5090\",\"cases\":531441,\"accumulator_paths\":4,\"lane_checks\":68024448,\"missing\":0,\"mismatches\":0,\"dictionary_bytes\":149520,\"labels_bytes\":108,\"input_bytes\":2125764,\"output_bytes\":2125764,\"rounds\":7,\"repetitions_per_round\":10,\"timings_ms\":{\"native_final_observer\":{\"median\":0.105085,\"min\":0.104995,\"max\":0.105194},\"warp_direct\":{\"median\":0.076240,\"min\":0.076150,\"max\":0.076406},\"lane_direct\":{\"median\":0.008874,\"min\":0.007158,\"max\":0.010518}},\"registers\":[18,24,24],\"local_bytes_per_thread\":[0,0,0],\"shared_bytes_per_block\":[0,0,0],\"scope\":\"shuffled exhaustive ternary four-factor source codes to final three-trit code; producer lookup, RNA conversion, three MMAs, three 1/8 normalizations, final binary-search observer and output included; warm resident timing, uniform K8, no independent-K/model/HTTP claim\"}\n",
+  "stderr": "",
+  "wall_s": 0.17103290557861328,
+  "mutex": "Local\\BonsaiGPU",
+  "mutex_wait_result": 0,
+  "hashes": {
+    "native_readout.cu": "8d2dd3d3cd5607d9a169ecd3180dae8597b0ba6dfd37a67645b183992679c5a8",
+    "native_readout.exe": "cc869ba08af8e919f313d740a88fcad2cd2f1bc9f96701a5f35afa7d86471002",
+    "native-prime-observer.bin": "93a78c169f3d8876f65f90c72e1459f7597f8dbe968d5f10f62d4b452ea42116",
+    "build.log": "0983f03ab433e67739bfe10861066f8838098e93990d97eb9ab743bd30501d4e"
+  }
+}

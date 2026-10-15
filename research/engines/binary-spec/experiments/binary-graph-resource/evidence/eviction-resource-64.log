@@ -1,0 +1,229 @@
+replay_config slots=32 ctx=8192 rowcap=520 events=99 steps=67 prefills=1
+FP4 pair: joint WF8 projection R1..16, ordered two-pass R>16; unchanged quantized planes, changed FP32 association
+native SF1: E4M3 weight scale planes + row factor, one WF8 sign payload; target N>=5120 at aligned R32 only; other rows/small matrices original FP16 reader, original scales retained
+target: binary Q1_0, original FP16 K128 scales
+
+weights 4.01 GB in 0.6 s
+state f16, KV f16: 75.5 MB state + 536.9 MB KV per slot
+ready: 32 slots x 8192 ctx, 520 rows; GPU free 7.58 / 33.67 GB, load 0.6 s
+pretune: 33 shapes x buckets <= 520 rows in 2.1 s
+GraphResource stage=admitted shape=0,32,32,32,1,1,1,0,0 cache=1 observed_bytes=4194304 free_before=3933929472 free_after=3929735168 total=33670758400
+GraphResource stage=admitted shape=0,31,31,31,1,1,1,0,0 cache=2 observed_bytes=8388608 free_before=3929735168 free_after=3925540864 total=33670758400
+GraphResource stage=admitted shape=0,30,30,30,1,1,1,0,0 cache=3 observed_bytes=14680064 free_before=3925540864 free_after=3919249408 total=33670758400
+GraphResource stage=admitted shape=0,29,29,29,1,1,1,0,0 cache=4 observed_bytes=18874368 free_before=3919249408 free_after=3915055104 total=33670758400
+GraphResource stage=admitted shape=0,28,28,28,1,1,1,0,0 cache=5 observed_bytes=23068672 free_before=3915055104 free_after=3910860800 total=33670758400
+GraphResource stage=admitted shape=0,27,27,27,1,1,1,0,0 cache=6 observed_bytes=29360128 free_before=3910860800 free_after=3904569344 total=33670758400
+GraphResource stage=admitted shape=0,26,26,26,1,1,1,0,0 cache=7 observed_bytes=33554432 free_before=3904569344 free_after=3900375040 total=33670758400
+GraphResource stage=admitted shape=0,25,25,25,1,1,1,0,0 cache=8 observed_bytes=37748736 free_before=3900375040 free_after=3896180736 total=33670758400
+GraphResource stage=admitted shape=0,24,24,24,1,1,1,0,0 cache=9 observed_bytes=44040192 free_before=3896180736 free_after=3889889280 total=33670758400
+GraphResource stage=admitted shape=0,23,23,23,1,1,1,0,0 cache=10 observed_bytes=48234496 free_before=3889889280 free_after=3885694976 total=33670758400
+GraphResource stage=admitted shape=0,22,22,22,1,1,1,0,0 cache=11 observed_bytes=52428800 free_before=3885694976 free_after=3881500672 total=33670758400
+GraphResource stage=admitted shape=0,21,21,21,1,1,1,0,0 cache=12 observed_bytes=58720256 free_before=3881500672 free_after=3875209216 total=33670758400
+GraphResource stage=admitted shape=0,20,20,20,1,1,1,0,0 cache=13 observed_bytes=62914560 free_before=3875209216 free_after=3871014912 total=33670758400
+GraphResource stage=admitted shape=0,19,19,19,1,1,1,0,0 cache=14 observed_bytes=67108864 free_before=3871014912 free_after=3866820608 total=33670758400
+GraphResource stage=admitted shape=0,18,18,18,1,1,1,0,0 cache=15 observed_bytes=73400320 free_before=3866820608 free_after=3860529152 total=33670758400
+GraphResource stage=admitted shape=0,17,17,17,1,1,1,0,0 cache=16 observed_bytes=77594624 free_before=3860529152 free_after=3856334848 total=33670758400
+GraphResource stage=admitted shape=0,16,16,16,1,1,1,0,0 cache=17 observed_bytes=81788928 free_before=3856334848 free_after=3852140544 total=33670758400
+GraphResource stage=admitted shape=0,15,15,15,1,1,1,0,0 cache=18 observed_bytes=85983232 free_before=3852140544 free_after=3847946240 total=33670758400
+GraphResource stage=admitted shape=0,14,14,14,1,1,1,0,0 cache=19 observed_bytes=88080384 free_before=3847946240 free_after=3845849088 total=33670758400
+GraphResource stage=admitted shape=0,13,13,13,1,1,1,0,0 cache=20 observed_bytes=90177536 free_before=3845849088 free_after=3843751936 total=33670758400
+GraphResource stage=admitted shape=0,12,12,12,1,1,1,0,0 cache=21 observed_bytes=92274688 free_before=3843751936 free_after=3841654784 total=33670758400
+GraphResource stage=admitted shape=0,11,11,11,1,1,1,0,0 cache=22 observed_bytes=98566144 free_before=3841654784 free_after=3835363328 total=33670758400
+GraphResource stage=admitted shape=0,10,10,10,1,1,1,0,0 cache=23 observed_bytes=100663296 free_before=3835363328 free_after=3833266176 total=33670758400
+GraphResource stage=admitted shape=0,9,9,9,1,1,1,0,0 cache=24 observed_bytes=102760448 free_before=3833266176 free_after=3831169024 total=33670758400
+GraphResource stage=admitted shape=0,8,8,8,1,1,1,0,0 cache=25 observed_bytes=106954752 free_before=3831169024 free_after=3826974720 total=33670758400
+GraphResource stage=admitted shape=0,7,7,7,1,1,1,0,0 cache=26 observed_bytes=111149056 free_before=3826974720 free_after=3822780416 total=33670758400
+GraphResource stage=admitted shape=0,6,6,6,1,1,1,0,0 cache=27 observed_bytes=115343360 free_before=3822780416 free_after=3818586112 total=33670758400
+GraphResource stage=admitted shape=0,5,5,5,1,1,1,0,0 cache=28 observed_bytes=117440512 free_before=3818586112 free_after=3816488960 total=33670758400
+GraphResource stage=admitted shape=0,4,4,4,2,1,1,0,0 cache=29 observed_bytes=119537664 free_before=3816488960 free_after=3814391808 total=33670758400
+GraphResource stage=admitted shape=0,3,3,3,2,1,1,0,0 cache=30 observed_bytes=123731968 free_before=3814391808 free_after=3810197504 total=33670758400
+GraphResource stage=admitted shape=0,2,2,2,2,1,1,0,0 cache=31 observed_bytes=125829120 free_before=3810197504 free_after=3808100352 total=33670758400
+GraphResource stage=admitted shape=0,1,1,1,2,1,1,0,0 cache=32 observed_bytes=130023424 free_before=3808100352 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=4194304 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,32,32,32,1,2,1,2,0 cache=32 observed_bytes=125829120 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=4194304 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,31,31,31,1,2,1,2,0 cache=32 observed_bytes=121634816 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=6291456 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,30,30,30,1,2,1,2,0 cache=32 observed_bytes=115343360 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=4194304 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,29,29,29,1,2,1,2,0 cache=32 observed_bytes=111149056 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=4194304 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,28,28,28,1,2,1,2,0 cache=32 observed_bytes=106954752 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=6291456 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,27,27,27,1,2,1,2,0 cache=32 observed_bytes=100663296 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=4194304 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,26,26,26,1,2,1,2,0 cache=32 observed_bytes=96468992 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=4194304 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,25,25,25,1,2,1,2,0 cache=32 observed_bytes=92274688 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=6291456 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,24,24,24,1,2,1,2,0 cache=32 observed_bytes=85983232 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=4194304 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,23,23,23,1,2,1,2,0 cache=32 observed_bytes=81788928 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=4194304 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,22,22,22,1,2,1,2,0 cache=32 observed_bytes=77594624 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=6291456 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,21,21,21,2,1,1,2,0 cache=32 observed_bytes=71303168 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=4194304 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,20,20,20,2,1,1,2,0 cache=32 observed_bytes=67108864 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=4194304 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,19,19,19,2,1,1,2,0 cache=32 observed_bytes=62914560 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=6291456 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,18,18,18,2,1,1,2,0 cache=32 observed_bytes=56623104 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=4194304 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,17,17,17,2,1,1,2,0 cache=32 observed_bytes=52428800 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=4194304 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,16,16,16,2,1,1,2,0 cache=32 observed_bytes=48234496 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=4194304 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,15,15,15,2,1,1,2,0 cache=32 observed_bytes=44040192 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=2097152 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,14,14,14,2,1,1,2,0 cache=32 observed_bytes=41943040 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=2097152 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,13,13,13,2,1,1,2,0 cache=32 observed_bytes=39845888 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=2097152 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,12,12,12,2,1,1,2,0 cache=32 observed_bytes=37748736 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=6291456 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,11,11,11,2,1,1,2,0 cache=32 observed_bytes=31457280 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=2097152 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,10,10,10,2,1,1,2,0 cache=32 observed_bytes=29360128 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=2097152 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,9,9,9,2,1,1,2,0 cache=32 observed_bytes=27262976 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=4194304 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,8,8,8,2,1,1,2,0 cache=32 observed_bytes=23068672 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=4194304 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,7,7,7,2,1,1,2,0 cache=32 observed_bytes=18874368 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=4194304 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,6,6,6,2,1,1,2,0 cache=32 observed_bytes=14680064 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=2097152 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,5,5,5,2,1,1,2,0 cache=32 observed_bytes=12582912 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=2097152 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,4,4,4,3,1,1,2,0 cache=32 observed_bytes=10485760 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=4194304 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,3,3,3,3,1,1,2,0 cache=32 observed_bytes=6291456 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=2097152 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,2,2,2,3,1,1,2,0 cache=32 observed_bytes=4194304 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=4194304 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=0,32,32,32,1,1,1,0,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=0,31,31,31,1,1,1,0,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=0,30,30,30,1,1,1,0,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=0,29,29,29,1,1,1,0,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=0,28,28,28,1,1,1,0,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=0,27,27,27,1,1,1,0,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=0,26,26,26,1,1,1,0,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=0,25,25,25,1,1,1,0,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=0,24,24,24,1,1,1,0,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=0,23,23,23,1,1,1,0,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=0,22,22,22,1,1,1,0,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=0,21,21,21,1,1,1,0,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=0,20,20,20,1,1,1,0,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=0,19,19,19,1,1,1,0,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=0,18,18,18,1,1,1,0,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=0,17,17,17,1,1,1,0,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=0,16,16,16,1,1,1,0,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=0,15,15,15,1,1,1,0,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=0,14,14,14,1,1,1,0,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=0,13,13,13,1,1,1,0,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=0,12,12,12,1,1,1,0,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=0,11,11,11,1,1,1,0,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=0,10,10,10,1,1,1,0,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=0,9,9,9,1,1,1,0,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=0,8,8,8,1,1,1,0,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=0,7,7,7,1,1,1,0,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=0,6,6,6,1,1,1,0,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=0,5,5,5,1,1,1,0,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=0,4,4,4,2,1,1,0,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=0,3,3,3,2,1,1,0,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=0,2,2,2,2,1,1,0,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=0,1,1,1,2,1,1,0,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,32,32,32,1,2,1,2,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,31,31,31,1,2,1,2,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,30,30,30,1,2,1,2,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,29,29,29,1,2,1,2,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,28,28,28,1,2,1,2,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,27,27,27,1,2,1,2,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,26,26,26,1,2,1,2,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,25,25,25,1,2,1,2,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,24,24,24,1,2,1,2,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,23,23,23,1,2,1,2,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,22,22,22,1,2,1,2,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,21,21,21,2,1,1,2,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,20,20,20,2,1,1,2,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,19,19,19,2,1,1,2,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,18,18,18,2,1,1,2,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,17,17,17,2,1,1,2,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,16,16,16,2,1,1,2,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,15,15,15,2,1,1,2,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,14,14,14,2,1,1,2,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,13,13,13,2,1,1,2,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,12,12,12,2,1,1,2,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,11,11,11,2,1,1,2,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,10,10,10,2,1,1,2,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,9,9,9,2,1,1,2,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,8,8,8,2,1,1,2,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,7,7,7,2,1,1,2,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,6,6,6,2,1,1,2,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,5,5,5,2,1,1,2,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,4,4,4,3,1,1,2,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,3,3,3,3,1,1,2,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400
+GraphResource stage=evicted cache=31 observed_bytes=0 free_before=3803906048 free_after=3803906048 reclaimed_bytes=0
+GraphResource stage=admitted shape=3,2,2,2,3,1,1,2,0 cache=32 observed_bytes=0 free_before=3803906048 free_after=3803906048 total=33670758400

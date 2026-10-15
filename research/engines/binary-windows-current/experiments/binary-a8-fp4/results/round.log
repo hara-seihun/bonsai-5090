@@ -1,0 +1,9 @@
+Welcome to vast.ai. If authentication fails, try again after a few seconds, and double check your ssh key.
+Have fun!
+witness passed q[-128,127], R5/8/16/32, alpha/beta,stride,tails,status,error,zero
+complete gu R8
+complete gu R32
+complete down R8
+complete down R32
+complete head R8
+complete head R32

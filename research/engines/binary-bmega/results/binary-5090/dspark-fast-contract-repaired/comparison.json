@@ -1,0 +1,46 @@
+{
+  "scope": "Official drafter weights, synthetic four raw tap rows, pruned65536; standalone run includes four ingests, reset excluded; not task acceptance",
+  "source": "0ffcaea",
+  "modes": [
+    {
+      "precision": "bf16",
+      "proposals_matched": 4,
+      "base_relative_rms": 0.0027007071491483097,
+      "run_median_ms": 2.403822,
+      "device_after_release": {
+        "free_bytes": 28302835712,
+        "total_bytes": 33670758400
+      }
+    },
+    {
+      "precision": "nvfp4-a1",
+      "proposals_matched": 0,
+      "base_relative_rms": 0.30366614185676366,
+      "run_median_ms": 1.231374,
+      "device_after_release": {
+        "free_bytes": 24678957056,
+        "total_bytes": 33670758400
+      }
+    },
+    {
+      "precision": "nvfp4-a2",
+      "proposals_matched": 3,
+      "base_relative_rms": 0.26246276578440614,
+      "run_median_ms": 2.015746,
+      "device_after_release": {
+        "free_bytes": 24678957056,
+        "total_bytes": 33670758400
+      }
+    },
+    {
+      "precision": "nvfp4-head-a2",
+      "proposals_matched": 4,
+      "base_relative_rms": 0.0430239006875607,
+      "run_median_ms": 2.253051,
+      "device_after_release": {
+        "free_bytes": 24678957056,
+        "total_bytes": 33670758400
+      }
+    }
+  ]
+}

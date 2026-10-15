@@ -1,0 +1,23 @@
+[
+  {
+    "metadata": {
+      "key": 1886,
+      "prompt": "Write a riddle for the word \"façade\" that contains at least 3 italic text phrases in markdown syntax, i.e *italic text*.",
+      "instruction_id_list": [
+        "detectable_format:number_highlighted_sections"
+      ],
+      "kwargs": [
+        {
+          "num_highlights": 3
+        }
+      ]
+    },
+    "prediction": "I am a *painted front* that hides the wear,  \nA *smiling wall* beyond the care,  \nThough inside I may be torn and bare—  \nWhat am I?",
+    "score": {
+      "prompt_level_strict": 0.0,
+      "inst_level_strict": 0.0,
+      "prompt_level_loose": 0.0,
+      "inst_level_loose": 0.0
+    }
+  }
+]

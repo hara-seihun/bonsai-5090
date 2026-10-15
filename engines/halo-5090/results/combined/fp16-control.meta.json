@@ -1,0 +1,13 @@
+{
+  "args": {
+    "tag": "fp16-control",
+    "env": [],
+    "gsm": 1319,
+    "loads": "1,8,32,64",
+    "slots": 64,
+    "ctx": 4096,
+    "tokens": 512,
+    "port": 8000
+  },
+  "environment": {}
+}

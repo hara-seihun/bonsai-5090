@@ -1,0 +1,8 @@
+Welcome to vast.ai. If authentication fails, try again after a few seconds, and double check your ssh key.
+Have fun!
+{"graph_max_rows": 1, "completed_steps": 36, "resource_events": 1}
+{"graph_max_rows": 64, "completed_steps": 36, "resource_events": 32}
+{"output_ids_equal": false, "scope": "synthetic32slots ctx8192 token198,rows32..1,32recurringdecode shapes,SF1twoFP4,noHTTP/noDSpark"}
+Traceback (most recent call last):
+  File "<stdin>", line 9, in <module>
+AssertionError: graph/eager output mismatch

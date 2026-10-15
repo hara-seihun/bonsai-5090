@@ -1,0 +1,15 @@
+{
+  "state": "CPU_source_and_custody_inspected_native_execution_unset",
+  "source_commit": "9387d08aed0127afb523db5517a58ba5f43f308d",
+  "package": "dict8-identity-result",
+  "read": ["README.md", "DELIVERY.json"],
+  "manifest_sha256": "3feed491dcbc3bf0bcbaadde0c33589f0d4ed9079e2d31f99eccb89a6323daa3",
+  "manifest_job": "00000000-0000-0000-0000-000000000000",
+  "observed_job_state": "completed",
+  "exit_code": 0,
+  "verified_files": 584,
+  "errors": [],
+  "scope": "Independent local custody check and package inspection. Actual opt-in Engine/Reader one model scan and full CPU comparison are source-bound worker evidence, not native GPU startup or throughput. The distinct profiler window grants no authority to this cache successor.",
+  "gpu_execution": false,
+  "serving_changed": false
+}

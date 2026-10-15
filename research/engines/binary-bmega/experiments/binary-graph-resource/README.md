@@ -1,0 +1,23 @@
+# Whole-step graph resource ownership
+
+Owning source `dddf12b`, `src/engine.cu`. The prior whole-step cache admitted up to1024 executables, measured no device allocation, and had no capture/graph cleanup on body or instantiate exceptions. Binary SF1/SF2 B32ctx8192 failed at instantiate; digit B64ctx4608 failed in projection during capture. Explicit eager controls at the same geometry completed. This establishes graph-path dependence, not an exclusive driver-allocation attribution.
+
+The cache now has a deliberate resource policy: at most32 executables, at most512MiB summed observed admission deltas, and256MiB free device-memory reserve. It evicts least-recently-used executables after synchronizing the owning stream. Observed deltas include lazy module/driver allocations and are not asserted to be exclusively executable-owned; eviction logs report actual reclaimed free memory independently.
+
+Every candidate owns its capture, graph and executable until transfer into the cache. Exceptions terminate capture on its snapshotted origin stream, destroy candidate handles and restore prefetch bookkeeping. The alpha/beta side-stream swap restores the main stream on every exit. Instantiate OOM retries the same unexecuted graph after eviction, rebasing the memory observation. OOM before first graph execution closes/destroys capture, evicts cache, checks stream completion, memoizes resource rejection for that shape, then executes the original eager body exactly once. Non-OOM failures propagate; graph-launch failures never cause replay. Eager OOM remains a CUDA error rather than a context, precision or checkpoint substitution.
+
+Admission always uploads and synchronizes the new executable before measuring retained memory and launching it. This deliberately supersedes deferred first-launch upload for resource safety; the probe's `upload_wall_ns` now records admission upload with either requested policy. Cached replay still performs one launch. First-use timing must not be compared as if deferred upload remained unchanged.
+
+`GraphResource` logs identify admit/rejection stage, exact nine-field shape, cache count, observed bytes and free-memory boundaries. Evictions additionally report reclaimed bytes. SF sidecar static resource inspection shows no local memory/stack across16 functions; digit sidecar has max88B stack and zero local memory across7 functions. That does not measure total driver residency.
+
+## Bounded keyhole
+
+`build-graph-resource-events.py` generates64 reset slots, four64-row steps then recurring rows64..16, with per-slot sequential positions and fixed teacher token198. `run-graph-resource.sh` links cached profile_replay.o with the immutable new engine and the prior unchanged GPU objects. It compares GRAPH_MAX_ROWS1 eager versus normal64 at64slots/context4608 using identical hybrid/digit-ragged/F16state/F16KV/PDL1 numerical settings. Measured output IDs are compared exactly; device-memory/cache evidence comes from the same logs. No HTTP/task score or throughput conclusion is implied.
+
+`binary-graph-resource-keyhole` failed in its initial eager B64ctx4608 digit projection, before any graph capture. Cache eviction cannot cure that independent launch/residency pressure; the raw failure is retained. The same geometry is not silently reduced at runtime.
+
+A separate `binary-graph-resource-sf32-keyhole` exercised the SF1 configuration already known to complete eagerly: B32ctx8192, fixed token198, recurring R32..1. Both eager and graph arms completed36steps without CUDA errors. The graph arm retained32executables, summed observed delta127,926,272B, with3,806,003,200B free. Exact output comparison failed on21slot IDs across6steps; the raw assertion failure remains. This is execution/resource evidence, not numerical equivalence. The campaign parent owns the PPL/task oracle.
+
+`binary-graph-resource-eviction-keyhole` passed with63keys (all-head and selected-one-head R families):67measured steps,126admissions and94executable evictions, peak cache32, no CUDA error. All94evictions reported zero increase in `cudaMemGetInfo`; subsequent admissions reused retained driver allocation with zero observed additional bytes, and free memory stabilized at3,803,906,048B. This demonstrates bounded/reusable executable ownership, not returned VRAM. `build-graph-resource-eviction.py` and `run-graph-resource-eviction.sh` own that replay; numerical quality is explicitly outside this test.
+
+Raw remote owner `/workspace/binary/graph-resource-keyhole`; source/object manifests, logs and available terminal receipts are retained in `evidence/`. Parent owns full-model panels and publication.

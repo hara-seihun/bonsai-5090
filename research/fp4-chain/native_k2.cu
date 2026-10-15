@@ -1,0 +1,22 @@
+#include <cuda_runtime.h>
+#include <cstdio>
+#include <cstdlib>
+#include <cstdint>
+#include <cstring>
+#include <cmath>
+#include <vector>
+#include <algorithm>
+#define CK(x) do{auto status=(x);if(status!=cudaSuccess){fprintf(stderr,"cuda_error:%s\n",cudaGetErrorString(status));exit(1);}}while(0)
+constexpr int N=27*27*27*27;
+__constant__ float labels[27];
+struct Case{uint32_t bits;int target;int input;};
+__device__ float4 contract(float a0,float b0,float a1,float b1){bool first=(threadIdx.x%4)<2;float a=first?a0:a1,b=first?b0:b1;uint32_t x,y;asm("cvt.rna.tf32.f32 %0,%1;":"=r"(x):"f"(a));asm("cvt.rna.tf32.f32 %0,%1;":"=r"(y):"f"(b));float4 d={};asm volatile("mma.sync.aligned.m16n8k8.row.col.f32.tf32.tf32.f32 {%0,%1,%2,%3}, {%4,%4,%4,%4}, {%5,%5}, {%0,%1,%2,%3};":"+f"(d.x),"+f"(d.y),"+f"(d.z),"+f"(d.w):"r"(x),"r"(y));d.x*=0.25f;d.y*=0.25f;d.z*=0.25f;d.w*=0.25f;return d;}
+__global__ void layout(unsigned long long*bad){float4 d=contract(2,3,5,7);if(d.x!=41||d.y!=41||d.z!=41||d.w!=41)atomicAdd(bad,1ULL);}
+__global__ void probe(Case*out,unsigned long long*bad){int n=(blockIdx.x*blockDim.x+threadIdx.x)/32;if(n>=N)return;int q=n,ix[4];for(int k=3;k>=0;k--){ix[k]=q%27;q/=27;}float4 d=contract(labels[ix[0]],labels[ix[1]],labels[ix[2]],labels[ix[3]]);uint32_t bits=__float_as_uint(d.x);if(__float_as_uint(d.y)!=bits||__float_as_uint(d.z)!=bits||__float_as_uint(d.w)!=bits)atomicAdd(bad,1ULL);int target=0;for(int j=0;j<3;j++){int sum=(ix[0]%3-1)*(ix[1]%3-1)+(ix[2]%3-1)*(ix[3]%3-1);target+=(sum+2)*(j==0?1:j==1?5:25);for(int k=0;k<4;k++)ix[k]/=3;}if(threadIdx.x%32==0)out[n]={bits,target,n};}
+void input_json(int n){int x[4];for(int k=3;k>=0;k--){x[k]=n%27;n/=27;}printf("[%d,%d,%d,%d]",x[0],x[1],x[2],x[3]);}
+int main(){float vals[27];const int primes[]={2,5,7};for(int i=0;i<27;i++){int q=i;double v=1;for(int j=2;j>=0;j--){int d=q%3;q/=3;v*=pow(double(primes[j]),d==2?0:d==0?1:5);}vals[i]=float(ldexp(v,-15));}CK(cudaMemcpyToSymbol(labels,vals,sizeof(vals)));unsigned long long*bad;CK(cudaMalloc(&bad,8));CK(cudaMemset(bad,0,8));layout<<<1,32>>>(bad);CK(cudaGetLastError());CK(cudaDeviceSynchronize());unsigned long long errors;CK(cudaMemcpy(&errors,bad,8,cudaMemcpyDeviceToHost));if(errors){printf("{\"status\":\"layout_error\",\"lanes\":%llu}\n",errors);return 3;}
+Case*out;CK(cudaMalloc(&out,size_t(N)*sizeof(Case)));cudaEvent_t s,e;CK(cudaEventCreate(&s));CK(cudaEventCreate(&e));CK(cudaEventRecord(s));probe<<<(N+7)/8,256>>>(out,bad);CK(cudaGetLastError());CK(cudaEventRecord(e));CK(cudaEventSynchronize(e));float ms;CK(cudaEventElapsedTime(&ms,s,e));CK(cudaMemcpy(&errors,bad,8,cudaMemcpyDeviceToHost));std::vector<Case> data(N);CK(cudaMemcpy(data.data(),out,size_t(N)*sizeof(Case),cudaMemcpyDeviceToHost));if(errors){printf("{\"status\":\"accumulator_error\",\"lanes\":%llu}\n",errors);return 3;}
+std::sort(data.begin(),data.end(),[](const Case&a,const Case&b){return a.bits<b.bits||(a.bits==b.bits&&a.target<b.target);});int conflicts=0,states=0;Case a={},b={};for(int i=0;i<N;i++){if(!i||data[i].bits!=data[i-1].bits)states++;else if(data[i].target!=data[i-1].target){if(!conflicts){a=data[i-1];b=data[i];}conflicts++;}}
+printf("{\"status\":\"%s\",\"cases\":%d,\"fragment_agreement_checks\":%llu,\"layout_control\":41,\"final_states\":%d,\"target_collision_boundaries\":%d,\"probe_ms\":%.6f",conflicts?"target_collision":"fibre_consistent",N,4ULL*32*N,states,conflicts,ms);
+if(conflicts){printf(",\"collision\":{\"bits\":%u,\"targets\":[%d,%d],\"inputs\":[",a.bits,a.target,b.target);input_json(a.input);printf(",");input_json(b.input);printf("]}");}else{FILE*f=fopen("k2-observer.bin","wb");if(!f){fprintf(stderr,"observer_write_error\n");return 4;}for(int i=0;i<N;i++)if(!i||data[i].bits!=data[i-1].bits){if(fwrite(&data[i].bits,4,1,f)!=1||fwrite(&data[i].target,4,1,f)!=1){fprintf(stderr,"observer_write_error\n");return 4;}}fclose(f);}
+cudaFuncAttributes attr;CK(cudaFuncGetAttributes(&attr,probe));printf(",\"registers\":%d,\"local_bytes\":%zu,\"shared_bytes\":%zu,\"scope\":\"native nonuniform K8: four copies of each of two independent pair products; one MMA, RNA conversion, 1/4 normalization; final target is three independent two-term ternary dot sums; finite 2,5,7 q5 family only, no global bound/model/HTTP claim\"}\n",attr.numRegs,attr.localSizeBytes,attr.sharedSizeBytes);CK(cudaFree(out));CK(cudaFree(bad));CK(cudaEventDestroy(s));CK(cudaEventDestroy(e));return conflicts?2:0;}

@@ -1,0 +1,10 @@
+{
+  "old_engine_sha256": "892aafb8da7ba1df6ccf964954dc6d769be7ddf1d78de3ce0ec835ce7a278824",
+  "successor_engine_sha256": "b8df101abcad7eea679574e303b41db77e11580d8b5f0657b4a80a675677c66a",
+  "runtime_delta": "move identical dictionary creation/upload to immediately after successful nonblocking-stream creation",
+  "dictionary_kernel_unchanged": true,
+  "checks_kernel_unchanged": true,
+  "codec_unchanged": true,
+  "all_69_shared_headers_unchanged": true,
+  "GPU_execution": false
+}

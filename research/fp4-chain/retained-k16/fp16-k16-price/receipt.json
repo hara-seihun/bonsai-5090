@@ -1,0 +1,13 @@
+{
+  "exit": 0,
+  "stdout": "{\"status\":\"pass\",\"cases\":16384,\"prefix_word_checks_per_native_arm\":49152,\"q8_bytes_checked_per_arm\":16384,\"q8_scale_words_checked_per_arm\":128,\"weight_bytes\":4096,\"activation_bytes\":1024,\"activation_scale_bytes\":128,\"label_tables_bytes\":128,\"prefix_output_bytes\":65536,\"q8_output_bytes\":16384,\"q8_scale_output_bytes\":512,\"preparation_ms\":{\"input_labels_context_allocation_transfer\":82.553900,\"validation_and_witness_export\":3.462400,\"graphs_warmup\":9.084700},\"complete_two_kernel_timings_ms\":{\"opaque_FP16_K16_groups\":{\"median\":0.004007,\"min\":0.003997,\"max\":0.004265},\"native_MXFP4_GU\":{\"median\":0.003627,\"min\":0.003610,\"max\":0.003825},\"scalar_grouped_GU\":{\"median\":0.005921,\"min\":0.005873,\"max\":0.006142},\"cached_same_input_prefix_replay\":{\"median\":0.002889,\"min\":0.002864,\"max\":0.002894}},\"prefix_registers\":[42,35,38],\"prefix_local_bytes\":[0,0,0],\"q8_kernel\":{\"registers\":19,\"shared_bytes\":20},\"scope\":\"raw nibble producers, scaled native prefix and full max-normalized128-feature Q8/scale emission timed; cached prefix control is same-input replay only, recomputation required after input changes; one generated K32 matrix, no learned/full-K/engine acceptance\"}\n{\"status\":\"pass\",\"M\":256,\"N\":64,\"K\":32,\"groups\":2,\"group_slots\":16,\"word_checks_per_native_arm\":49152,\"domain_errors\":0,\"gate_errors\":0,\"up_errors\":0,\"silu_errors\":0,\"q8_errors\":[0,0],\"q8_scale_errors\":[0,0],\"weight_bytes\":4096,\"activation_bytes\":1024,\"activation_scale_bytes\":128,\"label_tables_bytes\":128,\"scope\":\"actual raw paired two-bit weight nibbles and raw E2M1 activation nibbles; two independent E4M3 16-slot scale groups; two FP16 K16 group instructions vs two native MXFP4 K64 GU instructions; complete 128-feature maximum-normalized Q8 observer; one generated matrix, no learned-model acceptance\"}\n",
+  "stderr": "",
+  "wall_s": 2.5623927116394043,
+  "mutex": "Local\\BonsaiGPU",
+  "mutex_wait_result": 0,
+  "hashes": {
+    "native_fp16_k16_price.cu": "cb343c5098f0e489541ea402cb6aae1ced6dc71ef340e044e128a44d42d86770",
+    "native_fp16_k16_price.exe": "7edc2b2c5e0ce6a7713ef1dc5c2f9aa65fadeefc0594894cd10ceed2bdd87ff2",
+    "build.log": "84cc32502373fecacc2c39cd9b0ca38267d251bdeaba0a29d30fd3a8ffaea872"
+  }
+}

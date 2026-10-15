@@ -1,0 +1,16 @@
+{
+  "source_sha256": "98fb69ea3d14340333373ad051b9b4c0d3f96de62477640916ff1baa0f4cf714",
+  "exit": 0,
+  "stdout": "{\"pairs\":59049,\"native_pair_errors\":0,\"chain_cases\":262144,\"chain_errors\":0,\"native_us\":7.988266,\"direct_us\":8.311467,\"encoding_bytes\":486,\"observer_bytes\":15015,\"mma_per_fourfactor_warp\":3,\"logical_outputs_per_warp\":160}\n{\"packed_errors\":0,\"packed_us\":7.893333}\n",
+  "stderr": "",
+  "wall_s": 0.15006542205810547,
+  "hashes": {
+    "build.cmd": "06a8ec7650ef2c8f659bc156677d50c0b72eafa712d7e051450376b3df80af78",
+    "build.log": "e430acdb4891f4c32314d972c728d6864beb311f8f31a899092fe95e9e30ff76",
+    "crt5-encoding.bin": "ec594df1c8f9f60d22bef465b170f9d55fe71484f25e90b32e3e84441c1a20e7",
+    "crt5-native-pairs.bin": "6e38760b43468f7af7fe6ae647b650ba43ef17fbe539645687dd939538f6dc52",
+    "crt5-observer.bin": "0f3e3ee8f4e53db1d9a868dafb566331fa3546ec0ad1c08acf8673760ba8d264",
+    "crt5.cu": "8a961a71938f86c35f6b73219da2e172f023580ea8501763a79f6060a2ec7b1b",
+    "crt5.exe": "0ca9db7d93d2a303b889ad6f6d2811e81ddf049017604f81ff52fcb2f6579e33"
+  }
+}

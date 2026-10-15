@@ -1,0 +1,13 @@
+{
+  "prompt_rows": 44,
+  "image_tokens": 16,
+  "next_rope_pos": 32,
+  "encode_s": 0.319627547,
+  "first_visual_rope": [
+    4,
+    4,
+    4,
+    0
+  ],
+  "reference_first_token": 1114
+}

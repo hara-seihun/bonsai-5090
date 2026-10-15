@@ -1,0 +1,129 @@
+# First40 are the maintained mixed-task suite;88 are distinct generated arithmetic/code/queue tasks.
+Explain why LPDDR5X bandwidth, not FLOPs, limits single-stream inference on an integrated GPU.
+Write a bash one-liner that prints the ten largest files under a directory, newest first on ties.
+What changes in a Kalman filter when the process noise is underestimated?
+Summarise the tradeoff between rotary and ALiBi positional encodings in two sentences.
+Draft a polite reply declining a meeting invitation because the agenda is unclear.
+Give three reasons a build that passes locally can fail in CI.
+How does a ternary weight format save memory compared to int4, and what does it cost?
+Describe what a GDN recurrent state holds and why its size is independent of context length.
+Write a Python function that merges overlapping intervals and returns them sorted.
+What is the practical difference between a mutex and a semaphore in a device driver?
+Explain the birthday paradox to someone who has never studied probability.
+Name four failure modes of a hash join and how a query planner avoids each.
+Write a git commit message for a change that fixes an off-by-one in a ring buffer.
+Why do wide batches improve GPU utilisation for matrix-vector heavy workloads?
+Explain in plain language what a KV cache is and when it stops helping.
+List the steps to debug a kernel that produces NaN only on the second launch.
+What is the difference between structured and unstructured sparsity for inference speed?
+Describe how speculative decoding changes the arithmetic intensity of a decode step.
+Write a SQL query that finds customers with no orders in the last ninety days.
+How would you test a random number generator for a subtle correlation between draws?
+Explain why fp16 accumulation can lose accuracy in long reductions, and the usual fix.
+Write a short changelog entry for adding streaming responses to an HTTP API.
+What does it mean for an operation to be memory bound, and how do you prove it on real hardware?
+Explain the role of a rotation matrix in quantisation-aware weight packing.
+Give a short checklist for reviewing a pull request that touches concurrency.
+How do you decide between a ring buffer and a linked queue for audio playback?
+Write a regex that matches ISO 8601 dates but rejects month thirteen.
+Explain what happens to a TCP connection when the network path MTU drops mid-transfer.
+Describe two ways to detect that a benchmark was measuring a warm cache by accident.
+Why is a softmax numerically unstable without subtracting the maximum?
+Write a function that computes the KL divergence between two discrete distributions.
+Explain what makes a compiler autovectorisation attempt fail on a simple loop.
+Summarise the argument for keeping state machines explicit rather than implicit in async code.
+What information does a flame graph give that a wall-clock timer does not?
+Describe how you would shard a 27 billion parameter model across two devices.
+Explain why sampling temperature above one increases the tail probability mass.
+Write a short note explaining a schema migration that renames a column with zero downtime.
+How does an RMS norm differ from layer norm, and why do recent models prefer it?
+Give a minimal reproduction strategy for a race that appears once in a thousand runs.
+What are the tradeoffs between polling and interrupts for a low-latency sensor?
+Calculate 11 times 28, then explain a way to check the result mentally.
+Write a Python function that returns the first 11 Fibonacci numbers and explain its complexity.
+A box holds 11 red balls and 20 blue balls. Explain the probability of drawing two red balls without replacement.
+Design a bounded queue with capacity 11 for a single producer and consumer. Describe how it handles a full queue.
+Calculate 12 times 29, then explain a way to check the result mentally.
+Write a Python function that returns the first 12 Fibonacci numbers and explain its complexity.
+A box holds 12 red balls and 21 blue balls. Explain the probability of drawing two red balls without replacement.
+Design a bounded queue with capacity 12 for a single producer and consumer. Describe how it handles a full queue.
+Calculate 13 times 30, then explain a way to check the result mentally.
+Write a Python function that returns the first 13 Fibonacci numbers and explain its complexity.
+A box holds 13 red balls and 22 blue balls. Explain the probability of drawing two red balls without replacement.
+Design a bounded queue with capacity 13 for a single producer and consumer. Describe how it handles a full queue.
+Calculate 14 times 31, then explain a way to check the result mentally.
+Write a Python function that returns the first 14 Fibonacci numbers and explain its complexity.
+A box holds 14 red balls and 23 blue balls. Explain the probability of drawing two red balls without replacement.
+Design a bounded queue with capacity 14 for a single producer and consumer. Describe how it handles a full queue.
+Calculate 15 times 32, then explain a way to check the result mentally.
+Write a Python function that returns the first 15 Fibonacci numbers and explain its complexity.
+A box holds 15 red balls and 24 blue balls. Explain the probability of drawing two red balls without replacement.
+Design a bounded queue with capacity 15 for a single producer and consumer. Describe how it handles a full queue.
+Calculate 16 times 33, then explain a way to check the result mentally.
+Write a Python function that returns the first 16 Fibonacci numbers and explain its complexity.
+A box holds 16 red balls and 25 blue balls. Explain the probability of drawing two red balls without replacement.
+Design a bounded queue with capacity 16 for a single producer and consumer. Describe how it handles a full queue.
+Calculate 17 times 34, then explain a way to check the result mentally.
+Write a Python function that returns the first 17 Fibonacci numbers and explain its complexity.
+A box holds 17 red balls and 26 blue balls. Explain the probability of drawing two red balls without replacement.
+Design a bounded queue with capacity 17 for a single producer and consumer. Describe how it handles a full queue.
+Calculate 18 times 35, then explain a way to check the result mentally.
+Write a Python function that returns the first 18 Fibonacci numbers and explain its complexity.
+A box holds 18 red balls and 27 blue balls. Explain the probability of drawing two red balls without replacement.
+Design a bounded queue with capacity 18 for a single producer and consumer. Describe how it handles a full queue.
+Calculate 19 times 36, then explain a way to check the result mentally.
+Write a Python function that returns the first 19 Fibonacci numbers and explain its complexity.
+A box holds 19 red balls and 28 blue balls. Explain the probability of drawing two red balls without replacement.
+Design a bounded queue with capacity 19 for a single producer and consumer. Describe how it handles a full queue.
+Calculate 20 times 37, then explain a way to check the result mentally.
+Write a Python function that returns the first 20 Fibonacci numbers and explain its complexity.
+A box holds 20 red balls and 29 blue balls. Explain the probability of drawing two red balls without replacement.
+Design a bounded queue with capacity 20 for a single producer and consumer. Describe how it handles a full queue.
+Calculate 21 times 38, then explain a way to check the result mentally.
+Write a Python function that returns the first 21 Fibonacci numbers and explain its complexity.
+A box holds 21 red balls and 30 blue balls. Explain the probability of drawing two red balls without replacement.
+Design a bounded queue with capacity 21 for a single producer and consumer. Describe how it handles a full queue.
+Calculate 22 times 39, then explain a way to check the result mentally.
+Write a Python function that returns the first 22 Fibonacci numbers and explain its complexity.
+A box holds 22 red balls and 31 blue balls. Explain the probability of drawing two red balls without replacement.
+Design a bounded queue with capacity 22 for a single producer and consumer. Describe how it handles a full queue.
+Calculate 23 times 40, then explain a way to check the result mentally.
+Write a Python function that returns the first 23 Fibonacci numbers and explain its complexity.
+A box holds 23 red balls and 32 blue balls. Explain the probability of drawing two red balls without replacement.
+Design a bounded queue with capacity 23 for a single producer and consumer. Describe how it handles a full queue.
+Calculate 24 times 41, then explain a way to check the result mentally.
+Write a Python function that returns the first 24 Fibonacci numbers and explain its complexity.
+A box holds 24 red balls and 33 blue balls. Explain the probability of drawing two red balls without replacement.
+Design a bounded queue with capacity 24 for a single producer and consumer. Describe how it handles a full queue.
+Calculate 25 times 42, then explain a way to check the result mentally.
+Write a Python function that returns the first 25 Fibonacci numbers and explain its complexity.
+A box holds 25 red balls and 34 blue balls. Explain the probability of drawing two red balls without replacement.
+Design a bounded queue with capacity 25 for a single producer and consumer. Describe how it handles a full queue.
+Calculate 26 times 43, then explain a way to check the result mentally.
+Write a Python function that returns the first 26 Fibonacci numbers and explain its complexity.
+A box holds 26 red balls and 35 blue balls. Explain the probability of drawing two red balls without replacement.
+Design a bounded queue with capacity 26 for a single producer and consumer. Describe how it handles a full queue.
+Calculate 27 times 44, then explain a way to check the result mentally.
+Write a Python function that returns the first 27 Fibonacci numbers and explain its complexity.
+A box holds 27 red balls and 36 blue balls. Explain the probability of drawing two red balls without replacement.
+Design a bounded queue with capacity 27 for a single producer and consumer. Describe how it handles a full queue.
+Calculate 28 times 45, then explain a way to check the result mentally.
+Write a Python function that returns the first 28 Fibonacci numbers and explain its complexity.
+A box holds 28 red balls and 37 blue balls. Explain the probability of drawing two red balls without replacement.
+Design a bounded queue with capacity 28 for a single producer and consumer. Describe how it handles a full queue.
+Calculate 29 times 46, then explain a way to check the result mentally.
+Write a Python function that returns the first 29 Fibonacci numbers and explain its complexity.
+A box holds 29 red balls and 38 blue balls. Explain the probability of drawing two red balls without replacement.
+Design a bounded queue with capacity 29 for a single producer and consumer. Describe how it handles a full queue.
+Calculate 30 times 47, then explain a way to check the result mentally.
+Write a Python function that returns the first 30 Fibonacci numbers and explain its complexity.
+A box holds 30 red balls and 39 blue balls. Explain the probability of drawing two red balls without replacement.
+Design a bounded queue with capacity 30 for a single producer and consumer. Describe how it handles a full queue.
+Calculate 31 times 48, then explain a way to check the result mentally.
+Write a Python function that returns the first 31 Fibonacci numbers and explain its complexity.
+A box holds 31 red balls and 40 blue balls. Explain the probability of drawing two red balls without replacement.
+Design a bounded queue with capacity 31 for a single producer and consumer. Describe how it handles a full queue.
+Calculate 32 times 49, then explain a way to check the result mentally.
+Write a Python function that returns the first 32 Fibonacci numbers and explain its complexity.
+A box holds 32 red balls and 41 blue balls. Explain the probability of drawing two red balls without replacement.
+Design a bounded queue with capacity 32 for a single producer and consumer. Describe how it handles a full queue.

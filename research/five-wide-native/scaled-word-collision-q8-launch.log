@@ -1,0 +1,17 @@
+BUILD 0 ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z7observePK4LanePfPaS2_' for 'sm_120a'
+ptxas info    : Function properties for _Z7observePK4LanePfPaS2_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 21 registers, used 1 barriers, 16 bytes smem
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z5probeP4Lanei' for 'sm_120a'
+ptxas info    : Function properties for _Z5probeP4Lanei
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 17 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+scaled_word_collision_q8.cu
+tmpxft_0000aaa4_00000000-10_scaled_word_collision_q8.cudafe1.cpp
+ 
+MUTEX 0
+RELEASED
+RECEIPT {"source_sha256": "642272135ac4feb7b599bacefb1d3e87b6f9c3916d551bf7c9a1005fd3565f91", "exit": 0, "stdout": "{\"state\":\"native_target_collision\",\"carrier_bits\":[1269301248,1269301248],\"carrier_values\":[22020096,22020096],\"gate\":[0,0.0009765625],\"up\":[43008,43008],\"y\":[0,21.0102539],\"block_q8_scale\":[0,0.165435076],\"block_q8_first_byte\":[0,127],\"activation_scale_codes\":[126,1],\"weight_scale\":1,\"padding\":\"rest of K5120 and127 features zero\"}\n", "stderr": "", "wall_s": 0.13933920860290527, "hashes": {"build.cmd": "d45f82076403ecb3e6bf05aa096f2cbfc91f84006226e6d52abd965b2fec7133", "build.log": "c24e4dacc76fbf1e74e369374b990ef8b15beff96e852de18f2e56e3b79971a6", "scaled-word-all-lanes.bin": "568d767b7cc5f7c4ea7ed667f9d73dcabc973f12167860dd21e3816f78bc5f89", "scaled-word-blockq8.bin": "61a1fc57d6d87f1a097e702f46a0fa92f99e8f652582e9c9d7f4b272100cdf6b", "scaled_word_collision_q8.cu": "39b78a7aa4e03309c35da6c36fbffd43b16c2e0ca0aa8f511010bf312d9996f3", "scaled_word_collision_q8.exe": "ede32921e2bb2d57fc0a0a9235cd07a658f691085b13a72f7a6eaa8b6c741e0b"}}

@@ -1,0 +1,95 @@
+{
+  "state": "built",
+  "exit": 0,
+  "wall_s": 15.998289346694946,
+  "source": {
+    "engine.cu": "c9f6f67ccfb80009e0e25e44415c69e14768fb8a6c12f7ab3bb787ce42675957",
+    "fullk_gu.cuh": "4e8f12d7ef9b921c858a66caa6b9c4bad1c2819ed0b04ce01239548200c7993c",
+    "fp4.cu": "b4958b52f738478a2251bba0b678673762b498f5ca0d1b6cc307e8ddfd2ad6e4",
+    "fullk_ring.cu": "dee95534e9f5e43ed764ce5065499f87c4d7319c736272db3226e1aed2eaa8b0",
+    "fullk_tail.cu": "4e32fd3362a4199b99456f74e3da977d5dc2bdc8a1f3a3c81a108e63da69ef59"
+  },
+  "inherited": {
+    "api.cpp.obj": {
+      "source": "C:\\work\\models\\experiments\\bonsai-quality-20261013\\custom\\build\\CMakeFiles\\quality_custom.dir\\api.cpp.obj",
+      "sha256": "8212a801c237a2918cd5ae1fbb0b0092c1547d0b99df82409fe2d17596a2b02f",
+      "bytes": 139556
+    },
+    "draft.cu.obj": {
+      "source": "C:\\work\\models\\experiments\\bonsai-quality-20261013\\custom\\build\\CMakeFiles\\quality_custom.dir\\src\\draft.cu.obj",
+      "sha256": "9075a67aa546307bb27b2d61779f978b7c6d778b891e912f0b0616651a778f69",
+      "bytes": 1518535
+    },
+    "f02-continuation.cu.obj": {
+      "source": "C:\\work\\models\\experiments\\bonsai-quality-20261013\\custom\\build\\CMakeFiles\\quality_custom.dir\\src\\f02-continuation.cu.obj",
+      "sha256": "1697e0a17d063b2f4561a488edfb5ab72a1e19b1acc52a789622a3a3758e0291",
+      "bytes": 131294
+    },
+    "f02-producer.cu.obj": {
+      "source": "C:\\work\\models\\experiments\\bonsai-quality-20261013\\custom\\build\\CMakeFiles\\quality_custom.dir\\src\\f02-producer.cu.obj",
+      "sha256": "ea6663a8d2c2a1ba26cc65ab523e39a3a54e575e0059a809195f2fcf57bb2497",
+      "bytes": 4857130
+    },
+    "fp4.cu.obj": {
+      "source": "C:\\work\\models\\experiments\\bonsai-quality-20261013\\custom\\build\\CMakeFiles\\quality_custom.dir\\src\\fp4.cu.obj",
+      "sha256": "d311baae6799d28543fa0726df66a3ada251cefd7967071626f2b427573b922a",
+      "bytes": 40983595
+    },
+    "gdn_q6.cu.obj": {
+      "source": "C:\\work\\models\\experiments\\bonsai-quality-20261013\\custom\\build\\CMakeFiles\\quality_custom.dir\\src\\gdn_q6.cu.obj",
+      "sha256": "937768ce6ddd35510e9ae5667424cd6cab2f7e77dd21085a2cec96abff5b6cb6",
+      "bytes": 3685928
+    },
+    "gguf.cpp.obj": {
+      "source": "C:\\work\\models\\experiments\\bonsai-quality-20261013\\custom\\build\\CMakeFiles\\quality_custom.dir\\src\\gguf.cpp.obj",
+      "sha256": "73e206135aac22751a3319856d13d873e0e94bdebe5cb30c96b3bba7a154a333",
+      "bytes": 446215
+    },
+    "graph_memory.cu.obj": {
+      "source": "C:\\work\\models\\experiments\\bonsai-quality-20261013\\custom\\build\\CMakeFiles\\quality_custom.dir\\src\\graph_memory.cu.obj",
+      "sha256": "00273ed0a6417cf13dd8d7e66c2efb714e18cdc94e992807e269576577ef3c1c",
+      "bytes": 201839
+    },
+    "kernels.cu.obj": {
+      "source": "C:\\work\\models\\experiments\\bonsai-quality-20261013\\custom\\build\\CMakeFiles\\quality_custom.dir\\src\\kernels.cu.obj",
+      "sha256": "a78fe376d46a07ba73658773166b5813c3d0876d53a0a3acce17819f5f114680",
+      "bytes": 12323774
+    },
+    "sampling_gpu.cu.obj": {
+      "source": "C:\\work\\models\\experiments\\bonsai-quality-20261013\\custom\\build\\CMakeFiles\\quality_custom.dir\\src\\sampling_gpu.cu.obj",
+      "sha256": "141c43667e7776d33ba09a43909c0e01049c79a1fc11a5e1309064135f8a236c",
+      "bytes": 1153487
+    },
+    "sk.cu.obj": {
+      "source": "C:\\work\\models\\experiments\\bonsai-quality-20261013\\custom\\build\\CMakeFiles\\quality_custom.dir\\src\\sk.cu.obj",
+      "sha256": "dc5dc2b1f9e19578fac15811a91b3a425a2d6fc2723c361167dbc736770652a5",
+      "bytes": 4041623
+    },
+    "dispatch.cu.obj": {
+      "source": "C:\\work\\models\\experiments\\bonsai-quality-20261013\\custom-wide256\\build\\CMakeFiles\\quality_custom.dir\\dispatch.cu.obj",
+      "sha256": "e79a5c779a73e627514b5fde87454c6278126c6294264053fa293249a7684744",
+      "bytes": 1665946
+    },
+    "engine.cu.obj": {
+      "source": "C:\\work\\models\\experiments\\bonsai-quality-20261013\\fullk-fp4-tail-v2\\inherited\\engine.cu.obj",
+      "sha256": "f511fbc54e088f75a2b94dfa9ceb359034f2db3af02d6c0be093b4d80a9900ca",
+      "bytes": 3916238,
+      "compiled_source_sha256": "c9f6f67ccfb80009e0e25e44415c69e14768fb8a6c12f7ab3bb787ce42675957"
+    },
+    "fullk_gu.cu.obj": {
+      "source": "C:\\work\\models\\experiments\\bonsai-quality-20261013\\fullk-fp4-tail-v2\\inherited\\fullk_gu.cu.obj",
+      "sha256": "296492818873b7baacec40ffb6e9f63ccb8202f7af6855e9285c697a35480c76",
+      "bytes": 139401,
+      "compiled_source_sha256": "6d3698ed6a2db4396ef665054c0ebaa960485115890e5a02eaaeecb15152ae7f"
+    },
+    "fullk_tail.cu.obj": {
+      "source": "C:\\work\\models\\experiments\\bonsai-quality-20261013\\fullk-fp4-tail-v2\\build\\CMakeFiles\\quality_custom.dir\\src\\fullk_tail.cu.obj",
+      "sha256": "81dfd0b42772da499b1518e1f5bc53154bd8043ef389c99adedbb715d4843ed6",
+      "bytes": 227039,
+      "compiled_source_sha256": "4e32fd3362a4199b99456f74e3da977d5dc2bdc8a1f3a3c81a108e63da69ef59"
+    }
+  },
+  "baseline_dll": "a836fd6818df9bc92a8df71d2f9e92fc97b9a64195fab4142d9101fb20785e7c",
+  "frozen_plan": "713c060b627ef9955d68edfef17e12d75f07093c68b74c3fd8ecf4d19b3507bd",
+  "binary_sha256": "3572a8e6aecd89bf96b26b755440ac1e6b5ded7a49b602fe710ff8279f2e3512"
+}

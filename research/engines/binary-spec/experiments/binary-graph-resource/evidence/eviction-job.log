@@ -1,0 +1,3 @@
+Welcome to vast.ai. If authentication fails, try again after a few seconds, and double check your ssh key.
+Have fun!
+{"completed_steps": 67, "admitted": 126, "evicted": 94, "peak_cache_entries": 32, "scope": "synthetic SF1 B32ctx8192 63distinctshapekeys,cacheownershiponly; numericalqualitygateparent"}

@@ -1,0 +1,14 @@
+C:/work\models\experiments\bonsai-quality-20261013\fp4-fibre-search\mixed-q8-composition\native_mixed_q8.cu(16): warning #550-D: variable "composed" was set but never used
+  __declspec(__global__) void probe(Item*image,unsigned long long*bad){int lane=threadIdx.x%32,id=(blockIdx.x*blockDim.x+threadIdx.x)/32;if(id>=N)return;int base=id/3,down=id%3-1,act=base%225,gw=(base/225)%9,uw=base/(225*9);float g[4]={},u[4]={};mma(wg[gw],ag[act],g);mma(wu[uw],au[act],u);uint32_t gb=__float_as_uint(g[0]),ub=__float_as_uint(u[0]);uint32_t exps=((gb>>23)<<8)|(ub>>23);float gm=__uint_as_float((gb&0x7fffffU)|0x3f800000U),um=__uint_as_float((ub&0x7fffffU)|0x3f800000U);float composed;asm("mul.rn.f32 %0,%1,%2;":"=f"(composed):"f"(gm),"f"(um));float td[4]={};mma(gm,um,td);float final[4]={};mma(td[0]*0.125f,float(down),final);uint64_t key=(uint64_t(__float_as_uint(final[0]*0.125f))<<16)|exps;for(int s=0;s<4;s++)if(__float_as_uint(g[s])!=gb||__float_as_uint(u[s])!=ub||__float_as_uint(td[s])!=__float_as_uint(td[0])||__float_as_uint(final[s])!=__float_as_uint(final[0]))atomicAdd(bad,1ULL);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z5probeP4ItemPy' for 'sm_120a'
+ptxas info    : Function properties for _Z5probeP4ItemPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 29 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+native_mixed_q8.cu
+tmpxft_0000a178_00000000-10_native_mixed_q8.cudafe1.cpp

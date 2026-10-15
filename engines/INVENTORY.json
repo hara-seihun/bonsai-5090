@@ -1,0 +1,3092 @@
+{
+  "schema": 1,
+  "scope": "engines/ only; this inventory excludes itself",
+  "source_identity": "per-engine SOURCE.json",
+  "files": [
+    {
+      "path": "DEPENDENCIES.md",
+      "bytes": 3286,
+      "sha256": "0829845ab2daec785ad707bcca98cbeed04163e901dbb59cdab934a5856250a3"
+    },
+    {
+      "path": "NOTICE",
+      "bytes": 2161,
+      "sha256": "2cc9bb8f9fe4cf75188aea91e6078892dd910e11ff0e752246f03e34807be147"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2626,
+      "sha256": "74a831a19d13ea78be212fc40527a9b3b318e737cdae13b489b1f23c8411d713"
+    },
+    {
+      "path": "SCAN-CLASSIFICATION.md",
+      "bytes": 1546,
+      "sha256": "9bc42c61242c004ea5c621a92cbb22179d43a47493bf38601dcc33cc14e9adfa"
+    },
+    {
+      "path": "bonsai-halo/.gitignore",
+      "bytes": 1204,
+      "sha256": "17c6746563fcf2f6a910b1c0f43b1c08db92f2c199137d4556d85fa278de642c"
+    },
+    {
+      "path": "bonsai-halo/Makefile",
+      "bytes": 12589,
+      "sha256": "14a5ac6e098bd446322783acd49058475bfba9c0ef07acf8e3cd89d0c9b1d7cb"
+    },
+    {
+      "path": "bonsai-halo/README.md",
+      "bytes": 4699,
+      "sha256": "0e1497bc83697435f42f361d57797652e49270a26820079c1c713ec083097315"
+    },
+    {
+      "path": "bonsai-halo/SOURCE.json",
+      "bytes": 50307,
+      "sha256": "7a65d2603534c83cff71baeaa8118db7843d41c061cdcffc46faefb0e6ba473e"
+    },
+    {
+      "path": "bonsai-halo/bench/bw.hip",
+      "bytes": 4861,
+      "sha256": "4e9183ff3efbbf338b56e979d9423470db116328a4be7317828f00973d01c7ec"
+    },
+    {
+      "path": "bonsai-halo/bench/coop_cost.hip",
+      "bytes": 38192,
+      "sha256": "62224b988beb1edfdef4b7b11c042429139555095fcf8d0c283342428ea477a9"
+    },
+    {
+      "path": "bonsai-halo/bench/drafter-prompts.txt",
+      "bytes": 1573,
+      "sha256": "ade5f717cd87075c74b14e7edb975d8ef6a3a335a6c4da21c59602340392f674"
+    },
+    {
+      "path": "bonsai-halo/bench/gather-panel.sh",
+      "bytes": 727,
+      "sha256": "901538f74c2d63a7d1adb7db29e047e28b6a4d0cf47e042c58daca04843a79a7"
+    },
+    {
+      "path": "bonsai-halo/bench/gdn-sliced-identity.sh",
+      "bytes": 1196,
+      "sha256": "2bb813989aef968ea8009ac5134ba8cf7ef702ecedcd030c52fad3c0cb5a5e45"
+    },
+    {
+      "path": "bonsai-halo/bench/gdn-sliced-panel.sh",
+      "bytes": 1551,
+      "sha256": "939e63bf302888e46ece2d284ae90f9b9e1ee06283c21aa7f8c18b2b20ac53a1"
+    },
+    {
+      "path": "bonsai-halo/bench/gdn-sliced-phase.sh",
+      "bytes": 1650,
+      "sha256": "f068848c2ad5e45e4e2e6c244e0cc747a9a926e9bbe1df59e6cf95060064fe6b"
+    },
+    {
+      "path": "bonsai-halo/bench/gdn-sliced-regress.sh",
+      "bytes": 969,
+      "sha256": "affbf3aa14bc415bb19986d28b55c9ee141d4db0fe3179f8fde1b27c36293281"
+    },
+    {
+      "path": "bonsai-halo/bench/grid110-panel.sh",
+      "bytes": 500,
+      "sha256": "edb0c03bab5462c5095cbb349e67baeedefccc4487bf0dd6583affe9f8123381"
+    },
+    {
+      "path": "bonsai-halo/bench/mv.hip",
+      "bytes": 1902,
+      "sha256": "c4bbb71204e9f6675ea0c83b6412f7b3041ed60775c1b3c1717ebfbc6a143f47"
+    },
+    {
+      "path": "bonsai-halo/bench/mv8-prompts.txt",
+      "bytes": 291,
+      "sha256": "a6cc086bfbc7a4e81756f267069873394f585817c6f4428092816cc4004704f6"
+    },
+    {
+      "path": "bonsai-halo/bench/mvblock.hip",
+      "bytes": 10514,
+      "sha256": "e508145d7d9401366f09b9f675bc26fdf908ae53a235298bfaa38279a79a5d15"
+    },
+    {
+      "path": "bonsai-halo/bench/mvrows.hip",
+      "bytes": 6837,
+      "sha256": "7ae0f53653d8be0cb3b65868d7bb43c2b36afc1520ac6b8d7e7ded117e892749"
+    },
+    {
+      "path": "bonsai-halo/bench/mvsched.hip",
+      "bytes": 26828,
+      "sha256": "5a29c94bae20620acac5c563da80f207f7042830727feefa0fa3c66b16aff88d"
+    },
+    {
+      "path": "bonsai-halo/bench/occ_resident.hip",
+      "bytes": 7207,
+      "sha256": "0d5784fe6a0df569b52370d9fef791a53c390f0bc5cc3a197328d21bec6aec21"
+    },
+    {
+      "path": "bonsai-halo/bench/phase-lockstep-panel.sh",
+      "bytes": 1928,
+      "sha256": "4b463751b43c5bf6c957f52781272724de24df863204e33fdb81c98f097480c1"
+    },
+    {
+      "path": "bonsai-halo/bench/phase-ramp-panel.sh",
+      "bytes": 2411,
+      "sha256": "845e14b0849f9f8488f97b88f54bc023e2a50719d7ba007f46bbe0b00adede21"
+    },
+    {
+      "path": "bonsai-halo/bench/power_probe.hip",
+      "bytes": 9251,
+      "sha256": "c854ae3d8023eb72bca5ade09ada8a70b6e795e2d225cd4dbac3ad7c43bfabb9"
+    },
+    {
+      "path": "bonsai-halo/bench/qwen_dram.hip",
+      "bytes": 1602,
+      "sha256": "1df02ee8c78f3860a2dafc2c4574cee74bb5a27978808eda6a9e11887504770e"
+    },
+    {
+      "path": "bonsai-halo/bench/qwen_gl2c.hip",
+      "bytes": 2121,
+      "sha256": "40261e4ca2c5e5761ebd32a8d049576fd8b68020660e69ffb03ebfa8b8070b77"
+    },
+    {
+      "path": "bonsai-halo/bench/qwen_q8_layout.hip",
+      "bytes": 5127,
+      "sha256": "0af82a42b4c51c40b7f2d4334ae637031473f6a119e11ba0868729f05b54fb03"
+    },
+    {
+      "path": "bonsai-halo/bench/qwen_q8_wave.hip",
+      "bytes": 4024,
+      "sha256": "f6b1df6368ee8f95b75a3155a96ea84fb32b537e6bbe0fd2345420039c3eebec"
+    },
+    {
+      "path": "bonsai-halo/bench/serve-prompts.txt",
+      "bytes": 1149,
+      "sha256": "87426b515fdf87769db99abb334920520778a36a8df6af86e084114014a9fb60"
+    },
+    {
+      "path": "bonsai-halo/bench/serve-wide-prompts.txt",
+      "bytes": 3723,
+      "sha256": "4034393a981e58c2a45cb860975bf12dc471374470498558eed74f64aaf2e7de"
+    },
+    {
+      "path": "bonsai-halo/bench/stagger-engine-panel.sh",
+      "bytes": 1071,
+      "sha256": "7fd07ddaa1e5a9379c7e6021e92dfcddfbb2e377509f0992563456f2f76afc77"
+    },
+    {
+      "path": "bonsai-halo/bench/wmma_chain.hip",
+      "bytes": 6839,
+      "sha256": "50bfe7eb2c8a87eb5d0046a0f48fdd9e95736a6c430fa5b4343c8b2c01e005c5"
+    },
+    {
+      "path": "bonsai-halo/bench/wmma_cost.hip",
+      "bytes": 8759,
+      "sha256": "3172b33c61c515e0db42a29965394a847805162ba7d9b0be7807a40ef228ace1"
+    },
+    {
+      "path": "bonsai-halo/bench/wstream.hip",
+      "bytes": 20546,
+      "sha256": "dca79578ec4fc8e1598126974e6568964877eccf87efc3435ee6599bacaff9bb"
+    },
+    {
+      "path": "bonsai-halo/kernels/attn_batch.h",
+      "bytes": 6954,
+      "sha256": "cdfccd07f284dc60f966647ef33bf5388f5fea159ce984acdb7b4efd1182e0c1"
+    },
+    {
+      "path": "bonsai-halo/kernels/attn_batch.hip",
+      "bytes": 21230,
+      "sha256": "07dec4180696183066453524d2f3982b035bf8bde843a70611fe673fbeb332d3"
+    },
+    {
+      "path": "bonsai-halo/kernels/attn_leaf.hpp",
+      "bytes": 2820,
+      "sha256": "6dd1d9dc410ada90f37fef6200028603d250bcea3fa0c23fddecaaa85b634c46"
+    },
+    {
+      "path": "bonsai-halo/kernels/attn_score.hpp",
+      "bytes": 5908,
+      "sha256": "a4ad916f1ad48a8a662d75c4579155b55a4c9e1516d52dc9365c495f063a33a1"
+    },
+    {
+      "path": "bonsai-halo/kernels/attn_tree_check.hip",
+      "bytes": 5245,
+      "sha256": "9b86939c221b912f8ec438fb1e111598c65870336e144b04a3411db5b7ef3b9f"
+    },
+    {
+      "path": "bonsai-halo/kernels/attn_window_check.cpp",
+      "bytes": 7913,
+      "sha256": "e059bbb4bc6801e5011ca2e3eb94a4ca33cfa0e5edffc3d2631f6ef442a3617b"
+    },
+    {
+      "path": "bonsai-halo/kernels/device.hpp",
+      "bytes": 31133,
+      "sha256": "28fd8a38ad357fda36f2833ea5c91faf26440722ef1f5101031493ce073ce92c"
+    },
+    {
+      "path": "bonsai-halo/kernels/ffn_a4_operands.hpp",
+      "bytes": 12530,
+      "sha256": "4a7b3a975633008c3af57334033e96f04eed0aa5a286f7a292228d9c78048afe"
+    },
+    {
+      "path": "bonsai-halo/kernels/ffn_a4_pack_check.cpp",
+      "bytes": 8994,
+      "sha256": "ece4ed436441a12bf49901abbbca1ad775f2de83acd08b92d025ec670a01a80a"
+    },
+    {
+      "path": "bonsai-halo/kernels/ffn_b_stage.hpp",
+      "bytes": 5510,
+      "sha256": "7d0029a29c3d2219e1b2e061dface4e6b44e47e4eb89a8853ce91f4e99de1f0e"
+    },
+    {
+      "path": "bonsai-halo/kernels/ffn_batch.h",
+      "bytes": 19320,
+      "sha256": "2bc59f8bbebd46cd98e50669236fbcf3e6c7d6b19b5cdd9be5c2e11eccc3b59a"
+    },
+    {
+      "path": "bonsai-halo/kernels/ffn_batch.hip",
+      "bytes": 120028,
+      "sha256": "db98485502ab223eb60bda89c1e883b6a86e9e66a9533a716d5858638dd741a9"
+    },
+    {
+      "path": "bonsai-halo/kernels/ffn_dense_stream.hpp",
+      "bytes": 9231,
+      "sha256": "d84ef5e022f7dc03e3f8d48568a93ab1fe14496d26575245eccb5b26eb7a7734"
+    },
+    {
+      "path": "bonsai-halo/kernels/ffn_operands.hpp",
+      "bytes": 11114,
+      "sha256": "7feec3d6df2ef5ba6e18891f41c6434c868f9c60a2ded6aa4a5b8e80e4ad4cad"
+    },
+    {
+      "path": "bonsai-halo/kernels/gdn_state_codec.hpp",
+      "bytes": 24164,
+      "sha256": "b06bb55f629654fcf1e814fd3ba7822220cc772d9d45bcd23259013c0b409520"
+    },
+    {
+      "path": "bonsai-halo/kernels/gdn_state_isa.hip",
+      "bytes": 3410,
+      "sha256": "0ae60916aec79c609d2b26a5e413eafeef135c03a3da492d72aac2b347cfcc11"
+    },
+    {
+      "path": "bonsai-halo/kernels/halo_draft.hip",
+      "bytes": 26557,
+      "sha256": "8f4fc13ee847fe8f6a392f8637df6e0c47d83454080e533ffe460496bb660fcb"
+    },
+    {
+      "path": "bonsai-halo/kernels/halo_expand.hpp",
+      "bytes": 12361,
+      "sha256": "0dda8ca57e294434d40e1422dba2f6494310282a50c7067a35d0ca876acb7f76"
+    },
+    {
+      "path": "bonsai-halo/kernels/halo_kernels.h",
+      "bytes": 44653,
+      "sha256": "29a566745ab607b83bd8d6d7ac01ce4a1d31399fe8c1d83a24373dda87703fb9"
+    },
+    {
+      "path": "bonsai-halo/kernels/halo_kernels.hip",
+      "bytes": 18986,
+      "sha256": "316e26e241343e162e75b17101b50d698bff7845d4636c64a9d0c01cbd37b7b4"
+    },
+    {
+      "path": "bonsai-halo/kernels/halo_rows.hip",
+      "bytes": 125392,
+      "sha256": "f46eba7619301734870580e8a4cc4342432d5026dbf33a5ff09330114406a713"
+    },
+    {
+      "path": "bonsai-halo/kernels/head_batch.h",
+      "bytes": 2476,
+      "sha256": "8f498fa43e9d0a1ff0e8d07b69aaed05470de853193ea8307d04b4a6c52ea058"
+    },
+    {
+      "path": "bonsai-halo/kernels/head_batch.hip",
+      "bytes": 18842,
+      "sha256": "23540ff1d83cd1f296d71584c802d3161d4cff175dd3a0c05cb54ea0e794bd64"
+    },
+    {
+      "path": "bonsai-halo/kernels/head_op_check.cpp",
+      "bytes": 5192,
+      "sha256": "9da84e3955969ba34804cc0e030fbc7cca03ab2c00c3d5275e0d1e68d74a0176"
+    },
+    {
+      "path": "bonsai-halo/kernels/mv8_expand_check.cpp",
+      "bytes": 4321,
+      "sha256": "0ba94fdce729fa32e74bc9db1a5a94d223c13e36cb702196c549d4d31541a4a8"
+    },
+    {
+      "path": "bonsai-halo/kernels/mv_body_isa.hip",
+      "bytes": 3590,
+      "sha256": "781b956304427387ee16f9d1bbc4c33cb7a63e96c02546f3c2e1e769e132b5ec"
+    },
+    {
+      "path": "bonsai-halo/kernels/mv_nibble.hpp",
+      "bytes": 8153,
+      "sha256": "5503dacfd92be8e41e683b558d70a5c3489648b58620a0f87a5dd907edf1560e"
+    },
+    {
+      "path": "bonsai-halo/kernels/mv_nibble_check.cpp",
+      "bytes": 6211,
+      "sha256": "1441674dda370ec51ef388936665b293971bad6a140ba7227aee0d7a694a2d84"
+    },
+    {
+      "path": "bonsai-halo/kernels/mv_wmma8.hpp",
+      "bytes": 19335,
+      "sha256": "7ece386c80d497200b8f4fce2685686b96f32809e91c7a8aa40345b3160639e5"
+    },
+    {
+      "path": "bonsai-halo/kernels/phases.hpp",
+      "bytes": 111757,
+      "sha256": "e1a91914d604aa380357ebac21bf5951f7f87a7ea61809e0e459a4100facbd42"
+    },
+    {
+      "path": "bonsai-halo/kernels/pk_pressure.hip",
+      "bytes": 5793,
+      "sha256": "41351b83d6b1695bbc106d407756f11f3741eb402733957f99f8f3c5380dfc43"
+    },
+    {
+      "path": "bonsai-halo/kernels/prep_batch.h",
+      "bytes": 5595,
+      "sha256": "9d6e37e1a06ff0795fdb5b62dc93952964d8dd733a588f27c27e135cc23dba34"
+    },
+    {
+      "path": "bonsai-halo/kernels/prep_batch.hip",
+      "bytes": 9665,
+      "sha256": "bfce018f4e983d4996c5e9bfeda8a1bfa4a3c0e65532161a7dda89a08ae4522e"
+    },
+    {
+      "path": "bonsai-halo/kernels/q4_format.h",
+      "bytes": 2835,
+      "sha256": "e88f75d6bf9810627068ec88e09aba4083a6e6a807616509abf9ab4a25d80928"
+    },
+    {
+      "path": "bonsai-halo/kernels/q4_pack_check.cpp",
+      "bytes": 5150,
+      "sha256": "39bbc8c2dfca46157ab086a23ae02860b262e41e9fa45b502c1e46258aeac1ca"
+    },
+    {
+      "path": "bonsai-halo/kernels/q4_tiles.hpp",
+      "bytes": 13069,
+      "sha256": "934483b6a59aa25ad82c9d4e305fdf535a51d1d19d89ec11c17f724c8217f0fd"
+    },
+    {
+      "path": "bonsai-halo/kernels/seq_op_check.cpp",
+      "bytes": 4905,
+      "sha256": "84029afd2c723c4868aecf39e91fd25de5cdeaedc99ab4fa12eae71a66c22c94"
+    },
+    {
+      "path": "bonsai-halo/kernels/seq_tmap_check.cpp",
+      "bytes": 3795,
+      "sha256": "c04f5e24d96cd49e9eff6f1f2c266b3c75f8f305c54a05518c7e5f8b96a17484"
+    },
+    {
+      "path": "bonsai-halo/kernels/sequence_batch.h",
+      "bytes": 5905,
+      "sha256": "3c0cbfc92efae261701498d94d70c75098d62c247cac5ba23014c5c7994a01db"
+    },
+    {
+      "path": "bonsai-halo/kernels/sequence_batch.hip",
+      "bytes": 68607,
+      "sha256": "5bd61ccedff639d7c3951dac286ab6498702260e8e0daa0da0e464e7f6b6b322"
+    },
+    {
+      "path": "bonsai-halo/kernels/sequence_operands.hpp",
+      "bytes": 10793,
+      "sha256": "f7b1e66b5d6bc6cca13edfa306fe6e7fc825d11f74f6a09da4f476eeeedc0346"
+    },
+    {
+      "path": "bonsai-halo/kernels/sequence_stream.hpp",
+      "bytes": 6530,
+      "sha256": "e61f665fdcab930a0e4a682201265a832e140e8af4ba10f649b6f49c55ac8861"
+    },
+    {
+      "path": "bonsai-halo/kernels/single_map_check.cpp",
+      "bytes": 11142,
+      "sha256": "883a83873893a1ebf6f9b42259985847e17f959c27e30040d03120ffa7f668d4"
+    },
+    {
+      "path": "bonsai-halo/kernels/single_map_isa.py",
+      "bytes": 2997,
+      "sha256": "d52f1c381fd460c75f94b08dc898f31bab26265d2c8b38f48e608e43f90b3c5e"
+    },
+    {
+      "path": "bonsai-halo/receipts/full-tps/batch/run.json",
+      "bytes": 103011,
+      "sha256": "d68ee6fe3f266bfae4d6829a143fd261b4ffb1cefb59468e43b1716bfd2194b7"
+    },
+    {
+      "path": "bonsai-halo/receipts/full-tps/batch.log",
+      "bytes": 5366,
+      "sha256": "565d62d0bfa7071040baf4963a433cc474050b34bcda7894104430b3e2a643a9"
+    },
+    {
+      "path": "bonsai-halo/receipts/full-tps/single-dflash-f32.log",
+      "bytes": 11308,
+      "sha256": "c2726cefdbd4627a21f05f613873e9db258c179bb2be0b64f08dd808bb517551"
+    },
+    {
+      "path": "bonsai-halo/receipts/full-tps/single-dflash.log",
+      "bytes": 11306,
+      "sha256": "d2892339491d3a22afd2c9709c64fa34789c3c1346979ccc59df98a7f503da52"
+    },
+    {
+      "path": "bonsai-halo/receipts/full-tps/summary.json",
+      "bytes": 1611,
+      "sha256": "0b8cdcdedd4c6ec7bb2d2fc288612ff956562315f4a3b49cb7615a6be79a332f"
+    },
+    {
+      "path": "bonsai-halo/receipts/generation-128/managed/run.json",
+      "bytes": 265566,
+      "sha256": "09b754f79511b58533ec7b950fe0c23256b965b9edf01b9d1875413598959e25"
+    },
+    {
+      "path": "bonsai-halo/receipts/generation-128/prompts.txt",
+      "bytes": 12098,
+      "sha256": "a1f258dbb57db1ce9afa35ecf12c0d9bf0ae09c56de2d26cfd0ee569a1de3264"
+    },
+    {
+      "path": "bonsai-halo/receipts/generation-128/summary.json",
+      "bytes": 2174,
+      "sha256": "f8f2f4ea0a95b93f58f0277a8b05b2204af42e49f3745453c2889aa50548c28a"
+    },
+    {
+      "path": "bonsai-halo/src/batch.cpp",
+      "bytes": 26991,
+      "sha256": "b6e5be8b3eeec07e822fcb467421042202d23334450fe197566eaba1aff55f86"
+    },
+    {
+      "path": "bonsai-halo/src/batch_profile.hpp",
+      "bytes": 3477,
+      "sha256": "4bf59930a896a6580d94835f1fa9363b5dfa2beddd4975794618402e3ba037e0"
+    },
+    {
+      "path": "bonsai-halo/src/batch_route.h",
+      "bytes": 2285,
+      "sha256": "f1e11a329415fd64fdd281aa0eda1fb57e674307794f7c11744ef1dcab89aab0"
+    },
+    {
+      "path": "bonsai-halo/src/chat.cpp",
+      "bytes": 12313,
+      "sha256": "0bbcb13ecedf5b1454cec3eda43c41d99b425e43a5a34a3a76e573cedbf29a8b"
+    },
+    {
+      "path": "bonsai-halo/src/chat.h",
+      "bytes": 1854,
+      "sha256": "dfad573a35296669564c3f5480863bdb277f5cd0833b4fc313de4d231730864b"
+    },
+    {
+      "path": "bonsai-halo/src/device_budget.h",
+      "bytes": 1059,
+      "sha256": "d4e1bed42d825f6a26fe6c28048e87c7bc5f71dd9210b7153d491253ff38b09e"
+    },
+    {
+      "path": "bonsai-halo/src/engine.cpp",
+      "bytes": 59625,
+      "sha256": "c3f706a1341cd30046a1f571f6614d4a3deb02cec92a87ffb7ca3d55c88ecfa7"
+    },
+    {
+      "path": "bonsai-halo/src/engine.h",
+      "bytes": 23820,
+      "sha256": "565fe507f147173a4c10a7f1fe80209dfd9998e55871bc3bd3d6e6e775904e46"
+    },
+    {
+      "path": "bonsai-halo/src/gguf.cpp",
+      "bytes": 6134,
+      "sha256": "b85bf20630537ed101d1f8747b2d3d6f751c99969aef4da15884f9276a799083"
+    },
+    {
+      "path": "bonsai-halo/src/gguf.h",
+      "bytes": 1944,
+      "sha256": "cdb0408eb23ce62432b9d1aff84aa76d7dace63620d4cb787b8a91841a4ef3cf"
+    },
+    {
+      "path": "bonsai-halo/src/halo_format.h",
+      "bytes": 5645,
+      "sha256": "ae6053ad4ce0ea23eb26774aaf61d21cf12e4e495438d761bbfed4590d52e109"
+    },
+    {
+      "path": "bonsai-halo/src/main.cpp",
+      "bytes": 36201,
+      "sha256": "d89aa8858a325ac677247300c4da2d0f3731dbe0337af03c143378853bb941b8"
+    },
+    {
+      "path": "bonsai-halo/src/q8.cpp",
+      "bytes": 14330,
+      "sha256": "58cf1f075665afed8ebdcabfb9819cff634f4c24e1324c2deb39f5a174d0217d"
+    },
+    {
+      "path": "bonsai-halo/src/q8.h",
+      "bytes": 2262,
+      "sha256": "176a10154b6df10f563f52d5cd9b3ce2b3f3ee73fb4bc8c861261ced4aa5f63b"
+    },
+    {
+      "path": "bonsai-halo/src/repack.cpp",
+      "bytes": 7512,
+      "sha256": "89cc8a3050d67bb4e0a637834e67b493fd0301ff15165e75c011ee9e26632116"
+    },
+    {
+      "path": "bonsai-halo/src/repack.h",
+      "bytes": 1165,
+      "sha256": "f06de63deeeb1d2c9a0672f9bb9a018e460b614a9084a0e3274965b6ced15a1e"
+    },
+    {
+      "path": "bonsai-halo/src/serve_batch.cpp",
+      "bytes": 23520,
+      "sha256": "93a85b00af7cae631185cbb98da526dbdbba811e4806a2cb0d121e67ad1a6f6e"
+    },
+    {
+      "path": "bonsai-halo/src/serve_batch.h",
+      "bytes": 2444,
+      "sha256": "9042afe8db9504d580a2a8af00333a573bcd92142e4a39c02a6a49069ca4b020"
+    },
+    {
+      "path": "bonsai-halo/src/server.cpp",
+      "bytes": 14577,
+      "sha256": "cb2e60fbf58facf9295dc2ace97ad28097b4392849cc5d6b54b8b0750f858a9d"
+    },
+    {
+      "path": "bonsai-halo/src/tokenizer.cpp",
+      "bytes": 1695,
+      "sha256": "4a2923a04b5ba7627d08c3f68cd65929a0c1ca7da5e4d2ca0167c3a5a89f51ca"
+    },
+    {
+      "path": "bonsai-halo/src/tokenizer.h",
+      "bytes": 621,
+      "sha256": "ebc66d22bbd34e12f4f483ec57c89e7c7cb2f9387fff324685dd07dffdf6642d"
+    },
+    {
+      "path": "bonsai-halo/tools/arm_panel.py",
+      "bytes": 2630,
+      "sha256": "3e049414c2255c5bee0af81099881c4f5f52518cf744010d4b170facaea5a3d5"
+    },
+    {
+      "path": "bonsai-halo/tools/batch-compare/build.sh",
+      "bytes": 386,
+      "sha256": "abb71cc2b94c8b7bdae4d26a9693263a82e04e5b50dcdc33c1b621ade7416b14"
+    },
+    {
+      "path": "bonsai-halo/tools/batch-compare/prompts.txt",
+      "bytes": 11304,
+      "sha256": "fac1329dababbf7f8a2c99c7c14e87fa5b7c368fd70c7b0daf51423fa459b1a7"
+    },
+    {
+      "path": "bonsai-halo/tools/batch_compare.cpp",
+      "bytes": 99611,
+      "sha256": "4fd0173a0db01a27f742ba83fd5c54763a3cb22b9f20050ed54a511cc83b0dbd"
+    },
+    {
+      "path": "bonsai-halo/tools/batch_compare.py",
+      "bytes": 48192,
+      "sha256": "93487c875f69fed84f44908ed1c6e69ec086ae3809849e8a3cfe0cba2a410a01"
+    },
+    {
+      "path": "bonsai-halo/tools/batch_profile.cpp",
+      "bytes": 59407,
+      "sha256": "7b57df4614af1e4132689de7b6e63b0f88cfe47094b8e7808d5c0f9652e56bf5"
+    },
+    {
+      "path": "bonsai-halo/tools/batch_profile.py",
+      "bytes": 5750,
+      "sha256": "5aca85810abb0c6a008d8db827aaf35fb3035494db91249284368a9c08a626cf"
+    },
+    {
+      "path": "bonsai-halo/tools/compare.py",
+      "bytes": 917,
+      "sha256": "948071e11a9f8edd61db4d0b48862b05539e8bbe1982548762c6817c400a90ad"
+    },
+    {
+      "path": "bonsai-halo/tools/coop-gap-panel.sh",
+      "bytes": 1811,
+      "sha256": "ea6f3abe845e6629bc80d1b57b17cb8c61cda7a67cac53f562329c840968f855"
+    },
+    {
+      "path": "bonsai-halo/tools/coop-region-panel.sh",
+      "bytes": 2169,
+      "sha256": "dc1bf2c68470eeaf7e86cc58cc1c75d93570fb75aa94b240f81f7b17c796386c"
+    },
+    {
+      "path": "bonsai-halo/tools/direct-commit/Makefile",
+      "bytes": 2573,
+      "sha256": "1061b1bab69041607e175a8589c9c173788b03eb76ab02d9b9871f9b30e72d6f"
+    },
+    {
+      "path": "bonsai-halo/tools/direct-commit/commit_equiv.cpp",
+      "bytes": 22659,
+      "sha256": "c79e014c07f2ae68abc472e1ab4c3aa15ae0c8aac599c4b3cfc1ac92c151b4df"
+    },
+    {
+      "path": "bonsai-halo/tools/draft_quant.cpp",
+      "bytes": 2310,
+      "sha256": "7a7bc700d830df776b20ee06773c47e1990aa6540e5208ed81f56fde84689f9f"
+    },
+    {
+      "path": "bonsai-halo/tools/drafted-serve-panel.sh",
+      "bytes": 1646,
+      "sha256": "1238d6323fdf508f964cf05cde4d051ab4160ef9fcf3e368a6a67cbde5df66ec"
+    },
+    {
+      "path": "bonsai-halo/tools/executable_provenance.hpp",
+      "bytes": 948,
+      "sha256": "c98b02d1009dcd01f7deebc72f73da17f4613af90e851c6eaa26e7e693f1320e"
+    },
+    {
+      "path": "bonsai-halo/tools/fetch_awq_fixture.py",
+      "bytes": 11763,
+      "sha256": "4d063903b5e5ac7004fb30b7e6a6ba8e9c0aaaf30caff47accfa629bde6c3bdc"
+    },
+    {
+      "path": "bonsai-halo/tools/ffn_pack_check.cpp",
+      "bytes": 3452,
+      "sha256": "a069cb03b555dbd5f665a0d2746a46962e701013fd1dede5754e1effe76a12b5"
+    },
+    {
+      "path": "bonsai-halo/tools/gdn_cols_check.py",
+      "bytes": 6883,
+      "sha256": "0caf6bbed3998f11172363f8319f0ef5d99c37bb6205ee9aecc9386aee58884f"
+    },
+    {
+      "path": "bonsai-halo/tools/gdn_gram_check.py",
+      "bytes": 5891,
+      "sha256": "a28ea433d41117b485d52fbf671a32005615b3fd93b28a5c5a785747dc398f38"
+    },
+    {
+      "path": "bonsai-halo/tools/gdn_occ_probe.hip",
+      "bytes": 4653,
+      "sha256": "2964ed3c522f2134415794e526724b3b75be11a2d1123948531cf90136944527"
+    },
+    {
+      "path": "bonsai-halo/tools/gdn_state_format.py",
+      "bytes": 10289,
+      "sha256": "50c1c6e0053df9c1765ce3eb9d95eb71cd3a232449ff8e054392e7023dfcbd40"
+    },
+    {
+      "path": "bonsai-halo/tools/gdn_state_isa.py",
+      "bytes": 3652,
+      "sha256": "0dd38039794af108ee9795eeec3f34bea67b116abea5373f4a76276852c83a3f"
+    },
+    {
+      "path": "bonsai-halo/tools/gdn_state_quality.py",
+      "bytes": 14535,
+      "sha256": "ffed1486acb07b78c875e65ff741d1aaf557f271fc3bdc1deafe4644501585c1"
+    },
+    {
+      "path": "bonsai-halo/tools/gdn_warpsum_probe.hip",
+      "bytes": 5531,
+      "sha256": "9141919b56fa6e72281cc39ee3cd3bf82425edb921c57f7a0ee227246ffd5670"
+    },
+    {
+      "path": "bonsai-halo/tools/gpu_clock.py",
+      "bytes": 16215,
+      "sha256": "09a7db407ee2bd356cb9c7a1a9fa291a94985b6cc9ac412f2b12d74960bb6338"
+    },
+    {
+      "path": "bonsai-halo/tools/halo_env.hpp",
+      "bytes": 1046,
+      "sha256": "24b698e9042cb38c59a0578ee8cce899c9b917c66544d9d7c38744e3c3670e3e"
+    },
+    {
+      "path": "bonsai-halo/tools/halo_scale_census.py",
+      "bytes": 4228,
+      "sha256": "7b57182f7bb99f0112a0403a0951a129712e6b1528e763a64f53c20dc3fa8311"
+    },
+    {
+      "path": "bonsai-halo/tools/halo_scale_probe.py",
+      "bytes": 3875,
+      "sha256": "2bbbec9081e2b2a32ee885f94b0c019cc1901aba73bf3be2b9d5ce8163b936b0"
+    },
+    {
+      "path": "bonsai-halo/tools/isa_loop_count.py",
+      "bytes": 6070,
+      "sha256": "08b94ce05df4c3a75164a4bf2d2d27a27b4696dd055dfd78fc8e590311a460d5"
+    },
+    {
+      "path": "bonsai-halo/tools/kernel_resources.py",
+      "bytes": 3585,
+      "sha256": "f639254e8e0da4db4ea9af1f9a897c9f513768489be2b411e92975e0c262140e"
+    },
+    {
+      "path": "bonsai-halo/tools/kernel_trace.py",
+      "bytes": 6400,
+      "sha256": "7c01fcb83c62afc639a56383dc3008114d34ac0797094bbea7d6674177befd24"
+    },
+    {
+      "path": "bonsai-halo/tools/matvec-shape-panel.sh",
+      "bytes": 1236,
+      "sha256": "d61d2436154668eb83e678deb1560b43bd0475664defa65fe1b16d5272c2fa04"
+    },
+    {
+      "path": "bonsai-halo/tools/matvec-shape-panel2.sh",
+      "bytes": 1949,
+      "sha256": "3f78947c7f0bb8a20eaa98ecd81b0f7e1b726e22d2165e61e4605c2bd3eeffe9"
+    },
+    {
+      "path": "bonsai-halo/tools/matvec-shape-panel3.sh",
+      "bytes": 856,
+      "sha256": "f0415aa042a4153e0cf4ccba34ff12b432cd0cbff2314f349ad5fa88bd1db8d5"
+    },
+    {
+      "path": "bonsai-halo/tools/mv8-ab.sh",
+      "bytes": 1110,
+      "sha256": "e47c531a71032d95755d048bab692c969006b62ba7acb2335fe004daea9028db"
+    },
+    {
+      "path": "bonsai-halo/tools/mv_sched_census.py",
+      "bytes": 6227,
+      "sha256": "6771487225eb61380e81cf8c64696a28d0895d246ea8a46153c56beb3c5cdfa9"
+    },
+    {
+      "path": "bonsai-halo/tools/object_resources.py",
+      "bytes": 4345,
+      "sha256": "4954a62f8ff64366fd53a54214c4e5098bf8a3c31d6b309f5071fe0415dde1ab"
+    },
+    {
+      "path": "bonsai-halo/tools/occ_surface.hip",
+      "bytes": 4592,
+      "sha256": "00651cc182b38c266b3a0cf7abe5c29132fd4a26550b66dcda83203d756b6dc9"
+    },
+    {
+      "path": "bonsai-halo/tools/perplexity.cpp",
+      "bytes": 7983,
+      "sha256": "51b0c5ffffc78cf86a960bfbb6f9058c3cfa3cba36f6d1c86d087767f89ca7d6"
+    },
+    {
+      "path": "bonsai-halo/tools/phase_totals.py",
+      "bytes": 1159,
+      "sha256": "bc1c9bbd6318903abcca5436dd2d989eb44df9636db7016841e256f9daa3f5a8"
+    },
+    {
+      "path": "bonsai-halo/tools/prefill_budget.py",
+      "bytes": 15649,
+      "sha256": "0023cb47f5baa6ef6b5760255b43fed178cfd8ad274e773cdf8f46e29382e6ed"
+    },
+    {
+      "path": "bonsai-halo/tools/profile_counters.py",
+      "bytes": 3470,
+      "sha256": "3939c6bbac7316b10dd22c872f239714dda95c4f755c3059a3275f22d92008e1"
+    },
+    {
+      "path": "bonsai-halo/tools/profile_read_check.hip",
+      "bytes": 1242,
+      "sha256": "dd498bf1b7f59e1ba3b013878f438c0448f3294aaaf498912718d3e8a6d11c63"
+    },
+    {
+      "path": "bonsai-halo/tools/refdump.cpp",
+      "bytes": 3422,
+      "sha256": "2535dc5891fc77267b86e692ab2d16c271171a42523933ddcd49e64ca56c518a"
+    },
+    {
+      "path": "bonsai-halo/tools/rows_occ_probe.hip",
+      "bytes": 4861,
+      "sha256": "3fd90a4ed4ccf682b594ec9df603de46df1105ebcec5c5ba6b1abb4bf229071e"
+    },
+    {
+      "path": "bonsai-halo/tools/seq_a4_pack_check.py",
+      "bytes": 4800,
+      "sha256": "8906fccd7218501a5e36d9cccd8d1228785462eb393b90ef31cb871d026793e9"
+    },
+    {
+      "path": "bonsai-halo/tools/seq_out_a4_panel.py",
+      "bytes": 3539,
+      "sha256": "20c268d6636350d4a31202d250a69bac41ff6e79f15b3a7081cbb57b5b332fa1"
+    },
+    {
+      "path": "bonsai-halo/tools/seq_quant_quality.py",
+      "bytes": 15063,
+      "sha256": "051815d7d13519a5c5e7c6e022913782818dca1cf8ad6c5c7bbf2452bcaaf0fb"
+    },
+    {
+      "path": "bonsai-halo/tools/sequence_layout_compare.py",
+      "bytes": 4950,
+      "sha256": "ffd5b71451be006d432cd2d9a8806431e1ef6a355f482b1276648a5966378056"
+    },
+    {
+      "path": "bonsai-halo/tools/sequence_state_check.cpp",
+      "bytes": 38778,
+      "sha256": "e5c303597557479691faee223ba0a6518e92e1a8f52c908cbb241e9569a27bdc"
+    },
+    {
+      "path": "bonsai-halo/tools/serve_capture_check.cpp",
+      "bytes": 3672,
+      "sha256": "84c583f92347039c6c71ff738e7c0d5659be3fe2bf4d091f0c9a90acbb7d6a4b"
+    },
+    {
+      "path": "bonsai-halo/tools/serve_load.py",
+      "bytes": 14094,
+      "sha256": "be69fe558bc60c4f7a5ff54369a1767774bf1b2afb378e53868fe914a201efac"
+    },
+    {
+      "path": "bonsai-halo/tools/serve_mixed.py",
+      "bytes": 13385,
+      "sha256": "0373f593ed04e8d64e7aeaec9c2b27a9a4e4ad00543a5db0bb671994d2722ae7"
+    },
+    {
+      "path": "bonsai-halo/tools/served_shootout.py",
+      "bytes": 3788,
+      "sha256": "adf458fed74ac2ed3f1d77035845300c05723b520cb8d9f60e2217a495e071e6"
+    },
+    {
+      "path": "bonsai-halo/tools/speculative_compare.cpp",
+      "bytes": 8922,
+      "sha256": "93559e96c86bea692ac144aa9fe78c532bcc625fc1b793628c9b841c0072c4c8"
+    },
+    {
+      "path": "bonsai-halo/tools/speculative_panel.py",
+      "bytes": 2622,
+      "sha256": "a8e33f84f84a4aeea903fe2b1d4d9973500ee0e11dd791bcc6a1411541c8459c"
+    },
+    {
+      "path": "bonsai-halo/tools/speculative_recycle.h",
+      "bytes": 537,
+      "sha256": "583af9a67bbf86efaa1ca29712762759e0c2a8f9fdf89a2988a2953a5bda1e58"
+    },
+    {
+      "path": "bonsai-halo/tools/speculative_recycle.hip",
+      "bytes": 2754,
+      "sha256": "163022b41c870a8562b0fa32543c3d081ac95685cd9eace681126460001a47ee"
+    },
+    {
+      "path": "bonsai-halo/tools/speculative_summary.py",
+      "bytes": 2531,
+      "sha256": "ce9483b98586cf77069a0e7e537c624c957803081450ccfd44b3e61a7aeda806"
+    },
+    {
+      "path": "bonsai-halo/tools/test_prefill_budget.py",
+      "bytes": 1730,
+      "sha256": "7e6191286ce461822bd65992caf1a4ca4a24c528b9e66eaeac2f69fdca8224d2"
+    },
+    {
+      "path": "bonsai-halo/tools/vmcnt_cover.py",
+      "bytes": 5355,
+      "sha256": "578714f371fcaa4eee00212fcb719e3699590ad60ef75886a6f2c081a1e72d53"
+    },
+    {
+      "path": "bonsai-halo/vendor/README.md",
+      "bytes": 316,
+      "sha256": "1c9f4891ade2e2d671723aa2b60c25c6ec4255b2f925a665ca05257e7a46531a"
+    },
+    {
+      "path": "bonsai-halo/vendor/cpp-httplib/LICENSE",
+      "bytes": 1075,
+      "sha256": "4b45cbe16d7b71b89ae6127e26e0d90a029198ca5e958ad8e3d0b8bbed364d8b"
+    },
+    {
+      "path": "bonsai-halo/vendor/cpp-httplib/httplib.cpp",
+      "bytes": 578105,
+      "sha256": "8b1de0a587d68006d1c3cb3e056e0b80363b93f12d0ad3a26a9c83a236515f40"
+    },
+    {
+      "path": "bonsai-halo/vendor/cpp-httplib/httplib.h",
+      "bytes": 161599,
+      "sha256": "b36e352ed5c39eabd26540f2089c83aafbcb29c5f36feb48a63575c63451ed7d"
+    },
+    {
+      "path": "bonsai-halo/vendor/nlohmann/json.hpp",
+      "bytes": 953436,
+      "sha256": "aaf127c04cb31c406e5b04a63f1ae89369fccde6d8fa7cdda1ed4f32dfc5de63"
+    },
+    {
+      "path": "halo-5090/.gitignore",
+      "bytes": 49,
+      "sha256": "a5390cf440a0c8be3434d6bf175ae09f0b375692b7a4ed599beed184a9c38834"
+    },
+    {
+      "path": "halo-5090/Makefile",
+      "bytes": 3292,
+      "sha256": "410ae75befef9ed87bd4a6e8b38b4202c1e7f8c2676f078d33cd5a5c6219e1f3"
+    },
+    {
+      "path": "halo-5090/README.md",
+      "bytes": 5477,
+      "sha256": "ff7eab94c2e4f4e5559d31ca1cb3e6ffe678a122f0898ab2d6e18925069dd2c0"
+    },
+    {
+      "path": "halo-5090/SOURCE.json",
+      "bytes": 76420,
+      "sha256": "cce94b2cf16c59abd79a2424df12becbf90bcdb9b7a8aca49c36d55de60d151f"
+    },
+    {
+      "path": "halo-5090/bench/bar.cu",
+      "bytes": 2090,
+      "sha256": "9234b08bb2a79ac8beb1dd2e616e0044841802639a8a28fa38a82d55f5fb2aba"
+    },
+    {
+      "path": "halo-5090/bench/draft_contract.cpp",
+      "bytes": 5025,
+      "sha256": "94147ab03146b3fc786cb0840354ad2ab780fead4b0a651b6a0338de41c9c163"
+    },
+    {
+      "path": "halo-5090/bench/f1_audit.py",
+      "bytes": 2051,
+      "sha256": "891338641c7a9e2ad74acbafe75e129660c120e9b85b920120204eb6521278d3"
+    },
+    {
+      "path": "halo-5090/bench/f1_bench.cu",
+      "bytes": 10160,
+      "sha256": "f6a619444da68caeeef4abf8f26d6fdca6d51ee84028bba57d46e61bead3e163"
+    },
+    {
+      "path": "halo-5090/bench/f1_build.sh",
+      "bytes": 404,
+      "sha256": "a0c3321311aed84d9739c0f0d493bb6204d8811f4a5207dfac8e91bb2519b847"
+    },
+    {
+      "path": "halo-5090/bench/f1_export.py",
+      "bytes": 3768,
+      "sha256": "d2ae53a94681277f0b346cc04a6204c6cd4e7e847be65697e9e743b23dba5313"
+    },
+    {
+      "path": "halo-5090/bench/f1_swar_test.cpp",
+      "bytes": 986,
+      "sha256": "30ca976755245a090e0d5f77763986c20759a9288d11076bb0cbe5394e8497d2"
+    },
+    {
+      "path": "halo-5090/bench/long_draft_sweep_test.py",
+      "bytes": 9263,
+      "sha256": "a705d0bd1529be1868108ac7129d363d0664b54c16d0858402a12ddd7c79f845"
+    },
+    {
+      "path": "halo-5090/bench/mma_probe.cu",
+      "bytes": 3668,
+      "sha256": "a53dc83daa15e839d67932134a65085b4bb46a6ff66908a7959aaeaff7ea7aaa"
+    },
+    {
+      "path": "halo-5090/bench/scale_probe.cu",
+      "bytes": 1951,
+      "sha256": "d48ca9ac8cb17895c19c0505f7628a2828a0a5ce7d7d19c21922bfaae8a8a2e3"
+    },
+    {
+      "path": "halo-5090/bench/selector_two.cu",
+      "bytes": 2316,
+      "sha256": "be4ce1d95ad651edfc357b449ee635c54df5b08cce035b6858fb524410425cd0"
+    },
+    {
+      "path": "halo-5090/bench/sparse_probe.cu",
+      "bytes": 3565,
+      "sha256": "8486379612c33dd1de3bbd01024206fbc9be8bc38780193ca5474babe29e445e"
+    },
+    {
+      "path": "halo-5090/bench/two_path_policy.cpp",
+      "bytes": 1040,
+      "sha256": "8f575e29a64bd44b736b60f0f7c0700142428c582cd46d0952bcfc236c829bd2"
+    },
+    {
+      "path": "halo-5090/bench/vision/blue.png",
+      "bytes": 348,
+      "sha256": "ccc7cbb8b15dd1ed9cf22ec565e78da374d0de7ccf853c5a37da55b351f218d2"
+    },
+    {
+      "path": "halo-5090/bench/vision/green-large.png",
+      "bytes": 3669,
+      "sha256": "57b3d1caa5b8954d3aca4b53d408ee266f758fd9374f24ea63eea692a6ee0e37"
+    },
+    {
+      "path": "halo-5090/bench/vision/red.png",
+      "bytes": 348,
+      "sha256": "84e02f8d90c8bd5c5ec275665a95c0c1aefff0aa962fb3d0548eb80c0a663716"
+    },
+    {
+      "path": "halo-5090/experiments/dense5/codec.hpp",
+      "bytes": 46,
+      "sha256": "00bbe67dcdfdcd881eda3a0bb32e9e51394ba8132d9770740e18d6eb0ba7a96d"
+    },
+    {
+      "path": "halo-5090/experiments/dense5/device.cuh",
+      "bytes": 768,
+      "sha256": "ffdc502a61c9f9fe401a263f302ae08b26b49c236dbab3f4fabbbcc216d15ac1"
+    },
+    {
+      "path": "halo-5090/experiments/dense5/generate.py",
+      "bytes": 1065,
+      "sha256": "976f9070055875adc9f8234aad0b3b39a436e25c1d3fc4bf89fda37aeaa4273c"
+    },
+    {
+      "path": "halo-5090/experiments/dense5/host.cpp",
+      "bytes": 1728,
+      "sha256": "536f7b8f64ca6eb2a3c4392d281e1cd5090b473271996d08fdfb688d230d392b"
+    },
+    {
+      "path": "halo-5090/experiments/dense5/native.cu",
+      "bytes": 10030,
+      "sha256": "bcafc03b6f80e6cbc1fd4ad554931474e304018d0043ef0dd0b7262f0519a9f6"
+    },
+    {
+      "path": "halo-5090/experiments/dense5/run.sh",
+      "bytes": 1537,
+      "sha256": "12c1c5374cd491e67a84535c9e855ea318fa00124c6c180ea214de78db44d88a"
+    },
+    {
+      "path": "halo-5090/experiments/dense5/summarize.py",
+      "bytes": 849,
+      "sha256": "3dd82d54fd8eca59df88b5b8ef393a3816587e1b39060ed5045f85e7d4ab87c1"
+    },
+    {
+      "path": "halo-5090/results/benchmarks/raw/fork-math500-off.bin.meta",
+      "bytes": 4858,
+      "sha256": "7c3133dcd4631a4f0ffae21a0a0ee6f06589c47a56d35e3810d95e740a4aff24"
+    },
+    {
+      "path": "halo-5090/results/benchmarks/raw/fork-math500-off.bin.score.json",
+      "bytes": 1699,
+      "sha256": "4b486d03238aef1098ff436b82ff518a457b62b37ac0f4b00da2d5a4f4ea7acb"
+    },
+    {
+      "path": "halo-5090/results/benchmarks/raw/fork-math500-off.bin.timing.json",
+      "bytes": 147,
+      "sha256": "a9b870644d524af2b2b124931f5f3352a1e91e039c8d71aafa22389415137a16"
+    },
+    {
+      "path": "halo-5090/results/benchmarks/raw/h5-gpqa-off.bin.meta",
+      "bytes": 2154,
+      "sha256": "b432220ab4bc3b0197ad51321c8324d0957c5f4ff06bd1becd67f423bbd22e52"
+    },
+    {
+      "path": "halo-5090/results/benchmarks/raw/h5-gpqa-off.bin.score.json",
+      "bytes": 826,
+      "sha256": "f24d49484aa0a088f8673cd5ade1f266477ec07e27b4ef92b6e1d5819d5deed0"
+    },
+    {
+      "path": "halo-5090/results/benchmarks/raw/h5-gpqa-off.bin.timing.json",
+      "bytes": 184,
+      "sha256": "3413caed197b9ca706012de6837009378b7e63caffb82709aab319f2ff5b1cd4"
+    },
+    {
+      "path": "halo-5090/results/benchmarks/raw/h5-gpqa-on.bin.meta",
+      "bytes": 2195,
+      "sha256": "1b35e857c5c9b2bf1050e68229d359fd6552c898e72b2ae51f8bcbb72b1c861d"
+    },
+    {
+      "path": "halo-5090/results/benchmarks/raw/h5-gpqa-on.bin.score.json",
+      "bytes": 820,
+      "sha256": "29fb0c26fee83c247ea4dc5060a2b44cf396f1fa959d56b29ea60b8c7546f2a7"
+    },
+    {
+      "path": "halo-5090/results/benchmarks/raw/h5-gpqa-on.bin.timing.json",
+      "bytes": 186,
+      "sha256": "f24b78f5e783886bd14435f4e5a429320214429f95e5f6a5ccbe5d99f01b823b"
+    },
+    {
+      "path": "halo-5090/results/benchmarks/raw/h5-math500-on.bin.meta",
+      "bytes": 4857,
+      "sha256": "e7bc559acb338748ff0d54ea2a88df6464833c99e5f181df05a30164797aff51"
+    },
+    {
+      "path": "halo-5090/results/benchmarks/raw/h5-math500-on.bin.score.json",
+      "bytes": 1695,
+      "sha256": "4c0654c14290dd9fc09a9299ab0e55042990934cd63c355886b52765c07f92ff"
+    },
+    {
+      "path": "halo-5090/results/benchmarks/raw/h5-math500-on.bin.timing.json",
+      "bytes": 184,
+      "sha256": "346cce547902183d8c18e6691abe836c60efa9ddef2c55a63a4e49033a7ae1a4"
+    },
+    {
+      "path": "halo-5090/results/combined/bf16-4k.log",
+      "bytes": 2351,
+      "sha256": "ff3c37e54ce38c0034b1a9443f036c3c9f9d63abd5643051c0fe8fdeea941f19"
+    },
+    {
+      "path": "halo-5090/results/combined/bf16-baseline.gsm.txt",
+      "bytes": 208,
+      "sha256": "eb39cf221113d7045fe770c26915609ef5eb53c839f6ee5c240b13721a832536"
+    },
+    {
+      "path": "halo-5090/results/combined/bf16-baseline.load1.txt",
+      "bytes": 725,
+      "sha256": "82f7eafdfb56b006d30672ab6d5bd4741027e98c46daf7c4123f6439b114a837"
+    },
+    {
+      "path": "halo-5090/results/combined/bf16-baseline.load64.txt",
+      "bytes": 695,
+      "sha256": "c3f1a85e0c2725c372b00ab0af02579b0c03d0fe4dcaf92ede8df7912d8f25e7"
+    },
+    {
+      "path": "halo-5090/results/combined/bf16-baseline.meta.json",
+      "bytes": 243,
+      "sha256": "ea04c37452c175036577ad0add06de9118fc72277dcf7ce841439605e0316da2"
+    },
+    {
+      "path": "halo-5090/results/combined/bf16-baseline.metrics",
+      "bytes": 164,
+      "sha256": "733c962572e3c46f6dbbb97e5110e2c7cd99800d2ddcaf71419e296ca0c49092"
+    },
+    {
+      "path": "halo-5090/results/combined/bf16-full.gsm.txt",
+      "bytes": 218,
+      "sha256": "5309532fe8ca8bf70e10c18ba1ff126714fa3a007b29a64fb42d3f945ae398d1"
+    },
+    {
+      "path": "halo-5090/results/combined/bf16-full.meta.json",
+      "bytes": 273,
+      "sha256": "3860a0422347e48c721b0611256d3f66c65563526905842e8d14a8f7b286da9f"
+    },
+    {
+      "path": "halo-5090/results/combined/bf16-full.metrics",
+      "bytes": 162,
+      "sha256": "82b7e70753f08159a3a34c809a04e70f75d946b099a29e23d64e1157ebab5876"
+    },
+    {
+      "path": "halo-5090/results/combined/cut--1.gsm.txt",
+      "bytes": 209,
+      "sha256": "2730d95bf679f915a7b457dc56263a62dfd027c8704bcd418b95c7cc4d75d0dd"
+    },
+    {
+      "path": "halo-5090/results/combined/cut--1.meta.json",
+      "bytes": 371,
+      "sha256": "8220b3f6338b3f259c9c6080ff048c015202218b882bae1c29f8f952fd164b30"
+    },
+    {
+      "path": "halo-5090/results/combined/cut--1.metrics",
+      "bytes": 162,
+      "sha256": "35fb93f06ba2d00cd11c0551e5978b356887ce19cb803c0c5b8c3f45bfbfb10f"
+    },
+    {
+      "path": "halo-5090/results/combined/cut-0.3.gsm.txt",
+      "bytes": 207,
+      "sha256": "9986017f062bd43decaf46ebb720a5e8033100aad5b236decad837c829e57409"
+    },
+    {
+      "path": "halo-5090/results/combined/cut-0.3.meta.json",
+      "bytes": 374,
+      "sha256": "411cffdd3262d9edc1a7942daa5bbf59788b075a414e2b11cfb327fd85573ff1"
+    },
+    {
+      "path": "halo-5090/results/combined/cut-0.3.metrics",
+      "bytes": 160,
+      "sha256": "b1174013350aae9e7a7bf442761128f355cf1adfb8608b638561b12dd048c49c"
+    },
+    {
+      "path": "halo-5090/results/combined/cut-2.gsm.txt",
+      "bytes": 210,
+      "sha256": "8ec447009153d394059da610e0f55ca610bfcfb592231f846b23350656f06c7a"
+    },
+    {
+      "path": "halo-5090/results/combined/cut-2.meta.json",
+      "bytes": 368,
+      "sha256": "e8e94ee0d39c8575b718b4f76e65b57cb35144aada16b6ebe58b6a2286a01ac5"
+    },
+    {
+      "path": "halo-5090/results/combined/cut-2.metrics",
+      "bytes": 161,
+      "sha256": "591f4d33f94605c9a01b38851703f241bcf2fb184f1e54bf6276d4f1b2e8bfa3"
+    },
+    {
+      "path": "halo-5090/results/combined/draftwindow-256.gsm.txt",
+      "bytes": 210,
+      "sha256": "2e7539d12f502a023fccda40e864f0d5a54892e316c10bb44eedc4b2e3fdfe09"
+    },
+    {
+      "path": "halo-5090/results/combined/draftwindow-256.meta.json",
+      "bytes": 333,
+      "sha256": "fe99bce0412748c288a7f24e54339b8b1ca8ad3e6e9516365c0e784e6c5641a1"
+    },
+    {
+      "path": "halo-5090/results/combined/draftwindow-256.metrics",
+      "bytes": 161,
+      "sha256": "4e839d3bd1c1c0ecc6433b5e4e3ca1d176cc7baa942010b70cb998829f747d22"
+    },
+    {
+      "path": "halo-5090/results/combined/draftwindow-512.gsm.txt",
+      "bytes": 209,
+      "sha256": "b1087cb341fe318286692b378de5878e9d9fbd5b340e59f79946b24451be5887"
+    },
+    {
+      "path": "halo-5090/results/combined/draftwindow-512.meta.json",
+      "bytes": 333,
+      "sha256": "524f7d824716ed73b6efbb7c6ef286bcbcf27a845687e7ab29717b993ef664ee"
+    },
+    {
+      "path": "halo-5090/results/combined/draftwindow-512.metrics",
+      "bytes": 160,
+      "sha256": "135cfdcf5ca07abed1e84a5ab9c380adcbd2e7123d1800fe9db79d4d2cbfa3e1"
+    },
+    {
+      "path": "halo-5090/results/combined/exact-spectest.log",
+      "bytes": 251,
+      "sha256": "4c815f62f8caad2b38dbfbba2051b4e15ca723fc3b254fb0048cfffe1432acb8"
+    },
+    {
+      "path": "halo-5090/results/combined/fp16-4k.log",
+      "bytes": 2290,
+      "sha256": "b2909e230cc9b81d481193b7821804a4229b8a1b6452fec68c8c2200d49c3b1b"
+    },
+    {
+      "path": "halo-5090/results/combined/fp16-80.meta.json",
+      "bytes": 324,
+      "sha256": "0db1a669b9fb25dabef52f87ddda6efe66c544bfc51b4878727f6af7eb7545a2"
+    },
+    {
+      "path": "halo-5090/results/combined/fp16-96-2k.gsm.txt",
+      "bytes": 218,
+      "sha256": "785c6dbff1b6a6a1dc34bc8b79a9a1caca2fec00728fab1294a8ef6b438197b5"
+    },
+    {
+      "path": "halo-5090/results/combined/fp16-96-2k.load96.txt",
+      "bytes": 537,
+      "sha256": "e5709be82d2f4fcf7840a12ea0f9650041d97754c8b341bf32c74f71ee7e4df7"
+    },
+    {
+      "path": "halo-5090/results/combined/fp16-96-2k.meta.json",
+      "bytes": 327,
+      "sha256": "2819869436be2ccccef5d0eadbab80b8c432f10217be3e8a2364dd1f2aac60a1"
+    },
+    {
+      "path": "halo-5090/results/combined/fp16-96-2k.metrics",
+      "bytes": 166,
+      "sha256": "d75e620b6972db3c3ae7584a02b14221376df716694f96ffdeeffd01db78030b"
+    },
+    {
+      "path": "halo-5090/results/combined/fp16-control.gsm.txt",
+      "bytes": 219,
+      "sha256": "443af6b4830893a70310c1e465fed2c679f008bd65a0fe59f702afb7c0492729"
+    },
+    {
+      "path": "halo-5090/results/combined/fp16-control.load1.txt",
+      "bytes": 728,
+      "sha256": "1d5d6f7f421c097bbd0420b6fb3b468208d871c6d461c3b30a85617220ded413"
+    },
+    {
+      "path": "halo-5090/results/combined/fp16-control.load32.txt",
+      "bytes": 728,
+      "sha256": "a513647d08af3340e530738c58aea0b5b8541b5b0684828e0bfdfffea0125032"
+    },
+    {
+      "path": "halo-5090/results/combined/fp16-control.load64.txt",
+      "bytes": 502,
+      "sha256": "44f2bcc1c0839afa206c29ed84bc8cf6c19d533373b49059610804d60b344982"
+    },
+    {
+      "path": "halo-5090/results/combined/fp16-control.load8.txt",
+      "bytes": 663,
+      "sha256": "4289f845805a45d5c9f5a032dd38ae812dad5f149012a3a58f94af1195de6471"
+    },
+    {
+      "path": "halo-5090/results/combined/fp16-control.meta.json",
+      "bytes": 195,
+      "sha256": "5c939c44f206794eaebd98310cdecd31cb127ed84dbe3e8c8c98cbc7ae5068b3"
+    },
+    {
+      "path": "halo-5090/results/combined/fp16-control.metrics",
+      "bytes": 166,
+      "sha256": "183db898764976ba45811265abcd210fdb8095e2535aaa4f05746450a7b30a75"
+    },
+    {
+      "path": "halo-5090/results/combined/fp16-delta-full.gsm.txt",
+      "bytes": 218,
+      "sha256": "26060545e0e50c6cf952abe7f11fcfc633f40b25fe4a097301a471619302c6ff"
+    },
+    {
+      "path": "halo-5090/results/combined/fp16-delta-full.load1.txt",
+      "bytes": 749,
+      "sha256": "06d456eb0d4adc2520e0a74a0a6201bd7ef2eab784f5833a13dc10a868852935"
+    },
+    {
+      "path": "halo-5090/results/combined/fp16-delta-full.load32.txt",
+      "bytes": 681,
+      "sha256": "1cefa24709815d89f763b5681d0bd750cf88401fde37e3540048db763b4a1720"
+    },
+    {
+      "path": "halo-5090/results/combined/fp16-delta-full.load64.txt",
+      "bytes": 523,
+      "sha256": "d5eca09eeac4b978b879f5f7265026ab303ab685925719cde6cfb38ed7194124"
+    },
+    {
+      "path": "halo-5090/results/combined/fp16-delta-full.load8.txt",
+      "bytes": 690,
+      "sha256": "65968f38eda9acb7d5f1a509241b71ed1794965c236a1ba5d4778fe64d132695"
+    },
+    {
+      "path": "halo-5090/results/combined/fp16-delta-full.meta.json",
+      "bytes": 343,
+      "sha256": "b595e3e49469f05bd20e8d827737a18c1fb8f5cdc77e035eb0903f490d56543e"
+    },
+    {
+      "path": "halo-5090/results/combined/fp16-delta-full.metrics",
+      "bytes": 168,
+      "sha256": "d79a707de2295fb1e1a5f50e159aa219cb5bd07154b93e4fce831e1a96fcf529"
+    },
+    {
+      "path": "halo-5090/results/combined/fp16-delta-full.rate12.json",
+      "bytes": 14025,
+      "sha256": "08038f88e67de4c727ac54f1f69b86b3158d99f0380eb41778082d681e309e65"
+    },
+    {
+      "path": "halo-5090/results/combined/fp16-delta-full.rate12.txt",
+      "bytes": 737,
+      "sha256": "89a000f5deff42807e428a9953a730e96ffb2cfcb25f62cfadae669735dca08d"
+    },
+    {
+      "path": "halo-5090/results/combined/fp16-delta-full.rate4.json",
+      "bytes": 14007,
+      "sha256": "5ecd65b0dd6f009a8f6cafdb7b74f2d82e95a38ca9340d7e211deb5cdb287cae"
+    },
+    {
+      "path": "halo-5090/results/combined/fp16-delta-full.rate4.txt",
+      "bytes": 753,
+      "sha256": "16f3c3a8eabc8976629e2d3a75630b237437e2a8505536c4a8364f63589871f3"
+    },
+    {
+      "path": "halo-5090/results/combined/fp16-delta.gsm.txt",
+      "bytes": 209,
+      "sha256": "ba2bbe884a4a9b9055effff1b61ed3edbbee796bee8cf1eef2d1d29d30daf6ad"
+    },
+    {
+      "path": "halo-5090/results/combined/fp16-delta.load1.txt",
+      "bytes": 726,
+      "sha256": "03900e007e69c069e760becb12a2f32e2b72ad07df2ff7d96335c5a80a7c90a9"
+    },
+    {
+      "path": "halo-5090/results/combined/fp16-delta.load64.txt",
+      "bytes": 657,
+      "sha256": "90a89c351dd937d58e14e30cd77c4c4a992903a478824a0f5592d44a65b287d8"
+    },
+    {
+      "path": "halo-5090/results/combined/fp16-delta.meta.json",
+      "bytes": 291,
+      "sha256": "f16d9152ff8e90e36afa75f4b1cb14c3509148199fa62f7e97624a9ae286498d"
+    },
+    {
+      "path": "halo-5090/results/combined/fp16-delta.metrics",
+      "bytes": 164,
+      "sha256": "b7141c06b49feeb6fad3ff75be7f7f5ff07d45906e0008137805ab79505bfd73"
+    },
+    {
+      "path": "halo-5090/results/combined/fp16-normal-4k.log",
+      "bytes": 2228,
+      "sha256": "505fc1ea5a584b0b34993b066ec1f517081d70fe318ada5009f49ec5d5610296"
+    },
+    {
+      "path": "halo-5090/results/combined/fp16-scales-full.gsm.txt",
+      "bytes": 219,
+      "sha256": "ef067181802f46801d37b2301da46e03a7cc0ab53818f111a2ddb0cf43d70897"
+    },
+    {
+      "path": "halo-5090/results/combined/fp16-scales-full.meta.json",
+      "bytes": 282,
+      "sha256": "636452e26a8a129c03d2e7509386bc99df67654f366d77274f24efd660a0de2a"
+    },
+    {
+      "path": "halo-5090/results/combined/fp16-scales-full.metrics",
+      "bytes": 163,
+      "sha256": "8148872952c26d7b16731ed2d9a75102c0abac21a9c05214c5853520231da3ea"
+    },
+    {
+      "path": "halo-5090/results/combined/fp16-single-greedy.log",
+      "bytes": 263,
+      "sha256": "a23ee9a26bd9a782471813e13e9a3bdc21e9f849fdbb86db618d522abc9c5271"
+    },
+    {
+      "path": "halo-5090/results/combined/gdn-cg16.log",
+      "bytes": 2064,
+      "sha256": "482d002a9df51c3b2beb1fbcc0a40884d665f6c06648dca06bbf5409649bc67f"
+    },
+    {
+      "path": "halo-5090/results/combined/gdn-cg4.log",
+      "bytes": 2064,
+      "sha256": "e69368e192c4becf3eacea788f83b97f6636b26f7708797bb570edd576121890"
+    },
+    {
+      "path": "halo-5090/results/combined/gdn-cg8.log",
+      "bytes": 2064,
+      "sha256": "dd5a1aeaa9e20adcbedafe16cfebe863f8d0b07ca001ec8bcc644c32cb52bb18"
+    },
+    {
+      "path": "halo-5090/results/combined/graph512.gsm.txt",
+      "bytes": 206,
+      "sha256": "1dddf862b3fa0bf9821d679659c3f2ee202cfdfdad59fc78afe958c23f65884a"
+    },
+    {
+      "path": "halo-5090/results/combined/graph512.meta.json",
+      "bytes": 336,
+      "sha256": "38b897ddcade4da7cc36b897b0b6ea192ed3871fe167571f77694ebd65a5899a"
+    },
+    {
+      "path": "halo-5090/results/combined/graph512.metrics",
+      "bytes": 162,
+      "sha256": "c6cb60863315eed43771b8941e363f3878e89bdcce0d147f5ca5beb482fe293c"
+    },
+    {
+      "path": "halo-5090/results/combined/prefix.txt",
+      "bytes": 10331,
+      "sha256": "0ff467b4d33c2c6230fcd654e1bf5e8dbb167443b8586e9e4308afe6384d43d5"
+    },
+    {
+      "path": "halo-5090/results/combined/unfused.gsm.txt",
+      "bytes": 209,
+      "sha256": "1ad4da6dbdfe159197b864213d496cdb73b886383ec65c582befdd7bba6b0aed"
+    },
+    {
+      "path": "halo-5090/results/combined/unfused.meta.json",
+      "bytes": 370,
+      "sha256": "a3c4c4f9a7342d19916a53255d10a7a5a1a861594cd385e994b7dccf8ba16025"
+    },
+    {
+      "path": "halo-5090/results/combined/unfused.metrics",
+      "bytes": 162,
+      "sha256": "6d9b1cfe1b01d47bef1bd7bc99b53d91d133d7bccc61f61c37925732e0c72e5e"
+    },
+    {
+      "path": "halo-5090/results/dense5/host.jsonl",
+      "bytes": 132,
+      "sha256": "31b85418f7d907e2d1698921daae01d083f423360c2bc8c6bec7cd3edd71d616"
+    },
+    {
+      "path": "halo-5090/results/dense5/input-sha256.txt",
+      "bytes": 95,
+      "sha256": "c3207ca2c5ecfac2b6a8df1f3c369f14fc986af2b99af2c1eed4e2e089a1338c"
+    },
+    {
+      "path": "halo-5090/results/dense5/native.jsonl",
+      "bytes": 9600,
+      "sha256": "7302e4dce00cec138096e027ca0ddd321742002766d8f3f64d6caf6bfd10eb3f"
+    },
+    {
+      "path": "halo-5090/results/dense5/result.json",
+      "bytes": 4672,
+      "sha256": "cf42e9b96f716ce1dedd38d158a6c9d45253cfb1874bdc215ca3b67e36b284be"
+    },
+    {
+      "path": "halo-5090/results/integrated-text/prompts.json",
+      "bytes": 573,
+      "sha256": "7570884ee916c18bccd66b3af10fb230b1f01a099064ba277e2f3c5122776c5e"
+    },
+    {
+      "path": "halo-5090/results/integrated-text/requests.jsonl",
+      "bytes": 31964,
+      "sha256": "c4c4ec38b3dca07dba47afdb2f5e0c18c822650a3b6965e8fe1c1131903a3b50"
+    },
+    {
+      "path": "halo-5090/results/integrated-text/summary.json",
+      "bytes": 1283,
+      "sha256": "4d7559bb5cbea49b3ad53133e22cefca12eec047f7e6ae82d98bc84fbf3864b2"
+    },
+    {
+      "path": "halo-5090/results/integrated-text/warmup.json",
+      "bytes": 1245,
+      "sha256": "0024dc778243b1cee100880668e88a3b77f28fda897a826269c826aca0b16777"
+    },
+    {
+      "path": "halo-5090/results/integrated-vision/responses.json",
+      "bytes": 5395,
+      "sha256": "e9f963fa471be4a0d420a3dde6d69241814d12759854d4806271c54ccf6f662d"
+    },
+    {
+      "path": "halo-5090/results/integrated-vision/speculation.json",
+      "bytes": 9714,
+      "sha256": "d4ad4f9bd98d38cb80115e9a99ea3842a61b1ee543926b97a72ebc2593d4ad1b"
+    },
+    {
+      "path": "halo-5090/results/integrated-vision/stream.txt",
+      "bytes": 1738,
+      "sha256": "ddd27fd9a7e4b6089ca7233a70b2e69deaec088f7ea8943ba4c5224c57495c3d"
+    },
+    {
+      "path": "halo-5090/results/integrated-vision-tasks/requests.jsonl",
+      "bytes": 16249,
+      "sha256": "ebf32089c5392af554d6705ee966184c330285c35f83297b5ef52aec6e4fd751"
+    },
+    {
+      "path": "halo-5090/results/integrated-vision-tasks/summary.json",
+      "bytes": 118,
+      "sha256": "7a8f662668f231d9c49ac38a22eae913355313b865af1ee3ef2491c92047d1ce"
+    },
+    {
+      "path": "halo-5090/results/integrated-vision-tasks/tasks.json",
+      "bytes": 779,
+      "sha256": "a387d8b2222f5e7f2e013f62d8901825acabebfdf25f7feec4e11d08b8fc689f"
+    },
+    {
+      "path": "halo-5090/results/loadtest-base.jsonl",
+      "bytes": 1673,
+      "sha256": "37934dee7a22616e5bab3a3ebe30b9f12b49ac7029ed84c45bc37969ab8e5e5a"
+    },
+    {
+      "path": "halo-5090/results/loadtest-v4.jsonl",
+      "bytes": 1676,
+      "sha256": "3e4f7e9d3426c16fd96c6dcbafbbf580a7fe9ff3ea55b5674e360b2c6f4829d9"
+    },
+    {
+      "path": "halo-5090/results/prefix4k.txt",
+      "bytes": 10331,
+      "sha256": "0ff467b4d33c2c6230fcd654e1bf5e8dbb167443b8586e9e4308afe6384d43d5"
+    },
+    {
+      "path": "halo-5090/results/single-stream/anchor-anchor/prompts.json",
+      "bytes": 573,
+      "sha256": "7570884ee916c18bccd66b3af10fb230b1f01a099064ba277e2f3c5122776c5e"
+    },
+    {
+      "path": "halo-5090/results/single-stream/anchor-anchor/requests.jsonl",
+      "bytes": 30716,
+      "sha256": "36261aeaef57eb02f5b978c47c7d1f86f9e75325e3838b5b904577aa35f5cb3e"
+    },
+    {
+      "path": "halo-5090/results/single-stream/anchor-anchor/summary.json",
+      "bytes": 1398,
+      "sha256": "205af36978c01b95e9ecdce6c85386fba9a2450be85a44bd36495d1fa1e1bf25"
+    },
+    {
+      "path": "halo-5090/results/single-stream/anchor-anchor/warmup.json",
+      "bytes": 1235,
+      "sha256": "dd47671ed018ccc83c206641e7ea25792dfd2255302149fbff176e4dc905b326"
+    },
+    {
+      "path": "halo-5090/results/single-stream/anchor-bonus/prompts.json",
+      "bytes": 573,
+      "sha256": "7570884ee916c18bccd66b3af10fb230b1f01a099064ba277e2f3c5122776c5e"
+    },
+    {
+      "path": "halo-5090/results/single-stream/anchor-bonus/requests.jsonl",
+      "bytes": 31967,
+      "sha256": "c7f47806a793626204e8c68f9e36cc2542a9011499398c98e332d72bcbeb40dd"
+    },
+    {
+      "path": "halo-5090/results/single-stream/anchor-bonus/summary.json",
+      "bytes": 1388,
+      "sha256": "a093594de89690134f073af04cb877d56728f6091c2eab7c1b4f035060ff3035"
+    },
+    {
+      "path": "halo-5090/results/single-stream/anchor-bonus/warmup.json",
+      "bytes": 1234,
+      "sha256": "18b667b5fcce3cbaa758b9103662f29249c859dc78bd452438eda61a68b97b89"
+    },
+    {
+      "path": "halo-5090/results/single-stream/compact-margin-0/prompts.json",
+      "bytes": 573,
+      "sha256": "7570884ee916c18bccd66b3af10fb230b1f01a099064ba277e2f3c5122776c5e"
+    },
+    {
+      "path": "halo-5090/results/single-stream/compact-margin-0/requests.jsonl",
+      "bytes": 32668,
+      "sha256": "62a7e380dbb9978ff87101fe4967f033e25e6e895ed0497c66821bee24ae469b"
+    },
+    {
+      "path": "halo-5090/results/single-stream/compact-margin-0/summary.json",
+      "bytes": 1297,
+      "sha256": "7310b34c132163e8dd0db47304c8f3a46002f39eadc9f852e70a2fd6dbd64794"
+    },
+    {
+      "path": "halo-5090/results/single-stream/compact-margin-0/warmup.json",
+      "bytes": 1268,
+      "sha256": "1a835512aff77be8c6cfbe00a682ccff879d5ec8c6387280ad1d5e5094b2f23d"
+    },
+    {
+      "path": "halo-5090/results/single-stream/compact-margin-0.25/prompts.json",
+      "bytes": 573,
+      "sha256": "7570884ee916c18bccd66b3af10fb230b1f01a099064ba277e2f3c5122776c5e"
+    },
+    {
+      "path": "halo-5090/results/single-stream/compact-margin-0.25/requests.jsonl",
+      "bytes": 32042,
+      "sha256": "131c54990b1df94a2806996eaf9f69843324c6d6dff31224fe066f0d20ef1349"
+    },
+    {
+      "path": "halo-5090/results/single-stream/compact-margin-0.25/summary.json",
+      "bytes": 1293,
+      "sha256": "52e631394c3149f3aa793b53542e04498df5b339f582731b842f18582bd0111b"
+    },
+    {
+      "path": "halo-5090/results/single-stream/compact-margin-0.25/warmup.json",
+      "bytes": 1178,
+      "sha256": "896394a97db0c0b3c58964876df1a747dd57484c171c525d1cfeb94e7707e866"
+    },
+    {
+      "path": "halo-5090/results/single-stream/compact-margin-1/prompts.json",
+      "bytes": 573,
+      "sha256": "7570884ee916c18bccd66b3af10fb230b1f01a099064ba277e2f3c5122776c5e"
+    },
+    {
+      "path": "halo-5090/results/single-stream/compact-margin-1/requests.jsonl",
+      "bytes": 32960,
+      "sha256": "3fdce0c6f71169a2df6bfa25fc99401b862d60e9627e612be9817adafcb40bc7"
+    },
+    {
+      "path": "halo-5090/results/single-stream/compact-margin-1/summary.json",
+      "bytes": 1291,
+      "sha256": "0e3fc8132b04b1ac42a20bbdaa3c3ef7db3537090ec011a6877bf5910c869779"
+    },
+    {
+      "path": "halo-5090/results/single-stream/compact-margin-1/warmup.json",
+      "bytes": 1211,
+      "sha256": "16bdb07772e7e1e8f9da7217149716cea7d35718049fe485efccf5e257054559"
+    },
+    {
+      "path": "halo-5090/results/single-stream/gsm8k-selected128.json",
+      "bytes": 75665,
+      "sha256": "703f7b05a83e8965fbfaea237d954e583760b5d56efa92e3c33e749db613bdcc"
+    },
+    {
+      "path": "halo-5090/results/single-stream/ordinary-baseline.log",
+      "bytes": 265,
+      "sha256": "19b2ebc9401c12d12ad52694705626aa38b0ffa99f925cd39299b11d7ed7f4fc"
+    },
+    {
+      "path": "halo-5090/results/single-stream/quality128-margin-0/prompts.json",
+      "bytes": 41340,
+      "sha256": "d7a53ca1c317f8f6b410d5a497b14be77d56b4a2fbdf4735c4e668556fc570a0"
+    },
+    {
+      "path": "halo-5090/results/single-stream/quality128-margin-0/requests.jsonl",
+      "bytes": 186039,
+      "sha256": "430779ae4c7c58eba97b6b15cafc9eafb456fef5e2b7c145e14939ba83cced2c"
+    },
+    {
+      "path": "halo-5090/results/single-stream/quality128-margin-0/score.json",
+      "bytes": 170,
+      "sha256": "f2ebe15e9cc200f4b3030ff6e23eec3f761050f898670b269bd4a2a81dd39e9e"
+    },
+    {
+      "path": "halo-5090/results/single-stream/quality128-margin-0/summary.json",
+      "bytes": 1295,
+      "sha256": "562229c20d96ac7ebd9fb87cc87ad7be78093ec2547ac1611acba68e0888b612"
+    },
+    {
+      "path": "halo-5090/results/single-stream/quality128-margin-0/warmup.json",
+      "bytes": 917,
+      "sha256": "83ef603422a47924fe9354d4bb3165d57d7fb40853d6be5ab3f13e7b6008eb0b"
+    },
+    {
+      "path": "halo-5090/results/single-stream/quality128-margin-0.25/prompts.json",
+      "bytes": 41340,
+      "sha256": "d7a53ca1c317f8f6b410d5a497b14be77d56b4a2fbdf4735c4e668556fc570a0"
+    },
+    {
+      "path": "halo-5090/results/single-stream/quality128-margin-0.25/requests.jsonl",
+      "bytes": 185688,
+      "sha256": "ad0f9e4543fddf7d00283228450dc6ae7e4e648c42beca9d289aae22dde8fa53"
+    },
+    {
+      "path": "halo-5090/results/single-stream/quality128-margin-0.25/score.json",
+      "bytes": 62,
+      "sha256": "58b36a181d8ac0f16817bf6ae8320b8f282d18988a82dc08d0662ae5313527c0"
+    },
+    {
+      "path": "halo-5090/results/single-stream/quality128-margin-0.25/summary.json",
+      "bytes": 1289,
+      "sha256": "3add20eb84eb79a9e4e69f12cc07968b3371d18c58862ce64242f9b07f3227a1"
+    },
+    {
+      "path": "halo-5090/results/single-stream/quality128-margin-0.25/warmup.json",
+      "bytes": 924,
+      "sha256": "98fdf55f0261eb62996b83c296c617a3fd9cc8e2806d0b3431713071fdcb88f8"
+    },
+    {
+      "path": "halo-5090/results/single-stream/quality128-margin-1/prompts.json",
+      "bytes": 41340,
+      "sha256": "d7a53ca1c317f8f6b410d5a497b14be77d56b4a2fbdf4735c4e668556fc570a0"
+    },
+    {
+      "path": "halo-5090/results/single-stream/quality128-margin-1/requests.jsonl",
+      "bytes": 185915,
+      "sha256": "4019729259cee0c92d787febd763238b30acb268276333187b08fb4582cc6d4b"
+    },
+    {
+      "path": "halo-5090/results/single-stream/quality128-margin-1/score.json",
+      "bytes": 175,
+      "sha256": "305da413796a2436c508183991425c4ae2c150e1de2e777b9d34ee25ed377106"
+    },
+    {
+      "path": "halo-5090/results/single-stream/quality128-margin-1/summary.json",
+      "bytes": 1303,
+      "sha256": "36341dd04a94dbd77a751a7364f68314f8657240bbf5a952a5c2c634eb3d60f4"
+    },
+    {
+      "path": "halo-5090/results/single-stream/quality128-margin-1/warmup.json",
+      "bytes": 888,
+      "sha256": "04b2449255eb8cfae2e9f5bc5280b436c8deb9740a656e6766d5a6242252aaeb"
+    },
+    {
+      "path": "halo-5090/results/single-stream/single-baseline/prompts.json",
+      "bytes": 573,
+      "sha256": "7570884ee916c18bccd66b3af10fb230b1f01a099064ba277e2f3c5122776c5e"
+    },
+    {
+      "path": "halo-5090/results/single-stream/single-baseline/requests.jsonl",
+      "bytes": 32456,
+      "sha256": "e122d9ce53505ddcd35552cc20cf422ac715153808cc921168aec8f26ab66eec"
+    },
+    {
+      "path": "halo-5090/results/single-stream/single-baseline/summary.json",
+      "bytes": 1231,
+      "sha256": "40bde7dd572957472881174762046a7c25425258109cb07cd275f8075595d05c"
+    },
+    {
+      "path": "halo-5090/results/single-stream/single-baseline/warmup.json",
+      "bytes": 1226,
+      "sha256": "d80382333cbd86dd8f37f056c0330c4e695d1b23d38528f1f1dae4d71e7d298e"
+    },
+    {
+      "path": "halo-5090/results/single-stream/single-e4m3/prompts.json",
+      "bytes": 573,
+      "sha256": "7570884ee916c18bccd66b3af10fb230b1f01a099064ba277e2f3c5122776c5e"
+    },
+    {
+      "path": "halo-5090/results/single-stream/single-e4m3/requests.jsonl",
+      "bytes": 33273,
+      "sha256": "bc3cc9ab548543b4929f8dc3e9d09262b3e55380e48a0a61491856fad8419408"
+    },
+    {
+      "path": "halo-5090/results/single-stream/single-e4m3/summary.json",
+      "bytes": 1252,
+      "sha256": "208c37d41c489aec7772ffa978ad8ffc47897b1ce469e32b1e4c58712144181f"
+    },
+    {
+      "path": "halo-5090/results/single-stream/single-e4m3/warmup.json",
+      "bytes": 1210,
+      "sha256": "bb5c4e5eada321e419d887e05d05f7c53a59e8624bf243a58b866bbe5d46fc7e"
+    },
+    {
+      "path": "halo-5090/results/tree-gsm-base/prompts.json",
+      "bytes": 41340,
+      "sha256": "d7a53ca1c317f8f6b410d5a497b14be77d56b4a2fbdf4735c4e668556fc570a0"
+    },
+    {
+      "path": "halo-5090/results/tree-gsm-base/requests.jsonl",
+      "bytes": 183949,
+      "sha256": "301145117cbbcf1bc458d10edf149a35a292e5f9dc0b08ecd97a667d7e83cad0"
+    },
+    {
+      "path": "halo-5090/results/tree-gsm-base/score.json",
+      "bytes": 20158,
+      "sha256": "694ae34c16e163a38023a13753080df76a0cf0cf940c002b72d3b991ca7cd0ee"
+    },
+    {
+      "path": "halo-5090/results/tree-gsm-base/summary.json",
+      "bytes": 1588,
+      "sha256": "fb3217ea3f785636ac466829ffd95438fd7b0cd0fa7599d6c55473c32d901306"
+    },
+    {
+      "path": "halo-5090/results/tree-gsm-base/warmup.json",
+      "bytes": 901,
+      "sha256": "7c53bc91c6548125826aed4c42748e7011981759153c697ce28a6175bc520baf"
+    },
+    {
+      "path": "halo-5090/results/tree-gsm-two/prompts.json",
+      "bytes": 41340,
+      "sha256": "d7a53ca1c317f8f6b410d5a497b14be77d56b4a2fbdf4735c4e668556fc570a0"
+    },
+    {
+      "path": "halo-5090/results/tree-gsm-two/requests.jsonl",
+      "bytes": 187024,
+      "sha256": "3fbefb106db1fef4e3b253d3d5ffe3ff9e971b58473822e6e16be7c61a0e4572"
+    },
+    {
+      "path": "halo-5090/results/tree-gsm-two/score.json",
+      "bytes": 20159,
+      "sha256": "d2535eca8b5d0c1a2b9e88ee5571fb68126cbbd421a48451a2d4adb97cadc4ab"
+    },
+    {
+      "path": "halo-5090/results/tree-gsm-two/summary.json",
+      "bytes": 1642,
+      "sha256": "9dcba1324bebd2c910c4a8bda1d08c34e0416ed7e6f7e3e2269b773963bcbd5a"
+    },
+    {
+      "path": "halo-5090/results/tree-gsm-two/warmup.json",
+      "bytes": 920,
+      "sha256": "406dce7d4c3827bf86117e900c5b65db73e7b0b155a320d7a6f13a1539801cc5"
+    },
+    {
+      "path": "halo-5090/results/tree-http-base/prompts.json",
+      "bytes": 573,
+      "sha256": "7570884ee916c18bccd66b3af10fb230b1f01a099064ba277e2f3c5122776c5e"
+    },
+    {
+      "path": "halo-5090/results/tree-http-base/requests.jsonl",
+      "bytes": 31520,
+      "sha256": "160d737135c48437f72ee894e98d6d5a89f37671cda4a4e8a15dd628cd51f707"
+    },
+    {
+      "path": "halo-5090/results/tree-http-base/summary.json",
+      "bytes": 1593,
+      "sha256": "5ac9dc0c97bf8c8522a705659760ef5847924a73dd3d3cfab08999ff0dfaa811"
+    },
+    {
+      "path": "halo-5090/results/tree-http-base/warmup.json",
+      "bytes": 1241,
+      "sha256": "2b4f1fd4648f7c0486cb0a3c41d4a62f2cfc49edb13ef4cc986e48cb37814b43"
+    },
+    {
+      "path": "halo-5090/results/tree-http-two/prompts.json",
+      "bytes": 573,
+      "sha256": "7570884ee916c18bccd66b3af10fb230b1f01a099064ba277e2f3c5122776c5e"
+    },
+    {
+      "path": "halo-5090/results/tree-http-two/requests.jsonl",
+      "bytes": 31482,
+      "sha256": "6814e3a8f2eae1f465ab4d6d323de72389484695f00175a84c6eb3138343bc8d"
+    },
+    {
+      "path": "halo-5090/results/tree-http-two/summary.json",
+      "bytes": 1623,
+      "sha256": "8000b2e3a462338d46015b9efd8da7ac5de20e2fa3d78df645cd871ac971025a"
+    },
+    {
+      "path": "halo-5090/results/tree-http-two/warmup.json",
+      "bytes": 1227,
+      "sha256": "9e44ec62986a26e5ca87f733d3c27f15e334e49100e58949061e9c24a60608ca"
+    },
+    {
+      "path": "halo-5090/results/vision-gpu-encode/green.json",
+      "bytes": 155,
+      "sha256": "e7f199e8ec7ed51c04012abf05a8a22616967f531a752a43bdf2b3447acc4892"
+    },
+    {
+      "path": "halo-5090/results/vision-gpu-encode/red.json",
+      "bytes": 153,
+      "sha256": "1e35cd1c0aa839d13075c26e55c2bdb111b416425f34a17e35c366e71550eb0f"
+    },
+    {
+      "path": "halo-5090/results/vision-gpu-spec/responses.json",
+      "bytes": 5391,
+      "sha256": "7ece8475175b364c90c91bfdc82785a28a4bffa14b16c015be4e24e39a222ee0"
+    },
+    {
+      "path": "halo-5090/results/vision-gpu-spec/speculation.json",
+      "bytes": 9606,
+      "sha256": "243835ed51a54ed04931ce2108c38340e6d1ae51c23eb75d1e360c9f24e08461"
+    },
+    {
+      "path": "halo-5090/results/vision-gpu-spec/stream.txt",
+      "bytes": 1372,
+      "sha256": "adde7efdcfd7b5cf47f418ab40bd17e358944e1dd9ce644af363c81c4fe1e69d"
+    },
+    {
+      "path": "halo-5090/results/vision-gpu-spec-control-fixed/responses.json",
+      "bytes": 5390,
+      "sha256": "42c20d5f15eac31cfcb458eec87de80ea2149a710821398bd1e7bd23596eaade"
+    },
+    {
+      "path": "halo-5090/results/vision-gpu-spec-control-fixed/speculation.json",
+      "bytes": 9723,
+      "sha256": "73f32038d1079805e54f2c179422b365b019d96c2eec6bde0fdb9c971acf83c0"
+    },
+    {
+      "path": "halo-5090/results/vision-gpu-spec-control-fixed/stream.txt",
+      "bytes": 1189,
+      "sha256": "4ca8453700202b8f5122fc97ae6d6a51a2ee0cd5d903b9408d0b10afaf8fb025"
+    },
+    {
+      "path": "halo-5090/results/vision-smoke/reference-red.json",
+      "bytes": 186,
+      "sha256": "a63eb0db70444ffd1423b7345b4919927f644d20a74e48db2b74138efffa47dd"
+    },
+    {
+      "path": "halo-5090/results/vision-smoke/reference-red.json.native.json",
+      "bytes": 350,
+      "sha256": "427aa9a53aacaa6c1ad447512a44395dbad438ca3cd704e4a31b91100ab22ecd"
+    },
+    {
+      "path": "halo-5090/results/vision-smoke/responses.json",
+      "bytes": 1867,
+      "sha256": "3b1249c689140fd3520435dbd5bb99f780da86fbdd80e4a58cbef611c85bac56"
+    },
+    {
+      "path": "halo-5090/results/vision-smoke/stream.txt",
+      "bytes": 3016,
+      "sha256": "2b90d64f02d84f98c2fb5ab76e3e544cfeaa727cf9b22b0a5bcaf37a733390e0"
+    },
+    {
+      "path": "halo-5090/results/vision-tasks/requests.jsonl",
+      "bytes": 16256,
+      "sha256": "6a489927cb7ecb0897548c78fd7a029ef748f29b935a7c85e3a7742de3da9bf7"
+    },
+    {
+      "path": "halo-5090/results/vision-tasks/summary.json",
+      "bytes": 118,
+      "sha256": "7a8f662668f231d9c49ac38a22eae913355313b865af1ee3ef2491c92047d1ce"
+    },
+    {
+      "path": "halo-5090/results/vision-tasks/tasks.json",
+      "bytes": 779,
+      "sha256": "a387d8b2222f5e7f2e013f62d8901825acabebfdf25f7feec4e11d08b8fc689f"
+    },
+    {
+      "path": "halo-5090/results/vision-tasks-fp16scale/requests.jsonl",
+      "bytes": 16256,
+      "sha256": "6a489927cb7ecb0897548c78fd7a029ef748f29b935a7c85e3a7742de3da9bf7"
+    },
+    {
+      "path": "halo-5090/results/vision-tasks-fp16scale/summary.json",
+      "bytes": 118,
+      "sha256": "7a8f662668f231d9c49ac38a22eae913355313b865af1ee3ef2491c92047d1ce"
+    },
+    {
+      "path": "halo-5090/results/vision-tasks-fp16scale/tasks.json",
+      "bytes": 779,
+      "sha256": "a387d8b2222f5e7f2e013f62d8901825acabebfdf25f7feec4e11d08b8fc689f"
+    },
+    {
+      "path": "halo-5090/src/attn.cu",
+      "bytes": 25308,
+      "sha256": "f384af4f9614fd56ea23815c384cf0f4c53ee356027f8b15fe3f48e4c30cd719"
+    },
+    {
+      "path": "halo-5090/src/chat.h",
+      "bytes": 1969,
+      "sha256": "443c5e596cee479002d2249833efdd6ea9e99f4342a5f85d3e1751e40e91183c"
+    },
+    {
+      "path": "halo-5090/src/compact.cuh",
+      "bytes": 650,
+      "sha256": "62160bf685f13a5b7534510c9c8ee92d76b729284caba02e748138795d4fe294"
+    },
+    {
+      "path": "halo-5090/src/compact.hpp",
+      "bytes": 1165,
+      "sha256": "0bb601c87e20bc05bcec43f34097933bccee2f5b14b3e4eb483ed215c79af7c9"
+    },
+    {
+      "path": "halo-5090/src/draft.cu",
+      "bytes": 11431,
+      "sha256": "1562aabf3c62d5f15040b24b55dc63d3294ec80afa75dbc3f07f284b079e901a"
+    },
+    {
+      "path": "halo-5090/src/draft_contract.h",
+      "bytes": 3335,
+      "sha256": "b93c0aea92eabbaadcdd9beccb51a12e01ed55aefecac3ba0656313ae7708f18"
+    },
+    {
+      "path": "halo-5090/src/engine.cu",
+      "bytes": 74863,
+      "sha256": "d6cfb5bd395a82bb7ece922640a0f6190f68d97bb9f038db4965bd80f1245847"
+    },
+    {
+      "path": "halo-5090/src/f1.cu",
+      "bytes": 20079,
+      "sha256": "f46b73e797cf6822c292166053560b09f14da0373a004cee01a9aa115336b7d1"
+    },
+    {
+      "path": "halo-5090/src/f1.cuh",
+      "bytes": 870,
+      "sha256": "b921b2ac82841f7132936d9ff1651714e9ea9a955dfac6043cf70b2e58add25c"
+    },
+    {
+      "path": "halo-5090/src/f1_epilogue.cuh",
+      "bytes": 2058,
+      "sha256": "457321fb89b8240d49ca21c28d247d25420a790ee94200cc10179bcdfca520d9"
+    },
+    {
+      "path": "halo-5090/src/f1_prep.cu",
+      "bytes": 2371,
+      "sha256": "9c42ee40c92cf01a6006a356e425a21cae7233fa45dbc6b8bce05d080680d88a"
+    },
+    {
+      "path": "halo-5090/src/f1_swar.cuh",
+      "bytes": 893,
+      "sha256": "883845e16119b676ef6a9e4f68dee10c843362340c3e7d62bfb1b29679cdb996"
+    },
+    {
+      "path": "halo-5090/src/fp4.cu",
+      "bytes": 19530,
+      "sha256": "dcd08c054f15b9497448bc6b63a8af479869efc753fd88d3a9f78eab8bbccb0a"
+    },
+    {
+      "path": "halo-5090/src/gguf.cpp",
+      "bytes": 3334,
+      "sha256": "83ef32470d4970fd8902961cfd2e95d41b0e0a734b16b631f31d2f7c28262581"
+    },
+    {
+      "path": "halo-5090/src/gguf.h",
+      "bytes": 685,
+      "sha256": "7fbf51c8b43ebca7f027791d2b407b655e31666107e317818d1606d454fa34e3"
+    },
+    {
+      "path": "halo-5090/src/kernels.cu",
+      "bytes": 36725,
+      "sha256": "19e9ad4f570df5c0e8d3c8e6b3bb2ae7e2e3f767d0a36263f7b6e0cef5e00ee8"
+    },
+    {
+      "path": "halo-5090/src/kernels.cuh",
+      "bytes": 7655,
+      "sha256": "96f1b086cf692e32534f76f978db5576df5f32bd740d3e24133d365a22c48925"
+    },
+    {
+      "path": "halo-5090/src/main.cpp",
+      "bytes": 23601,
+      "sha256": "cf16b7661d1ac163db8b2697c33248ec217ada3e1b2c14f14c944a00c77d08de"
+    },
+    {
+      "path": "halo-5090/src/mega.cu",
+      "bytes": 30048,
+      "sha256": "6d86c45001f3fa265b0bb6df9ab8af62585c527a535e0d5bdf45718ec396dc27"
+    },
+    {
+      "path": "halo-5090/src/model.h",
+      "bytes": 960,
+      "sha256": "99da38b3617ba6b18ce0d3a1931180fccbc3ee6996cc3ea8a7764521bc31e372"
+    },
+    {
+      "path": "halo-5090/src/pdl_clock.cuh",
+      "bytes": 2432,
+      "sha256": "93f0a0a8c9d9711f3f98659e1e0ec61063dfe6ef59b981c82c95dcb67d7f700b"
+    },
+    {
+      "path": "halo-5090/src/profile_trace.h",
+      "bytes": 922,
+      "sha256": "429f7c6a4750f1697065f997378143a825963d3b0fc557de38b345376df910d3"
+    },
+    {
+      "path": "halo-5090/src/server.cpp",
+      "bytes": 33495,
+      "sha256": "87f322184e3f0b0f3b6e08d311c71229ac6b5663b1f3d31a1d7f5230d92b5f52"
+    },
+    {
+      "path": "halo-5090/src/two_path_policy.h",
+      "bytes": 1361,
+      "sha256": "7aa813c222fa36d407829a7139653218da6c782534bddb0d09667aa9a5aad010"
+    },
+    {
+      "path": "halo-5090/src/two_path_runner.h",
+      "bytes": 11655,
+      "sha256": "c298e4fdfbf395a88d948d4f0e15de4f621a6b072d6cab886e16a6932c92c551"
+    },
+    {
+      "path": "halo-5090/src/vision.cpp",
+      "bytes": 7299,
+      "sha256": "341d4564db1618d1d665971680a1c60e85f42cf5ed2d034fe68a7f2f1815508c"
+    },
+    {
+      "path": "halo-5090/src/vision.h",
+      "bytes": 826,
+      "sha256": "0f9921fa963763caff61abaf045840cab1c0b3b8c9764a553d453c049618d422"
+    },
+    {
+      "path": "halo-5090/tools/analyze_profile.py",
+      "bytes": 2732,
+      "sha256": "ee6848a4cce317bcc96c853a96b64bf9ab0054b46e813fbaeccfecf635cc3fc7"
+    },
+    {
+      "path": "halo-5090/tools/bench_table.py",
+      "bytes": 2888,
+      "sha256": "8d459d1d6dbca0a520d06a8df6691f87cbfe78618f49d828198d1d923888d0ab"
+    },
+    {
+      "path": "halo-5090/tools/check_chat.cpp",
+      "bytes": 1302,
+      "sha256": "0763a248c4da0d6444f3e900fb21f50e699e9958e851d89faaadc4f450945365"
+    },
+    {
+      "path": "halo-5090/tools/evals.py",
+      "bytes": 16826,
+      "sha256": "d8f30c1c869e869150befca161e7c3a0c7def2f746b87e84c3b86650ff99171c"
+    },
+    {
+      "path": "halo-5090/tools/export_profile.py",
+      "bytes": 3126,
+      "sha256": "55b097cafb7c6904da3cf87377423576c50c5cde239f173025fbd37d6fd0c10f"
+    },
+    {
+      "path": "halo-5090/tools/gsm8k.py",
+      "bytes": 4984,
+      "sha256": "ef21640b8a3bb4e2ca5ea810b94ad9bf81d945fdcc22a661532e52ae64d0db91"
+    },
+    {
+      "path": "halo-5090/tools/gsm8k_server.py",
+      "bytes": 2096,
+      "sha256": "49e7ff7912c1f8f0889580c8960a5cb17ecfaa7b53d7e465b7d37222d542a4a4"
+    },
+    {
+      "path": "halo-5090/tools/hardware_floor.cu",
+      "bytes": 2847,
+      "sha256": "d1adf50066f5df427bc38d4c2a9c231393d5018efec6aca69436096bb191182a"
+    },
+    {
+      "path": "halo-5090/tools/loadtest.py",
+      "bytes": 6364,
+      "sha256": "7ffdc25cf4030d26728808d2aad66469b6e5847a14b40ad366f6d48264b294f7"
+    },
+    {
+      "path": "halo-5090/tools/long_draft_audit.py",
+      "bytes": 3016,
+      "sha256": "75618ba72626cbf4a04a1adadedebb35c3e328805feb4a658bd34af475e93649"
+    },
+    {
+      "path": "halo-5090/tools/long_draft_exact_control.py",
+      "bytes": 26055,
+      "sha256": "a71d62b6efc53636a380a1feba6a07011d248ff3ac15eb58df4cb808bcffbbf8"
+    },
+    {
+      "path": "halo-5090/tools/long_draft_recover.py",
+      "bytes": 4475,
+      "sha256": "0c0f87d89e07cff27486ad955f886c5faa629b0fa72fd33c4a68f4ca7589ab91"
+    },
+    {
+      "path": "halo-5090/tools/long_draft_sweep.py",
+      "bytes": 28197,
+      "sha256": "825ada097fe414e45d244aff1bfe7f495e656f19a816b9c6970c07b74331e699"
+    },
+    {
+      "path": "halo-5090/tools/prepare_vision_cuda.py",
+      "bytes": 6943,
+      "sha256": "6e55ecd6ddab98f5b1ea176263abea79fa3c8341a3de82776e4420b2051a42ee"
+    },
+    {
+      "path": "halo-5090/tools/profile_prompt.py",
+      "bytes": 4250,
+      "sha256": "e9c3151563202b6d9a1508180a258991031346e67e987c8cfbad081f58d75cfe"
+    },
+    {
+      "path": "halo-5090/tools/profile_replay.cpp",
+      "bytes": 4274,
+      "sha256": "9e73f2cb48b881224a7d0f5a7bded5cee70c0eb31aec26ae7297e58919b98d1b"
+    },
+    {
+      "path": "halo-5090/tools/refdump.cpp",
+      "bytes": 2957,
+      "sha256": "38f8c0ecade7de08497bf16800a696c9008e81f4df7fe8cf5f3558b313e950b1"
+    },
+    {
+      "path": "halo-5090/tools/score_single_gsm.py",
+      "bytes": 1784,
+      "sha256": "d4a887e5292e10ee79003b737f5a9169f1f170b4fcb729eec5127a373ff4ebcb"
+    },
+    {
+      "path": "halo-5090/tools/serve_bench.py",
+      "bytes": 3674,
+      "sha256": "23bf9e5a36bd102400cefbf3e8193e90c49947000c17523e4ec1cd55d7345d85"
+    },
+    {
+      "path": "halo-5090/tools/single_bench.py",
+      "bytes": 4510,
+      "sha256": "c83c2a579fab929a348e966d8885229a758bc91941521dd972777b2f3662a1ac"
+    },
+    {
+      "path": "halo-5090/tools/tree_http_guard.py",
+      "bytes": 6436,
+      "sha256": "c1f5b15d398b4c9bb88a8958be196d81bb86676965fd68d31874bc93e479fcfb"
+    },
+    {
+      "path": "halo-5090/tools/two_path_code_check.py",
+      "bytes": 3200,
+      "sha256": "1b98c484e8b34e3e0278431414421d807288845c9772f642af4f208684c2e726"
+    },
+    {
+      "path": "halo-5090/tools/two_path_summary.py",
+      "bytes": 4814,
+      "sha256": "849cd9748375506360e0a54ad8a798ea4f481a540c7e40e37a8c1067cccc76ff"
+    },
+    {
+      "path": "halo-5090/tools/vision-cublas.cu",
+      "bytes": 2490,
+      "sha256": "94b0d03e29f751109cbe049190db9159b209c0cfa48d7fe82bc0936935020666"
+    },
+    {
+      "path": "halo-5090/tools/vision_check.cpp",
+      "bytes": 7194,
+      "sha256": "be2c5853dcf6841961bb0fc5f03141069596a51a57353318a86cd9ffe47c3db0"
+    },
+    {
+      "path": "halo-5090/tools/vision_smoke.py",
+      "bytes": 5348,
+      "sha256": "ffc7c17b0c9f3a5df98f46e5caa20dff7e66078647a0ccb1983933cef79baada"
+    },
+    {
+      "path": "halo-5090/tools/vision_spec_bench.py",
+      "bytes": 2915,
+      "sha256": "0cc1f597a38646751ada1b81cfaf22188613769743cad5ed42a42e781f47c0e8"
+    },
+    {
+      "path": "halo-5090/tools/vision_tasks.py",
+      "bytes": 6058,
+      "sha256": "f2339e22f4e5a2af328b207d7a146343c9c7d994cf6b1d20b553fe0b7a59260b"
+    },
+    {
+      "path": "halo-6000/.gitignore",
+      "bytes": 531,
+      "sha256": "0a6c1359ab28dc9f5104745a966b1aacf013fc9d51e3eda79e610d86b77064c5"
+    },
+    {
+      "path": "halo-6000/Makefile",
+      "bytes": 3124,
+      "sha256": "9d79bf82f61b7f1e19412fc785ba7089dadade8872a4e145ee6ce14d8b99d4de"
+    },
+    {
+      "path": "halo-6000/README.md",
+      "bytes": 5240,
+      "sha256": "a8f5275106d3a6dbd08f07c13140e6ae74928672ec48c089d590f4daad49255f"
+    },
+    {
+      "path": "halo-6000/SOURCE.json",
+      "bytes": 50388,
+      "sha256": "691fc958ca8adfb561fe4d356956f4cd76ccacdd086d5bed253b1a102623f6d0"
+    },
+    {
+      "path": "halo-6000/bench/analyze-profile.py",
+      "bytes": 1443,
+      "sha256": "b056e7750ddd9ee8121ff56fc2ef92f8c96c58559befe1f1f00aafb3566c376d"
+    },
+    {
+      "path": "halo-6000/bench/attention-fixture.py",
+      "bytes": 3042,
+      "sha256": "002b8c4249b4a768014d3787738a3992eeba5801aadd050f8ec21d4b4fac6462"
+    },
+    {
+      "path": "halo-6000/bench/attention.cu",
+      "bytes": 12389,
+      "sha256": "eb9b10c1932c3684cd21ead2a110b2bc35a5c663c20e766b4f59a61f1b1c1319"
+    },
+    {
+      "path": "halo-6000/bench/barrier.cu",
+      "bytes": 5046,
+      "sha256": "d9ddcea029269b82ebb3312ffad89c78036913f3aa580b32c84d17482262475a"
+    },
+    {
+      "path": "halo-6000/bench/batch-report.py",
+      "bytes": 1449,
+      "sha256": "bea94d1c94ca860b31e8df82d38a407a068d867bba357d3a4c8f182cfd6ce083"
+    },
+    {
+      "path": "halo-6000/bench/batch-results/halo-batch-buckets-v1-r8.json",
+      "bytes": 602,
+      "sha256": "acbcb95bc3c88347909ce634474ed16190e98645150a669b3fee0a2c50a66ef5"
+    },
+    {
+      "path": "halo-6000/bench/batch-results/halo-batch-cap128.json",
+      "bytes": 604,
+      "sha256": "a535f777fb81dd10024dd6d28954cb8aee144985cf6bbf04d97d2faee6765cbf"
+    },
+    {
+      "path": "halo-6000/bench/batch-results/halo-batch-hybrid-r32.json",
+      "bytes": 598,
+      "sha256": "d491186a3e215b31ec6d728cc29eae1e1bb93a685c9f4062800920fdeab6a18d"
+    },
+    {
+      "path": "halo-6000/bench/batch-results/halo-batch-hybrid-r8.json",
+      "bytes": 597,
+      "sha256": "9904fdfa9d70dc3fc41e166e317168f61891295f88fe60b9bac849ee0d8bd269"
+    },
+    {
+      "path": "halo-6000/bench/batch-results/halo-batch-tail3.json",
+      "bytes": 601,
+      "sha256": "d6b9bfbdb9edae914f951aa724462c1ba1e603c5ad02cd020aff629d74e709eb"
+    },
+    {
+      "path": "halo-6000/bench/batch-results/halo-batch-v1-r8.json",
+      "bytes": 575,
+      "sha256": "4f37297f0fd1762ee3e1a7233598344a4be2d65719e44a8f706afaae125cc112"
+    },
+    {
+      "path": "halo-6000/bench/batch-results/halo-batch-v2-r32.json",
+      "bytes": 577,
+      "sha256": "131ca7993e81d734ffdf326b053f688f88f76821b95bd01965bfa3b28ac6efe9"
+    },
+    {
+      "path": "halo-6000/bench/batch.cu",
+      "bytes": 14512,
+      "sha256": "82faf47792681174a54dfb8a9dcd1c2e8fadfd77addbddbb1e52988d1ba410ce"
+    },
+    {
+      "path": "halo-6000/bench/cache-negative.py",
+      "bytes": 1280,
+      "sha256": "45196b05b3ff8acde81b2ba45576f78e750743f4b5f29261fce1c44495ed87c6"
+    },
+    {
+      "path": "halo-6000/bench/engine-timing.cu",
+      "bytes": 2607,
+      "sha256": "29344d8ca4231d68edc72ac2bd231ae2fb435fefc99688b0cf702f1fb4068090"
+    },
+    {
+      "path": "halo-6000/bench/gdn-prefill-fixture.py",
+      "bytes": 4543,
+      "sha256": "2f4a939fdd6c721f57ea256ba2b776acb673975ecb2d297b7ab432e77497fd52"
+    },
+    {
+      "path": "halo-6000/bench/gdn-prefill.cu",
+      "bytes": 11252,
+      "sha256": "7bd9c97bfbae307044fe329b32c31de21145262249e51842f97ca6df613ba83f"
+    },
+    {
+      "path": "halo-6000/bench/gdn.cu",
+      "bytes": 9398,
+      "sha256": "c40a52e302a08fc7d18d3be4068e6ee1348c5ca0cfa26d532389129d0ab0cd28"
+    },
+    {
+      "path": "halo-6000/bench/head-fixture.py",
+      "bytes": 1777,
+      "sha256": "ed24facd10e1b8ae709d30d597c645e5e88ab770d3674331d9b7b859add00c37"
+    },
+    {
+      "path": "halo-6000/bench/head.cu",
+      "bytes": 11642,
+      "sha256": "e5a24358c13903b8731176759bf2e89629b62e1df6725fc83b68386606f9bd17"
+    },
+    {
+      "path": "halo-6000/bench/intrinsic-validation.cpp",
+      "bytes": 3437,
+      "sha256": "e6ba061f0762005acaa2449dcc5b4240a1f313f60e3bc3b461bcbddc2388aee9"
+    },
+    {
+      "path": "halo-6000/bench/loader-run.py",
+      "bytes": 1247,
+      "sha256": "4a65baebbcee4bf528f4ae3ba0250d83d2886a4ddfed8c6bf177e874645c3fa8"
+    },
+    {
+      "path": "halo-6000/bench/loader-test.cpp",
+      "bytes": 4644,
+      "sha256": "898174c4941254b1b9671db0a61740c907b293b7587e7677574138468fb69be3"
+    },
+    {
+      "path": "halo-6000/bench/matmul-fixture.py",
+      "bytes": 3876,
+      "sha256": "403996595dee9fca0c37685f4e59238ba23b3ec64f7bd16dcad3bac99d868355"
+    },
+    {
+      "path": "halo-6000/bench/matmul-link-a.cu",
+      "bytes": 79,
+      "sha256": "3e4d6522151a8ddbfd3feab5e8511152b9968bffe36eedd1dcb5c8d69b5482f1"
+    },
+    {
+      "path": "halo-6000/bench/matmul-link-b.cu",
+      "bytes": 53,
+      "sha256": "9db6dddaea5a4d4922ad54c7a46d1b801428df8f520aa6d7d92cd54ccc9a24cc"
+    },
+    {
+      "path": "halo-6000/bench/matmul-pod.cpp",
+      "bytes": 656,
+      "sha256": "881c152104b5bdd7def7ff8e0bbfeb16cf3583aaad28813bc801195a25431ba2"
+    },
+    {
+      "path": "halo-6000/bench/matmul-report.py",
+      "bytes": 2976,
+      "sha256": "a6585b3399b66537f3627d6eb733279e3cb0c600d30d3757f14cd463c02dac85"
+    },
+    {
+      "path": "halo-6000/bench/matmul-tiles-report.py",
+      "bytes": 3186,
+      "sha256": "a8a6c5a1c82f2d4b2a9aad3178fa057cbd77e5fd6f4a5e735d8bc9b015772fc3"
+    },
+    {
+      "path": "halo-6000/bench/matmul-tiles-sources/matmul-tiles.cu",
+      "bytes": 11060,
+      "sha256": "cc633772fb55a87d2183dee14912190932ea686871d83d77cbfc77a0ee77eac3"
+    },
+    {
+      "path": "halo-6000/bench/matmul-tiles-sources/matmul-tiles.cuh",
+      "bytes": 4521,
+      "sha256": "ea53d13962efe48c70133c769631871f45841ed4b9f31c695338b957e04a1ca2"
+    },
+    {
+      "path": "halo-6000/bench/matmul-tiles-sources/matmul.cuh",
+      "bytes": 13297,
+      "sha256": "b30c488a00658c0e1e14d196557008303023cf3b33280e8192a73209b2123afc"
+    },
+    {
+      "path": "halo-6000/bench/matmul-tiles-sources/matmul.hpp",
+      "bytes": 2159,
+      "sha256": "240651a266fe41d0136cbac643e5add546e2da1aef835eb29b6aa8df08824977"
+    },
+    {
+      "path": "halo-6000/bench/matmul-tiles-sources/model.hpp",
+      "bytes": 3864,
+      "sha256": "f2d578e87c34f53b3ee404124a4a58f1084a2a4c52dfde457dc0f55083711b35"
+    },
+    {
+      "path": "halo-6000/bench/matmul-tiles.cu",
+      "bytes": 11060,
+      "sha256": "cc633772fb55a87d2183dee14912190932ea686871d83d77cbfc77a0ee77eac3"
+    },
+    {
+      "path": "halo-6000/bench/matmul.cu",
+      "bytes": 17138,
+      "sha256": "5ed992ad186aab91ad6ed3301c40d57ea92db474e4ef46d14bba41376b0c90a2"
+    },
+    {
+      "path": "halo-6000/bench/metadata-guard.cpp",
+      "bytes": 9476,
+      "sha256": "37d6ce6258989a94d4973194c3b4311602f91642f6652905148406a158313118"
+    },
+    {
+      "path": "halo-6000/bench/native-server-smoke.py",
+      "bytes": 2191,
+      "sha256": "1617408ec7dbe167b1791d4a2751ef7d8c935f7d8102257a8cc95ca38783d248"
+    },
+    {
+      "path": "halo-6000/bench/packing-check.py",
+      "bytes": 1631,
+      "sha256": "620862b7f0dc5ded8824998da18b2f3f9351eb19cbb9fe64a21a1a974c4d6846"
+    },
+    {
+      "path": "halo-6000/bench/prepared-runtime.cu",
+      "bytes": 5981,
+      "sha256": "f2b446c0c561ae856bdb2eab7c402b0efc54e02bacf78b52fa46e8be00b84f46"
+    },
+    {
+      "path": "halo-6000/bench/primitives.cu",
+      "bytes": 4511,
+      "sha256": "3a0c08eccbb98e63e12757c6db9128104a28ccfbab89525600dd9236a6edf3b3"
+    },
+    {
+      "path": "halo-6000/bench/q2k.cu",
+      "bytes": 5811,
+      "sha256": "2d66064b4766394a7ecc277ee651d1e593992b92633e54e23024d5257238b913"
+    },
+    {
+      "path": "halo-6000/bench/q4-cache-job.py",
+      "bytes": 917,
+      "sha256": "7ae6ced7ed95c1c30ff935d7785d456ee94717e29c82f7dd3f12d3898e628bb7"
+    },
+    {
+      "path": "halo-6000/bench/q4-fixture.py",
+      "bytes": 891,
+      "sha256": "c10cdec9f3235e53acda7b3db6f5619a83c120ff8983a19000bd1a458ca968e3"
+    },
+    {
+      "path": "halo-6000/bench/q4-head.cu",
+      "bytes": 17199,
+      "sha256": "6968c71c351c9cd822fdb43a414b49728a4939f463a56df398f2171050e05d3a"
+    },
+    {
+      "path": "halo-6000/bench/q4-loader-test.cpp",
+      "bytes": 5338,
+      "sha256": "a81aa9e962b2e8432a1df96ae97f8880f8cad7873e1c6860f8f2a225efdf258d"
+    },
+    {
+      "path": "halo-6000/bench/reset.cu",
+      "bytes": 2393,
+      "sha256": "d040b403fe77c93e7c4f746c4836554b16a31b6eab01b3abe92a62186b0d6bab"
+    },
+    {
+      "path": "halo-6000/bench/roof.py",
+      "bytes": 4388,
+      "sha256": "58f44cd2040ed8203a732b4ffb11776145ed74158b03034fafad56c4acd014d0"
+    },
+    {
+      "path": "halo-6000/bench/rotation.cu",
+      "bytes": 7031,
+      "sha256": "279413856f985b11b1af9c05b35940c2a3e5edc57785184ebc2f4911d4bdf1c3"
+    },
+    {
+      "path": "halo-6000/bench/router-bf16-fixture.py",
+      "bytes": 1927,
+      "sha256": "5b296122fb22fe6ad5c0acca615e7a60dbaf6d34899ed8f82a32c5449b8fbbc2"
+    },
+    {
+      "path": "halo-6000/bench/router-bf16-host-test.cpp",
+      "bytes": 3459,
+      "sha256": "65d01a823584da9b3862834468e119536454d46c8773d41255190f79eaa7eabe"
+    },
+    {
+      "path": "halo-6000/bench/router-bf16-source.py",
+      "bytes": 3801,
+      "sha256": "8cf4ee164956a6cc2303c693885a176497be366e2fab23737dc64f641f8b80ee"
+    },
+    {
+      "path": "halo-6000/bench/router-bf16.cu",
+      "bytes": 14257,
+      "sha256": "5fdbe3d349a8d690923379e8379a62c66124fd82c8e6c28b7008530a286daae9"
+    },
+    {
+      "path": "halo-6000/bench/router-candidate.cu",
+      "bytes": 11526,
+      "sha256": "a673598126a40bd8bee93fc59574b9a8264fc4685c1e3ca5e396f8fc0afa0192"
+    },
+    {
+      "path": "halo-6000/bench/router.cu",
+      "bytes": 1843,
+      "sha256": "70e3ab013caa0496d2877983394e2c1496b50dd0caf7ca2b690e4cf56d96a9d3"
+    },
+    {
+      "path": "halo-6000/bench/row-exact.cu",
+      "bytes": 8367,
+      "sha256": "4df65ec74eac4c05634b0c49248b1bb2228cb3b3954ecc8c5789eb0eb1206a37"
+    },
+    {
+      "path": "halo-6000/bench/row-fixture.py",
+      "bytes": 2751,
+      "sha256": "356ef6ed243e83b5485eb4fcc071105a6fb86d6a0bb148877dbb72fefea07c4d"
+    },
+    {
+      "path": "halo-6000/bench/run-attention.sh",
+      "bytes": 239,
+      "sha256": "60c9e68dd8f1eb2f1cf3a9d7c6e52d9ef0e456d663d7cfd3725f495fb598de7e"
+    },
+    {
+      "path": "halo-6000/bench/run-barrier.sh",
+      "bytes": 497,
+      "sha256": "ad9e2b8bc9341fe6e7dc4e4d995b848ab68cda60580a9c80dcb698edacaa722e"
+    },
+    {
+      "path": "halo-6000/bench/run-batch.py",
+      "bytes": 4369,
+      "sha256": "b8f362252e408cb178f5dbed62690122fb744e9d92b273974d54a8baeb5f6791"
+    },
+    {
+      "path": "halo-6000/bench/run-engine-timing.sh",
+      "bytes": 1204,
+      "sha256": "9be690df65c8ecca6b357e1f50ed07ef24e1ea12f7f9c201fcd1fc8c11576616"
+    },
+    {
+      "path": "halo-6000/bench/run-gdn-prefill.sh",
+      "bytes": 251,
+      "sha256": "ed4f9677b7d3e1c38448da5d5299d810b2143da9a460d225c6dbcf0a58228c73"
+    },
+    {
+      "path": "halo-6000/bench/run-gdn.sh",
+      "bytes": 246,
+      "sha256": "f90c62dc9461b5843fb966571ac4aef643d03abc67c0d0631a65e27465013a37"
+    },
+    {
+      "path": "halo-6000/bench/run-head.sh",
+      "bytes": 581,
+      "sha256": "b5e8e9d5a041984bf12bf6fbcfc6dbdc141376f17eb1200077e1b2ab87a0d07d"
+    },
+    {
+      "path": "halo-6000/bench/run-hybrid-oracle.sh",
+      "bytes": 852,
+      "sha256": "5a81fd5ff1dcf4698e7efa3c44e26ee2ece97aecdc51deff0415810666fa6e1b"
+    },
+    {
+      "path": "halo-6000/bench/run-loader.sh",
+      "bytes": 87,
+      "sha256": "7b728b3df9c0baf9b794d2e76d7a3f6967d341e0896e7b446123255c33570d44"
+    },
+    {
+      "path": "halo-6000/bench/run-matmul-tiles.py",
+      "bytes": 3327,
+      "sha256": "9962a9194438bb6fd057fc3f5daa0b591516e526b9149414e27e73c2d4c4b868"
+    },
+    {
+      "path": "halo-6000/bench/run-matmul.sh",
+      "bytes": 1391,
+      "sha256": "9a1aff33b6dc409ca6fa7dcfe1c3cd794dde0aaf12ee9b61776086f0b1e4afe6"
+    },
+    {
+      "path": "halo-6000/bench/run-metadata.sh",
+      "bytes": 368,
+      "sha256": "48dd4388e9536ed9a852ef0e7bf81385fe15d8df92c346c6ca005fac949c79cb"
+    },
+    {
+      "path": "halo-6000/bench/run-native-timing.sh",
+      "bytes": 977,
+      "sha256": "5313e0eb91533d0786e24496dfbf81c42b2db8abceae550e6f5116703e452661"
+    },
+    {
+      "path": "halo-6000/bench/run-oracle.sh",
+      "bytes": 844,
+      "sha256": "7da332d68e10bd203e4be685fa28e5e75dd4343f373b99a5a5e96806976fdfe2"
+    },
+    {
+      "path": "halo-6000/bench/run-profile.sh",
+      "bytes": 722,
+      "sha256": "89db078efb81493b4bd4544d9021b24ccd8e65d2c6fc3c6b599f992ec4021410"
+    },
+    {
+      "path": "halo-6000/bench/run-q2k.sh",
+      "bytes": 248,
+      "sha256": "7303a0e6c75ef9db9297bed3316cd8023db243b13b99935aa15fb121b97744bf"
+    },
+    {
+      "path": "halo-6000/bench/run-q4-head.sh",
+      "bytes": 1005,
+      "sha256": "d2669b82fbd67a35fb8d8fd3891a5bf25694a59807f58bf2abc1c598228fecf2"
+    },
+    {
+      "path": "halo-6000/bench/run-rotation.sh",
+      "bytes": 239,
+      "sha256": "35cbef1d675117f484ca3785659348543dcc9bff8a9ca3284c2710bfb24ae5df"
+    },
+    {
+      "path": "halo-6000/bench/run-router-bf16.sh",
+      "bytes": 2006,
+      "sha256": "c26f30d99dab29b7f7ccdf527beac98463bf0ded65eaa5a8e0430497eebb5ea4"
+    },
+    {
+      "path": "halo-6000/bench/run-router-candidate.sh",
+      "bytes": 1413,
+      "sha256": "7068ce0006cbb50a039dfd4e1a5d88e62d398749729cac60cd165a05d6e83fdc"
+    },
+    {
+      "path": "halo-6000/bench/run-row-exact.sh",
+      "bytes": 717,
+      "sha256": "e07ee3c42e60a716ae4703aace0af089ccc266b633c9088aaff0f606d489f4d0"
+    },
+    {
+      "path": "halo-6000/bench/run-server.sh",
+      "bytes": 930,
+      "sha256": "dafff1ff2e55d1fd752f58c89097613615081a7aa6b19806a445ae9bc19e3f2f"
+    },
+    {
+      "path": "halo-6000/bench/run-token-timing.sh",
+      "bytes": 741,
+      "sha256": "7efff1efaec02f33335d34bae0d82947009a678dfce2b7aa8c8b60d1fcea22df"
+    },
+    {
+      "path": "halo-6000/bench/run-tokenizer.sh",
+      "bytes": 610,
+      "sha256": "c14038333d40de565e00ef34c0acddeb3931f18df05c4c7db716ae6216b44836"
+    },
+    {
+      "path": "halo-6000/bench/schedule.cu",
+      "bytes": 3793,
+      "sha256": "40360f883de0fd5cdf7797c85b30b05a8c62973fc71b97e994337d5d4312fd9f"
+    },
+    {
+      "path": "halo-6000/bench/server-test.cpp",
+      "bytes": 8106,
+      "sha256": "de45a7bd8a941deb9ace4554619e95d7ec7c3161de919b871fb680a5a8c33d08"
+    },
+    {
+      "path": "halo-6000/bench/signed-guard-b.sh",
+      "bytes": 1214,
+      "sha256": "b364cfaae02dd4e66b1b30f23f93356c7c53e0f9aa06f3b893758bd1a1164ee1"
+    },
+    {
+      "path": "halo-6000/bench/signed-layer.cu",
+      "bytes": 3648,
+      "sha256": "7e140bfe9952f15e8c57755f6c3868eb297568eb6ca180fbfaf162f75da35e6d"
+    },
+    {
+      "path": "halo-6000/bench/tokenizer-test.cpp",
+      "bytes": 3936,
+      "sha256": "e3506aef1312714481ddc536668d7d96a2dfaae31b28154eb8f6c4bcfcdacb25"
+    },
+    {
+      "path": "halo-6000/docs/hybrid-forward-b/forward/manifest.json",
+      "bytes": 10937,
+      "sha256": "25e3707c00c3a7018687f245dedc8b0813fd18f90420eab25845fa061e5c8192"
+    },
+    {
+      "path": "halo-6000/docs/hybrid-forward-b/forward-comparison.json",
+      "bytes": 80910,
+      "sha256": "152741d792bd4d2ea8992a83fbedfb201733d4209155021140c6b615dd909b26"
+    },
+    {
+      "path": "halo-6000/docs/hybrid-forward-b/layer0/manifest.json",
+      "bytes": 134481,
+      "sha256": "eb5ec49ac8556b3ee28c79ce3756886da0257c6380e55e0cf95290bc9fcae942"
+    },
+    {
+      "path": "halo-6000/docs/hybrid-forward-b/layer0-comparison.json",
+      "bytes": 271217,
+      "sha256": "bdf5fe638552577624c78f3fb2088084458ec858602014658a51394df8e8b265"
+    },
+    {
+      "path": "halo-6000/docs/launch-cache-b/profile-16-analysis.json",
+      "bytes": 36094,
+      "sha256": "a239668d5dac77f594a0f5cd80619665a30c289961ee7af049fa1d2d6917560f"
+    },
+    {
+      "path": "halo-6000/docs/launch-cache-b/profile-16.json",
+      "bytes": 10228,
+      "sha256": "0f6f3345d8b5a23c6a530c2899605a813e09274777a4223b934bb31c77e05626"
+    },
+    {
+      "path": "halo-6000/docs/launch-cache-b/profile-32-analysis.json",
+      "bytes": 36080,
+      "sha256": "ba1bfe941df2fa33fdcb04dbdf703b346e092bbbd24215fa3139d8f7178f1d5e"
+    },
+    {
+      "path": "halo-6000/docs/launch-cache-b/profile-32.json",
+      "bytes": 10228,
+      "sha256": "1100f19ad93e2c45ff1d3edb5620776d6c598c8a2089770ef6c50de18d85896a"
+    },
+    {
+      "path": "halo-6000/docs/launch-cache-b/profile-8-analysis.json",
+      "bytes": 36023,
+      "sha256": "e933f79cc7725b470ae1b5f978ea237bd50fcf08e7dbd26509f9dad0c2d2266e"
+    },
+    {
+      "path": "halo-6000/docs/launch-cache-b/profile-8.json",
+      "bytes": 10227,
+      "sha256": "18bd5566bc06650ead36e0d997f1df4b89865ed5d0aa6b5664404ea663b60bf2"
+    },
+    {
+      "path": "halo-6000/docs/launch-cache-b/rows.jsonl",
+      "bytes": 29765,
+      "sha256": "eb696f9fdee527ddc8aae97dbed8260baf7ff9b783a3f317f68668d1ec4edbf1"
+    },
+    {
+      "path": "halo-6000/docs/launch-cache-b/timing.json",
+      "bytes": 1375,
+      "sha256": "2a4b6151860583d915faf116f9fb8c2ecc457e2e7813a40b0e92f43955e4ebe4"
+    },
+    {
+      "path": "halo-6000/docs/native-b-first/cache-proof.json",
+      "bytes": 351,
+      "sha256": "a2b0cb926beb532b8112439e2e7838a5ac263a4c6a6255859f4ad31a31051ac0"
+    },
+    {
+      "path": "halo-6000/docs/native-b-first/server-2/result.json",
+      "bytes": 1392,
+      "sha256": "4e739604806fa43f25d1045842c2ac05f9d0d13ab9bed78e3c45024f8cac2fd3"
+    },
+    {
+      "path": "halo-6000/docs/native-b-first/timing/profile-analysis.json",
+      "bytes": 36122,
+      "sha256": "b48d9ad72058560e61eb6ca74f48a08d311ff31fd3e03fec12e160cb8142ed5c"
+    },
+    {
+      "path": "halo-6000/docs/native-b-first/timing/profile.json",
+      "bytes": 9565,
+      "sha256": "570cde4ed359f1af7c28e7574c0fb8ef3e7a2bcb0c1f8fbce827552b67a19476"
+    },
+    {
+      "path": "halo-6000/docs/native-b-first/timing/timing.jsonl",
+      "bytes": 672,
+      "sha256": "d99ba217ddc6132eb7f2585f67eee88964e9444d9db7f87ec90e4f53ae50cc64"
+    },
+    {
+      "path": "halo-6000/docs/results/native-intrinsic-v1.json",
+      "bytes": 7089,
+      "sha256": "2d7ee9b14d9d08269cf3b7c040a27d2ad3c36c609ea52645747acb286c6a6ece"
+    },
+    {
+      "path": "halo-6000/docs/token-timing.jsonl",
+      "bytes": 899,
+      "sha256": "a071350136583dcccf079a250c17f605aa998ea6b4d8257109fe6b8099c88b85"
+    },
+    {
+      "path": "halo-6000/include/attention.cuh",
+      "bytes": 7737,
+      "sha256": "ef8a0938de48229ae5e16176bf2bed982878a1888f7cb7fcdf0c24bc29f42402"
+    },
+    {
+      "path": "halo-6000/include/batch-moe.cuh",
+      "bytes": 7459,
+      "sha256": "d00c1914c734c96870951721df899cf164834df6647d0af6a2639ea69e08ac2a"
+    },
+    {
+      "path": "halo-6000/include/batch.cuh",
+      "bytes": 8674,
+      "sha256": "94563738201a50e729abda2349dda8f7ec72a2f81ced5153f8d387d9bdb10e13"
+    },
+    {
+      "path": "halo-6000/include/batch.hpp",
+      "bytes": 3472,
+      "sha256": "3c8301cda20a546fb33204953c9147343b83c8d9ab622a3eea0da7a76017e71c"
+    },
+    {
+      "path": "halo-6000/include/device.cuh",
+      "bytes": 5486,
+      "sha256": "b1c6bd579691ac12d5f219e2890e5149938b9e23f08542d0e0a53ca228458608"
+    },
+    {
+      "path": "halo-6000/include/format.hpp",
+      "bytes": 3233,
+      "sha256": "6b8687cdecd2161b7594e9c82fa741186d11f2fbf0672fc64fe7b7205297d455"
+    },
+    {
+      "path": "halo-6000/include/gdn-prefill.cuh",
+      "bytes": 7929,
+      "sha256": "3a6d9cb9a09cac14839aa35eddc74f328c0c82200cead6c1608c4640204c7c3e"
+    },
+    {
+      "path": "halo-6000/include/gdn.cuh",
+      "bytes": 7778,
+      "sha256": "80247aee72bfc1dec341d073a5461a5aa03cf1326c859a67363a9b2dc12c82b5"
+    },
+    {
+      "path": "halo-6000/include/head.cuh",
+      "bytes": 5410,
+      "sha256": "a6254c498179806d56d58515d5046c2a2130cd8720c17b8e57c68fd7db2e4778"
+    },
+    {
+      "path": "halo-6000/include/matmul-tiles.cuh",
+      "bytes": 4521,
+      "sha256": "ea53d13962efe48c70133c769631871f45841ed4b9f31c695338b957e04a1ca2"
+    },
+    {
+      "path": "halo-6000/include/matmul.cuh",
+      "bytes": 13969,
+      "sha256": "de6edb6a5e6f2506e978f23397d7db9a84be8ef6d2aaf8a3530b842c2bfe5a48"
+    },
+    {
+      "path": "halo-6000/include/matmul.hpp",
+      "bytes": 2159,
+      "sha256": "240651a266fe41d0136cbac643e5add546e2da1aef835eb29b6aa8df08824977"
+    },
+    {
+      "path": "halo-6000/include/matvec.cuh",
+      "bytes": 1724,
+      "sha256": "44f1d1a56e538fce371f2d70a1f9bf9d32db2ebbdbb5eb935c7a8085c183cbe8"
+    },
+    {
+      "path": "halo-6000/include/model.hpp",
+      "bytes": 3864,
+      "sha256": "f2d578e87c34f53b3ee404124a4a58f1084a2a4c52dfde457dc0f55083711b35"
+    },
+    {
+      "path": "halo-6000/include/moe.cuh",
+      "bytes": 6548,
+      "sha256": "fa88baf5823b665e0ca441e63c7965fbb32c785ac3ee7082514f768c7d0a4374"
+    },
+    {
+      "path": "halo-6000/include/q2k.cuh",
+      "bytes": 2811,
+      "sha256": "94db9672b647d820462230d2ebf504f7b2123c9b55ea07e89d3fad75bb6ca733"
+    },
+    {
+      "path": "halo-6000/include/q4_0-format.hpp",
+      "bytes": 672,
+      "sha256": "e0f1486f84833f646cd56a95ccd4d972a9aec75a89d481cbb2791b379b06eb44"
+    },
+    {
+      "path": "halo-6000/include/q4_0.cuh",
+      "bytes": 5999,
+      "sha256": "b68edc5591ccca504c5f7a9e7ef1ee4cd9c8e321d48baea7f9054b5a5bf7af27"
+    },
+    {
+      "path": "halo-6000/include/rotation.cuh",
+      "bytes": 4793,
+      "sha256": "272c217b77aaed1b55a7e3391b2e3982027321d5df6fd352268019648c1d1f7b"
+    },
+    {
+      "path": "halo-6000/include/router-bf16-host.hpp",
+      "bytes": 2443,
+      "sha256": "3af4fc9fab10e0fbf5225398480a59b33b551764a32867fe4164ff2d6b1010ee"
+    },
+    {
+      "path": "halo-6000/include/router-bf16.cuh",
+      "bytes": 1461,
+      "sha256": "fba60de6b9b33faedbd43b88cf26469b76968ef7cd09d45a94523a472721676b"
+    },
+    {
+      "path": "halo-6000/include/router.cuh",
+      "bytes": 3776,
+      "sha256": "1a11ffe24c4610759c45c55b9268961f8c211246cb34ea120b66280dbe956adb"
+    },
+    {
+      "path": "halo-6000/include/tune.hpp",
+      "bytes": 3500,
+      "sha256": "775bc019d75266b9477a1633eb8c2ef814229ea5ecee63a29c378b65b4f0c0d0"
+    },
+    {
+      "path": "halo-6000/src/batch.cu",
+      "bytes": 12324,
+      "sha256": "e035288d15aecea135030e36a209776036f52d9eb68f1335882cdfa30fb5cffd"
+    },
+    {
+      "path": "halo-6000/src/cache.cpp",
+      "bytes": 14405,
+      "sha256": "077f1c4a73ad5790431f20c43b62a55ad685d0676077dd25d12b51cfd5665262"
+    },
+    {
+      "path": "halo-6000/src/cache.hpp",
+      "bytes": 361,
+      "sha256": "82c5fa805ad2ca01552d0ccef3902fb83bcb4077a9e0298ea651dd73ccf67bbd"
+    },
+    {
+      "path": "halo-6000/src/debug.cpp",
+      "bytes": 8442,
+      "sha256": "131bf6732469acd62665b1b63215d4fc4f2c117c639b062fb3a38adb4d3df75b"
+    },
+    {
+      "path": "halo-6000/src/debug.hpp",
+      "bytes": 459,
+      "sha256": "04540fbb7093140948cb9bbea5308c4b8bcf57fd8f8cf2fc13c64a49e26849fd"
+    },
+    {
+      "path": "halo-6000/src/decode.cu",
+      "bytes": 14246,
+      "sha256": "5a2fb5212f965893d0e8a86578493b2dbb20f4c74c69bbb679bfd92a262f2df3"
+    },
+    {
+      "path": "halo-6000/src/decode.hpp",
+      "bytes": 806,
+      "sha256": "22eeb338e4fd533d5279db7d264e6c5bb4a359427cf9c9b0d0c55e84a645f832"
+    },
+    {
+      "path": "halo-6000/src/generate.cpp",
+      "bytes": 2222,
+      "sha256": "4b7d99471ff8f25fb7ad2fee2b78d73a600742e8be5f4f5335a251be16de1e9d"
+    },
+    {
+      "path": "halo-6000/src/generate.hpp",
+      "bytes": 263,
+      "sha256": "e3de4a5d537a1538305035e765c42235e75c56a8edf329c212e90b0b51a16cfc"
+    },
+    {
+      "path": "halo-6000/src/gguf.cpp",
+      "bytes": 13770,
+      "sha256": "b47906efbb56776b59aa0d552f683cf97159b7dba0565b7284d44a1f0b129ded"
+    },
+    {
+      "path": "halo-6000/src/gguf.hpp",
+      "bytes": 1196,
+      "sha256": "4417e43dc44b63bdabd0f5e660588dad72bb5e94f6540c13ecb16dd9c18002fb"
+    },
+    {
+      "path": "halo-6000/src/inspect.cpp",
+      "bytes": 3296,
+      "sha256": "7341f4f594d85ed6a0d4b2d513d3e5c9d1606fcdbde4a8b99a879ad85425ca69"
+    },
+    {
+      "path": "halo-6000/src/intrinsic.cpp",
+      "bytes": 17506,
+      "sha256": "7bd0ec79bc3f625dfbeb2c6b0747f86d147e6727361f880a3067790722cdc82f"
+    },
+    {
+      "path": "halo-6000/src/intrinsic.hpp",
+      "bytes": 296,
+      "sha256": "f453f98b08e7d15f7fe293370cab2a5b33f89185cbc97d3db7145142f35f3c3d"
+    },
+    {
+      "path": "halo-6000/src/main.cpp",
+      "bytes": 9645,
+      "sha256": "2f3cc8f5cff731ba19e78b7a67c5395a6ad81682ca185695394b2753af441fdb"
+    },
+    {
+      "path": "halo-6000/src/phases.cuh",
+      "bytes": 4295,
+      "sha256": "fb16706b726bdfc7553b1f06127c7f4b1422acb9a698589f7c531f14b5184c14"
+    },
+    {
+      "path": "halo-6000/src/runtime.cu",
+      "bytes": 13966,
+      "sha256": "943c186e01fd0d3adcf15413fc829bd6fe4e40583abe2a36d8e504a3539469a9"
+    },
+    {
+      "path": "halo-6000/src/runtime.hpp",
+      "bytes": 2657,
+      "sha256": "abbe1130bb84c8c72c63aadc8f1f5420a6871eebbfa08066cef3fb7816055e6c"
+    },
+    {
+      "path": "halo-6000/src/schedule.cu",
+      "bytes": 34167,
+      "sha256": "55d05b201261ac8082a999f6317746d35165813302cb23de726ed203374aeb77"
+    },
+    {
+      "path": "halo-6000/src/schedule.hpp",
+      "bytes": 2509,
+      "sha256": "939cff0c1492694777650780fc1c6a18c1ca7edb7c252b0ff6d63b191b0004e3"
+    },
+    {
+      "path": "halo-6000/src/schedule_batch.cu",
+      "bytes": 8948,
+      "sha256": "9b2e63ee73a1dd4925239ff5150069d2c31b28e76490d3ae343572da13ed7d1b"
+    },
+    {
+      "path": "halo-6000/src/server.cpp",
+      "bytes": 11778,
+      "sha256": "1ea31370d4eb808f6cba9f2bb62b64bcad1b39f8358bd2254d0a36020380dc81"
+    },
+    {
+      "path": "halo-6000/src/server.hpp",
+      "bytes": 1348,
+      "sha256": "9ce9359d75423bd358b927af0e2ddd6603fb296a961f56007d62af5dbfa9925d"
+    },
+    {
+      "path": "halo-6000/src/tokenizer.cpp",
+      "bytes": 6217,
+      "sha256": "fbe1b1e37b05d2578d88fa56313b675697690c2db9593c4f73709bf6aaf50da7"
+    },
+    {
+      "path": "halo-6000/src/tokenizer.hpp",
+      "bytes": 1671,
+      "sha256": "5b2920f600188d0aa97b2e7f1057e07bb5bdcaa53f9843407882895ebe6d8f9c"
+    },
+    {
+      "path": "halo-6000/tune/best-s8.hpp",
+      "bytes": 1602,
+      "sha256": "3934f192a310e72a5aca6b317efa8b3ff90a85d6236f9d4431b465ed685820ed"
+    },
+    {
+      "path": "halo-6000/tune/best-s8.json",
+      "bytes": 5144,
+      "sha256": "4f8113168f28dcea987d882cad213f6d0c1d275148777edb2ef9c2d6124f87fd"
+    },
+    {
+      "path": "halo-6000/tune/best.hpp",
+      "bytes": 1429,
+      "sha256": "d445243bb37585c1d977ae102c6541675e3e0d89cdf47d63f413eb3a3ddd1748"
+    },
+    {
+      "path": "halo-6000/tune/best.json",
+      "bytes": 3005,
+      "sha256": "7c9a59e3b9c8c8957a297d7c6cfa09dafcebf334e7df6ae5f1f264ad1d221b7b"
+    },
+    {
+      "path": "halo-6000/tune/build.sh",
+      "bytes": 2000,
+      "sha256": "60f1f318f08914cab3b73044ebab0a465292763d4c1ebe51fe9095c3899fe0ae"
+    },
+    {
+      "path": "halo-6000/tune/driver.cu",
+      "bytes": 21305,
+      "sha256": "8a9828df7541f06570f372f410bb4cc4d1d60d11d9efc7c74f027a757a5dcb56"
+    },
+    {
+      "path": "halo-6000/tune/export.py",
+      "bytes": 1457,
+      "sha256": "51bbd29d219149ca58207c321f0324a4e931b6ec302b3a961ba6df79c41d4b01"
+    },
+    {
+      "path": "halo-6000/tune/results/adhoc-batch-s8-seeds.jsonl",
+      "bytes": 8618,
+      "sha256": "3fd74ff7a962caa75cfcd024a0131829edf87bb219a8d1e3e15cb48b4a105855"
+    },
+    {
+      "path": "halo-6000/tune/results/adhoc-body-genes-s1.jsonl",
+      "bytes": 28680,
+      "sha256": "6dbd5dbd921eabecaddc97672060b3f22c729653d40b92baf7d49048c552257d"
+    },
+    {
+      "path": "halo-6000/tune/results/adhoc-l2-windows-s1.jsonl",
+      "bytes": 28511,
+      "sha256": "37cbbbed2d7488b9a5723bd257408bc263ba00b712679a6b1c6595b17ab6835a"
+    },
+    {
+      "path": "halo-6000/tune/results/best-profile-s1v5.jsonl",
+      "bytes": 7068,
+      "sha256": "6b7dfefc88faa57fe6c960c2cc8a47b0b3c60208495b7784305bcba09157acc2"
+    },
+    {
+      "path": "halo-6000/tune/results/s1/best.json",
+      "bytes": 11997,
+      "sha256": "134321541ce1d5c540703c57e723065ecfe0c21858763099372dde6636298d04"
+    },
+    {
+      "path": "halo-6000/tune/results/s1v4/best.json",
+      "bytes": 10155,
+      "sha256": "3267ae75ca7d65b0b531f1f5b5ae39756cfa40f72bed29efb847b16a81212d9b"
+    },
+    {
+      "path": "halo-6000/tune/results/s1v5/best.json",
+      "bytes": 6003,
+      "sha256": "b94bc36dfaf57a5060a0874688cf562c7ef8024d6d9a3d1bc7562fe83fbedfeb"
+    },
+    {
+      "path": "halo-6000/tune/results/s1v6/best.json",
+      "bytes": 6038,
+      "sha256": "f5ca118c7119afa2782247febe5e502b64a2a3c769d8f7361e893cd58bb0740a"
+    },
+    {
+      "path": "halo-6000/tune/results/s1v7/best.json",
+      "bytes": 6085,
+      "sha256": "3dfc71bf41d963f8961b4e864516aa77362b76310bd9f00edbb76fea47b859d3"
+    },
+    {
+      "path": "halo-6000/tune/results/s8v1/best.json",
+      "bytes": 14049,
+      "sha256": "e02fd8650e26adb3c863bffc16ddfdd1962a6d38c03b5c045e9ff2ae96e8fb81"
+    },
+    {
+      "path": "halo-6000/tune/results/summary.json",
+      "bytes": 11735,
+      "sha256": "b148e7f19a5b75774bda3b01ddbeb78b0ce0132af4a86e97586108d901cfea0b"
+    },
+    {
+      "path": "halo-6000/tune/results/variance-eager-vs-lazy.jsonl",
+      "bytes": 76127,
+      "sha256": "66dfd05091224c974bd561fa27ec8dbe1c6bf4ab3504a0f2988316f9469f7c3d"
+    },
+    {
+      "path": "halo-6000/tune/results/variance-lazy-loading.jsonl",
+      "bytes": 46674,
+      "sha256": "a0d5681671cdbf8ac40bc7ec32eef32483e360b5e0aa18cd9458c70445a72bcf"
+    },
+    {
+      "path": "halo-6000/tune/search.py",
+      "bytes": 23019,
+      "sha256": "b1bcb11c3ab062f43a7959da6bf0914a8d8c06216c81b1065f045a51ac245538"
+    },
+    {
+      "path": "halo-6000/tune/space.py",
+      "bytes": 10508,
+      "sha256": "2e86a277bda3375e1ef88d72f9d8453ee5002d1e34bad4174806ad4c5d277d15"
+    },
+    {
+      "path": "licenses/llama.cpp-MIT.txt",
+      "bytes": 1078,
+      "sha256": "94f29bbed6a22c35b992c5c6ebf0e7c92f13b836b90f36f461c9cf2f0f1d010d"
+    },
+    {
+      "path": "licenses/nlohmann-json-MIT.txt",
+      "bytes": 1075,
+      "sha256": "c0d068392ea65358b798b8c165103560f06e9e3b38c4ab4e2d8810a7b931af86"
+    }
+  ]
+}

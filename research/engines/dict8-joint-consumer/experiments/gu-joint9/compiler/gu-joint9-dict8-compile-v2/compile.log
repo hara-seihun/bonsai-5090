@@ -1,0 +1,34 @@
+C:/work\models\experiments\bonsai-quality-20261013\gu-joint9-dict8-compile-v2\src\probe.cu(288): warning #177-D: variable "book" was declared but never referenced
+    uint32_t* book = nullptr;
+              ^
+          detected during instantiation of "void h5::gemm_fp4_body<FW,WG,TOKW,MODE,WF,PIPE,MICRO,CARRIER,DEGREE8,FUSE,TAIL>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *, const h5::FuseArgs &, const h5::TailArgs &, const uint32_t *) [with FW=8, WG=2, TOKW=32, MODE=3, WF=10, PIPE=0, MICRO=false, CARRIER=true, DEGREE8=false, FUSE=false, TAIL=0]" at line 795
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+C:/work\models\experiments\bonsai-quality-20261013\gu-joint9-dict8-compile-v2\src\probe.cu(406): warning #177-D: variable "fregs" was declared but never referenced
+    FuseRegs<FW, FUSE ? FTPW : 1> fregs;
+                                  ^
+          detected during instantiation of "void h5::gemm_fp4_body<FW,WG,TOKW,MODE,WF,PIPE,MICRO,CARRIER,DEGREE8,FUSE,TAIL>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *, const h5::FuseArgs &, const h5::TailArgs &, const uint32_t *) [with FW=8, WG=2, TOKW=32, MODE=3, WF=10, PIPE=0, MICRO=false, CARRIER=true, DEGREE8=false, FUSE=false, TAIL=0]" at line 795
+
+C:/work\models\experiments\bonsai-quality-20261013\gu-joint9-dict8-compile-v2\src\probe.cu(288): warning #177-D: variable "book" was declared but never referenced
+    uint32_t* book = nullptr;
+              ^
+          detected during instantiation of "void h5::gemm_fp4_body<FW,WG,TOKW,MODE,WF,PIPE,MICRO,CARRIER,DEGREE8,FUSE,TAIL>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *, const h5::FuseArgs &, const h5::TailArgs &, const uint32_t *) [with FW=8, WG=2, TOKW=32, MODE=3, WF=0, PIPE=0, MICRO=false, CARRIER=true, DEGREE8=false, FUSE=false, TAIL=0]" at line 798
+
+C:/work\models\experiments\bonsai-quality-20261013\gu-joint9-dict8-compile-v2\src\probe.cu(406): warning #177-D: variable "fregs" was declared but never referenced
+    FuseRegs<FW, FUSE ? FTPW : 1> fregs;
+                                  ^
+          detected during instantiation of "void h5::gemm_fp4_body<FW,WG,TOKW,MODE,WF,PIPE,MICRO,CARRIER,DEGREE8,FUSE,TAIL>(const uint8_t *, const uint8_t *, const float *, int, int, const uint8_t *, const uint8_t *, int, float *, int, const float *, const h5::FuseArgs &, const h5::TailArgs &, const uint32_t *) [with FW=8, WG=2, TOKW=32, MODE=3, WF=0, PIPE=0, MICRO=false, CARRIER=true, DEGREE8=false, FUSE=false, TAIL=0]" at line 798
+
+ptxas info    : 12 bytes gmem
+ptxas info    : Compiling entry function '_ZN2h513native0_probeEPKhS1_PKfiiS1_iPfiS3_' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h513native0_probeEPKhS1_PKfiiS1_iPfiS3_
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 126 registers, used 1 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_ZN2h511dict8_probeEPKhS1_PKfiiS1_iPfiS3_PKj' for 'sm_120a'
+ptxas info    : Function properties for _ZN2h511dict8_probeEPKhS1_PKfiiS1_iPfiS3_PKj
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 134 registers, used 1 barriers
+ptxas info    : Compile time = 0.000 ms
+probe.cu

@@ -1,0 +1,3 @@
+{"backend":"halo6000_whole_token","streams":1,"grid":188,"warm":40,"steps":128,"gpu_ms":534.181519,"wall_ms":534.186668,"tokens_per_second":239.618923,"weights_bytes":10103327232,"prefix_route":"all_serial_teacher_forcing"}
+{"backend":"halo6000_whole_token","streams":1,"grid":376,"warm":40,"steps":128,"gpu_ms":693.638733,"wall_ms":693.642620,"tokens_per_second":184.534101,"weights_bytes":10103327232,"prefix_route":"all_serial_teacher_forcing"}
+{"backend":"halo6000_whole_token","streams":1,"grid":188,"warm":40,"steps":128,"gpu_ms":533.460083,"wall_ms":533.464323,"tokens_per_second":239.942976,"weights_bytes":10103327232,"prefix_route":"all_serial_teacher_forcing"}

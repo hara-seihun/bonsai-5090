@@ -1,0 +1,19 @@
+{
+  "source_sha256": "c4e2878af6eb140ae0766c1b9fd60f0d7e20000184ddcc21fac44fc9d94e8183",
+  "exit": 0,
+  "stdout": "{\"state\":\"matched\",\"sampled_outputs\":1048576,\"word_errors\":0,\"f32_errors\":[0,0,0,0],\"q8_errors\":[0,0,0,0],\"native_us\":5.225600,\"direct_us\":12.201281,\"folded_tile_us\":5.440001,\"dp4a_us\":7.441600,\"source_bytes_per_tile\":240,\"native_producer_bytes\":3888,\"native_mmas_per_tile\":2,\"distinct_outputs_per_tile\":128}\n",
+  "stderr": "",
+  "wall_s": 0.17970657348632812,
+  "hashes": {
+    "affine5_groups128.cu": "d45cc54b50b6e794941e7575ad85e46606788f84d2163e5573440e2837f5efdb",
+    "affine5_groups128.exe": "3beed2562b6880ab804d3f01f1aa1b77bd1547cfd74fc824cce4b49807b447b0",
+    "build.cmd": "0d067e5318d728a51c5ea2a797d0f25460848f7bf38293dd74b91fe1afb3fcfa",
+    "build.log": "8e0b288ed698e49cec86d3e7485ded6acf3d28dd73313b4668fad6fc194c37b6",
+    "groups-inputs.bin": "0ff8a8430953bcf502101724700346cf7e67320bab3a81c1a16d3eb4d74f0e36",
+    "groups-native-f32.bin": "bf84fe08451d5f760fb144e2e659604b9ba3e5de788606ee8bb774ba6841fe11",
+    "groups-native-q8.bin": "097922f818274dc16fe4c0b65e35f0089963d46c4ed8587820da179dec08ef20",
+    "groups-native-words.bin": "57ebf84017d1b7d3fb9123f7e83e7e19db27750a81b508f13aaddc2d3081f2f6",
+    "groups-producer.bin": "41be2e061baed0947a45cca66028899127eeb2f5216ab2f8846c87292ae3e21b",
+    "groups-up64-producer.bin": "df52bf534643ca84991a2440360c6f2a5e0542a13e394af8d91f759d0f93fcca"
+  }
+}

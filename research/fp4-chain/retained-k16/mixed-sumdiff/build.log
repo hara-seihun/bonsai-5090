@@ -1,0 +1,23 @@
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z5wholeILi0ELb0EEvPKhS1_S1_PaPfPjPy' for 'sm_120a'
+ptxas info    : Function properties for _Z5wholeILi0ELb0EEvPKhS1_S1_PaPfPjPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 40 registers, used 1 barriers, 256 bytes smem
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z5wholeILi1ELb0EEvPKhS1_S1_PaPfPjPy' for 'sm_120a'
+ptxas info    : Function properties for _Z5wholeILi1ELb0EEvPKhS1_S1_PaPfPjPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 37 registers, used 1 barriers, 256 bytes smem
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z5wholeILi1ELb1EEvPKhS1_S1_PaPfPjPy' for 'sm_120a'
+ptxas info    : Function properties for _Z5wholeILi1ELb1EEvPKhS1_S1_PaPfPjPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 40 registers, used 1 barriers, 256 bytes smem
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z5wholeILi0ELb1EEvPKhS1_S1_PaPfPjPy' for 'sm_120a'
+ptxas info    : Function properties for _Z5wholeILi0ELb1EEvPKhS1_S1_PaPfPjPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 48 registers, used 1 barriers, 256 bytes smem
+ptxas info    : Compile time = 0.000 ms
+native_mixed_sumdiff.cu
+tmpxft_00007a74_00000000-10_native_mixed_sumdiff.cudafe1.cpp

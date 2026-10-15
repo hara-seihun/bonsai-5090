@@ -1,0 +1,26 @@
+{
+  "state": "CPU_binaries_built",
+  "prerequisite": "9c4ed70089114706200215bf60910dbed2c35c95",
+  "compiler": "g++ (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+  "flags": [
+    "-std=c++20",
+    "-O3",
+    "-march=native",
+    "-ffp-contract=off",
+    "-fopenmp",
+    "-Wall",
+    "-Wextra"
+  ],
+  "source_sha256": {
+    "method/packing-swarm/tools/round22/cpu/check.cpp": "7e7775d67f08272fc272a36e96d7e3ba1e9e80c4533c497a5258f9854b757264",
+    "method/packing-swarm/tools/round22/cpu/replay.py": "09fa4eee214557f2d2e1496a0a5a90edde8186916618d65484937e5fc2a52536",
+    "method/packing-swarm/tools/round17/native/packed.hpp": "c2cf6772b71cf25e00f2c1b1ff6a8b3a477b51dd38eb3502ba77067c4a915d22",
+    "method/packing-swarm/tools/round17/native/model.hpp": "5a56a194a8ab7a7e49191eb543f312d87f1d4a360bd340867e4517f3513944a9",
+    "method/packing-swarm/tools/round18/grammar.hpp": "6ce336375d0e30720f01a77dbc810603216b70efa7c0fcbd631656b17c84bb9d"
+  },
+  "binaries": {
+    "ordinary": "6eb779763748cf5375394fc966307bb7a992c3e330ca293320076392de26ed89",
+    "ubsan": "35548d347c2146dd5c6a777364b1ef693ed6a4e9c94098d857a653ef1f0d17a1"
+  },
+  "round20_receipt_sha256": "f55c88ab82fab71b96ce3891a2194088ccabb33a03f2b08083d4e99855e9fa52"
+}

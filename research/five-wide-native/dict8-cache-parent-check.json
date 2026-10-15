@@ -1,0 +1,8 @@
+{
+  "state": "passed",
+  "scope": "independent local readable package manifest, no native execution",
+  "entries_checked": 228,
+  "errors": [],
+  "seconds": 0.10872411727905273,
+  "gpu_work": false
+}

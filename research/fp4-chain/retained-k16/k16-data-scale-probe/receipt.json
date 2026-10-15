@@ -1,0 +1,13 @@
+{
+  "exit": 0,
+  "stdout": "{\"status\":\"pass\",\"physical_carrier_word_checks\":32768,\"physical_word_errors\":0,\"weight_role_scale_bytes\":\"38,7e,38,7e\",\"source_groups\":2,\"group_slots\":16,\"carrier\":\"g+448u\",\"scope\":\"raw packed generated K32 matrix; no source activation scales inside data-labeled MMA; exact unsigned word checks for both group carriers\"}\n",
+  "stderr": "",
+  "wall_s": 2.0511834621429443,
+  "mutex": "Local\\BonsaiGPU",
+  "mutex_wait_result": 0,
+  "hashes": {
+    "native_k16_data_scale_probe.cu": "498cad7692a8f06d334f9164c85280894147dda8b14cafe66896b01a3a72c8a9",
+    "native_k16_data_scale_probe.exe": "a8b7d1b2d5a9c0d86c99e2391f5de7da635547a8866817399c6e43387557e4eb",
+    "build.log": "399f2ca9ec5cf6e2ac14b24ebc9e2d371c4efa934f2f54437f3e6437cf6eda83"
+  }
+}

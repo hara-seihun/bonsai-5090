@@ -1,0 +1,341 @@
+{
+ "tok_s": 1055.9507601085984,
+ "grid_vector": [
+  32,
+  16,
+  47,
+  23,
+  47,
+  32,
+  16,
+  16,
+  47,
+  23,
+  47,
+  47,
+  47,
+  32,
+  47,
+  32,
+  47,
+  16,
+  47,
+  47,
+  12,
+  16
+ ],
+ "config": {
+  "body": {
+   "qkv_lanes": 16,
+   "z_lanes": 16,
+   "ab_lanes": 16,
+   "out_lanes": 16,
+   "router_rows": 2,
+   "select_body": 1,
+   "head_lanes": 16,
+   "head_contiguous": 0,
+   "pf_proj": 0,
+   "pf_down": 0,
+   "pf_next": 0,
+   "pf_shared": 0,
+   "mma_proj": 0,
+   "mma_out": 0,
+   "mma_head": 0,
+   "proj_rows": 1,
+   "out_rows": 1,
+   "router_mrows": 1,
+   "down_rows": 1,
+   "load_nc": 0,
+   "router_bf16": 0,
+   "l2_router": 0,
+   "l2_state": 0,
+   "l2_ratio": 100,
+   "fuse_norm": 0,
+   "fuse_select": 0
+  },
+  "boundaries": [
+   "in_norm",
+   "gdn_proj",
+   "conv_prep",
+   "recur",
+   "finish_q",
+   "out_proj",
+   "res_norm",
+   "router",
+   "select",
+   "gate_up",
+   "down",
+   "attn_proj",
+   "norm_rope",
+   "scores",
+   "softmax",
+   "value_gate",
+   "final_norm",
+   "head",
+   "arg_part",
+   "pack_hidden",
+   "pack_inner"
+  ],
+  "min_blocks": {
+   "0x1": 4,
+   "0x2": 4,
+   "0x800000": 1,
+   "0x4": 3,
+   "0x8": 4,
+   "0x10": 4,
+   "0x20": 4,
+   "0x1000000": 4,
+   "0x80": 3,
+   "0x100": 4,
+   "0x200": 1,
+   "0x400": 4,
+   "0x800": 3,
+   "0x2000": 4,
+   "0x4000": 3,
+   "0x8000": 3,
+   "0x10000": 1,
+   "0x20000": 4,
+   "0x40000": 3,
+   "0x80000": 4,
+   "0x100000": 3,
+   "0x600000": 2
+  },
+  "grids": {
+   "0x1": 32,
+   "0x2": 16,
+   "0x4": 47,
+   "0x8": 23,
+   "0x10": 47,
+   "0x20": 32,
+   "0x80": 16,
+   "0x100": 16,
+   "0x200": 47,
+   "0x400": 23,
+   "0x800": 47,
+   "0x2000": 47,
+   "0x4000": 47,
+   "0x8000": 32,
+   "0x10000": 47,
+   "0x20000": 32,
+   "0x40000": 47,
+   "0x80000": 16,
+   "0x100000": 47,
+   "0x600000": 47,
+   "0x800000": 12,
+   "0x1000000": 16
+  },
+  "rotation": [
+   false,
+   false
+  ],
+  "rows": 8
+ },
+ "describe": {
+  "compile_key": "edf05db6a1ce",
+  "body": {
+   "qkv_lanes": 16,
+   "z_lanes": 16,
+   "ab_lanes": 16,
+   "out_lanes": 16,
+   "router_rows": 2,
+   "select_body": 1,
+   "head_lanes": 16,
+   "head_contiguous": 0,
+   "pf_proj": 0,
+   "pf_down": 0,
+   "pf_next": 0,
+   "pf_shared": 0,
+   "mma_proj": 0,
+   "mma_out": 0,
+   "mma_head": 0,
+   "proj_rows": 1,
+   "out_rows": 1,
+   "router_mrows": 1,
+   "down_rows": 1,
+   "load_nc": 0,
+   "router_bf16": 0,
+   "l2_router": 0,
+   "l2_state": 0,
+   "l2_ratio": 100,
+   "fuse_norm": 0,
+   "fuse_select": 0
+  },
+  "boundaries": [
+   "in_norm",
+   "gdn_proj",
+   "conv_prep",
+   "recur",
+   "finish_q",
+   "out_proj",
+   "res_norm",
+   "router",
+   "select",
+   "gate_up",
+   "down",
+   "attn_proj",
+   "norm_rope",
+   "scores",
+   "softmax",
+   "value_gate",
+   "final_norm",
+   "head",
+   "arg_part",
+   "pack_hidden",
+   "pack_inner"
+  ],
+  "segments": 535,
+  "barriers": 1,
+  "classes": {
+   "0x1": {
+    "coop": false,
+    "count": 1,
+    "min_blocks": 4,
+    "grid": 32
+   },
+   "0x2": {
+    "coop": false,
+    "count": 40,
+    "min_blocks": 4,
+    "grid": 16
+   },
+   "0x4": {
+    "coop": false,
+    "count": 30,
+    "min_blocks": 3,
+    "grid": 47
+   },
+   "0x8": {
+    "coop": false,
+    "count": 30,
+    "min_blocks": 4,
+    "grid": 23
+   },
+   "0x10": {
+    "coop": false,
+    "count": 30,
+    "min_blocks": 4,
+    "grid": 47
+   },
+   "0x20": {
+    "coop": false,
+    "count": 30,
+    "min_blocks": 4,
+    "grid": 32
+   },
+   "0x80": {
+    "coop": false,
+    "count": 40,
+    "min_blocks": 3,
+    "grid": 16
+   },
+   "0x100": {
+    "coop": false,
+    "count": 40,
+    "min_blocks": 4,
+    "grid": 16
+   },
+   "0x200": {
+    "coop": false,
+    "count": 40,
+    "min_blocks": 1,
+    "grid": 47
+   },
+   "0x400": {
+    "coop": false,
+    "count": 40,
+    "min_blocks": 4,
+    "grid": 23
+   },
+   "0x800": {
+    "coop": false,
+    "count": 40,
+    "min_blocks": 3,
+    "grid": 47
+   },
+   "0x2000": {
+    "coop": false,
+    "count": 40,
+    "min_blocks": 4,
+    "grid": 47
+   },
+   "0x4000": {
+    "coop": false,
+    "count": 10,
+    "min_blocks": 3,
+    "grid": 47
+   },
+   "0x8000": {
+    "coop": false,
+    "count": 10,
+    "min_blocks": 3,
+    "grid": 32
+   },
+   "0x10000": {
+    "coop": false,
+    "count": 10,
+    "min_blocks": 1,
+    "grid": 47
+   },
+   "0x20000": {
+    "coop": false,
+    "count": 10,
+    "min_blocks": 4,
+    "grid": 32
+   },
+   "0x40000": {
+    "coop": false,
+    "count": 10,
+    "min_blocks": 3,
+    "grid": 47
+   },
+   "0x80000": {
+    "coop": false,
+    "count": 1,
+    "min_blocks": 4,
+    "grid": 16
+   },
+   "0x100000": {
+    "coop": false,
+    "count": 1,
+    "min_blocks": 3,
+    "grid": 47
+   },
+   "0x600000": {
+    "coop": true,
+    "count": 1,
+    "min_blocks": 2,
+    "grid": 47
+   },
+   "0x800000": {
+    "coop": false,
+    "count": 41,
+    "min_blocks": 1,
+    "grid": 12
+   },
+   "0x1000000": {
+    "coop": false,
+    "count": 40,
+    "min_blocks": 4,
+    "grid": 16
+   }
+  }
+ },
+ "guard": {
+  "bad_logits": 0,
+  "bad_tokens": 0,
+  "exact": true,
+  "first_bad_step": -1,
+  "maxabs": 0.0,
+  "state": {
+   "conv": true,
+   "exact": true,
+   "first_conv_layer": -1,
+   "first_gdn_layer": -1,
+   "first_kv_layer": -1,
+   "gdn": true,
+   "key": true,
+   "positions": true,
+   "value": true
+  }
+ }
+}

@@ -1,0 +1,227 @@
+[
+  {
+    "kind": "down",
+    "r": 16,
+    "n": 5120,
+    "k": 17408,
+    "baseline_cold_us": 43.007999,
+    "baseline_warm_us": 32.256001,
+    "max_error": 6.67572021e-06,
+    "max_relative_rms": 2.42138634e-07,
+    "wf8_packed1_bitexact": true,
+    "all_schedules": {
+      "cold_us": 34.784,
+      "warm_us": 30.656,
+      "cfg": 0,
+      "splits": 8,
+      "speedup": 1.2364305140294387
+    },
+    "selected_F4G2T16": {
+      "cold_us": 34.784,
+      "warm_us": 32.032001,
+      "cfg": 1,
+      "splits": 8,
+      "speedup": 1.2364305140294387
+    }
+  },
+  {
+    "kind": "down",
+    "r": 24,
+    "n": 5120,
+    "k": 17408,
+    "baseline_cold_us": 57.344002,
+    "baseline_warm_us": 48.576,
+    "max_error": 6.67572021e-06,
+    "max_relative_rms": 2.41530435e-07,
+    "wf8_packed1_bitexact": true,
+    "all_schedules": {
+      "cold_us": 42.975998,
+      "warm_us": 38.175999,
+      "cfg": 0,
+      "splits": 8,
+      "speedup": 1.334326244151445
+    },
+    "selected_F4G2T16": {
+      "cold_us": 46.815998,
+      "warm_us": 42.208,
+      "cfg": 1,
+      "splits": 8,
+      "speedup": 1.224880477822987
+    }
+  },
+  {
+    "kind": "down",
+    "r": 31,
+    "n": 5120,
+    "k": 17408,
+    "baseline_cold_us": 67.552002,
+    "baseline_warm_us": 58.432003,
+    "max_error": 6.67572021e-06,
+    "max_relative_rms": 2.41354995e-07,
+    "wf8_packed1_bitexact": true,
+    "all_schedules": {
+      "cold_us": 48.863998,
+      "warm_us": 43.136002,
+      "cfg": 1,
+      "splits": 8,
+      "speedup": 1.3824493444028054
+    },
+    "selected_F4G2T16": {
+      "cold_us": 48.863998,
+      "warm_us": 43.136002,
+      "cfg": 1,
+      "splits": 8,
+      "speedup": 1.3824493444028054
+    }
+  },
+  {
+    "kind": "gu",
+    "r": 16,
+    "n": 34816,
+    "k": 5120,
+    "baseline_cold_us": 67.584,
+    "baseline_warm_us": 54.304001,
+    "max_error": 4.76837158e-07,
+    "max_relative_rms": 1.34359682e-07,
+    "wf8_packed1_bitexact": true,
+    "all_schedules": {
+      "cold_us": 63.455997,
+      "warm_us": 60.576,
+      "cfg": 0,
+      "splits": 1,
+      "speedup": 1.0650530004279974
+    },
+    "selected_F4G2T16": {
+      "cold_us": 63.487999,
+      "warm_us": 60.447998,
+      "cfg": 1,
+      "splits": 1,
+      "speedup": 1.0645161457994605
+    }
+  },
+  {
+    "kind": "gu",
+    "r": 24,
+    "n": 34816,
+    "k": 5120,
+    "baseline_cold_us": 98.304001,
+    "baseline_warm_us": 87.104004,
+    "max_error": 4.76837158e-07,
+    "max_relative_rms": 1.2980385e-07,
+    "wf8_packed1_bitexact": true,
+    "all_schedules": {
+      "cold_us": 73.472,
+      "warm_us": 68.800003,
+      "cfg": 0,
+      "splits": 1,
+      "speedup": 1.3379791076872822
+    },
+    "selected_F4G2T16": {
+      "cold_us": 81.632004,
+      "warm_us": 76.863998,
+      "cfg": 1,
+      "splits": 1,
+      "speedup": 1.2042335871112513
+    }
+  },
+  {
+    "kind": "gu",
+    "r": 31,
+    "n": 34816,
+    "k": 5120,
+    "baseline_cold_us": 118.528,
+    "baseline_warm_us": 110.655998,
+    "max_error": 4.76837158e-07,
+    "max_relative_rms": 1.34819389e-07,
+    "wf8_packed1_bitexact": true,
+    "all_schedules": {
+      "cold_us": 92.160004,
+      "warm_us": 91.615997,
+      "cfg": 1,
+      "splits": 1,
+      "speedup": 1.2861110552903188
+    },
+    "selected_F4G2T16": {
+      "cold_us": 92.160004,
+      "warm_us": 91.615997,
+      "cfg": 1,
+      "splits": 1,
+      "speedup": 1.2861110552903188
+    }
+  },
+  {
+    "kind": "head",
+    "r": 16,
+    "n": 248320,
+    "k": 5120,
+    "baseline_cold_us": 374.783997,
+    "baseline_warm_us": 368.096008,
+    "max_error": 8.34465027e-07,
+    "max_relative_rms": 1.40480609e-07,
+    "wf8_packed1_bitexact": true,
+    "all_schedules": {
+      "cold_us": 331.519989,
+      "warm_us": 330.624023,
+      "cfg": 1,
+      "splits": 1,
+      "speedup": 1.1305019589633252
+    },
+    "selected_F4G2T16": {
+      "cold_us": 331.519989,
+      "warm_us": 330.624023,
+      "cfg": 1,
+      "splits": 1,
+      "speedup": 1.1305019589633252
+    }
+  },
+  {
+    "kind": "head",
+    "r": 24,
+    "n": 248320,
+    "k": 5120,
+    "baseline_cold_us": 583.42395,
+    "baseline_warm_us": 585.247986,
+    "max_error": 8.34465027e-07,
+    "max_relative_rms": 1.32164575e-07,
+    "wf8_packed1_bitexact": true,
+    "all_schedules": {
+      "cold_us": 392.992004,
+      "warm_us": 398.015991,
+      "cfg": 0,
+      "splits": 1,
+      "speedup": 1.4845695181116203
+    },
+    "selected_F4G2T16": {
+      "cold_us": 415.744019,
+      "warm_us": 412.800018,
+      "cfg": 1,
+      "splits": 1,
+      "speedup": 1.4033249387527569
+    }
+  },
+  {
+    "kind": "head",
+    "r": 31,
+    "n": 248320,
+    "k": 5120,
+    "baseline_cold_us": 727.039978,
+    "baseline_warm_us": 719.424011,
+    "max_error": 8.34465027e-07,
+    "max_relative_rms": 1.40765871e-07,
+    "wf8_packed1_bitexact": true,
+    "all_schedules": {
+      "cold_us": 540.416016,
+      "warm_us": 536.127991,
+      "cfg": 2,
+      "splits": 1,
+      "speedup": 1.345333884405084
+    },
+    "selected_F4G2T16": {
+      "cold_us": 555.039978,
+      "warm_us": 554.752014,
+      "cfg": 1,
+      "splits": 1,
+      "speedup": 1.309887587953169
+    }
+  }
+]

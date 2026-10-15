@@ -1,0 +1,27 @@
+Binary FP8 semantic witness check
+UTC: 2026-10-10T21:58:37Z
+Lean project: /opt/lean-mathlib
+Lean (version 4.33.0, x86_64-unknown-linux-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)
+g++ (Ubuntu 15.2.0-16ubuntu1) 15.2.0
+Copyright (C) 2025 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+Source hashes:
+18c654fcf4a7fa013f22e708ff10aaf974bcadfe74b8972bee87cf43c34611de  BinaryFP8.lean
+0255e537d07c4c63b69b5843479779ad2d13e16d1ed9c33b4f4c934d18270887  finite.cpp
+dfbf8fb026e22cc9bc87b57811d15e628b953c6ecc238504399f908849af05d3  README.md
+47f422e99a221c9dbe4a23e6f1584f8df0c5a21eee68592882c7007487d6ec2d  check.sh
+
+Lean: lake env lean BinaryFP8.lean (45-second limit)
+'BinaryFP8.all_lane_codes' depends on axioms: [propext, Quot.sound]
+'BinaryFP8.carrier_decode' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BinaryFP8.expanded_decode' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BinaryFP8.weighted_projection' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BinaryFP8.quantization_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+C++: g++ -std=c++17 -O2 -Wall -Wextra -Werror -pedantic finite.cpp
+PASS: 16 nibbles, 64 lane cases; bytes 0x38/0xb8, exponent 7, fraction 0, decoded +/-1
+
+PASS: Lean and C++ checks exited 0

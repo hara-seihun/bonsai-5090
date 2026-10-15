@@ -1,0 +1,70 @@
+C:/work\models\experiments\bonsai-quality-20261013\fp4-fibre-search\k16-packed-context\native_k16_packed_context.cu(31): warning #177-D: variable "original" was declared but never referenced
+  template<bool Capture> __declspec(__global__) void packed_context(const uint8_t*w,const uint8_t*x,const uint8_t*sc,int8_t*q,float*qs,unsigned long long*bad,uint2*image,unsigned*contexts){int warp=threadIdx.x/32,lane=threadIdx.x%32,g=lane/4,t=lane%4,rb=blockIdx.y*128+warp*8,cb=blockIdx.x*8,row=rb+g,col=cb+g,half=(t&1)*4;__declspec(__shared__) unsigned meta[8];if(threadIdx.x<8){int c=cb+threadIdx.x;const unsigned*xx=(const unsigned*)(x+c*16);unsigned r0=radius8(xx[0])+radius8(xx[1]),r1=radius8(xx[2])+radius8(xx[3]);if(r0>192||r1>192)atomicAdd(bad,1ULL);meta[threadIdx.x]=0x00380038U|((r0<=127?0x78U:0x7eU)<<8)|((r1<=127?0x78U:0x7eU)<<24);if constexpr(Capture){if(!blockIdx.y){contexts[c]=meta[threadIdx.x];contexts[N+c]=r0|(r1<<16);}}}__syncthreads();unsigned p0=*(const unsigned*)(w+row*16+half),p1=*(const unsigned*)(w+row*16+8+half);unsigned a[4]={t<2?gateword(p0):upword(p0),0U,0U,t<2?gateword(p1):upword(p1)},b0=*(const unsigned*)(x+col*16+half),b1=*(const unsigned*)(x+col*16+8+half);float d[4]={};mx_packed(d,a,b0,b1,meta[g]);float value[2];for(int j=0;j<2;j++){int c=cb+2*t+j;unsigned m=meta[2*t+j],kind0=(m>>8)&255U,kind1=m>>24;int n0=__float2int_rn(2*d[j]),n1=__float2int_rn(2*d[j+2]);unsigned packed;asm volatile("prmt.b32 %0,%1,%2,0x5410;":"=r"(packed):"r"(n0),"r"(n1));unsigned extra=(kind0==0x7eU?((unsigned(n0)>>16)&3U):0U)|(kind1==0x7eU?((unsigned(n1)>>16)&3U)<<2:0U);if constexpr(Capture){image[c*M+row]=make_uint2(packed,extra);}float gate=0,up=0;for(int group=0;group<2;group++){unsigned kind=group?kind1:kind0;bool wide=kind==0x7eU;unsigned word=(packed>>(16*group))&65535U;if(wide)word|=((extra>>(2*group))&3U)<<16;int label=signed_field(word,wide?18U:16U),original=group?n1:n0;float radix=wide?448.f:256.f;int u2=__float2int_rn(float(label)*(wide?1.f/448.f:1.f/256.f)),g2=label-int(radix)*u2;if((kind!=0x78U&&kind!=0x7eU)||g2< -192||g2>192||u2< -192||u2>192)atomicAdd(bad,1ULL);if constexpr(Capture){if(label!=original||2*d[j+2*group]!=float(label))atomicAdd(bad,1ULL);float og=0,ou=0;for(int k=group*16;k<group*16+16;k++){unsigned wc=nib(w,row,k);float av=E2[nib(x,c,k)];og+=float(trit(wc&3))*av;ou+=float(trit(wc>>2))*av;}if(float(label)*.5f!=og+radix*ou)atomicAdd(bad,1ULL);}float alpha=SCALE[sc[c*2+group]];gate+=(float(g2)*.5f)*alpha;up+=(float(u2)*.5f)*alpha;}value[j]=finish(gate,up);}__declspec(__shared__) float partial[128];float m0=fabsf(value[0]),m1=fabsf(value[1]);for(int offset=4;offset<=16;offset*=2){m0=fmaxf(m0,__shfl_xor_sync(0xffffffffU,m0,offset));m1=fmaxf(m1,__shfl_xor_sync(0xffffffffU,m1,offset));}if(!g){partial[warp*8+2*t]=m0;partial[warp*8+2*t+1]=m1;}__syncthreads();m0=0;m1=0;for(int ww=0;ww<16;ww++){m0=fmaxf(m0,partial[ww*8+2*t]);m1=fmaxf(m1,partial[ww*8+2*t+1]);}float i0=m0>0?127.f/m0:0.f,i1=m1>0?127.f/m1:0.f;q[(cb+2*t)*M+row]=int8_t(__float2int_rn(value[0]*i0));q[(cb+2*t+1)*M+row]=int8_t(__float2int_rn(value[1]*i1));if(!warp&&!g){qs[(cb+2*t)*2+blockIdx.y]=m0/127.f;qs[(cb+2*t+1)*2+blockIdx.y]=m1/127.f;}}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ^
+          detected during instantiation of "void packed_context<Capture>(const uint8_t *, const uint8_t *, const uint8_t *, int8_t *, float *, unsigned long long *, uint2 *, unsigned int *) [with Capture=false]" at line 33
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z6regionILi1ELb0EEvPKhS1_S1_PKjS3_PfPy' for 'sm_120a'
+ptxas info    : Function properties for _Z6regionILi1ELb0EEvPKhS1_S1_PKjS3_PfPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 24 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6regionILi0ELb0EEvPKhS1_S1_PKjS3_PfPy' for 'sm_120a'
+ptxas info    : Function properties for _Z6regionILi0ELb0EEvPKhS1_S1_PKjS3_PfPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 42 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z14packed_contextILb0EEvPKhS1_S1_PaPfPyP5uint2Pj' for 'sm_120a'
+ptxas info    : Function properties for _Z14packed_contextILb0EEvPKhS1_S1_PaPfPyP5uint2Pj
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 44 registers, used 1 barriers, 544 bytes smem
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z14packed_contextILb1EEvPKhS1_S1_PaPfPyP5uint2Pj' for 'sm_120a'
+ptxas info    : Function properties for _Z14packed_contextILb1EEvPKhS1_S1_PaPfPyP5uint2Pj
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 44 registers, used 1 barriers, 544 bytes smem
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z12fused_regionILi1ELb0EEvPKhS1_S1_PKjS3_PaPfPy' for 'sm_120a'
+ptxas info    : Function properties for _Z12fused_regionILi1ELb0EEvPKhS1_S1_PKjS3_PaPfPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 34 registers, used 1 barriers, 256 bytes smem
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z12fused_regionILi0ELb0EEvPKhS1_S1_PKjS3_PaPfPy' for 'sm_120a'
+ptxas info    : Function properties for _Z12fused_regionILi0ELb0EEvPKhS1_S1_PKjS3_PaPfPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 40 registers, used 1 barriers, 256 bytes smem
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6regionILi1ELb1EEvPKhS1_S1_PKjS3_PfPy' for 'sm_120a'
+ptxas info    : Function properties for _Z6regionILi1ELb1EEvPKhS1_S1_PKjS3_PfPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 40 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6regionILi0ELb1EEvPKhS1_S1_PKjS3_PfPy' for 'sm_120a'
+ptxas info    : Function properties for _Z6regionILi0ELb1EEvPKhS1_S1_PKjS3_PfPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 44 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z10data_scalePKhS0_S0_PaPfPy' for 'sm_120a'
+ptxas info    : Function properties for _Z10data_scalePKhS0_S0_PaPfPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 44 registers, used 1 barriers, 512 bytes smem
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z5quantPKfPaPf' for 'sm_120a'
+ptxas info    : Function properties for _Z5quantPKfPaPf
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 19 registers, used 1 barriers, 20 bytes smem
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6replayPKfPf' for 'sm_120a'
+ptxas info    : Function properties for _Z6replayPKfPf
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 10 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+ptxas info    : Compiling entry function '_Z6directPKhS0_S0_Pf' for 'sm_120a'
+ptxas info    : Function properties for _Z6directPKhS0_S0_Pf
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 39 registers, used 0 barriers
+ptxas info    : Compile time = 0.000 ms
+native_k16_packed_context.cu
+tmpxft_00004694_00000000-10_native_k16_packed_context.cudafe1.cpp

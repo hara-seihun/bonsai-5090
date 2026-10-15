@@ -1,0 +1,25 @@
+{
+  "name": "halo-batch-cap128",
+  "command": [
+    "python3",
+    "/workspace/halo-6000/bench/run-batch.py",
+    "/workspace/models/gguf/Qwen3.6-35B-A3B-ternary-v1-PTQ1_0.gguf",
+    "128",
+    "--steps",
+    "2",
+    "--context",
+    "32"
+  ],
+  "started_at": "2026-10-05T03:37:08.921437+00:00",
+  "state": "succeeded",
+  "pid": 59186,
+  "process_identity": {
+    "start_ticks": "64595052",
+    "boot_id": "00000000-0000-0000-0000-000000000000"
+  },
+  "child_pid": 59189,
+  "child_pgid": 59189,
+  "exit_code": 0,
+  "wall_seconds": 75.21095614694059,
+  "finished_at": "2026-10-05T03:38:24.132386+00:00"
+}

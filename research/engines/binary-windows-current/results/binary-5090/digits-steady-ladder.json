@@ -1,0 +1,121 @@
+{
+  "scope": "fresh measured panels; exact benchmark counts and mode are recorded per row",
+  "rows": [
+    {
+      "path": "results/binary-5090/digits-steady/tasks-gsm256-digits-ragged-b32",
+      "receipt": {
+        "status": "complete",
+        "exit_code": 0
+      },
+      "mode": "selected",
+      "decoding": {
+        "temperature": 0,
+        "sampling": null,
+        "enable_thinking": false,
+        "max_tokens": {
+          "gsm8k": 4096
+        },
+        "concurrency": 32
+      },
+      "manifest_sha256": "0330533de253a6b29421216609c18cb4afe5a7e9bc16cb0c574af8b0b4d15c58",
+      "tokens": 152503,
+      "generation_seconds": 126.08192143309861,
+      "http_tokens_second": 1209.554853436469,
+      "benchmarks": {
+        "gsm8k": {
+          "n": 256,
+          "metrics": {
+            "accuracy": {
+              "score": 0.921875,
+              "se": 0.016773011755193034,
+              "n": 256,
+              "correct": 236
+            },
+            "accuracy_fresh32": {
+              "score": 0.90625,
+              "se": 0.05152697639950359,
+              "n": 32,
+              "correct": 29
+            }
+          },
+          "truncated": 12,
+          "completion_tokens": 152503,
+          "generation_s": 126.08192143309861,
+          "http_tokens_second": 1209.554853436469
+        }
+      },
+      "native_counters": {
+        "accepted_drafts": 0,
+        "proposed_drafts": 0,
+        "verify_rounds": 0,
+        "generated_tokens": 152747,
+        "lookup_proposed": 0,
+        "lookup_accepted": 0,
+        "lookup_rounds": 0,
+        "verify_s": 125.863110151,
+        "draft_s": 0.000213167,
+        "busy_s": 126.076599689,
+        "acceptance_fraction": null,
+        "emitted_per_verify_round": null
+      }
+    },
+    {
+      "path": "results/binary-5090/digits-steady/tasks-gsm256-dp4a-pf32-b32",
+      "receipt": {
+        "status": "complete",
+        "exit_code": 0
+      },
+      "mode": "selected",
+      "decoding": {
+        "temperature": 0,
+        "sampling": null,
+        "enable_thinking": false,
+        "max_tokens": {
+          "gsm8k": 4096
+        },
+        "concurrency": 32
+      },
+      "manifest_sha256": "0330533de253a6b29421216609c18cb4afe5a7e9bc16cb0c574af8b0b4d15c58",
+      "tokens": 140107,
+      "generation_seconds": 132.7533178543672,
+      "http_tokens_second": 1055.3935846160916,
+      "benchmarks": {
+        "gsm8k": {
+          "n": 256,
+          "metrics": {
+            "accuracy": {
+              "score": 0.92578125,
+              "se": 0.016382909247859002,
+              "n": 256,
+              "correct": 237
+            },
+            "accuracy_fresh32": {
+              "score": 0.9375,
+              "se": 0.0427908248050911,
+              "n": 32,
+              "correct": 30
+            }
+          },
+          "truncated": 12,
+          "completion_tokens": 140107,
+          "generation_s": 132.7533178543672,
+          "http_tokens_second": 1055.3935846160916
+        }
+      },
+      "native_counters": {
+        "accepted_drafts": 0,
+        "proposed_drafts": 0,
+        "verify_rounds": 0,
+        "generated_tokens": 140351,
+        "lookup_proposed": 0,
+        "lookup_accepted": 0,
+        "lookup_rounds": 0,
+        "verify_s": 132.561054378,
+        "draft_s": 0.000212799,
+        "busy_s": 132.748116218,
+        "acceptance_fraction": null,
+        "emitted_per_verify_round": null
+      }
+    }
+  ]
+}

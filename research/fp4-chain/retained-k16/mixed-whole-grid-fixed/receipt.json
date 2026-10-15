@@ -1,0 +1,13 @@
+{
+  "exit": 0,
+  "stdout": "{\"status\":\"mixed_whole_observation\",\"domain_errors\":0,\"prefix_errors\":[0,0,0],\"q8_errors\":0,\"scale_errors\":0,\"K\":128,\"group_scales\":8,\"logical_cases\":16384}\n{\"status\":\"pass\",\"timings_ms\":[0.002890,0.001864],\"ranges_ms\":[[0.002881,0.002997],[0.001852,0.001941]],\"registers\":[44,37],\"local_bytes\":[0,0],\"shared_bytes\":[512,256],\"scope\":\"opaque per16 GU carriers from four data-scale MXFP4 instructions meet only in final joint observer; eight independent source scales; exact2^-10 integer-grid sum and sign-magnitude bit truncation per native K64 update; no FP64 arithmetic or ordinary floating g/u until final SFU; int32 domain bounded for K128; conventional g/u recovered inside final observer only; complete packed producers/placement/observer/collectiveQ8/stores timed; encoded64 vs native128 logical endpoints per warp; four instructions per warp on both routes; generated plus adversarial matrix, no learned/model acceptance\"}\n{\"preparation_ms\":[95.793200,3.423600,2.918500],\"input_bytes\":[16384,4096,512],\"capture_only_trace_bytes\":393216,\"timed_global_intermediate_bytes\":0}\n",
+  "stderr": "",
+  "wall_s": 2.2494049072265625,
+  "mutex": "Local\\BonsaiGPU",
+  "mutex_wait_result": 0,
+  "hashes": {
+    "native_mixed_whole_grid_fixed.cu": "4d2e6bff7ff15d65c5b3cf631d38c52232acb6ccc9a7a6a9f3195db39b5bf383",
+    "native_mixed_whole_grid_fixed.exe": "f6e0d5280d881752bf00324000e108acbb5c77c80ec296b1763e10ed21efddc5",
+    "build.log": "eabe0e84cb6661c51084c256466e61ac0c5ee5f53ad781fea5e6192ea5283bca"
+  }
+}

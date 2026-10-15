@@ -1,0 +1,8 @@
+{"kind":"preparation","static_relabel_us":67.584000,"candidate_gu_resident_bytes":25067520,"candidate_down_resident_bytes":12533760,"extra_static_bytes_vs_packed1":0,"k":5120,"hidden":17408,"down_n":5120,"r":17}
+{"kind":"witness","cfg":0,"r":17,"same_plan_a8_scales_dc_status_digits_bitexact":true,"complete_trained_down_bitexact":true}
+{"kind":"witness","cfg":1,"r":17,"same_plan_a8_scales_dc_status_digits_bitexact":true,"complete_trained_down_bitexact":true}
+{"kind":"witness","cfg":2,"r":17,"same_plan_a8_scales_dc_status_digits_bitexact":true,"complete_trained_down_bitexact":true}
+{"kind":"witness","cfg":3,"r":17,"same_plan_a8_scales_dc_status_digits_bitexact":true,"complete_trained_down_bitexact":true}
+{"kind":"complete_wrapper_witness","r":17,"gu_cfg":1,"down_cfg":1,"down_splits":8,"alpha":1,"beta":1,"row_stride":5120,"residual_and_guards_bitexact":true,"null_q":true,"next_carrier_and_all_digit_padding_bitexact":true}
+{"kind":"complete_wrapper_witness","r":17,"gu_cfg":1,"down_cfg":1,"down_splits":8,"alpha":1,"beta":1,"row_stride":5152,"residual_and_guards_bitexact":true,"null_q":true,"next_carrier_and_all_digit_padding_bitexact":true}
+{"kind":"contracts","r":17,"zero_complete_down":true,"invalid_complete_down_nan":true,"sticky_error":true,"source_scale_range_error_preserved":true,"null_q_path":true,"undersized_digits_rejected":true}

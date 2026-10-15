@@ -1,0 +1,108 @@
+{
+  "job": {
+    "id": "deterministic-serving-b64-three-repeat",
+    "source_row": "custom-q6-planes-fp4-direct",
+    "phase": "smoke",
+    "streams": 64,
+    "command": [
+      "C:/work/models/experiments/bonsai-quality-20261013/custom-wide256/build/quality_length_bench.exe",
+      "C:/work/models/models/Ternary-Bonsai-2-27B-PTQ1_0.gguf",
+      "C:/work/models/experiments/bonsai-quality-20261013/inputs/video-gsm-prompts256.bin",
+      "64",
+      "128"
+    ],
+    "environment": {
+      "H5_AB_PARALLEL": "1",
+      "H5_ACT": "fp4",
+      "H5_ATTN_DIRECT": "0",
+      "H5_CARRIER_WF0": "1",
+      "H5_COMPACT": "dense5",
+      "H5_GDN_ARITH": "fp32",
+      "H5_GDN_BITS": "6",
+      "H5_GDN_CG": "8",
+      "H5_GDN_OCC": "2",
+      "H5_GDN_PIPE": "0",
+      "H5_GDN_Q8_SCALE": "ls",
+      "H5_GDN_SCALED": "0",
+      "H5_GDN_SINGLE": "separate",
+      "H5_GEMM_PREWAIT": "5",
+      "H5_GRAPH_NODES": "native",
+      "H5_HEAD_KS": "1",
+      "H5_KV": "fp8",
+      "H5_LOAD_THREADS": "4",
+      "H5_NO_SPEC": "1",
+      "H5_PDL": "1",
+      "H5_PLAN_FILL": "1",
+      "H5_PLAN_READ": "C:/work/models/experiments/bonsai-quality-20261013/custom/frozen-production-plan.txt",
+      "H5_PREP_CHUNK": "2",
+      "H5_PREP_CHUNK_WIDE": "1",
+      "H5_PREP_CLEAR": "0",
+      "H5_PREP_EARLY": "4",
+      "H5_PREP_G4": "0.015625",
+      "H5_PREP_WIDE": "multi",
+      "H5_SCALE_CARRIER": "1",
+      "H5_STATE": "q8",
+      "H5_STATE_FUSION": "0",
+      "H5_TERNARY_OPERANDS": "packed",
+      "H5_TOPK_SPLIT": "1",
+      "H5_WEIGHTS": "fp4",
+      "H5_WSCALE": "f16",
+      "P12_FP4_CACHE": "0",
+      "P12_FP4_SLOTS": "64",
+      "QC_KV": "fp4-direct",
+      "QC_Q6_LAYOUT": "planes",
+      "EXPLORER_PASSES": "3",
+      "H5_GRAPH_MAX_ROWS": "64",
+      "H5_PLAN_WRITE": "C:/work/models/experiments/bonsai-quality-20261013/fullk-gu-engine-v6/plan-deterministic-serving-confirm.txt",
+      "H5_DETERMINISTIC_GEMM": "1"
+    },
+    "timeout_s": 180
+  },
+  "signature": "c3f5f3f20ac1368c2157dd99f0d5d337ab32e876377229106f4c95ff9bc37c02",
+  "model_sha256": "53107f530aa52eb00912263ab1ee29bd199261c87cd7b4ad4ca1318c1fe33ee3",
+  "prompts_sha256": "d105a31cac29fd42e741b88d0e35bdceeebe1d77a1142a073a8a8c159259670e",
+  "binary_sha256": "3fd47ff37205bdd50738194ef92c13c21d24fc77a9d1be1197b69128a2173b12",
+  "dll_sha256": {
+    "C:\\work\\models\\experiments\\bonsai-quality-20261013\\custom-wide256\\build\\quality_custom.dll": "a836fd6818df9bc92a8df71d2f9e92fc97b9a64195fab4142d9101fb20785e7c"
+  },
+  "device_before": "GPU-00000000-0000-0000-0000-000000000000, NVIDIA GeForce RTX 5090, 610.47, 600.00 W, 32607 MiB, 41, 195 MHz, 405 MHz",
+  "started_unix": 1792003225.861262,
+  "status": "measured",
+  "returncode": 0,
+  "elapsed_s": 16.83409333229065,
+  "device_after": "GPU-00000000-0000-0000-0000-000000000000, NVIDIA GeForce RTX 5090, 610.47, 600.00 W, 32607 MiB, 50, 2917 MHz, 14001 MHz",
+  "samples": [
+    {
+      "pass": 0,
+      "streams": 64,
+      "tokens": 8192,
+      "generation_s": 1.2439621,
+      "generation_tps": 6585.409637,
+      "warmup_tokens_per_stream": 8
+    },
+    {
+      "pass": 1,
+      "streams": 64,
+      "tokens": 8192,
+      "generation_s": 1.2444042,
+      "generation_tps": 6583.070035,
+      "warmup_tokens_per_stream": 8
+    },
+    {
+      "pass": 2,
+      "streams": 64,
+      "tokens": 8192,
+      "generation_s": 1.2450205,
+      "generation_tps": 6579.811334,
+      "warmup_tokens_per_stream": 8
+    }
+  ],
+  "generation_tps": 6583.070035,
+  "plans_before": {
+    "C:\\work\\models\\experiments\\bonsai-quality-20261013\\custom\\frozen-production-plan.txt": "713c060b627ef9955d68edfef17e12d75f07093c68b74c3fd8ecf4d19b3507bd"
+  },
+  "plans_after": {
+    "C:\\work\\models\\experiments\\bonsai-quality-20261013\\custom\\frozen-production-plan.txt": "713c060b627ef9955d68edfef17e12d75f07093c68b74c3fd8ecf4d19b3507bd"
+  },
+  "headline_timing": false
+}

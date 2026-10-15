@@ -1,0 +1,720 @@
+{
+  "research_matches": 102,
+  "confirmed_secrets": 0,
+  "entries": [
+    {
+      "path": "engines/binary-batchpair/tools/two_path_code_check.py",
+      "original_line": 63,
+      "rule": "generic-api-key",
+      "classification": "boolean_contract_test_expression",
+      "secret_found": false
+    },
+    {
+      "path": "engines/binary-bmega/results/binary-5090/batchpair-objects.json",
+      "original_line": 4,
+      "rule": "generic-api-key",
+      "classification": "git_commit_sha1_named_api",
+      "secret_found": false
+    },
+    {
+      "path": "engines/binary-bmega/tools/two_path_code_check.py",
+      "original_line": 63,
+      "rule": "generic-api-key",
+      "classification": "boolean_contract_test_expression",
+      "secret_found": false
+    },
+    {
+      "path": "engines/binary-dspark-live/results/binary-5090/batchpair-objects.json",
+      "original_line": 4,
+      "rule": "generic-api-key",
+      "classification": "git_commit_sha1_named_api",
+      "secret_found": false
+    },
+    {
+      "path": "engines/binary-dspark-live/tools/two_path_code_check.py",
+      "original_line": 63,
+      "rule": "generic-api-key",
+      "classification": "boolean_contract_test_expression",
+      "secret_found": false
+    },
+    {
+      "path": "engines/binary-f32-control/tools/two_path_code_check.py",
+      "original_line": 63,
+      "rule": "generic-api-key",
+      "classification": "boolean_contract_test_expression",
+      "secret_found": false
+    },
+    {
+      "path": "engines/binary-ordinary/tools/two_path_code_check.py",
+      "original_line": 63,
+      "rule": "generic-api-key",
+      "classification": "boolean_contract_test_expression",
+      "secret_found": false
+    },
+    {
+      "path": "engines/binary-spec/results/binary-5090/batchpair-objects.json",
+      "original_line": 4,
+      "rule": "generic-api-key",
+      "classification": "git_commit_sha1_named_api",
+      "secret_found": false
+    },
+    {
+      "path": "engines/binary-spec/tools/two_path_code_check.py",
+      "original_line": 63,
+      "rule": "generic-api-key",
+      "classification": "boolean_contract_test_expression",
+      "secret_found": false
+    },
+    {
+      "path": "engines/dict8-joint-consumer/experiments/fullk-h1/graph-v1-failure/h1-window-v1-driver.log",
+      "original_line": 5,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "engines/dict8-joint-consumer/experiments/fullk-h1/graph-v1-failure/h1-window-v1-driver.log",
+      "original_line": 133,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "engines/dict8-joint-consumer/experiments/fullk-h1/graph-v1-failure/h1-window-v1-result.json",
+      "original_line": 101,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "engines/dict8-joint-consumer/experiments/gu-dict8-engine/build-receipt-v2.json",
+      "original_line": 46,
+      "rule": "generic-api-key",
+      "classification": "path_pruned",
+      "secret_found": false
+    },
+    {
+      "path": "engines/dict8-joint-consumer/experiments/gu-dict8-engine/build-receipt.json",
+      "original_line": 46,
+      "rule": "generic-api-key",
+      "classification": "path_pruned",
+      "secret_found": false
+    },
+    {
+      "path": "engines/dict8-joint-consumer/experiments/gu-dict8-engine/abi-boundary.json",
+      "original_line": 3,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "engines/dict8-joint-consumer/experiments/gu-dict8-engine/build-source-manifest.json",
+      "original_line": 10,
+      "rule": "generic-api-key",
+      "classification": "path_pruned",
+      "secret_found": false
+    },
+    {
+      "path": "engines/dict8-joint-consumer/experiments/gu-dict8-engine/compiler/build-v1/build-receipt.json",
+      "original_line": 46,
+      "rule": "generic-api-key",
+      "classification": "path_pruned",
+      "secret_found": false
+    },
+    {
+      "path": "engines/dict8-joint-consumer/experiments/gu-dict8-engine/window-v1-result.json",
+      "original_line": 136,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "engines/dict8-joint-consumer/experiments/gu-dict8-engine/window-v1-result.json",
+      "original_line": 145,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "engines/dict8-joint-consumer/experiments/gu-dict8-engine/window-v1-result.json",
+      "original_line": 227,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "engines/dict8-joint-consumer/experiments/gu-dict8-engine/window-v1-result.json",
+      "original_line": 236,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "engines/dict8-joint-consumer/experiments/joint-consumer/source-contract.json",
+      "original_line": 14,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "engines/dict8-joint-consumer/tools/two_path_code_check.py",
+      "original_line": 63,
+      "rule": "generic-api-key",
+      "classification": "boolean_contract_test_expression",
+      "secret_found": false
+    },
+    {
+      "path": "engines/dict8-offline-identity/experiments/fullk-h1/graph-v1-failure/h1-window-v1-driver.log",
+      "original_line": 5,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "engines/dict8-offline-identity/experiments/fullk-h1/graph-v1-failure/h1-window-v1-driver.log",
+      "original_line": 133,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "engines/dict8-offline-identity/experiments/fullk-h1/graph-v1-failure/h1-window-v1-result.json",
+      "original_line": 101,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "engines/dict8-offline-identity/experiments/gu-dict8-cache/semantic-binding.json",
+      "original_line": 10,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "engines/dict8-offline-identity/experiments/gu-dict8-engine/build-receipt.json",
+      "original_line": 46,
+      "rule": "generic-api-key",
+      "classification": "path_pruned",
+      "secret_found": false
+    },
+    {
+      "path": "engines/dict8-offline-identity/experiments/gu-dict8-engine/build-receipt-v2.json",
+      "original_line": 46,
+      "rule": "generic-api-key",
+      "classification": "path_pruned",
+      "secret_found": false
+    },
+    {
+      "path": "engines/dict8-offline-identity/experiments/gu-dict8-engine/abi-boundary.json",
+      "original_line": 3,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "engines/dict8-offline-identity/experiments/gu-dict8-engine/build-source-manifest.json",
+      "original_line": 10,
+      "rule": "generic-api-key",
+      "classification": "path_pruned",
+      "secret_found": false
+    },
+    {
+      "path": "engines/dict8-offline-identity/experiments/gu-dict8-engine/compiler/build-v1/build-receipt.json",
+      "original_line": 46,
+      "rule": "generic-api-key",
+      "classification": "path_pruned",
+      "secret_found": false
+    },
+    {
+      "path": "engines/dict8-offline-identity/experiments/gu-dict8-engine/window-v1-result.json",
+      "original_line": 136,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "engines/dict8-offline-identity/experiments/gu-dict8-engine/window-v1-result.json",
+      "original_line": 145,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "engines/dict8-offline-identity/experiments/gu-dict8-engine/window-v1-result.json",
+      "original_line": 227,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "engines/dict8-offline-identity/experiments/gu-dict8-engine/window-v1-result.json",
+      "original_line": 236,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "engines/dict8-offline-identity/tools/two_path_code_check.py",
+      "original_line": 63,
+      "rule": "generic-api-key",
+      "classification": "boolean_contract_test_expression",
+      "secret_found": false
+    },
+    {
+      "path": "engines/dict8-v2/experiments/fullk-h1/graph-v1-failure/h1-window-v1-driver.log",
+      "original_line": 5,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "engines/dict8-v2/experiments/fullk-h1/graph-v1-failure/h1-window-v1-driver.log",
+      "original_line": 133,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "engines/dict8-v2/experiments/fullk-h1/graph-v1-failure/h1-window-v1-result.json",
+      "original_line": 101,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "engines/dict8-v2/experiments/gu-dict8-engine/build-receipt-v2.json",
+      "original_line": 46,
+      "rule": "generic-api-key",
+      "classification": "path_pruned",
+      "secret_found": false
+    },
+    {
+      "path": "engines/dict8-v2/experiments/gu-dict8-engine/build-receipt.json",
+      "original_line": 46,
+      "rule": "generic-api-key",
+      "classification": "path_pruned",
+      "secret_found": false
+    },
+    {
+      "path": "engines/dict8-v2/experiments/gu-dict8-engine/abi-boundary.json",
+      "original_line": 3,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "engines/dict8-v2/experiments/gu-dict8-engine/build-source-manifest.json",
+      "original_line": 10,
+      "rule": "generic-api-key",
+      "classification": "path_pruned",
+      "secret_found": false
+    },
+    {
+      "path": "engines/dict8-v2/experiments/gu-dict8-engine/compiler/build-v1/build-receipt.json",
+      "original_line": 46,
+      "rule": "generic-api-key",
+      "classification": "path_pruned",
+      "secret_found": false
+    },
+    {
+      "path": "engines/dict8-v2/experiments/gu-dict8-engine/window-v1-result.json",
+      "original_line": 136,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "engines/dict8-v2/experiments/gu-dict8-engine/window-v1-result.json",
+      "original_line": 145,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "engines/dict8-v2/experiments/gu-dict8-engine/window-v1-result.json",
+      "original_line": 227,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "engines/dict8-v2/experiments/gu-dict8-engine/window-v1-result.json",
+      "original_line": 236,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "engines/dict8-v2/tools/two_path_code_check.py",
+      "original_line": 63,
+      "rule": "generic-api-key",
+      "classification": "boolean_contract_test_expression",
+      "secret_found": false
+    },
+    {
+      "path": "engines/fullk-gu/tools/two_path_code_check.py",
+      "original_line": 63,
+      "rule": "generic-api-key",
+      "classification": "boolean_contract_test_expression",
+      "secret_found": false
+    },
+    {
+      "path": "engines/h1-graph-v3/experiments/fullk-h1/graph-v1-failure/h1-window-v1-driver.log",
+      "original_line": 5,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "engines/h1-graph-v3/experiments/fullk-h1/graph-v1-failure/h1-window-v1-driver.log",
+      "original_line": 133,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "engines/h1-graph-v3/experiments/fullk-h1/graph-v1-failure/h1-window-v1-result.json",
+      "original_line": 101,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "engines/h1-graph-v3/tools/two_path_code_check.py",
+      "original_line": 63,
+      "rule": "generic-api-key",
+      "classification": "boolean_contract_test_expression",
+      "secret_found": false
+    },
+    {
+      "path": "engines/packed-tail/tools/two_path_code_check.py",
+      "original_line": 63,
+      "rule": "generic-api-key",
+      "classification": "boolean_contract_test_expression",
+      "secret_found": false
+    },
+    {
+      "path": "evidence/dict8-identity/native-readable-v1/build-receipt.json",
+      "original_line": 52,
+      "rule": "generic-api-key",
+      "classification": "path_pruned",
+      "secret_found": false
+    },
+    {
+      "path": "evidence/dict8-identity/native-readable-v1/build-receipt.json",
+      "original_line": 201,
+      "rule": "generic-api-key",
+      "classification": "path_pruned",
+      "secret_found": false
+    },
+    {
+      "path": "evidence/dict8-identity/native-readable-v2/build-receipt.json",
+      "original_line": 52,
+      "rule": "generic-api-key",
+      "classification": "path_pruned",
+      "secret_found": false
+    },
+    {
+      "path": "evidence/dict8-identity/native-readable-v2/build-receipt.json",
+      "original_line": 201,
+      "rule": "generic-api-key",
+      "classification": "path_pruned",
+      "secret_found": false
+    },
+    {
+      "path": "evidence/joint-consumer-result/source-contract.json",
+      "original_line": 14,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "five-wide-native/dict8-abi-readback-v2.json",
+      "original_line": 1,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "five-wide-native/dict8-cache-native-build-v2.json",
+      "original_line": 1,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "five-wide-native/dict8-cache-native-build-v2.json",
+      "original_line": 1,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "five-wide-native/dict8-cache-native-build-v3.json",
+      "original_line": 1,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "five-wide-native/dict8-cache-native-build-v3.json",
+      "original_line": 1,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "five-wide-native/dict8-cache-native-build-v4.json",
+      "original_line": 1,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "five-wide-native/dict8-cache-native-build-v4.json",
+      "original_line": 1,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "five-wide-native/dict8-cache-native-build.json",
+      "original_line": 1,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "five-wide-native/dict8-cache-native-build.json",
+      "original_line": 1,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "five-wide-native/dict8-cache-v4-reconcile.json",
+      "original_line": 1,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "five-wide-native/dict8-cache-v4-reconcile.json",
+      "original_line": 1,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "five-wide-native/dict8-engine-build-receipt-v1.json",
+      "original_line": 46,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "five-wide-native/dict8-engine-build-receipt-v2.json",
+      "original_line": 46,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "five-wide-native/dict8-engine-window-v1-observation.json",
+      "original_line": 1,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "five-wide-native/dict8-engine-window-v1-observation.json",
+      "original_line": 1,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "five-wide-native/dict8-engine-window-v1-observation.json",
+      "original_line": 1,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "five-wide-native/dict8-engine-window-v1-observation.json",
+      "original_line": 1,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "five-wide-native/dict8-engine-window-v1-result.json",
+      "original_line": 136,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "five-wide-native/dict8-engine-window-v1-result.json",
+      "original_line": 145,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "five-wide-native/dict8-engine-window-v1-result.json",
+      "original_line": 227,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "five-wide-native/dict8-engine-window-v1-result.json",
+      "original_line": 236,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "five-wide-native/dict8-engine-window-v2-result.json",
+      "original_line": 527,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "five-wide-native/dict8-engine-window-v2-result.json",
+      "original_line": 536,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "five-wide-native/dict8-engine-window-v2-result.json",
+      "original_line": 618,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "five-wide-native/dict8-engine-window-v2-result.json",
+      "original_line": 627,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "five-wide-native/dict8-engine-window-v2-result.json",
+      "original_line": 762,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "five-wide-native/h1-window-v1-result.json",
+      "original_line": 101,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "five-wide-native/h1-window-v3-result.json",
+      "original_line": 452,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "five-wide-native/h1-window-v3-result.json",
+      "original_line": 555,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "five-wide-native/h1-window-v3-result.json",
+      "original_line": 714,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "five-wide-native/h1-window-v3-result.json",
+      "original_line": 722,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "five-wide-native/h1-window-v3-result.json",
+      "original_line": 803,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "five-wide-native/h1-window-v3-result.json",
+      "original_line": 811,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "five-wide-native/h1-window-v3-result.json",
+      "original_line": 836,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "five-wide-native/h1-window-v3-result.json",
+      "original_line": 939,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "fp4-chain/source-hashes.json",
+      "original_line": 279,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "fp4-chain/source-hashes.json",
+      "original_line": 280,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "fp4-chain/source-hashes.json",
+      "original_line": 281,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "packing-round23/results/packing-swarm/round23/cpu/inherited20-receipt.json",
+      "original_line": 2853,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "packing-round23/results/packing-swarm/round23/cpu/inherited20-receipt.json",
+      "original_line": 3139,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    },
+    {
+      "path": "packing-round23/results/packing-swarm/round23/cpu/inherited20-receipt.json",
+      "original_line": 3148,
+      "rule": "generic-api-key",
+      "classification": "artifact_or_generated_token_sha256",
+      "secret_found": false
+    }
+  ]
+}

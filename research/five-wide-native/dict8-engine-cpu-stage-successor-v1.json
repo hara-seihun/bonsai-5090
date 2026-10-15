@@ -1,0 +1,89 @@
+{
+  "receipt": {
+    "state": "CPU_staged_not_run",
+    "gpu_work": false,
+    "native_model_execution": false,
+    "candidate_dll_sha256": "501b5a1c2da388fc9d5dafa528048f91e55dec34085866dc42877a341a3e0a77",
+    "stage_payload_sha256": "6a158f64a9ca397425cc4d646d1a65a812b0d7f51c2fd86c4fe434c3839d3a77",
+    "plan_sha256": "26d1a53cd2215bc3504d7515d40fb6fb5b2dedcb51d102a76fb5eecfe790d24e",
+    "isolated_contract_exit": 0,
+    "isolated_contract_output": "{\"GPU_execution\": false, \"native_model_execution\": false, \"warmup_contract\": true, \"old_capture_prefix_rejected\": true, \"every_endpoint_field_mutation_rejected\": true, \"isolated_imports\": \"stdlib-only worker; pure function extraction executed\", \"handback_fabricated\": false}\n",
+    "PE_exports_verified_without_loading": true,
+    "handback_fabricated": false,
+    "runtime_receipt_exists": false,
+    "files": {
+      "strict-worker.py": "923c72254ee3c6a266bcfa873e0549fb7c9f17412aa9b029aff6c5182f6e6354",
+      "driver.py": "0d4f378252ec16ac01d459b8535718967ca76959cc8927bb9abab0c52cc1f799",
+      "environment.json": "d3674f18b9d44db8f09a7e308b72fec3b9e756c30134824ab92865c1c80f2c6e",
+      "test_harness.py": "a6baf5d756e7b14538c77a2b2e033c1a5c478a568878b18e6ab4ac1fb5be8373"
+    }
+  },
+  "plan": {
+    "state": "CPU_staged_not_run",
+    "candidate_dll_sha256": "501b5a1c2da388fc9d5dafa528048f91e55dec34085866dc42877a341a3e0a77",
+    "control_dll_sha256": "a836fd6818df9bc92a8df71d2f9e92fc97b9a64195fab4142d9101fb20785e7c",
+    "control_plan_sha256": "713c060b627ef9955d68edfef17e12d75f07093c68b74c3fd8ecf4d19b3507bd",
+    "bench_sha256": "3fd47ff37205bdd50738194ef92c13c21d24fc77a9d1be1197b69128a2173b12",
+    "files": {
+      "strict-worker.py": "923c72254ee3c6a266bcfa873e0549fb7c9f17412aa9b029aff6c5182f6e6354",
+      "driver.py": "0d4f378252ec16ac01d459b8535718967ca76959cc8927bb9abab0c52cc1f799",
+      "environment.json": "d3674f18b9d44db8f09a7e308b72fec3b9e756c30134824ab92865c1c80f2c6e",
+      "test_harness.py": "a6baf5d756e7b14538c77a2b2e033c1a5c478a568878b18e6ab4ac1fb5be8373"
+    },
+    "immutable_inputs": {
+      "C:/work/models/experiments/bonsai-quality-20261013/custom-wide256/build/quality_custom.dll": "a836fd6818df9bc92a8df71d2f9e92fc97b9a64195fab4142d9101fb20785e7c",
+      "C:/work/models/experiments/bonsai-quality-20261013/custom/frozen-production-plan.txt": "713c060b627ef9955d68edfef17e12d75f07093c68b74c3fd8ecf4d19b3507bd",
+      "C:/work/models/experiments/bonsai-quality-20261013/custom-wide256/build/quality_length_bench.exe": "3fd47ff37205bdd50738194ef92c13c21d24fc77a9d1be1197b69128a2173b12",
+      "C:/work/models/experiments/bonsai-quality-20261013/gu-dict8-engine-build-v1/build/quality_length_bench.exe": "3fd47ff37205bdd50738194ef92c13c21d24fc77a9d1be1197b69128a2173b12",
+      "C:/work/models/experiments/bonsai-quality-20261013/gu-dict8-engine-build-v1/build/quality_custom.dll": "501b5a1c2da388fc9d5dafa528048f91e55dec34085866dc42877a341a3e0a77",
+      "C:/work/models/models/Ternary-Bonsai-2-27B-PTQ1_0.gguf": "53107f530aa52eb00912263ab1ee29bd199261c87cd7b4ad4ca1318c1fe33ee3"
+    },
+    "source_identity": {
+      "frozen_engine_sha256": "e2ae33c409fc8a4fe668f8c5cbf51009f65ea76745741fd5d3135c329a5b18c4",
+      "candidate_engine_sha256": "892aafb8da7ba1df6ccf964954dc6d769be7ddf1d78de3ce0ec835ce7a278824",
+      "GPU_execution": false,
+      "opt_in": "H5_GU_DICT8=1",
+      "control": "Unchanged frozen installed DLL; private source starts with exact frozen engine, not H1 derivative.",
+      "dictionary_kernel_sha256": "043509429b79c58c3a4647e23b6b1738c7b7a9d025f2f889b65577d1708f86d3",
+      "codec_sha256": "47e34a43add40b9c83fba0ab3e03e98df2c178a2d632edd22a3e83b74b4eb9bc",
+      "source_parent": "03382927f534a9b8faefc1888157ba7ac38861f1"
+    },
+    "window_bound_s": 240,
+    "child_bound_s": 50,
+    "strict": {
+      "warmups": 3,
+      "cached_observations": 2,
+      "rows": 64,
+      "vocab": 248320,
+      "complete_logit_bytes": 127139840,
+      "teacher_forcing": true,
+      "reference_repeat": true,
+      "H5_DETERMINISTIC_GEMM": "1",
+      "H5_DOWN_CLEAR": "0",
+      "complete_endpoints": [
+        "rounded gate/up after activation scales/row means",
+        "SiLU",
+        "q4",
+        "s4",
+        "g4"
+      ]
+    },
+    "matched_AB": {
+      "profiles": [
+        "ordinary",
+        "deterministic"
+      ],
+      "arms": [
+        "unchanged frozen serving",
+        "private dict8"
+      ],
+      "passes": 3,
+      "streams": 64,
+      "tokens_per_stream": 128,
+      "warmup_tokens_per_stream": 8
+    },
+    "GPU_acceptance": false,
+    "GPU_request": false,
+    "handoff": "Requires fresh8614 all-current-and-queued-reservations clearance plus separate original-operation authorization; latestbe61783f FIM ladder and earlier0142faa9 holds grant no execution to this lane. No handback file is fabricated."
+  }
+}

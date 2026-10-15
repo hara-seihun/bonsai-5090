@@ -1,0 +1,573 @@
+{
+  "scope": "fresh64request quick32+32 ladder; not full gate",
+  "rows": [
+    {
+      "path": "results/binary-5090/tasks-gptq-grid/tasks-modern-packed1-hybrid-n16-lookup",
+      "receipt": {
+        "status": "complete",
+        "exit_code": 0
+      },
+      "decoding": {
+        "temperature": 0,
+        "sampling": null,
+        "enable_thinking": false,
+        "max_tokens": {
+          "gsm8k": 4096,
+          "humaneval_plus": 4096
+        },
+        "concurrency": 1
+      },
+      "manifest_sha256": "0330533de253a6b29421216609c18cb4afe5a7e9bc16cb0c574af8b0b4d15c58",
+      "tokens": 21361,
+      "generation_seconds": 156.25767442118376,
+      "http_tokens_second": 136.70368562137068,
+      "benchmarks": {
+        "gsm8k": {
+          "metrics": {
+            "accuracy": {
+              "score": 0.90625,
+              "se": 0.05152697639950359,
+              "n": 32,
+              "correct": 29
+            }
+          },
+          "truncated": 1,
+          "completion_tokens": 16346,
+          "generation_s": 119.31843619327992,
+          "http_tokens_second": 136.99475555916325
+        },
+        "humaneval_plus": {
+          "metrics": {
+            "base": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            },
+            "plus": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            }
+          },
+          "truncated": 0,
+          "completion_tokens": 5015,
+          "generation_s": 36.93923822790384,
+          "http_tokens_second": 135.76349271360112
+        }
+      },
+      "native_counters": {
+        "accepted_drafts": 5073,
+        "proposed_drafts": 115217,
+        "verify_rounds": 16295,
+        "generated_tokens": 21424,
+        "lookup_proposed": 0,
+        "lookup_accepted": 0,
+        "lookup_rounds": 0,
+        "verify_s": 141.108804346,
+        "draft_s": 15.047033561000001,
+        "busy_s": 156.19821227,
+        "acceptance_fraction": 0.04402996085647083,
+        "emitted_per_verify_round": 1.314759128567045
+      }
+    },
+    {
+      "path": "results/binary-5090/tasks-gptq-grid/tasks-modern-packed1-hybrid-n16-vocab",
+      "receipt": {
+        "status": "complete",
+        "exit_code": 0
+      },
+      "decoding": {
+        "temperature": 0,
+        "sampling": null,
+        "enable_thinking": false,
+        "max_tokens": {
+          "gsm8k": 4096,
+          "humaneval_plus": 4096
+        },
+        "concurrency": 1
+      },
+      "manifest_sha256": "0330533de253a6b29421216609c18cb4afe5a7e9bc16cb0c574af8b0b4d15c58",
+      "tokens": 22618,
+      "generation_seconds": 165.55616002343595,
+      "http_tokens_second": 136.61829313266398,
+      "benchmarks": {
+        "gsm8k": {
+          "metrics": {
+            "accuracy": {
+              "score": 0.90625,
+              "se": 0.05152697639950359,
+              "n": 32,
+              "correct": 29
+            }
+          },
+          "truncated": 1,
+          "completion_tokens": 17610,
+          "generation_s": 128.6418807655573,
+          "http_tokens_second": 136.89165530853245
+        },
+        "humaneval_plus": {
+          "metrics": {
+            "base": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            },
+            "plus": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            }
+          },
+          "truncated": 0,
+          "completion_tokens": 5008,
+          "generation_s": 36.91427925787866,
+          "http_tokens_second": 135.6656584032082
+        }
+      },
+      "native_counters": {
+        "accepted_drafts": 5355,
+        "proposed_drafts": 122173,
+        "verify_rounds": 17275,
+        "generated_tokens": 22681,
+        "lookup_proposed": 0,
+        "lookup_accepted": 0,
+        "lookup_rounds": 0,
+        "verify_s": 149.429231179,
+        "draft_s": 16.045487752,
+        "busy_s": 165.502113041,
+        "acceptance_fraction": 0.043831288418881426,
+        "emitted_per_verify_round": 1.3129377713458756
+      }
+    },
+    {
+      "path": "results/binary-5090/tasks-gptq-grid/tasks-modern-packed1-hybrid-s7",
+      "receipt": {
+        "status": "complete",
+        "exit_code": 0
+      },
+      "decoding": {
+        "temperature": 0,
+        "sampling": null,
+        "enable_thinking": false,
+        "max_tokens": {
+          "gsm8k": 4096,
+          "humaneval_plus": 4096
+        },
+        "concurrency": 1
+      },
+      "manifest_sha256": "0330533de253a6b29421216609c18cb4afe5a7e9bc16cb0c574af8b0b4d15c58",
+      "tokens": 21116,
+      "generation_seconds": 155.69075874891132,
+      "http_tokens_second": 135.62783154043595,
+      "benchmarks": {
+        "gsm8k": {
+          "metrics": {
+            "accuracy": {
+              "score": 0.90625,
+              "se": 0.05152697639950359,
+              "n": 32,
+              "correct": 29
+            }
+          },
+          "truncated": 1,
+          "completion_tokens": 16017,
+          "generation_s": 117.96181803476065,
+          "http_tokens_second": 135.78122367764928
+        },
+        "humaneval_plus": {
+          "metrics": {
+            "base": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            },
+            "plus": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            }
+          },
+          "truncated": 0,
+          "completion_tokens": 5099,
+          "generation_s": 37.72894071415067,
+          "http_tokens_second": 135.14824173389957
+        }
+      },
+      "native_counters": {
+        "accepted_drafts": 4947,
+        "proposed_drafts": 113232,
+        "verify_rounds": 16176,
+        "generated_tokens": 21179,
+        "lookup_proposed": 0,
+        "lookup_accepted": 0,
+        "lookup_rounds": 0,
+        "verify_s": 139.25462243,
+        "draft_s": 16.362430887000002,
+        "busy_s": 155.639906438,
+        "acceptance_fraction": 0.043689063162356934,
+        "emitted_per_verify_round": 1.3092853610286845
+      }
+    },
+    {
+      "path": "results/binary-5090/tasks-gptq-grid/tasks-modern-packed1-hybrid-s7-vocab",
+      "receipt": {
+        "status": "complete",
+        "exit_code": 0
+      },
+      "decoding": {
+        "temperature": 0,
+        "sampling": null,
+        "enable_thinking": false,
+        "max_tokens": {
+          "gsm8k": 4096,
+          "humaneval_plus": 4096
+        },
+        "concurrency": 1
+      },
+      "manifest_sha256": "0330533de253a6b29421216609c18cb4afe5a7e9bc16cb0c574af8b0b4d15c58",
+      "tokens": 21008,
+      "generation_seconds": 152.18210012372583,
+      "http_tokens_second": 138.04514448755964,
+      "benchmarks": {
+        "gsm8k": {
+          "metrics": {
+            "accuracy": {
+              "score": 0.90625,
+              "se": 0.05152697639950359,
+              "n": 32,
+              "correct": 29
+            }
+          },
+          "truncated": 1,
+          "completion_tokens": 15993,
+          "generation_s": 115.8148026522249,
+          "http_tokens_second": 138.0911561713287
+        },
+        "humaneval_plus": {
+          "metrics": {
+            "base": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            },
+            "plus": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            }
+          },
+          "truncated": 0,
+          "completion_tokens": 5015,
+          "generation_s": 36.36729747150093,
+          "http_tokens_second": 137.89861630301183
+        }
+      },
+      "native_counters": {
+        "accepted_drafts": 4919,
+        "proposed_drafts": 112672,
+        "verify_rounds": 16096,
+        "generated_tokens": 21071,
+        "lookup_proposed": 0,
+        "lookup_accepted": 0,
+        "lookup_rounds": 0,
+        "verify_s": 138.64655622700002,
+        "draft_s": 13.462044140000001,
+        "busy_s": 152.13196192,
+        "acceptance_fraction": 0.043657696677080374,
+        "emitted_per_verify_round": 1.3090830019880715
+      }
+    },
+    {
+      "path": "results/binary-5090/tasks-gptq-grid/tasks-modern-packed1-n16-lookup",
+      "receipt": {
+        "status": "complete",
+        "exit_code": 0
+      },
+      "decoding": {
+        "temperature": 0,
+        "sampling": null,
+        "enable_thinking": false,
+        "max_tokens": {
+          "gsm8k": 4096,
+          "humaneval_plus": 4096
+        },
+        "concurrency": 1
+      },
+      "manifest_sha256": "0330533de253a6b29421216609c18cb4afe5a7e9bc16cb0c574af8b0b4d15c58",
+      "tokens": 20391,
+      "generation_seconds": 228.8678872603923,
+      "http_tokens_second": 89.09506809402373,
+      "benchmarks": {
+        "gsm8k": {
+          "metrics": {
+            "accuracy": {
+              "score": 0.90625,
+              "se": 0.05152697639950359,
+              "n": 32,
+              "correct": 29
+            }
+          },
+          "truncated": 1,
+          "completion_tokens": 15366,
+          "generation_s": 171.09533848334104,
+          "http_tokens_second": 89.80957714108695
+        },
+        "humaneval_plus": {
+          "metrics": {
+            "base": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            },
+            "plus": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            }
+          },
+          "truncated": 0,
+          "completion_tokens": 5025,
+          "generation_s": 57.77254877705127,
+          "http_tokens_second": 86.97902561633317
+        }
+      },
+      "native_counters": {
+        "accepted_drafts": 4776,
+        "proposed_drafts": 110496,
+        "verify_rounds": 15624,
+        "generated_tokens": 20454,
+        "lookup_proposed": 0,
+        "lookup_accepted": 0,
+        "lookup_rounds": 0,
+        "verify_s": 211.622768153,
+        "draft_s": 17.138704457,
+        "busy_s": 228.80371880400003,
+        "acceptance_fraction": 0.04322328410078193,
+        "emitted_per_verify_round": 1.3091397849462365
+      }
+    },
+    {
+      "path": "results/binary-5090/tasks-gptq-grid/tasks-modern-packed1-n16-vocab",
+      "receipt": {
+        "status": "complete",
+        "exit_code": 0
+      },
+      "decoding": {
+        "temperature": 0,
+        "sampling": null,
+        "enable_thinking": false,
+        "max_tokens": {
+          "gsm8k": 4096,
+          "humaneval_plus": 4096
+        },
+        "concurrency": 1
+      },
+      "manifest_sha256": "0330533de253a6b29421216609c18cb4afe5a7e9bc16cb0c574af8b0b4d15c58",
+      "tokens": 20391,
+      "generation_seconds": 228.4175731241703,
+      "http_tokens_second": 89.27071468759205,
+      "benchmarks": {
+        "gsm8k": {
+          "metrics": {
+            "accuracy": {
+              "score": 0.90625,
+              "se": 0.05152697639950359,
+              "n": 32,
+              "correct": 29
+            }
+          },
+          "truncated": 1,
+          "completion_tokens": 15366,
+          "generation_s": 171.04933562874794,
+          "http_tokens_second": 89.83373097309747
+        },
+        "humaneval_plus": {
+          "metrics": {
+            "base": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            },
+            "plus": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            }
+          },
+          "truncated": 0,
+          "completion_tokens": 5025,
+          "generation_s": 57.36823749542236,
+          "http_tokens_second": 87.59202338055033
+        }
+      },
+      "native_counters": {
+        "accepted_drafts": 4775,
+        "proposed_drafts": 110231,
+        "verify_rounds": 15625,
+        "generated_tokens": 20454,
+        "lookup_proposed": 0,
+        "lookup_accepted": 0,
+        "lookup_rounds": 0,
+        "verify_s": 211.20752931700002,
+        "draft_s": 17.131791983,
+        "busy_s": 228.362949802,
+        "acceptance_fraction": 0.04331812285110359,
+        "emitted_per_verify_round": 1.309056
+      }
+    },
+    {
+      "path": "results/binary-5090/tasks-gptq-grid/tasks-modern-packed1-s7",
+      "receipt": {
+        "status": "complete",
+        "exit_code": 0
+      },
+      "decoding": {
+        "temperature": 0,
+        "sampling": null,
+        "enable_thinking": false,
+        "max_tokens": {
+          "gsm8k": 4096,
+          "humaneval_plus": 4096
+        },
+        "concurrency": 1
+      },
+      "manifest_sha256": "0330533de253a6b29421216609c18cb4afe5a7e9bc16cb0c574af8b0b4d15c58",
+      "tokens": 20391,
+      "generation_seconds": 228.97864539641887,
+      "http_tokens_second": 89.0519723561912,
+      "benchmarks": {
+        "gsm8k": {
+          "metrics": {
+            "accuracy": {
+              "score": 0.90625,
+              "se": 0.05152697639950359,
+              "n": 32,
+              "correct": 29
+            }
+          },
+          "truncated": 1,
+          "completion_tokens": 15366,
+          "generation_s": 171.18638330884278,
+          "http_tokens_second": 89.76181225978536
+        },
+        "humaneval_plus": {
+          "metrics": {
+            "base": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            },
+            "plus": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            }
+          },
+          "truncated": 0,
+          "completion_tokens": 5025,
+          "generation_s": 57.79226208757609,
+          "http_tokens_second": 86.94935651394499
+        }
+      },
+      "native_counters": {
+        "accepted_drafts": 4779,
+        "proposed_drafts": 109354,
+        "verify_rounds": 15622,
+        "generated_tokens": 20454,
+        "lookup_proposed": 0,
+        "lookup_accepted": 0,
+        "lookup_rounds": 0,
+        "verify_s": 209.95101725900003,
+        "draft_s": 18.950068248,
+        "busy_s": 228.92269947300002,
+        "acceptance_fraction": 0.043702105089891544,
+        "emitted_per_verify_round": 1.3093073870183076
+      }
+    },
+    {
+      "path": "results/binary-5090/tasks-gptq-grid/tasks-modern-packed1-s7-vocab",
+      "receipt": {
+        "status": "complete",
+        "exit_code": 0
+      },
+      "decoding": {
+        "temperature": 0,
+        "sampling": null,
+        "enable_thinking": false,
+        "max_tokens": {
+          "gsm8k": 4096,
+          "humaneval_plus": 4096
+        },
+        "concurrency": 1
+      },
+      "manifest_sha256": "0330533de253a6b29421216609c18cb4afe5a7e9bc16cb0c574af8b0b4d15c58",
+      "tokens": 20391,
+      "generation_seconds": 223.93286500498652,
+      "http_tokens_second": 91.05854113707666,
+      "benchmarks": {
+        "gsm8k": {
+          "metrics": {
+            "accuracy": {
+              "score": 0.90625,
+              "se": 0.05152697639950359,
+              "n": 32,
+              "correct": 29
+            }
+          },
+          "truncated": 1,
+          "completion_tokens": 15366,
+          "generation_s": 167.11623546108603,
+          "http_tokens_second": 91.94797834934512
+        },
+        "humaneval_plus": {
+          "metrics": {
+            "base": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            },
+            "plus": {
+              "score": 1.0,
+              "se": 0.0,
+              "n": 32,
+              "correct": 32
+            }
+          },
+          "truncated": 0,
+          "completion_tokens": 5025,
+          "generation_s": 56.81662954390049,
+          "http_tokens_second": 88.44241624923094
+        }
+      },
+      "native_counters": {
+        "accepted_drafts": 4776,
+        "proposed_drafts": 109354,
+        "verify_rounds": 15622,
+        "generated_tokens": 20454,
+        "lookup_proposed": 0,
+        "lookup_accepted": 0,
+        "lookup_rounds": 0,
+        "verify_s": 209.69605285300003,
+        "draft_s": 14.159935206,
+        "busy_s": 223.87797961200002,
+        "acceptance_fraction": 0.04367467125116594,
+        "emitted_per_verify_round": 1.3093073870183076
+      }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "state": "failed_prefix_retained",
+  "generation": "fullk-h1-tail-v2",
+  "compiled_dll_sha256": "398a9d2bb38ec8613af6663dd782a282727da04b5f255f43e4c10780f1c6d768",
+  "strict_warmup_steps": 3,
+  "steps": [
+    {
+      "name": "run-h1-v2-strict-serving-reference.py",
+      "state": "failed",
+      "elapsed_s": 0.14595723152160645,
+      "error": "RuntimeError('Boundary failed serving-reference')"
+    }
+  ],
+  "native_bound_s": 50,
+  "window_bound_s": 240,
+  "window": {
+    "state": "explicit_handoff_window",
+    "started_epoch_s": 1792010991.763518,
+    "deadline_epoch_s": 1792011231.763518,
+    "candidate_dll_sha256": "398a9d2bb38ec8613af6663dd782a282727da04b5f255f43e4c10780f1c6d768"
+  },
+  "final_mutex_wait": 0,
+  "final_mutex_release_return": 1,
+  "final_mutex_close_return": 1,
+  "finished_epoch_s": 1792010991.91933,
+  "native_children": "all invoked subprocess.run calls returned or timeout-killed-and-waited before runner finally",
+  "retained_receipts": {},
+  "final_serving_dll_sha256": "a836fd6818df9bc92a8df71d2f9e92fc97b9a64195fab4142d9101fb20785e7c",
+  "final_serving_plan_sha256": "713c060b627ef9955d68edfef17e12d75f07093c68b74c3fd8ecf4d19b3507bd"
+}

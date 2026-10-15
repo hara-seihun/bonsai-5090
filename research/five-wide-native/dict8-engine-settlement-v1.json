@@ -1,0 +1,19 @@
+{
+  "state": "CPU_staged_not_run",
+  "source_commit": "745cc824d467b0668242d8fc140b43b9573cf64f",
+  "source_ref": "agent/gu-dict8-shared",
+  "writer_registry": "00000000-0000-0000-0000-000000000000",
+  "bundle_sha256": "951c3d1e482dfb7c3d1233f2750442e5ec73bcaf3ab1b8d42a4654901940eb68",
+  "readable_result": "~/work/five-wide-native/dict8-engine-result-v1",
+  "manifest_sha256": "7d41414eb644fc863411d2ce26a78a305031c66fe06517071ec15c2c100bc311",
+  "candidate_dll_sha256": "501b5a1c2da388fc9d5dafa528048f91e55dec34085866dc42877a341a3e0a77",
+  "native_build_zip_sha256": "ebaf8d2c5b632617ee4b1f37ffabcf6e1fa5fc247837d0dce46c097ffd29f41a",
+  "GPU_execution": false,
+  "GPU_request": false,
+  "native_numerical_acceptance": null,
+  "TPS": null,
+  "added_requested_resident_bytes": 2317379204,
+  "retained_total_GU_related_bytes": 5356676740,
+  "strict_only_requested_buffer_bytes": 22909232,
+  "next_gate": "Fresh PrismML handback clearing all current/queued reservations, plus separate run authorization"
+}

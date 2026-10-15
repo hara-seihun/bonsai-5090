@@ -1,0 +1,4 @@
+{"backend":"halo6000_whole_token","streams":1,"grid":188,"warm":40,"steps":128,"gpu_ms":1785.377563,"wall_ms":1785.470866,"tokens_per_second":71.693519,"weights_bytes":10103327232,"prefix_route":"all_serial_teacher_forcing"}
+{"backend":"halo6000_whole_token","streams":1,"grid":94,"warm":40,"steps":128,"gpu_ms":1976.861206,"wall_ms":1976.853107,"tokens_per_second":64.749108,"weights_bytes":10103327232,"prefix_route":"all_serial_teacher_forcing"}
+{"backend":"halo6000_whole_token","streams":1,"grid":256,"warm":40,"steps":128,"gpu_ms":4492.447266,"wall_ms":4492.421601,"tokens_per_second":28.492265,"weights_bytes":10103327232,"prefix_route":"all_serial_teacher_forcing"}
+{"backend":"halo6000_whole_token","streams":1,"grid":188,"warm":40,"steps":128,"gpu_ms":1772.879883,"wall_ms":1772.870513,"tokens_per_second":72.198913,"weights_bytes":10103327232,"prefix_route":"all_serial_teacher_forcing"}

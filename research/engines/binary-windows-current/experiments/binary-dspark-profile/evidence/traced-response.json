@@ -1,0 +1,129 @@
+{
+  "id": "h5-6acabad3-2",
+  "object": "chat.completion",
+  "created": 1791670995,
+  "model": "Bonsai-27B-Q1_0",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "When you type an HTTPS URL into a modern web browser and press Enter, a complex, multi-layered sequence of events occurs to retrieve and display the web page. This process involves several distinct protocols and technologies working in concert. Below is a detailed, step-by-step explanation of the entire lifecycle, ordered from the initial user action to the final rendered page.\n\n---\n\n### 1. URL Parsing and Cache Lookup\n**What happens:**\n- The browser parses the URL (e.g., `https://www.example.com/page.html`) to extract its components: scheme (`https`), host (`www.example.com`), port (implicit"
+      },
+      "finish_reason": "length"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 48,
+    "completion_tokens": 128,
+    "total_tokens": 176
+  },
+  "timings": {
+    "image_tokens": 0,
+    "image_encode_s": 0.0,
+    "native_prefill_s": 0.04521097894757986,
+    "vision_speculation": false,
+    "drafter": "dspark-bf16",
+    "draft_proposals": 4,
+    "draft_query_rows": 4,
+    "verifier_rows_per_full_round": 5,
+    "checkpoint_length_extrapolation": false,
+    "bonus_policy": "greedy",
+    "sampling_seed": null,
+    "draft_verify_limit": 4,
+    "draft_sampling": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "top_k": 0,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "repetition_penalty": 1.0
+    },
+    "commitment": {
+      "config": {
+        "mode": "fixed",
+        "minimum": 4,
+        "maximum": 4,
+        "confidence_gap_threshold": null,
+        "confidence_signal": null,
+        "feedback_growth": null,
+        "target_regret_observed": false,
+        "selection_timing": "before-target-verification"
+      },
+      "error": null,
+      "rounds": []
+    },
+    "verify_rounds": 55,
+    "verifier_rows": 275,
+    "prefix_histogram": [
+      24,
+      9,
+      7,
+      9,
+      6
+    ],
+    "position_proposed": [
+      55,
+      55,
+      55,
+      55
+    ],
+    "position_reached": [
+      55,
+      31,
+      22,
+      15
+    ],
+    "position_accepted": [
+      31,
+      22,
+      15,
+      6
+    ],
+    "position_emitted": [
+      55,
+      30,
+      21,
+      15,
+      6
+    ],
+    "position_reject_target_eos": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "position_reject_proposed_eos": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "position_reject_other": [
+      24,
+      9,
+      7,
+      9
+    ],
+    "proposed_drafts": 220,
+    "accepted_drafts": 74,
+    "relax_offered": 0,
+    "relax_vetoed": 0,
+    "loop_closes": 0,
+    "loop_close": false,
+    "lz_penalty": 0.0,
+    "lz_draft": false,
+    "lz_draft_alpha": 0.0,
+    "marker_penalty": 0.0,
+    "verify_s": 0.42987407743930817,
+    "draft_s": 0.3232748918235302,
+    "sampling_s": 0.0,
+    "tree_rounds": 0,
+    "tree_rescues": 0,
+    "clone_s": 0.0,
+    "tree_fallback_rounds": 0,
+    "ttft_s": 0.04667160753160715,
+    "total_s": 0.800061390735209,
+    "decode_tok_per_s": 168.57143915592303
+  }
+}

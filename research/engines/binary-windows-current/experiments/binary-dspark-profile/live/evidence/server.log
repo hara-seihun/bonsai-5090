@@ -1,0 +1,30 @@
+draft_temperature_scale=1
+head_rows=demand
+commitment {"mode":"fixed","minimum":4,"maximum":4,"confidence_gap_threshold":null,"confidence_signal":null,"feedback_growth":null,"target_regret_observed":false,"selection_timing":"before-target-verification"}
+lookup_extra_max=0
+lz_draft=off
+dry=none lz=none scope=- logit_adj=0
+relax_policy=none stats=0
+drafter=dspark-bf16 draft proposals=4 query_rows=4 verifier_rows=5 (anchor+proposals; last output is greedy bonus) checkpoint_length_extrapolation=false
+ggml_cuda_init: found 1 CUDA devices (Total VRAM: 32110 MiB):
+  Device 0: NVIDIA GeForce RTX 5090, compute capability 12.0, VMM: yes, VRAM: 32110 MiB
+model_id=Bonsai-27B-Q1_0
+speculation=on policy=cut
+lookup scope=all min=0
+serving=fifo physical_slots=1 request_slots=1 tree_scratch=-1 prefix_template=-1
+target: binary Q1_0, original FP16 K128 scales
+
+weights 3.80 GB in 0.5 s
+state f16, KV f16: 75.5 MB state + 536.9 MB KV per slot
+packed target activation: f32 for prepared R=1, a8 for prepared R>1; A8 uses K128 max/127 nearest-even codes, original FP16 weight scales
+ready: 1 slots x 8192 ctx, 21 rows; GPU free 27.95 / 33.67 GB, load 0.5 s
+native DSpark BF16: own embedding/head, six layers, taps1/16/31/46/61, block4, output 65536/248320, full Markov source domain, 5.390GB weights; raw tap FC contract
+pretune: 0 shapes x buckets <= 21 rows in 0.0 s
+h5-server listening on 127.0.0.1:18089 (1 slots, ctx 8192)
+Capture range started in the application.
+Capture range ended in the application.
+Generating '/tmp/nsys-report-e5a3.qdstrm'
+[1/1] [0%                          ] trace.nsys-repProcessing events...
+[1/1] [0%                          ] trace.nsys-rep[1/1] [0%                          ] trace.nsys-rep[1/1] [===========50%              ] trace.nsys-rep[1/1] [======33%                   ] trace.nsys-rep[1/1] [==============63%           ] trace.nsys-rep[1/1] [==========47%               ] trace.nsys-rep[1/1] [=======38%                  ] trace.nsys-rep[1/1] [=====32%                    ] trace.nsys-rep[1/1] [====27%                     ] trace.nsys-rep[1/1] [===24%                      ] trace.nsys-rep[1/1] [=====31%                    ] trace.nsys-rep[1/1] [=======38%                  ] trace.nsys-rep[1/1] [=========46%                ] trace.nsys-rep[1/1] [===========53%              ] trace.nsys-rep[1/1] [==============61%           ] trace.nsys-rep[1/1] [================68%         ] trace.nsys-rep[1/1] [========================100%] trace.nsys-rep[1/1] [========================100%] trace.nsys-rep
+Generated:
+	/workspace/binary/dspark-live-profile-82ad352e/evidence/trace.nsys-rep

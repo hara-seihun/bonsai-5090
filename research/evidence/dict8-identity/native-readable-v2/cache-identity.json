@@ -1,0 +1,13 @@
+{
+  "cache_sha256": "617392523796fdee6cb4b0a17e9a99f0d26d4eb5b84fcb5acdb6bd99de876d0b",
+  "cache_bytes": 2317355136,
+  "cache_readonly": true,
+  "cache_path": "C:\\work\\models\\experiments\\bonsai-quality-20261013\\gu-dict8-identity-build-v2\\cache\\weights.d8",
+  "custody_hash_seconds": 1.2939704000000347,
+  "gpu_work": false,
+  "native_cached_startup_ns": null,
+  "device_upload_ns": null,
+  "original_v2_replayed": false,
+  "serving_sha256": "a836fd6818df9bc92a8df71d2f9e92fc97b9a64195fab4142d9101fb20785e7c",
+  "plan_sha256": "713c060b627ef9955d68edfef17e12d75f07093c68b74c3fd8ecf4d19b3507bd"
+}
