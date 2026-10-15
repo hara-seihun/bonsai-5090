@@ -67,18 +67,38 @@ successful Windows run and the incomplete Linux build/run qualification.
 
 ## Quality against PrismML's published results
 
-PrismML's original [Bonsai 27B whitepaper](https://github.com/PrismML-Eng/Bonsai-demo/blob/main/bonsai-27b-whitepaper.pdf)
-reports the original Bonsai generation. We evaluated **Bonsai 2** with the recovered original
-thinking-on protocol. The checkpoints differ: these nominal comparisons do **not** isolate the
-engine's effect. Full same-weight reference arms remain unfinished; small overlapping reference
-screens are documented in the [benchmark report](benchmarks/README.md).
+The model under test is **Ternary Bonsai 2 27B** (GGUF sha256 `53107f53…33ee3`) on our engine, one RTX 5090.
+PrismML publishes two relevant score sets:
 
-| Benchmark | PrismML published | Our complete result | Evidence |
-|---|---:|---:|---|
-| GSM8K | 96.06% | **96.74% — 1,276/1,319** | [Native-trigger grading and receipts](benchmarks/README.md#gsm8k) |
-| MATH500 | 99.20% | **98.8% — 494/500** | [Full quality report](benchmarks/README.md) |
-| IFEval, prompt-strict | 85.03% | **92.4% — 500/541** | [Full quality report](benchmarks/README.md) |
-| HumanEval+ (EvalPlus), pass@1 | 93.90% | **93.90% — 154/164** | [Full aggregate](benchmarks/receipts/humaneval-plus-full.json), [source binding](benchmarks/receipts/humaneval-plus-source.json) |
+- **Bonsai 2 (same checkpoint):** [Bonsai 2 27B whitepaper](https://github.com/PrismML-Eng/Bonsai-demo/blob/main/bonsai-2-27b-whitepaper.pdf),
+  Table 10, xhigh thinking, and the [model card](https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf).
+  Protocol: temperature **1.0**, top-p 0.95, top-k 20, min-p 0; output caps 81,920 (MATH500, AIME, GPQA,
+  LiveCodeBench, IFBench), 49,152 (HumanEval+) and 32,768 (GSM8K, IFEval, AA-LCR and the rest); vLLM on H100.
+- **Original Bonsai (different checkpoint):** [Bonsai 27B whitepaper](https://github.com/PrismML-Eng/Bonsai-demo/blob/main/bonsai-27b-whitepaper.pdf),
+  temperature 0.7.
+
+Our four complete runs used the **original-Bonsai protocol** (temperature 0.7 and the original caps), because
+that was the published target when they started. Against Bonsai 2's own numbers they are therefore
+cross-protocol: same weights, different temperature and caps. They do not isolate the engine's effect.
+Full same-weight reference arms on our hardware remain unfinished; small overlapping reference screens are
+documented in the [benchmark report](benchmarks/README.md).
+
+| Benchmark | Bonsai 2 published (T 1.0) | Original Bonsai published (T 0.7) | Ours, Bonsai 2 weights (T 0.7, cap) | Evidence |
+|---|---:|---:|---:|---|
+| GSM8K | 96.66% | 96.06% | **96.74% — 1,276/1,319** (cap 16,384) | [Native-trigger grading and receipts](benchmarks/README.md#gsm8k) |
+| MATH500 | 98.80% | 99.20% | **98.80% — 494/500** (cap 81,920) | [Full quality report](benchmarks/README.md) |
+| IFEval, prompt-strict | 91.31% | 85.03% | **92.42% — 500/541** (cap 20,480) | [Full quality report](benchmarks/README.md) |
+| HumanEval+ (EvalPlus), pass@1 | 95.12% | 93.90% | **93.90% — 154/164** (cap 30,000) | [Full aggregate](benchmarks/receipts/humaneval-plus-full.json), [source binding](benchmarks/receipts/humaneval-plus-source.json) |
+
+In items, against Bonsai 2's published scores: GSM8K +1, MATH500 identical, IFEval +6, HumanEval+ −2.
+Five of our HumanEval+ responses hit our 30,000 cap; PrismML's Bonsai 2 cap was 49,152.
+
+**AA-LCR (long-context reasoning), Bonsai 2 protocol, running — not a final score.** Temperature 1.0,
+output cap 32,768, 163,840-token context, prompts 87,891–122,152 tokens, rule-first grading with a
+Gemini 3 Flash judge fallback. Snapshot: **51/72 scored correct (70.83%)**, 73 of 100 questions generated,
+9 generations hit the output cap with an empty final answer (counted wrong), 1 judge-parse exclusion.
+Published: Bonsai 2 **77.0**, FP16 parent 78.0. A separate attempt with a raised output cap is being
+prepared and will be reported as its own result; the capped failures above stay attributed to this run.
 
 Canonical GSM8K uses rule-first grading with judge fallback **only on parse failure**. The retained
 outputs contain 1,276 parsed correct answers, 34 parsed wrong answers and nine empty parse failures;
@@ -89,7 +109,7 @@ and [programme-12 provenance](benchmarks/receipts/programme12-source.json) bind 
 `08dadac9f891c4ccdad2ed5db853d8001a1c68ac` and keep both policies explicit.
 
 Thinking is on; temperature 0.7, top-p 0.95, top-k 20. Output caps are 16,384 (GSM8K),
-81,920 (MATH500) and 20,480 (IFEval). Our explicit choices for unpublished details include zero-shot,
+81,920 (MATH500), 20,480 (IFEval) and 30,000 (HumanEval+). Our explicit choices for unpublished details include zero-shot,
 xhigh reasoning and fixed generation/dataset seeds. Empty capped finals stay wrong. The publisher's
 exact historical extractor, prompts, shots, harness/dataset revisions and instruction-check seed are
 unknown. Judge-replay and programmatic scores have different reproduction requirements.
