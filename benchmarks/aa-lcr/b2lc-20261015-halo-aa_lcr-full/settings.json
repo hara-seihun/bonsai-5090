@@ -28,5 +28,6 @@
   "end_utc": null,
   "evalscope_revision": "78b061cb3d1e9cda9d86a001d65f58e2b19e95ab",
   "original_attempt_unchanged": true,
-  "scoring_policy": "Original retained scorer: capped empty model answers have explicit INCORRECT verdicts and remain in the scored denominator. Judge-parse exclusions are unscored. No new calls or verdict changes in this export."
+  "scoring_policy": "Original capped empty answers retain explicit judge verdicts; parse exclusions remain unscored. Recovery overlays, when selected, are separate retained-output judgments.",
+  "recovery_overlay_applied": false
 }

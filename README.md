@@ -95,8 +95,8 @@ Five of our HumanEval+ responses hit our 30,000 cap; PrismML's Bonsai 2 cap was 
 
 **AA-LCR (long-context reasoning), Bonsai 2 protocol, running — not a final score.** Temperature 1.0,
 output cap 32,768, 163,840-token context, prompts 87,891–122,152 tokens, rule-first grading with a
-Gemini 3 Flash judge fallback, seed 20261014, AA-LCR revision `9a77ef56`. Snapshot at 2026-10-15 21:28 UTC:
-**52/73 scored correct (71.23%)**, 74 of 100 questions generated, 9 generations hit the output cap with an
+Gemini 3 Flash judge fallback, seed 20261014, AA-LCR revision `9a77ef56`. Snapshot at 2026-10-15 21:49 UTC:
+**62/85 scored correct (72.94%)**, 86 of 100 questions generated, 9 generations hit the output cap with an
 empty final answer (counted wrong), 1 judge-parse exclusion, 0 transport errors.
 [Settings, result, commands and every retained output with its verdict](benchmarks/aa-lcr/b2lc-20261015-halo-aa_lcr-full/).
 Published: Bonsai 2 **77.0**, FP16 parent 78.0. A separate attempt with a raised output cap is being
