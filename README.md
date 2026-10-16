@@ -63,7 +63,7 @@ without speculation. They are not HTTP service throughput or single-user token r
 would mix devices and timing windows. The clean-build gap to the original final measurement remains
 unexplained. [The full ladder](docs/ladder.md) explains each change, its measured boundary and the
 changes that have no standalone ablation. [Clean-build status](docs/reproduction.md) records the
-successful Windows run and the incomplete Linux build/run qualification.
+successful Windows run and completed Linux compile/link evidence; Linux GPU execution remains untested.
 
 ### Single stream, PP512 / TG128
 

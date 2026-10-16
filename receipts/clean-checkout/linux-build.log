@@ -1,0 +1,11 @@
+[1/5] Building CUDA object CMakeFiles/quality_custom.dir/engine/src/fp4.cu.o
+[2/5] Building CUDA object CMakeFiles/quality_custom.dir/engine/src/kernels.cu.o
+<source>/engine/src/kernels.cu(920): warning #20058-D: the #pragma unroll must precede a loop
+  #pragma unroll
+          ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+[3/5] Building CUDA object CMakeFiles/quality_custom.dir/engine/src/draft.cu.o
+[4/5] Linking CXX shared library bin/libquality_custom.so
+[5/5] Linking CXX executable bin/quality_length_bench

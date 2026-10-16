@@ -1,6 +1,7 @@
 # What has been reproduced from this repository
 
-The status as of the initial commit. Each claim is listed with where it was checked.
+Retained reproduction evidence for the initial portable engine export, including its recovered Linux
+build completion. Each claim is listed with where it was checked; this is not a new build of current main.
 
 ## Clean-checkout run on an RTX 5090
 
@@ -23,6 +24,15 @@ source, so their hashes differ from a fresh build's. The tokenizer libraries als
 llama.cpp build. That gap has not been decomposed. Treat ~6,730 tok/s as what this repository
 reproduces today, and 6,777 tok/s as the original measurement.
 
+## Linux compile and link
+
+The retained Linux x86_64 Release build completed with **GCC 15.2.0 and CUDA 13.1**.
+The recovered final log finishes the remaining CUDA objects and both links:
+`bin/libquality_custom.so` and `bin/quality_length_bench`. Both ELF outputs were observed present.
+This is **compile-only evidence**; no Linux GPU execution was performed.
+[Build receipt](../receipts/clean-checkout/linux-build.json) and
+[sanitized final log](../receipts/clean-checkout/linux-build.log) retain the result and output hashes.
+
 ## CPU-side checks
 
 - **GSM8K requests:** for all 1,319 items, the request `scripts/gsm8k.py` sends (prompt bytes, sampling,
@@ -39,9 +49,8 @@ reproduces today, and 6,777 tok/s as the original measurement.
 - **The GSM8K run itself.** The 1276/1319 score comes from the original campaign using the same engine
   binary as the headline. A full rerun through `engine/serve.py` + `scripts/gsm8k.py` from the clean
   build has not been done. Temperature-0.7 sampling won't reproduce identical text across runs.
-- **Linux build and run.** On Linux (CUDA 13.1, GCC 15), CMake configures, and llama.cpp plus
-  227 of the 232 build steps compiled. A complete Linux link has not been confirmed yet, and no
-  Linux binary has run on a GPU from this repository.
+- **Linux GPU run.** Compilation and both links completed as recorded above; Linux GPU execution
+  remains untested.
 - **The ladder rows.** These are historical measurements on a rented Linux RTX 5090 that has since been
   destroyed. Only the final engine is buildable from this repository; [`steps/`](steps/) holds code views,
   not buildable intermediate states.

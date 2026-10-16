@@ -1,0 +1,14 @@
+{
+  "platform": "Linux x86_64",
+  "build_type": "Release",
+  "compiler": "GCC 15.2.0",
+  "cuda": "13.1",
+  "libquality_custom_so_sha256": "59aa89ed80340cbd7f9f7e0e16cb4833fab9b444d2fd1f1a62e779854453ab56",
+  "quality_length_bench_sha256": "d7da4cac5244ba71b782f29a1c421d983a9be05a64d548096971aedba5e29cb1",
+  "source_scope": "Retained initial portable engine export, preceding sanitized consolidation; not a new build of current main.",
+  "result": "CUDA compilation and both links completed; both ELF outputs observed present.",
+  "gpu_execution": "not performed",
+  "original_log_sha256": "ef7797e46e060294119834793f9ab813f12ce8c994a9f2d94b086e12f7b6098b",
+  "sanitized_log_sha256": "6d8ca7a879b8b4f9059766a419f66775586a717d9592de96e0b3b95fedfa14d7",
+  "redaction": "Absolute source directory replaced with <source> in the diagnostic path."
+}
