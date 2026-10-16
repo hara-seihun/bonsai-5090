@@ -1,0 +1,20 @@
+{
+  "revision": "fcba37d2117a7077eac6b613b2668d14d9779edd",
+  "files": {
+    "tokenizer.json": {
+      "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-mlx-2bit/resolve/fcba37d2117a7077eac6b613b2668d14d9779edd/tokenizer.json",
+      "sha256": "0997f410c57a1f4e53b09e4be8f4a172d90edd9564368fb0847030937229b9f3",
+      "bytes": 12809320
+    },
+    "tokenizer_config.json": {
+      "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-mlx-2bit/resolve/fcba37d2117a7077eac6b613b2668d14d9779edd/tokenizer_config.json",
+      "sha256": "b11349aafa7cdc6a320767cf7ceb29ed82f7eda5d65e8e0819e76f0ce947bf27",
+      "bytes": 17928
+    },
+    "tokenizer-validation.json": {
+      "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-mlx-2bit/resolve/fcba37d2117a7077eac6b613b2668d14d9779edd/tokenizer-validation.json",
+      "sha256": "b36f33d09bd3de3e19de3fd2cf493a69ec0a5e24acf648b0c9fba120d9357554",
+      "bytes": 63
+    }
+  }
+}

@@ -120,8 +120,13 @@ Published: Bonsai 2 **77.0**, FP16 parent 78.0.
 reviews, 2 excluded reviews, and 88 absent generation responses whose original dispatch
 is unknown. Full 100-case score unset. [Settings, explicit case states and retained outputs](benchmarks/aa-lcr/b2lc-cap40960-20261015-partial/).
 Earlier running snapshots of this same run are kept in git history as historical states, not results:
-52/73 at `b197222` and 62/85 at `5118ac2`. A separate full run with a raised output cap (40,960) is in
-progress and will be reported as its own result. The capped failures above stay attributed to this run.
+52/73 at `b197222` and 62/85 at `5118ac2`. The separate 40,960-cap cohort remains partial;
+its full score is unset. The capped failures above stay attributed to the original run.
+
+**Custom needle retrieval (32K / 64K / 128K): Halo 20/20, 20/20, 19/20; same-weight native
+reference 20/20 at each length.** All 60 pairs/120 responses retained. The sole miss exhausted
+8,192 output tokens with unclosed reasoning and an empty final answer.
+[Exact prompts, source, requests, raw outputs and offline replay](benchmarks/niah/paired-20261016/).
 
 Canonical GSM8K uses rule-first grading with judge fallback **only on parse failure**. The retained
 outputs contain 1,276 parsed correct answers, 34 parsed wrong answers and nine empty parse failures;

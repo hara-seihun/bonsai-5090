@@ -1,0 +1,14 @@
+{
+  "README.md": "a64543f2843c4e9ec8fd015e4263d52a95b3c4e8c24b8a080dfb8691a6ab4eb1",
+  "assets/chat_template.jinja": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041",
+  "assets/tokenizer/source.json": "44221c27258b3cb5df6ba09f1a04e385aba7e5fc173efb2daadddb970cf03acc",
+  "prompts.tar.gz": "6f2fa75d305471ed3c69410dbd1e2025d00dbb682ef2e3fe4ea5fced02b8e516",
+  "protocol.py": "f91522c8354ceadeb07e405013aa4996a942af0bdcc3aaa02f28cf32eca9a44f",
+  "raw-manifest.json": "f907e7906799849e3d3ff6a229946e2a41055b3be92801497343c3ae670644cc",
+  "replay.py": "bb9997cd35f46d0b360a32f52d3240e8f8bbd36b575bd63d3fa3ef9d6fc30a87",
+  "responses.tar.gz": "5712aaccf07d1ec2b21d55d557687986431d32b13447b5aaed600083498fff8b",
+  "results.json": "d0cc68a8d4ecf3818e879a8b805f9540dd9ad7bd0f722d66713abc67778b7284",
+  "runtime-settings.json": "d17136d77ed5353e3f62489eb848ab3b29a3016dfc5e2caadb8337174878d829",
+  "source-provenance.json": "e062ec660529f44810bf6d949626299fb42bfd0c3bca3b6c41bb7dc7759f0cdb",
+  "validated-summary.json": "2b4befc646baa4be01f29c3436326e3eafa579b5d15357d2f26dcfccc98ee169"
+}
