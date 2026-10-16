@@ -1,0 +1,17 @@
+{
+  "source_bundle_seal_sha256": "287cafc9fe0dd1d9a54396f63d6cdce430b262400c7eaa25d7eea19637a5f270",
+  "original_files_sha256": {
+    "outputs.jsonl.gz": "c06d8e5269c626e994bd409f1cc079d663a301c6f692aae7527436259922716c",
+    "settings.json": "e63f9c90b3464a8e5df91476b5d766dd4f3288082e2d0ad8165096baf105c623",
+    "result.json": "073448e16a197f921022633be8c33d379ff0b0f0aba0bfb1eab59c88061d5cf7",
+    "seal.json": "287cafc9fe0dd1d9a54396f63d6cdce430b262400c7eaa25d7eea19637a5f270",
+    "REPORT.md": "f2d5851e0636ff413173a4732dd0e7efcc0259f758353f4ab564c34dfd989c5f"
+  },
+  "public_files_sha256": {
+    "README.md": "497f1894be8749f521c84dcc72f8165e8d5d108ea8231cfd08b451588a5f7f12",
+    "result.json": "5d9590729108197e447ba65d12b267533fcec50d80bf023f76999cb8beed2f9b",
+    "settings.json": "e63f9c90b3464a8e5df91476b5d766dd4f3288082e2d0ad8165096baf105c623",
+    "outputs.jsonl.gz": "c06d8e5269c626e994bd409f1cc079d663a301c6f692aae7527436259922716c"
+  },
+  "projection": "Outputs and settings unchanged; result omits process custody identifiers and replaces private stop wording. README written for public result scope. Full score null."
+}

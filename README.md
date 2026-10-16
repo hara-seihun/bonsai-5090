@@ -115,6 +115,10 @@ Published: Bonsai 2 **77.0**, FP16 parent 78.0.
   over the same output (8,192 tokens, low thinking) graded it INCORRECT. No scoring rule changed.
 
 [Settings, result, commands and every output with its verdict](benchmarks/aa-lcr/b2lc-20261015-halo-aa_lcr-full/).
+
+**Separate 40,960-output-cap cohort — PARTIAL:** 12 retained generations, 10 correct valid
+reviews, 2 excluded reviews, and 88 absent generation responses whose original dispatch
+is unknown. Full 100-case score unset. [Settings, explicit case states and retained outputs](benchmarks/aa-lcr/b2lc-cap40960-20261015-partial/).
 Earlier running snapshots of this same run are kept in git history as historical states, not results:
 52/73 at `b197222` and 62/85 at `5118ac2`. A separate full run with a raised output cap (40,960) is in
 progress and will be reported as its own result. The capped failures above stay attributed to this run.
