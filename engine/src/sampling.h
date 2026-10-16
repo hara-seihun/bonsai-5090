@@ -101,6 +101,7 @@ inline Result select(const float* logits, int vocab, const Config& c,
   std::vector<Candidate> candidates; candidates.reserve(vocab);
   for (int i = 0; i < vocab; ++i) {
     double score = logits[i];
+    if (score == -std::numeric_limits<double>::infinity()) continue;
     if (!std::isfinite(score)) return {-1, "nonfinite target logits"};
     if (seen[i] || std::find(prefix.begin(), prefix.end(), i) != prefix.end()) {
       score = score < 0 ? score * c.repetition_penalty : score / c.repetition_penalty;
@@ -108,9 +109,11 @@ inline Result select(const float* logits, int vocab, const Config& c,
     }
     candidates.push_back({i, score, 0});
   }
+  if (candidates.empty()) return {-1, "no permitted target logits"};
   auto better = [](const Candidate& a, const Candidate& b) { return a.score > b.score || (a.score == b.score && a.id < b.id); };
   if (c.temperature == 0) return {std::min_element(candidates.begin(), candidates.end(), better)->id, {}};
-  const int k = c.top_k ? std::min(c.top_k, vocab) : vocab;
+  const int count = int(candidates.size());
+  const int k = c.top_k ? std::min(c.top_k, count) : count;
   std::partial_sort(candidates.begin(), candidates.begin() + k, candidates.end(), better);
   candidates.resize(k);
   const double best = candidates.front().score;
